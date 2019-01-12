@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import constants from '../../constants'
-import { media } from '../../theme/media'
+import constants from '../../../../constants'
+import { media } from '../../../../theme/media'
 
 const isLargeBadge = level =>
   level === constants.sponsorLevels.headline ||
