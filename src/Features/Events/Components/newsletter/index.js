@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Row, Column } from '../grid'
-import { media } from '../../theme/media'
+import { Row, Column } from '../../../../components/grid'
+import { media } from '../../../../theme/media'
 
 const StyledInput = styled.input`
   font-size: 1.25em;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
-import NewsletterForm from '../components/newsletter'
+import NewsletterForm from '../Features/Events/Components/newsletter/index'
 import { media } from '../theme/media'
 import {
   EventTagList,
