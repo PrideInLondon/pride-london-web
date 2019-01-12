@@ -1,6 +1,7 @@
 import querystring from 'querystring'
 import React from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Container, Row } from '../../components/grid'
 import { media } from '../../theme/media'
@@ -98,7 +99,7 @@ export default class EventDirectionsSection extends React.Component {
         </Row>
         <MapLink
           alt="Get directions to the venue"
-          innerRef={ref => (this.wrapperRef = ref)}
+          ref={ref => (this.wrapperRef = ref)}
           href={`https://www.google.com/maps/search/?api=1&${querystring.encode(
             {
               query: [locationName, addressLine1, addressLine2, city, postcode]

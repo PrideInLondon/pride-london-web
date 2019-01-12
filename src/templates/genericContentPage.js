@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import Helmet from 'react-helmet'

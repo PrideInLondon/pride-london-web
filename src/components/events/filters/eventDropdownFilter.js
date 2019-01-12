@@ -49,8 +49,8 @@ const FilterButton = styled.button`
       props.isOpen
         ? props.theme.colors.eucalyptusGreen
         : props.isActive
-          ? props.theme.colors.eucalyptusGreen
-          : props.theme.colors.lightGrey};
+        ? props.theme.colors.eucalyptusGreen
+        : props.theme.colors.lightGrey};
     transition: border-color 0.15s linear, background-color 0.15s linear;
 
     &:focus {
@@ -97,13 +97,12 @@ class EventDropdownFilter extends Component {
     isOpen: false,
   }
 
-  static getDerivedStateFromProps(nextProps) {
-    if (nextProps.filterOpen !== nextProps.filterName) {
-      return { isOpen: false }
-    }
-
-    return { isOpen: true }
-  }
+  //   static getDerivedStateFromProps(nextProps) {
+  //     if (nextProps.filterOpen !== nextProps.filterName) {
+  //       return { isOpen: false }
+  //     }
+  //     return { isOpen: true }
+  //   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.isOpen !== nextState.isOpen
@@ -163,7 +162,11 @@ EventDropdownFilter.propTypes = {
   heading: PropTypes.string.isRequired,
   filterName: PropTypes.string.isRequired,
   closeSiblingFilters: PropTypes.func.isRequired,
-  filterOpen: PropTypes.bool.isRequired,
+  filterOpen: PropTypes.string,
+}
+
+EventDropdownFilter.defaultProps = {
+  filterOpen: null,
 }
 
 export default onClickOutside(EventDropdownFilter)

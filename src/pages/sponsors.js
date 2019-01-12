@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import ReactMarkdown from 'react-markdown'
 import { Container } from '../components/grid/'

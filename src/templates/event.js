@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
 import NewsletterForm from '../components/newsletter'
@@ -51,7 +52,7 @@ const ContentWrapper = styled.div`
   `};
 `
 
-const TitleWrapper = ContentWrapper.extend`
+const TitleWrapper = styled(ContentWrapper)`
   ${media.desktop`
     padding: 60px 0px 50px;
   `};

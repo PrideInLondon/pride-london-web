@@ -1,13 +1,7 @@
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React from 'react'
 
 const NewsContainer = () => {
-  return (
-    <div>
-    NEWS
-    </div>
-  )
+  return <div>NEWS</div>
 }
 
 export default NewsContainer

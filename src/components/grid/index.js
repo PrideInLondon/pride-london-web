@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box } from 'grid-styled'
+import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 import theme from '../../theme/theme'
 
@@ -54,8 +54,4 @@ const Column = props => (
   />
 )
 
-module.exports = {
-  Container,
-  Row,
-  Column,
-}
+export { Container, Row, Column }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styled, { keyframes } from 'styled-components'
-import { Flex, Box } from 'grid-styled'
+import styled, { keyframes, css } from 'styled-components'
+import { Flex, Box } from '@rebass/grid'
 import { media } from '../../theme/media'
 import { Consumer } from '../../components/appContext'
 import iconClear from '../../theme/assets/images/icon-clear.svg'
@@ -141,6 +141,15 @@ const spin = keyframes`
     transform: rotate(-360deg);
   }
 `
+/* eslint-disable */
+const animation = props => {
+  if (props.clickAnimation)
+    return css`
+      ${spin} 0.3s ease-in-out
+    `
+  return css`unset`
+}
+/* eslint-enable */
 
 const IconClear = styled.i`
   display: inline-block;
@@ -151,8 +160,7 @@ const IconClear = styled.i`
   position: absolute;
   left: 0;
   top: 2px;
-  animation: ${props =>
-    props.clickAnimation ? `${spin} 0.3s ease-in-out` : 'unset'};
+  animation: ${animation};
 
   &:before {
     content: '';

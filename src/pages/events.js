@@ -77,23 +77,16 @@ const DateGroupHeading = styled.h2`
 const FilterIcon = styled.img`
   margin: 0 6px -2px 0;
 `
-
-class Events extends Component {
-  state = {
-    showFiltersMobile: false,
+/* eslint-disable */
+class GroupedEventsCards extends Component {
+  static propTypes = {
+    events: PropTypes.array.isRequired,
+    index: PropTypes.number.isRequired,
+    event: PropTypes.object.isRequired,
   }
+  render() {
+    const { event, index, events } = this.props
 
-  toggleFiltersMobile = () => {
-    this.setState(
-      prevState => ({
-        ...prevState,
-        showFiltersMobile: !prevState.showFiltersMobile,
-      }),
-      () => noScroll.toggle()
-    )
-  }
-
-  renderCard = (event, index, events) => {
     let header
     const longDayOfMonth = 'dddd D MMM'
 
@@ -109,7 +102,6 @@ class Events extends Component {
         header = moment(event.node.startTime).format(longDayOfMonth)
       }
     }
-
     return (
       <FlexColumn
         width={[
@@ -123,6 +115,23 @@ class Events extends Component {
         {header && <DateGroupHeading>{header}</DateGroupHeading>}
         <EventListingCard event={event.node} />
       </FlexColumn>
+    )
+  }
+}
+/* eslint-enable */
+
+class Events extends Component {
+  state = {
+    showFiltersMobile: false,
+  }
+
+  toggleFiltersMobile = () => {
+    this.setState(
+      prevState => ({
+        ...prevState,
+        showFiltersMobile: !prevState.showFiltersMobile,
+      }),
+      () => noScroll.toggle()
     )
   }
 
@@ -188,9 +197,14 @@ class Events extends Component {
                 <StyledFlipMove>
                   {context.filteredEvents
                     .filter(filterByLimit, context.state.eventsToShow)
-                    .map((event, index, events) =>
-                      this.renderCard(event, index, events)
-                    )}
+                    .map((event, index, events) => (
+                      <GroupedEventsCards
+                        events={events}
+                        index={index}
+                        event={event}
+                        key={event.node.id}
+                      />
+                    ))}
                 </StyledFlipMove>
                 <ColumnPagination width={1}>
                   {this.renderEventCount(

@@ -144,7 +144,7 @@ class Provider extends Component {
   }
 
   closeSiblingFilters = (filterName, isOpen) => {
-    if (isOpen && filterName != this.state.openFilter) {
+    if (isOpen && filterName != this.state.filterOpen) {
       this.setState(prevState => ({
         ...prevState,
         filterOpen: filterName,
@@ -227,7 +227,4 @@ Provider.defaultProps = {
   events: [],
 }
 
-module.exports = {
-  Provider,
-  Consumer,
-}
+export { Provider, Consumer }

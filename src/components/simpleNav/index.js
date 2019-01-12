@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Flex, Box } from 'grid-styled'
+import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 import { lighten } from 'polished'
 import Link from 'gatsby-link'
