@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component should match snapshot 1`] = `
+<styled.button
+  className=""
+  disabled={false}
+  fullmobile={false}
+  href={null}
+  onClick={null}
+  primary={false}
+  small={false}
+  type="button"
+  wide={true}
+>
+  Button
+</styled.button>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox @renders should render 1`] = `
+<styled.div>
+  <styled.input
+    checked={false}
+    id="test"
+    name="myInput"
+    onChange={[Function]}
+    type="checkbox"
+    value="selected"
+  />
+  <styled.label
+    htmlFor="test"
+  >
+    hello
+  </styled.label>
+</styled.div>
+`;

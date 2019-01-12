@@ -1,0 +1,17 @@
+# Project dependencies
+node_modules
+packages/*/.cache
+packages/*/node_modules
+yarn-error.log
+coverage
+.cache
+
+# Build directory
+packages/*/public
+.DS_Store
+.env.development
+.env.production
+/.idea
+
+# Text editor folders
+/.vscode

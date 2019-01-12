@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChevronRight should render the correct tree 1`] = `
+<svg
+  fill="none"
+  height={18}
+  style={
+    Object {
+      "display": "inline-block",
+      "marginBottom": "-4px",
+      "marginLeft": "6px",
+    }
+  }
+  viewBox="0 0 11 18"
+  width={11}
+>
+  <path
+    d="M2 2l7 7-7 7"
+    stroke="#2D2F7F"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={3}
+  />
+</svg>
+`;

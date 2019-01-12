@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header matches snapshot 1`] = `
+<React.Fragment>
+  <Column
+    alignItems="center"
+    flex={3}
+    justifyContent="center"
+  >
+    <img
+      alt=""
+    />
+  </Column>
+  <Column
+    key="mockId"
+  >
+    <LinkTest
+      to="#"
+    >
+       
+      Shante, you stay
+    </LinkTest>
+  </Column>
+  <Column
+    key="mockId"
+  >
+    <LinkTest
+      to="#"
+    >
+       
+      Sashay away
+    </LinkTest>
+  </Column>
+  <Column>
+    <ButtonTest
+      to="/"
+    >
+      Donate
+    </ButtonTest>
+  </Column>
+</React.Fragment>
+`;

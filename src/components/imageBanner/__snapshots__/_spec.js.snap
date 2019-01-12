@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageBanner should render 1`] = `
+<Styled(Styled(Box))
+  color=""
+  large="false"
+>
+  <Styled(Row)>
+    <Column
+      width={1}
+    >
+      <StyledBannerTitle />
+      <StyledBannerSubtitle />
+    </Column>
+  </Styled(Row)>
+</Styled(Styled(Box))>
+`;
+
+exports[`ImageBanner should render the subtitleText from props to BannerTitle  1`] = `
+<Styled(Styled(Box))
+  color=""
+  large="false"
+>
+  <Styled(Row)>
+    <Column
+      width={1}
+    >
+      <StyledBannerTitle />
+      <StyledBannerSubtitle>
+        And here is a test subtitle!
+      </StyledBannerSubtitle>
+    </Column>
+  </Styled(Row)>
+</Styled(Styled(Box))>
+`;
+
+exports[`ImageBanner should render the titleText from props to BannerTitle  1`] = `
+<Styled(Styled(Box))
+  color=""
+  large="false"
+>
+  <Styled(Row)>
+    <Column
+      width={1}
+    >
+      <StyledBannerTitle>
+        Here is a test title!
+      </StyledBannerTitle>
+      <StyledBannerSubtitle />
+    </Column>
+  </Styled(Row)>
+</Styled(Styled(Box))>
+`;
