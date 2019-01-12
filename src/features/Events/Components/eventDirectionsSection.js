@@ -2,9 +2,9 @@ import querystring from 'querystring'
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Container, Row } from '../../components/grid'
-import { media } from '../../theme/media'
-import theme from '../../theme/theme'
+import { Container, Row } from '../../../components/grid'
+import { media } from '../../../theme/media'
+import theme from '../../../theme/theme'
 
 if (
   process.env.NODE_ENV === 'development' &&

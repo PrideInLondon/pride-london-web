@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import { media } from '../../theme/media'
-import { formatDate } from './helpers'
+import { media } from '../../../theme/media'
+import { formatDate } from '../helpers'
 
 const Card = styled(Link)`
   display: block;

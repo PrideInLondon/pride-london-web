@@ -5,7 +5,7 @@ const {
   formatTime,
   getDuration,
   filterPastEvents,
-} = require('./src/components/events/helpers')
+} = require('./src/features/events/helpers')
 const { dateFormat } = require('./src/constants')
 
 exports.createPages = async ({ graphql, boundActionCreators }) => {

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import moment from 'moment'
 import PropTypes from 'prop-types'
-import { media } from '../../theme/media'
+import { media } from '../../../theme/media'
 import {
   AccessibilityIcon,
   DateIcon,
@@ -11,8 +11,8 @@ import {
   MapPinIcon,
   PhoneIcon,
   TicketIcon,
-} from '../../components/icons'
-import Button from '../../components/button'
+} from '../../../components/icons'
+import Button from '../../../components/button'
 
 const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.indigo};
