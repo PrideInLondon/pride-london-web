@@ -6,10 +6,9 @@ import { media } from '../../../theme/media'
 import { Consumer } from '../../../components/appContext'
 import iconClear from '../../../theme/assets/images/icon-clear.svg'
 import iconClose from '../../../theme/assets/images/icon-close.svg'
-import EventDateFilter from '../filters/eventDateFilter'
-import EventFreeFilter from '../filters/eventFreeFilter'
-import EventDropdownFilter from '../filters/eventDropdownFilter'
-
+import EventDateFilter from '../Filters/eventDateFilter'
+import EventFreeFilter from '../Filters/eventFreeFilter'
+import EventDropdownFilter from '../Filters/eventDropdownFilter'
 const FilterWrapper = styled(Flex)`
   background-color: ${props => props.theme.colors.white};
   position: fixed;

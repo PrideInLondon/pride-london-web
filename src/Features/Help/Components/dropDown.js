@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import onClickOutside from 'react-onclickoutside'
-import theme from '../../theme/theme'
-import { media } from '../../theme/media'
-import chevronDown from '../../theme/assets/images/icon-chevron-down-white.svg'
-import chevronUp from '../../theme/assets/images/icon-chevron-up-white.svg'
+import theme from '../../../theme/theme'
+import { media } from '../../../theme/media'
+import chevronDown from '../../../theme/assets/images/icon-chevron-down-white.svg'
+import chevronUp from '../../../theme/assets/images/icon-chevron-up-white.svg'
 
 const StyledDropDown = styled.fieldset`
   padding: 0;

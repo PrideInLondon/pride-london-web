@@ -11,7 +11,7 @@ import {
   EventsYouMayLike,
   EventInfoCard,
   EventDirectionsSection,
-} from '../features/Events'
+} from '../Features/Events'
 
 const PageWrapper = styled.div`
   position: relative;

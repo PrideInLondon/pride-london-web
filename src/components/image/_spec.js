@@ -16,4 +16,3 @@ describe('Image component', () => {
     expect(wrapper).toMatchSnapshot()
   })
 })
-q

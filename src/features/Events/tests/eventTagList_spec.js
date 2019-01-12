@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import EventTagList from '../eventTagList'
+import EventTagList from '../Components/eventTagList'
 
 describe('The EventTag component', () => {
   it('renders', () => {
