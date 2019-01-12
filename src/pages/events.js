@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react'
+import PropTypes from 'prop-types'
 import FlipMove from 'react-flip-move'
 import styled from 'styled-components'
 import moment from 'moment'
