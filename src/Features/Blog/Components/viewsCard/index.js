@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { media } from '../../theme/media'
-import Image from '../image'
+import { media } from '../../../../theme/media'
+import Image from '../../../../components/image'
 
 const ArticleTitle = styled.h2`
   color: ${props => props.theme.colors.black};

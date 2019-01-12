@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import theme from '../../theme/theme'
-import ViewsCard from '../../components/viewsCard'
+import theme from '../../../../theme/theme'
+import ViewsCard from '../../Components/viewsCard'
 
 const StyledTitle = styled.h2`
   font-weight: 700;
