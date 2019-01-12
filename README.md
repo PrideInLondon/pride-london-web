@@ -1,4 +1,4 @@
-# pride-london-web-gatsby
+# pride-london-web
 
 This project is a community effort to release a brand new web platform to supplant and improve upon the product currently available at prideinlondon.org.
 
