@@ -1,6 +1,0 @@
-export { default as EventListingCard } from './eventListingCard'
-export { default as EventTagList } from './eventTagList'
-export { default as EventSchedule } from './eventSchedule'
-export { default as EventsYouMayLike } from './eventsYouMayLike'
-export { default as EventInfoCard } from './eventInfoCard'
-export { default as EventDirectionsSection } from './eventDirectionsSection'
