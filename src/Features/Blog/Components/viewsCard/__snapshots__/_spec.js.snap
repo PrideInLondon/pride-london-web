@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewsCard should render with default values 1`] = `
+<styled.div>
+  <Image
+    altText="Lisa Charlwood-Green — LGTB+ Women Say \\"Wow!"
+    src="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  />
+  <styled.p>
+    Lisa Charlwood-Green
+  </styled.p>
+  <styled.h2>
+    LGTB+ Women Say "Wow!"
+  </styled.h2>
+</styled.div>
+`;
