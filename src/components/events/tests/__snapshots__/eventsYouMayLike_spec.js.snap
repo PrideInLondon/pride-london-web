@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Events You May Like component should matchsnapshot 1`] = `
-<Styled(Styled(Box))>
+<Styled(Styled(Box))
+  mx="auto"
+>
   <Styled(Row)>
     <styled.h1>
       You may also like

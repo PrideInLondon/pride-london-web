@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`header matches snapshot 1`] = `
-<React.Fragment>
+<Fragment>
   <Column
     alignItems="center"
     flex={3}
@@ -38,5 +38,5 @@ exports[`header matches snapshot 1`] = `
       Donate
     </ButtonTest>
   </Column>
-</React.Fragment>
+</Fragment>
 `;

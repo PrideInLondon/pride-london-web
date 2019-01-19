@@ -1,10 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image component should render when given props 1`] = `
-<styled.div
-  height={100}
-  width={100}
->
+<styled.div>
   <img
     alt="test image"
     src="foo.bar/image"
