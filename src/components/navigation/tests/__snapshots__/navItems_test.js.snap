@@ -17,7 +17,6 @@ exports[`header matches snapshot 1`] = `
     <LinkTest
       to="#"
     >
-       
       Shante, you stay
     </LinkTest>
   </Column>
@@ -27,7 +26,6 @@ exports[`header matches snapshot 1`] = `
     <LinkTest
       to="#"
     >
-       
       Sashay away
     </LinkTest>
   </Column>

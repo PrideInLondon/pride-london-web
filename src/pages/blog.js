@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
-import { Container, Row, Column } from '../components/grid'
-import { media } from '../theme/media'
+// import styled from 'styled-components'
+// import { Container, Row, Column } from '../components/grid'
+// import { media } from '../theme/media'
 import ImageBanner from '../components/imageBanner'
 import theme from '../theme/theme'
-import ViewsContainer from '../containers/viewsContainer'
-import NewsContainer from '../containers/newsContainer'
+import ViewsContainer from '../features/blog/containers/viewsContainer'
+import NewsContainer from '../features/blog/containers/newsContainer'
 
 const Blog = () => (
   <Fragment>

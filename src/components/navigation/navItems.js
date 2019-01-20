@@ -38,7 +38,7 @@ const NavItems = props => {
       </Column>
       {listItems.map(items => (
         <Column key={shortid.generate()}>
-          <StyledLink to="#"> {items}</StyledLink>
+          <StyledLink to="#">{items}</StyledLink>
         </Column>
       ))}
       <Column>

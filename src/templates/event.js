@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
-import NewsletterForm from '../components/newsletter'
+import NewsletterForm from '../features/events/components/newsletter'
 import { media } from '../theme/media'
 import {
   EventTagList,
@@ -12,7 +12,7 @@ import {
   EventsYouMayLike,
   EventInfoCard,
   EventDirectionsSection,
-} from '../components/events'
+} from '../features/events'
 
 const PageWrapper = styled.div`
   position: relative;

@@ -4,7 +4,7 @@ import { Container, Row, Column } from '../components/grid'
 import { media } from '../theme/media'
 import AccordionWrapper from '../components/accordion/accordionWrapper'
 import Accordion from '../components/accordion'
-import ContactForm from '../components/contactForm'
+import ContactForm from '../features/help/components/contactForm'
 import ImageBanner from '../components/imageBanner'
 
 const PageWrapper = styled.div`

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { darken, rgba } from 'polished'
 import { media } from '../../theme/media'
-import NewsletterForm from '../newsletter'
+import NewsletterForm from '../../Features/Events/Components/newsletter'
 import { Row, Column } from '../grid'
 import Facebook from '!svg-react-loader?name=Facebook!../../theme/assets/images/icon-facebook.svg' // eslint-disable-line
 import Twitter from '!svg-react-loader?name=Twitter!../../theme/assets/images/icon-twitter.svg' // eslint-disable-line

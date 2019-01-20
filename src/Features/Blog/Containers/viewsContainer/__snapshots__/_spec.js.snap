@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewsContainer should render with default values 1`] = `
+<Fragment>
+  <styled.div>
+    <Title
+      isLight={true}
+      theme={
+        Object {
+          "breakpoints": Array [
+            "375px",
+            "768px",
+            "1024px",
+            "1440px",
+          ],
+          "colors": Object {
+            "amber": "#FFCA00",
+            "beachBlue": "#2C77E5",
+            "black": "#000000",
+            "bondiBlue": "#00A3BD",
+            "darkGrey": "#5B5B5B",
+            "darkPurple": "#660C63",
+            "electricPurple": "#BC01FF",
+            "eucalyptusGreen": "#2CDA9D",
+            "fuscia": "#FF88F1",
+            "green": "#34C30A",
+            "greyBlue": "#5770D1",
+            "indigo": "#2D2F7F",
+            "lemonGreen": "#C3D30E",
+            "lightGrey": "#EFEFEF",
+            "mediumGrey": "#E1E1E1",
+            "pink": "#ED2C6E",
+            "red": "#D0021B",
+            "skyBlue": "#2ACFFF",
+            "tomato": "#FF5B44",
+            "white": "#FFFFFF",
+            "yellow": "#FFD95E",
+          },
+          "fonts": Object {
+            "body": "Roboto, sans-serif",
+            "title": "Poppins, sans-serif",
+          },
+          "space": Array [
+            0,
+            5,
+            10,
+            15,
+            20,
+          ],
+        }
+      }
+    >
+      Views
+    </Title>
+    <styled.div>
+      <ViewsCard
+        author="Lisa Charlwood-Green"
+        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        title="LGTB+ Women Say \\"Wow!"
+      />
+      <ViewsCard
+        author="Lisa Charlwood-Green"
+        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        title="LGTB+ Women Say \\"Wow!"
+      />
+      <ViewsCard
+        author="Lisa Charlwood-Green"
+        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        title="LGTB+ Women Say \\"Wow!"
+      />
+      <ViewsCard
+        author="Lisa Charlwood-Green"
+        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        title="LGTB+ Women Say \\"Wow!"
+      />
+      <ViewsCard
+        author="Lisa Charlwood-Green"
+        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        title="LGTB+ Women Say \\"Wow!"
+      />
+      <ViewsCard
+        author="Lisa Charlwood-Green"
+        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        title="LGTB+ Women Say \\"Wow!"
+      />
+      <ViewsCard
+        author="Lisa Charlwood-Green"
+        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        title="LGTB+ Women Say \\"Wow!"
+      />
+    </styled.div>
+  </styled.div>
+</Fragment>
+`;
