@@ -17,16 +17,18 @@ const ArticleAuthor = styled.p`
 
 const Container = styled.div`
   min-width: 162px;
+  padding: 5px;
+
   ${media.tablet`
     min-width: 400px;
   `};
 `
 
 const ViewsCard = props => {
-  const { preview } = props
+  const { preview, author, title } = props
   return (
     <Container>
-      <Image src={preview} />
+      <Image src={preview} altText={`${author} — ${title}`} />
       <ArticleAuthor>Lisa Charlwood-Green</ArticleAuthor>
       <ArticleTitle>LGTB+ Women Say "Wow!"</ArticleTitle>
     </Container>
@@ -34,10 +36,14 @@ const ViewsCard = props => {
 }
 
 ViewsCard.propTypes = {
+  author: PropTypes.string,
+  title: PropTypes.string,
   preview: PropTypes.string,
 }
 
 ViewsCard.defaultProps = {
+  author: 'Lisa Charlwood-Green',
+  title: 'LGTB+ Women Say "Wow!',
   preview:
     'https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 }
