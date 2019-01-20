@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import theme from '../../../../theme/theme'
-import ViewsCard from '../../Components/viewsCard'
-import Title from '../../Components/title'
 
 const Container = styled.div`
   margin: 1rem;
