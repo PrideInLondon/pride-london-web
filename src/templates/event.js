@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
-import NewsletterForm from '../Features/Events/Components/newsletter/index'
+import NewsletterForm from '../features/events/components/newsletter'
 import { media } from '../theme/media'
 import {
   EventTagList,
@@ -11,7 +12,7 @@ import {
   EventsYouMayLike,
   EventInfoCard,
   EventDirectionsSection,
-} from '../Features/Events'
+} from '../features/events'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -51,7 +52,7 @@ const ContentWrapper = styled.div`
   `};
 `
 
-const TitleWrapper = ContentWrapper.extend`
+const TitleWrapper = styled(ContentWrapper)`
   ${media.desktop`
     padding: 60px 0px 50px;
   `};

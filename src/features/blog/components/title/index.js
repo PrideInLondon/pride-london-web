@@ -14,7 +14,7 @@ const Title = ({ children, isLight }) => (
 )
 
 Title.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  children: PropTypes.string.isRequired,
   isLight: PropTypes.bool,
 }
 

@@ -110,14 +110,14 @@ const DatePickerWrapper = styled.div`
       props.isFocused
         ? props.theme.colors.eucalyptusGreen
         : props.datesSelected
-          ? props.theme.colors.eucalyptusGreen
-          : props.theme.colors.lightGrey};
+        ? props.theme.colors.eucalyptusGreen
+        : props.theme.colors.lightGrey};
     background-color: ${props =>
       props.isFocused
         ? props.theme.colors.white
         : props.datesSelected
-          ? props.theme.colors.eucalyptusGreen
-          : props.theme.colors.lightGrey};
+        ? props.theme.colors.eucalyptusGreen
+        : props.theme.colors.lightGrey};
 
     input.DateInput_input {
       font-weight: 500;

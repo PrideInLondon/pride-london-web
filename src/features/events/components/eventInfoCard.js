@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
 import moment from 'moment'
 import PropTypes from 'prop-types'
 import { media } from '../../../theme/media'
@@ -141,16 +142,16 @@ export default function EventInfoCard({
     accessibilityOptions,
   },
 }) {
+  console.log(startTime)
   return (
     <Wrapper>
-      {startTime &&
-        endTime && (
-          <Item
-            icon={<DateIcon />}
-            title={formatDayRange(moment(startTime), moment(endTime))}
-            detail={formatTimeRange(moment(startTime), moment(endTime))}
-          />
-        )}
+      {startTime && endTime && (
+        <Item
+          icon={<DateIcon />}
+          title={formatDayRange(moment(startTime), moment(endTime))}
+          detail={formatTimeRange(moment(startTime), moment(endTime))}
+        />
+      )}
       <Item
         icon={<TicketIcon />}
         title={formatPrice(eventPriceLow, eventPriceHigh)}
@@ -160,14 +161,13 @@ export default function EventInfoCard({
         title={locationName}
         detail={formatAddress(addressLine1, addressLine2, city, postcode)}
       />
-      {accessibilityOptions &&
-        accessibilityOptions.length && (
-          <Item
-            icon={<AccessibilityIcon />}
-            title="Accessibility"
-            detail={`${accessibilityOptions.join(', ')}.`}
-          />
-        )}
+      {accessibilityOptions && accessibilityOptions.length && (
+        <Item
+          icon={<AccessibilityIcon />}
+          title="Accessibility"
+          detail={`${accessibilityOptions.join(', ')}.`}
+        />
+      )}
       {venueDetails &&
         venueDetails.indexOf(VENUE_DETAILS.genderNeutralToilets) > -1 && (
           <Item icon={<GenderIcon />} detail="Gender neutral toilets" />
@@ -205,8 +205,12 @@ export default function EventInfoCard({
 
 Item.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  detail: PropTypes.string.isRequired,
+  icon: PropTypes.object.isRequired,
+  detail: PropTypes.string,
+}
+
+Item.defaultProps = {
+  detail: null,
 }
 
 EventInfoCard.propTypes = {

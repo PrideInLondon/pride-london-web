@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`header matches snapshot 1`] = `
-<Styled(Styled(Box))>
+<Styled(Styled(Box))
+  mx="auto"
+>
   <Row
     alignItems="center"
     justifyContent="center"

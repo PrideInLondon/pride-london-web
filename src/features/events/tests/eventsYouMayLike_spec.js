@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider, ThemeConsumer } from 'styled-components'
 import { EventsYouMayLike } from '../Components/eventsYouMayLike'
 import EventListingCard from '../Components/eventListingCard'
 import theme from '../../../theme/theme'
@@ -56,11 +56,10 @@ jest.mock('../../../components/appContext', () => {
   }
 })
 
-const shallowWithTheme = tree => {
+const shallowWithTheme = (tree, theme = theme ) => {
   const context = shallow(<ThemeProvider theme={theme} />)
-    .instance()
-    .getChildContext()
-  return shallow(tree, { context })
+  ThemeConsumer._currentValue = theme
+  return shallow(tree)
 }
 
 describe('The Events You May Like component', () => {

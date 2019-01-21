@@ -1,17 +1,18 @@
 import React, { Fragment, Component } from 'react'
+import PropTypes from 'prop-types'
 import FlipMove from 'react-flip-move'
 import styled from 'styled-components'
 import moment from 'moment'
 import noScroll from 'no-scroll'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
-import { EventListingCard } from '../Features/Events'
-import EventsFilters from '../Features/Events/Components/eventsFilters'
+import { EventListingCard } from '../features/events'
+import EventsFilters from '../features/events/components/eventsFilters'
 import ImageBanner from '../components/imageBanner'
 import Button from '../components/button'
 import { Container, Row, Column } from '../components/grid'
 import { Consumer } from '../components/appContext'
-import { filterByLimit } from '../Features/Events/Helpers'
+import { filterByLimit } from '../features/events/helpers'
 import { dateFormat } from '../constants'
 import filterIcon from '../theme/assets/images/icon-filters.svg'
 
@@ -77,23 +78,16 @@ const DateGroupHeading = styled.h2`
 const FilterIcon = styled.img`
   margin: 0 6px -2px 0;
 `
-
-class Events extends Component {
-  state = {
-    showFiltersMobile: false,
+/* eslint-disable */
+class GroupedEventsCards extends Component {
+  static propTypes = {
+    events: PropTypes.array.isRequired,
+    index: PropTypes.number.isRequired,
+    event: PropTypes.object.isRequired,
   }
+  render() {
+    const { event, index, events } = this.props
 
-  toggleFiltersMobile = () => {
-    this.setState(
-      prevState => ({
-        ...prevState,
-        showFiltersMobile: !prevState.showFiltersMobile,
-      }),
-      () => noScroll.toggle()
-    )
-  }
-
-  renderCard = (event, index, events) => {
     let header
     const longDayOfMonth = 'dddd D MMM'
 
@@ -109,7 +103,6 @@ class Events extends Component {
         header = moment(event.node.startTime).format(longDayOfMonth)
       }
     }
-
     return (
       <FlexColumn
         width={[
@@ -123,6 +116,23 @@ class Events extends Component {
         {header && <DateGroupHeading>{header}</DateGroupHeading>}
         <EventListingCard event={event.node} />
       </FlexColumn>
+    )
+  }
+}
+/* eslint-enable */
+
+class Events extends Component {
+  state = {
+    showFiltersMobile: false,
+  }
+
+  toggleFiltersMobile = () => {
+    this.setState(
+      prevState => ({
+        ...prevState,
+        showFiltersMobile: !prevState.showFiltersMobile,
+      }),
+      () => noScroll.toggle()
     )
   }
 
@@ -188,9 +198,14 @@ class Events extends Component {
                 <StyledFlipMove>
                   {context.filteredEvents
                     .filter(filterByLimit, context.state.eventsToShow)
-                    .map((event, index, events) =>
-                      this.renderCard(event, index, events)
-                    )}
+                    .map((event, index, events) => (
+                      <GroupedEventsCards
+                        events={events}
+                        index={index}
+                        event={event}
+                        key={event.node.id}
+                      />
+                    ))}
                 </StyledFlipMove>
                 <ColumnPagination width={1}>
                   {this.renderEventCount(

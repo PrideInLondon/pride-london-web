@@ -53,7 +53,6 @@ describe('Checkbox', () => {
         expect(
           wrapper
             .find('[htmlFor="test"]')
-            .dive()
             .text()
         ).toBe(label)
       })

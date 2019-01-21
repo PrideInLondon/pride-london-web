@@ -80,7 +80,8 @@ export const EventsYouMayLike = ({ eventId }) => (
           <HeadingRow>
             <Heading>You may also like</Heading>
             <ViewAll href="/events">
-              View all<DesktopOnly>&nbsp;events</DesktopOnly>&nbsp;<ChevronRight />
+              View all<DesktopOnly>&nbsp;events</DesktopOnly>&nbsp;
+              <ChevronRight />
             </ViewAll>
           </HeadingRow>
           <Row>

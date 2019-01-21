@@ -8,8 +8,8 @@ const {
 } = require('./src/Features/Events/Helpers')
 const { dateFormat } = require('./src/constants')
 
-exports.createPages = async ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
 
   const events = await graphql(`
     {
