@@ -9,7 +9,7 @@ public
 .DS_Store
 .env.development
 .env.production
-/.idea
 
 # Text editor folders
 /.vscode
+/.idea
