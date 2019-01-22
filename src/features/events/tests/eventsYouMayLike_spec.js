@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { ThemeProvider, ThemeConsumer } from 'styled-components'
-import { EventsYouMayLike } from '../Components/eventsYouMayLike'
-import EventListingCard from '../Components/eventListingCard'
+import { EventsYouMayLike } from '../components/eventsYouMayLike'
+import EventListingCard from '../components/eventListingCard'
 import theme from '../../../theme/theme'
 
 beforeEach(() => {
