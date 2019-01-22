@@ -9,13 +9,9 @@ jobs:
     steps:
       - checkout
       
-      # Download and cache dependencies
       - restore_cache:
           keys:
-            # Find a cache corresponding to this specific package-lock.json checksum
-            # when this file is changed, this key will fail
             - v1-npm-deps-{{ checksum "package-lock.json" }}
-            # Find the most recently generated cache used from any branch
             - v1-npm-deps-
       
       - run:
@@ -31,6 +27,3 @@ jobs:
       - run: yarn lint
 
       - run: yarn test
-
-      - run: yarn develop
-      
