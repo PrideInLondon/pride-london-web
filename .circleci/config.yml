@@ -1,4 +1,6 @@
 version: 2
+orbs:
+  codecov: codecov/codecov@1.0.2
 jobs:
   build:
     docker: 
@@ -30,4 +32,3 @@ jobs:
 
       - codecov/upload:
           file: {{ coverage_report_filepath }}
-          token: $CODECOV_TOKEN
