@@ -27,3 +27,7 @@ jobs:
       - run: yarn lint
 
       - run: yarn test
+
+      - codecov/upload:
+          file: {{ coverage_report_filepath }}
+          token: $CODECOV_TOKEN
