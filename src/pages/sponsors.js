@@ -2,30 +2,13 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import ReactMarkdown from 'react-markdown'
-import { Container } from '../components/grid/'
 import ImageBanner from '../components/imageBanner'
 import SponsorBadge from '../features/sponsors/components/sponsorBadge'
 import SponsorsSubsection from '../features/sponsors/components/sponsorSubsection/index'
 import constants from '../constants'
 import theme from '../theme/theme'
 import { media } from '../theme/media'
-
-const SponsorsContainer = styled(Container)`
-  background-color: ${props => props.theme.colors.white};
-  padding: 0 20px;
-  ${media.tablet`
-    padding: 0 90px;
-  `};
-`
-
-const Body = styled.div`
-  padding: 30px 0;
-  border-bottom: 1px solid rgba(203, 203, 203, 0.5);
-  ${media.tablet`
-    padding: 60px 0;
-  `};
-`
+import { Container, Row, Column } from '../components/grid'
 
 const ListTitle = styled.h2`
   margin-top: 0;
@@ -35,11 +18,25 @@ const ListTitle = styled.h2`
   `};
 `
 
-const SponsorsList = styled.div`
-  padding: 30px 0;
+const PageContainer = styled(Container)`
+  margin-top: 30px;
+`
+
+const MainSponsorsContainer = styled.div`
   ${media.tablet`
-    padding: 60px 0;
+    max-width: 646px;
   `};
+`
+const BronzeSponsorsContainer = styled.div`
+  ${media.tablet`
+    max-width: 860px;
+  `};
+`
+
+const IntroContainer = styled(Column)`
+  border-bottom: 1px solid ${theme.colors.mediumGrey};
+  margin-bottom: 30px;
+  padding-bottom: 20px;
 `
 
 const selectSponsors = data =>
@@ -72,31 +69,68 @@ const Sponsors = ({ data }) => {
         subtitleText="Help us to keep Pride free for everyone by becoming one of our sponsors"
         color={theme.colors.yellow}
       />
-      <SponsorsContainer>
-        <Body>
-          <ReactMarkdown />
-        </Body>
-        <SponsorsList>
-          <ListTitle>Our main 2018 partners</ListTitle>
-          <p>
-            A huge thank you to our main partners for their continued support.
-          </p>
-          <div>
-            <SponsorsSubsection title="Headline sponsors">
-              {renderSponsors(sponsors[constants.sponsorLevels.headline])}
-            </SponsorsSubsection>
-            <SponsorsSubsection title="Gold sponsors">
-              {renderSponsors(sponsors[constants.sponsorLevels.gold])}
-            </SponsorsSubsection>
-            <SponsorsSubsection title="Silver sponsors">
-              {renderSponsors(sponsors[constants.sponsorLevels.silver])}
-            </SponsorsSubsection>
-            <SponsorsSubsection title="Bronze sponsors">
-              {renderSponsors(sponsors[constants.sponsorLevels.bronze])}
-            </SponsorsSubsection>
-          </div>
-        </SponsorsList>
-      </SponsorsContainer>
+      <PageContainer>
+        <Row>
+          <IntroContainer
+            width={[
+              1, // 100% between 0px screen width and first breakpoint (375px)
+              1, // 100% between first breakpoint(375px) and second breakpoint (768px)
+              1, // 50% between second breakpoint(768px) and third breakpoint (1024px)
+              2 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
+            ]}
+          >
+            <p>
+              Without our dedicated and loyal partners, Pride in London simply
+              would not exist. Since the current community group took over the
+              running of Pride in 2012, the office of the Mayor of London and
+              Barclays have remained committed to keeping Pride on the road.
+              They have proved to be great allies of the LGBTQ+ community and we
+              are eternally grateful for their support. In 2018, Sadiq Khan,
+              Mayor of London extended Pride in London’s contract, committing to
+              support our work for a further 5 years.
+            </p>
+            <p>
+              For many years LGBTQ+ people have faced hiding their true selves
+              from their colleagues. Only since 2000 have people been able to
+              openly serve in the military. Today, while prejudice is still rife
+              in many places, many companies and organisations have embraced
+              their LGBTQ+ members of staff. Studies show, that employers who
+              recognise and support diversity are on average more productive and
+              more profitable.
+            </p>
+            <p>
+              Over the years we have seen more and more companies openly support
+              and embrace their LGBTQ+ colleagues, as well as provide a safe,
+              loving and supportive workplace. Being part of Pride is one of the
+              many ways we are seeing workplaces transform for the better. Pride
+              in London are proud to be working with our partners to ensure
+              diversity is embedded in the core of each company we work with.
+            </p>
+          </IntroContainer>
+          <Column>
+            <ListTitle>Our main 2018 partners</ListTitle>
+            <p>
+              A huge thank you to our main partners for their continued support.
+            </p>
+            <MainSponsorsContainer>
+              <SponsorsSubsection title="Headline sponsors">
+                {renderSponsors(sponsors[constants.sponsorLevels.headline])}
+              </SponsorsSubsection>
+              <SponsorsSubsection title="Gold sponsors">
+                {renderSponsors(sponsors[constants.sponsorLevels.gold])}
+              </SponsorsSubsection>
+              <SponsorsSubsection title="Silver sponsors">
+                {renderSponsors(sponsors[constants.sponsorLevels.silver])}
+              </SponsorsSubsection>
+            </MainSponsorsContainer>
+            <BronzeSponsorsContainer>
+              <SponsorsSubsection title="Bronze sponsors">
+                {renderSponsors(sponsors[constants.sponsorLevels.bronze])}
+              </SponsorsSubsection>
+            </BronzeSponsorsContainer>
+          </Column>
+        </Row>
+      </PageContainer>
     </Fragment>
   )
 }
@@ -114,7 +148,7 @@ export const query = graphql`
           sponsorName
           sponsorUrl
           sponsorLogo {
-            sizes(maxHeight: 84) {
+            sizes(maxHeight: 168, quality: 90) {
               src
             }
           }
