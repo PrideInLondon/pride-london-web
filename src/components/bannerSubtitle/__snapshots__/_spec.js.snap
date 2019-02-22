@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BannerSubtitle should render 1`] = `
+exports[`BannerSubtitle renders 1`] = `
 <SubtitleWrapper>
   <SubtitleText>
     <h1>
@@ -10,7 +10,7 @@ exports[`BannerSubtitle should render 1`] = `
 </SubtitleWrapper>
 `;
 
-exports[`BannerSubtitle should render child text  1`] = `
+exports[`BannerSubtitle renders child text  1`] = `
 <SubtitleWrapper>
   <SubtitleText>
     And here is a test subtitle!
