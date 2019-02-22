@@ -5,7 +5,7 @@ import NavItems from '../navItems'
 
 jest.mock('shortid', () => ({ generate: jest.fn().mockReturnValue('mockId') }))
 
-describe('header', () => {
+describe('NavItems', () => {
   it('matches snapshot', () => {
     const mockProps = {
       items: {
@@ -15,6 +15,7 @@ describe('header', () => {
     const wrappedComponent = shallow(<NavItems {...mockProps} />)
     expect(wrappedComponent).toMatchSnapshot()
   })
+
   it('presents three links when three listItems passed', () => {
     const mockProps = {
       items: {
@@ -28,6 +29,7 @@ describe('header', () => {
     const wrappedComponent = shallow(<NavItems {...mockProps} />)
     expect(wrappedComponent.find('LinkTest')).toHaveLength(3)
   })
+
   it('presents one button', () => {
     const mockProps = {
       items: {

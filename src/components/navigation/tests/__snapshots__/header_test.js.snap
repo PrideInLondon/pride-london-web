@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`header matches snapshot 1`] = `
+exports[`Header matches snapshot 1`] = `
 <Styled(Styled(Box))
   mx="auto"
 >

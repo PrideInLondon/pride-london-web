@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BannerTitle should render 1`] = `
+exports[`BannerTitle renders 1`] = `
 <styled.div>
   <TestBannerTitle>
     foo
@@ -8,7 +8,7 @@ exports[`BannerTitle should render 1`] = `
 </styled.div>
 `;
 
-exports[`BannerTitle should render child text  1`] = `
+exports[`BannerTitle renders child text  1`] = `
 <styled.div>
   <TestBannerTitle>
     Here is a test title!

@@ -102,7 +102,7 @@ export const Footer = () => (
           </SocialItem>
           <SocialItem>
             <SocialLink
-              href="http://instagram.com/prideinlondon"
+              href="https://instagram.com/prideinlondon"
               aria-label="Link to Instagram page"
             >
               <Instagram />
@@ -126,7 +126,7 @@ export const Footer = () => (
           </SocialItem>
           <SocialItem>
             <SocialLink
-              href="http://www.snapchat.com/add/LondonLGBTPride"
+              href="https://www.snapchat.com/add/LondonLGBTPride"
               aria-label="Link to Snapchat page"
             >
               <Snapchat />
