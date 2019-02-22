@@ -4709,9 +4709,9 @@ gatsby-cli@^2.4.10:
     yargs "^11.1.0"
     yurnalist "^1.0.2"
 
-gatsby-link@^2.0.10, gatsby-link@^2.0.8:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.0.10.tgz#40cc99c3e62e20c52b5672ad6f4647058a198190"
+gatsby-link@^2.0.10, gatsby-link@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.0.12.tgz#93e28845b56a2228c086b7c78043447762974068"
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@reach/router" "^1.1.1"
