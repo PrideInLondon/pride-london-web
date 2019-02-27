@@ -4,9 +4,9 @@ import React, { Fragment } from 'react'
 // import { media } from '../theme/media'
 import ImageBanner from '../components/imageBanner'
 import theme from '../theme/theme'
-import ViewsContainer from '../Features/Blog/containers/viewsContainer'
-import NewsContainer from '../Features/Blog/containers/newsContainer'
-import StyledHR from '../components/horizontalRule';
+import ViewsContainer from '../features/blog/containers/viewsContainer'
+import NewsContainer from '../features/blog/containers/newsContainer'
+import StyledHR from '../components/horizontalRule'
 
 const Blog = () => (
   <Fragment>

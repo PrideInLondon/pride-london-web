@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import Title from '../../Components/title'
+import Title from '../../components/title'
 import ImageBanner from '../../../../components/imageBanner'
 import theme from '../../../../theme/theme'
-import NewsCard from '../../Components/newsCard'
+import NewsCard from '../../components/newsCard'
 import {
   ALL_ARTICLES,
   NEWS,
   RESEARCH,
   ANNOUNCEMENTS,
   PARTNERS,
-} from '../../Components/newsFilter/config'
+} from '../../components/newsFilter/config'
 
 // import PropTypes from 'prop-types'
 

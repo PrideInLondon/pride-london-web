@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsFilter renders with default values 1`] = `
+<styled.p
+  backgroundColor="#FFD95E"
+  textColor="#000000"
+>
+  All Articles
+</styled.p>
+`;

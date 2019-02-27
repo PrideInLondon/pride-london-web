@@ -1,19 +1,30 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import theme from '../../../../theme/theme'
-import config from './config';
+import config from './config'
 
-const Filter = styled.div`
-  color: ${props => props.textColor};
+const FilterText = styled.p`
   background-color: ${props => props.backgroundColor};
+  border-radius: 4px;
+  color: ${props => props.textColor};
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 5px;
+  margin: 0;
+  white-space: nowrap;
 `
+
 const NewsFilter = ({ filterType }) => {
   const { label, textColor, backgroundColor } = config[filterType]
   return (
-    <Filter textColor={textColor} backgroundColor={backgroundColor}>
+    <FilterText textColor={textColor} backgroundColor={backgroundColor}>
       {label}
-    </Filter>
+    </FilterText>
   )
+}
+
+NewsFilter.propTypes = {
+  filterType: PropTypes.string.isRequired,
 }
 
 export default NewsFilter
