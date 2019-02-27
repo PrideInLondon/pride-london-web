@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import theme from '../../../../theme/theme'
 import NewsFilter from '../newsFilter'
+import { media } from '../../../../theme/media'
 
 const Card = styled.div`
   background-color: ${theme.colors.white};

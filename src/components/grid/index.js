@@ -1,7 +1,10 @@
 import React from 'react'
 import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
+import FlipMove from 'react-flip-move'
+
 import theme from '../../theme/theme'
+import { media } from '../../theme/media'
 
 const Container = styled(Box)`
   @media (min-width: ${theme.breakpoints[0]}) {
@@ -54,4 +57,18 @@ const Column = props => (
   />
 )
 
-export { Container, Row, Column }
+const FlexColumn = styled(Column)`
+  display: block;
+
+  ${media.tablet`
+    display: flex;
+  `};
+`
+
+const StyledFlipMove = styled(FlipMove)`
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+`
+
+export { Container, Row, Column, FlexColumn, StyledFlipMove }
