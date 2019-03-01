@@ -6,7 +6,7 @@ import { Column, Row, Container } from '../grid'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
 
-const StyledContainer = styled(Container)`
+const StyledWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   min-height: 270px;
@@ -16,13 +16,6 @@ const StyledContainer = styled(Container)`
   padding-bottom: 35px;
   z-index: -2;
 
-  & img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-  }
-
   ${media.tablet`
     align-items: center;
     height: ${props => (props.large === 'true' ? '500px' : '400px')};
@@ -30,7 +23,7 @@ const StyledContainer = styled(Container)`
   `};
 `
 
-const StyledContainerWithUnderflow = styled(StyledContainer)`
+const StyledWrapperWithUnderflow = styled(StyledWrapper)`
   align-items: flex-start;
   min-height: 380px;
   padding-top: 50px;
@@ -40,6 +33,18 @@ const StyledContainerWithUnderflow = styled(StyledContainer)`
 const StyledRow = styled(Row)`
   display: block;
   flex-basis: 100%;
+`
+
+const StyledImage = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+  z-index: -1;
 `
 
 const ImageBanner = ({
@@ -53,18 +58,20 @@ const ImageBanner = ({
   allowContentUnderflow,
 }) => {
   const Wrapper = allowContentUnderflow
-    ? StyledContainerWithUnderflow
-    : StyledContainer
+    ? StyledWrapperWithUnderflow
+    : StyledWrapper
   return (
-    <Wrapper color={color} large={large}>
-      {imageSrc && <img src={imageSrc} alt={altText} />}
-      <StyledRow>
-        <Column width={1}>
-          <BannerTitle>{titleText}</BannerTitle>
-          <BannerSubtitle>{subtitleText}</BannerSubtitle>
-        </Column>
-        {children}
-      </StyledRow>
+    <Wrapper color={color} large={large} className="bannerwrapper">
+      {imageSrc && <StyledImage src={imageSrc} alt={altText} />}
+      <Container>
+        <StyledRow>
+          <Column width={1}>
+            <BannerTitle>{titleText}</BannerTitle>
+            <BannerSubtitle>{subtitleText}</BannerSubtitle>
+          </Column>
+          {children}
+        </StyledRow>
+      </Container>
     </Wrapper>
   )
 }

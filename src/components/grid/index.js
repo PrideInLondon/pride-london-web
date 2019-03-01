@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import theme from '../../theme/theme'
 
 const Container = styled(Box)`
+  width: 100%;
   @media (min-width: ${theme.breakpoints[0]}) {
     min-width: 335px;
   }
