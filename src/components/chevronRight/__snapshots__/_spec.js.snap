@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ChevronRight should render the correct tree 1`] = `
+exports[`ChevronRight renders the correct tree 1`] = `
 <svg
   fill="none"
   height={18}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image component should render when given props 1`] = `
+exports[`Image renders when given props 1`] = `
 <styled.div>
   <img
     alt="test image"

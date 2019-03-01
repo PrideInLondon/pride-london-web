@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ImageBanner should render 1`] = `
+exports[`ImageBanner renders 1`] = `
 <styled.div
   className="bannerwrapper"
   color=""
@@ -21,7 +21,7 @@ exports[`ImageBanner should render 1`] = `
 </styled.div>
 `;
 
-exports[`ImageBanner should render the subtitleText from props to BannerTitle  1`] = `
+exports[`ImageBanner renders the subtitleText from props to BannerTitle  1`] = `
 <styled.div
   className="bannerwrapper"
   color=""
@@ -44,7 +44,7 @@ exports[`ImageBanner should render the subtitleText from props to BannerTitle  1
 </styled.div>
 `;
 
-exports[`ImageBanner should render the titleText from props to BannerTitle  1`] = `
+exports[`ImageBanner renders the titleText from props to BannerTitle  1`] = `
 <styled.div
   className="bannerwrapper"
   color=""
