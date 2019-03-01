@@ -6,6 +6,10 @@ import { Column, Row, Container } from '../grid'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
 
+const StyledContainer = styled(Container)`
+  flex-grow: 1;
+`
+
 const StyledWrapper = styled.div`
   display: flex;
   align-items: flex-end;
@@ -42,11 +46,6 @@ const StyledWrapperWithUnderflow = styled(StyledWrapper)`
   margin-bottom: -150px;
 `
 
-const StyledRow = styled(Row)`
-  display: block;
-  flex-basis: 100%;
-`
-
 const ImageBanner = ({
   titleText,
   subtitleText,
@@ -63,15 +62,15 @@ const ImageBanner = ({
   return (
     <Wrapper color={color} large={large} className="bannerwrapper">
       {imageSrc && <img src={imageSrc} alt={altText} />}
-      <Container>
-        <StyledRow>
+      <StyledContainer>
+        <Row>
           <Column width={1}>
             <BannerTitle>{titleText}</BannerTitle>
             <BannerSubtitle>{subtitleText}</BannerSubtitle>
           </Column>
           {children}
-        </StyledRow>
-      </Container>
+        </Row>
+      </StyledContainer>
     </Wrapper>
   )
 }
