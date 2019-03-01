@@ -5,12 +5,12 @@ import { media } from '../../theme/media'
 import theme from '../../theme/theme'
 import NewsletterForm from '../../features/events/components/newsletter'
 import { Row, Column } from '../grid'
-import Facebook from '!svg-react-loader?name=Facebook!../../theme/assets/images/icon-facebook.svg' // eslint-disable-line
-import Twitter from '!svg-react-loader?name=Twitter!../../theme/assets/images/icon-twitter.svg' // eslint-disable-line
-import Instagram from '!svg-react-loader?name=Instagram!../../theme/assets/images/icon-instagram.svg' // eslint-disable-line
-import Youtube from '!svg-react-loader?name=Youtube!../../theme/assets/images/icon-youtube.svg' // eslint-disable-line
-import LinkedIn from '!svg-react-loader?name=LinkedIn!../../theme/assets/images/icon-linkedin.svg' // eslint-disable-line
-import Snapchat from '!svg-react-loader?name=Snapchat!../../theme/assets/images/icon-snapchat.svg' // eslint-disable-line
+import Facebook from '../../components/icons/facebook'
+import Twitter from '../../components/icons/twitter'
+import Instagram from '../../components/icons/instagram'
+import Youtube from '../../components/icons/youtube'
+import LinkedIn from '../../components/icons/linkedin'
+import Snapchat from '../../components/icons/snapchat'
 
 const FooterWrapper = styled.div`
   background-color: ${theme.colors.indigo};
