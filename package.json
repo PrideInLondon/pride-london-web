@@ -3,11 +3,9 @@
   "version": "0.1.0",
   "dependencies": {
     "@rebass/grid": "^6.0.0-7",
-    "babel-polyfill": "^6.26.0",
     "gatsby": "^2.1.19",
     "gatsby-link": "^2.0.13",
     "gatsby-plugin-layout": "^1.0.11",
-    "gatsby-plugin-polyfill-io": "^1.0.5",
     "gatsby-plugin-react-helmet": "^3.0.7",
     "gatsby-plugin-styled-components": "^3.0.6",
     "gatsby-source-contentful": "^2.0.33",
@@ -45,7 +43,6 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "7.0.0-bridge.0",
