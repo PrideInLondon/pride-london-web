@@ -16,6 +16,18 @@ const StyledWrapper = styled.div`
   padding-bottom: 35px;
   z-index: -2;
 
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: -1;
+  }
+
   ${media.tablet`
     align-items: center;
     height: ${props => (props.large === 'true' ? '500px' : '400px')};
@@ -35,18 +47,6 @@ const StyledRow = styled(Row)`
   flex-basis: 100%;
 `
 
-const StyledImage = styled.img`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  height: auto;
-  width: auto;
-  z-index: -1;
-`
-
 const ImageBanner = ({
   titleText,
   subtitleText,
@@ -62,7 +62,7 @@ const ImageBanner = ({
     : StyledWrapper
   return (
     <Wrapper color={color} large={large} className="bannerwrapper">
-      {imageSrc && <StyledImage src={imageSrc} alt={altText} />}
+      {imageSrc && <img src={imageSrc} alt={altText} />}
       <Container>
         <StyledRow>
           <Column width={1}>
