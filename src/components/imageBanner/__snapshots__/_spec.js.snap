@@ -6,18 +6,18 @@ exports[`ImageBanner renders 1`] = `
   color=""
   large="false"
 >
-  <Styled(Box)
+  <Styled(Styled(Box))
     mx="auto"
   >
-    <Styled(Row)>
+    <Row>
       <Column
         width={1}
       >
         <StyledBannerTitle />
         <StyledBannerSubtitle />
       </Column>
-    </Styled(Row)>
-  </Styled(Box)>
+    </Row>
+  </Styled(Styled(Box))>
 </styled.div>
 `;
 
@@ -27,10 +27,10 @@ exports[`ImageBanner renders the subtitleText from props to BannerTitle  1`] = `
   color=""
   large="false"
 >
-  <Styled(Box)
+  <Styled(Styled(Box))
     mx="auto"
   >
-    <Styled(Row)>
+    <Row>
       <Column
         width={1}
       >
@@ -39,8 +39,8 @@ exports[`ImageBanner renders the subtitleText from props to BannerTitle  1`] = `
           And here is a test subtitle!
         </StyledBannerSubtitle>
       </Column>
-    </Styled(Row)>
-  </Styled(Box)>
+    </Row>
+  </Styled(Styled(Box))>
 </styled.div>
 `;
 
@@ -50,10 +50,10 @@ exports[`ImageBanner renders the titleText from props to BannerTitle  1`] = `
   color=""
   large="false"
 >
-  <Styled(Box)
+  <Styled(Styled(Box))
     mx="auto"
   >
-    <Styled(Row)>
+    <Row>
       <Column
         width={1}
       >
@@ -62,7 +62,7 @@ exports[`ImageBanner renders the titleText from props to BannerTitle  1`] = `
         </StyledBannerTitle>
         <StyledBannerSubtitle />
       </Column>
-    </Styled(Row)>
-  </Styled(Box)>
+    </Row>
+  </Styled(Styled(Box))>
 </styled.div>
 `;
