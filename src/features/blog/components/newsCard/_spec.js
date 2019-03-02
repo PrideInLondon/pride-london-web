@@ -1,10 +1,10 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ViewsCard from './'
+import NewsCard from './'
 
-describe('ViewsCard', () => {
+describe(NewsCard.name, () => {
   it('renders with default values', () => {
-    const wrapper = shallow(<ViewsCard />)
+    const wrapper = shallow(<NewsCard />)
     expect(wrapper).toMatchSnapshot()
   })
 })

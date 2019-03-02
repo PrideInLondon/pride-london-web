@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ViewsCard should render with default values 1`] = `
+exports[`ViewsCard renders with default values 1`] = `
 <viewsCard__Container>
   <Image
     altText="Lisa Charlwood-Green — LGTB+ Women Say \\"Wow!"
