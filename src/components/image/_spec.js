@@ -15,4 +15,3 @@ describe('Image', () => {
     expect(wrapper).toMatchSnapshot()
   })
 })
-

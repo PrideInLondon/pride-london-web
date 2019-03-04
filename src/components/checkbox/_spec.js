@@ -29,7 +29,7 @@ describe('Checkbox', () => {
   it('renders', () => {
     expect(wrapper).toMatchSnapshot()
   })
-  
+
   describe('input', () => {
     it('has id from props', () => {
       expect(wrapper.find('[type="checkbox"]').props().id).toBe(id)
@@ -50,11 +50,7 @@ describe('Checkbox', () => {
     })
 
     it('has text from props ', () => {
-      expect(
-        wrapper
-          .find('[htmlFor="test"]')
-          .text()
-      ).toBe(label)
+      expect(wrapper.find('[htmlFor="test"]').text()).toBe(label)
     })
   })
 

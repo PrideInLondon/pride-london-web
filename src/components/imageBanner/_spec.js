@@ -13,56 +13,34 @@ describe('ImageBanner', () => {
 
   it('renders a <BannerTitle />', () => {
     const wrapper = shallow(<ImageBanner />)
-    expect(
-      wrapper
-        .find(BannerTitle))
-      .toHaveLength(1)
+    expect(wrapper.find(BannerTitle)).toHaveLength(1)
   })
 
   it('renders a <BannerSubtitle />', () => {
     const wrapper = shallow(<ImageBanner />)
-    expect(
-      wrapper
-        .find(BannerSubtitle))
-      .toHaveLength(1)
+    expect(wrapper.find(BannerSubtitle)).toHaveLength(1)
   })
 
   it('renders an img if passed an imageSrc prop', () => {
     const wrapper = shallow(<ImageBanner imageSrc="foo" />)
-    expect(
-      wrapper.
-        find('img'))
-      .toHaveLength(1)
+    expect(wrapper.find('img')).toHaveLength(1)
   })
 
   it('renders render an img if not passed an imageSrc prop', () => {
     const wrapper = shallow(<ImageBanner />)
-    expect(
-      wrapper
-        .find('img'))
-      .toHaveLength(0)
+    expect(wrapper.find('img')).toHaveLength(0)
   })
 
   it('renders an img with imgSrc from props', () => {
     const imageSrc = 'https://www.image.com'
     const wrapper = shallow(<ImageBanner imageSrc={imageSrc} />)
-    expect(
-      wrapper
-        .find('img')
-        .props()
-        .src)
-      .toBe(imageSrc)
+    expect(wrapper.find('img').props().src).toBe(imageSrc)
   })
 
   it('renders an img with altText from props', () => {
     const altText = 'background image'
     const wrapper = shallow(<ImageBanner imageSrc="foo" altText={altText} />)
-    expect(
-      wrapper
-        .find('img')
-        .props()
-        .alt)
-      .toBe(altText)
+    expect(wrapper.find('img').props().alt).toBe(altText)
   })
 
   it('renders the titleText from props to BannerTitle ', () => {

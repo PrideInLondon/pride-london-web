@@ -1,3 +1,1 @@
-xtest('test placeholder', () => {
-  
-});
+xtest('test placeholder', () => {})

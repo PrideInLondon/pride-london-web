@@ -56,7 +56,7 @@ jest.mock('../../../components/appContext', () => {
   }
 })
 
-const shallowWithTheme = (tree, theme = theme ) => {
+const shallowWithTheme = (tree, theme = theme) => {
   const context = shallow(<ThemeProvider theme={theme} />)
   ThemeConsumer._currentValue = theme
   return shallow(tree)
