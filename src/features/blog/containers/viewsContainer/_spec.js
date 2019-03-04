@@ -6,5 +6,5 @@ describe('ViewsContainer', () => {
   it('should render with default values', () => {
     const wrapper = shallow(<ViewsContainer />)
     expect(wrapper).toMatchSnapshot()
-  });
-});
+  })
+})

@@ -17,10 +17,7 @@ describe('BannerTitle', () => {
 
   it('renders child text ', () => {
     const text = 'Here is a test title!'
-    const wrapper = shallow(
-      <BannerTitle>
-        {text}
-      </BannerTitle>, {
+    const wrapper = shallow(<BannerTitle>{text}</BannerTitle>, {
       context: { theme },
     })
     // Currently having issues testing with enzyme as the theme does not get provided to the styled componentw

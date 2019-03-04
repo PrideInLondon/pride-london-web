@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import { Provider } from '../components/appContext'
 // import Navigation from '../components/navigation'
 import SimpleNav from '../components/simpleNav'
+import Footer from '../components/footer'
 import theme from '../theme/theme'
 import favicon from '../favicon.ico'
 
@@ -49,34 +50,40 @@ const query = graphql`
 const Layout = props => (
   <StaticQuery
     query={query}
-    render={data =>
-      console.log(data) || (
-        <Provider events={data.allContentfulEvent.edges}>
-          <ThemeProvider theme={theme}>
-            <Fragment>
-              <Helmet
-                title={data.site.siteMetadata.title}
-                meta={[
-                  { name: 'description', content: 'Sample' },
-                  { name: 'keywords', content: 'sample, something' },
-                ]}
-                link={[
-                  {
-                    rel: 'icon',
-                    href: favicon,
-                  },
-                ]}
-                htmlAttributes={{
-                  lang: 'en-gb',
-                }}
-              />
-              <SimpleNav />
-              <main>{props.children}</main>
-            </Fragment>
-          </ThemeProvider>
-        </Provider>
-      )
-    }
+    render={data => (
+      <Provider events={data.allContentfulEvent.edges}>
+        <ThemeProvider theme={theme}>
+          <Fragment>
+            <Helmet
+              title={data.site.siteMetadata.title}
+              meta={[
+                { name: 'description', content: 'Sample' },
+                { name: 'keywords', content: 'sample, something' },
+              ]}
+              link={[
+                {
+                  rel: 'icon',
+                  href: favicon,
+                },
+              ]}
+              htmlAttributes={{
+                lang: 'en-gb',
+              }}
+              script={[
+                {
+                  src:
+                    'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.2.5/polyfill.js',
+                },
+              ]}
+            />
+
+            <SimpleNav />
+            <main>{props.children}</main>
+            <Footer />
+          </Fragment>
+        </ThemeProvider>
+      </Provider>
+    )}
   />
 )
 

@@ -34,10 +34,7 @@ describe('BannerSubtitle', () => {
 
   it('renders child text ', () => {
     const text = 'And here is a test subtitle!'
-    const wrapper = shallow(
-      <StyledBannerSubtitle>
-        {text}
-      </StyledBannerSubtitle>)
+    const wrapper = shallow(<StyledBannerSubtitle>{text}</StyledBannerSubtitle>)
     expect(wrapper).toMatchSnapshot()
   })
 })

@@ -1,56 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ImageBanner renders 1`] = `
-<Styled(Styled(Box))
+<styled.div
+  className="bannerwrapper"
   color=""
   large="false"
-  mx="auto"
 >
-  <Styled(Row)>
-    <Column
-      width={1}
-    >
-      <StyledBannerTitle />
-      <StyledBannerSubtitle />
-    </Column>
-  </Styled(Row)>
-</Styled(Styled(Box))>
+  <Styled(Styled(Box))
+    mx="auto"
+  >
+    <Row>
+      <Column
+        width={1}
+      >
+        <StyledBannerTitle />
+        <StyledBannerSubtitle />
+      </Column>
+    </Row>
+  </Styled(Styled(Box))>
+</styled.div>
 `;
 
 exports[`ImageBanner renders the subtitleText from props to BannerTitle  1`] = `
-<Styled(Styled(Box))
+<styled.div
+  className="bannerwrapper"
   color=""
   large="false"
-  mx="auto"
 >
-  <Styled(Row)>
-    <Column
-      width={1}
-    >
-      <StyledBannerTitle />
-      <StyledBannerSubtitle>
-        And here is a test subtitle!
-      </StyledBannerSubtitle>
-    </Column>
-  </Styled(Row)>
-</Styled(Styled(Box))>
+  <Styled(Styled(Box))
+    mx="auto"
+  >
+    <Row>
+      <Column
+        width={1}
+      >
+        <StyledBannerTitle />
+        <StyledBannerSubtitle>
+          And here is a test subtitle!
+        </StyledBannerSubtitle>
+      </Column>
+    </Row>
+  </Styled(Styled(Box))>
+</styled.div>
 `;
 
 exports[`ImageBanner renders the titleText from props to BannerTitle  1`] = `
-<Styled(Styled(Box))
+<styled.div
+  className="bannerwrapper"
   color=""
   large="false"
-  mx="auto"
 >
-  <Styled(Row)>
-    <Column
-      width={1}
-    >
-      <StyledBannerTitle>
-        Here is a test title!
-      </StyledBannerTitle>
-      <StyledBannerSubtitle />
-    </Column>
-  </Styled(Row)>
-</Styled(Styled(Box))>
+  <Styled(Styled(Box))
+    mx="auto"
+  >
+    <Row>
+      <Column
+        width={1}
+      >
+        <StyledBannerTitle>
+          Here is a test title!
+        </StyledBannerTitle>
+        <StyledBannerSubtitle />
+      </Column>
+    </Row>
+  </Styled(Styled(Box))>
+</styled.div>
 `;

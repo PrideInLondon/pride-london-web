@@ -11,9 +11,7 @@ describe('Button', () => {
   it('fires correct method when set onClick property', () => {
     let counter = 0
     const handleClick = () => (counter += 1)
-    const wrapper = shallow(
-      <Button onClick={handleClick} />
-    )
+    const wrapper = shallow(<Button onClick={handleClick} />)
     wrapper.prop('onClick')()
     expect(counter).toBe(1)
   })
