@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import Title from '../../components/title'
 import ImageBanner from '../../../../components/imageBanner'
