@@ -8,7 +8,7 @@
     "gatsby-plugin-layout": "^1.0.11",
     "gatsby-plugin-react-helmet": "^3.0.7",
     "gatsby-plugin-styled-components": "^3.0.6",
-    "gatsby-source-contentful": "^2.0.33",
+    "gatsby-source-contentful": "^2.0.34",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
     "polished": "^3.0.3",
