@@ -43,7 +43,7 @@ const StyledWrapperWithUnderflow = styled(StyledWrapper)`
   align-items: flex-start;
   min-height: 380px;
   padding-top: 50px;
-  margin-bottom: -150px;
+  margin-bottom: -75px;
 `
 
 const ImageBanner = ({

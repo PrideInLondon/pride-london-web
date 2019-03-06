@@ -16,7 +16,7 @@ const CardContainer = styled.div`
 
 const ViewsContainer = () => {
   return (
-    <Fragment>
+    <>
       <Container>
         <Title theme={theme} isLight>
           Views
@@ -31,7 +31,7 @@ const ViewsContainer = () => {
           <ViewsCard />
         </CardContainer>
       </Container>
-    </Fragment>
+    </>
   )
 }
 
