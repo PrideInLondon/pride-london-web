@@ -1,25 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import config from './config'
-import theme from '../../../../theme/theme'
-
-const FilterText = styled.p`
-  border: 2px solid;
-  background-color: ${props =>
-    props.isOutline ? 'none' : props.backgroundColor};
-  border-color: ${props => props.backgroundColor};
-  border-radius: 4px;
-  color: ${props => (props.isOutline ? theme.colors.black : props.textColor)};
-  cursor: pointer;
-  display: inline-block;
-  font-family: Poppins;
-  font-size: 12px;
-  padding: 2px 5px;
-  margin: 5px 5px 0 0;
-  /* margin-right: 5px; */
-  white-space: nowrap;
-`
+import { FilterText } from './styles'
 
 const NewsFilter = ({ filterType, isOutline, handleClick }) => {
   const { label, textColor, backgroundColor } = config[filterType]

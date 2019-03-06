@@ -1,29 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { media } from '../../../../theme/media'
-import theme from '../../../../theme/theme'
 import Image from '../../../../components/image'
-
-const ArticleTitle = styled.h2`
-  color: ${theme.colors.black};
-  margin: 0.5rem 0;
-`
-
-const ArticleAuthor = styled.p`
-  color: ${theme.colors.darkGrey};
-  margin: 0.25rem 0;
-  font-size: 0.825rem;
-`
-
-const Container = styled.div`
-  min-width: 162px;
-  padding: 5px;
-
-  ${media.tablet`
-    min-width: 400px;
-  `};
-`
+import { ArticleAuthor, ArticleTitle, Container } from './styles'
 
 const ViewsCard = props => {
   const { preview, author, title } = props
