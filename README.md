@@ -10,7 +10,7 @@ This project is a community effort to release a brand new web platform to suppla
 
 ## Contributing
 
-Want to help out? That's amazing! The [Contribution Guide](https://github.com/MarcelCutts/pride-london-web/blob/master/CONTRIBUTING.md) should hopefully get you on your way.
+Want to help out? That's amazing! The [Contribution Guide]() should hopefully get you on your way.
 
 Check the [issues](https://github.com/kiraarghy/pride-london-web-gatsby/issues) section of the repo for tickets to pick up.
 
