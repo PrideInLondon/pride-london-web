@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import NewsFilter from '../../components/newsFilter'
 import config from '../../components/newsFilter/config'
@@ -10,6 +10,7 @@ const FilterContainer = ({ handleFilterClick, selectedFilter }) => {
       {Object.keys(config).map(filterType => {
         return (
           <NewsFilter
+            key={filterType}
             handleClick={handleFilterClick}
             filterType={filterType}
             isOutline={selectedFilter !== filterType}
@@ -21,11 +22,12 @@ const FilterContainer = ({ handleFilterClick, selectedFilter }) => {
 }
 
 FilterContainer.propTypes = {
-  isSelected: PropTypes.bool,
+  handleFilterClick: PropTypes.func.isRequired,
+  selectedFilter: PropTypes.string,
 }
 
 FilterContainer.defaultProps = {
-  isSelected: false,
+  selectedFilter: '',
 }
 
 export default FilterContainer

@@ -18,7 +18,13 @@ const NewsFilter = ({ filterType, isOutline, handleClick }) => {
 }
 
 NewsFilter.propTypes = {
+  isOutline: PropTypes.bool,
+  handleClick: PropTypes.func.isRequired,
   filterType: PropTypes.string.isRequired,
+}
+
+NewsFilter.defaultProps = {
+  isOutline: true,
 }
 
 export default NewsFilter
