@@ -5,6 +5,7 @@ exports[`NewsCard renders with default values 1`] = `
   <styled.div>
     <NewsFilter
       filterType="PARTNERS"
+      isOutline={true}
     />
     <styled.span>
       12 Jun 2019
