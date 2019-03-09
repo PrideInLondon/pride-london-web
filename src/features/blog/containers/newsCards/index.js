@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import NewsCard from '../../components/newsCard'
 import {
   ALL_ARTICLES,
@@ -36,7 +37,9 @@ const NewsCards = ({ selectedFilter }) => {
       {mockNews.map((article, index) => {
         return selectedFilter === ALL_ARTICLES ||
           selectedFilter === article.type ? (
+          /* eslint-disable */
           <FlexColumn
+            key={index}
             width={[
               1, // 100% between 0px screen width and first breakpoint (375px)
               1, // 100% between first breakpoint(375px) and second breakpoint (768px)
@@ -46,10 +49,15 @@ const NewsCards = ({ selectedFilter }) => {
           >
             <NewsCard type={article.type} />
           </FlexColumn>
-        ) : null
+        ) : /* eslint-enable */
+        null
       })}
     </Row>
   )
+}
+
+NewsCards.propTypes = {
+  selectedFilter: PropTypes.string.isRequired,
 }
 
 export default NewsCards

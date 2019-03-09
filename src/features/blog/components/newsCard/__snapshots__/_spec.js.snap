@@ -3,7 +3,9 @@
 exports[`NewsCard renders with default values 1`] = `
 <styled.div>
   <styled.div>
-    <NewsFilter />
+    <NewsFilter
+      filterType="PARTNERS"
+    />
     <styled.span>
       12 Jun 2019
     </styled.span>

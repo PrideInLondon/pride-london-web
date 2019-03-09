@@ -3,5 +3,7 @@
 exports[`Title renders with default values 1`] = `
 <styled.h2
   isLight={false}
-/>
+>
+  Hi
+</styled.h2>
 `;

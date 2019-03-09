@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsCards renders with default values 1`] = `
+<Row>
+  <Styled(Column)
+    key="0"
+    width={
+      Array [
+        1,
+        1,
+        0.5,
+        0.3333333333333333,
+      ]
+    }
+  >
+    <NewsCard
+      type="RESEARCH"
+    />
+  </Styled(Column)>
+  <Styled(Column)
+    key="1"
+    width={
+      Array [
+        1,
+        1,
+        0.5,
+        0.3333333333333333,
+      ]
+    }
+  >
+    <NewsCard
+      type="NEWS"
+    />
+  </Styled(Column)>
+  <Styled(Column)
+    key="2"
+    width={
+      Array [
+        1,
+        1,
+        0.5,
+        0.3333333333333333,
+      ]
+    }
+  >
+    <NewsCard
+      type="NEWS"
+    />
+  </Styled(Column)>
+  <Styled(Column)
+    key="3"
+    width={
+      Array [
+        1,
+        1,
+        0.5,
+        0.3333333333333333,
+      ]
+    }
+  >
+    <NewsCard
+      type="RESEARCH"
+    />
+  </Styled(Column)>
+  <Styled(Column)
+    key="4"
+    width={
+      Array [
+        1,
+        1,
+        0.5,
+        0.3333333333333333,
+      ]
+    }
+  >
+    <NewsCard
+      type="ANNOUNCEMENTS"
+    />
+  </Styled(Column)>
+  <Styled(Column)
+    key="5"
+    width={
+      Array [
+        1,
+        1,
+        0.5,
+        0.3333333333333333,
+      ]
+    }
+  >
+    <NewsCard
+      type="PARTNERS"
+    />
+  </Styled(Column)>
+</Row>
+`;
