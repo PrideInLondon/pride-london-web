@@ -7,6 +7,7 @@ import noScroll from 'no-scroll'
 import { media } from '../../theme/media'
 import logo from '../../theme/assets/images/logo-pride.svg'
 import Button from '../button'
+import NavItem from '../navItem'
 import burger from '../../theme/assets/images/icon-menu.svg'
 import iconClose from '../../theme/assets/images/icon-close.svg'
 import theme from '../../theme/theme'
@@ -94,7 +95,7 @@ const Menu = styled.ul`
   `};
 `
 
-const MenuItem = styled.li`
+const MenuItem = styled(NavItem)`
   transition: height 0.15s linear;
   padding: 0 20px;
 
@@ -104,27 +105,6 @@ const MenuItem = styled.li`
   `};
 `
 
-const MenuLink = styled.a`
-  font-family: ${props => props.theme.fonts.title};
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: ${props => props.theme.colors.lightGrey};
-  text-decoration: none;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  padding: 20px 0;
-
-  ${media.tablet`
-    padding: 35px 25px;
-    line-height: 1.8125rem;
-
-    &:hover,
-    &:focus {
-      background-color: ${props => lighten(0.05, props.theme.colors.indigo)};
-    }
-  `};
-`
 const Burger = styled.button`
   cursor: pointer;
   border: none;
@@ -169,7 +149,7 @@ const DonateButton = styled(Button)`
   `};
 `
 
-const SimpleNav = () => {
+const Nav = () => {
   const [isOpen, setOpen] = useState(false)
   useEffect(() => {
     if (isOpen) {
@@ -204,11 +184,12 @@ const SimpleNav = () => {
                 <span>Menu</span>
               </Burger>
               <Menu id="menu" isOpen={isOpen} className={isOpen && 'open'}>
-                <MenuItem>
-                  <MenuLink href="https://prideinlondon.org/">
-                    <span>Return to main site</span>
-                  </MenuLink>
-                </MenuItem>
+                <MenuItem
+                  item={{
+                    title: 'Return to main site',
+                    url: 'https://prideinlondon.org/',
+                  }}
+                />
                 <MenuItem>
                   <DonateButton
                     link
@@ -228,4 +209,4 @@ const SimpleNav = () => {
   )
 }
 
-export default SimpleNav
+export default Nav

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from '../components/appContext'
 // import Navigation from '../components/navigation'
-import SimpleNav from '../components/simpleNav'
+import Nav from '../components/nav'
 import Footer from '../components/footer'
 import theme from '../theme/theme'
 import favicon from '../favicon.ico'
@@ -77,7 +77,7 @@ const Layout = props => (
               ]}
             />
 
-            <SimpleNav />
+            <Nav />
             <main>{props.children}</main>
             <Footer />
           </Fragment>
