@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 import { lighten } from 'polished'
@@ -70,7 +70,7 @@ const Menu = styled.ul`
   margin: 0;
   position: absolute;
   top: 80px;
-  left: ${props => (props.menuOpen ? '0' : '100%')};
+  left: ${props => (props.isOpen ? '0' : '100%')};
   visibility: hidden;
   transition: left 0.15s linear, visibility 0s 0.15s linear;
   width: 100%;
@@ -134,7 +134,7 @@ const Burger = styled.button`
   line-height: 1.125rem;
   transition: background-color 0.15s linear;
   background-color: ${props =>
-    props.menuOpen ? props.theme.colors.indigo : 'transparent'};
+    props.isOpen ? props.theme.colors.indigo : 'transparent'};
   width: 80px;
   height: 80px;
   padding: 0;
@@ -145,7 +145,7 @@ const Burger = styled.button`
   span {
     display: block;
     padding-top: 20px;
-    background-image: url(${props => (props.menuOpen ? iconClose : burger)});
+    background-image: url(${props => (props.isOpen ? iconClose : burger)});
     background-position: center top;
     background-repeat: no-repeat;
   }
@@ -169,69 +169,63 @@ const DonateButton = styled(Button)`
   `};
 `
 
-class SimpleNav extends Component {
-  state = {
-    menuOpen: false,
-  }
-
-  toggleMenu = () => {
-    this.setState({ menuOpen: !this.state.menuOpen }, () => noScroll.toggle())
-  }
-
-  render() {
-    return (
-      <HeaderWrapper>
-        <Header>
-          <FlexRow
-            mx={[
-              0, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
-              0, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
-              50, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
-              50, // Margin between 2nd breakpoint(1024px) and 3rd breakpoint (1440px)
-              90, // Margin 1440 onwards
-            ]}
-          >
-            <FlexColumn width={1}>
-              <LogoWrapper to="/events">
-                <Logo src={logo} alt="Pride in London Logo" />
-              </LogoWrapper>
-              <nav role="navigation">
-                <Burger
-                  onClick={this.toggleMenu}
-                  menuOpen={this.state.menuOpen}
-                  aria-controls="menu"
-                  aria-expanded={this.state.menuOpen}
-                >
-                  <span>Menu</span>
-                </Burger>
-                <Menu
-                  id="menu"
-                  menuOpen={this.state.menuOpen}
-                  className={this.state.menuOpen && 'open'}
-                >
-                  <MenuItem>
-                    <MenuLink href="https://prideinlondon.org/">
-                      <span>Return to main site</span>
-                    </MenuLink>
-                  </MenuItem>
-                  <MenuItem>
-                    <DonateButton
-                      link
-                      primary
-                      fullmobile
-                      to="https://prideinlondon.org/donate/"
-                    >
-                      Donate
-                    </DonateButton>
-                  </MenuItem>
-                </Menu>
-              </nav>
-            </FlexColumn>
-          </FlexRow>
-        </Header>
-      </HeaderWrapper>
-    )
-  }
+const SimpleNav = () => {
+  const [isOpen, setOpen] = useState(false)
+  useEffect(() => {
+    if (isOpen) {
+      noScroll.on()
+    } else {
+      noScroll.off()
+    }
+  })
+  return (
+    <HeaderWrapper>
+      <Header>
+        <FlexRow
+          mx={[
+            0, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
+            0, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
+            50, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
+            50, // Margin between 2nd breakpoint(1024px) and 3rd breakpoint (1440px)
+            90, // Margin 1440 onwards
+          ]}
+        >
+          <FlexColumn width={1}>
+            <LogoWrapper to="/events">
+              <Logo src={logo} alt="Pride in London Logo" />
+            </LogoWrapper>
+            <nav role="navigation">
+              <Burger
+                onClick={() => setOpen(!isOpen)}
+                isOpen={isOpen}
+                aria-controls="menu"
+                aria-expanded={isOpen}
+              >
+                <span>Menu</span>
+              </Burger>
+              <Menu id="menu" isOpen={isOpen} className={isOpen && 'open'}>
+                <MenuItem>
+                  <MenuLink href="https://prideinlondon.org/">
+                    <span>Return to main site</span>
+                  </MenuLink>
+                </MenuItem>
+                <MenuItem>
+                  <DonateButton
+                    link
+                    primary
+                    fullmobile
+                    to="https://prideinlondon.org/donate/"
+                  >
+                    Donate
+                  </DonateButton>
+                </MenuItem>
+              </Menu>
+            </nav>
+          </FlexColumn>
+        </FlexRow>
+      </Header>
+    </HeaderWrapper>
+  )
 }
 
 export default SimpleNav
