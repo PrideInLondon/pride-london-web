@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 import { lighten } from 'polished'
 import Link from 'gatsby-link'
 import noScroll from 'no-scroll'
+import { Row, Column } from '../grid'
 import { media } from '../../theme/media'
 import logo from '../../theme/assets/images/logo-pride.svg'
 import Button from '../button'
@@ -34,14 +34,15 @@ const Header = styled.header`
   ${media.tablet`
     height: 100px;
     background-color: ${theme.colors.indigo};
+    position: static;
   `};
 `
 
-const FlexRow = styled(Flex)`
+const FlexRow = styled(Row)`
   flex-basis: 100%;
 `
 
-const FlexColumn = styled(Box)`
+const FlexColumn = styled(Column)`
   display: flex;
   align-items: center;
   padding-top: 0;

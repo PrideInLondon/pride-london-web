@@ -1,8 +1,9 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
 import { Link } from 'gatsby'
+import Submenu from '../submenu'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
 
@@ -75,10 +76,11 @@ const initialState = { isOpen: false }
 const NavItem = props => {
   const {
     children,
-    item: { submenu = false, title, url },
+    item: { submenu = false, title, url, desc },
   } = props
   const [state, dispatch] = useReducer(reducer, initialState)
   const { isOpen } = state
+
   return (
     <MenuItem
       onMouseEnter={() =>
@@ -91,17 +93,20 @@ const NavItem = props => {
       {children ? (
         children
       ) : submenu ? (
-        <SubmenuToggle
-          href="#"
-          aria-haspopup="true"
-          aria-expanded={`${isOpen}`}
-          onClick={e => {
-            e.preventDefault()
-            dispatch({ type: 'toggle' })
-          }}
-        >
-          <span>{title}</span>
-        </SubmenuToggle>
+        <Fragment>
+          <SubmenuToggle
+            href="#"
+            aria-haspopup="true"
+            aria-expanded={`${isOpen}`}
+            onClick={e => {
+              e.preventDefault()
+              dispatch({ type: 'toggle' })
+            }}
+          >
+            <span>{title}</span>
+          </SubmenuToggle>
+          <Submenu item={{ submenu, title, url, desc }} />
+        </Fragment>
       ) : (
         <MenuLink to={url}>
           <span>{title}</span>
