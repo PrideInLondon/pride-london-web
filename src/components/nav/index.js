@@ -95,16 +95,6 @@ const Menu = styled.ul`
   `};
 `
 
-const MenuItem = styled(NavItem)`
-  transition: height 0.15s linear;
-  padding: 0 20px;
-
-  ${media.tablet`
-    height: auto;
-    padding: 0;
-  `};
-`
-
 const Burger = styled.button`
   cursor: pointer;
   border: none;
@@ -184,13 +174,19 @@ const Nav = () => {
                 <span>Menu</span>
               </Burger>
               <Menu id="menu" isOpen={isOpen} className={isOpen && 'open'}>
-                <MenuItem
+                <NavItem
                   item={{
-                    title: 'Return to main site',
-                    url: 'https://prideinlondon.org/',
+                    title: 'Learn',
+                    desc:
+                      'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
+                    url: '/',
+                    submenu: [
+                      { title: 'About us', url: '/' },
+                      { title: 'About us', url: '/' },
+                    ],
                   }}
                 />
-                <MenuItem>
+                <NavItem>
                   <DonateButton
                     link
                     primary
@@ -199,7 +195,7 @@ const Nav = () => {
                   >
                     Donate
                   </DonateButton>
-                </MenuItem>
+                </NavItem>
               </Menu>
             </nav>
           </FlexColumn>

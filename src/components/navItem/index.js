@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
+import { Link } from 'gatsby'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
 
-const MenuLink = styled.a`
+const MenuItem = styled.li`
+  transition: height 0.15s linear;
+  padding: 0 20px;
+
+  ${media.tablet`
+    height: auto;
+    padding: 0;
+  `};
+`
+
+const linkStyles = css`
   font-family: ${theme.fonts.title};
   font-size: 1.25rem;
   line-height: 1.5;
@@ -27,19 +38,76 @@ const MenuLink = styled.a`
 `};
 `
 
-const NavItem = props => {
-  const { children, item } = props
+const MenuLink = styled(Link)`
+  ${linkStyles}
+`
 
+const SubmenuToggle = styled.a`
+  ${linkStyles}
+`
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'open':
+      console.log('OPEN')
+      return {
+        isOpen: true,
+      }
+    case 'close':
+      console.log('CLOSE')
+      return {
+        isOpen: false,
+      }
+    case 'toggle':
+      console.log('TOGGLE')
+      return {
+        isOpen: !state.isOpen,
+      }
+  }
+}
+
+function checkIfDesktop() {
+  return window.matchMedia(`(min-width: ${theme.breakpoints[1]})`).matches
+}
+
+const initialState = { isOpen: false }
+
+const NavItem = props => {
+  const {
+    children,
+    item: { submenu = false, title, url },
+  } = props
+  const [state, dispatch] = useReducer(reducer, initialState)
+  const { isOpen } = state
   return (
-    <li>
+    <MenuItem
+      onMouseEnter={() =>
+        submenu && checkIfDesktop() && dispatch({ type: 'open' })
+      }
+      onMouseLeave={() =>
+        submenu && checkIfDesktop() && dispatch({ type: 'close' })
+      }
+    >
       {children ? (
         children
+      ) : submenu ? (
+        <SubmenuToggle
+          href="#"
+          aria-haspopup="true"
+          aria-expanded={`${isOpen}`}
+          onClick={e => {
+            e.preventDefault()
+            dispatch({ type: 'toggle' })
+          }}
+        >
+          <span>{title}</span>
+        </SubmenuToggle>
       ) : (
-        <MenuLink href={item.url}>
-          <span>{item.title}</span>
+        <MenuLink to={url}>
+          <span>{title}</span>
         </MenuLink>
       )}
-    </li>
+    </MenuItem>
   )
 }
 
@@ -53,7 +121,7 @@ NavItem.propTypes = {
 
 NavItem.defaultProps = {
   children: null,
-  item: null,
+  item: {},
 }
 
 export default NavItem
