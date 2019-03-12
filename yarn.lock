@@ -915,12 +915,12 @@
     rimraf "^2.5.4"
     strip-ansi "^5.0.0"
 
-"@jest/environment@^24.3.1":
-  version "24.3.1"
-  resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-24.3.1.tgz#1fbda3ec8fb8ffbaee665d314da91d662227e11e"
+"@jest/environment@^24.3.1", "@jest/environment@^24.4.0":
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-24.4.0.tgz#552f0629a9cc2bd015f370b3af77222f069f158f"
   dependencies:
     "@jest/fake-timers" "^24.3.0"
-    "@jest/transform" "^24.3.1"
+    "@jest/transform" "^24.4.0"
     "@jest/types" "^24.3.0"
     "@types/node" "*"
     jest-mock "^24.3.0"
@@ -987,6 +987,26 @@
     fast-json-stable-stringify "^2.0.0"
     graceful-fs "^4.1.15"
     jest-haste-map "^24.3.1"
+    jest-regex-util "^24.3.0"
+    jest-util "^24.3.0"
+    micromatch "^3.1.10"
+    realpath-native "^1.1.0"
+    slash "^2.0.0"
+    source-map "^0.6.1"
+    write-file-atomic "2.4.1"
+
+"@jest/transform@^24.4.0":
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-24.4.0.tgz#2f6b4b5dc7f7673d8fec8bf1040d4236c58c7a60"
+  dependencies:
+    "@babel/core" "^7.1.0"
+    "@jest/types" "^24.3.0"
+    babel-plugin-istanbul "^5.1.0"
+    chalk "^2.0.1"
+    convert-source-map "^1.4.0"
+    fast-json-stable-stringify "^2.0.0"
+    graceful-fs "^4.1.15"
+    jest-haste-map "^24.4.0"
     jest-regex-util "^24.3.0"
     jest-util "^24.3.0"
     micromatch "^3.1.10"
@@ -6641,11 +6661,11 @@ jest-each@^24.3.1:
     jest-util "^24.3.0"
     pretty-format "^24.3.1"
 
-jest-environment-jsdom@^24.3.1:
-  version "24.3.1"
-  resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-24.3.1.tgz#49826bcf12fb3e38895f1e2aaeb52bde603cc2e4"
+jest-environment-jsdom@^24.3.1, jest-environment-jsdom@^24.4.0:
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-24.4.0.tgz#86e1c494abb1ab58b7aa5791bdb4fa96d709b57b"
   dependencies:
-    "@jest/environment" "^24.3.1"
+    "@jest/environment" "^24.4.0"
     "@jest/fake-timers" "^24.3.0"
     "@jest/types" "^24.3.0"
     jest-mock "^24.3.0"
@@ -6677,6 +6697,20 @@ jest-haste-map@^24.3.1:
     jest-serializer "^24.3.0"
     jest-util "^24.3.0"
     jest-worker "^24.3.1"
+    micromatch "^3.1.10"
+    sane "^4.0.3"
+
+jest-haste-map@^24.4.0:
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-24.4.0.tgz#a969ecab8a9521115c5fecec82366d66433c851b"
+  dependencies:
+    "@jest/types" "^24.3.0"
+    fb-watchman "^2.0.0"
+    graceful-fs "^4.1.15"
+    invariant "^2.2.4"
+    jest-serializer "^24.4.0"
+    jest-util "^24.3.0"
+    jest-worker "^24.4.0"
     micromatch "^3.1.10"
     sane "^4.0.3"
 
@@ -6812,6 +6846,10 @@ jest-serializer@^24.3.0:
   version "24.3.0"
   resolved "https://registry.yarnpkg.com/jest-serializer/-/jest-serializer-24.3.0.tgz#074e307300d1451617cf2630d11543ee4f74a1c8"
 
+jest-serializer@^24.4.0:
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/jest-serializer/-/jest-serializer-24.4.0.tgz#f70c5918c8ea9235ccb1276d232e459080588db3"
+
 jest-snapshot@^24.3.1:
   version "24.3.1"
   resolved "https://registry.yarnpkg.com/jest-snapshot/-/jest-snapshot-24.3.1.tgz#0f22a86c1b8c87e823f5ad095e82c19d9ed93d72"
@@ -6886,6 +6924,14 @@ jest-worker@^23.2.0:
 jest-worker@^24.3.1:
   version "24.3.1"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-24.3.1.tgz#c1759dd2b1d5541b09a2e5e1bc3288de6c9d8632"
+  dependencies:
+    "@types/node" "*"
+    merge-stream "^1.0.1"
+    supports-color "^6.1.0"
+
+jest-worker@^24.4.0:
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-24.4.0.tgz#fbc452b0120bb5c2a70cdc88fa132b48eeb11dd0"
   dependencies:
     "@types/node" "*"
     merge-stream "^1.0.1"
