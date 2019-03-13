@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { lighten } from 'polished'
@@ -6,13 +6,13 @@ import { Link } from 'gatsby'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
 import { Container, Row, Column } from '../grid'
+// import { checkBreakpoint } from '../../utilities'
 
 const Panel = styled.div`
-  background-color: ${theme.colors.indigo};
+  background-color: ${lighten(0.05, theme.colors.indigo)};
   color: ${theme.colors.white};
 
   ${media.tablet`
-    background-color: ${lighten(0.05, theme.colors.indigo)};
     position: absolute;
     width: 100%;
     left: 0;
@@ -20,10 +20,22 @@ const Panel = styled.div`
     display: ${props => (props.isOpen ? 'block' : 'none')};
     padding: 60px 0;
   `};
+
+  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+    overflow: hidden;
+    transition: height 0.15s linear;
+    height: ${props =>
+      props.isOpen && props.containerRef
+        ? `${props.containerRef.current.offsetHeight}px`
+        : 0};
+  }
 `
 
 const PanelRow = styled(Row)`
   flex-wrap: nowrap;
+  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+    margin: 0;
+  }
 `
 
 const PanelTitle = styled.h2`
@@ -36,6 +48,7 @@ const PanelInfoWrapper = styled(Column)`
   border-right: 1px solid ${theme.colors.eucalyptusGreen};
   padding-right: 40px;
   display: none;
+
   ${media.tablet`
     display: block;
   `};
@@ -50,6 +63,11 @@ const PanelLinksWrapper = styled(Column)`
         align-self: stretch;
     }
   `};
+
+  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+    padding: 20px;
+    width: 100%;
+  }
 `
 
 const PanelLinksList = styled.ul`
@@ -64,6 +82,14 @@ const PanelLinksSection = styled.div`
     break-inside: avoid;
     column-gap: 40px;
   `};
+
+  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+    &:last-child {
+      ul {
+        margin-bottom: 0;
+      }
+    }
+  }
 `
 
 const Heading = styled.h2`
@@ -85,9 +111,22 @@ const Submenu = props => {
     item: { title, desc, id, submenu },
     isOpen,
   } = props
+
+  //   const panelRef = useRef()
+  const containerRef = useRef()
+
+  //   useLayoutEffect(() => {
+  //     if (!checkBreakpoint(theme.breakpoints[1])) {
+  //       ref.current.style.height = `${innerRef.current.offsetHeight}px`
+  //       if (!isOpen) {
+  //         console.log()
+  //       }
+  //     }
+  //   }, [isOpen])
+
   return (
-    <Panel id={id} isOpen={isOpen}>
-      <Container>
+    <Panel id={id} isOpen={isOpen} containerRef={containerRef}>
+      <Container ref={containerRef}>
         <PanelRow>
           <PanelInfoWrapper
             width={[
@@ -100,7 +139,7 @@ const Submenu = props => {
             <PanelTitle>{title}</PanelTitle>
             <p>{desc}</p>
           </PanelInfoWrapper>
-          <PanelLinksWrapper>
+          <PanelLinksWrapper isOpen={isOpen}>
             {submenu.map(submenuList => (
               <PanelLinksSection key={submenuList.heading}>
                 <Heading>{submenuList.heading}</Heading>

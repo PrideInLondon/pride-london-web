@@ -6,11 +6,9 @@ import { Link } from 'gatsby'
 import Submenu from '../submenu'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
+import { checkBreakpoint } from '../../utilities'
 
 const MenuItem = styled.li`
-  transition: height 0.15s linear;
-  padding: 0 20px;
-
   ${media.tablet`
     height: auto;
     padding: 0;
@@ -43,6 +41,11 @@ const MenuLink = styled(Link)`
 const SubmenuToggle = styled.a`
   ${linkStyles}
   cursor: default;
+
+  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `
 
 function reducer(state, action) {
@@ -62,17 +65,16 @@ function reducer(state, action) {
   }
 }
 
-function checkIfDesktop() {
-  return window.matchMedia(`(min-width: ${theme.breakpoints[1]}px)`).matches
-}
-
 function useOnClickOutside(ref, handler) {
   useEffect(() => {
     const listener = e => {
       if (!ref.current || ref.current.contains(e.target)) {
         return
       }
-      if (e.type === 'mousedown' || e.type === 'touchstart' || e.which === 13) {
+      if (
+        (e.type === 'mousedown' || e.type === 'touchstart' || e.which === 13) &&
+        checkBreakpoint(theme.breakpoints[1])
+      ) {
         handler({ type: 'close' })
       }
     }
@@ -105,10 +107,14 @@ const NavItem = props => {
   return (
     <MenuItem
       onMouseEnter={() =>
-        submenu && checkIfDesktop() && dispatch({ type: 'open' })
+        submenu &&
+        checkBreakpoint(theme.breakpoints[1]) &&
+        dispatch({ type: 'open' })
       }
       onMouseLeave={() =>
-        submenu && checkIfDesktop() && dispatch({ type: 'close' })
+        submenu &&
+        checkBreakpoint(theme.breakpoints[1]) &&
+        dispatch({ type: 'close' })
       }
       isOpen={isOpen}
       ref={ref}
