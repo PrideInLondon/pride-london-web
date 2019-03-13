@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes, css } from 'styled-components'
 import { Flex, Box } from '@rebass/grid'
+import theme from '../../../theme/theme'
 import { media } from '../../../theme/media'
 import { Consumer } from '../../../components/appContext'
 import iconClear from '../../../theme/assets/images/icon-clear.svg'
@@ -61,7 +62,7 @@ const FlexColumn = styled(Box)`
 `
 
 const FilterHeader = styled(Box)`
-  background-color: ${props => props.theme.colors.indigo};
+  background-color: ${theme.colors.indigo};
   min-height: 90px;
   display: flex;
   align-items: center;
@@ -89,30 +90,30 @@ const FilterHeaderInner = styled.div`
   flex-basis: 100%;
   justify-content: space-between;
 
-  @media (min-width: ${props => props.theme.breakpoints[0]}) {
+  ${media.mobile`
     padding: 20px;
-  }
+  `};
 
-  @media (min-width: ${props => props.theme.breakpoints[1]}) {
+  ${media.tablet`
     padding: 0;
-  }
+  `};
 `
 
 const Label = styled.span`
-  color: ${props => props.theme.colors.white};
-  font-family: ${props => props.theme.fonts.title};
+  color: ${theme.colors.white};
+  font-family: ${theme.fonts.title};
   font-weight: 600;
 
-  @media (min-width: ${props => props.theme.breakpoints[1]}) {
-    color: ${props => props.theme.colors.indigo};
-  }
+  ${media.tablet`
+    color: ${theme.colors.indigo};
+  `};
 `
 
 const ClearButton = styled.button`
   border: none;
   font-size: 0.875rem;
   font-weight: 500;
-  color: ${props => props.theme.colors.indigo};
+  color: ${theme.colors.indigo};
   padding: 0 0 0 25px;
   position: absolute;
   right: 20px;
@@ -122,15 +123,15 @@ const ClearButton = styled.button`
   cursor: pointer;
   overflow: hidden;
 
-  @media (min-width: ${props => props.theme.breakpoints[0]}) {
+  ${media.mobile`
     right: 30px;
-  }
+  `};
 
-  @media (min-width: ${props => props.theme.breakpoints[1]}) {
+  ${media.tablet`
     position: relative;
     top: auto;
     right: auto;
-  }
+  `};
 `
 
 const spin = keyframes`

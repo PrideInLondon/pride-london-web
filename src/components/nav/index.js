@@ -177,13 +177,53 @@ const Nav = () => {
               <Menu id="menu" isOpen={isOpen} className={isOpen && 'open'}>
                 <NavItem
                   item={{
+                    id: 'nav-learn',
                     title: 'Learn',
                     desc:
                       'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
                     url: '/',
                     submenu: [
-                      { title: 'About us', url: '/' },
-                      { title: 'About us', url: '/' },
+                      {
+                        heading: 'Jelly-o chupa chups',
+                        links: [
+                          { title: 'Cupcake ipsum dolor sit', url: '/' },
+                          { title: 'Cupcake ipsum sit', url: '/' },
+                          { title: 'Cupcake dolor sit', url: '/' },
+                          { title: 'Cupcake ipsum dolor', url: '/' },
+                        ],
+                      },
+                      {
+                        heading: 'Icing gummi bears powder',
+                        links: [
+                          { title: 'Amet dragée donut', url: '/' },
+                          { title: 'Amet dragée chocolate donut', url: '/' },
+                        ],
+                      },
+                      {
+                        heading: 'Bear claw pastry bonbon',
+                        links: [
+                          { title: 'Carrot cake fruitcake', url: '/' },
+                          { title: 'Carrot cake muffin fruitcake', url: '/' },
+                        ],
+                      },
+                    ],
+                  }}
+                />
+                <NavItem
+                  item={{
+                    id: 'nav-attend',
+                    title: 'Attend',
+                    desc:
+                      'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
+                    url: '/',
+                    submenu: [
+                      {
+                        heading: 'Jelly beans sesame snaps',
+                        links: [
+                          { title: 'Cotton candy dragée', url: '/' },
+                          { title: 'Dragée oat cake', url: '/' },
+                        ],
+                      },
                     ],
                   }}
                 />

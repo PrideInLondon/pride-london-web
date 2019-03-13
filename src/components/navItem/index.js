@@ -1,4 +1,4 @@
-import React, { useReducer, Fragment } from 'react'
+import React, { useReducer, useRef, useEffect, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
@@ -14,6 +14,8 @@ const MenuItem = styled.li`
   ${media.tablet`
     height: auto;
     padding: 0;
+    background-color: ${props =>
+      props.isOpen && lighten(0.05, theme.colors.indigo)};
   `};
 `
 
@@ -31,11 +33,6 @@ const linkStyles = css`
   ${media.tablet`
   padding: 35px 25px;
   line-height: 1.8125rem;
-
-  &:hover,
-  &:focus {
-    background-color: ${lighten(0.05, theme.colors.indigo)};
-  }
 `};
 `
 
@@ -45,22 +42,20 @@ const MenuLink = styled(Link)`
 
 const SubmenuToggle = styled.a`
   ${linkStyles}
+  cursor: default;
 `
 
 function reducer(state, action) {
   switch (action.type) {
     case 'open':
-      console.log('OPEN')
       return {
         isOpen: true,
       }
     case 'close':
-      console.log('CLOSE')
       return {
         isOpen: false,
       }
     case 'toggle':
-      console.log('TOGGLE')
       return {
         isOpen: !state.isOpen,
       }
@@ -68,18 +63,44 @@ function reducer(state, action) {
 }
 
 function checkIfDesktop() {
-  return window.matchMedia(`(min-width: ${theme.breakpoints[1]})`).matches
+  return window.matchMedia(`(min-width: ${theme.breakpoints[1]}px)`).matches
 }
 
-const initialState = { isOpen: false }
+function useOnClickOutside(ref, handler) {
+  useEffect(() => {
+    const listener = e => {
+      if (!ref.current || ref.current.contains(e.target)) {
+        return
+      }
+      if (e.type === 'mousedown' || e.type === 'touchstart' || e.which === 13) {
+        handler({ type: 'close' })
+      }
+    }
+
+    document.addEventListener('mousedown', listener)
+    document.addEventListener('touchstart', listener)
+    document.addEventListener('keydown', listener)
+
+    // Runs when component unmounts
+    return () => {
+      document.removeEventListener('mousedown', listener)
+      document.removeEventListener('touchstart', listener)
+      document.removeEventListener('keydown', listener)
+    }
+  })
+}
 
 const NavItem = props => {
   const {
     children,
-    item: { submenu = false, title, url, desc },
+    item: { submenu = false, title, url, desc, id },
   } = props
+
+  const initialState = { isOpen: false }
   const [state, dispatch] = useReducer(reducer, initialState)
   const { isOpen } = state
+  const ref = useRef()
+  useOnClickOutside(ref, dispatch)
 
   return (
     <MenuItem
@@ -89,6 +110,8 @@ const NavItem = props => {
       onMouseLeave={() =>
         submenu && checkIfDesktop() && dispatch({ type: 'close' })
       }
+      isOpen={isOpen}
+      ref={ref}
     >
       {children ? (
         children
@@ -98,6 +121,7 @@ const NavItem = props => {
             href="#"
             aria-haspopup="true"
             aria-expanded={`${isOpen}`}
+            aria-controls={id}
             onClick={e => {
               e.preventDefault()
               dispatch({ type: 'toggle' })
@@ -105,7 +129,7 @@ const NavItem = props => {
           >
             <span>{title}</span>
           </SubmenuToggle>
-          <Submenu item={{ submenu, title, url, desc }} />
+          <Submenu item={{ submenu, title, url, desc, id }} isOpen={isOpen} />
         </Fragment>
       ) : (
         <MenuLink to={url}>
@@ -121,7 +145,10 @@ NavItem.propTypes = {
   item: PropTypes.shape({
     title: PropTypes.string,
     url: PropTypes.string,
-  }),
+    desc: PropTypes.string,
+    id: PropTypes.string,
+    submenu: PropTypes.array,
+  }).isRequired,
 }
 
 NavItem.defaultProps = {
