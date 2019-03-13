@@ -1,19 +1,23 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import NewsFilter from '../../components/newsFilter'
 import config from '../../components/newsFilter/config'
 import { Container } from './styles'
 
-const FilterContainer = ({ handleFilterClick, selectedFilter }) => {
+const FilterContainer = ({ handleFilterClick, selectedFilter, categories }) => {
+  console.log(categories)
   return (
     <Container>
-      {Object.keys(config).map(filterType => {
+      {categories.map(({ id, hexColour, title }) => {
         return (
           <NewsFilter
-            key={filterType}
+            key={id}
+            colour={hexColour}
             handleClick={handleFilterClick}
-            filterType={filterType}
-            isOutline={selectedFilter !== filterType}
+            filterType={title}
+            isOutline={selectedFilter !== title}
+            isButton
           />
         )
       })}

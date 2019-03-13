@@ -31,15 +31,15 @@ const mockNews = [
   },
 ]
 
-const NewsCards = ({ selectedFilter }) => {
+const NewsCards = ({ selectedFilter, articles }) => {
   return (
     <Row>
-      {mockNews.map((article, index) => {
+      {articles.map(({ title, newsCategory, id }) => {
         return selectedFilter === ALL_ARTICLES ||
-          selectedFilter === article.type ? (
+          selectedFilter === newsCategory.title ? (
           /* eslint-disable */
           <FlexColumn
-            key={index}
+            key={id}
             width={[
               1, // 100% between 0px screen width and first breakpoint (375px)
               1, // 100% between first breakpoint(375px) and second breakpoint (768px)
@@ -47,7 +47,7 @@ const NewsCards = ({ selectedFilter }) => {
               1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
             ]}
           >
-            <NewsCard type={article.type} />
+            <NewsCard type={newsCategory.title} title={title} />
           </FlexColumn>
         ) : /* eslint-enable */
         null

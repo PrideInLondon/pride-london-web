@@ -34,7 +34,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    console.log(result)
     if (result.errors) {
       throw result.errors
     }
@@ -44,7 +43,6 @@ exports.createPages = async ({ graphql, actions }) => {
     )
 
     result.data.genericContentPages.edges.forEach(edge => {
-      console.log(JSON.stringify(edge))
       createPage({
         path: `info/${edge.node.slug}/`,
         component: GenericContentPage,
@@ -52,6 +50,16 @@ exports.createPages = async ({ graphql, actions }) => {
           id: edge.node.id,
         },
       })
+    })
+
+    const News = path.resolve('./src/templates/blog.js')
+
+    createPage({
+      path: '/news',
+      component: News,
+      context: {
+        articles: mapNewsArticles(),
+      },
     })
 
     const eventTemplate = path.resolve('./src/templates/event.js')

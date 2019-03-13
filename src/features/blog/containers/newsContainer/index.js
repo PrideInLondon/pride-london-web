@@ -11,7 +11,7 @@ class NewsContainer extends Component {
   constructor() {
     super()
     this.state = {
-      selectedFilter: ALL_ARTICLES,
+      selectedFilter: 'All Articles',
     }
   }
 
@@ -23,6 +23,8 @@ class NewsContainer extends Component {
 
   render() {
     const { selectedFilter } = this.state
+    const { articles, categories } = this.props
+    console.log(categories)
     return (
       <div>
         <Container>
@@ -36,8 +38,9 @@ class NewsContainer extends Component {
         <FiltersContainer
           selectedFilter={selectedFilter}
           handleFilterClick={this.handleFilterClick}
+          categories={categories}
         />
-        <NewsCards selectedFilter={selectedFilter} />
+        <NewsCards selectedFilter={selectedFilter} articles={articles} />
       </div>
     )
   }

@@ -4,7 +4,7 @@ import theme from '../../../../theme/theme'
 export const FilterText = styled.p`
   border: 2px solid;
   background-color: ${props =>
-    props.isOutline ? 'none' : props.backgroundColor};
+    props.isOutline ? 'transparent' : props.backgroundColor};
   border-color: ${props => props.backgroundColor};
   border-radius: 4px;
   color: ${props => (props.isOutline ? theme.colors.black : props.textColor)};
