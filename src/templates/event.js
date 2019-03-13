@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
 import NewsletterForm from '../features/events/components/newsletter'
 import { media } from '../theme/media'
+import theme from '../theme/theme'
 import {
   EventTagList,
   EventSchedule,
@@ -17,12 +18,12 @@ import {
 const PageWrapper = styled.div`
   position: relative;
   margin: 0 auto;
-  max-width: ${props => props.theme.breakpoints[3]};
+  max-width: ${theme.breakpoints[3]};
   background-color: white;
 `
 
 const Title = styled.h1`
-  color: ${props => props.theme.colors.indigo};
+  color: ${theme.colors.indigo};
   font-size: 1.75em;
   line-height: 1.4;
   margin-bottom: 20px;

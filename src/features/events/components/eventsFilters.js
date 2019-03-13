@@ -12,7 +12,7 @@ import EventFreeFilter from '../filters/eventFreeFilter'
 import EventDropdownFilter from '../filters/eventDropdownFilter'
 
 const FilterWrapper = styled(Flex)`
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${theme.colors.white};
   position: fixed;
   padding-top: 0;
   width: 100%;

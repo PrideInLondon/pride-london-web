@@ -77,7 +77,7 @@ const Menu = styled.ul`
   transition: left 0.15s linear, visibility 0s 0.15s linear;
   width: 100%;
   height: calc(100vh - 80px);
-  overflow: hidden;
+  overflow: auto;
   z-index: 1;
   background-color: ${theme.colors.indigo};
 
@@ -99,13 +99,13 @@ const Menu = styled.ul`
 const Burger = styled.button`
   cursor: pointer;
   border: none;
-  color: ${props => props.theme.colors.lightGrey};
-  font-family: ${props => props.theme.fonts.title};
+  color: ${theme.colors.lightGrey};
+  font-family: ${theme.fonts.title};
   font-size: 0.875rem;
   line-height: 1.125rem;
   transition: background-color 0.15s linear;
   background-color: ${props =>
-    props.isOpen ? props.theme.colors.indigo : 'transparent'};
+    props.isOpen ? theme.colors.indigo : 'transparent'};
   width: 80px;
   height: 80px;
   padding: 0;

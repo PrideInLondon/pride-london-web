@@ -6,11 +6,12 @@ import ChevronRight from '../../../components/chevronRight'
 import { Consumer } from '../../../components/appContext'
 import { Container, Row, Column } from '../../../components/grid'
 import { media } from '../../../theme/media'
+import theme from '../../../theme/theme'
 import EventListingCard from './eventListingCard'
 
 const ViewAll = styled.a`
-  color: ${props => props.theme.colors.indigo};
-  font-family: ${props => props.theme.fonts.title};
+  color: ${theme.colors.indigo};
+  font-family: ${theme.fonts.title};
   font-size: 1rem;
   padding-top: 5px;
   text-align: right;
@@ -26,7 +27,7 @@ export const StyledContainer = styled(Container)`
   ${media.desktop`
     padding: 60px 0px;
   `}
-  background-color: ${props => props.theme.colors.lightGrey};
+  background-color: ${theme.colors.lightGrey};
 `
 
 const Heading = styled.h1`
