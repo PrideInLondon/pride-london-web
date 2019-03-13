@@ -761,13 +761,7 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.1.tgz#574b03e8e8a9898eaf4a872a92ea20b7846f6f2a"
-  dependencies:
-    regenerator-runtime "^0.12.0"
-
-"@babel/runtime@^7.3.1":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1":
   version "7.3.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.4.tgz#73d12ba819e365fcf7fd152aed56d6df97d21c83"
   dependencies:
@@ -5044,9 +5038,9 @@ gatsby-plugin-react-helmet@^3.0.9:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-sharp@^2.0.27:
-  version "2.0.27"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.27.tgz#d53cedb873beb286a85e3e995680c7a09726cddc"
+gatsby-plugin-sharp@^2.0.28:
+  version "2.0.28"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.28.tgz#5d37c0391bdf2ab9543ee7e4647a9d8e33168d60"
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -5079,9 +5073,9 @@ gatsby-react-router-scroll@^2.0.5:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.0.37:
-  version "2.0.37"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.37.tgz#8e27ae80c28fa96638707d2542a4785dc1fd99fb"
+gatsby-source-contentful@^2.0.38:
+  version "2.0.38"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.38.tgz#9052b2cefb6757865b05faa4d72d9e7e470f95d8"
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -5090,7 +5084,7 @@ gatsby-source-contentful@^2.0.37:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.0.27"
+    gatsby-plugin-sharp "^2.0.28"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.10"
