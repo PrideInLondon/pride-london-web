@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "@rebass/grid": "^6.0.0-7",
-    "gatsby": "^2.1.30",
+    "gatsby": "^2.1.31",
     "gatsby-link": "^2.0.15",
     "gatsby-plugin-layout": "^1.0.13",
     "gatsby-plugin-react-helmet": "^3.0.9",
