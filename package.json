@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "@rebass/grid": "^6.0.0-7",
-    "gatsby": "^2.1.31",
+    "gatsby": "^2.1.32",
     "gatsby-link": "^2.0.15",
     "gatsby-plugin-layout": "^1.0.13",
     "gatsby-plugin-react-helmet": "^3.0.9",
@@ -52,7 +52,7 @@
     "codecov": "^3.2.0",
     "dotenv": "^6.2.0",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-adapter-react-16": "^1.11.0",
     "enzyme-to-json": "^3.3.5",
     "eslint": "^5.15.1",
     "eslint-config-airbnb": "^17.1.0",
