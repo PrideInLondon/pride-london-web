@@ -22,7 +22,7 @@ const Panel = styled.div`
     height: auto !important;
   `};
 
-  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+  @media (max-width: ${theme.navBreakpoint - 1}px) {
     overflow: hidden;
     transition: height 0.15s linear;
     height: 0;
@@ -31,7 +31,7 @@ const Panel = styled.div`
 
 const PanelRow = styled(Row)`
   flex-wrap: nowrap;
-  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+  @media (max-width: ${theme.navBreakpoint - 1}px) {
     margin: 0;
   }
 `
@@ -62,7 +62,7 @@ const PanelListWrapper = styled(Column)`
     }
   `};
 
-  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+  @media (max-width: ${theme.navBreakpoint - 1}px) {
     padding: 20px;
     width: 100%;
   }
@@ -81,7 +81,7 @@ const PanelListSection = styled.div`
     column-gap: 40px;
   `};
 
-  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+  @media (max-width: ${theme.navBreakpoint - 1}px) {
     &:last-child {
       ul {
         margin-bottom: 0;
@@ -139,7 +139,7 @@ const PanelLink = styled(Link)`
 `
 
 function setHeightAuto(ref) {
-  if (ref.current.offsetHeight > 0 && !checkBreakpoint(theme.breakpoints[1])) {
+  if (ref.current.offsetHeight > 0 && !checkBreakpoint(theme.navBreakpoint)) {
     ref.current.style.height = 'auto'
   }
 }
@@ -154,7 +154,7 @@ const Submenu = props => {
   const containerRef = useRef()
 
   useLayoutEffect(() => {
-    if (!checkBreakpoint(theme.breakpoints[1])) {
+    if (!checkBreakpoint(theme.navBreakpoint)) {
       panelRef.current.style.height = `${containerRef.current.offsetHeight}px`
       if (!isOpen) {
         // Set timeout forces allows the height to be transitioned.

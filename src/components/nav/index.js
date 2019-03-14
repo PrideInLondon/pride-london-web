@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
 import Link from 'gatsby-link'
 import noScroll from 'no-scroll'
@@ -16,6 +16,7 @@ const HeaderWrapper = styled.div`
   background-color: ${lighten(0.05, theme.colors.indigo)};
   position: relative;
   z-index: 1;
+
   ${media.nav`
     background-color: ${theme.colors.indigo};
   `};
@@ -70,22 +71,24 @@ const Menu = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 80px;
-  left: ${props => (props.isOpen ? '0' : '100%')};
-  visibility: hidden;
-  transition: left 0.15s linear, visibility 0s 0.15s linear;
+  left: 0;
+  transform: translate3D(${props => (props.isOpen ? '0' : '100%')}, 0, 0);
+  visibility: ${props => (props.isOpen ? 'visible' : 'hidden')};
+  transition: ${props =>
+    props.isOpen
+      ? 'transform 0.15s linear, visibility 0s 0s linear'
+      : 'transform 0.15s linear, visibility 0s 0.15s linear'};
   width: 100%;
-  height: calc(100vh - 80px);
-  overflow: auto;
+  height: calc(100% - 80px);
   z-index: 1;
   background-color: ${theme.colors.indigo};
-
-  &.open {
-    transition: left 0.15s linear, visibility 0s 0s linear;
-    left: 0;
-    visibility: visible;
-  }
+  ${props =>
+    props.isOpen &&
+    css`
+      overflow: auto;
+    `}
 
   ${media.nav`
     position: static;
@@ -93,6 +96,7 @@ const Menu = styled.ul`
     align-items: center;
     height: auto;
     visibility: visible;
+    transform: none;
   `};
 `
 
@@ -139,7 +143,7 @@ const DonateButton = styled(Button)`
     }
   `};
 
-  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+  @media (max-width: ${theme.navBreakpoint - 1}px) {
     && {
       width: calc(100% - 40px);
       margin: 0 auto;
@@ -182,7 +186,7 @@ const Nav = () => {
               >
                 <span>Menu</span>
               </Burger>
-              <Menu id="menu" isOpen={isOpen} className={isOpen && 'open'}>
+              <Menu id="menu" isOpen={isOpen}>
                 <NavItem
                   item={{
                     id: 'nav-learn',

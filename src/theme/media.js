@@ -25,7 +25,7 @@ export const media = {
   `,
   // Custom breakpoint for navigation
   nav: (...args) => css`
-    @media (min-width: 1275px) {
+    @media (min-width: ${theme.navBreakpoint}px) {
       ${css(...args)};
     }
   `,

@@ -42,7 +42,7 @@ const SubmenuToggle = styled.a`
   ${linkStyles}
   cursor: default;
 
-  @media (max-width: ${theme.breakpoints[1] - 1}px) {
+  @media (max-width: ${theme.navBreakpoint - 1}px) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -73,7 +73,7 @@ function useOnClickOutside(ref, handler) {
       }
       if (
         (e.type === 'mousedown' || e.type === 'touchstart' || e.which === 13) &&
-        checkBreakpoint(theme.breakpoints[1])
+        checkBreakpoint(theme.navBreakpoint)
       ) {
         handler({ type: 'close' })
       }
@@ -108,12 +108,12 @@ const NavItem = props => {
     <MenuItem
       onMouseEnter={() =>
         submenu &&
-        checkBreakpoint(theme.breakpoints[1]) &&
+        checkBreakpoint(theme.navBreakpoint) &&
         dispatch({ type: 'open' })
       }
       onMouseLeave={() =>
         submenu &&
-        checkBreakpoint(theme.breakpoints[1]) &&
+        checkBreakpoint(theme.navBreakpoint) &&
         dispatch({ type: 'close' })
       }
       isOpen={isOpen}

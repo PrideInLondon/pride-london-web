@@ -16,7 +16,7 @@ const FilterWrapper = styled(Flex)`
   position: fixed;
   padding-top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: auto;
   transition: left 0.15s linear, visibility 0s 0.15s linear;
   visibility: hidden;
