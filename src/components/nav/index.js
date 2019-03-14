@@ -14,7 +14,9 @@ import theme from '../../theme/theme'
 
 const HeaderWrapper = styled.div`
   background-color: ${lighten(0.05, theme.colors.indigo)};
-  ${media.tablet`
+  position: relative;
+  z-index: 1;
+  ${media.nav`
     background-color: ${theme.colors.indigo};
   `};
 `
@@ -29,12 +31,10 @@ const Header = styled.header`
   z-index: 1;
   top: 0;
   left: 0;
-  position: relative;
 
-  ${media.tablet`
+  ${media.nav`
     height: 100px;
     background-color: ${theme.colors.indigo};
-    position: static;
   `};
 `
 
@@ -59,7 +59,7 @@ const Logo = styled.img`
   height: 40px;
   margin: 0 20px;
 
-  ${media.tablet`
+  ${media.nav`
     width: 164px;
     height: 64px;
     margin: 0;
@@ -87,7 +87,7 @@ const Menu = styled.ul`
     visibility: visible;
   }
 
-  ${media.tablet`
+  ${media.nav`
     position: static;
     display: flex;
     align-items: center;
@@ -125,13 +125,13 @@ const Burger = styled.button`
     outline: none;
   }
 
-  ${media.tablet`
+  ${media.nav`
     display: none;
   `};
 `
 
 const DonateButton = styled(Button)`
-  ${media.tablet`
+  ${media.nav`
     && {
       min-width: auto;
       width: 138px;

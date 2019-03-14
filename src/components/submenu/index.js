@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { lighten } from 'polished'
@@ -6,28 +6,26 @@ import { Link } from 'gatsby'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
 import { Container, Row, Column } from '../grid'
-// import { checkBreakpoint } from '../../utilities'
+import { checkBreakpoint } from '../../utilities'
 
 const Panel = styled.div`
   background-color: ${lighten(0.05, theme.colors.indigo)};
   color: ${theme.colors.white};
 
-  ${media.tablet`
+  ${media.nav`
     position: absolute;
     width: 100%;
     left: 0;
     top: 100px;
     display: ${props => (props.isOpen ? 'block' : 'none')};
     padding: 60px 0;
+    height: auto !important;
   `};
 
   @media (max-width: ${theme.breakpoints[1] - 1}px) {
     overflow: hidden;
     transition: height 0.15s linear;
-    height: ${props =>
-      props.isOpen && props.containerRef
-        ? `${props.containerRef.current.offsetHeight}px`
-        : 0};
+    height: 0;
   }
 `
 
@@ -49,13 +47,13 @@ const PanelInfoWrapper = styled(Column)`
   padding-right: 40px;
   display: none;
 
-  ${media.tablet`
+  ${media.nav`
     display: block;
   `};
 `
 
-const PanelLinksWrapper = styled(Column)`
-  ${media.tablet`
+const PanelListWrapper = styled(Column)`
+  ${media.nav`
     padding-left: 40px;
     column-count: 2;
 
@@ -70,14 +68,14 @@ const PanelLinksWrapper = styled(Column)`
   }
 `
 
-const PanelLinksList = styled.ul`
+const PanelList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0 0 1em 0;
 `
 
-const PanelLinksSection = styled.div`
-  ${media.tablet`
+const PanelListSection = styled.div`
+  ${media.nav`
     page-break-inside: avoid;
     break-inside: avoid;
     column-gap: 40px;
@@ -95,16 +93,56 @@ const PanelLinksSection = styled.div`
 const Heading = styled.h2`
   color: ${theme.colors.eucalyptusGreen};
   font-size: 1rem;
-  margin: 0 0 0.2em 0;
+  margin: 0 0 0.5em 0;
   line-height: 1.25;
+
+  ${media.nav`
+    margin: 0 0 0.2em 0;
+  `};
 `
 
-const SubmenuLink = styled(Link)`
+const PanelLink = styled(Link)`
   color: ${theme.colors.white};
   text-decoration: none;
   font-family: ${theme.fonts.title};
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  padding: 15px 0;
+  display: block;
+
+  ${media.nav`
+    padding: 5px 0;
+    font-size: 1.25rem;
+  `};
+
+  span {
+    position: relative;
+    &:after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      transition: background-color 0.15s linear;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    span {
+      &:after {
+        background-color: ${theme.colors.eucalyptusGreen};
+      }
+    }
+  }
 `
+
+function setHeightAuto(ref) {
+  if (ref.current.offsetHeight > 0 && !checkBreakpoint(theme.breakpoints[1])) {
+    ref.current.style.height = 'auto'
+  }
+}
 
 const Submenu = props => {
   const {
@@ -112,20 +150,29 @@ const Submenu = props => {
     isOpen,
   } = props
 
-  //   const panelRef = useRef()
+  const panelRef = useRef()
   const containerRef = useRef()
 
-  //   useLayoutEffect(() => {
-  //     if (!checkBreakpoint(theme.breakpoints[1])) {
-  //       ref.current.style.height = `${innerRef.current.offsetHeight}px`
-  //       if (!isOpen) {
-  //         console.log()
-  //       }
-  //     }
-  //   }, [isOpen])
+  useLayoutEffect(() => {
+    if (!checkBreakpoint(theme.breakpoints[1])) {
+      panelRef.current.style.height = `${containerRef.current.offsetHeight}px`
+      if (!isOpen) {
+        // Set timeout forces allows the height to be transitioned.
+        setTimeout(() => {
+          panelRef.current.style.height = '0'
+        })
+      }
+    }
+  }, [isOpen])
 
   return (
-    <Panel id={id} isOpen={isOpen} containerRef={containerRef}>
+    <Panel
+      id={id}
+      isOpen={isOpen}
+      containerRef={containerRef}
+      ref={panelRef}
+      onTransitionEnd={() => setHeightAuto(panelRef)}
+    >
       <Container ref={containerRef}>
         <PanelRow>
           <PanelInfoWrapper
@@ -139,20 +186,22 @@ const Submenu = props => {
             <PanelTitle>{title}</PanelTitle>
             <p>{desc}</p>
           </PanelInfoWrapper>
-          <PanelLinksWrapper isOpen={isOpen}>
+          <PanelListWrapper isOpen={isOpen}>
             {submenu.map(submenuList => (
-              <PanelLinksSection key={submenuList.heading}>
+              <PanelListSection key={submenuList.heading}>
                 <Heading>{submenuList.heading}</Heading>
-                <PanelLinksList>
+                <PanelList>
                   {submenuList.links.map(link => (
                     <li key={link.title}>
-                      <SubmenuLink to={link.url}>{link.title}</SubmenuLink>
+                      <PanelLink to={link.url}>
+                        <span>{link.title}</span>
+                      </PanelLink>
                     </li>
                   ))}
-                </PanelLinksList>
-              </PanelLinksSection>
+                </PanelList>
+              </PanelListSection>
             ))}
-          </PanelLinksWrapper>
+          </PanelListWrapper>
         </PanelRow>
       </Container>
     </Panel>

@@ -9,7 +9,7 @@ import { media } from '../../theme/media'
 import { checkBreakpoint } from '../../utilities'
 
 const MenuItem = styled.li`
-  ${media.tablet`
+  ${media.nav`
     height: auto;
     padding: 0;
     background-color: ${props =>
@@ -28,7 +28,7 @@ const linkStyles = css`
   align-items: center;
   padding: 20px 0;
 
-  ${media.tablet`
+  ${media.nav`
   padding: 35px 25px;
   line-height: 1.8125rem;
 `};
