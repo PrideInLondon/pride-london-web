@@ -143,13 +143,13 @@ const DonateButton = styled(Button)`
     }
   `};
 
-  @media (max-width: ${theme.navBreakpoint - 1}px) {
+  ${media.navMax`
     && {
       width: calc(100% - 40px);
       margin: 0 auto;
       display: block;
-    }
-  }
+    }    
+  `};
 `
 
 const Nav = () => {

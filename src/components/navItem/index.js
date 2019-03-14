@@ -42,10 +42,10 @@ const SubmenuToggle = styled.a`
   ${linkStyles}
   cursor: default;
 
-  @media (max-width: ${theme.navBreakpoint - 1}px) {
+  ${media.navMax`
     padding-left: 20px;
     padding-right: 20px;
-  }
+  `};
 `
 
 function reducer(state, action) {

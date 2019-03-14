@@ -22,18 +22,19 @@ const Panel = styled.div`
     height: auto !important;
   `};
 
-  @media (max-width: ${theme.navBreakpoint - 1}px) {
+  ${media.navMax`
     overflow: hidden;
     transition: height 0.15s linear;
     height: 0;
-  }
+  `};
 `
 
 const PanelRow = styled(Row)`
   flex-wrap: nowrap;
-  @media (max-width: ${theme.navBreakpoint - 1}px) {
+
+  ${media.navMax`
     margin: 0;
-  }
+  `};
 `
 
 const PanelTitle = styled.h2`
@@ -62,10 +63,10 @@ const PanelListWrapper = styled(Column)`
     }
   `};
 
-  @media (max-width: ${theme.navBreakpoint - 1}px) {
+  ${media.navMax`
     padding: 20px;
     width: 100%;
-  }
+  `};
 `
 
 const PanelList = styled.ul`
@@ -81,13 +82,13 @@ const PanelListSection = styled.div`
     column-gap: 40px;
   `};
 
-  @media (max-width: ${theme.navBreakpoint - 1}px) {
+  ${media.navMax`
     &:last-child {
       ul {
         margin-bottom: 0;
       }
     }
-  }
+  `};
 `
 
 const Heading = styled.h2`
