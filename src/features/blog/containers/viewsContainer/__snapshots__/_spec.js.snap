@@ -8,10 +8,10 @@ exports[`ViewsContainer should render with default values 1`] = `
       theme={
         Object {
           "breakpoints": Array [
-            "375px",
-            "768px",
-            "1024px",
-            "1440px",
+            375,
+            768,
+            1024,
+            1440,
           ],
           "colors": Object {
             "amber": "#FFCA00",
@@ -40,6 +40,7 @@ exports[`ViewsContainer should render with default values 1`] = `
             "body": "Roboto, sans-serif",
             "title": "Poppins, sans-serif",
           },
+          "navBreakpoint": 1275,
           "space": Array [
             0,
             5,
