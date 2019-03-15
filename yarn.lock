@@ -2086,12 +2086,12 @@ browserslist@3.2.8:
     electron-to-chromium "^1.3.47"
 
 browserslist@^4.0.0, browserslist@^4.3.4, browserslist@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.4.2.tgz#6ea8a74d6464bb0bd549105f659b41197d8f0ba2"
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.5.0.tgz#b26d80ac95b3b592b05ec9cdd8a142d924189ba7"
   dependencies:
-    caniuse-lite "^1.0.30000939"
-    electron-to-chromium "^1.3.113"
-    node-releases "^1.1.8"
+    caniuse-lite "^1.0.30000948"
+    electron-to-chromium "^1.3.116"
+    node-releases "^1.1.10"
 
 bser@^2.0.0:
   version "2.0.0"
@@ -2280,7 +2280,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000939, caniuse-lite@^1.0.30000947:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000947, caniuse-lite@^1.0.30000948:
   version "1.0.30000948"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000948.tgz#793ed7c28fe664856beb92b43fc013fc22b81633"
 
@@ -2571,13 +2571,9 @@ command-exists@^1.2.2:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/command-exists/-/command-exists-1.2.8.tgz#715acefdd1223b9c9b37110a149c6392c2852291"
 
-commander@^2.11.0, commander@^2.14.1, commander@^2.19.0, commander@^2.9.0:
+commander@^2.11.0, commander@^2.14.1, commander@^2.19.0, commander@^2.9.0, commander@~2.19.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
-
-commander@~2.17.1:
-  version "2.17.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
 
 commander@~2.8.1:
   version "2.8.1"
@@ -3606,7 +3602,7 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
-electron-to-chromium@^1.3.113, electron-to-chromium@^1.3.47:
+electron-to-chromium@^1.3.116, electron-to-chromium@^1.3.47:
   version "1.3.116"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.116.tgz#1dbfee6a592a0c14ade77dbdfe54fef86387d702"
 
@@ -3983,9 +3979,9 @@ eslint-scope@3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-scope@^4.0.0, eslint-scope@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.2.tgz#5f10cd6cabb1965bf479fa65745673439e21cb0e"
+eslint-scope@^4.0.0, eslint-scope@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.3.tgz#ca03833310f6889a3264781aa82e63eb9cfe7848"
   dependencies:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
@@ -3999,8 +3995,8 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
 eslint@^5.15.1, eslint@^5.6.0:
-  version "5.15.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.15.1.tgz#8266b089fd5391e0009a047050795b1d73664524"
+  version "5.15.2"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.15.2.tgz#0237bbb2362f89f4effef2f191eb0fea5279c0a5"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.9.1"
@@ -4008,7 +4004,7 @@ eslint@^5.15.1, eslint@^5.6.0:
     cross-spawn "^6.0.5"
     debug "^4.0.1"
     doctrine "^3.0.0"
-    eslint-scope "^4.0.2"
+    eslint-scope "^4.0.3"
     eslint-utils "^1.3.1"
     eslint-visitor-keys "^1.0.0"
     espree "^5.0.1"
@@ -4807,6 +4803,10 @@ gatsby-plugin-react-helmet@^3.0.9:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-rollbar@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-rollbar/-/gatsby-plugin-rollbar-1.0.0.tgz#90fc3ca1ed08f54cab6824f5e94cc3ec85283cc0"
+
 gatsby-plugin-sharp@^2.0.29:
   version "2.0.29"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.29.tgz#1fc37417606ee8fb2d36b6905ce52710cebfba55"
@@ -4880,8 +4880,8 @@ gatsby-source-filesystem@^2.0.27:
     xstate "^3.1.0"
 
 gatsby@^2.1.32:
-  version "2.1.34"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.34.tgz#c4ed2510f1eed246f63c49e17291fd3e63915a23"
+  version "2.1.35"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.35.tgz#cdff857886f1c84cd4b34fc2bbc630c8ba8ad65e"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -4973,6 +4973,7 @@ gatsby@^2.1.32:
     optimize-css-assets-webpack-plugin "^5.0.1"
     parseurl "^1.3.2"
     physical-cpu-count "^2.0.0"
+    pnp-webpack-plugin "^1.4.1"
     postcss-flexbugs-fixes "^3.0.0"
     postcss-loader "^2.1.3"
     prop-types "^15.6.1"
@@ -7762,9 +7763,9 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-node-releases@^1.1.8:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.10.tgz#5dbeb6bc7f4e9c85b899e2e7adcc0635c9b2adf7"
+node-releases@^1.1.10:
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.11.tgz#9a0841a4b0d92b7d5141ed179e764f42ad22724a"
   dependencies:
     semver "^5.3.0"
 
@@ -8517,6 +8518,12 @@ pngquant-bin@^5.0.0:
     bin-wrapper "^4.0.1"
     execa "^0.10.0"
     logalot "^2.0.0"
+
+pnp-webpack-plugin@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/pnp-webpack-plugin/-/pnp-webpack-plugin-1.4.1.tgz#e8f8c683b496a71c0d200e664c4bb399a9c9585e"
+  dependencies:
+    ts-pnp "^1.0.0"
 
 polished@^3.0.3:
   version "3.0.3"
@@ -10961,6 +10968,10 @@ ts-invariant@^0.3.2:
   dependencies:
     tslib "^1.9.3"
 
+ts-pnp@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.0.1.tgz#fde74a6371676a167abaeda1ffc0fdb423520098"
+
 tslib@^1.6.0, tslib@^1.9.0, tslib@^1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
@@ -11005,10 +11016,10 @@ ua-parser-js@^0.7.18:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
 
 uglify-js@^3.1.4:
-  version "3.4.9"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.4.9.tgz#af02f180c1207d76432e473ed24a28f4a782bae3"
+  version "3.4.10"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.4.10.tgz#9ad9563d8eb3acdfb8d38597d2af1d815f6a755f"
   dependencies:
-    commander "~2.17.1"
+    commander "~2.19.0"
     source-map "~0.6.1"
 
 unbzip2-stream@^1.0.9:

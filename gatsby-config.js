@@ -16,5 +16,16 @@ module.exports = {
         accessToken: `${process.env.ACCESS_TOKEN}`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-rollbar',
+      options: {
+        accessToken: `${process.env.ROLLBAR_ACCESS_TOKEN}`,
+        captureUncaught: true,
+        captureUnhandledRejections: true,
+        payload: {
+          environment: 'development',
+        },
+      },
+    },
   ],
 }
