@@ -31,8 +31,8 @@ npm install --global gatsby-cli
 ## ENVIRONMENT VARIABLES
 
 1.  Create a `.env.development` file in the root of the project.
-2.  In the file, add the contentful space ID for space Pride Web Test after the equal sign, for example `CONTENTFUL_ID=123456`
-3.  Do the same for the access token by defining the`CONTENTFUL_TOKEN`
+2.  In the file, add the contentful space ID for space Pride Web Test after the equal sign, for example `SPACE_ID=123456`
+3.  Do the same for the access token by defining the`ACCESS_TOKEN`
 
 ## Running 🏃
 
