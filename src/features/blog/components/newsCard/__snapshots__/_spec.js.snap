@@ -4,6 +4,12 @@ exports[`NewsCard renders with default values 1`] = `
 <styles__Card>
   <styles__CardHeader>
     <NewsFilter
+      filterType={
+        Object {
+          "hexColour": "#304242",
+          "title": "Amazing News!!",
+        }
+      }
       handleClick={[Function]}
       isButton={false}
       isOutline={false}
@@ -16,6 +22,8 @@ exports[`NewsCard renders with default values 1`] = `
       10 min read
     </styles__ReadLength>
   </styles__CardHeader>
-  <styles__CardTitle />
+  <styles__CardTitle>
+    Here is some news!
+  </styles__CardTitle>
 </styles__Card>
 `;

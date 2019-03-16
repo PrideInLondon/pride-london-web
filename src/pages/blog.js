@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-// import styled from 'styled-components'
-// import { Container, Row, Column } from '../components/grid'
-// import { media } from '../theme/media'
 import ImageBanner from '../components/imageBanner'
 import theme from '../theme/theme'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
@@ -17,7 +15,6 @@ const mapNewsArticles = news => {
 const Blog = ({ data: { allContentfulNews, allContentfulNewsCategory } }) => {
   const articles = mapNewsArticles(allContentfulNews)
   const categories = mapNewsArticles(allContentfulNewsCategory)
-  console.log(categories)
   return (
     <Fragment>
       <ImageBanner
@@ -33,6 +30,13 @@ const Blog = ({ data: { allContentfulNews, allContentfulNewsCategory } }) => {
       <NewsContainer articles={articles} categories={categories} />
     </Fragment>
   )
+}
+
+Blog.propTypes = {
+  data: PropTypes.shape({
+    allContentfulNews: PropTypes.arrayOf(PropTypes.shape({})),
+    allContentfulNewsCategory: PropTypes.arrayOf(PropTypes.shape({})),
+  }).isRequired,
 }
 
 export default Blog

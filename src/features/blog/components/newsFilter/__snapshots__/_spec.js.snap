@@ -2,7 +2,10 @@
 
 exports[`NewsFilter renders with default values 1`] = `
 <styles__FilterText
+  backgroundColor="#000000"
   isOutline={false}
   onClick={[Function]}
-/>
+>
+  Mock Filter
+</styles__FilterText>
 `;
