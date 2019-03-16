@@ -1,5 +1,6 @@
 # Pride London Web
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/94c5776f-6b68-460b-9d6f-400504d691a4/deploy-status)](https://app.netlify.com/sites/fervent-albattani-72bcb1/deploys)   
 [![CircleCI](https://circleci.com/gh/PrideInLondon/pride-london-web.svg?style=svg)](https://circleci.com/gh/PrideInLondon/pride-london-web)   
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f0c3e56f477040a288ecbe6b8d00b437)](https://www.codacy.com/app/PrideInLondon/pride-london-web?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PrideInLondon/pride-london-web&amp;utm_campaign=Badge_Grade)   
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/context:javascript) [![Total alerts](https://img.shields.io/lgtm/alerts/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/alerts/)   
@@ -30,8 +31,8 @@ npm install --global gatsby-cli
 ## ENVIRONMENT VARIABLES
 
 1.  Create a `.env.development` file in the root of the project.
-2.  In the file, add the contentful space ID for space Pride Web Test after the equal sign, for example `CONTENTFUL_ID=123456`
-3.  Do the same for the access token by defining the`CONTENTFUL_TOKEN`
+2.  In the file, add the contentful space ID for space Pride Web Test after the equal sign, for example `SPACE_ID=123456`
+3.  Do the same for the access token by defining the`ACCESS_TOKEN`
 
 ## Running 🏃
 
