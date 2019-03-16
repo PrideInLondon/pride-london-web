@@ -13,19 +13,18 @@ export const Card = styled.div`
 
 export const CardHeader = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: center;
   height: 30px;
   margin-bottom: 10px;
 `
 
 export const CardTitle = styled.h3`
-  color: ${theme.colors.black};
+  color: ${theme.colors.darkPurple};
   margin: 10px 0;
 `
 
 export const NewsDate = styled.span`
   color: ${theme.colors.darkGrey};
-  font-family: Roboto;
   font-size: 12px;
   margin-left: 5px;
   margin-right: 4px;

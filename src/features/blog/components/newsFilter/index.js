@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FilterText } from './styles'
+import { FilterTextContainer, FilterText } from './styles'
 
 const NewsFilter = ({ filterType, isOutline, handleClick, isButton }) => {
   return (
-    <FilterText
+    <FilterTextContainer
       onClick={() => handleClick(filterType)}
       backgroundColor={filterType.hexColour}
       isOutline={isButton ? isOutline : false}
+      isButton={isButton}
     >
-      {filterType.title}
-    </FilterText>
+      <FilterText>{filterType.title}</FilterText>
+    </FilterTextContainer>
   )
 }
 

@@ -31,11 +31,7 @@ class NewsContainer extends Component {
         <Container>
           <Title>News</Title>
         </Container>
-        <ImageBanner
-          altText=""
-          color={theme.colors.beachBlue}
-          allowContentUnderflow
-        />
+        <ImageBanner altText="" color={theme.colors.beachBlue} />
         <FiltersContainer
           selectedFilter={selectedFilter}
           handleFilterClick={this.handleFilterClick}
