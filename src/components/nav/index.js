@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
 import Link from 'gatsby-link'
-import noScroll from 'no-scroll'
+import { noScroll } from '../../utilities/'
 import { Row, Column } from '../grid'
 import { media } from '../../theme/media'
 import logo from '../../theme/assets/images/logo-pride.svg'
@@ -15,7 +15,7 @@ import theme from '../../theme/theme'
 const HeaderWrapper = styled.div`
   background-color: ${lighten(0.05, theme.colors.indigo)};
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   ${media.nav`
     background-color: ${theme.colors.indigo};
@@ -29,7 +29,6 @@ const Header = styled.header`
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
-  z-index: 1;
   top: 0;
   left: 0;
 
@@ -74,13 +73,13 @@ const Menu = styled.ul`
   position: fixed;
   top: 80px;
   left: 0;
+  width: 100%;
   transform: translate3D(${props => (props.isOpen ? '0' : '100%')}, 0, 0);
   visibility: ${props => (props.isOpen ? 'visible' : 'hidden')};
   transition: ${props =>
     props.isOpen
       ? 'transform 0.15s linear, visibility 0s 0s linear'
       : 'transform 0.15s linear, visibility 0s 0.15s linear'};
-  width: 100%;
   height: calc(100% - 80px);
   z-index: 1;
   background-color: ${theme.colors.indigo};
@@ -146,7 +145,7 @@ const DonateButton = styled(Button)`
   ${media.navMax`
     && {
       width: calc(100% - 40px);
-      margin: 0 auto;
+      margin: 0 auto 20px auto;
       display: block;
     }    
   `};

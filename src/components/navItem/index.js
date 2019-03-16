@@ -7,6 +7,7 @@ import Submenu from '../submenu'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
 import { checkBreakpoint } from '../../utilities'
+import ChevronDown from '../icons/chevronDown'
 
 const MenuItem = styled.li`
   ${media.nav`
@@ -29,9 +30,9 @@ const linkStyles = css`
   padding: 20px 0;
 
   ${media.nav`
-  padding: 35px 25px;
-  line-height: 1.8125rem;
-`};
+    padding: 35px 25px;
+    line-height: 1.8125rem;
+  `};
 `
 
 const MenuLink = styled(Link)`
@@ -42,10 +43,33 @@ const SubmenuToggle = styled.a`
   ${linkStyles}
   cursor: default;
 
+  &[aria-expanded='true'] {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  ${media.nav`
+    svg {
+        display: none;
+    }
+  `};
+
   ${media.navMax`
     padding-left: 20px;
     padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    span {
+        margin-right: 20px;
+    }
   `};
+
+  svg {
+    path {
+      fill: ${theme.colors.eucalyptusGreen};
+    }
+  }
 `
 
 function reducer(state, action) {
@@ -125,7 +149,7 @@ const NavItem = props => {
         <Fragment>
           <SubmenuToggle
             href="#"
-            aria-haspopup="true"
+            aria-haspopup={checkBreakpoint(theme.navBreakpoint) && 'true'}
             aria-expanded={`${isOpen}`}
             aria-controls={id}
             onClick={e => {
@@ -134,6 +158,7 @@ const NavItem = props => {
             }}
           >
             <span>{title}</span>
+            <ChevronDown />
           </SubmenuToggle>
           <Submenu item={{ submenu, title, url, desc, id }} isOpen={isOpen} />
         </Fragment>

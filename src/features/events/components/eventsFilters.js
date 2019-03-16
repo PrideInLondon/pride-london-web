@@ -22,7 +22,7 @@ const FilterWrapper = styled(Flex)`
   visibility: hidden;
   top: 0;
   left: 100%;
-  z-index: 1;
+  z-index: 2;
 
   &.open {
     transition: left 0.15s linear, visibility 0s 0s linear;
