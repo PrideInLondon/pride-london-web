@@ -1,42 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsCard from '../../components/newsCard'
-import {
-  ALL_ARTICLES,
-  NEWS,
-  RESEARCH,
-  ANNOUNCEMENTS,
-  PARTNERS,
-} from '../../components/newsFilter/config'
 import { FlexColumn, Row } from '../../../../components/grid'
-
-const mockNews = [
-  {
-    type: RESEARCH,
-  },
-  {
-    type: NEWS,
-  },
-  {
-    type: NEWS,
-  },
-  {
-    type: RESEARCH,
-  },
-  {
-    type: ANNOUNCEMENTS,
-  },
-  {
-    type: PARTNERS,
-  },
-]
 
 const NewsCards = ({ selectedFilter, articles }) => {
   return (
     <Row>
       {articles.map(({ title, newsCategory, id }) => {
-        return selectedFilter === ALL_ARTICLES ||
-          selectedFilter === newsCategory.title ? (
+        return selectedFilter.title === 'All Articles' ||
+          selectedFilter.title === newsCategory.title ? (
           /* eslint-disable */
           <FlexColumn
             key={id}
@@ -47,7 +19,7 @@ const NewsCards = ({ selectedFilter, articles }) => {
               1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
             ]}
           >
-            <NewsCard type={newsCategory.title} title={title} />
+            <NewsCard filterType={newsCategory} title={title} />
           </FlexColumn>
         ) : /* eslint-enable */
         null
@@ -57,7 +29,24 @@ const NewsCards = ({ selectedFilter, articles }) => {
 }
 
 NewsCards.propTypes = {
-  selectedFilter: PropTypes.string.isRequired,
+  selectedFilter: PropTypes.shape({
+    hexColour: PropTypes.string,
+    title: PropTypes.string,
+  }),
+  articles: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+      filterType: PropTypes.shape({
+        hexColour: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    })
+  ).isRequired,
+}
+
+NewsCards.defaultProps = {
+  selectedFilter: null,
 }
 
 export default NewsCards

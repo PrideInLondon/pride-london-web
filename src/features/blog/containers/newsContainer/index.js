@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Title from '../../components/title'
 import ImageBanner from '../../../../components/imageBanner'
 import theme from '../../../../theme/theme'
 import FiltersContainer from '../filtersContainer'
 import NewsCards from '../newsCards'
-import { ALL_ARTICLES } from '../../components/newsFilter/config'
 import { Container } from './styles'
 
 class NewsContainer extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      selectedFilter: 'All Articles',
+      selectedFilter: props.categories.find(
+        ({ title }) => title === 'All Articles'
+      ),
     }
   }
 
@@ -24,7 +26,6 @@ class NewsContainer extends Component {
   render() {
     const { selectedFilter } = this.state
     const { articles, categories } = this.props
-    console.log(categories)
     return (
       <div>
         <Container>
@@ -44,6 +45,25 @@ class NewsContainer extends Component {
       </div>
     )
   }
+}
+
+NewsContainer.propTypes = {
+  articles: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+      filterType: PropTypes.shape({
+        hexColour: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    })
+  ).isRequired,
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      hexColour: PropTypes.string,
+      title: PropTypes.string,
+    })
+  ).isRequired,
 }
 
 export default NewsContainer

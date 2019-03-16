@@ -4,8 +4,9 @@ exports[`NewsCard renders with default values 1`] = `
 <styles__Card>
   <styles__CardHeader>
     <NewsFilter
-      filterType="PARTNERS"
-      isOutline={true}
+      handleClick={[Function]}
+      isButton={false}
+      isOutline={false}
     />
     <styles__NewsDate>
       12 Jun 2019
@@ -15,8 +16,6 @@ exports[`NewsCard renders with default values 1`] = `
       10 min read
     </styles__ReadLength>
   </styles__CardHeader>
-  <styles__CardTitle>
-    Pride in London sees record number of parade applications
-  </styles__CardTitle>
+  <styles__CardTitle />
 </styles__Card>
 `;

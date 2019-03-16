@@ -52,16 +52,6 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
 
-    const News = path.resolve('./src/templates/blog.js')
-
-    createPage({
-      path: '/news',
-      component: News,
-      context: {
-        articles: mapNewsArticles(),
-      },
-    })
-
     const eventTemplate = path.resolve('./src/templates/event.js')
     const prettyDate = 'D MMM YYYY'
     // Don't create pages for past events

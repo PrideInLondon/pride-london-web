@@ -2,11 +2,7 @@
 
 exports[`NewsFilter renders with default values 1`] = `
 <styles__FilterText
-  backgroundColor="#FFD95E"
-  isOutline={true}
+  isOutline={false}
   onClick={[Function]}
-  textColor="#000000"
->
-  All Articles
-</styles__FilterText>
+/>
 `;
