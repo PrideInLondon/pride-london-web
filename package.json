@@ -85,7 +85,10 @@
       "enzyme-to-json/serializer"
     ],
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "globals": {
+      "__PATH_PREFIX__": ""
+    }
   },
   "husky": {
     "hooks": {
