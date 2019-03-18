@@ -182,6 +182,7 @@ const Nav = () => {
                 isOpen={isOpen}
                 aria-controls="menu"
                 aria-expanded={isOpen}
+                type="button"
               >
                 <span>Menu</span>
               </Burger>
