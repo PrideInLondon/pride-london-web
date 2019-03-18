@@ -150,7 +150,7 @@ const NavItem = props => {
           <SubmenuToggle
             href="#"
             aria-haspopup={checkBreakpoint(theme.navBreakpoint) && 'true'}
-            aria-expanded={`${isOpen}`}
+            aria-expanded={isOpen}
             aria-controls={id}
             onClick={e => {
               e.preventDefault()

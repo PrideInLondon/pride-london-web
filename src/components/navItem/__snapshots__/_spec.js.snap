@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Desktop <NavItem/> renders and matches snapshot 1`] = `
+<navItem__MenuItem
+  isOpen={false}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <navItem__SubmenuToggle
+    aria-controls="nav-learn"
+    aria-expanded={false}
+    aria-haspopup="true"
+    href="#"
+    onClick={[Function]}
+  >
+    <span>
+      Learn
+    </span>
+    <ChevronDown />
+  </navItem__SubmenuToggle>
+  <Submenu
+    isOpen={false}
+    item={
+      Object {
+        "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
+        "id": "nav-learn",
+        "submenu": Array [
+          Object {
+            "heading": "Jelly-o chupa chups",
+            "links": Array [
+              Object {
+                "title": "Cupcake ipsum dolor sit",
+                "url": "/",
+              },
+              Object {
+                "title": "Cupcake ipsum sit",
+                "url": "/",
+              },
+              Object {
+                "title": "Cupcake dolor sit",
+                "url": "/",
+              },
+              Object {
+                "title": "Cupcake ipsum dolor",
+                "url": "/",
+              },
+            ],
+          },
+          Object {
+            "heading": "Icing gummi bears powder",
+            "links": Array [
+              Object {
+                "title": "Amet dragée donut",
+                "url": "/",
+              },
+              Object {
+                "title": "Amet dragée chocolate donut",
+                "url": "/",
+              },
+            ],
+          },
+          Object {
+            "heading": "Bear claw pastry bonbon",
+            "links": Array [
+              Object {
+                "title": "Carrot cake fruitcake",
+                "url": "/",
+              },
+              Object {
+                "title": "Carrot cake muffin fruitcake",
+                "url": "/",
+              },
+            ],
+          },
+        ],
+        "title": "Learn",
+        "url": "/",
+      }
+    }
+  />
+</navItem__MenuItem>
+`;

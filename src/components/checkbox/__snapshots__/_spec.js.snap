@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox renders 1`] = `
-<styled.div>
-  <styled.input
+<checkbox__Wrapper>
+  <checkbox__Input
     checked={false}
     id="test"
     name="myInput"
@@ -10,10 +10,10 @@ exports[`Checkbox renders 1`] = `
     type="checkbox"
     value="selected"
   />
-  <styled.label
+  <checkbox__Label
     htmlFor="test"
   >
     hello
-  </styled.label>
-</styled.div>
+  </checkbox__Label>
+</checkbox__Wrapper>
 `;

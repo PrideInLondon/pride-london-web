@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Nav/> renders and matches snapshot 1`] = `
-<styled.div>
-  <styled.header>
-    <Styled(Row)
+<nav__HeaderWrapper>
+  <nav__Header>
+    <nav__FlexRow
       mx={
         Array [
           0,
@@ -14,21 +14,21 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
         ]
       }
     >
-      <Styled(Column)
+      <nav__FlexColumn
         width={1}
       >
-        <Styled(Component)
+        <nav__LogoWrapper
           to="/events"
         >
-          <styled.img
+          <nav__Logo
             alt="Pride in London Logo"
             src=""
           />
-        </Styled(Component)>
+        </nav__LogoWrapper>
         <nav
           role="navigation"
         >
-          <styled.button
+          <nav__Burger
             aria-controls="menu"
             aria-expanded={false}
             isOpen={false}
@@ -38,8 +38,8 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
             <span>
               Menu
             </span>
-          </styled.button>
-          <styled.ul
+          </nav__Burger>
+          <nav__Menu
             id="menu"
             isOpen={false}
           >
@@ -130,19 +130,19 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
             <NavItem
               item={Object {}}
             >
-              <Styled(Button)
+              <nav__DonateButton
                 fullmobile={true}
                 link={true}
                 primary={true}
                 to="https://prideinlondon.org/donate/"
               >
                 Donate
-              </Styled(Button)>
+              </nav__DonateButton>
             </NavItem>
-          </styled.ul>
+          </nav__Menu>
         </nav>
-      </Styled(Column)>
-    </Styled(Row)>
-  </styled.header>
-</styled.div>
+      </nav__FlexColumn>
+    </nav__FlexRow>
+  </nav__Header>
+</nav__HeaderWrapper>
 `;

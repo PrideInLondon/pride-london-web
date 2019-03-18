@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Events You May Like component should matchsnapshot 1`] = `
-<Styled(Styled(Box))
+<eventsYouMayLike__StyledContainer
   mx="auto"
 >
-  <Styled(Row)>
-    <styled.h1>
+  <eventsYouMayLike__HeadingRow>
+    <eventsYouMayLike__Heading>
       You may also like
-    </styled.h1>
-    <styled.a
+    </eventsYouMayLike__Heading>
+    <eventsYouMayLike__ViewAll
       href="/events"
     >
       View all
-      <styled.span>
+      <eventsYouMayLike__DesktopOnly>
          events
-      </styled.span>
+      </eventsYouMayLike__DesktopOnly>
        
       <ChevronRight />
-    </styled.a>
-  </Styled(Row)>
+    </eventsYouMayLike__ViewAll>
+  </eventsYouMayLike__HeadingRow>
   <Row>
-    <Styled(Column)
+    <eventsYouMayLike__FlexColumn
       key="123"
       width={
         Array [
@@ -44,7 +44,7 @@ exports[`The Events You May Like component should matchsnapshot 1`] = `
           }
         }
       />
-    </Styled(Column)>
+    </eventsYouMayLike__FlexColumn>
   </Row>
-</Styled(Styled(Box))>
+</eventsYouMayLike__StyledContainer>
 `;
