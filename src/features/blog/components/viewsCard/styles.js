@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { media } from '../../../../theme/media'
+import Image from '../../../../components/image'
 
 export const ArticleTitle = styled.h2`
   color: ${props => props.theme.colors.black};
@@ -19,4 +20,16 @@ export const Container = styled.div`
   ${media.tablet`
     min-width: 400px;
   `};
+`
+
+export const ViewsThumbail = styled.img`
+  border-radius: 4px;
+  object-fit: cover;
+  width: 162px;
+  height: 220px;
+
+  ${media.tablet`
+    width: 400px;
+    height: 540px;
+    `}
 `

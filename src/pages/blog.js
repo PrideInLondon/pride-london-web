@@ -7,14 +7,17 @@ import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
 import StyledHR from '../components/horizontalRule'
 
-const mapNewsArticles = news => {
+const mapEntries = news => {
   if (!news.edges || !Array.isArray(news.edges)) return []
   return news.edges.map(({ node }) => ({ ...node }))
 }
 
-const Blog = ({ data: { allContentfulNews, allContentfulNewsCategory } }) => {
-  const articles = mapNewsArticles(allContentfulNews)
-  const categories = mapNewsArticles(allContentfulNewsCategory)
+const Blog = ({
+  data: { allContentfulNews, allContentfulNewsCategory, allContentfulViews },
+}) => {
+  const articles = mapEntries(allContentfulNews)
+  const categories = mapEntries(allContentfulNewsCategory)
+  const views = mapEntries(allContentfulViews)
   return (
     <Fragment>
       <ImageBanner
@@ -25,7 +28,7 @@ const Blog = ({ data: { allContentfulNews, allContentfulNewsCategory } }) => {
         large
         allowContentUnderflow
       />
-      <ViewsContainer />
+      <ViewsContainer views={views}/>
       <StyledHR />
       <NewsContainer articles={articles} categories={categories} />
     </Fragment>
@@ -58,10 +61,27 @@ export const blogLandingPageQuery = graphql`
         node {
           id
           title
+          date
           newsCategory {
             title
             hexColour
           }
+        }
+      }
+    }
+
+    allContentfulViews {
+      edges {
+        node {
+          id
+          date
+          portraitPhoto {
+            file {
+              url
+            }
+          }
+          title
+          author
         }
       }
     }

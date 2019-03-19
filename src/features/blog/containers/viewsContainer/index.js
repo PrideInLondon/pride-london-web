@@ -4,7 +4,7 @@ import ViewsCard from '../../components/viewsCard'
 import Title from '../../components/title'
 import { Container, CardContainer } from './styles'
 
-const ViewsContainer = () => {
+const ViewsContainer = ({ views }) => {
   return (
     <>
       <Container>
@@ -12,13 +12,9 @@ const ViewsContainer = () => {
           Views
         </Title>
         <CardContainer>
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
+          {views.map(view => (
+            <ViewsCard {...view} />
+          ))}
         </CardContainer>
       </Container>
     </>

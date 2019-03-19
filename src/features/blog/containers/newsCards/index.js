@@ -6,7 +6,7 @@ import { FlexColumn, Row } from '../../../../components/grid'
 const NewsCards = ({ selectedFilter, articles }) => {
   return (
     <Row>
-      {articles.map(({ title, newsCategory, id }) => {
+      {articles.map(({ date, title, newsCategory, id }) => {
         return selectedFilter.title === 'All Articles' ||
           selectedFilter.title === newsCategory.title ? (
           /* eslint-disable */
@@ -19,7 +19,7 @@ const NewsCards = ({ selectedFilter, articles }) => {
               1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
             ]}
           >
-            <NewsCard filterType={newsCategory} title={title} />
+            <NewsCard filterType={newsCategory} title={title} date={date}/>
           </FlexColumn>
         ) : /* eslint-enable */
         null

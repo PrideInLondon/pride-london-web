@@ -1,19 +1,38 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsFilter from '../newsFilter'
-import { Card, CardHeader, NewsDate, ReadLength, CardTitle } from './styles'
+import {
+  Card,
+  CardHeader,
+  NewsDate,
+  ReadLength,
+  CardTitle,
+  UnderlineContainer,
+} from './styles'
 
 const CenterDot = () => <span>·</span>
 
-const NewsCard = ({ filterType, title }) => (
+const NewsCard = ({ date, filterType, title, readLength }) => (
   <Card>
     <CardHeader>
       <NewsFilter filterType={filterType} isOutline={false} />
-      <NewsDate>12 Jun 2019</NewsDate>
-      <CenterDot />
-      <ReadLength>10 min read</ReadLength>
+      <NewsDate>
+        {new Date(date).toLocaleDateString('en-GB', {
+          day: 'numeric',
+          month: 'short',
+          year: 'numeric',
+        })}
+      </NewsDate>
+      {readLength && (
+        <>
+          <CenterDot />
+          <ReadLength>10 min read</ReadLength>
+        </>
+      )}
     </CardHeader>
-    <CardTitle>{title}</CardTitle>
+    <CardTitle>
+      <UnderlineContainer>{title}</UnderlineContainer>
+    </CardTitle>
   </Card>
 )
 
