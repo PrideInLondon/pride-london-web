@@ -26,6 +26,8 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
           />
         </nav__LogoWrapper>
         <nav
+          itemScope="itemscope"
+          itemType="http://www.schema.org/SiteNavigationElement"
           role="navigation"
         >
           <nav__Burger

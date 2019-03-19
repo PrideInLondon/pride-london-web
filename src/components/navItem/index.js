@@ -163,8 +163,8 @@ const NavItem = props => {
           <Submenu item={{ submenu, title, url, desc, id }} isOpen={isOpen} />
         </Fragment>
       ) : (
-        <MenuLink to={url}>
-          <span>{title}</span>
+        <MenuLink to={url} itemProp="url">
+          <span itemProp="name">{title}</span>
         </MenuLink>
       )}
     </MenuItem>

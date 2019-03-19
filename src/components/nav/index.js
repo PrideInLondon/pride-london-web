@@ -176,7 +176,11 @@ const Nav = () => {
             <LogoWrapper to="/events">
               <Logo src={logo} alt="Pride in London Logo" />
             </LogoWrapper>
-            <nav role="navigation">
+            <nav
+              role="navigation"
+              itemScope="itemscope"
+              itemType="http://www.schema.org/SiteNavigationElement"
+            >
               <Burger
                 onClick={() => setOpen(!isOpen)}
                 isOpen={isOpen}

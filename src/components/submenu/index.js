@@ -194,8 +194,8 @@ const Submenu = props => {
                 <PanelList>
                   {submenuList.links.map(link => (
                     <li key={link.title}>
-                      <PanelLink to={link.url}>
-                        <span>{link.title}</span>
+                      <PanelLink to={link.url} itemProp="url">
+                        <span itemProp="name">{link.title}</span>
                       </PanelLink>
                     </li>
                   ))}
