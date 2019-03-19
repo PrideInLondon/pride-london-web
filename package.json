@@ -51,7 +51,7 @@
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-rollbar": "^1.0.0",
     "gatsby-plugin-styled-components": "^3.0.7",
-    "gatsby-source-contentful": "^2.0.38",
+    "gatsby-source-contentful": "^2.0.40",
     "gatsby-source-filesystem": "^2.0.27",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
