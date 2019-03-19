@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav/> renders and matches snapshot 1`] = `
+<nav__HeaderWrapper>
+  <nav__Header>
+    <nav__FlexRow
+      mx={
+        Array [
+          0,
+          0,
+          50,
+          50,
+          90,
+        ]
+      }
+    >
+      <nav__FlexColumn
+        width={1}
+      >
+        <nav__LogoWrapper
+          to="/events"
+        >
+          <nav__Logo
+            alt="Pride in London Logo"
+            src=""
+          />
+        </nav__LogoWrapper>
+        <nav
+          itemScope="itemscope"
+          itemType="http://www.schema.org/SiteNavigationElement"
+          role="navigation"
+        >
+          <nav__Burger
+            aria-controls="menu"
+            aria-expanded={false}
+            isOpen={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              Menu
+            </span>
+          </nav__Burger>
+          <nav__Menu
+            id="menu"
+            isOpen={false}
+          >
+            <NavItem
+              item={
+                Object {
+                  "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
+                  "id": "nav-learn",
+                  "submenu": Array [
+                    Object {
+                      "heading": "Jelly-o chupa chups",
+                      "links": Array [
+                        Object {
+                          "title": "Cupcake ipsum dolor sit",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Cupcake ipsum sit",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Cupcake dolor sit",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Cupcake ipsum dolor",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                    Object {
+                      "heading": "Icing gummi bears powder",
+                      "links": Array [
+                        Object {
+                          "title": "Amet dragée donut",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Amet dragée chocolate donut",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                    Object {
+                      "heading": "Bear claw pastry bonbon",
+                      "links": Array [
+                        Object {
+                          "title": "Carrot cake fruitcake",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Carrot cake muffin fruitcake",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                  ],
+                  "title": "Learn",
+                  "url": "/",
+                }
+              }
+            />
+            <NavItem
+              item={
+                Object {
+                  "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
+                  "id": "nav-attend",
+                  "submenu": Array [
+                    Object {
+                      "heading": "Jelly beans sesame snaps",
+                      "links": Array [
+                        Object {
+                          "title": "Cotton candy dragée",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Dragée oat cake",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                  ],
+                  "title": "Attend",
+                  "url": "/",
+                }
+              }
+            />
+            <NavItem
+              item={Object {}}
+            >
+              <nav__DonateButton
+                fullmobile={true}
+                link={true}
+                primary={true}
+                to="https://prideinlondon.org/donate/"
+              >
+                Donate
+              </nav__DonateButton>
+            </NavItem>
+          </nav__Menu>
+        </nav>
+      </nav__FlexColumn>
+    </nav__FlexRow>
+  </nav__Header>
+</nav__HeaderWrapper>
+`;

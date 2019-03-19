@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { rgba } from 'polished'
+import theme from '../../theme/theme'
 
 const Field = styled.div`
   margin-bottom: 20px;
@@ -13,19 +14,19 @@ const StyledInput = styled.input`
   border: 2px solid transparent;
   border-radius: 4px;
   height: 58px;
-  background-color: ${props => rgba(props.theme.colors.black, 0.2)};
-  font-family: ${props => props.theme.fonts.body};
+  background-color: ${rgba(theme.colors.black, 0.2)};
+  font-family: ${theme.fonts.body};
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.21;
-  color: ${props => props.theme.colors.white};
+  color: ${theme.colors.white};
   padding: 21px 20px;
   width: 100%;
   transition: padding 0.15s linear, border-color 0.15s linear;
 
   &:focus {
     padding: 31px 20px 11px 20px;
-    border: 2px solid ${props => props.theme.colors.eucalyptusGreen};
+    border: 2px solid ${theme.colors.eucalyptusGreen};
     outline: none;
   }
 `
@@ -37,9 +38,9 @@ const Label = styled.label`
   left: 20px;
   color: ${props =>
     !props.focused && props.empty
-      ? props.theme.colors.white
-      : props.theme.colors.eucalyptusGreen};
-  font-family: ${props => props.theme.fonts.body};
+      ? theme.colors.white
+      : theme.colors.eucalyptusGreen};
+  font-family: ${theme.fonts.body};
   font-weight: 500;
   font-size: ${props =>
     !props.focused && props.empty ? '0.875rem' : '0.75rem'};

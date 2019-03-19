@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Submenu /> renders and matches snapshot when open 1`] = `
+<submenu__Panel
+  containerRef={
+    Object {
+      "current": undefined,
+    }
+  }
+  id="lorem"
+  isOpen={true}
+  onTransitionEnd={[Function]}
+>
+  <grid__Container
+    mx="auto"
+  >
+    <submenu__PanelRow>
+      <submenu__PanelInfoWrapper
+        width={
+          Array [
+            1,
+            1,
+            0.3333333333333333,
+            0.25,
+          ]
+        }
+      >
+        <submenu__PanelTitle>
+          Lorem
+        </submenu__PanelTitle>
+        <p>
+          lorem ipsum
+        </p>
+      </submenu__PanelInfoWrapper>
+      <submenu__PanelListWrapper
+        isOpen={true}
+      >
+        <submenu__PanelListSection
+          key="Jelly-o chupa chups"
+        >
+          <submenu__Heading>
+            Jelly-o chupa chups
+          </submenu__Heading>
+          <submenu__PanelList>
+            <li
+              key="Cupcake ipsum dolor sit"
+            >
+              <submenu__PanelLink
+                itemProp="url"
+                to="/"
+              >
+                <span
+                  itemProp="name"
+                >
+                  Cupcake ipsum dolor sit
+                </span>
+              </submenu__PanelLink>
+            </li>
+            <li
+              key="Cupcake ipsum sit"
+            >
+              <submenu__PanelLink
+                itemProp="url"
+                to="/"
+              >
+                <span
+                  itemProp="name"
+                >
+                  Cupcake ipsum sit
+                </span>
+              </submenu__PanelLink>
+            </li>
+            <li
+              key="Cupcake dolor sit"
+            >
+              <submenu__PanelLink
+                itemProp="url"
+                to="/"
+              >
+                <span
+                  itemProp="name"
+                >
+                  Cupcake dolor sit
+                </span>
+              </submenu__PanelLink>
+            </li>
+            <li
+              key="Cupcake ipsum dolor"
+            >
+              <submenu__PanelLink
+                itemProp="url"
+                to="/"
+              >
+                <span
+                  itemProp="name"
+                >
+                  Cupcake ipsum dolor
+                </span>
+              </submenu__PanelLink>
+            </li>
+          </submenu__PanelList>
+        </submenu__PanelListSection>
+      </submenu__PanelListWrapper>
+    </submenu__PanelRow>
+  </grid__Container>
+</submenu__Panel>
+`;

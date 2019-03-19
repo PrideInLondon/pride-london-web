@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { media } from '../../../theme/media'
+import theme from '../../../theme/theme'
 import { Consumer } from '../../../components/appContext'
 import Checkbox from '../../../components/checkbox'
 
@@ -30,22 +31,18 @@ const Wrapper = styled.div`
 
   ${media.tablet`
     background-color: ${props =>
-      props.isChecked
-        ? props.theme.colors.eucalyptusGreen
-        : props.theme.colors.lightGrey};
+      props.isChecked ? theme.colors.eucalyptusGreen : theme.colors.lightGrey};
     border: 2px solid ${props =>
-      props.isChecked
-        ? props.theme.colors.eucalyptusGreen
-        : props.theme.colors.lightGrey};
+      props.isChecked ? theme.colors.eucalyptusGreen : theme.colors.lightGrey};
     border-radius: 4px;
     transition: background-color 0.15s linear;
 
     &:focus-within {
-      border-color: ${props => props.theme.colors.eucalyptusGreen}
+      border-color: ${theme.colors.eucalyptusGreen}
     }
 
     input {
-      border-color: ${props => props.isChecked && props.theme.colors.white};
+      border-color: ${props => props.isChecked && theme.colors.white};
       transition: border-color 0.15s linear;
       & + label {
         font-weight: 500;
@@ -61,11 +58,11 @@ const Wrapper = styled.div`
 `
 const FilterHeader = styled.div`
   padding: 16px 10px;
-  background-color: ${props => props.theme.colors.lightGrey};
+  background-color: ${theme.colors.lightGrey};
   font-size: 1rem;
-  font-family: ${props => props.theme.fonts.title};
+  font-family: ${theme.fonts.title};
   font-weight: 600;
-  color: ${props => props.theme.colors.indigo};
+  color: ${theme.colors.indigo};
 
   ${media.mobile`
     padding: 16px 20px;

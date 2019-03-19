@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import FlipMove from 'react-flip-move'
 import styled from 'styled-components'
 import moment from 'moment'
-import noScroll from 'no-scroll'
+import { noScroll } from '../utilities'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { EventListingCard } from '../features/events'
@@ -36,7 +36,7 @@ const StyledFlipMove = styled(FlipMove)`
 const ContainerAddFilters = styled(Container)`
   padding: 20px 0;
   margin-bottom: 20px;
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${theme.colors.white};
 
   ${media.tablet`
     display: none;
@@ -64,7 +64,7 @@ const OffsetContainer = styled(Container)`
 const EventCount = styled.p`
   font-size: 0.875rem;
   line-height: 1.214;
-  color: ${props => props.theme.colors.darkGrey};
+  color: ${theme.colors.darkGrey};
 `
 
 const DateGroupHeading = styled.h2`

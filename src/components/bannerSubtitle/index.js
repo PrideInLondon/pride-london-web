@@ -2,15 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { media } from '../../theme/media'
+import theme from '../../theme/theme'
 
 const BannerSubtitle = styled.h2`
   color: #ffffff;
   font-size: 1rem;
   display: inline;
-  background-color: ${props => props.theme.colors.indigo};
+  background-color: ${theme.colors.indigo};
   line-height: 1.4;
-  box-shadow: 10px 0 0 ${props => props.theme.colors.indigo},
-    -10px 0 0 ${props => props.theme.colors.indigo};
+  box-shadow: 10px 0 0 ${theme.colors.indigo}, -10px 0 0 ${theme.colors.indigo};
   box-decoration-break: clone;
 
   ${media.tablet`  

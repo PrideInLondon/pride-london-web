@@ -12,7 +12,7 @@ import theme from '../theme/theme'
 import { media } from '../theme/media'
 
 const SponsorsContainer = styled(Container)`
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${theme.colors.white};
   padding: 0 20px;
   ${media.tablet`
     padding: 0 90px;

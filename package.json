@@ -17,6 +17,9 @@
     "test:watch": "yarn run jest --watch"
   },
   "jest": {
+    "moduleNameMapper": {
+      "\\.(css|jpg|png|svg)$": "<rootDir>/empty-module.js"
+    },
     "testMatch": [
       "**/?(*_)(spec|test).js"
     ],
@@ -27,7 +30,10 @@
       "enzyme-to-json/serializer"
     ],
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "globals": {
+      "__PATH_PREFIX__": ""
+    }
   },
   "husky": {
     "hooks": {
@@ -91,6 +97,7 @@
     "jest": "^24.5.0",
     "jest-environment-jsdom": "^24.5.0",
     "jest-styled-components": "^6.3.1",
+    "jest-transform-stub": "^2.0.0",
     "lint-staged": "^8.1.5",
     "prettier": "^1.15.3",
     "prop-types": "^15.6.2",

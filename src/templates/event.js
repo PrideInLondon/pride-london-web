@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
-import NewsletterForm from '../features/events/components/newsletter'
 import { media } from '../theme/media'
+import theme from '../theme/theme'
 import {
   EventTagList,
   EventSchedule,
@@ -13,16 +13,17 @@ import {
   EventInfoCard,
   EventDirectionsSection,
 } from '../features/events'
+import { Container, Row, Column } from '../components/grid'
 
 const PageWrapper = styled.div`
   position: relative;
   margin: 0 auto;
-  max-width: ${props => props.theme.breakpoints[3]};
+  max-width: ${theme.breakpoints[3]};
   background-color: white;
 `
 
 const Title = styled.h1`
-  color: ${props => props.theme.colors.indigo};
+  color: ${theme.colors.indigo};
   font-size: 1.75em;
   line-height: 1.4;
   margin-bottom: 20px;
@@ -36,25 +37,17 @@ const HeroImageAndTitle = styled.div`
   `};
 `
 
-const ContentWrapper = styled.div`
-  padding: 30px 20px;
-  width: 100vw;
+const TitleWrapper = styled.div`
+  padding: 30px 0px;
   ${media.tablet`
-    padding: 30px 50px;
+    padding: 30px 0;
   `};
   ${media.desktop`
-    padding: 0;
-    margin-left: 90px;
-    max-width: 45vw;
+    padding: 60px 0px 50px;
+    width: calc(100% - 400px);
   `};
   ${media.desktopHD`
     max-width: 830px;
-  `};
-`
-
-const TitleWrapper = styled(ContentWrapper)`
-  ${media.desktop`
-    padding: 60px 0px 50px;
   `};
 `
 
@@ -72,6 +65,17 @@ const Section = styled.div`
   margin-bottom: 20px;
   ${media.desktop`
     margin-bottom: 60px;
+  `};
+`
+
+const RelativeColumn = styled(Column)`
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+`
+const EventInfoCardWrapper = styled.div`
+  ${media.desktopMax`
+    background-color: ${theme.colors.indigo}; 
   `};
 `
 
@@ -95,25 +99,36 @@ export default class Event extends Component {
             src={individualEventPicture.file.url}
             role="presentation"
           />
-          <TitleWrapper>
-            <Title>{name}</Title>
-            <EventTagList values={eventCategories} />
-          </TitleWrapper>
         </HeroImageAndTitle>
-        <EventInfoCard data={this.props.data.contentfulEvent} />
-        <ContentWrapper>
-          <Section>
-            <ReactMarkdown source={eventDescription.eventDescription} />
-          </Section>
-          {performances && (
-            <Section>
-              <EventSchedule schedule={performances} />
-            </Section>
-          )}
-        </ContentWrapper>
+        <EventInfoCardWrapper>
+          <Container>
+            <Row>
+              <RelativeColumn width={1}>
+                <EventInfoCard data={this.props.data.contentfulEvent} />
+              </RelativeColumn>
+            </Row>
+          </Container>
+        </EventInfoCardWrapper>
+        <Container>
+          <Row>
+            <Column width={1}>
+              <TitleWrapper>
+                <Title>{name}</Title>
+                <EventTagList values={eventCategories} />
+              </TitleWrapper>
+              <Section>
+                <ReactMarkdown source={eventDescription.eventDescription} />
+              </Section>
+              {performances && (
+                <Section>
+                  <EventSchedule schedule={performances} />
+                </Section>
+              )}
+            </Column>
+          </Row>
+        </Container>
         <EventDirectionsSection data={this.props.data.contentfulEvent} />
         <EventsYouMayLike eventId={id} />
-        <NewsletterForm buttonText="Subscribe" />
       </PageWrapper>
     )
   }
