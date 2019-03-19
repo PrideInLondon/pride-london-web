@@ -20,13 +20,13 @@ const Wrapper = styled.div`
   background-color: ${theme.colors.indigo};
   display: flex;
   flex-direction: column;
-  padding: 30px 20px;
+  padding: 30px 0;
   color: white;
   ${media.desktop`
     position: absolute;
     width: 400px;
-    right: 90px;
-    top: 270px;
+    right: 0;
+    top: -200px;
     padding: 40px;
  `};
 `

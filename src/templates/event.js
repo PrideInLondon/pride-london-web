@@ -40,10 +40,11 @@ const HeroImageAndTitle = styled.div`
 const TitleWrapper = styled.div`
   padding: 30px 0px;
   ${media.tablet`
-    padding: 30px 50px;
+    padding: 30px 0;
   `};
   ${media.desktop`
     padding: 60px 0px 50px;
+    width: calc(100% - 400px);
   `};
   ${media.desktopHD`
     max-width: 830px;
@@ -64,6 +65,17 @@ const Section = styled.div`
   margin-bottom: 20px;
   ${media.desktop`
     margin-bottom: 60px;
+  `};
+`
+
+const RelativeColumn = styled(Column)`
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+`
+const EventInfoCardWrapper = styled.div`
+  ${media.desktopMax`
+    background-color: ${theme.colors.indigo}; 
   `};
 `
 
@@ -88,7 +100,15 @@ export default class Event extends Component {
             role="presentation"
           />
         </HeroImageAndTitle>
-        <EventInfoCard data={this.props.data.contentfulEvent} />
+        <EventInfoCardWrapper>
+          <Container>
+            <Row>
+              <RelativeColumn width={1}>
+                <EventInfoCard data={this.props.data.contentfulEvent} />
+              </RelativeColumn>
+            </Row>
+          </Container>
+        </EventInfoCardWrapper>
         <Container>
           <Row>
             <Column width={1}>
