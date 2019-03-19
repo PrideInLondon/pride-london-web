@@ -12,8 +12,19 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: `${process.env.CONTENTFUL_ID}`,
-        accessToken: `${process.env.CONTENTFUL_TOKEN}`,
+        spaceId: `${process.env.SPACE_ID}`,
+        accessToken: `${process.env.ACCESS_TOKEN}`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-rollbar',
+      options: {
+        accessToken: `${process.env.ROLLBAR_ACCESS_TOKEN}`,
+        captureUncaught: true,
+        captureUnhandledRejections: true,
+        payload: {
+          environment: 'development',
+        },
       },
     },
   ],
