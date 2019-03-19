@@ -159,8 +159,6 @@ const DatePickerHeader = styled.div`
 class EventDateFilter extends Component {
   state = {
     focusedInput: null,
-    startDate: null,
-    endDate: null,
   }
 
   handleFocusChange = (focusedInput, context) => {
