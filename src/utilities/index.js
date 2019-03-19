@@ -1,5 +1,7 @@
 function checkBreakpoint(breakpoint) {
-  return window.matchMedia(`(min-width: ${breakpoint}px)`).matches
+  if (typeof window !== `undefined`) {
+    return window.matchMedia(`(min-width: ${breakpoint}px)`).matches
+  }
 }
 
 const noScroll = {
