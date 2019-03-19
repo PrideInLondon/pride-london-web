@@ -41,7 +41,6 @@ const formatDate = event => {
 
 function filterByDate(event) {
   if (!(this.startDate && this.endDate)) return true
-
   // Set time to 12:00 for pure date comparison
   return moment(event.node.startTime)
     .set({ hour: 12, minutes: 0 })
@@ -49,7 +48,7 @@ function filterByDate(event) {
 }
 
 function filterByFree(event) {
-  if (!this) return true
+  if (!this.valueOf()) return true
   return event.node.eventPriceLow === 0
 }
 
