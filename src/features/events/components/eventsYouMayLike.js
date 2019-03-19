@@ -27,15 +27,11 @@ export const StyledContainer = styled(Container)`
   ${media.desktop`
     padding: 60px 0px;
   `}
-  background-color: ${theme.colors.lightGrey};
 `
 
-const Heading = styled.h1`
-  font-size: 1.25rem;
+const Heading = styled.h2`
   margin: 0;
-  ${media.desktop`
-    font-size: 2rem;
-  `};
+  font-weight: 700;
 `
 
 const DesktopOnly = styled.span`
@@ -54,6 +50,10 @@ const HeadingRow = styled(Row)`
   `};
   align-items: center;
   justify-content: space-between;
+`
+
+const GreyWrapper = styled.div`
+  background-color: ${theme.colors.lightGrey};
 `
 
 const filterEventsYouMayLike = (events, eventId) => {
@@ -77,22 +77,27 @@ export const EventsYouMayLike = ({ eventId }) => (
       if (eventsYouMayLike.length === 0) return null
 
       return (
-        <StyledContainer>
-          <HeadingRow>
-            <Heading>You may also like</Heading>
-            <ViewAll href="/events">
-              View all<DesktopOnly>&nbsp;events</DesktopOnly>&nbsp;
-              <ChevronRight />
-            </ViewAll>
-          </HeadingRow>
-          <Row>
-            {eventsYouMayLike.map(event => (
-              <FlexColumn width={[1, 1, 1 / 2, 1 / 3]} key={event.node.id}>
-                <EventListingCard event={event.node} />
-              </FlexColumn>
-            ))}
-          </Row>
-        </StyledContainer>
+        <GreyWrapper>
+          <StyledContainer>
+            <HeadingRow>
+              <Heading>You may also like</Heading>
+              <ViewAll href="/events">
+                View all<DesktopOnly>&nbsp;events</DesktopOnly>&nbsp;
+                <ChevronRight />
+              </ViewAll>
+            </HeadingRow>
+            <Row>
+              {eventsYouMayLike.map(event => (
+                <FlexColumn
+                  width={[1, 1 / 2, 1 / 2, 1 / 3]}
+                  key={event.node.id}
+                >
+                  <EventListingCard event={event.node} />
+                </FlexColumn>
+              ))}
+            </Row>
+          </StyledContainer>
+        </GreyWrapper>
       )
     }}
   </Consumer>

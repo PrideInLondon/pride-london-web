@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
-import NewsletterForm from '../features/events/components/newsletter'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import {
@@ -14,6 +13,7 @@ import {
   EventInfoCard,
   EventDirectionsSection,
 } from '../features/events'
+import { Container, Row, Column } from '../components/grid'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -37,25 +37,16 @@ const HeroImageAndTitle = styled.div`
   `};
 `
 
-const ContentWrapper = styled.div`
-  padding: 30px 20px;
-  width: 100vw;
+const TitleWrapper = styled.div`
+  padding: 30px 0px;
   ${media.tablet`
     padding: 30px 50px;
   `};
   ${media.desktop`
-    padding: 0;
-    margin-left: 90px;
-    max-width: 45vw;
+    padding: 60px 0px 50px;
   `};
   ${media.desktopHD`
     max-width: 830px;
-  `};
-`
-
-const TitleWrapper = styled(ContentWrapper)`
-  ${media.desktop`
-    padding: 60px 0px 50px;
   `};
 `
 
@@ -96,25 +87,28 @@ export default class Event extends Component {
             src={individualEventPicture.file.url}
             role="presentation"
           />
-          <TitleWrapper>
-            <Title>{name}</Title>
-            <EventTagList values={eventCategories} />
-          </TitleWrapper>
         </HeroImageAndTitle>
         <EventInfoCard data={this.props.data.contentfulEvent} />
-        <ContentWrapper>
-          <Section>
-            <ReactMarkdown source={eventDescription.eventDescription} />
-          </Section>
-          {performances && (
-            <Section>
-              <EventSchedule schedule={performances} />
-            </Section>
-          )}
-        </ContentWrapper>
+        <Container>
+          <Row>
+            <Column width={1}>
+              <TitleWrapper>
+                <Title>{name}</Title>
+                <EventTagList values={eventCategories} />
+              </TitleWrapper>
+              <Section>
+                <ReactMarkdown source={eventDescription.eventDescription} />
+              </Section>
+              {performances && (
+                <Section>
+                  <EventSchedule schedule={performances} />
+                </Section>
+              )}
+            </Column>
+          </Row>
+        </Container>
         <EventDirectionsSection data={this.props.data.contentfulEvent} />
         <EventsYouMayLike eventId={id} />
-        <NewsletterForm buttonText="Subscribe" />
       </PageWrapper>
     )
   }

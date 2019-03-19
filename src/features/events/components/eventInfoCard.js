@@ -87,17 +87,21 @@ const VSpace = styled.div`
 const dateFormat = 'D MMMM YYYY'
 
 const formatDayRange = (startTime, endTime) => {
-  if (startTime.isSame('day', endTime)) {
-    return startTime.format(dateFormat)
+  if (startTime.parseZone().isSame('day', endTime)) {
+    return startTime.parseZone().format(dateFormat)
   }
 
-  return `${startTime.format(dateFormat)} to ${endTime.format(dateFormat)}`
+  return `${startTime
+    .parseZone()
+    .format(dateFormat)} to ${endTime.parseZone().format(dateFormat)}`
 }
 
 const timeFormat = 'h:mma'
 
 const formatTimeRange = (startTime, endTime) =>
-  `${startTime.format(timeFormat)} to ${endTime.format(timeFormat)}`
+  `${startTime.parseZone().format(timeFormat)} to ${endTime
+    .parseZone()
+    .format(timeFormat)}`
 
 const formatPrice = (eventPriceLow, eventPriceHigh) => {
   if (eventPriceLow === 0 && eventPriceHigh === 0) {
@@ -204,13 +208,14 @@ export default function EventInfoCard({
 }
 
 Item.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   icon: PropTypes.object.isRequired,
   detail: PropTypes.string,
 }
 
 Item.defaultProps = {
   detail: null,
+  title: null,
 }
 
 EventInfoCard.propTypes = {
