@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Submenu from '../Submenu'
+import Submenu from '../submenu'
 import 'jest-styled-components'
 import toJSON from 'enzyme-to-json'
 
