@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 import theme from '../../../../theme/theme'
 
+export const CardTitle = styled.h3`
+  color: ${theme.colors.indigo};
+  margin: 10px 0;
+`
+
 export const Card = styled.div`
   background-color: ${theme.colors.white};
   border-radius: 2px;
@@ -10,11 +15,6 @@ export const Card = styled.div`
   padding: 30px 20px;
   width: 100%;
   font-family: Poppins;
-`
-
-export const CardTitle = styled.h3`
-  color: ${theme.colors.darkPurple};
-  margin: 10px 0;
 `
 
 export const UnderlineContainer = styled.span`

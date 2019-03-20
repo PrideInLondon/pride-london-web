@@ -1,7 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Image from '../../../../components/image'
-import { ArticleAuthor, ArticleTitle, Container, ViewsThumbail } from './styles'
+import {
+  ArticleAuthor,
+  ArticleTitle,
+  Container,
+  ViewsThumbail,
+  ArticleTitleTextContainer,
+} from './styles'
 
 const ViewsCard = props => {
   const { portraitPhoto, date, author, title } = props
@@ -10,7 +16,9 @@ const ViewsCard = props => {
     <Container>
       <ViewsThumbail src={photoUrl} altText={`${author} — ${title}`} />
       <ArticleAuthor>{author}</ArticleAuthor>
-      <ArticleTitle>{title}</ArticleTitle>
+      <ArticleTitle>
+        <ArticleTitleTextContainer>{title}</ArticleTitleTextContainer>
+      </ArticleTitle>
     </Container>
   )
 }
@@ -23,7 +31,7 @@ ViewsCard.propTypes = {
 
 ViewsCard.defaultProps = {
   portraitPhoto: {
-    file: {}
+    file: {},
   },
   author: 'Lisa Charlwood-Green',
   title: 'LGTB+ Women Say "Wow!',
