@@ -2,15 +2,17 @@
 
 exports[`ViewsCard renders with default values 1`] = `
 <styles__Container>
-  <Image
-    altText="Lisa Charlwood-Green — LGTB+ Women Say \\"Wow!"
-    src="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  <styles__ViewsThumbail
+    altText="Bob Barker — My view"
+    src="foo.bar/baz"
   />
   <styles__ArticleAuthor>
-    Lisa Charlwood-Green
+    Bob Barker
   </styles__ArticleAuthor>
   <styles__ArticleTitle>
-    LGTB+ Women Say "Wow!"
+    <styles__ArticleTitleTextContainer>
+      My view
+    </styles__ArticleTitleTextContainer>
   </styles__ArticleTitle>
 </styles__Container>
 `;

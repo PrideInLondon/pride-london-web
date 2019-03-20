@@ -5,4 +5,5 @@ export const StyledTitle = styled.h2`
   color: ${props =>
     props.isLight ? props.theme.colors.lightGrey : props.theme.colors.darkBlue};
   margin: 0.25em;
+  text-align: ${props => (props.isCentered ? 'center' : 'inherit')};
 `

@@ -4,6 +4,7 @@ exports[`ViewsContainer should render with default values 1`] = `
 <Fragment>
   <styles__Container>
     <Title
+      isCentered={true}
       isLight={true}
       theme={
         Object {
@@ -53,43 +54,7 @@ exports[`ViewsContainer should render with default values 1`] = `
     >
       Views
     </Title>
-    <styles__CardContainer>
-      <ViewsCard
-        author="Lisa Charlwood-Green"
-        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        title="LGTB+ Women Say \\"Wow!"
-      />
-      <ViewsCard
-        author="Lisa Charlwood-Green"
-        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        title="LGTB+ Women Say \\"Wow!"
-      />
-      <ViewsCard
-        author="Lisa Charlwood-Green"
-        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        title="LGTB+ Women Say \\"Wow!"
-      />
-      <ViewsCard
-        author="Lisa Charlwood-Green"
-        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        title="LGTB+ Women Say \\"Wow!"
-      />
-      <ViewsCard
-        author="Lisa Charlwood-Green"
-        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        title="LGTB+ Women Say \\"Wow!"
-      />
-      <ViewsCard
-        author="Lisa Charlwood-Green"
-        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        title="LGTB+ Women Say \\"Wow!"
-      />
-      <ViewsCard
-        author="Lisa Charlwood-Green"
-        preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        title="LGTB+ Women Say \\"Wow!"
-      />
-    </styles__CardContainer>
+    <styles__CardContainer />
   </styles__Container>
 </Fragment>
 `;

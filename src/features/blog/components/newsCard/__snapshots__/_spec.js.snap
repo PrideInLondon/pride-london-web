@@ -15,15 +15,13 @@ exports[`NewsCard renders with default values 1`] = `
       isOutline={false}
     />
     <styles__NewsDate>
-      12 Jun 2019
+      Invalid Date
     </styles__NewsDate>
-    <CenterDot />
-    <styles__ReadLength>
-      10 min read
-    </styles__ReadLength>
   </styles__CardHeader>
   <styles__CardTitle>
-    Here is some news!
+    <styles__UnderlineContainer>
+      Here is some news!
+    </styles__UnderlineContainer>
   </styles__CardTitle>
 </styles__Card>
 `;
