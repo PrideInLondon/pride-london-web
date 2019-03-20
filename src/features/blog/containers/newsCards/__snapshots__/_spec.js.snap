@@ -2,7 +2,7 @@
 
 exports[`NewsCards renders with default values 1`] = `
 <Row>
-  <Styled(Column)
+  <grid__FlexColumn
     key="0"
     width={
       Array [
@@ -16,8 +16,8 @@ exports[`NewsCards renders with default values 1`] = `
     <NewsCard
       type="RESEARCH"
     />
-  </Styled(Column)>
-  <Styled(Column)
+  </grid__FlexColumn>
+  <grid__FlexColumn
     key="1"
     width={
       Array [
@@ -31,8 +31,8 @@ exports[`NewsCards renders with default values 1`] = `
     <NewsCard
       type="NEWS"
     />
-  </Styled(Column)>
-  <Styled(Column)
+  </grid__FlexColumn>
+  <grid__FlexColumn
     key="2"
     width={
       Array [
@@ -46,8 +46,8 @@ exports[`NewsCards renders with default values 1`] = `
     <NewsCard
       type="NEWS"
     />
-  </Styled(Column)>
-  <Styled(Column)
+  </grid__FlexColumn>
+  <grid__FlexColumn
     key="3"
     width={
       Array [
@@ -61,8 +61,8 @@ exports[`NewsCards renders with default values 1`] = `
     <NewsCard
       type="RESEARCH"
     />
-  </Styled(Column)>
-  <Styled(Column)
+  </grid__FlexColumn>
+  <grid__FlexColumn
     key="4"
     width={
       Array [
@@ -76,8 +76,8 @@ exports[`NewsCards renders with default values 1`] = `
     <NewsCard
       type="ANNOUNCEMENTS"
     />
-  </Styled(Column)>
-  <Styled(Column)
+  </grid__FlexColumn>
+  <grid__FlexColumn
     key="5"
     width={
       Array [
@@ -91,6 +91,6 @@ exports[`NewsCards renders with default values 1`] = `
     <NewsCard
       type="PARTNERS"
     />
-  </Styled(Column)>
+  </grid__FlexColumn>
 </Row>
 `;

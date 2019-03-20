@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Title renders with default values 1`] = `
-<styled.h2
+<styles__StyledTitle
   isLight={false}
 >
   Hi
-</styled.h2>
+</styles__StyledTitle>
 `;

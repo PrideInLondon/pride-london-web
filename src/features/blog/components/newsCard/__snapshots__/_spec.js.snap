@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsCard renders with default values 1`] = `
-<styled.div>
-  <styled.div>
+<styles__Card>
+  <styles__CardHeader>
     <NewsFilter
       filterType="PARTNERS"
       isOutline={true}
     />
-    <styled.span>
+    <styles__NewsDate>
       12 Jun 2019
-    </styled.span>
+    </styles__NewsDate>
     <CenterDot />
-    <Styled(styled.span)>
+    <styles__ReadLength>
       10 min read
-    </Styled(styled.span)>
-  </styled.div>
-  <styled.h3>
+    </styles__ReadLength>
+  </styles__CardHeader>
+  <styles__CardTitle>
     Pride in London sees record number of parade applications
-  </styled.h3>
-</styled.div>
+  </styles__CardTitle>
+</styles__Card>
 `;
