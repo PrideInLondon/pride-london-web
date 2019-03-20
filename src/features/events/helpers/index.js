@@ -122,7 +122,10 @@ function filterByTime(event) {
 
 function filterPastEvents(event) {
   const today = moment()
-  return moment(event.node.startTime).isSameOrAfter(today)
+  if (event.node && event.node.startTime)
+    return moment(event.node.startTime).isSameOrAfter(today)
+  // Assume event is date string if not event object
+  return moment(event, 'DD/MM/YYYY').isSameOrAfter(today)
 }
 
 function filterByLimit(event, index) {

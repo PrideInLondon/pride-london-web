@@ -173,7 +173,7 @@ const Nav = () => {
           ]}
         >
           <FlexColumn width={1}>
-            <LogoWrapper to="/events">
+            <LogoWrapper to="/">
               <Logo src={logo} alt="Pride in London Logo" />
             </LogoWrapper>
             <nav
