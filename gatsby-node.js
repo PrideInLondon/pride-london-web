@@ -92,9 +92,8 @@ exports.createPages = async ({ graphql, actions }) => {
             component: eventTemplate,
             context: {
               id: edge.node.id,
-              startDate: moment.parseZone(date, dateFormat).format(prettyDate),
-              endDate: moment
-                .parseZone(date, dateFormat)
+              startDate: moment(date, dateFormat).format(prettyDate),
+              endDate: moment(date, dateFormat)
                 .add(
                   getDuration(edge.node.startTime, edge.node.endTime),
                   'milliseconds'
