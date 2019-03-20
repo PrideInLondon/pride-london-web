@@ -37,11 +37,17 @@ const NewsCard = ({ date, filterType, title, readLength }) => (
 )
 
 NewsCard.propTypes = {
+  date: PropTypes.string.isRequired,
+  readLength: PropTypes.string,
   filterType: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,
   title: PropTypes.string.isRequired,
+}
+
+NewsCard.defaultProps = {
+  readLength: null,
 }
 
 export default NewsCard

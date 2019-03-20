@@ -24,7 +24,7 @@ export const FilterTextContainer = styled.p`
   display: flex;
   font-family: Poppins;
   font-size: 12px;
-  height: ${props => (props.isButton ? '32px' : '22px')};
+  height: ${props => (props.isButton ? '32px' : '23px')};
   justify-content: center;
   padding: ${props => (props.isButton ? '0 5px' : '0 2px')};
   margin-right: 5px;

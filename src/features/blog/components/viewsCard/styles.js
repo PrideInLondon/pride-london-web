@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { media } from '../../../../theme/media'
-import Image from '../../../../components/image'
 import theme from '../../../../theme/theme'
 
 export const Container = styled.div`
@@ -11,7 +10,7 @@ export const Container = styled.div`
     min-width: 400px;
   `};
 
-  &:hover { 
+  &:hover {
     cursor: pointer;
   }
 `
@@ -32,7 +31,7 @@ export const ArticleTitleTextContainer = styled.span`
 `
 
 export const ArticleAuthor = styled.p`
-  color: ${props => props.theme.colors.darkGrey};
+  color: ${theme.colors.darkGrey};
   font-family: ${theme.fonts.title};
   margin: 0.25rem 0;
   font-size: 14px;

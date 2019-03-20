@@ -23,12 +23,12 @@ const Blog = ({
       <ImageBanner
         titleText="The Voice of Pride in London"
         subtitleText="Find out what we're talking about in the Pride in London Community"
-        altText=""
+        altText="The Voice of Pride in London"
         color={theme.colors.beachBlue}
         large
         allowContentUnderflow
       />
-      <ViewsContainer views={views}/>
+      <ViewsContainer views={views} />
       <StyledHR />
       <NewsContainer articles={articles} categories={categories} />
     </Fragment>
