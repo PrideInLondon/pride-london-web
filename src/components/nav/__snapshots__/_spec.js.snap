@@ -18,7 +18,7 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
         width={1}
       >
         <nav__LogoWrapper
-          to="/events"
+          to="/"
         >
           <nav__Logo
             alt="Pride in London Logo"
