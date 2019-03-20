@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsFilter renders with default values 1`] = `
-<styled.p
+<styles__FilterText
   backgroundColor="#FFD95E"
+  isOutline={true}
+  onClick={[Function]}
   textColor="#000000"
 >
   All Articles
-</styled.p>
+</styles__FilterText>
 `;

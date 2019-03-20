@@ -4,7 +4,7 @@ import NewsFilter from './'
 
 describe(NewsFilter.name, () => {
   it('renders with default values', () => {
-    const wrapper = shallow(<NewsFilter filterType="ALL_ARTICLES" />)
+    const wrapper = shallow(<NewsFilter filterType="ALL_ARTICLES" handleClick={() => {}} />)
     expect(wrapper).toMatchSnapshot()
   })
 

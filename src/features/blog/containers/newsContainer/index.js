@@ -1,102 +1,46 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { Component } from 'react'
 import Title from '../../components/title'
 import ImageBanner from '../../../../components/imageBanner'
 import theme from '../../../../theme/theme'
-import NewsCard from '../../components/newsCard'
-import { FlexColumn, StyledFlipMove } from '../../../../components/grid'
-import {
-  ALL_ARTICLES,
-  NEWS,
-  RESEARCH,
-  ANNOUNCEMENTS,
-  PARTNERS,
-} from '../../components/newsFilter/config'
+import FiltersContainer from '../filtersContainer'
+import NewsCards from '../newsCards'
+import { ALL_ARTICLES } from '../../components/newsFilter/config'
+import { Container } from './styles'
 
-// import PropTypes from 'prop-types'
+class NewsContainer extends Component {
+  constructor() {
+    super()
+    this.state = {
+      selectedFilter: ALL_ARTICLES,
+    }
+  }
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
-`
+  handleFilterClick = label => {
+    this.setState({
+      selectedFilter: label,
+    })
+  }
 
-const mockBlogs = [
-  {
-    type: ALL_ARTICLES,
-  },
-  {
-    type: NEWS,
-  },
-  {
-    type: RESEARCH,
-  },
-  {
-    type: ANNOUNCEMENTS,
-  },
-  {
-    type: PARTNERS,
-  },
-  {
-    type: RESEARCH,
-  },
-  {
-    type: RESEARCH,
-  },
-  {
-    type: ANNOUNCEMENTS,
-  },
-  {
-    type: PARTNERS,
-  },
-  {
-    type: RESEARCH,
-  },
-  {
-    type: RESEARCH,
-  },
-  {
-    type: ANNOUNCEMENTS,
-  },
-  {
-    type: PARTNERS,
-  },
-  {
-    type: RESEARCH,
-  },
-]
-
-const NewsContainer = () => {
-  return (
-    <div>
-      <Container>
-        <Title>News</Title>
-      </Container>
-      <ImageBanner
-        altText=""
-        color={theme.colors.beachBlue}
-        allowContentUnderflow
-      />
-      <Container>
-        <StyledFlipMove>
-          {mockBlogs.map(({ type }) => {
-            return (
-              <FlexColumn
-                width={[
-                  1, // 100% between 0px screen width and first breakpoint (375px)
-                  1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-                  1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
-                  1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
-                ]}
-              >
-                <NewsCard type={type} />
-              </FlexColumn>
-            )
-          })}
-        </StyledFlipMove>
-      </Container>
-    </div>
-  )
+  render() {
+    const { selectedFilter } = this.state
+    return (
+      <div>
+        <Container>
+          <Title>News</Title>
+        </Container>
+        <ImageBanner
+          altText=""
+          color={theme.colors.beachBlue}
+          allowContentUnderflow
+        />
+        <FiltersContainer
+          selectedFilter={selectedFilter}
+          handleFilterClick={this.handleFilterClick}
+        />
+        <NewsCards selectedFilter={selectedFilter} />
+      </div>
+    )
+  }
 }
 
 export default NewsContainer

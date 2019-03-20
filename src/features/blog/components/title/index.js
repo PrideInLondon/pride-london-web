@@ -1,14 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import theme from '../../../../theme/theme'
-
-const StyledTitle = styled.h2`
-  font-weight: 700;
-  color: ${props =>
-    props.isLight ? theme.colors.lightGrey : theme.colors.darkBlue};
-  margin: 0.25em;
-`
+import { StyledTitle } from './styles'
 
 const Title = ({ children, isLight }) => (
   <StyledTitle isLight={isLight}>{children}</StyledTitle>

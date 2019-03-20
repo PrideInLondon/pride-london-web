@@ -2,7 +2,7 @@
 
 exports[`ViewsContainer should render with default values 1`] = `
 <Fragment>
-  <viewsContainer__Container>
+  <styles__Container>
     <Title
       isLight={true}
       theme={
@@ -53,7 +53,7 @@ exports[`ViewsContainer should render with default values 1`] = `
     >
       Views
     </Title>
-    <viewsContainer__CardContainer>
+    <styles__CardContainer>
       <ViewsCard
         author="Lisa Charlwood-Green"
         preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -89,7 +89,7 @@ exports[`ViewsContainer should render with default values 1`] = `
         preview="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         title="LGTB+ Women Say \\"Wow!"
       />
-    </viewsContainer__CardContainer>
-  </viewsContainer__Container>
+    </styles__CardContainer>
+  </styles__Container>
 </Fragment>
 `;
