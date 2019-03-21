@@ -5065,9 +5065,9 @@ g-status@^2.0.2:
     matcher "^1.0.0"
     simple-git "^1.85.0"
 
-gatsby-cli@^2.4.16:
-  version "2.4.16"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.16.tgz#62581d5c6289ab72cbb34a36ad4ac83fc649768b"
+gatsby-cli@^2.4.17:
+  version "2.4.17"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.17.tgz#38f0d2fd55de595b457a1d2a1048fb8f88a8f143"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5202,9 +5202,9 @@ gatsby-source-filesystem@^2.0.27:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby@^2.1.38:
-  version "2.1.38"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.38.tgz#621697928422ff4aaef1aefe98dacb37a9bb00d3"
+gatsby@^2.2.4:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.2.5.tgz#0c4220c634ee69b9af1b35318019eb10d60e7a69"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5260,21 +5260,21 @@ gatsby@^2.1.38:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.4.16"
+    gatsby-cli "^2.4.17"
     gatsby-link "^2.0.16"
     gatsby-plugin-page-creator "^2.0.10"
     gatsby-react-router-scroll "^2.0.6"
     glob "^7.1.1"
     graphql "^14.1.1"
+    graphql-compose "^6.0.3"
     graphql-playground-middleware-express "^1.7.10"
     graphql-relay "^0.6.0"
-    graphql-skip-limit "^2.0.6"
     graphql-tools "^3.0.4"
-    graphql-type-json "^0.2.1"
     hash-mod "^0.0.5"
     invariant "^2.2.4"
     is-relative "^1.0.0"
     is-relative-url "^2.0.0"
+    is-wsl "^1.1.0"
     jest-worker "^23.2.0"
     joi "12.x.x"
     json-loader "^0.5.7"
@@ -5554,6 +5554,13 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+graphql-compose@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/graphql-compose/-/graphql-compose-6.0.3.tgz#fa5668a30694abef4166703aa03af07a741039a8"
+  dependencies:
+    graphql-type-json "^0.2.1"
+    object-path "^0.11.4"
+
 graphql-config@^2.0.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/graphql-config/-/graphql-config-2.2.1.tgz#5fd0ec77ac7428ca5fb2026cf131be10151a0cb2"
@@ -5592,12 +5599,6 @@ graphql-request@^1.5.0:
   resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-1.8.2.tgz#398d10ae15c585676741bde3fc01d5ca948f8fbe"
   dependencies:
     cross-fetch "2.2.2"
-
-graphql-skip-limit@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/graphql-skip-limit/-/graphql-skip-limit-2.0.6.tgz#67cdfbf33254db338aade6e7b44ea3e779b4b1c4"
-  dependencies:
-    "@babel/runtime" "^7.0.0"
 
 graphql-tools@^3.0.4:
   version "3.1.1"
@@ -8258,7 +8259,7 @@ object-keys@^1.0.11, object-keys@^1.0.12:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.0.tgz#11bd22348dd2e096a045ab06f6c85bcc340fa032"
 
-object-path@^0.11.2:
+object-path@^0.11.2, object-path@^0.11.4:
   version "0.11.4"
   resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.4.tgz#370ae752fbf37de3ea70a861c23bba8915691949"
 

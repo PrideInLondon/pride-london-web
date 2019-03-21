@@ -51,7 +51,7 @@
   "dependencies": {
     "@rebass/grid": "^6.0.0-7",
     "dotenv": "^7.0.0",
-    "gatsby": "^2.1.38",
+    "gatsby": "^2.2.4",
     "gatsby-link": "^2.0.15",
     "gatsby-plugin-layout": "^1.0.13",
     "gatsby-plugin-react-helmet": "^3.0.10",
