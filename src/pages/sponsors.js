@@ -108,7 +108,6 @@ Sponsors.propTypes = {
 export const query = graphql`
   query sponsorsQuery {
     allContentfulSponsor(filter: {}) {
-      distinct
       edges {
         node {
           sponsorName
