@@ -10,6 +10,9 @@ import theme from '../theme/theme'
 import { media } from '../theme/media'
 import { Container, Row, Column } from '../components/grid'
 import Button from '../components/button'
+// import headlineStar from '../theme/assets/images/icon-headline-star.svg'
+import SponsorHeadline from '../components/icons/sponsorHeadline'
+import SponsorStar from '../components/icons/sponsorStar'
 
 const ListTitle = styled.h2`
   margin-top: 0;
@@ -171,21 +174,36 @@ const Sponsors = ({ data }) => {
               A huge thank you to our main partners for their continued support.
             </p>
             <MainSponsorsContainer>
-              <SponsorsSubsection title="Headline sponsors">
+              <SponsorsSubsection
+                title="Headline sponsors"
+                icon={<SponsorHeadline />}
+              >
                 {renderSponsors(sponsors[constants.sponsorLevels.headline])}
               </SponsorsSubsection>
-              <SponsorsSubsection title="Gold sponsors">
+              <SponsorsSubsection
+                title="Gold sponsors"
+                icon={<SponsorStar color={theme.colors.gold} />}
+              >
                 {renderSponsors(sponsors[constants.sponsorLevels.gold])}
               </SponsorsSubsection>
-              <SponsorsSubsection title="Silver sponsors">
+              <SponsorsSubsection
+                title="Silver sponsors"
+                icon={<SponsorStar color={theme.colors.silver} />}
+              >
                 {renderSponsors(sponsors[constants.sponsorLevels.silver])}
               </SponsorsSubsection>
             </MainSponsorsContainer>
             <BronzeSponsorsContainer>
-              <SponsorsSubsection title="Bronze sponsors">
+              <SponsorsSubsection
+                title="Bronze sponsors"
+                icon={<SponsorStar color={theme.colors.bronze} />}
+              >
                 {renderSponsors(sponsors[constants.sponsorLevels.bronze])}
               </SponsorsSubsection>
-              <SponsorsSubsection title="Digital partners">
+              <SponsorsSubsection
+                title="Digital partners"
+                icon={<SponsorStar color={theme.colors.bronze} />}
+              >
                 {renderSponsors(sponsors[constants.sponsorLevels.digital])}
               </SponsorsSubsection>
             </BronzeSponsorsContainer>
