@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import moment from 'moment'
 import PropTypes from 'prop-types'
 import { media } from '../../../theme/media'
+import theme from '../../../theme/theme'
 import {
   AccessibilityIcon,
   DateIcon,
@@ -16,16 +17,16 @@ import {
 import Button from '../../../components/button'
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.colors.indigo};
+  background-color: ${theme.colors.indigo};
   display: flex;
   flex-direction: column;
-  padding: 30px 20px;
+  padding: 30px 0;
   color: white;
   ${media.desktop`
     position: absolute;
     width: 400px;
-    right: 90px;
-    top: 270px;
+    right: 0;
+    top: -200px;
     padding: 40px;
  `};
 `
@@ -72,7 +73,7 @@ const Item = ({ title, icon, detail }) => (
 
 const Hr = styled.hr`
   border: none;
-  border-top: 1px solid ${props => props.theme.colors.eucalyptusGreen};
+  border-top: 1px solid ${theme.colors.eucalyptusGreen};
   width: 100%;
   margin: 16px 0px 32px 0px;
 `
@@ -86,17 +87,21 @@ const VSpace = styled.div`
 const dateFormat = 'D MMMM YYYY'
 
 const formatDayRange = (startTime, endTime) => {
-  if (startTime.isSame('day', endTime)) {
-    return startTime.format(dateFormat)
+  if (startTime.parseZone().isSame('day', endTime)) {
+    return startTime.parseZone().format(dateFormat)
   }
 
-  return `${startTime.format(dateFormat)} to ${endTime.format(dateFormat)}`
+  return `${startTime
+    .parseZone()
+    .format(dateFormat)} to ${endTime.parseZone().format(dateFormat)}`
 }
 
 const timeFormat = 'h:mma'
 
 const formatTimeRange = (startTime, endTime) =>
-  `${startTime.format(timeFormat)} to ${endTime.format(timeFormat)}`
+  `${startTime.parseZone().format(timeFormat)} to ${endTime
+    .parseZone()
+    .format(timeFormat)}`
 
 const formatPrice = (eventPriceLow, eventPriceHigh) => {
   if (eventPriceLow === 0 && eventPriceHigh === 0) {
@@ -142,7 +147,6 @@ export default function EventInfoCard({
     accessibilityOptions,
   },
 }) {
-  console.log(startTime)
   return (
     <Wrapper>
       {startTime && endTime && (
@@ -204,13 +208,14 @@ export default function EventInfoCard({
 }
 
 Item.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   icon: PropTypes.object.isRequired,
   detail: PropTypes.string,
 }
 
 Item.defaultProps = {
   detail: null,
+  title: null,
 }
 
 EventInfoCard.propTypes = {

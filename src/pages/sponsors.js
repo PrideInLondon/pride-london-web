@@ -9,6 +9,7 @@ import constants from '../constants'
 import theme from '../theme/theme'
 import { media } from '../theme/media'
 import { Container, Row, Column } from '../components/grid'
+import Button from '../components/button'
 
 const ListTitle = styled.h2`
   margin-top: 0;
@@ -18,7 +19,7 @@ const ListTitle = styled.h2`
   `};
 `
 
-const PageContainer = styled(Container)`
+const MainContainer = styled(Container)`
   margin-top: 30px;
 `
 
@@ -37,6 +38,42 @@ const IntroContainer = styled(Column)`
   border-bottom: 1px solid ${theme.colors.mediumGrey};
   margin-bottom: 30px;
   padding-bottom: 20px;
+`
+
+const RelativeColumn = styled(Column)`
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+`
+
+const CTAWrapper = styled.div`
+  ${media.desktopMax`
+    background-color: ${theme.colors.indigo}; 
+  `};
+`
+
+const CTABox = styled.div`
+  background-color: ${theme.colors.indigo};
+  padding: 30px 0;
+  color: white;
+  ${media.desktop`
+    position: absolute;
+    width: 33.3333%;
+    right: 0;
+    top: -100px;
+    padding: 40px;
+ `};
+`
+
+const SponsorButton = styled(Button)`
+  && {
+    width: 100%;
+  }
+`
+
+const CTATitle = styled.h3`
+  margin: 0 0 0.5em 0;
+  color: ${theme.colors.white};
 `
 
 const selectSponsors = data =>
@@ -58,8 +95,6 @@ const selectSponsors = data =>
 const renderSponsors = sponsors =>
   sponsors.map(sponsor => <SponsorBadge key={sponsor.name} {...sponsor} />)
 
-// const selectBodyContent = data => data.contentfulGenericCopy.content.content
-
 const Sponsors = ({ data }) => {
   const sponsors = selectSponsors(data)
   return (
@@ -69,7 +104,29 @@ const Sponsors = ({ data }) => {
         subtitleText="Help us to keep Pride free for everyone by becoming one of our sponsors"
         color={theme.colors.yellow}
       />
-      <PageContainer>
+      <CTAWrapper>
+        <Container>
+          <Row>
+            <RelativeColumn width={1}>
+              <CTABox>
+                <CTATitle>Sponsor us!</CTATitle>
+                <p>
+                  Whether you're a big brand or a small business, and interested
+                  in supporting Pride in London. We want to hear from you.
+                </p>
+                <SponsorButton
+                  link
+                  to="mailto:sponsor@prideinlondon.org"
+                  primary
+                >
+                  Email us
+                </SponsorButton>
+              </CTABox>
+            </RelativeColumn>
+          </Row>
+        </Container>
+      </CTAWrapper>
+      <MainContainer>
         <Row>
           <IntroContainer
             width={[
@@ -130,7 +187,7 @@ const Sponsors = ({ data }) => {
             </BronzeSponsorsContainer>
           </Column>
         </Row>
-      </PageContainer>
+      </MainContainer>
     </Fragment>
   )
 }

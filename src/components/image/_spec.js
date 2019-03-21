@@ -2,8 +2,8 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Image from '.'
 
-describe('Image component', () => {
-  it('should render when given props', () => {
+describe('Image', () => {
+  it('renders when given props', () => {
     const wrapper = shallow(
       <Image
         width={100}
@@ -12,8 +12,6 @@ describe('Image component', () => {
         src="foo.bar/image"
       />
     )
-
     expect(wrapper).toMatchSnapshot()
   })
 })
-

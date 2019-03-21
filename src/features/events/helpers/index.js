@@ -2,23 +2,23 @@ const moment = require('moment')
 const { dateFormat } = require('../../../constants')
 
 const formatTime = time => {
-  if (moment(time).format('mm') === '00') {
-    return moment(time).format('ha')
+  if (moment.parseZone(time).format('mm') === '00') {
+    return moment.parseZone(time).format('ha')
   }
-  return moment(time).format('h:mma')
+  return moment.parseZone(time).format('h:mma')
 }
 
 const formatDate = event => {
-  const year = moment(event.startTime).year()
+  const year = moment.parseZone(event.startTime).year()
 
-  const startDate = moment(event.startTime).format('L')
-  const endDate = moment(event.endTime).format('L')
+  const startDate = moment.parseZone(event.startTime).format('L')
+  const endDate = moment.parseZone(event.endTime).format('L')
 
-  const startMonth = moment(event.startTime).format('MMM')
-  const endMonth = moment(event.endTime).format('MMM')
+  const startMonth = moment.parseZone(event.startTime).format('MMM')
+  const endMonth = moment.parseZone(event.endTime).format('MMM')
 
-  const startDay = moment(event.startTime).date()
-  const endDay = moment(event.endTime).date()
+  const startDay = moment.parseZone(event.startTime).date()
+  const endDay = moment.parseZone(event.endTime).date()
 
   const startTime = formatTime(event.startTime)
   const endTime = formatTime(event.endTime)
@@ -41,7 +41,6 @@ const formatDate = event => {
 
 function filterByDate(event) {
   if (!(this.startDate && this.endDate)) return true
-
   // Set time to 12:00 for pure date comparison
   return moment(event.node.startTime)
     .set({ hour: 12, minutes: 0 })
@@ -49,7 +48,7 @@ function filterByDate(event) {
 }
 
 function filterByFree(event) {
-  if (!this) return true
+  if (!this.valueOf()) return true
   return event.node.eventPriceLow === 0
 }
 
@@ -123,7 +122,10 @@ function filterByTime(event) {
 
 function filterPastEvents(event) {
   const today = moment()
-  return moment(event.node.startTime).isSameOrAfter(today)
+  if (event.node && event.node.startTime)
+    return moment(event.node.startTime).isSameOrAfter(today)
+  // Assume event is date string if not event object
+  return moment(event, 'DD/MM/YYYY').isSameOrAfter(today)
 }
 
 function filterByLimit(event, index) {

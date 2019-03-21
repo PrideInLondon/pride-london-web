@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BannerTitle should render 1`] = `
-<styled.div>
+exports[`BannerTitle renders 1`] = `
+<bannerTitle__BannerTitleWrapper>
   <TestBannerTitle>
     foo
   </TestBannerTitle>
-</styled.div>
+</bannerTitle__BannerTitleWrapper>
 `;
 
-exports[`BannerTitle should render child text  1`] = `
-<styled.div>
+exports[`BannerTitle renders child text  1`] = `
+<bannerTitle__BannerTitleWrapper>
   <TestBannerTitle>
     Here is a test title!
   </TestBannerTitle>
-</styled.div>
+</bannerTitle__BannerTitleWrapper>
 `;

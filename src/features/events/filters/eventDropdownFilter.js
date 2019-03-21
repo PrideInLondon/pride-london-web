@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import onClickOutside from 'react-onclickoutside'
 import { media } from '../../../theme/media'
+import theme from '../../../theme/theme'
 import { Consumer } from '../../../components/appContext'
 import CheckboxSet from '../../../components/checkboxSet'
 import iconDown from '../../../theme/assets/images/icon-chevron-down.svg'
@@ -14,13 +15,13 @@ const Wrapper = styled.div`
 `
 
 const FilterButton = styled.button`
-  font-family: ${props => props.theme.fonts.title};
+  font-family: ${theme.fonts.title};
   font-weight: 600;
   font-size: 1rem;
   width: 100%;
-  background-color: ${props => props.theme.colors.lightGrey};
-  border-color: ${props => props.theme.colors.lightGrey};
-  color: ${props => props.theme.colors.indigo};
+  background-color: ${theme.colors.lightGrey};
+  border-color: ${theme.colors.lightGrey};
+  color: ${theme.colors.indigo};
   padding: 11px 10px;
   display: flex;
   align-items: center;
@@ -32,8 +33,8 @@ const FilterButton = styled.button`
   `};
 
   ${media.tablet`
-    color: ${props => props.theme.colors.black};
-    font-family: ${props => props.theme.fonts.body};
+    color: ${theme.colors.black};
+    font-family: ${theme.fonts.body};
     font-weight: 500;
     font-size: 0.875rem;
     background-image: url(${props => (props.isOpen ? iconUp : iconDown)});
@@ -41,20 +42,20 @@ const FilterButton = styled.button`
     background-position: right 20px center;
     background-color: ${props =>
       props.isOpen
-        ? props.theme.colors.white
-        : props.isActive && props.theme.colors.eucalyptusGreen};
+        ? theme.colors.white
+        : props.isActive && theme.colors.eucalyptusGreen};
     border-radius: 4px;
     border: 2px solid;
     border-color: ${props =>
       props.isOpen
-        ? props.theme.colors.eucalyptusGreen
+        ? theme.colors.eucalyptusGreen
         : props.isActive
-        ? props.theme.colors.eucalyptusGreen
-        : props.theme.colors.lightGrey};
+        ? theme.colors.eucalyptusGreen
+        : theme.colors.lightGrey};
     transition: border-color 0.15s linear, background-color 0.15s linear;
 
     &:focus {
-      border-color: ${props => props.theme.colors.eucalyptusGreen};
+      border-color: ${theme.colors.eucalyptusGreen};
       outline: none;
     }
   `};
@@ -65,14 +66,14 @@ const DropDown = styled.fieldset`
   margin: 0;
   border: none;
 
-  @media (min-width: ${props => props.theme.breakpoints[1]}) {
+  ${media.tablet`
     display: ${props => (props.isOpen ? 'block' : 'none')};
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     z-index: 1;
-  }
+  `};
 `
 
 const Badge = styled.span`
@@ -81,15 +82,15 @@ const Badge = styled.span`
   justify-content: center;
   margin-left: 10px;
   border-radius: 50%;
-  color: ${props => props.theme.colors.white};
-  background-color: ${props => props.theme.colors.eucalyptusGreen};
+  color: ${theme.colors.white};
+  background-color: ${theme.colors.eucalyptusGreen};
   height: 22px;
   width: 22px;
   line-height: 1;
 
-  @media (min-width: ${props => props.theme.breakpoints[1]}) {
-    background-color: ${props => props.theme.colors.indigo};
-  }
+  ${media.tablet`
+    background-color: ${theme.colors.indigo};
+  `};
 `
 
 class EventDropdownFilter extends Component {

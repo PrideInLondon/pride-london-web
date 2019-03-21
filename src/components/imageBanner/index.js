@@ -7,6 +7,10 @@ import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
 
 const StyledContainer = styled(Container)`
+  flex-grow: 1;
+`
+
+const StyledWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   min-height: 270px;
@@ -16,10 +20,15 @@ const StyledContainer = styled(Container)`
   padding-bottom: 35px;
   z-index: -2;
 
-  & img {
+  img {
     position: absolute;
-    left: 0;
-    top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
     z-index: -1;
   }
 
@@ -30,16 +39,11 @@ const StyledContainer = styled(Container)`
   `};
 `
 
-const StyledContainerWithUnderflow = styled(StyledContainer)`
+const StyledWrapperWithUnderflow = styled(StyledWrapper)`
   align-items: flex-start;
   min-height: 380px;
   padding-top: 50px;
   margin-bottom: -150px;
-`
-
-const StyledRow = styled(Row)`
-  display: block;
-  flex-basis: 100%;
 `
 
 const ImageBanner = ({
@@ -53,18 +57,20 @@ const ImageBanner = ({
   allowContentUnderflow,
 }) => {
   const Wrapper = allowContentUnderflow
-    ? StyledContainerWithUnderflow
-    : StyledContainer
+    ? StyledWrapperWithUnderflow
+    : StyledWrapper
   return (
-    <Wrapper color={color} large={large}>
+    <Wrapper color={color} large={large} className="bannerwrapper">
       {imageSrc && <img src={imageSrc} alt={altText} />}
-      <StyledRow>
-        <Column width={1}>
-          <BannerTitle>{titleText}</BannerTitle>
-          <BannerSubtitle>{subtitleText}</BannerSubtitle>
-        </Column>
-        {children}
-      </StyledRow>
+      <StyledContainer>
+        <Row>
+          <Column width={1}>
+            <BannerTitle>{titleText}</BannerTitle>
+            <BannerSubtitle>{subtitleText}</BannerSubtitle>
+          </Column>
+          {children}
+        </Row>
+      </StyledContainer>
     </Wrapper>
   )
 }

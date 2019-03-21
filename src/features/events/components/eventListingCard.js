@@ -3,19 +3,20 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { media } from '../../../theme/media'
+import theme from '../../../theme/theme'
 import { formatDate } from '../helpers'
 
 const Card = styled(Link)`
   display: block;
   border-radius: 5px;
   text-decoration: none;
-  color: ${props => props.theme.colors.black};
+  color: ${theme.colors.black};
   overflow: hidden;
   display: flex;
   position: relative;
   width: 100%;
   min-height: 130px;
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${theme.colors.white};
 
   &:hover,
   &:focus {
@@ -67,7 +68,7 @@ const CardImage = styled.img`
 
 const CardBody = styled.div`
   padding: 15px;
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${theme.colors.white};
   flex-grow: 1;
 
   ${media.tablet`
@@ -77,15 +78,15 @@ const CardBody = styled.div`
 
 const CardDate = styled.span`
   display: block;
-  color: ${props => props.theme.colors.darkGrey};
+  color: ${theme.colors.darkGrey};
   font-size: 0.875rem;
-  font-family: ${props => props.theme.fonts.body};
+  font-family: ${theme.fonts.body};
   line-height: 1.43;
   font-weight: 400;
   margin-bottom: 0.65rem;
 
   ${media.tablet`
-    font-family: ${props => props.theme.fonts.title};
+    font-family: ${theme.fonts.title};
     font-weight: 600;
   `};
 `
@@ -110,9 +111,9 @@ const CardPrice = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: ${props => props.theme.colors.indigo};
-  color: ${props => props.theme.colors.white};
-  font-family: ${props => props.theme.fonts.title};
+  background-color: ${theme.colors.indigo};
+  color: ${theme.colors.white};
+  font-family: ${theme.fonts.title};
   font-weight: 600;
   padding: 5px 10px;
   border-radius: 5px;

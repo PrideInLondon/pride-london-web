@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckboxSet @renders should render 1`] = `
+exports[`CheckboxSet renders 1`] = `
 <ContextConsumer>
   <Component />
 </ContextConsumer>

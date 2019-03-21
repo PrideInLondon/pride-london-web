@@ -2,13 +2,14 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { Container, Row, Column } from '../components/grid'
 import { media } from '../theme/media'
+import theme from '../theme/theme'
 import AccordionWrapper from '../components/accordion/accordionWrapper'
 import Accordion from '../components/accordion'
 import ContactForm from '../features/help/components/contactForm'
 import ImageBanner from '../components/imageBanner'
 
 const PageWrapper = styled.div`
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${theme.colors.white};
 
   h1 {
     font-size: 20px;

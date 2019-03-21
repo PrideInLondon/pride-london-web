@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { darken } from 'polished'
 import { media } from '../../theme/media'
+import theme from '../../theme/theme'
 
 export const Button = props => {
   const StyledButton = styled[props.link ? 'a' : 'button']`
@@ -14,14 +15,10 @@ export const Button = props => {
     display: inline-block;
     text-align: center;
     color: ${styleProps =>
-      styleProps.primary
-        ? styleProps.theme.colors.indigo
-        : styleProps.theme.colors.eucalyptusGreen};
+      styleProps.primary ? theme.colors.indigo : theme.colors.eucalyptusGreen};
     background-color: ${styleProps =>
-      styleProps.primary
-        ? styleProps.theme.colors.eucalyptusGreen
-        : styleProps.theme.colors.indigo};
-    font-family: ${styleProps => styleProps.theme.fonts.title};
+      styleProps.primary ? theme.colors.eucalyptusGreen : theme.colors.indigo};
+    font-family: ${theme.fonts.title};
     font-weight: 700;
     font-size: ${styleProps => (styleProps.small ? '0.875rem' : '1.125rem')};
     line-height: 1.388;
@@ -35,8 +32,8 @@ export const Button = props => {
     &:hover {
       background-color: ${styleProps =>
         styleProps.primary
-          ? darken(0.1, styleProps.theme.colors.eucalyptusGreen)
-          : darken(0.1, styleProps.theme.colors.indigo)};
+          ? darken(0.1, theme.colors.eucalyptusGreen)
+          : darken(0.1, theme.colors.indigo)};
     }
 
     &:disabled {

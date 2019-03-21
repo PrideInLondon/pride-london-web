@@ -18,10 +18,8 @@ if (
 
 const StyledContainer = styled(Container)`
   padding: 0px 0px 30px;
-  background-color: white;
   ${media.desktop`
     padding: 60px 0px;
-    background-color: ${theme.colors.indigo};
   `};
 `
 
@@ -29,7 +27,7 @@ const Heading = styled.h2`
   font-size: 1.125rem;
   font-weight: 300;
   margin: 0px 10px 15px 10px;
-  color: ${props => props.theme.colors.indigo};
+  color: ${theme.colors.indigo};
   ${media.desktop`
     margin: 0px 15px 30px 15px;
     font-size: 1.5rem;
@@ -52,6 +50,13 @@ const MapLink = styled.a`
     height: 450px;
     max-width: 830px;
     margin: 0px 90px;
+  `};
+`
+
+const IndigoWrapper = styled.div`
+  ${media.desktop`
+    padding: 60px 0px;
+    background-color: ${theme.colors.indigo};
   `};
 `
 
@@ -93,37 +98,45 @@ export default class EventDirectionsSection extends React.Component {
     const { width, height } = this.state
 
     return (
-      <StyledContainer>
-        <Row>
-          <Heading>Getting to {locationName}</Heading>
-        </Row>
-        <MapLink
-          alt="Get directions to the venue"
-          ref={ref => (this.wrapperRef = ref)}
-          href={`https://www.google.com/maps/search/?api=1&${querystring.encode(
-            {
-              query: [locationName, addressLine1, addressLine2, city, postcode]
-                .filter(Boolean)
-                .join(', '),
-            }
-          )}`}
-          style={{
-            backgroundImage:
-              Boolean(width && height) &&
-              `url(https://maps.googleapis.com/maps/api/staticmap?${querystring.encode(
-                {
-                  center: `${lat}${','}${lon}`,
-                  zoom: 16,
-                  size: `${width}x${height}`,
-                  scale: 2,
-                  maptype: 'roadmap',
-                  markers: `color:red|label:${locationName}|${lat},${lon}`,
-                  key: process.env.GATSBY_GOOGLE_MAPS_API_KEY,
-                }
-              )})`,
-          }}
-        />
-      </StyledContainer>
+      <IndigoWrapper>
+        <StyledContainer>
+          <Row>
+            <Heading>Getting to {locationName}</Heading>
+          </Row>
+          <MapLink
+            alt="Get directions to the venue"
+            ref={ref => (this.wrapperRef = ref)}
+            href={`https://www.google.com/maps/search/?api=1&${querystring.encode(
+              {
+                query: [
+                  locationName,
+                  addressLine1,
+                  addressLine2,
+                  city,
+                  postcode,
+                ]
+                  .filter(Boolean)
+                  .join(', '),
+              }
+            )}`}
+            style={{
+              backgroundImage:
+                Boolean(width && height) &&
+                `url(https://maps.googleapis.com/maps/api/staticmap?${querystring.encode(
+                  {
+                    center: `${lat}${','}${lon}`,
+                    zoom: 16,
+                    size: `${width}x${height}`,
+                    scale: 2,
+                    maptype: 'roadmap',
+                    markers: `color:red|label:${locationName}|${lat},${lon}`,
+                    key: process.env.GATSBY_GOOGLE_MAPS_API_KEY,
+                  }
+                )})`,
+            }}
+          />
+        </StyledContainer>
+      </IndigoWrapper>
     )
   }
 }

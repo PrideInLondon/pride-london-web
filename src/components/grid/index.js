@@ -2,24 +2,25 @@ import React from 'react'
 import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 import theme from '../../theme/theme'
+import { media } from '../../theme/media'
 
 const Container = styled(Box)`
-  @media (min-width: ${theme.breakpoints[0]}) {
+  ${media.mobile`
     min-width: 335px;
-  }
+  `};
 
-  @media (min-width: ${theme.breakpoints[1]}) {
+  ${media.tablet`
     min-width: 668px;
-  }
+  `};
 
-  @media (min-width: ${theme.breakpoints[2]}) {
+  ${media.desktop`
     min-width: 960px;
-  }
+  `};
 
-  @media (min-width: ${theme.breakpoints[3]}) {
+  ${media.desktopHD`
     min-width: 1260px;
-    max-width: ${theme.breakpoints[3]};
-  }
+    max-width: ${theme.breakpoints[3]}px;
+  `};
 `
 Container.defaultProps = {
   mx: 'auto',

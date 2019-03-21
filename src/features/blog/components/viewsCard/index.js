@@ -2,15 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { media } from '../../../../theme/media'
+import theme from '../../../../theme/theme'
 import Image from '../../../../components/image'
 
 const ArticleTitle = styled.h2`
-  color: ${props => props.theme.colors.black};
+  color: ${theme.colors.black};
   margin: 0.5rem 0;
 `
 
 const ArticleAuthor = styled.p`
-  color: ${props => props.theme.colors.darkGrey};
+  color: ${theme.colors.darkGrey};
   margin: 0.25rem 0;
   font-size: 0.825rem;
 `
