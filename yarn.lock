@@ -5129,9 +5129,9 @@ gatsby-plugin-rollbar@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-rollbar/-/gatsby-plugin-rollbar-1.0.0.tgz#90fc3ca1ed08f54cab6824f5e94cc3ec85283cc0"
 
-gatsby-plugin-sharp@^2.0.29:
-  version "2.0.29"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.29.tgz#1fc37417606ee8fb2d36b6905ce52710cebfba55"
+gatsby-plugin-sharp@^2.0.30:
+  version "2.0.30"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.30.tgz#a28177580a4bd6a4d7693383edb02b377432da6d"
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -5164,9 +5164,9 @@ gatsby-react-router-scroll@^2.0.6:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.0.40:
-  version "2.0.40"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.40.tgz#6dbd909e452f740225441f36e142bc0e3f17eb6a"
+gatsby-source-contentful@^2.0.41:
+  version "2.0.41"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.41.tgz#5952a646d490ed649cae0b4a636689f04d5114b2"
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -5175,7 +5175,7 @@ gatsby-source-contentful@^2.0.40:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.0.29"
+    gatsby-plugin-sharp "^2.0.30"
     gatsby-source-filesystem "^2.0.27"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
