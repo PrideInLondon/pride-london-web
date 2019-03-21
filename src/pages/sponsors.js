@@ -68,6 +68,7 @@ const CTABox = styled.div`
 const SponsorButton = styled(Button)`
   && {
     width: 100%;
+    min-width: 0;
   }
 `
 
@@ -92,7 +93,7 @@ const selectSponsors = data =>
       {}
     )
 
-const renderSponsors = sponsors =>
+const renderSponsors = (sponsors = []) =>
   sponsors.map(sponsor => <SponsorBadge key={sponsor.name} {...sponsor} />)
 
 const Sponsors = ({ data }) => {
@@ -132,8 +133,8 @@ const Sponsors = ({ data }) => {
             width={[
               1, // 100% between 0px screen width and first breakpoint (375px)
               1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-              1, // 50% between second breakpoint(768px) and third breakpoint (1024px)
-              2 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
+              1, // 100% between second breakpoint(768px) and third breakpoint (1024px)
+              7 / 12, // 7/12 between third breakpoint(1280px) and fourth breakpoint (1440px)
             ]}
           >
             <p>
@@ -183,6 +184,9 @@ const Sponsors = ({ data }) => {
             <BronzeSponsorsContainer>
               <SponsorsSubsection title="Bronze sponsors">
                 {renderSponsors(sponsors[constants.sponsorLevels.bronze])}
+              </SponsorsSubsection>
+              <SponsorsSubsection title="Digital partners">
+                {renderSponsors(sponsors[constants.sponsorLevels.digital])}
               </SponsorsSubsection>
             </BronzeSponsorsContainer>
           </Column>
