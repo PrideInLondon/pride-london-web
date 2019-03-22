@@ -3,16 +3,15 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import ImageBanner from '../components/imageBanner'
-import SponsorBadge from '../features/sponsors/components/sponsorBadge'
 import SponsorsSubsection from '../features/sponsors/components/sponsorSubsection/index'
 import constants from '../constants'
 import theme from '../theme/theme'
 import { media } from '../theme/media'
 import { Container, Row, Column } from '../components/grid'
 import Button from '../components/button'
-// import headlineStar from '../theme/assets/images/icon-headline-star.svg'
 import SponsorHeadline from '../components/icons/sponsorHeadline'
 import SponsorStar from '../components/icons/sponsorStar'
+import renderSponsors from '../features/sponsors/helpers'
 
 const ListTitle = styled.h2`
   margin-top: 0;
@@ -95,12 +94,6 @@ const selectSponsors = data =>
       }),
       {}
     )
-
-const renderSponsors = (sponsors = []) =>
-  sponsors.map(
-    sponsor =>
-      console.log(sponsor) || <SponsorBadge key={sponsor.name} {...sponsor} />
-  )
 
 const Sponsors = ({ data }) => {
   const sponsors = selectSponsors(data)

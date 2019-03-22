@@ -1,15 +1,33 @@
-// import React from 'react'
-// import { shallow, mount } from 'enzyme'
-// import SponsorsSubsection from '../sponsorSubsection'
+import React from 'react'
+import { shallow } from 'enzyme'
+import toJSON from 'enzyme-to-json'
+import SponsorsSubsection from '../sponsorSubsection'
+import SponsorStar from '../../../../components/icons/sponsorStar'
+import renderSponsors from '../../helpers'
 
-// const mockSponsor = {
-//   level: 'Headline',
-//   logo:
-//     '//images.ctfassets.net/n2o4hgsv6wcx/4rIPcvrYGk8uE24oWI08Yi/e70dc626716b5fb59efa22a4b7da263f/MayorOfLondon_Logo.png?w=800&h=168&q=90',
-//   name: 'Mayor of London',
-//   url: 'https://www.london.gov.uk/about-us/mayor-london',
-// }
+const mockSponsors = [
+  {
+    level: 'Headline',
+    logo: '/logo1',
+    name: 'Sponsor One',
+    url: 'https://sponsor1.com',
+  },
+  {
+    level: 'Headline',
+    logo: '/logo2',
+    name: 'Sponsor Two',
+    url: 'https://sponsor2.com',
+  },
+]
 
-// describe('<SponsorSubsection/>', () => {
-//   it('Should render', () => {})
-// })
+describe('<SponsorSubsection/>', () => {
+  it('Should render and match snapshot', () => {
+    const wrapper = shallow(
+      <SponsorsSubsection title="Bronze sponsors" icon={<SponsorStar />}>
+        {renderSponsors(mockSponsors)}
+      </SponsorsSubsection>
+    )
+    expect(toJSON(wrapper)).toMatchSnapshot()
+    expect(wrapper.find('SponsorBadge').length).toBe(mockSponsors.length)
+  })
+})
