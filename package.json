@@ -5,9 +5,6 @@
     "gatsby"
   ],
   "license": "MIT",
-  "eslintIgnore": [
-    "src/**/*_spec.js"
-  ],
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

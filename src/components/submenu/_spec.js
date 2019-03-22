@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Submenu from '../submenu'
-import 'jest-styled-components'
 import toJSON from 'enzyme-to-json'
+import 'jest-styled-components'
+import Submenu from '../submenu'
 
 const mockData = {
   submenu: [
@@ -24,7 +24,7 @@ const mockData = {
 
 describe('<Submenu />', () => {
   it('renders and matches snapshot when open', () => {
-    const wrapper = shallow(<Submenu item={mockData} isOpen={true} />)
+    const wrapper = shallow(<Submenu item={mockData} isOpen />)
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 })
