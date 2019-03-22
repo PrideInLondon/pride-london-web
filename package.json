@@ -61,7 +61,7 @@
     "gatsby-source-filesystem": "^2.0.27",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
-    "polished": "^3.0.3",
+    "polished": "^3.0.4",
     "querystring": "^0.2.0",
     "react-accessible-accordion": "^2.4.5",
     "react-dates": "16.7.0",
