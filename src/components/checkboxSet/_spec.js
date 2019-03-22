@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import theme from '../../theme/theme'
-import renderer from 'react-test-renderer'
 import CheckboxSet from './'
 import 'jest-styled-components'
 

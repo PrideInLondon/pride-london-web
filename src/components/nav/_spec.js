@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
+import toJSON from 'enzyme-to-json'
 import Nav from '../nav'
 import 'jest-styled-components'
-import toJSON from 'enzyme-to-json'
 
 describe('<Nav/>', () => {
   beforeAll(() => {

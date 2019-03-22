@@ -28,7 +28,7 @@ const Title = styled.h3`
 const SponsorsSubsection = ({ title, icon, children }) => (
   <Fragment>
     <TitleWrapper>
-      {icon}
+      {icon && icon}
       <Title>{title}</Title>
     </TitleWrapper>
     <BadgesContainer>{children}</BadgesContainer>
@@ -37,11 +37,15 @@ const SponsorsSubsection = ({ title, icon, children }) => (
 
 SponsorsSubsection.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.node,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
+}
+
+SponsorsSubsection.defaultProps = {
+  icon: null,
 }
 
 export default SponsorsSubsection
