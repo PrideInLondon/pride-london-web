@@ -5,7 +5,13 @@ import { ALL_ARTICLES } from '../../components/newsFilter/config'
 
 describe(NewsCards.name, () => {
   it('renders with default values', () => {
-    const wrapper = shallow(<NewsCards selectedFilter={ALL_ARTICLES} />)
+    const selectedFilter = {
+      hexColour: '#000000',
+      title: 'Mock Filter',
+    }
+    const wrapper = shallow(
+      <NewsCards selectedFilter={selectedFilter} articles={[]} />
+    )
     expect(wrapper).toMatchSnapshot()
   })
 })

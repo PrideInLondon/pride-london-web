@@ -1,45 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsCard from '../../components/newsCard'
-import {
-  ALL_ARTICLES,
-  NEWS,
-  RESEARCH,
-  ANNOUNCEMENTS,
-  PARTNERS,
-} from '../../components/newsFilter/config'
 import { FlexColumn, Row } from '../../../../components/grid'
 
-const mockNews = [
-  {
-    type: RESEARCH,
-  },
-  {
-    type: NEWS,
-  },
-  {
-    type: NEWS,
-  },
-  {
-    type: RESEARCH,
-  },
-  {
-    type: ANNOUNCEMENTS,
-  },
-  {
-    type: PARTNERS,
-  },
-]
-
-const NewsCards = ({ selectedFilter }) => {
+const NewsCards = ({ selectedFilter, articles }) => {
   return (
     <Row>
-      {mockNews.map((article, index) => {
-        return selectedFilter === ALL_ARTICLES ||
-          selectedFilter === article.type ? (
+      {articles.map(({ date, title, newsCategory, id }) => {
+        return selectedFilter.title === 'All Articles' ||
+          selectedFilter.title === newsCategory.title ? (
           /* eslint-disable */
           <FlexColumn
-            key={index}
+            key={id}
             width={[
               1, // 100% between 0px screen width and first breakpoint (375px)
               1, // 100% between first breakpoint(375px) and second breakpoint (768px)
@@ -47,7 +19,7 @@ const NewsCards = ({ selectedFilter }) => {
               1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
             ]}
           >
-            <NewsCard type={article.type} />
+            <NewsCard filterType={newsCategory} title={title} date={date} />
           </FlexColumn>
         ) : /* eslint-enable */
         null
@@ -57,7 +29,24 @@ const NewsCards = ({ selectedFilter }) => {
 }
 
 NewsCards.propTypes = {
-  selectedFilter: PropTypes.string.isRequired,
+  selectedFilter: PropTypes.shape({
+    hexColour: PropTypes.string,
+    title: PropTypes.string,
+  }),
+  articles: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+      filterType: PropTypes.shape({
+        hexColour: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    })
+  ).isRequired,
+}
+
+NewsCards.defaultProps = {
+  selectedFilter: null,
 }
 
 export default NewsCards

@@ -1,26 +1,53 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsFilter from '../newsFilter'
-import { Card, CardHeader, NewsDate, ReadLength, CardTitle } from './styles'
+import {
+  Card,
+  CardHeader,
+  NewsDate,
+  ReadLength,
+  CardTitle,
+  UnderlineContainer,
+} from './styles'
 
 const CenterDot = () => <span>·</span>
 
-const NewsCard = ({ type }) => (
+const NewsCard = ({ date, filterType, title, readLength }) => (
   <Card>
     <CardHeader>
-      <NewsFilter filterType={type} />
-      <NewsDate>12 Jun 2019</NewsDate>
-      <CenterDot />
-      <ReadLength>10 min read</ReadLength>
+      <NewsFilter filterType={filterType} isOutline={false} />
+      <NewsDate>
+        {new Date(date).toLocaleDateString('en-GB', {
+          day: 'numeric',
+          month: 'short',
+          year: 'numeric',
+        })}
+      </NewsDate>
+      {readLength && (
+        <>
+          <CenterDot />
+          <ReadLength>10 min read</ReadLength>
+        </>
+      )}
     </CardHeader>
     <CardTitle>
-      Pride in London sees record number of parade applications
+      <UnderlineContainer>{title}</UnderlineContainer>
     </CardTitle>
   </Card>
 )
 
 NewsCard.propTypes = {
-  type: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  readLength: PropTypes.string,
+  filterType: PropTypes.shape({
+    hexColour: PropTypes.string,
+    title: PropTypes.string,
+  }).isRequired,
+  title: PropTypes.string.isRequired,
+}
+
+NewsCard.defaultProps = {
+  readLength: null,
 }
 
 export default NewsCard
