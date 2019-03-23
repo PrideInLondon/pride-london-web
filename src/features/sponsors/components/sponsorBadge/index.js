@@ -14,23 +14,24 @@ const Badge = styled.div`
   justify-content: center;
   background-color: #f9f9f9;
   margin: 0 10px 10px 0;
+  padding: 10px;
   ${media.tablet`
     margin: 0 30px 30px 0;
-  `} ${({ level }) =>
+  `};
+  ${({ level }) =>
     isLargeBadge(level)
       ? css`
           height: 97px;
-          width: 162px;
+          width: calc(50% - 10px);
           ${media.tablet`
             height: 175px;
             width: 293px;
           `};
         `
       : css`
-          height: 97px;
-          width: 105px;
+          height: 110px;
+          width: calc(33.3333% - 10px);
           ${media.tablet`
-            height: 110px;
             width: 185px;
           `};
         `};

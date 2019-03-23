@@ -34,7 +34,7 @@ const Row = props => (
       1, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
       10, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
       40, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
-      75, // Margin between 2nd breakpoint(1024px) and 3rd breakpoint (1440px)
+      75, // Margin between 3nd breakpoint(1024px) and 4th breakpoint (1440px)
     ]}
     flexWrap="wrap"
   />
