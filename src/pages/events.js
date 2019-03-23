@@ -1,6 +1,5 @@
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
-import FlipMove from 'react-flip-move'
 import styled from 'styled-components'
 import moment from 'moment'
 import { noScroll } from '../utilities'
@@ -10,29 +9,21 @@ import { EventListingCard } from '../features/events'
 import EventsFilters from '../features/events/components/eventsFilters'
 import ImageBanner from '../components/imageBanner'
 import Button from '../components/button'
-import { Container, Row, Column } from '../components/grid'
+import {
+  Container,
+  Row,
+  Column,
+  StyledFlipMove,
+  FlexColumn,
+} from '../components/grid'
 import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
 import { dateFormat } from '../constants'
 import filterIcon from '../theme/assets/images/icon-filters.svg'
 
-const FlexColumn = styled(Column)`
-  display: block;
-
-  ${media.tablet`
-    display: flex;
-  `};
-`
-
 const ColumnTextCenter = styled(Column)`
   text-align: center;
 `
-const StyledFlipMove = styled(FlipMove)`
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: 100%;
-`
-
 const ContainerAddFilters = styled(Container)`
   padding: 20px 0;
   margin-bottom: 20px;
@@ -121,6 +112,7 @@ class GroupedEventsCards extends Component {
 }
 /* eslint-enable */
 
+/* eslint-disable react/no-multi-comp */
 class Events extends Component {
   state = {
     showFiltersMobile: false,
@@ -152,6 +144,8 @@ class Events extends Component {
   }
 
   render() {
+    const { showFiltersMobile } = this.state
+
     return (
       <Consumer>
         {context => (
@@ -165,7 +159,7 @@ class Events extends Component {
             />
             <OffsetContainer>
               <EventsFilters
-                showFiltersMobile={this.state.showFiltersMobile}
+                showFiltersMobile={showFiltersMobile}
                 toggleFiltersMobile={this.toggleFiltersMobile}
               />
             </OffsetContainer>
@@ -174,7 +168,7 @@ class Events extends Component {
                 <ColumnTextCenter width={1}>
                   <Button
                     aria-controls="filters"
-                    aria-expanded={this.state.showFiltersMobile}
+                    aria-expanded={showFiltersMobile}
                     onClick={this.toggleFiltersMobile}
                     primary
                     fullmobile
@@ -185,7 +179,7 @@ class Events extends Component {
                       height="18"
                       alt="Filters Icon"
                       role="presentation"
-                    />{' '}
+                    />
                     {context.filteredEvents.length < context.state.events.length
                       ? 'Edit Filters'
                       : 'Add Filters'}

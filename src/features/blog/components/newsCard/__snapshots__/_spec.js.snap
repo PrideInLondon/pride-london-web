@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsCard renders with default values 1`] = `
+<styles__Card>
+  <styles__CardHeader>
+    <NewsFilter
+      filterType={
+        Object {
+          "hexColour": "#304242",
+          "title": "Amazing News!!",
+        }
+      }
+      handleClick={[Function]}
+      isButton={false}
+      isOutline={false}
+    />
+    <styles__NewsDate>
+      Invalid Date
+    </styles__NewsDate>
+  </styles__CardHeader>
+  <styles__CardTitle>
+    <styles__UnderlineContainer>
+      Here is some news!
+    </styles__UnderlineContainer>
+  </styles__CardTitle>
+</styles__Card>
+`;
