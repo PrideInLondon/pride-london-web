@@ -19,7 +19,7 @@ const NewsCards = ({ selectedFilter, articles }) => {
               1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
             ]}
           >
-            <NewsCard filterType={newsCategory} title={title} date={date}/>
+            <NewsCard filterType={newsCategory} title={title} date={date} />
           </FlexColumn>
         ) : /* eslint-enable */
         null

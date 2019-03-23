@@ -6,9 +6,11 @@ describe(NewsFilter.name, () => {
   it('renders with default values', () => {
     const filterType = {
       hexColour: '#000000',
-      title: 'Mock Filter'
+      title: 'Mock Filter',
     }
-    const wrapper = shallow(<NewsFilter filterType={filterType} handleClick={() => {}} />)
+    const wrapper = shallow(
+      <NewsFilter filterType={filterType} handleClick={() => {}} />
+    )
     expect(wrapper).toMatchSnapshot()
   })
 
