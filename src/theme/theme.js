@@ -21,6 +21,9 @@ const theme = {
     green: '#34C30A',
     amber: '#FFCA00',
     red: '#D0021B',
+    gold: '#FFE16C',
+    silver: '#E0DFDC',
+    bronze: '#B59035',
   },
   fonts: {
     title: 'Poppins, sans-serif',

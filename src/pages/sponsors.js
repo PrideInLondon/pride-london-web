@@ -2,30 +2,16 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import ReactMarkdown from 'react-markdown'
-import { Container } from '../components/grid/'
 import ImageBanner from '../components/imageBanner'
-import SponsorBadge from '../features/sponsors/components/sponsorBadge'
 import SponsorsSubsection from '../features/sponsors/components/sponsorSubsection/index'
 import constants from '../constants'
 import theme from '../theme/theme'
 import { media } from '../theme/media'
-
-const SponsorsContainer = styled(Container)`
-  background-color: ${theme.colors.white};
-  padding: 0 20px;
-  ${media.tablet`
-    padding: 0 90px;
-  `};
-`
-
-const Body = styled.div`
-  padding: 30px 0;
-  border-bottom: 1px solid rgba(203, 203, 203, 0.5);
-  ${media.tablet`
-    padding: 60px 0;
-  `};
-`
+import { Container, Row, Column } from '../components/grid'
+import Button from '../components/button'
+import SponsorHeadline from '../components/icons/sponsorHeadline'
+import SponsorStar from '../components/icons/sponsorStar'
+import renderSponsors from '../features/sponsors/helpers'
 
 const ListTitle = styled.h2`
   margin-top: 0;
@@ -35,11 +21,62 @@ const ListTitle = styled.h2`
   `};
 `
 
-const SponsorsList = styled.div`
-  padding: 30px 0;
+const MainContainer = styled(Container)`
+  margin-top: 30px;
+`
+
+const MainSponsorsContainer = styled.div`
   ${media.tablet`
-    padding: 60px 0;
+    max-width: 646px;
   `};
+`
+const BronzeSponsorsContainer = styled.div`
+  ${media.tablet`
+    max-width: 860px;
+  `};
+`
+
+const IntroContainer = styled(Column)`
+  border-bottom: 1px solid ${theme.colors.mediumGrey};
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+`
+
+const RelativeColumn = styled(Column)`
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+`
+
+const CTAWrapper = styled.div`
+  ${media.desktopMax`
+    background-color: ${theme.colors.indigo}; 
+  `};
+`
+
+const CTABox = styled.div`
+  background-color: ${theme.colors.indigo};
+  padding: 30px 0;
+  color: white;
+  ${media.desktop`
+    position: absolute;
+    width: 33.3333%;
+    right: 0;
+    top: -100px;
+    padding: 40px;
+ `};
+`
+
+const SponsorButton = styled(Button)`
+  && {
+    width: 100%;
+    min-width: 0;
+  }
+`
+
+const CTATitle = styled.h3`
+  margin: 0 0 0.5em 0;
+  color: ${theme.colors.white};
 `
 
 const selectSponsors = data =>
@@ -58,11 +95,6 @@ const selectSponsors = data =>
       {}
     )
 
-const renderSponsors = sponsors =>
-  sponsors.map(sponsor => <SponsorBadge key={sponsor.name} {...sponsor} />)
-
-// const selectBodyContent = data => data.contentfulGenericCopy.content.content
-
 const Sponsors = ({ data }) => {
   const sponsors = selectSponsors(data)
   return (
@@ -72,31 +104,122 @@ const Sponsors = ({ data }) => {
         subtitleText="Help us to keep Pride free for everyone by becoming one of our sponsors"
         color={theme.colors.yellow}
       />
-      <SponsorsContainer>
-        <Body>
-          <ReactMarkdown />
-        </Body>
-        <SponsorsList>
-          <ListTitle>Our main 2018 partners</ListTitle>
-          <p>
-            A huge thank you to our main partners for their continued support.
-          </p>
-          <div>
-            <SponsorsSubsection title="Headline sponsors">
-              {renderSponsors(sponsors[constants.sponsorLevels.headline])}
-            </SponsorsSubsection>
-            <SponsorsSubsection title="Gold sponsors">
-              {renderSponsors(sponsors[constants.sponsorLevels.gold])}
-            </SponsorsSubsection>
-            <SponsorsSubsection title="Silver sponsors">
-              {renderSponsors(sponsors[constants.sponsorLevels.silver])}
-            </SponsorsSubsection>
-            <SponsorsSubsection title="Bronze sponsors">
-              {renderSponsors(sponsors[constants.sponsorLevels.bronze])}
-            </SponsorsSubsection>
-          </div>
-        </SponsorsList>
-      </SponsorsContainer>
+      <CTAWrapper>
+        <Container>
+          <Row>
+            <RelativeColumn width={1}>
+              <CTABox>
+                <CTATitle>Sponsor us!</CTATitle>
+                <p>
+                  Whether you're a big brand or a small business, and interested
+                  in supporting Pride in London. We want to hear from you.
+                </p>
+                <SponsorButton
+                  link
+                  to="mailto:sponsor@prideinlondon.org"
+                  primary
+                >
+                  Email us
+                </SponsorButton>
+              </CTABox>
+            </RelativeColumn>
+          </Row>
+        </Container>
+      </CTAWrapper>
+      <MainContainer>
+        <Row>
+          <IntroContainer
+            width={[
+              1, // 100% between 0px screen width and first breakpoint (375px)
+              1, // 100% between first breakpoint(375px) and second breakpoint (768px)
+              1, // 100% between second breakpoint(768px) and third breakpoint (1024px)
+              7 / 12, // 7/12 between third breakpoint(1280px) and fourth breakpoint (1440px)
+            ]}
+          >
+            <p>
+              Without our dedicated and loyal partners, Pride in London simply
+              would not exist. Since the current community group took over the
+              running of Pride in 2012, the office of the Mayor of London and
+              Barclays have remained committed to keeping Pride on the road.
+              They have proved to be great allies of the LGBTQ+ community and we
+              are eternally grateful for their support. In 2018, Sadiq Khan,
+              Mayor of London extended Pride in London’s contract, committing to
+              support our work for a further 5 years.
+            </p>
+            <p>
+              For many years LGBTQ+ people have faced hiding their true selves
+              from their colleagues. Only since 2000 have people been able to
+              openly serve in the military. Today, while prejudice is still rife
+              in many places, many companies and organisations have embraced
+              their LGBTQ+ members of staff. Studies show, that employers who
+              recognise and support diversity are on average more productive and
+              more profitable.
+            </p>
+            <p>
+              Over the years we have seen more and more companies openly support
+              and embrace their LGBTQ+ colleagues, as well as provide a safe,
+              loving and supportive workplace. Being part of Pride is one of the
+              many ways we are seeing workplaces transform for the better. Pride
+              in London are proud to be working with our partners to ensure
+              diversity is embedded in the core of each company we work with.
+            </p>
+          </IntroContainer>
+          <Column>
+            <ListTitle>Our main 2018 partners</ListTitle>
+            <p>
+              A huge thank you to our main partners for their continued support.
+            </p>
+            <MainSponsorsContainer>
+              {sponsors[constants.sponsorLevels.headline] && (
+                <SponsorsSubsection
+                  title="Headline sponsors"
+                  icon={<SponsorHeadline />}
+                >
+                  {renderSponsors(sponsors[constants.sponsorLevels.headline])}
+                </SponsorsSubsection>
+              )}
+
+              {sponsors[constants.sponsorLevels.silver] && (
+                <SponsorsSubsection
+                  title="Gold sponsors"
+                  icon={<SponsorStar color={theme.colors.gold} />}
+                >
+                  {renderSponsors(sponsors[constants.sponsorLevels.gold])}
+                </SponsorsSubsection>
+              )}
+
+              {sponsors[constants.sponsorLevels.silver] && (
+                <SponsorsSubsection
+                  title="Silver sponsors"
+                  icon={<SponsorStar color={theme.colors.silver} />}
+                >
+                  {renderSponsors(sponsors[constants.sponsorLevels.silver])}
+                </SponsorsSubsection>
+              )}
+            </MainSponsorsContainer>
+
+            <BronzeSponsorsContainer>
+              {sponsors[constants.sponsorLevels.bronze] && (
+                <SponsorsSubsection
+                  title="Bronze sponsors"
+                  icon={<SponsorStar color={theme.colors.bronze} />}
+                >
+                  {renderSponsors(sponsors[constants.sponsorLevels.bronze])}
+                </SponsorsSubsection>
+              )}
+
+              {sponsors[constants.sponsorLevels.digital] && (
+                <SponsorsSubsection
+                  title="Digital partners"
+                  icon={<SponsorStar color={theme.colors.bronze} />}
+                >
+                  {renderSponsors(sponsors[constants.sponsorLevels.digital])}
+                </SponsorsSubsection>
+              )}
+            </BronzeSponsorsContainer>
+          </Column>
+        </Row>
+      </MainContainer>
     </Fragment>
   )
 }
@@ -113,7 +236,7 @@ export const query = graphql`
           sponsorName
           sponsorUrl
           sponsorLogo {
-            sizes(maxHeight: 84) {
+            sizes(maxHeight: 168, quality: 90) {
               src
             }
           }
