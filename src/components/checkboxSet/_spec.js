@@ -1,9 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import theme from '../../theme/theme'
-import renderer from 'react-test-renderer'
-import CheckboxSet from './'
 import 'jest-styled-components'
+import theme from '../../theme/theme'
+import CheckboxSet from './'
 
 // SVGs need to be mocked as the SVG output causes Babel to throw
 jest.mock('../../theme/assets/images/icon-check.svg', () => 'foo')

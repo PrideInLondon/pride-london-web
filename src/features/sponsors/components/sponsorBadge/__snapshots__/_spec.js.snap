@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SponsorBadge/> Should render and match snapshot 1`] = `
+<sponsorBadge__Badge
+  level="Headline"
+>
+  <a
+    href="https://sponsor1.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <sponsorBadge__BadgeImage
+      alt="Sponsor One"
+      level="Headline"
+      src="/logo1"
+    />
+  </a>
+</sponsorBadge__Badge>
+`;

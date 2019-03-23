@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SponsorSubsection/> Should render and match snapshot 1`] = `
+<Fragment>
+  <sponsorSubsection__TitleWrapper>
+    <SponsorStar
+      color="#FFE16C"
+    />
+    <sponsorSubsection__Title>
+      Bronze sponsors
+    </sponsorSubsection__Title>
+  </sponsorSubsection__TitleWrapper>
+  <sponsorSubsection__BadgesContainer>
+    <SponsorBadge
+      key="Sponsor One"
+      level="Headline"
+      logo="/logo1"
+      name="Sponsor One"
+      url="https://sponsor1.com"
+    />
+    <SponsorBadge
+      key="Sponsor Two"
+      level="Headline"
+      logo="/logo2"
+      name="Sponsor Two"
+      url="https://sponsor2.com"
+    />
+  </sponsorSubsection__BadgesContainer>
+</Fragment>
+`;
