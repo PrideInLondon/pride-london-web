@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedArticle renders with default values 1`] = `
+<StaticQuery
+  data={
+    Object {
+      "data": Object {
+        "allContentfulNews": Object {
+          "edges": Array [
+            Object {
+              "node": Object {
+                "date": "2019-03-28T20:30+00:00",
+                "id": "6a1e5814-f480-56a0-8a35-6e78d0a01e11",
+                "title": "This is still a featured article",
+              },
+            },
+          ],
+        },
+      },
+    }
+  }
+  query="998140163"
+  render={[Function]}
+/>
+`;
