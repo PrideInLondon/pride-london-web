@@ -1,18 +1,21 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import NewsCard from '.'
+import FeaturedArticle from '.'
 
-describe(NewsCard.name, () => {
+describe(FeaturedArticle.name, () => {
   it('renders with default values', () => {
     const title = 'Here is some news!'
     const filterType = {
       hexColour: '#304242',
       title: 'Amazing News!!',
     }
-    const date = '2019-03-28T20:30+00:00'
-    const wrapper = shallow(
-      <NewsCard filterType={filterType} title={title} date={date} />
-    )
+    const icon = 'iconstring'
+    const props = {
+      title,
+      filterType,
+      icon,
+    }
+    const wrapper = shallow(<FeaturedArticle {...props} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
