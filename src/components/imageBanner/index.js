@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { media } from '../../theme/media'
 import { Column, Row, Container } from '../grid'
 import BannerTitle from '../bannerTitle'
@@ -32,37 +32,42 @@ const StyledWrapper = styled.div`
     z-index: -1;
   }
 
+  ${props =>
+    props.allowContentUnderflow &&
+    css`
+      align-items: flex-start;
+      min-height: 380px;
+      padding-top: 50px;
+      margin-bottom: -75px;
+    `}
+
   ${media.tablet`
     align-items: center;
-    height: ${props => (props.large === 'true' ? '500px' : '400px')};
+    height: ${props => (props.large ? '700px' : '400px')};
     padding: 0;
   `};
-`
-
-const StyledWrapperWithUnderflow = styled(StyledWrapper)`
-  align-items: flex-start;
-  min-height: 380px;
-  padding-top: 50px;
-  margin-bottom: -75px;
 `
 
 const ImageBanner = ({
   titleText,
   subtitleText,
   imageSrc,
+  imageFullWidth,
   altText,
   color,
   children,
   large,
   allowContentUnderflow,
 }) => {
-  const Wrapper = allowContentUnderflow
-    ? StyledWrapperWithUnderflow
-    : StyledWrapper
   return (
-    <Wrapper color={color} large={large} className="bannerwrapper">
-      {imageSrc && <img src={imageSrc} alt={altText} />}
+    <StyledWrapper
+      color={color}
+      large={large}
+      imageFullWidth={imageFullWidth}
+      allowContentUnderflow={allowContentUnderflow}
+    >
       <StyledContainer>
+        {imageSrc && <img src={imageSrc} alt={altText} />}
         <Row>
           <Column width={1}>
             <BannerTitle>{titleText}</BannerTitle>
@@ -71,13 +76,14 @@ const ImageBanner = ({
           {children}
         </Row>
       </StyledContainer>
-    </Wrapper>
+    </StyledWrapper>
   )
 }
 
 ImageBanner.propTypes = {
-  large: PropTypes.string,
+  large: PropTypes.bool,
   imageSrc: PropTypes.string,
+  imageFullWidth: PropTypes.bool,
   altText: PropTypes.string,
   subtitleText: PropTypes.string,
   titleText: PropTypes.string,
@@ -90,8 +96,9 @@ ImageBanner.propTypes = {
 }
 
 ImageBanner.defaultProps = {
-  large: 'false', // this isn' a bool because styled components
+  large: false,
   imageSrc: '',
+  imageFullWidth: false,
   altText: '',
   subtitleText: '',
   titleText: '',
