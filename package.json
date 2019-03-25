@@ -55,7 +55,7 @@
     "gatsby-plugin-rollbar": "^1.0.0",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-contentful": "^2.0.41",
-    "gatsby-source-filesystem": "^2.0.27",
+    "gatsby-source-filesystem": "^2.0.28",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
     "polished": "^3.0.4",
