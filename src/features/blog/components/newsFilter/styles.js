@@ -33,3 +33,8 @@ export const FilterTextContainer = styled.p`
 `
 
 export const FilterText = styled.span``
+
+export const FilterIcon = styled.img`
+  margin-right: 3px;
+  height: 11px;
+`

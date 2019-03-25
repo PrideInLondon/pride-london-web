@@ -4,11 +4,11 @@ import NewsFilter from '../newsFilter'
 import {
   Card,
   CardHeader,
-  NewsDate,
   ReadLength,
   CardTitle,
   UnderlineContainer,
 } from './styles'
+import NewsDate from '../newsDate'
 
 const CenterDot = () => <span>·</span>
 
@@ -16,13 +16,7 @@ const NewsCard = ({ date, filterType, title, readLength }) => (
   <Card>
     <CardHeader>
       <NewsFilter filterType={filterType} isOutline={false} />
-      <NewsDate>
-        {new Date(date).toLocaleDateString('en-GB', {
-          day: 'numeric',
-          month: 'short',
-          year: 'numeric',
-        })}
-      </NewsDate>
+      <NewsDate date={date} />
       {readLength && (
         <>
           <CenterDot />
