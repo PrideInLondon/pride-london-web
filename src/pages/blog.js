@@ -56,7 +56,7 @@ export const blogLandingPageQuery = graphql`
       }
     }
 
-    allContentfulNews {
+    allContentfulNews(filter: { isFeatured: { ne: true } }) {
       edges {
         node {
           id

@@ -10,6 +10,7 @@ export const FeaturedArticleContainer = styled.div`
 `
 
 export const FeaturedArticleTitle = styled.h3`
-  color: ${theme.colors.black};
+  color: ${theme.colors.indigo};
+  font-weight: bolder;
   margin: 10px 0;
 `
