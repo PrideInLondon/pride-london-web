@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Title from './'
+import Title from '.'
 
 describe(Title.name, () => {
   it('renders with default values', () => {

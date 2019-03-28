@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ViewsCard from './'
+import ViewsCard from '.'
 
 describe('ViewsCard', () => {
   const author = 'Bob Barker'

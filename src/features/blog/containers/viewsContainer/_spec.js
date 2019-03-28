@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ViewsContainer from './'
+import ViewsContainer from '.'
 
 describe('ViewsContainer', () => {
   it('should render with default values', () => {
