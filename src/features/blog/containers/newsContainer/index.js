@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import Title from '../../components/title'
 import FiltersContainer from '../filtersContainer'
 import NewsCards from '../newsCards'
-import { Container } from './styles'
 import FeaturedArticleContainer from '../featuredArticleContainer'
+import { Container } from './styles'
 
 class NewsContainer extends Component {
   constructor(props) {

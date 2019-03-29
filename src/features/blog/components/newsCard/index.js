@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsFilter from '../newsFilter'
+import NewsDate from '../newsDate'
 import {
   Card,
   CardHeader,
@@ -8,7 +9,6 @@ import {
   CardTitle,
   UnderlineContainer,
 } from './styles'
-import NewsDate from '../newsDate'
 
 const CenterDot = () => <span>·</span>
 

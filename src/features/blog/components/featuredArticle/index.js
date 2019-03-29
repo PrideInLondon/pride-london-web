@@ -1,11 +1,11 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import starIcon from './starIcon.svg'
-import { FeaturedArticleCard, CardHeader } from './styles'
 import { FeaturedArticleTitle } from '../../containers/newsContainer/styles'
 import NewsFilter from '../newsFilter'
 import theme from '../../../../theme/theme'
 import NewsDate from '../newsDate'
+import { FeaturedArticleCard, CardHeader } from './styles'
+import starIcon from './starIcon.svg'
 
 const filterType = {
   title: 'Featured',
