@@ -12,12 +12,14 @@ const mapEntries = news => {
   return news.edges.map(({ node }) => ({ ...node }))
 }
 
-const Blog = ({
-  data: { allContentfulNews, allContentfulNewsCategory, allContentfulViews },
-}) => {
-  const articles = mapEntries(allContentfulNews)
-  const categories = mapEntries(allContentfulNewsCategory)
-  const views = mapEntries(allContentfulViews)
+const Blog = props => {
+  console.log(props)
+  const {
+    data: { news, views, categories },
+  } = props
+  const mappedArticles = mapEntries(news)
+  const mappedCategories = mapEntries(categories)
+  const mappedViews = mapEntries(views)
   return (
     <Fragment>
       <ImageBanner
@@ -28,17 +30,18 @@ const Blog = ({
         large
         allowContentUnderflow
       />
-      <ViewsContainer views={views} />
+      <ViewsContainer views={mappedViews} />
       <StyledHR />
-      <NewsContainer articles={articles} categories={categories} />
+      <NewsContainer articles={mappedArticles} categories={mappedCategories} />
     </Fragment>
   )
 }
 
 Blog.propTypes = {
   data: PropTypes.shape({
-    allContentfulNews: PropTypes.arrayOf(PropTypes.shape({})),
-    allContentfulNewsCategory: PropTypes.arrayOf(PropTypes.shape({})),
+    views: PropTypes.arrayOf(PropTypes.shape({})),
+    news: PropTypes.arrayOf(PropTypes.shape({})),
+    categories: PropTypes.arrayOf(PropTypes.shape({})),
   }).isRequired,
 }
 
@@ -46,7 +49,7 @@ export default Blog
 
 export const blogLandingPageQuery = graphql`
   query allContentfulNews {
-    allContentfulNewsCategory {
+    categories: allContentfulNewsCategory {
       edges {
         node {
           id
@@ -56,7 +59,9 @@ export const blogLandingPageQuery = graphql`
       }
     }
 
-    allContentfulNews(filter: { isFeatured: { ne: true } }) {
+    news: allContentfulNews(
+      filter: { isFeatured: { ne: true }, isView: { ne: true } }
+    ) {
       edges {
         node {
           id
@@ -70,18 +75,23 @@ export const blogLandingPageQuery = graphql`
       }
     }
 
-    allContentfulViews {
+    views: allContentfulNews(
+      filter: { isFeatured: { ne: true }, isView: { eq: true } }
+    ) {
       edges {
         node {
           id
+          title
           date
-          portraitPhoto {
+          portraitImage {
             file {
               url
             }
           }
-          title
-          author
+          newsCategory {
+            title
+            hexColour
+          }
         }
       }
     }

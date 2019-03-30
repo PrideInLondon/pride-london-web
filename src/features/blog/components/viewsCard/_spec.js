@@ -5,7 +5,7 @@ import ViewsCard from '.'
 describe('ViewsCard', () => {
   const author = 'Bob Barker'
   const title = 'My view'
-  const portraitPhoto = {
+  const portraitImage = {
     file: {
       url: 'foo.bar/baz',
     },
@@ -15,7 +15,7 @@ describe('ViewsCard', () => {
     const props = {
       author,
       title,
-      portraitPhoto,
+      portraitImage,
     }
     const wrapper = shallow(<ViewsCard {...props} />)
     expect(wrapper).toMatchSnapshot()
