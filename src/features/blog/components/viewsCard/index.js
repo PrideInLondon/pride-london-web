@@ -9,8 +9,8 @@ import {
 } from './styles'
 
 const ViewsCard = props => {
-  const { portraitPhoto, author, title } = props
-  const photoUrl = portraitPhoto ? portraitPhoto.file.url : ''
+  const { portraitImage, author, title } = props
+  const photoUrl = portraitImage ? portraitImage.file.url : ''
   return (
     <Container>
       <ViewsThumbail src={photoUrl} altText={`${author} — ${title}`} />
@@ -25,7 +25,7 @@ const ViewsCard = props => {
 ViewsCard.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  portraitPhoto: PropTypes.shape({}).isRequired,
+  portraitImage: PropTypes.shape({}).isRequired,
 }
 
 export default ViewsCard
