@@ -1,143 +1,19 @@
 import React, { useRef, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { lighten } from 'polished'
-import { Link } from 'gatsby'
 import theme from '../../theme/theme'
-import { media } from '../../theme/media'
-import { Container, Row, Column } from '../grid'
+import { Container } from '../grid'
 import { checkBreakpoint } from '../../utilities'
-
-const Panel = styled.div`
-  background-color: ${lighten(0.05, theme.colors.indigo)};
-  color: ${theme.colors.white};
-
-  ${media.nav`
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 100px;
-    display: ${props => (props.isOpen ? 'block' : 'none')};
-    padding: 60px 0;
-    height: auto !important;
-  `};
-
-  ${media.navMax`
-    overflow: hidden;
-    transition: height 0.15s linear;
-    height: 0;
-  `};
-`
-
-const PanelRow = styled(Row)`
-  flex-wrap: nowrap;
-
-  ${media.navMax`
-    margin: 0;
-  `};
-`
-
-const PanelTitle = styled.h2`
-  font-size: 2rem;
-  color: ${theme.colors.white};
-  margin-top: 0;
-`
-
-const PanelInfoWrapper = styled(Column)`
-  border-right: 1px solid ${theme.colors.eucalyptusGreen};
-  padding-right: 40px;
-  display: none;
-
-  ${media.nav`
-    display: block;
-  `};
-`
-
-const PanelListWrapper = styled(Column)`
-  ${media.nav`
-    padding-left: 40px;
-    column-count: 2;
-
-    & > * {
-        align-self: stretch;
-    }
-  `};
-
-  ${media.navMax`
-    padding: 20px;
-    width: 100%;
-  `};
-`
-
-const PanelList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1em 0;
-`
-
-const PanelListSection = styled.div`
-  ${media.nav`
-    page-break-inside: avoid;
-    break-inside: avoid;
-    column-gap: 40px;
-  `};
-
-  ${media.navMax`
-    &:last-child {
-      ul {
-        margin-bottom: 0;
-      }
-    }
-  `};
-`
-
-const Heading = styled.h2`
-  color: ${theme.colors.eucalyptusGreen};
-  font-size: 1rem;
-  margin: 0 0 0.5em 0;
-  line-height: 1.25;
-
-  ${media.nav`
-    margin: 0 0 0.2em 0;
-  `};
-`
-
-const PanelLink = styled(Link)`
-  color: ${theme.colors.white};
-  text-decoration: none;
-  font-family: ${theme.fonts.title};
-  font-size: 1.125rem;
-  padding: 15px 0;
-  display: block;
-
-  ${media.nav`
-    padding: 5px 0;
-    font-size: 1.25rem;
-  `};
-
-  span {
-    position: relative;
-    &:after {
-      content: '';
-      height: 1px;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: transparent;
-      transition: background-color 0.15s linear;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    span {
-      &:after {
-        background-color: ${theme.colors.eucalyptusGreen};
-      }
-    }
-  }
-`
+import {
+  Panel,
+  PanelRow,
+  PanelTitle,
+  PanelInfoWrapper,
+  PanelListWrapper,
+  PanelList,
+  PanelListSection,
+  Heading,
+  PanelLink,
+} from './styles'
 
 function setHeightAuto(ref) {
   if (ref.current.offsetHeight > 0 && !checkBreakpoint(theme.navBreakpoint)) {
