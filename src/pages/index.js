@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import ImageBanner from '../components/imageBanner'
 import Button from '../components/button'
 import { Column } from '../components/grid'
-import bannerImgLarge from '../theme/assets/images/banners/home/background@2x.jpg'
+import inlineBannerImg from '../theme/assets/images/banners/home/inline@3x.jpg'
+import theme from '../theme/theme'
 
 const ColumnTextCenter = styled(Column)`
   text-align: center;
@@ -17,9 +18,9 @@ const Home = ({ data: { contentfulHeaderBanner } }) => (
     <ImageBanner
       titleText={contentfulHeaderBanner.heading}
       subtitleText={contentfulHeaderBanner.subHeading}
-      imageSrc={bannerImgLarge}
+      imageSrc={inlineBannerImg}
       altText={contentfulHeaderBanner.heroImage.title}
-      color={contentfulHeaderBanner.backgroundColour}
+      color={theme.colors.eucalyptusGreen}
       large
     >
       <ColumnTextCenter>
