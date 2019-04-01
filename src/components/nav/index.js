@@ -252,7 +252,6 @@ const Nav = () => {
                       {
                         heading: "What's on",
                         links: [
-                          { title: 'Hall of fame', url: '/' },
                           { title: 'Upcoming events', url: '/' },
                           { title: 'Host an event', url: '/' },
                         ],
@@ -262,6 +261,7 @@ const Nav = () => {
                         links: [
                           { title: "This year's competition", url: '/' },
                           { title: 'How to take part', url: '/' },
+                          { title: 'Hall of fame', url: '/' },
                         ],
                       },
                     ],

@@ -142,10 +142,6 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                       "heading": "What's on",
                       "links": Array [
                         Object {
-                          "title": "Hall of fame",
-                          "url": "/",
-                        },
-                        Object {
                           "title": "Upcoming events",
                           "url": "/",
                         },
@@ -164,6 +160,10 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                         },
                         Object {
                           "title": "How to take part",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Hall of fame",
                           "url": "/",
                         },
                       ],
