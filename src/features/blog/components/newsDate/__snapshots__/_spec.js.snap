@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsDate renders with default values 1`] = `
+<styles__StyledDate>
+  Mar 28, 2019
+</styles__StyledDate>
+`;

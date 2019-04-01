@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Title from '../../components/title'
-import ImageBanner from '../../../../components/imageBanner'
-import theme from '../../../../theme/theme'
 import FiltersContainer from '../filtersContainer'
 import NewsCards from '../newsCards'
+import FeaturedArticleContainer from '../featuredArticleContainer'
 import { Container } from './styles'
 
 class NewsContainer extends Component {
@@ -31,7 +30,7 @@ class NewsContainer extends Component {
         <Container>
           <Title>News</Title>
         </Container>
-        <ImageBanner altText="" color={theme.colors.beachBlue} />
+        <FeaturedArticleContainer />
         <FiltersContainer
           selectedFilter={selectedFilter}
           handleFilterClick={this.handleFilterClick}

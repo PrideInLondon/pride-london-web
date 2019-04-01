@@ -31,14 +31,11 @@ export const CardHeader = styled.div`
   margin-bottom: 10px;
 `
 
-export const NewsDate = styled.span`
+export const ReadLength = styled.span`
   color: ${theme.colors.darkGrey};
   font-size: 12px;
   margin-left: 5px;
   margin-right: 4px;
   white-space: nowrap;
-`
-
-export const ReadLength = styled(NewsDate)`
   margin-left: 3px;
 `

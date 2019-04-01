@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import NewsCards from './'
+import NewsCards from '.'
 
 describe(NewsCards.name, () => {
   it('renders with default values', () => {
