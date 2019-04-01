@@ -147,10 +147,10 @@ const Home = ({ data: { contentfulHeaderBanner } }) => (
       <Row>
         <FuturedEventsContainer>
           <EventsBackgroundLeft>
-            <img src={eventsBgLeft} />
+            <img alt="backgroundEventsLeft" src={eventsBgLeft} />
           </EventsBackgroundLeft>
           <EventsBackgroundRight>
-            <img src={eventsBgRight} />
+            <img alt="backgroundEvents" src={eventsBgRight} />
           </EventsBackgroundRight>
           <FuturedEventsHeader>
             <FuturedEventsTitle>

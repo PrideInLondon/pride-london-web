@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import NewsFilter from './'
+import NewsFilter from '.'
 
 describe(NewsFilter.name, () => {
   it('renders with default values', () => {

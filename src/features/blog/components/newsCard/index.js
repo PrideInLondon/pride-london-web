@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsFilter from '../newsFilter'
+import NewsDate from '../newsDate'
 import {
   Card,
   CardHeader,
-  NewsDate,
   ReadLength,
   CardTitle,
   UnderlineContainer,
@@ -16,13 +16,7 @@ const NewsCard = ({ date, filterType, title, readLength }) => (
   <Card>
     <CardHeader>
       <NewsFilter filterType={filterType} isOutline={false} />
-      <NewsDate>
-        {new Date(date).toLocaleDateString('en-GB', {
-          day: 'numeric',
-          month: 'short',
-          year: 'numeric',
-        })}
-      </NewsDate>
+      <NewsDate date={date} />
       {readLength && (
         <>
           <CenterDot />

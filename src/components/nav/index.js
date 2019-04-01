@@ -193,33 +193,18 @@ const Nav = () => {
               <Menu id="menu" isOpen={isOpen}>
                 <NavItem
                   item={{
-                    id: 'nav-learn',
-                    title: 'Learn',
+                    id: 'nav-about',
+                    title: 'About',
                     desc:
                       'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
                     url: '/',
                     submenu: [
                       {
-                        heading: 'Jelly-o chupa chups',
                         links: [
-                          { title: 'Cupcake ipsum dolor sit', url: '/' },
-                          { title: 'Cupcake ipsum sit', url: '/' },
-                          { title: 'Cupcake dolor sit', url: '/' },
-                          { title: 'Cupcake ipsum dolor', url: '/' },
-                        ],
-                      },
-                      {
-                        heading: 'Icing gummi bears powder',
-                        links: [
-                          { title: 'Amet dragée donut', url: '/' },
-                          { title: 'Amet dragée chocolate donut', url: '/' },
-                        ],
-                      },
-                      {
-                        heading: 'Bear claw pastry bonbon',
-                        links: [
-                          { title: 'Carrot cake fruitcake', url: '/' },
-                          { title: 'Carrot cake muffin fruitcake', url: '/' },
+                          { title: 'Our mission', url: '/' },
+                          { title: 'A history of Pride', url: '/' },
+                          { title: 'Campaign', url: '/' },
+                          { title: 'Our impact', url: '/' },
                         ],
                       },
                     ],
@@ -227,17 +212,85 @@ const Nav = () => {
                 />
                 <NavItem
                   item={{
-                    id: 'nav-attend',
-                    title: 'Attend',
+                    id: 'nav-parade-day',
+                    title: 'Parade Day',
                     desc:
                       'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
                     url: '/',
                     submenu: [
                       {
-                        heading: 'Jelly beans sesame snaps',
+                        heading: 'Parade',
                         links: [
-                          { title: 'Cotton candy dragée', url: '/' },
-                          { title: 'Dragée oat cake', url: '/' },
+                          { title: 'Watch the parade', url: '/' },
+                          { title: 'Parade groups', url: '/' },
+                        ],
+                      },
+                      {
+                        heading: 'Stages',
+                        links: [
+                          { title: 'Cabaret stage', url: '/' },
+                          { title: 'Trafalgar Square', url: '/' },
+                          { title: "Women's stage", url: '/' },
+                          { title: 'World stage', url: '/' },
+                        ],
+                      },
+                      {
+                        heading: 'Community Village',
+                        links: [{ title: 'Stalls', url: '/' }],
+                      },
+                    ],
+                  }}
+                />
+                <NavItem
+                  item={{
+                    id: 'nav-events',
+                    title: 'Events',
+                    desc:
+                      'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
+                    url: '/',
+                    submenu: [
+                      {
+                        heading: "What's on",
+                        links: [
+                          { title: 'Upcoming events', url: '/' },
+                          { title: 'Host an event', url: '/' },
+                        ],
+                      },
+                      {
+                        heading: "Pride's Got Talent",
+                        links: [
+                          { title: "This year's competition", url: '/' },
+                          { title: 'How to take part', url: '/' },
+                          { title: 'Hall of fame', url: '/' },
+                        ],
+                      },
+                    ],
+                  }}
+                />
+                <NavItem
+                  item={{
+                    id: 'nav-support-us',
+                    title: 'Support us',
+                    desc:
+                      'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
+                    url: '/',
+                    submenu: [
+                      {
+                        heading: 'As an individual',
+                        links: [
+                          { title: 'Volunteer', url: '/' },
+                          { title: 'Make a donation', url: '/' },
+                          { title: 'Buy merchandise', url: '/' },
+                        ],
+                      },
+                      {
+                        heading: 'As a business',
+                        links: [{ title: 'Partner with us', url: '/' }],
+                      },
+                      {
+                        heading: 'As an MP',
+                        links: [
+                          { title: 'Sign the poilitical pledge', url: '/' },
                         ],
                       },
                     ],

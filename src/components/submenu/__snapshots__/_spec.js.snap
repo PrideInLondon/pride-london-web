@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Submenu /> renders and matches snapshot when open 1`] = `
-<submenu__Panel
+<styles__Panel
   containerRef={
     Object {
       "current": undefined,
@@ -14,8 +14,8 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
   <grid__Container
     mx="auto"
   >
-    <submenu__PanelRow>
-      <submenu__PanelInfoWrapper
+    <styles__PanelRow>
+      <styles__PanelInfoWrapper
         width={
           Array [
             1,
@@ -25,27 +25,27 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
           ]
         }
       >
-        <submenu__PanelTitle>
+        <styles__PanelTitle>
           Lorem
-        </submenu__PanelTitle>
+        </styles__PanelTitle>
         <p>
           lorem ipsum
         </p>
-      </submenu__PanelInfoWrapper>
-      <submenu__PanelListWrapper
+      </styles__PanelInfoWrapper>
+      <styles__PanelListWrapper
         isOpen={true}
       >
-        <submenu__PanelListSection
+        <styles__PanelListSection
           key="Jelly-o chupa chups"
         >
-          <submenu__Heading>
+          <styles__Heading>
             Jelly-o chupa chups
-          </submenu__Heading>
-          <submenu__PanelList>
+          </styles__Heading>
+          <styles__PanelList>
             <li
               key="Cupcake ipsum dolor sit"
             >
-              <submenu__PanelLink
+              <styles__PanelLink
                 itemProp="url"
                 to="/"
               >
@@ -54,12 +54,12 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
                 >
                   Cupcake ipsum dolor sit
                 </span>
-              </submenu__PanelLink>
+              </styles__PanelLink>
             </li>
             <li
               key="Cupcake ipsum sit"
             >
-              <submenu__PanelLink
+              <styles__PanelLink
                 itemProp="url"
                 to="/"
               >
@@ -68,12 +68,12 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
                 >
                   Cupcake ipsum sit
                 </span>
-              </submenu__PanelLink>
+              </styles__PanelLink>
             </li>
             <li
               key="Cupcake dolor sit"
             >
-              <submenu__PanelLink
+              <styles__PanelLink
                 itemProp="url"
                 to="/"
               >
@@ -82,12 +82,12 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
                 >
                   Cupcake dolor sit
                 </span>
-              </submenu__PanelLink>
+              </styles__PanelLink>
             </li>
             <li
               key="Cupcake ipsum dolor"
             >
-              <submenu__PanelLink
+              <styles__PanelLink
                 itemProp="url"
                 to="/"
               >
@@ -96,12 +96,12 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
                 >
                   Cupcake ipsum dolor
                 </span>
-              </submenu__PanelLink>
+              </styles__PanelLink>
             </li>
-          </submenu__PanelList>
-        </submenu__PanelListSection>
-      </submenu__PanelListWrapper>
-    </submenu__PanelRow>
+          </styles__PanelList>
+        </styles__PanelListSection>
+      </styles__PanelListWrapper>
+    </styles__PanelRow>
   </grid__Container>
-</submenu__Panel>
+</styles__Panel>
 `;

@@ -1,10 +1,10 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Title from '.'
+import NewsDate from '.'
 
-describe(Title.name, () => {
+describe(NewsDate.name, () => {
   it('renders with default values', () => {
-    const wrapper = shallow(<Title>Hi</Title>)
+    const wrapper = shallow(<NewsDate date="2019-03-28T20:30+00:00" />)
     expect(wrapper).toMatchSnapshot()
   })
 })
