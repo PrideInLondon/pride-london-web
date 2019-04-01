@@ -21,8 +21,6 @@ const Home = ({ data: { contentfulHeaderBanner } }) => (
       altText={contentfulHeaderBanner.heroImage.title}
       color={contentfulHeaderBanner.backgroundColour}
       large
-      insideGrid
-      imageFullWidth
     >
       <ColumnTextCenter>
         <Button wide={false} primary link to="/events/">
