@@ -1,50 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { media } from '../../theme/media'
-import { Column, Row, Container } from '../grid'
+import { Column, Row } from '../grid'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
-
-const StyledContainer = styled(Container)`
-  flex-grow: 1;
-`
-
-const StyledWrapper = styled.div`
-  display: flex;
-  align-items: flex-end;
-  min-height: 270px;
-  overflow: hidden;
-  position: relative;
-  background-color: ${props => props.color};
-  padding-bottom: 35px;
-  z-index: -2;
-
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-    width: auto;
-    z-index: -1;
-  }
-
-  ${media.tablet`
-    align-items: center;
-    height: ${props => (props.large === 'true' ? '500px' : '400px')};
-    padding: 0;
-  `};
-`
-
-const StyledWrapperWithUnderflow = styled(StyledWrapper)`
-  align-items: flex-start;
-  min-height: 380px;
-  padding-top: 50px;
-  margin-bottom: -75px;
-`
+import {
+  StyledContainer,
+  StyledWrapper,
+  StyledWrapperWithUnderflow,
+} from './styles'
 
 const ImageBanner = ({
   titleText,

@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ImageBanner renders 1`] = `
-<imageBanner__StyledWrapper
+<styles__StyledWrapper
   className="bannerwrapper"
   color=""
   large="false"
 >
-  <imageBanner__StyledContainer
+  <styles__StyledContainer
     mx="auto"
   >
     <Row>
@@ -17,17 +17,17 @@ exports[`ImageBanner renders 1`] = `
         <StyledBannerSubtitle />
       </Column>
     </Row>
-  </imageBanner__StyledContainer>
-</imageBanner__StyledWrapper>
+  </styles__StyledContainer>
+</styles__StyledWrapper>
 `;
 
 exports[`ImageBanner renders the subtitleText from props to BannerTitle  1`] = `
-<imageBanner__StyledWrapper
+<styles__StyledWrapper
   className="bannerwrapper"
   color=""
   large="false"
 >
-  <imageBanner__StyledContainer
+  <styles__StyledContainer
     mx="auto"
   >
     <Row>
@@ -40,17 +40,17 @@ exports[`ImageBanner renders the subtitleText from props to BannerTitle  1`] = `
         </StyledBannerSubtitle>
       </Column>
     </Row>
-  </imageBanner__StyledContainer>
-</imageBanner__StyledWrapper>
+  </styles__StyledContainer>
+</styles__StyledWrapper>
 `;
 
 exports[`ImageBanner renders the titleText from props to BannerTitle  1`] = `
-<imageBanner__StyledWrapper
+<styles__StyledWrapper
   className="bannerwrapper"
   color=""
   large="false"
 >
-  <imageBanner__StyledContainer
+  <styles__StyledContainer
     mx="auto"
   >
     <Row>
@@ -63,6 +63,6 @@ exports[`ImageBanner renders the titleText from props to BannerTitle  1`] = `
         <StyledBannerSubtitle />
       </Column>
     </Row>
-  </imageBanner__StyledContainer>
-</imageBanner__StyledWrapper>
+  </styles__StyledContainer>
+</styles__StyledWrapper>
 `;
