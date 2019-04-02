@@ -5,6 +5,7 @@ import ImageBanner from '../components/imageBanner'
 import theme from '../theme/theme'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
+import LatestNewsContainer from '../features/blog/containers/latestNewsContainer'
 import StyledHR from '../components/horizontalRule'
 
 const mapEntries = news => {
@@ -32,6 +33,7 @@ const Blog = props => {
       />
       <ViewsContainer views={mappedViews} />
       <StyledHR />
+      <LatestNewsContainer />
       <NewsContainer articles={mappedArticles} categories={mappedCategories} />
     </Fragment>
   )

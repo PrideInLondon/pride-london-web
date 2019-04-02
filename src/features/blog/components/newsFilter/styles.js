@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import tinycolor from 'tinycolor2'
 import theme from '../../../../theme/theme'
 
-const getMostReadable = color =>
+export const getMostReadable = color =>
   tinycolor
     .mostReadable(color, [theme.colors.white, theme.colors.black], {
       includeFallbackColors: true,
@@ -27,7 +27,7 @@ export const FilterTextContainer = styled.p`
   height: ${props => (props.isButton ? '32px' : '23px')};
   justify-content: center;
   padding: ${props => (props.isButton ? '0 5px' : '0 2px')};
-  margin-right: 5px;
+  margin-right: 10px;
   margin-bottom: 0;
   white-space: nowrap;
 `
