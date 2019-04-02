@@ -39,7 +39,6 @@ const StyledWrapper = styled.div`
   overflow: hidden;
   position: relative;
   background-color: ${props => props.color};
-  z-index: -2;
   height: ${props => props.large && '400px'};
 
   ${props =>

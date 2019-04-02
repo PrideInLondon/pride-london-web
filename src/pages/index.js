@@ -16,8 +16,8 @@ const Home = () => (
       color={theme.colors.eucalyptusGreen}
       large
     >
-      <Button wide={false} primary link white to="/events/">
-        Find out more
+      <Button wide={false} link white primary to="/events/">
+        This year's event
       </Button>
     </ImageBanner>
   </Fragment>
