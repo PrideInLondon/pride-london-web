@@ -22,7 +22,6 @@ const StyledContainer = styled(Container)`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: right bottom;
-      border: 1px solid red;
     `}
 `
 
