@@ -6,17 +6,17 @@ import ImageBanner from './'
 import 'jest-styled-components'
 
 describe('ImageBanner', () => {
-  xit('renders', () => {
+  it('renders', () => {
     const wrapper = shallow(<ImageBanner />)
     expect(wrapper).toMatchSnapshot()
   })
 
-  xit('renders a <BannerTitle />', () => {
+  it('renders a <BannerTitle />', () => {
     const wrapper = shallow(<ImageBanner />)
     expect(wrapper.find(BannerTitle)).toHaveLength(1)
   })
 
-  xit('renders a <BannerSubtitle />', () => {
+  it('renders a <BannerSubtitle />', () => {
     const wrapper = shallow(<ImageBanner />)
     expect(wrapper.find(BannerSubtitle)).toHaveLength(1)
   })
@@ -39,19 +39,7 @@ describe('ImageBanner', () => {
     )
   })
 
-  xit('renders an img with imgSrc from props', () => {
-    const imageSrc = 'https://www.image.com'
-    const wrapper = shallow(<ImageBanner imageSrc={imageSrc} />)
-    expect(wrapper.find('img').props().src).toBe(imageSrc)
-  })
-
-  xit('renders an img with altText from props', () => {
-    const altText = 'background image'
-    const wrapper = shallow(<ImageBanner imageSrc="foo" altText={altText} />)
-    expect(wrapper.find('img').props().alt).toBe(altText)
-  })
-
-  xit('renders the titleText from props to BannerTitle ', () => {
+  it('renders the titleText from props to BannerTitle ', () => {
     const titleText = 'Here is a test title!'
     const wrapper = shallow(<ImageBanner titleText={titleText} />)
     expect(wrapper).toMatchSnapshot()
@@ -63,7 +51,7 @@ describe('ImageBanner', () => {
     ).toBe(titleText)
   })
 
-  xit('renders the subtitleText from props to BannerTitle ', () => {
+  it('renders the subtitleText from props to BannerSubtitle', () => {
     const subtitleText = 'And here is a test subtitle!'
     const wrapper = shallow(<ImageBanner subtitleText={subtitleText} />)
     expect(wrapper).toMatchSnapshot()

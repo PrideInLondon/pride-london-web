@@ -26,6 +26,34 @@ exports[`ImageBanner renders 1`] = `
 </imageBanner__StyledWrapper>
 `;
 
+exports[`ImageBanner renders the subtitleText from props to BannerSubtitle 1`] = `
+<imageBanner__StyledWrapper
+  allowContentUnderflow={false}
+  color=""
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  role="banner"
+>
+  <imageBanner__StyledContainer
+    imageFullWidth={false}
+    imageSrc=""
+    mx="auto"
+  >
+    <imageBanner__StyledRow>
+      <Column
+        width={1}
+      >
+        <StyledBannerTitle />
+        <StyledBannerSubtitle>
+          And here is a test subtitle!
+        </StyledBannerSubtitle>
+      </Column>
+    </imageBanner__StyledRow>
+  </imageBanner__StyledContainer>
+</imageBanner__StyledWrapper>
+`;
+
 exports[`ImageBanner renders the subtitleText from props to BannerTitle  1`] = `
 <imageBanner__StyledWrapper
   allowContentUnderflow={false}
