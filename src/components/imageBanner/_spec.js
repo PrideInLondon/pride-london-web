@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
+import toJSON from 'enzyme-to-json'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
 import ImageBanner from './'
@@ -8,17 +9,23 @@ import 'jest-styled-components'
 describe('ImageBanner', () => {
   it('renders', () => {
     const wrapper = shallow(<ImageBanner />)
-    expect(wrapper).toMatchSnapshot()
+    expect(toJSON(wrapper)).toMatchSnapshot()
   })
 
   it('renders a <BannerTitle />', () => {
     const wrapper = shallow(<ImageBanner />)
-    expect(wrapper.find(BannerTitle)).toHaveLength(1)
+    expect(wrapper.find('StyledBannerTitle')).toHaveLength(1)
   })
 
   it('renders a <BannerSubtitle />', () => {
     const wrapper = shallow(<ImageBanner />)
-    expect(wrapper.find(BannerSubtitle)).toHaveLength(1)
+    expect(wrapper.find('StyledBannerSubtitle')).toHaveLength(1)
+  })
+
+  it('renders a <BannerDate /> if passed a date prop', () => {
+    const date = 'Saturday 6th July'
+    const wrapper = shallow(<ImageBanner date={date} />)
+    expect(wrapper.find('StyledBannerDate')).toHaveLength(1)
   })
 
   it('renders a background image on the wrapper if passed an imageSrc prop and imageFullWidth prop', () => {
@@ -42,7 +49,7 @@ describe('ImageBanner', () => {
   it('renders the titleText from props to BannerTitle ', () => {
     const titleText = 'Here is a test title!'
     const wrapper = shallow(<ImageBanner titleText={titleText} />)
-    expect(wrapper).toMatchSnapshot()
+    expect(toJSON(wrapper)).toMatchSnapshot()
     expect(
       wrapper
         .dive()
@@ -54,7 +61,7 @@ describe('ImageBanner', () => {
   it('renders the subtitleText from props to BannerSubtitle', () => {
     const subtitleText = 'And here is a test subtitle!'
     const wrapper = shallow(<ImageBanner subtitleText={subtitleText} />)
-    expect(wrapper).toMatchSnapshot()
+    expect(toJSON(wrapper)).toMatchSnapshot()
     expect(
       wrapper
         .dive()
