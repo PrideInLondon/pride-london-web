@@ -10,6 +10,7 @@ exports[`Button matches snapshot 1`] = `
   primary={false}
   small={false}
   type="button"
+  white={false}
   wide={true}
 >
   Button
