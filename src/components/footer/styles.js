@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-// import { darken, rgba } from 'polished'
 import Link from 'gatsby-link'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
@@ -23,13 +22,15 @@ export const SponsorsHeading = styled.h3`
 `
 
 export const SocialSection = styled(Column)`
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   justify-content: space-between;
 
   ${media.tablet`
     display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
   `};
 `
 
@@ -72,9 +73,15 @@ export const SocialLink = styled.a`
 `
 
 export const SponsorsSection = styled(Column)`
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-top: 1px solid ${theme.colors.lightGrey};
+  border-bottom: 1px solid ${theme.colors.lightGrey};
+
+  ${media.tablet`
+    padding-top: 40px;
+    padding-bottom: 40px;
+  `};
 `
 
 export const HashTags = styled.div`
@@ -84,6 +91,8 @@ export const HashTags = styled.div`
 
   ${media.tabletMax`
     margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   `};
 
   ${media.desktopMax`
@@ -136,7 +145,93 @@ export const EventsCTALink = styled(Link)`
   `};
 `
 
-export const LegalSection = styled(Column)`
+export const SponsorsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`
+
+export const SponsorsCTAWrapper = styled.div`
+  display: flex;
+  justify-content: center;
   padding-top: 40px;
-  padding-bottom: 40px;
+`
+
+export const SponsorImgWrapper = styled.div`
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-height: 80px;
+    max-width: 122px;
+    height: auto;
+    width: auto;
+    align-self: center;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+`
+
+export const LegalSection = styled(Column)`
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  ${media.tablet`
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+  `};
+`
+export const LegalStrapline = styled.p`
+  color: ${theme.colors.darkGrey};
+  font-size: 0.875rem;
+  margin-bottom: 0;
+
+  ${media.tabletMax`
+    text-align: center;
+  `};
+`
+
+export const LegalList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0 20px 0 0;
+  display: flex;
+  align-self: baseline;
+
+  ${media.tabletMax`
+    justify-content: center;
+    margin: 0 0 20px 0;
+  `};
+`
+
+export const LegalListItem = styled.li`
+  position: relative;
+  &:not(:first-child) {
+    a {
+      padding-left: 20px;
+    }
+  }
+  &:not(:last-child) {
+    &:after {
+      content: '|';
+      color: ${theme.colors.darkGrey};
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    a {
+      padding-right: 20px;
+    }
+  }
+`
+
+export const LegalLink = styled(Link)`
+  color: ${theme.colors.darkGrey};
+  display: block;
+  white-space: nowrap;
+  font-size: 0.875rem;
 `

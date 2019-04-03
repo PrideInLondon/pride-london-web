@@ -1,9 +1,5 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
-// import theme from '../../theme/theme'
-// import { media } from '../../theme/media'
-
 import { Row } from '../grid'
 import Facebook from '../../components/icons/facebook'
 import Twitter from '../../components/icons/twitter'
@@ -11,43 +7,29 @@ import Instagram from '../../components/icons/instagram'
 import Youtube from '../../components/icons/youtube'
 import Linkedin from '../../components/icons/linkedin'
 import Snapchat from '../../components/icons/snapchat'
+import CTALink from '../ctaLink'
 import {
   FooterWrapper,
   StyledFooter,
-  SponsorsHeading,
   SocialList,
   SocialItem,
   SocialLink,
   SocialSection,
   HashTags,
   HashTag,
+  SponsorsHeading,
   SponsorsSection,
+  SponsorsCTAWrapper,
+  SponsorsContainer,
+  SponsorImgWrapper,
   EventsCTAWrapper,
   EventsCTALink,
   LegalSection,
+  LegalStrapline,
+  LegalList,
+  LegalListItem,
+  LegalLink,
 } from './styles'
-
-const SponsorsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`
-
-const SponsorImgWrapper = styled.div`
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  img {
-    max-height: 80px;
-    max-width: 122px;
-    height: auto;
-    width: auto;
-    align-self: center;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }
-`
 
 export const Footer = () => {
   return (
@@ -184,25 +166,39 @@ export const Footer = () => {
                         ({
                           node: { sponsorLogo, sponsorLevel, sponsorName, id },
                         }) =>
-                          console.log(
-                            sponsorLogo,
-                            sponsorLevel,
-                            sponsorName,
-                            id
-                          ) ||
-                          (order === sponsorLevel && (
+                          order === sponsorLevel && (
                             <SponsorImgWrapper key={id}>
                               <img
                                 src={sponsorLogo.sizes.src}
                                 alt={sponsorName}
                               />
                             </SponsorImgWrapper>
-                          ))
+                          )
                       )
                     )}
                   </SponsorsContainer>
+                  <SponsorsCTAWrapper>
+                    <CTALink to="/sponsors">View all</CTALink>
+                    <CTALink to="mailto:sponsor@prideinlondon.org" contact>
+                      Become a partner
+                    </CTALink>
+                  </SponsorsCTAWrapper>
                 </SponsorsSection>
-                <LegalSection>Footer Legal</LegalSection>,
+                <LegalSection width={1}>
+                  <LegalList>
+                    <LegalListItem>
+                      <LegalLink to="/Privacy">Privacy</LegalLink>
+                    </LegalListItem>
+                    <LegalListItem>
+                      <LegalLink to="/media-centre">Media Centre</LegalLink>
+                    </LegalListItem>
+                  </LegalList>
+                  <LegalStrapline>
+                    London LGBT+ Community Pride CIC, PO Box 71920, London NW2
+                    9QN - Registered in England and Wales as a Community
+                    Interest Company (no. 8321669)
+                  </LegalStrapline>
+                </LegalSection>
               </Row>
             </StyledFooter>
           </FooterWrapper>
