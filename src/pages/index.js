@@ -5,51 +5,79 @@ import styled from 'styled-components'
 import theme from '../theme/theme'
 import ImageBanner from '../components/imageBanner'
 import Button from '../components/button'
-import { media } from '../theme/media'
 import eventsBgLeft from '../theme/assets/images/featured-events-bg-left.png'
 import eventsBgRight from '../theme/assets/images/featured-events-bg-right.png'
-import iconChevronLeft from '../theme/assets/images/icon-chevron-left.svg'
-import iconChevronRight from '../theme/assets/images/icon-chevron-right.svg'
-import {
-  Container,
-  Row,
-  StyledFlipMove,
-  FlexColumn,
-  Column,
-} from '../components/grid'
-import { EventListingCard } from '../features/events'
-import { Consumer } from '../components/appContext'
+import EventCards from '../features/home/components/featuredEvents'
+import { media } from '../theme/media'
+import { Container, Column } from '../components/grid'
+
+const FuturedEventsContainer = styled.div`
+  background-color: #282a80;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 30px 0;
+
+  ${media.tablet`
+    padding: 60px 107px;
+  `};
+`
+
+const FuturedEventsHeader = styled.div`
+  display: flex;
+  align-items: flex-start;
+  padding: 0 22px;
+  justify-content: space-between;
+
+  a {
+    display: none;
+
+    ${media.tablet`
+      display: block;
+    `};
+  }
+`
+
+const ButtonMobile = styled.div`
+  padding: 20px 10px 10px;
+  display: block;
+
+  ${media.tablet`
+      display: none;
+    `};
+`
+
+const FuturedEventsTitle = styled.div`
+  h2 {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 600;
+    margin: 0;
+    color: ${theme.colors.white};
+
+    ${media.tablet`
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: 600;
+  `};
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    margin: 0 0 10px;
+    color: ${theme.colors.white};
+    ${media.tablet`
+    font-size: 18px;
+    line-height: 26px;
+  `};
+  }
+`
 
 const ColumnTextCenter = styled(Column)`
   text-align: center;
   width: fit-content;
-`
-const FuturedEventsHeader = styled.div`
-  display: flex;
-  align-items: flex-start;
-  padding: 0 14px;
-  justify-content: space-between;
-`
-
-const FuturedEventsTitle = styled.h2`
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-  margin: 0 0 1.25rem 0;
-  color: ${theme.colors.white};
-
-  ${media.tablet`
-    font-size: 1.5rem;
-    line-height: 1.8125rem;
-  `};
-`
-
-const FuturedEventsContainer = styled.div`
-  background-color: #282a80;
-  padding: 60px 107px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
 `
 const EventsBackgroundLeft = styled.div`
   z-index: -1;
@@ -73,57 +101,6 @@ const EventsBackgroundRight = styled.div`
     max-height: 100%;
   }
 `
-const ButtonSwipeRight = styled.div`
-  width: 60px;
-  height: 60px;
-  border-radius: 4px;
-  background-color: ${theme.colors.white};
-  position: absolute;
-  top: 50%;
-  left: -74px;
-  background: url(${iconChevronLeft}) ${theme.colors.white} 50% 50% no-repeat;
-  transform: translate(0, -50%);
-`
-
-const ButtonSwipeLeft = styled.div`
-  width: 60px;
-  height: 60px;
-  border-radius: 4px;
-  background-color: ${theme.colors.white};
-  position: absolute;
-  top: 50%;
-  right: -74px;
-  background: url(${iconChevronRight}) ${theme.colors.white} 50% 50% no-repeat;
-  transform: translate(0, -50%);
-`
-
-const EventCards = () => {
-  return (
-    <Consumer>
-      {context => (
-        <Fragment>
-          <StyledFlipMove>
-            <ButtonSwipeLeft />
-            {context.filteredEvents.map(event => (
-              <FlexColumn
-                width={[
-                  1, // 100% between 0px screen width and first breakpoint (375px)
-                  1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-                  1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
-                  1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
-                ]}
-                key={event.node.id}
-              >
-                <EventListingCard event={event.node} />
-              </FlexColumn>
-            ))}
-            <ButtonSwipeRight />
-          </StyledFlipMove>
-        </Fragment>
-      )}
-    </Consumer>
-  )
-}
 
 const Home = ({ data: { contentfulHeaderBanner } }) => (
   <Fragment>
@@ -144,26 +121,36 @@ const Home = ({ data: { contentfulHeaderBanner } }) => (
       </ColumnTextCenter>
     </ImageBanner>
     <Container>
-      <Row>
-        <FuturedEventsContainer>
-          <EventsBackgroundLeft>
-            <img alt="backgroundEventsLeft" src={eventsBgLeft} />
-          </EventsBackgroundLeft>
-          <EventsBackgroundRight>
-            <img alt="backgroundEvents" src={eventsBgRight} />
-          </EventsBackgroundRight>
-          <FuturedEventsHeader>
-            <FuturedEventsTitle>
-              Featured events
-              <p>View events drom across the LGBT+ comminuity </p>
-            </FuturedEventsTitle>
-            <Button wide={false} primary link to="/events/">
-              View all events
-            </Button>
-          </FuturedEventsHeader>
-          <EventCards />
-        </FuturedEventsContainer>
-      </Row>
+      <FuturedEventsContainer>
+        <EventsBackgroundLeft>
+          <img alt="backgroundEventsLeft" src={eventsBgLeft} />
+        </EventsBackgroundLeft>
+        <EventsBackgroundRight>
+          <img alt="backgroundEvents" src={eventsBgRight} />
+        </EventsBackgroundRight>
+        <FuturedEventsHeader>
+          <FuturedEventsTitle>
+            <h2>Featured events</h2>
+            <p>View events drom across the LGBT+ comminuity </p>
+          </FuturedEventsTitle>
+          <Button wide={false} link to="/events/">
+            View all events
+          </Button>
+        </FuturedEventsHeader>
+        <EventCards />
+        <ButtonMobile>
+          <Button
+            isTabletHidden
+            secondary
+            small
+            wide={false}
+            link
+            to="/events/"
+          >
+            View all events
+          </Button>
+        </ButtonMobile>
+      </FuturedEventsContainer>
     </Container>
   </Fragment>
 )

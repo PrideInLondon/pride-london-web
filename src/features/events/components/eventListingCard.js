@@ -7,12 +7,11 @@ import theme from '../../../theme/theme'
 import { formatDate } from '../helpers'
 
 const Card = styled(Link)`
-  display: block;
   border-radius: 5px;
   text-decoration: none;
   color: ${theme.colors.black};
   overflow: hidden;
-  display: flex;
+  display: ${displayColumn => (displayColumn ? 'block' : 'flex')};
   position: relative;
   width: 100%;
   min-height: 130px;
@@ -37,6 +36,8 @@ const CardImageOverflow = styled.div`
   flex-shrink: 0;
   height: auto;
   position: relative;
+  padding-top: ${displayColumn => (displayColumn ? '56.25%' : '0')};
+  min-height: 231px;
 
   ${media.tablet`
     padding-top: 56.25%;
@@ -80,31 +81,18 @@ const CardDate = styled.span`
   display: block;
   color: ${theme.colors.darkGrey};
   font-size: 0.875rem;
-  font-family: ${theme.fonts.body};
   line-height: 1.43;
-  font-weight: 400;
   margin-bottom: 0.65rem;
-
-  ${media.tablet`
-    font-family: ${theme.fonts.title};
-    font-weight: 600;
-  `};
+  font-family: ${theme.fonts.title};
+  font-weight: 600;
 `
 
 const CardBullet = styled.span`
-  display: none;
-
-  ${media.tablet`
-    display: inline;
-  `};
+  display: inline;
 `
 
 const CardDateSpan = styled.span`
-  display: block;
-
-  ${media.tablet`
-    display: inline;
-  `};
+  display: inline;
 `
 
 const CardPrice = styled.div`
@@ -126,13 +114,15 @@ const CardPrice = styled.div`
 
 const CardHeading = styled.h3`
   margin: 0;
-  line-height: 1.25rem;
-  font-size: 1rem;
-  color: black;
+  line-height: 26px;
+  font-size: 20px;
+  color: #2d2f7f;
+  max-width: 220px;
 
   ${media.tablet`
-    font-size: 1.5rem;
-    line-height: 1.8125rem;
+    line-height: 30px;
+    font-size: 24px;
+    max-width: 340px;
   `};
 `
 
