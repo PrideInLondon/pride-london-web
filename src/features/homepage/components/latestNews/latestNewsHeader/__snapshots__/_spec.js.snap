@@ -2,9 +2,9 @@
 
 exports[`LatestNewsHeader renders with default values 1`] = `
 <styles__Header>
-  <h2>
+  <styles__Title>
     Latest News
-  </h2>
+  </styles__Title>
   <styles__Link>
     View all news ›
   </styles__Link>
