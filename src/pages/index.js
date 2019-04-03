@@ -9,6 +9,7 @@ import EventCards from '../features/home/components/featuredEvents'
 import { media } from '../theme/media'
 import { Container } from '../components/grid'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
+import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
 
 const FuturedEventsContainer = styled.div`
   background-color: #282a80;
@@ -145,6 +146,7 @@ const Home = () => (
         </ButtonMobile>
       </FuturedEventsContainer>
     </Container>
+    <LatestNewsContainer />
   </Fragment>
 )
 
