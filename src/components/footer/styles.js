@@ -135,3 +135,8 @@ export const EventsCTALink = styled(Link)`
     font-size: 0.9375rem;
   `};
 `
+
+export const LegalSection = styled(Column)`
+  padding-top: 40px;
+  padding-bottom: 40px;
+`

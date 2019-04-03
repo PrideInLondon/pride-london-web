@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 // import theme from '../../theme/theme'
 // import { media } from '../../theme/media'
 
@@ -18,12 +18,36 @@ import {
   SocialList,
   SocialItem,
   SocialLink,
+  SocialSection,
   HashTags,
   HashTag,
   SponsorsSection,
   EventsCTAWrapper,
   EventsCTALink,
+  LegalSection,
 } from './styles'
+
+const SponsorsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`
+
+const SponsorImgWrapper = styled.div`
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-height: 80px;
+    max-width: 122px;
+    height: auto;
+    width: auto;
+    align-self: center;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+`
 
 export const Footer = () => {
   return (
@@ -31,10 +55,11 @@ export const Footer = () => {
       query={graphql`
         query footerSponsorsQuery {
           allContentfulSponsor(
-            filter: { sponsorLevel: { regex: "/Headline|Gold/" } }
+            filter: { sponsorLevel: { regex: "/Headline|Gold|Silver|Bronze/" } }
           ) {
             edges {
               node {
+                id
                 sponsorName
                 sponsorUrl
                 sponsorLogo {
@@ -51,6 +76,7 @@ export const Footer = () => {
       render={data => {
         const { edges } = data.allContentfulSponsor
         const iconSize = 20
+        const sponsorOrder = ['Headline', 'Gold', 'Silver', 'Bronze']
         console.log(edges)
         return (
           <FooterWrapper>
@@ -152,8 +178,31 @@ export const Footer = () => {
                 </SocialSection>
                 <SponsorsSection width={1}>
                   <SponsorsHeading>Our amazing partners</SponsorsHeading>
-                  {/* {edges.map(sponsor => sponsor)} */}
+                  <SponsorsContainer>
+                    {sponsorOrder.map(order =>
+                      edges.map(
+                        ({
+                          node: { sponsorLogo, sponsorLevel, sponsorName, id },
+                        }) =>
+                          console.log(
+                            sponsorLogo,
+                            sponsorLevel,
+                            sponsorName,
+                            id
+                          ) ||
+                          (order === sponsorLevel && (
+                            <SponsorImgWrapper key={id}>
+                              <img
+                                src={sponsorLogo.sizes.src}
+                                alt={sponsorName}
+                              />
+                            </SponsorImgWrapper>
+                          ))
+                      )
+                    )}
+                  </SponsorsContainer>
                 </SponsorsSection>
+                <LegalSection>Footer Legal</LegalSection>,
               </Row>
             </StyledFooter>
           </FooterWrapper>
