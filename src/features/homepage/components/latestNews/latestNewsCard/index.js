@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NewsDate from '../../newsDate'
+import NewsDate from '../../../../blog/components/newsDate'
 import {
   Card,
   CardHeader,

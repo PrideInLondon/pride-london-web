@@ -1,9 +1,9 @@
 import React from 'react'
-import { Header, Link } from './styles'
+import { Header, Link, Title } from './styles'
 
 const LatestNewsHeader = () => (
   <Header>
-    <h2>Latest News</h2>
+    <Title>Latest News</Title>
     <Link>View all news ›</Link>
   </Header>
 )

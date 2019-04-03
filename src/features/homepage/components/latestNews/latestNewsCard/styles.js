@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { getMostReadable } from '../../newsFilter/styles'
+import { getMostReadable } from '../../../../blog/components/newsFilter/styles'
 import theme from '../../../../../theme/theme'
 
 export const CardTitle = styled.h3`
