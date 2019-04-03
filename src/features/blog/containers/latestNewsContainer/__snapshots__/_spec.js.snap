@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LatestNewsContainer renders with default values 1`] = `
+<styles__Container>
+  <Row>
+    <grid__FlexColumn
+      width={
+        Array [
+          1,
+          1,
+          1,
+          1,
+        ]
+      }
+    >
+      <LatestNewsHeader />
+    </grid__FlexColumn>
+  </Row>
+  <Row>
+    <StaticQuery
+      data={
+        Object {
+          "data": Object {
+            "allContentfulNews": Object {
+              "edges": Array [
+                Object {
+                  "node": Object {
+                    "date": "2019-04-01T20:30+00:00",
+                    "id": "12f80ebd-6465-5042-9b26-a07e5946b0e7",
+                    "images": Array [
+                      Object {
+                        "file": Object {
+                          "url": "//images.ctfassets.net/n2o4hgsv6wcx/5Dt5BK1ydaGKkW6s60kii2/99ce4f6dbf5f3242212c39112ea2c94e/monty-python-black-knight-2.png",
+                        },
+                      },
+                    ],
+                    "newsCategory": Object {
+                      "hexColour": "#ed2c6e",
+                      "title": "Research",
+                    },
+                    "title": "This is still a featured article 2 with Image",
+                  },
+                },
+                Object {
+                  "node": Object {
+                    "date": "2019-04-01T20:25+00:00",
+                    "id": "d67f467d-f2f0-5039-84d4-0068b6bf35e3",
+                    "images": Array [
+                      Object {
+                        "file": Object {
+                          "url": "//images.ctfassets.net/n2o4hgsv6wcx/5Dt5BK1ydaGKkW6s60kii2/99ce4f6dbf5f3242212c39112ea2c94e/monty-python-black-knight-2.png",
+                        },
+                      },
+                    ],
+                    "newsCategory": Object {
+                      "hexColour": "#ed2c6e",
+                      "title": "Research",
+                    },
+                    "title": "This is still a featured article 3 with Image",
+                  },
+                },
+                Object {
+                  "node": Object {
+                    "date": "2019-04-01T20:20+00:00",
+                    "id": "e4c062b9-29ac-5e8a-882d-6c47c0b3f90c",
+                    "images": Array [
+                      Object {
+                        "file": Object {
+                          "url": "//images.ctfassets.net/n2o4hgsv6wcx/5Dt5BK1ydaGKkW6s60kii2/99ce4f6dbf5f3242212c39112ea2c94e/monty-python-black-knight-2.png",
+                        },
+                      },
+                    ],
+                    "newsCategory": Object {
+                      "hexColour": "#ed2c6e",
+                      "title": "Research",
+                    },
+                    "title": "This is still a featured article 1 with Image",
+                  },
+                },
+              ],
+            },
+          },
+        }
+      }
+      query="2270872770"
+      render={[Function]}
+    />
+  </Row>
+</styles__Container>
+`;

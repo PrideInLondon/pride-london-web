@@ -23,11 +23,13 @@ LatestNews.propTypes = {
     hexColour: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,
-  images: PropTypes.arrayOf({
-    file: PropTypes.shape({
-      url: PropTypes.string,
-    }),
-  }).isRequired,
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string,
+      }),
+    })
+  ).isRequired,
   title: PropTypes.string.isRequired,
 }
 
