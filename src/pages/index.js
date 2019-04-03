@@ -17,7 +17,7 @@ const FuturedEventsContainer = styled.div`
   position: relative;
   z-index: 1;
   padding: 30px 0;
-
+  margin-top: -33vh;
   ${media.tablet`
     padding: 60px 107px;
   `};
@@ -114,6 +114,7 @@ const Home = () => (
         This year's event
       </Button>
     </ImageBanner>
+
     <Container>
       <FuturedEventsContainer>
         <EventsBackgroundLeft>
@@ -146,6 +147,7 @@ const Home = () => (
         </ButtonMobile>
       </FuturedEventsContainer>
     </Container>
+
     <LatestNewsContainer />
   </Fragment>
 )

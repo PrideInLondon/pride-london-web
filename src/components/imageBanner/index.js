@@ -11,7 +11,7 @@ const StyledContainer = styled(Container)`
   flex-grow: 1;
   align-items: center;
   display: flex;
-  padding-bottom: 35px;
+  padding-bottom: 33vh;
   align-self: stretch;
 
   ${props =>
