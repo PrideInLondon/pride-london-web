@@ -14,10 +14,8 @@ describe('The Events You May Like component', () => {
         },
         title: 'title',
       },
-      node: {
-        startTime: new Date(),
-      },
-      time: new Date(),
+      startTime: '19/04/2019',
+      time: '19/04/2019',
     },
   }
 
