@@ -2,16 +2,16 @@
 
 exports[`BannerTitle renders 1`] = `
 <bannerTitle__BannerTitleWrapper>
-  <TestBannerTitle>
+  <bannerTitle__BannerTitle>
     foo
-  </TestBannerTitle>
+  </bannerTitle__BannerTitle>
 </bannerTitle__BannerTitleWrapper>
 `;
 
 exports[`BannerTitle renders child text  1`] = `
 <bannerTitle__BannerTitleWrapper>
-  <TestBannerTitle>
+  <bannerTitle__BannerTitle>
     Here is a test title!
-  </TestBannerTitle>
+  </bannerTitle__BannerTitle>
 </bannerTitle__BannerTitleWrapper>
 `;

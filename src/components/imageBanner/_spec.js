@@ -1,5 +1,6 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
+import toJSON from 'enzyme-to-json'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
 import ImageBanner from './'
@@ -8,45 +9,47 @@ import 'jest-styled-components'
 describe('ImageBanner', () => {
   it('renders', () => {
     const wrapper = shallow(<ImageBanner />)
-    expect(wrapper).toMatchSnapshot()
+    expect(toJSON(wrapper)).toMatchSnapshot()
   })
 
   it('renders a <BannerTitle />', () => {
     const wrapper = shallow(<ImageBanner />)
-    expect(wrapper.find(BannerTitle)).toHaveLength(1)
+    expect(wrapper.find('StyledBannerTitle')).toHaveLength(1)
   })
 
   it('renders a <BannerSubtitle />', () => {
     const wrapper = shallow(<ImageBanner />)
-    expect(wrapper.find(BannerSubtitle)).toHaveLength(1)
+    expect(wrapper.find('StyledBannerSubtitle')).toHaveLength(1)
   })
 
-  it('renders an img if passed an imageSrc prop', () => {
-    const wrapper = shallow(<ImageBanner imageSrc="foo" />)
-    expect(wrapper.find('img')).toHaveLength(1)
+  it('renders a <BannerDate /> if passed a date prop', () => {
+    const date = 'Saturday 6th July'
+    const wrapper = shallow(<ImageBanner date={date} />)
+    expect(wrapper.find('StyledBannerDate')).toHaveLength(1)
   })
 
-  it('renders render an img if not passed an imageSrc prop', () => {
-    const wrapper = shallow(<ImageBanner />)
-    expect(wrapper.find('img')).toHaveLength(0)
+  it('renders a background image on the wrapper if passed an imageSrc prop and imageFullWidth prop', () => {
+    const src = 'foo'
+    const wrapper = mount(<ImageBanner imageSrc={src} imageFullWidth />)
+    expect(wrapper.find('imageBanner__StyledWrapper')).toHaveStyleRule(
+      'background-image',
+      `url(${src})`
+    )
   })
 
-  it('renders an img with imgSrc from props', () => {
-    const imageSrc = 'https://www.image.com'
-    const wrapper = shallow(<ImageBanner imageSrc={imageSrc} />)
-    expect(wrapper.find('img').props().src).toBe(imageSrc)
-  })
-
-  it('renders an img with altText from props', () => {
-    const altText = 'background image'
-    const wrapper = shallow(<ImageBanner imageSrc="foo" altText={altText} />)
-    expect(wrapper.find('img').props().alt).toBe(altText)
+  it('renders a background image on the container if passed an imageSrc prop', () => {
+    const src = 'foo'
+    const wrapper = mount(<ImageBanner imageSrc={src} />)
+    expect(wrapper.find('imageBanner__StyledContainer')).toHaveStyleRule(
+      'background-image',
+      `url(${src})`
+    )
   })
 
   it('renders the titleText from props to BannerTitle ', () => {
     const titleText = 'Here is a test title!'
     const wrapper = shallow(<ImageBanner titleText={titleText} />)
-    expect(wrapper).toMatchSnapshot()
+    expect(toJSON(wrapper)).toMatchSnapshot()
     expect(
       wrapper
         .dive()
@@ -55,10 +58,10 @@ describe('ImageBanner', () => {
     ).toBe(titleText)
   })
 
-  it('renders the subtitleText from props to BannerTitle ', () => {
+  it('renders the subtitleText from props to BannerSubtitle', () => {
     const subtitleText = 'And here is a test subtitle!'
     const wrapper = shallow(<ImageBanner subtitleText={subtitleText} />)
-    expect(wrapper).toMatchSnapshot()
+    expect(toJSON(wrapper)).toMatchSnapshot()
     expect(
       wrapper
         .dive()

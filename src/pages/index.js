@@ -1,63 +1,26 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import styled from 'styled-components'
 import ImageBanner from '../components/imageBanner'
 import Button from '../components/button'
-import { Column } from '../components/grid'
+import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
+import theme from '../theme/theme'
 
-const ColumnTextCenter = styled(Column)`
-  text-align: center;
-  width: fit-content;
-`
-
-const Home = ({ data: { contentfulHeaderBanner } }) => (
+const Home = () => (
   <Fragment>
     <ImageBanner
-      titleText={contentfulHeaderBanner.heading}
-      subtitleText={contentfulHeaderBanner.subHeading}
-      imageSrc={
-        contentfulHeaderBanner && contentfulHeaderBanner.heroImage.file.url
+      titleText={'Pride in London'}
+      subtitleText={
+        'The UK’s biggest, most diverse pride. A  home for every part of London’s LGBT+ community'
       }
-      altText={contentfulHeaderBanner.heroImage.title}
-      color={contentfulHeaderBanner.backgroundColour}
-      large="true"
+      date={'Saturday 6 July'}
+      imageSrc={BannerImg}
+      color={theme.colors.eucalyptusGreen}
+      large
     >
-      <ColumnTextCenter>
-        <Button wide={false} primary link to="/events/">
-          Find out more
-        </Button>
-      </ColumnTextCenter>
+      <Button wide={false} link white primary to="/events/">
+        This year's event
+      </Button>
     </ImageBanner>
   </Fragment>
 )
 
 export default Home
-
-Home.propTypes = {
-  data: PropTypes.object,
-}
-
-Home.defaultProps = {
-  data: {},
-}
-
-export const homePageQuery = graphql`
-  query contentfulHeaderBanner {
-    contentfulHeaderBanner {
-      title
-      heading
-      headingLine2
-      backgroundColour
-      heroImage {
-        file {
-          url
-          fileName
-          contentType
-        }
-        title
-      }
-      subHeading
-    }
-  }
-`
