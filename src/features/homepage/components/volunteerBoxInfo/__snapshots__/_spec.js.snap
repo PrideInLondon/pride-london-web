@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
+<Fragment>
+  <styles__BackgroundVolunteer>
+    <picture>
+      <source
+        media="(min-width: 768px)"
+        srcSet=""
+      />
+      <img
+        alt="Packhelp Logo"
+        src=""
+      />
+    </picture>
+  </styles__BackgroundVolunteer>
+  <styles__ContentVolunteer>
+    <h2>
+      Volunteer
+    </h2>
+    <p>
+      Pride in London is run almost entirely by volunteers. We could use people like you to help us organise the best event that we can.
+    </p>
+    <Button
+      className=""
+      disabled={false}
+      fullmobile={false}
+      link={true}
+      onClick={null}
+      primary={true}
+      small={false}
+      to="#"
+      type="button"
+      wide={false}
+    >
+      Help keep Pride going
+    </Button>
+  </styles__ContentVolunteer>
+</Fragment>
+`;

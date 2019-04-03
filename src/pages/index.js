@@ -4,8 +4,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import ImageBanner from '../components/imageBanner'
 import Button from '../components/button'
-import { Column, Container, Row } from '../components/grid'
-import volunteerBg from '../theme/assets/images/volunteer-bg.jpg'
+import { Column, Container } from '../components/grid'
 import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 
 const ColumnTextCenter = styled(Column)`
@@ -15,10 +14,7 @@ const ColumnTextCenter = styled(Column)`
 
 const SectionVolunteer = styled.div`
   width: 100%;
-  background: url(${volunteerBg}) no-repeat;
-  padding-top: 18%;
   padding-bottom: 50px;
-  background-size: contain;
   display: block;
 `
 
@@ -43,9 +39,7 @@ const Home = ({ data: { contentfulHeaderBanner } }) => (
 
     <SectionVolunteer>
       <Container>
-        <Row>
-          <VolunteerBoxInfo />
-        </Row>
+        <VolunteerBoxInfo />
       </Container>
     </SectionVolunteer>
   </Fragment>
