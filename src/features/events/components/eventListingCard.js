@@ -130,8 +130,8 @@ export const EventListingCard = props => {
   const { event } = props
   const { date, time } = formatDate(event)
   return (
-    <Card to={`/events/${event.id}`}>
-      <CardImageOverflow>
+    <Card to={`/events/${event.id}`} displayColumn>
+      <CardImageOverflow displayColumn>
         <CardImageWrapper
           className="card-img-wrapper"
           src={`${
