@@ -156,13 +156,13 @@ const Home = () => (
       </FuturedEventsContainer>
     </Container>
 
+    <LatestNewsContainer />
+
     <SectionVolunteer>
       <Container>
         <VolunteerBoxInfo />
       </Container>
     </SectionVolunteer>
-
-    <LatestNewsContainer />
   </Fragment>
 )
 
