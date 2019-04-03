@@ -13,7 +13,7 @@ exports[`Featured Event Content renders with default values 1`] = `
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
       "componentStyle": ComponentStyle {
-        "componentId": "styles__FeaturedEventContent-sc-1bxfoj9-0",
+        "componentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
         "isStatic": true,
         "rules": Array [
           ".slick-list{overflow:visible;}.slick-slide{width:85vw;padding:0 6px;}",
@@ -48,7 +48,7 @@ exports[`Featured Event Content renders with default values 1`] = `
       "displayName": "styles__FeaturedEventContent",
       "foldedComponentIds": Array [],
       "render": [Function],
-      "styledComponentId": "styles__FeaturedEventContent-sc-1bxfoj9-0",
+      "styledComponentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
       "target": "div",
       "toString": [Function],
       "warnTooManyClasses": [Function],
