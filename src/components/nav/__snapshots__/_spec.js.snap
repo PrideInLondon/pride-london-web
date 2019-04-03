@@ -49,57 +49,30 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
               item={
                 Object {
                   "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
-                  "id": "nav-learn",
+                  "id": "nav-about",
                   "submenu": Array [
                     Object {
-                      "heading": "Jelly-o chupa chups",
                       "links": Array [
                         Object {
-                          "title": "Cupcake ipsum dolor sit",
+                          "title": "Our mission",
                           "url": "/",
                         },
                         Object {
-                          "title": "Cupcake ipsum sit",
+                          "title": "A history of Pride",
                           "url": "/",
                         },
                         Object {
-                          "title": "Cupcake dolor sit",
+                          "title": "Campaign",
                           "url": "/",
                         },
                         Object {
-                          "title": "Cupcake ipsum dolor",
-                          "url": "/",
-                        },
-                      ],
-                    },
-                    Object {
-                      "heading": "Icing gummi bears powder",
-                      "links": Array [
-                        Object {
-                          "title": "Amet dragée donut",
-                          "url": "/",
-                        },
-                        Object {
-                          "title": "Amet dragée chocolate donut",
-                          "url": "/",
-                        },
-                      ],
-                    },
-                    Object {
-                      "heading": "Bear claw pastry bonbon",
-                      "links": Array [
-                        Object {
-                          "title": "Carrot cake fruitcake",
-                          "url": "/",
-                        },
-                        Object {
-                          "title": "Carrot cake muffin fruitcake",
+                          "title": "Our impact",
                           "url": "/",
                         },
                       ],
                     },
                   ],
-                  "title": "Learn",
+                  "title": "About",
                   "url": "/",
                 }
               }
@@ -108,23 +81,142 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
               item={
                 Object {
                   "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
-                  "id": "nav-attend",
+                  "id": "nav-parade-day",
                   "submenu": Array [
                     Object {
-                      "heading": "Jelly beans sesame snaps",
+                      "heading": "Parade",
                       "links": Array [
                         Object {
-                          "title": "Cotton candy dragée",
+                          "title": "Watch the parade",
                           "url": "/",
                         },
                         Object {
-                          "title": "Dragée oat cake",
+                          "title": "Parade groups",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                    Object {
+                      "heading": "Stages",
+                      "links": Array [
+                        Object {
+                          "title": "Cabaret stage",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Trafalgar Square",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Women's stage",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "World stage",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                    Object {
+                      "heading": "Community Village",
+                      "links": Array [
+                        Object {
+                          "title": "Stalls",
                           "url": "/",
                         },
                       ],
                     },
                   ],
-                  "title": "Attend",
+                  "title": "Parade Day",
+                  "url": "/",
+                }
+              }
+            />
+            <NavItem
+              item={
+                Object {
+                  "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
+                  "id": "nav-events",
+                  "submenu": Array [
+                    Object {
+                      "heading": "What's on",
+                      "links": Array [
+                        Object {
+                          "title": "Upcoming events",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Host an event",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                    Object {
+                      "heading": "Pride's Got Talent",
+                      "links": Array [
+                        Object {
+                          "title": "This year's competition",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "How to take part",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Hall of fame",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                  ],
+                  "title": "Events",
+                  "url": "/",
+                }
+              }
+            />
+            <NavItem
+              item={
+                Object {
+                  "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
+                  "id": "nav-support-us",
+                  "submenu": Array [
+                    Object {
+                      "heading": "As an individual",
+                      "links": Array [
+                        Object {
+                          "title": "Volunteer",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Make a donation",
+                          "url": "/",
+                        },
+                        Object {
+                          "title": "Buy merchandise",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                    Object {
+                      "heading": "As a business",
+                      "links": Array [
+                        Object {
+                          "title": "Partner with us",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                    Object {
+                      "heading": "As an MP",
+                      "links": Array [
+                        Object {
+                          "title": "Sign the poilitical pledge",
+                          "url": "/",
+                        },
+                      ],
+                    },
+                  ],
+                  "title": "Support us",
                   "url": "/",
                 }
               }

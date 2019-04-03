@@ -21,6 +21,7 @@ const BannerSubtitle = styled.h2`
 const BannerSubtitleWrapper = styled.div`
   max-width: 255px;
   margin-left: 10px;
+  margin-bottom: 20px;
 
   ${media.tablet`  
     max-width: 520px;
