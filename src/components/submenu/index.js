@@ -1,5 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
+import shortid from 'shortid'
 import theme from '../../theme/theme'
 import { Container } from '../grid'
 import { checkBreakpoint } from '../../utilities'
@@ -65,8 +66,10 @@ const Submenu = props => {
           </PanelInfoWrapper>
           <PanelListWrapper isOpen={isOpen}>
             {submenu.map(submenuList => (
-              <PanelListSection key={submenuList.heading}>
-                <Heading>{submenuList.heading}</Heading>
+              <PanelListSection key={submenuList.heading || shortid.generate()}>
+                {submenuList.heading && (
+                  <Heading>{submenuList.heading}</Heading>
+                )}
                 <PanelList>
                   {submenuList.links.map(link => (
                     <li key={link.title}>
