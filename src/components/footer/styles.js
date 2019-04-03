@@ -42,7 +42,6 @@ export const SocialList = styled.ul`
 
   ${media.tabletMax`
     justify-content: center;
-    margin: 0 0 20px 0;
   `};
 `
 
@@ -90,9 +89,8 @@ export const HashTags = styled.div`
   justify-content: center;
 
   ${media.tabletMax`
-    margin-bottom: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   `};
 
   ${media.desktopMax`
@@ -154,7 +152,11 @@ export const SponsorsContainer = styled.div`
 export const SponsorsCTAWrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 20px;
+
+  ${media.tablet`
+    padding-top: 40px;
+  `};
 `
 
 export const SponsorImgWrapper = styled.div`
@@ -162,14 +164,29 @@ export const SponsorImgWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-basis: 33.3333%;
+  max-width: 122px;
+
+  ${media.tablet`
+    flex-basis: 16.6667%;
+    max-width: 16.6667%;
+  `};
+
+  ${media.desktopHD`
+    flex-basis: 12.5%;
+    max-width: 12.5%;
+  `};
+
   img {
     max-height: 80px;
-    max-width: 122px;
+    max-width: 100%;
     height: auto;
     width: auto;
     align-self: center;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    margin: 0 auto;
+    flex-shrink: 0; /* needed to stop images stretching on IE11 */
   }
 `
 

@@ -31,35 +31,36 @@ import {
   LegalLink,
 } from './styles'
 
+const query = graphql`
+  query footerSponsorsQuery {
+    allContentfulSponsor(
+      filter: { sponsorLevel: { regex: "/Headline|Gold|Silver|Bronze/" } }
+    ) {
+      edges {
+        node {
+          id
+          sponsorName
+          sponsorUrl
+          sponsorLogo {
+            sizes(maxHeight: 168, quality: 90) {
+              src
+            }
+          }
+          sponsorLevel
+        }
+      }
+    }
+  }
+`
+
 export const Footer = () => {
   return (
     <StaticQuery
-      query={graphql`
-        query footerSponsorsQuery {
-          allContentfulSponsor(
-            filter: { sponsorLevel: { regex: "/Headline|Gold|Silver|Bronze/" } }
-          ) {
-            edges {
-              node {
-                id
-                sponsorName
-                sponsorUrl
-                sponsorLogo {
-                  sizes(maxHeight: 168, quality: 90) {
-                    src
-                  }
-                }
-                sponsorLevel
-              }
-            }
-          }
-        }
-      `}
+      query={query}
       render={data => {
         const { edges } = data.allContentfulSponsor
         const iconSize = 20
         const sponsorOrder = ['Headline', 'Gold', 'Silver', 'Bronze']
-        console.log(edges)
         return (
           <FooterWrapper>
             <StyledFooter>
@@ -187,10 +188,12 @@ export const Footer = () => {
                 <LegalSection width={1}>
                   <LegalList>
                     <LegalListItem>
-                      <LegalLink to="/Privacy">Privacy</LegalLink>
+                      <LegalLink to="/privacy-and-cookies">
+                        Privacy &amp; cookies
+                      </LegalLink>
                     </LegalListItem>
                     <LegalListItem>
-                      <LegalLink to="/media-centre">Media Centre</LegalLink>
+                      <LegalLink to="/media-centre">Media centre</LegalLink>
                     </LegalListItem>
                   </LegalList>
                   <LegalStrapline>

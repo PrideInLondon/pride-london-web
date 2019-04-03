@@ -28,7 +28,7 @@ const Title = styled.h3`
 const SponsorsSubsection = ({ title, icon, children }) => (
   <Fragment>
     <TitleWrapper>
-      {icon && icon}
+      {icon}
       <Title>{title}</Title>
     </TitleWrapper>
     <BadgesContainer>{children}</BadgesContainer>
