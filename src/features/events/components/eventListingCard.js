@@ -11,7 +11,7 @@ const Card = styled(Link)`
   text-decoration: none;
   color: ${theme.colors.black};
   overflow: hidden;
-  display: ${displayColumn => (displayColumn ? 'block' : 'flex')};
+  display: ${props => (props.displayColumn ? 'block' : 'flex')};
   position: relative;
   width: 100%;
   min-height: 130px;
@@ -36,7 +36,7 @@ const CardImageOverflow = styled.div`
   flex-shrink: 0;
   height: auto;
   position: relative;
-  padding-top: ${displayColumn => (displayColumn ? '56.25%' : '0')};
+  padding-top: ${props => (props.displayColumn ? '56.25%' : '0')};
   min-height: 231px;
 
   ${media.tablet`
