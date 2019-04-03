@@ -10,7 +10,7 @@ export const ContentVolunteer = styled.div`
   background-size: 59% 42%;
   padding: 20px 0 30px;
   color: #fff;
-  margin: -10% 20px 0px;
+  margin: -20% 20px 0px;
   text-align: center;
   z-index: 99999;
   position: relative;
