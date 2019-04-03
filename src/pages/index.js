@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import ImageBanner from '../components/imageBanner'
-
 import Button from '../components/button'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import theme from '../theme/theme'
