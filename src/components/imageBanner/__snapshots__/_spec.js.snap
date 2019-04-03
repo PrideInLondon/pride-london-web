@@ -2,35 +2,45 @@
 
 exports[`ImageBanner renders 1`] = `
 <imageBanner__StyledWrapper
-  className="bannerwrapper"
+  allowContentUnderflow={false}
   color=""
-  large="false"
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  role="banner"
 >
   <imageBanner__StyledContainer
+    imageFullWidth={false}
+    imageSrc=""
     mx="auto"
   >
-    <Row>
+    <imageBanner__StyledRow>
       <Column
         width={1}
       >
         <StyledBannerTitle />
         <StyledBannerSubtitle />
       </Column>
-    </Row>
+    </imageBanner__StyledRow>
   </imageBanner__StyledContainer>
 </imageBanner__StyledWrapper>
 `;
 
-exports[`ImageBanner renders the subtitleText from props to BannerTitle  1`] = `
+exports[`ImageBanner renders the subtitleText from props to BannerSubtitle 1`] = `
 <imageBanner__StyledWrapper
-  className="bannerwrapper"
+  allowContentUnderflow={false}
   color=""
-  large="false"
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  role="banner"
 >
   <imageBanner__StyledContainer
+    imageFullWidth={false}
+    imageSrc=""
     mx="auto"
   >
-    <Row>
+    <imageBanner__StyledRow>
       <Column
         width={1}
       >
@@ -39,21 +49,26 @@ exports[`ImageBanner renders the subtitleText from props to BannerTitle  1`] = `
           And here is a test subtitle!
         </StyledBannerSubtitle>
       </Column>
-    </Row>
+    </imageBanner__StyledRow>
   </imageBanner__StyledContainer>
 </imageBanner__StyledWrapper>
 `;
 
 exports[`ImageBanner renders the titleText from props to BannerTitle  1`] = `
 <imageBanner__StyledWrapper
-  className="bannerwrapper"
+  allowContentUnderflow={false}
   color=""
-  large="false"
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  role="banner"
 >
   <imageBanner__StyledContainer
+    imageFullWidth={false}
+    imageSrc=""
     mx="auto"
   >
-    <Row>
+    <imageBanner__StyledRow>
       <Column
         width={1}
       >
@@ -62,7 +77,7 @@ exports[`ImageBanner renders the titleText from props to BannerTitle  1`] = `
         </StyledBannerTitle>
         <StyledBannerSubtitle />
       </Column>
-    </Row>
+    </imageBanner__StyledRow>
   </imageBanner__StyledContainer>
 </imageBanner__StyledWrapper>
 `;

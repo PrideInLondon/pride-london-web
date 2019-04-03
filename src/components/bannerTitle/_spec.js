@@ -12,7 +12,7 @@ describe('BannerTitle', () => {
 
   it('renders a <h1 />', () => {
     const wrapper = shallow(<BannerTitle>foo</BannerTitle>)
-    expect(wrapper.find('TestBannerTitle')).toHaveLength(1)
+    expect(wrapper.find('bannerTitle__BannerTitle')).toHaveLength(1)
   })
 
   it('renders child text ', () => {
