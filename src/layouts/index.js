@@ -2,10 +2,12 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import { ThemeProvider } from 'styled-components'
 import { Provider } from '../components/appContext'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 import favicon from '../favicon.ico'
+import theme from '../theme/theme'
 
 import './index.css'
 import './fonts.css'
@@ -45,41 +47,43 @@ const query = graphql`
 `
 
 const Layout = props => (
-  <StaticQuery
-    query={query}
-    render={data => (
-      <Provider events={data.allContentfulEvent.edges}>
-        <Fragment>
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
-            ]}
-            link={[
-              {
-                rel: 'icon',
-                href: favicon,
-              },
-            ]}
-            htmlAttributes={{
-              lang: 'en-gb',
-            }}
-            script={[
-              {
-                src:
-                  'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.2.5/polyfill.js',
-              },
-            ]}
-          />
+  <ThemeProvider theme={theme}>
+    <StaticQuery
+      query={query}
+      render={data => (
+        <Provider events={data.allContentfulEvent.edges}>
+          <Fragment>
+            <Helmet
+              title={data.site.siteMetadata.title}
+              meta={[
+                { name: 'description', content: 'Sample' },
+                { name: 'keywords', content: 'sample, something' },
+              ]}
+              link={[
+                {
+                  rel: 'icon',
+                  href: favicon,
+                },
+              ]}
+              htmlAttributes={{
+                lang: 'en-gb',
+              }}
+              script={[
+                {
+                  src:
+                    'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.2.5/polyfill.js',
+                },
+              ]}
+            />
 
-          <Nav />
-          <main>{props.children}</main>
-          <Footer />
-        </Fragment>
-      </Provider>
-    )}
-  />
+            <Nav />
+            <main>{props.children}</main>
+            <Footer />
+          </Fragment>
+        </Provider>
+      )}
+    />
+  </ThemeProvider>
 )
 
 Layout.propTypes = {
