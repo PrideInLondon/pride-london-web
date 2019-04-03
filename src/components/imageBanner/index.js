@@ -11,7 +11,7 @@ const StyledContainer = styled(Container)`
   flex-grow: 1;
   align-items: center;
   display: flex;
-  padding-bottom: 15vh;
+  padding-bottom: 17vh;
   align-self: stretch;
 
   ${media.tablet`
