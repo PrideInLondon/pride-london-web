@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Instagram = () => (
+const Instagram = ({ width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="30"
-    height="30"
+    width={width}
+    height={height}
     viewBox="0 0 30 30"
   >
     <g fill="#2CDA9D" fillRule="evenodd">
@@ -13,5 +14,15 @@ const Instagram = () => (
     </g>
   </svg>
 )
+
+Instagram.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+}
+
+Instagram.defaultProps = {
+  width: 30,
+  height: 30,
+}
 
 export default Instagram

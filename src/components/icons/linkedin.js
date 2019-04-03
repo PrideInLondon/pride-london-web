@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Linkedin = () => (
+const Linkedin = ({ width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="30"
-    height="30"
+    width={width}
+    height={height}
     viewBox="0 0 30 30"
   >
     <path
@@ -14,5 +15,15 @@ const Linkedin = () => (
     />
   </svg>
 )
+
+Linkedin.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+}
+
+Linkedin.defaultProps = {
+  width: 30,
+  height: 30,
+}
 
 export default Linkedin

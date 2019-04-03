@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Youtube = () => (
+const Snapchat = ({ width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="30"
-    height="29"
+    width={width}
+    height={height}
     viewBox="0 0 30 29"
   >
     <path
@@ -15,4 +16,14 @@ const Youtube = () => (
   </svg>
 )
 
-export default Youtube
+Snapchat.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+}
+
+Snapchat.defaultProps = {
+  width: 30,
+  height: 29,
+}
+
+export default Snapchat
