@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from '../components/appContext'
 import Nav from '../components/nav'
-import Footer from '../components/footer'
+import Footer from '../components/footer/footerQuery'
 import favicon from '../favicon.ico'
 import theme from '../theme/theme'
 
