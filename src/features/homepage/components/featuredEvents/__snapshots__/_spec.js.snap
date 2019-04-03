@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventCards renders with default values 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
+
+exports[`Featured Event Content renders with default values 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
+        "isStatic": true,
+        "rules": Array [
+          ".slick-list{overflow:visible;}.slick-slide{width:85vw;padding:0 6px;}",
+          "@media (min-width:",
+          "768",
+          "px){",
+          "
+    .slick-list {
+      overflow: hidden;
+    }
+  ",
+          ";}",
+          ";.slick-prev{width:60px;height:60px;border-radius:4px;background-color:",
+          "#FFFFFF",
+          ";position:absolute;top:50%;left:-74px;background:url(",
+          ") ",
+          "#FFFFFF",
+          " 50% 50% no-repeat;transform:translate(0,-50%);&:before{content:none;}&:hover,&:focus{background:url(",
+          ") ",
+          "#FFFFFF",
+          " 50% 50% no-repeat;}}.slick-next{width:60px;height:60px;border-radius:4px;background-color:",
+          "#FFFFFF",
+          ";position:absolute;top:50%;right:-74px;background:url(",
+          ") ",
+          "#FFFFFF",
+          " 50% 50% no-repeat;transform:translate(0,-50%);&:before{content:none;}&:hover,&:focus{background:url(",
+          ") ",
+          "#FFFFFF",
+          " 50% 50% no-repeat;}}",
+        ],
+      },
+      "displayName": "styles__FeaturedEventContent",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
