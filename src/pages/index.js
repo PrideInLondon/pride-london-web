@@ -17,8 +17,9 @@ const FuturedEventsContainer = styled.div`
   position: relative;
   z-index: 1;
   padding: 30px 0;
-  margin-top: -33vh;
+  margin-top: -15vh;
   ${media.tablet`
+    margin-top: -33vh;
     padding: 60px 107px;
   `};
 `

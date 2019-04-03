@@ -11,8 +11,12 @@ const StyledContainer = styled(Container)`
   flex-grow: 1;
   align-items: center;
   display: flex;
-  padding-bottom: 33vh;
+  padding-bottom: 15vh;
   align-self: stretch;
+
+  ${media.tablet`
+    padding-bottom: 33vh;
+  `};
 
   ${props =>
     props.imageSrc &&
