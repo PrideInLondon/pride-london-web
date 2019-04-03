@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Events You May Like component should matchsnapshot 1`] = `
+<eventListingCard__Card
+  displayColumn={true}
+  to="/events/1234"
+>
+  <eventListingCard__CardImageOverflow
+    displayColumn={true}
+  >
+    <eventListingCard__CardImageWrapper
+      className="card-img-wrapper"
+      src="/url-example?fit=fill&w=400&h=225&f=faces"
+    >
+      <eventListingCard__CardImage
+        alt="title"
+        height="225"
+        src="/url-example?fit=fill&w=400&h=225&f=faces"
+        width="400"
+      />
+    </eventListingCard__CardImageWrapper>
+  </eventListingCard__CardImageOverflow>
+  <eventListingCard__CardBody>
+    <eventListingCard__CardDate>
+      <eventListingCard__CardDateSpan>
+        3 Apr 2019
+      </eventListingCard__CardDateSpan>
+      <eventListingCard__CardBullet>
+         • 
+      </eventListingCard__CardBullet>
+       
+      <eventListingCard__CardDateSpan>
+        12:04pm - 12:04pm
+      </eventListingCard__CardDateSpan>
+    </eventListingCard__CardDate>
+    <eventListingCard__CardHeading>
+      name
+    </eventListingCard__CardHeading>
+  </eventListingCard__CardBody>
+  <eventListingCard__CardPrice>
+    from £33
+  </eventListingCard__CardPrice>
+</eventListingCard__Card>
+`;
