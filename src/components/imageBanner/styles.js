@@ -1,43 +1,80 @@
-import styled from 'styled-components'
-import { Container } from '../grid'
+import styled, { css } from 'styled-components'
+import { Row, Container } from '../grid'
 import { media } from '../../theme/media'
 
 export const StyledContainer = styled(Container)`
   flex-grow: 1;
+  align-items: center;
+  display: flex;
+  padding-bottom: 17vh;
+  align-self: stretch;
+
+  ${media.tablet`
+    padding-bottom: 33vh;
+  `};
+
+  ${props =>
+    props.imageSrc &&
+    !props.imageFullWidth &&
+    css`
+      background-image: url(${props.imageSrc});
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    `}
+`
+
+export const StyledRow = styled(Row)`
+  width: 100%;
+
+  ${media.tabletMax`
+    align-self: flex-end;
+  `};
 `
 
 export const StyledWrapper = styled.div`
   display: flex;
-  align-items: flex-end;
   min-height: 270px;
   overflow: hidden;
   position: relative;
   background-color: ${props => props.color};
-  padding-bottom: 35px;
-  z-index: -2;
+  height: ${props => props.large && '400px'};
 
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-    width: auto;
-    z-index: -1;
-  }
+  ${props =>
+    props.imageSrc &&
+    props.imageFullWidth &&
+    css`
+      background-image: url(${props.imageSrc});
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    `}
+
+  ${props =>
+    props.allowContentUnderflow &&
+    css`
+      align-items: flex-start;
+      min-height: 380px;
+      padding-top: 50px;
+      margin-bottom: -75px;
+    `}
+
+
+  ${media.mobile`
+    height: ${props => props.large && '400px'};
+  `};
 
   ${media.tablet`
     align-items: center;
-    height: ${props => (props.large === 'true' ? '500px' : '400px')};
+    height: ${props => (props.large ? '500px' : '400px')};
     padding: 0;
   `};
-`
 
-export const StyledWrapperWithUnderflow = styled(StyledWrapper)`
-  align-items: flex-start;
-  min-height: 380px;
-  padding-top: 50px;
-  margin-bottom: -75px;
+  ${media.desktop`
+    height: ${props => props.large && '650px'};
+  `};
+
+  ${media.desktopHD`
+    height: ${props => props.large && '800px'};
+  `};
 `

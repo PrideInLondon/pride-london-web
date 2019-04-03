@@ -8,16 +8,20 @@ import theme from '../../theme/theme'
 export const Button = props => {
   const StyledButton = styled[props.link ? 'a' : 'button']`
     box-sizing: border-box;
-    border: none;
     padding: 12px;
     border-radius: 4px;
-    border: none;
+    border: ${styleProps =>
+      styleProps.primary ? 'none' : `2px solid ${theme.colors.white}`};
     display: inline-block;
     text-align: center;
     color: ${styleProps =>
-      styleProps.primary ? theme.colors.indigo : theme.colors.eucalyptusGreen};
+      styleProps.primary ? theme.colors.indigo : theme.colors.white};
     background-color: ${styleProps =>
-      styleProps.primary ? theme.colors.eucalyptusGreen : theme.colors.indigo};
+      styleProps.white
+        ? theme.colors.white
+        : styleProps.primary
+        ? theme.colors.eucalyptusGreen
+        : theme.colors.indigo};
     font-family: ${theme.fonts.title};
     font-weight: 700;
     font-size: ${styleProps => (styleProps.small ? '0.875rem' : '1.125rem')};
@@ -31,7 +35,9 @@ export const Button = props => {
 
     &:hover {
       background-color: ${styleProps =>
-        styleProps.primary
+        styleProps.white
+          ? darken(0.1, theme.colors.white)
+          : styleProps.primary
           ? darken(0.1, theme.colors.eucalyptusGreen)
           : darken(0.1, theme.colors.indigo)};
     }
@@ -59,6 +65,7 @@ export const Button = props => {
       fullmobile={props.fullmobile}
       aria-controls={props['aria-controls']}
       aria-expanded={props['aria-expanded']}
+      white={props.white}
     >
       {props.children}
     </StyledButton>
@@ -77,6 +84,7 @@ Button.propTypes = {
   to: PropTypes.string,
   wide: PropTypes.bool,
   fullmobile: PropTypes.bool,
+  white: PropTypes.bool,
   'aria-controls': PropTypes.string,
   'aria-expanded': PropTypes.bool,
 }
@@ -92,6 +100,7 @@ Button.defaultProps = {
   to: null,
   wide: true,
   fullmobile: false,
+  white: false,
   onClick: null,
   'aria-controls': undefined,
   'aria-expanded': undefined,
