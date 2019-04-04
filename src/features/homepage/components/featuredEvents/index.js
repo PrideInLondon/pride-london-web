@@ -23,7 +23,7 @@ const EventCards = () => (
               ]}
               key={`${event.node.id}${event.node.name}`}
             >
-              <EventListingCard displayColumn event={event.node} />
+              <EventListingCard displaycolumn event={event.node} />
             </FlexColumn>
           ))}
         </Slider>

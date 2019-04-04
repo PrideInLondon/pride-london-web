@@ -12,7 +12,7 @@ const Card = styled(Link)`
   text-decoration: none;
   color: ${theme.colors.black};
   overflow: hidden;
-  display: ${props => (props.displayColumn ? 'block' : 'flex')};
+  display: ${props => (props.displaycolumn ? 'block' : 'flex')};
   position: relative;
   width: 100%;
   min-height: 130px;
@@ -37,7 +37,7 @@ const CardImageOverflow = styled.div`
   flex-shrink: 0;
   height: auto;
   position: relative;
-  padding-top: ${props => (props.displayColumn ? '56.25%' : '0')};
+  padding-top: ${props => (props.displaycolumn ? '56.25%' : '0')};
   min-height: 231px;
 
   ${media.tablet`
@@ -131,8 +131,8 @@ export const EventListingCard = props => {
   const { event } = props
   const { date, time } = formatDate(event)
   return (
-    <Card to={`/events/${event.id}`} displayColumn>
-      <CardImageOverflow displayColumn>
+    <Card to={`/events/${event.id}`} displaycolumn>
+      <CardImageOverflow displaycolumn>
         <CardImageWrapper
           className="card-img-wrapper"
           src={`${
