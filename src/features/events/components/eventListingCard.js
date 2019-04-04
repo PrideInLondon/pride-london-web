@@ -8,6 +8,7 @@ import { formatDate } from '../helpers'
 
 const Card = styled(Link)`
   border-radius: 5px;
+  border: none;
   text-decoration: none;
   color: ${theme.colors.black};
   overflow: hidden;
