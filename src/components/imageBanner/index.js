@@ -18,10 +18,6 @@ const StyledContainer = styled(Container)`
     padding-bottom: ${props => (props.homepage ? '35vh' : '0')};
   `};
 
-  ${media.tablet`
-    padding-bottom: 33vh;
-  `};
-
   ${props =>
     props.imageSrc &&
     !props.imageFullWidth &&
