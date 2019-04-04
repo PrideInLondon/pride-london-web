@@ -31,7 +31,7 @@ const constants = {
     gold: 'Gold',
     silver: 'Silver',
     bronze: 'Bronze',
-    digital: 'Digital',
+    partners: 'Partners',
   },
   itemsToLoad: 24,
   dateFormat: 'DD/MM/YYYY',
