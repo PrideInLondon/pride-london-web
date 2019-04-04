@@ -44,8 +44,8 @@ const ButtonMobile = styled.div`
   display: block;
 
   ${media.tablet`
-      display: none;
-    `};
+    display: none;
+  `};
 `
 
 const FuturedEventsTitle = styled.div`
@@ -110,6 +110,7 @@ const Home = () => (
       imageSrc={BannerImg}
       color={theme.colors.eucalyptusGreen}
       large
+      homepage
     >
       <Button wide={false} link white primary to="/events/">
         This year's event
