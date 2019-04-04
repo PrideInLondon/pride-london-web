@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Twitter = () => (
+const Twitter = ({ width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="30"
-    height="24"
+    width={width}
+    height={height}
     viewBox="0 0 30 24"
   >
     <path
@@ -14,5 +15,15 @@ const Twitter = () => (
     />
   </svg>
 )
+
+Twitter.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+}
+
+Twitter.defaultProps = {
+  width: 30,
+  height: 24,
+}
 
 export default Twitter
