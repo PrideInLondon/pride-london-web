@@ -44,7 +44,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     result.data.genericContentPages.edges.forEach(edge => {
       createPage({
-        path: `info/${edge.node.slug}/`,
+        path: `/${edge.node.slug}/`,
         component: GenericContentPage,
         context: {
           id: edge.node.id,
