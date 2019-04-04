@@ -11,11 +11,11 @@ const StyledContainer = styled(Container)`
   flex-grow: 1;
   align-items: center;
   display: flex;
-  padding-bottom: 17vh;
   align-self: stretch;
+  padding-bottom: ${props => (props.homepage ? '17vh' : '0')};
 
   ${media.tablet`
-    padding-bottom: 33vh;
+    padding-bottom: ${props => (props.homepage ? '35vh' : '0')};
   `};
 
   ${props =>
@@ -45,15 +45,16 @@ const StyledWrapper = styled.div`
   background-color: ${props => props.color};
   height: ${props => props.large && '400px'};
 
-  ${props =>
-    props.imageSrc &&
-    props.imageFullWidth &&
-    css`
-      background-image: url(${props.imageSrc});
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-    `}
+  
+    ${props =>
+      props.imageSrc &&
+      props.imageFullWidth &&
+      css`
+        background-image: url(${props.imageSrc});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      `}
 
   ${props =>
     props.allowContentUnderflow &&
@@ -94,6 +95,7 @@ const ImageBanner = ({
   children,
   large,
   allowContentUnderflow,
+  homepage,
 }) => (
   <StyledWrapper
     color={color}
@@ -103,7 +105,11 @@ const ImageBanner = ({
     imageFullWidth={imageFullWidth}
     role="banner"
   >
-    <StyledContainer imageSrc={imageSrc} imageFullWidth={imageFullWidth}>
+    <StyledContainer
+      homepage={homepage}
+      imageSrc={imageSrc}
+      imageFullWidth={imageFullWidth}
+    >
       <StyledRow>
         <Column width={1}>
           {date && <BannerDate>{date}</BannerDate>}
@@ -119,6 +125,7 @@ const ImageBanner = ({
 
 ImageBanner.propTypes = {
   large: PropTypes.bool,
+  homepage: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageFullWidth: PropTypes.bool,
   altText: PropTypes.string,
@@ -135,6 +142,7 @@ ImageBanner.propTypes = {
 
 ImageBanner.defaultProps = {
   large: false,
+  homepage: false,
   imageFullWidth: false,
   imageSrc: '',
   altText: '',
