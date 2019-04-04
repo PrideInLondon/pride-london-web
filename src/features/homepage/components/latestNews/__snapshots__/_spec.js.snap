@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LatestNews renders with default values 1`] = `
-<styles__Bacground
+<styles__Background
   backgroundImage="backgroundimageurl/image.png"
 >
   <styles__LatestNewsCardContainer>
@@ -17,5 +17,5 @@ exports[`LatestNews renders with default values 1`] = `
       title="Here is some news!"
     />
   </styles__LatestNewsCardContainer>
-</styles__Bacground>
+</styles__Background>
 `;

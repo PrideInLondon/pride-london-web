@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Bacground = styled.div`
+export const Background = styled.div`
   display: flex;
   background-image: url(${props => props.backgroundImage});
   background-size: cover;
