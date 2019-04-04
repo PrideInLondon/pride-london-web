@@ -10,6 +10,7 @@ exports[`ImageBanner renders 1`] = `
   role="banner"
 >
   <imageBanner__StyledContainer
+    homepage={false}
     imageFullWidth={false}
     imageSrc=""
     mx="auto"
@@ -36,6 +37,7 @@ exports[`ImageBanner renders the subtitleText from props to BannerSubtitle 1`] =
   role="banner"
 >
   <imageBanner__StyledContainer
+    homepage={false}
     imageFullWidth={false}
     imageSrc=""
     mx="auto"
@@ -64,6 +66,7 @@ exports[`ImageBanner renders the titleText from props to BannerTitle  1`] = `
   role="banner"
 >
   <imageBanner__StyledContainer
+    homepage={false}
     imageFullWidth={false}
     imageSrc=""
     mx="auto"
