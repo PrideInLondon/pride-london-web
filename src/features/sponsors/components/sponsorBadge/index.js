@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import constants from '../../../../constants'
 import { media } from '../../../../theme/media'
+import theme from '../../../../theme/theme'
 
 const isLargeBadge = level =>
   level === constants.sponsorLevels.headline ||
@@ -12,7 +13,7 @@ const Badge = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #f9f9f9;
+  background-color: ${theme.colors.white};
   margin: 0 10px 10px 0;
   padding: 10px;
   ${media.tablet`
