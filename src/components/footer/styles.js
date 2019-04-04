@@ -87,10 +87,10 @@ export const HashTags = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 20px 0;
 
-  ${media.tabletMax`
-    padding-top: 20px;
-    padding-bottom: 20px;
+  ${media.tablet`
+    padding: 0 20px;
   `};
 
   ${media.desktopMax`
@@ -116,11 +116,8 @@ export const HashTag = styled.a`
 `
 
 export const EventsCTAWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-
-  ${media.tablet`
-    justify-content: flex-end;
+  ${media.tabletMax`
+    text-align: center;
   `};
 `
 
@@ -130,13 +127,16 @@ export const EventsCTALink = styled(Link)`
   font-weight: 700;
   text-decoration: none;
   border-bottom: 2px solid ${theme.colors.indigo};
-  align-self: baseline;
   transition: border-color 0.15s linear;
 
   &:hover,
   &:focus {
     border-color: transparent;
   }
+
+  ${media.tablet`
+    margin-left: auto;
+  `};
 
   ${media.desktopMax`
     font-size: 0.9375rem;

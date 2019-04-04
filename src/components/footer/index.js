@@ -177,9 +177,9 @@ export const Footer = ({ data }) => {
 
 Footer.propTypes = {
   data: PropTypes.shape({
-    allContentfulSponsor: {
+    allContentfulSponsor: PropTypes.shape({
       edges: PropTypes.array,
-    },
+    }),
   }),
 }
 
