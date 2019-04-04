@@ -6,7 +6,9 @@ import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
 import { formatDate } from '../helpers'
 
-const Card = styled(Link)`
+// We have to skip displayColumn prop here to not render it in the DOM
+// eslint-disable-next-line no-unused-vars
+const Card = styled(({ displaycolumn, ...rest }) => <Link {...rest} />)`
   border-radius: 5px;
   border: none;
   text-decoration: none;
