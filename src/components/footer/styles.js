@@ -254,4 +254,5 @@ export const LegalLink = styled(Link)`
   white-space: nowrap;
   font-size: 0.875rem;
   border: none;
+  text-decoration: underline;
 `
