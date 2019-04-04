@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LatestNewsHeader renders with default values 1`] = `
+<styles__Header>
+  <styles__Title>
+    Latest News
+  </styles__Title>
+  <styles__Link>
+    View all news ›
+  </styles__Link>
+</styles__Header>
+`;

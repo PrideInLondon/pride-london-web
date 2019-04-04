@@ -8,14 +8,14 @@ import theme from '../../theme/theme'
 export const Button = props => {
   const StyledButton = styled[props.link ? 'a' : 'button']`
     box-sizing: border-box;
-    border: none;
     padding: 12px;
     border-radius: 4px;
-    border: none;
+    border: ${styleProps =>
+      styleProps.primary ? 'none' : `2px solid ${theme.colors.white}`};
     display: inline-block;
     text-align: center;
     color: ${styleProps =>
-      styleProps.primary ? theme.colors.indigo : theme.colors.eucalyptusGreen};
+      styleProps.primary ? theme.colors.indigo : theme.colors.white};
     background-color: ${styleProps =>
       styleProps.white
         ? theme.colors.white
