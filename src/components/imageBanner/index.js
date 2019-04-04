@@ -11,8 +11,7 @@ const StyledContainer = styled(Container)`
   flex-grow: 1;
   align-items: center;
   display: flex;
-  <<<<<<<head=======padding-bottom: 17vh;
-  >>>>>>>7f6bc76dac4276b3ae9a61b2be59e04b98bb8040align-self: stretch;
+  align-self: stretch;
   padding-bottom: ${props => (props.homepage ? '17vh' : '0')};
 
   ${media.tablet`
