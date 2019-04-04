@@ -26,7 +26,10 @@ const MainContainer = styled(Container)`
 `
 
 const MainSponsorsContainer = styled.div`
+  margin-top: 30px;
+
   ${media.tablet`
+    margin-top: 40px;
     max-width: 646px;
   `};
 `
@@ -208,12 +211,9 @@ const Sponsors = ({ data }) => {
                 </SponsorsSubsection>
               )}
 
-              {sponsors[constants.sponsorLevels.digital] && (
-                <SponsorsSubsection
-                  title="Digital partners"
-                  icon={<SponsorStar color={theme.colors.bronze} />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.digital])}
+              {sponsors[constants.sponsorLevels.partners] && (
+                <SponsorsSubsection title="Partners">
+                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
                 </SponsorsSubsection>
               )}
             </BronzeSponsorsContainer>
