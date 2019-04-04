@@ -107,6 +107,7 @@ export const PanelLink = styled(Link)`
   font-size: 1.125rem;
   padding: 15px 0;
   display: block;
+  border: none;
 
   ${media.nav`
     padding: 5px 0;

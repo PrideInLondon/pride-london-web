@@ -53,6 +53,7 @@ export const SocialItem = styled.li`
 
 export const SocialLink = styled.a`
   display: block;
+  border: none;
 
   svg {
     path {
@@ -104,6 +105,7 @@ export const HashTag = styled.a`
   color: ${theme.colors.indigo};
   text-decoration: none;
   transition: color 0.15s linear;
+  border: none;
 
   &:hover,
   &:focus {
@@ -131,7 +133,7 @@ export const EventsCTALink = styled(Link)`
 
   &:hover,
   &:focus {
-    border-color: transparent;
+    border-color: ${theme.colors.eucalyptusGreen};
   }
 
   ${media.tablet`
@@ -251,4 +253,5 @@ export const LegalLink = styled(Link)`
   display: block;
   white-space: nowrap;
   font-size: 0.875rem;
+  border: none;
 `
