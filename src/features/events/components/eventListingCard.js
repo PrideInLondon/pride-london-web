@@ -128,11 +128,11 @@ const CardHeading = styled.h3`
 `
 
 export const EventListingCard = props => {
-  const { event } = props
+  const { event, displaycolumn } = props
   const { date, time } = formatDate(event)
   return (
-    <Card to={`/events/${event.id}`} displaycolumn>
-      <CardImageOverflow displaycolumn>
+    <Card to={`/events/${event.id}`} displaycolumn={displaycolumn}>
+      <CardImageOverflow displaycolumn={displaycolumn}>
         <CardImageWrapper
           className="card-img-wrapper"
           src={`${
@@ -166,6 +166,11 @@ export const EventListingCard = props => {
 
 EventListingCard.propTypes = {
   event: PropTypes.object.isRequired,
+  displaycolumn: PropTypes.bool,
+}
+
+EventListingCard.defaultProps = {
+  displaycolumn: false,
 }
 
 export default EventListingCard
