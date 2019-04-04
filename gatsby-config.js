@@ -1,6 +1,3 @@
-const env = process.env.NODE_ENV || 'development'
-require('dotenv').config({ path: `.env.${env}` })
-
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://prideinlondon.org/',
@@ -9,6 +6,9 @@ const {
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === 'production'
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+
+const env = NODE_ENV || 'development'
+require('dotenv').config({ path: `.env.${env}` })
 
 module.exports = {
   siteMetadata: {
