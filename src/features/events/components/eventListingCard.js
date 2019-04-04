@@ -6,13 +6,15 @@ import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
 import { formatDate } from '../helpers'
 
-const Card = styled(Link)`
+// We have to skip displayColumn prop here to not render it in the DOM
+// eslint-disable-next-line no-unused-vars
+const Card = styled(({ displaycolumn, ...rest }) => <Link {...rest} />)`
   border-radius: 5px;
   border: none;
   text-decoration: none;
   color: ${theme.colors.black};
   overflow: hidden;
-  display: ${props => (props.displayColumn ? 'block' : 'flex')};
+  display: ${props => (props.displaycolumn ? 'block' : 'flex')};
   position: relative;
   width: 100%;
   min-height: 130px;
@@ -37,7 +39,7 @@ const CardImageOverflow = styled.div`
   flex-shrink: 0;
   height: auto;
   position: relative;
-  padding-top: ${props => (props.displayColumn ? '56.25%' : '0')};
+  padding-top: ${props => (props.displaycolumn ? '56.25%' : '0')};
   min-height: 231px;
 
   ${media.tablet`
@@ -128,11 +130,11 @@ const CardHeading = styled.h3`
 `
 
 export const EventListingCard = props => {
-  const { event } = props
+  const { event, displaycolumn } = props
   const { date, time } = formatDate(event)
   return (
-    <Card to={`/events/${event.id}`} displayColumn>
-      <CardImageOverflow displayColumn>
+    <Card to={`/events/${event.id}`} displaycolumn={displaycolumn}>
+      <CardImageOverflow displaycolumn={displaycolumn}>
         <CardImageWrapper
           className="card-img-wrapper"
           src={`${
@@ -166,6 +168,11 @@ export const EventListingCard = props => {
 
 EventListingCard.propTypes = {
   event: PropTypes.object.isRequired,
+  displaycolumn: PropTypes.bool,
+}
+
+EventListingCard.defaultProps = {
+  displaycolumn: false,
 }
 
 export default EventListingCard
