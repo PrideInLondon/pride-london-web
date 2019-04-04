@@ -6,9 +6,14 @@ import { media } from '../../../../theme/media'
 const BadgesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 15px;
+  margin: 15px 0;
+
   ${media.tablet`
-    margin-top: 20px
+    margin: 20px 0;
+  `};
+
+  ${media.tabletMax`
+    margin-right: -10px;
   `};
 `
 
@@ -28,7 +33,7 @@ const Title = styled.h3`
 const SponsorsSubsection = ({ title, icon, children }) => (
   <Fragment>
     <TitleWrapper>
-      {icon && icon}
+      {icon}
       <Title>{title}</Title>
     </TitleWrapper>
     <BadgesContainer>{children}</BadgesContainer>

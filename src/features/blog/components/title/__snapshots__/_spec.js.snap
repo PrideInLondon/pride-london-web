@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title renders with default values 1`] = `
+<styles__StyledTitle
+  isCentered={false}
+  isLight={false}
+>
+  Hi
+</styles__StyledTitle>
+`;

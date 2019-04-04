@@ -1,38 +1,33 @@
-import React, { Fragment } from 'react'
-import styled from 'styled-components'
+import React from 'react'
+import PropTypes from 'prop-types'
 import theme from '../../../../theme/theme'
 import ViewsCard from '../../components/viewsCard'
 import Title from '../../components/title'
+import { Container, CardContainer } from './styles'
 
-const Container = styled.div`
-  margin: 1rem;
-`
-
-// Replace with container that pulls api data?
-const CardContainer = styled.div`
-  overflow: scroll;
-  display: flex;
-`
-
-const ViewsContainer = () => {
+const ViewsContainer = ({ views }) => {
   return (
-    <Fragment>
+    <>
       <Container>
-        <Title theme={theme} isLight>
+        <Title theme={theme} isLight isCentered>
           Views
         </Title>
         <CardContainer>
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
-          <ViewsCard />
+          {views.map(view => (
+            <ViewsCard {...view} />
+          ))}
         </CardContainer>
       </Container>
-    </Fragment>
+    </>
   )
+}
+
+ViewsContainer.propTypes = {
+  views: PropTypes.arrayOf(PropTypes.shape({})),
+}
+
+ViewsContainer.defaultProps = {
+  views: [],
 }
 
 export default ViewsContainer

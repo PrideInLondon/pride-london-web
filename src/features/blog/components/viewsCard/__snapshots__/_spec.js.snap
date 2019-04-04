@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ViewsCard should render with default values 1`] = `
-<viewsCard__Container>
-  <Image
-    altText="Lisa Charlwood-Green — LGTB+ Women Say \\"Wow!"
-    src="https://images.pexels.com/photos/53487/james-stewart-man-person-actor-53487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+exports[`ViewsCard renders with default values 1`] = `
+<styles__Container>
+  <styles__ViewsThumbail
+    altText="Bob Barker — My view"
+    src="foo.bar/baz"
   />
-  <viewsCard__ArticleAuthor>
-    Lisa Charlwood-Green
-  </viewsCard__ArticleAuthor>
-  <viewsCard__ArticleTitle>
-    LGTB+ Women Say "Wow!"
-  </viewsCard__ArticleTitle>
-</viewsCard__Container>
+  <styles__ArticleAuthor>
+    Bob Barker
+  </styles__ArticleAuthor>
+  <styles__ArticleTitle>
+    <styles__ArticleTitleTextContainer>
+      My view
+    </styles__ArticleTitleTextContainer>
+  </styles__ArticleTitle>
+</styles__Container>
 `;

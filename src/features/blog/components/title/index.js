@@ -1,26 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import theme from '../../../../theme/theme'
+import { StyledTitle } from './styles'
 
-const StyledTitle = styled.h2`
-  font-weight: 700;
-  color: ${props =>
-    props.isLight ? theme.colors.lightGrey : theme.colors.darkBlue};
-  margin: 0.25em;
-`
-
-const Title = ({ children, isLight }) => (
-  <StyledTitle isLight={isLight}>{children}</StyledTitle>
+const Title = ({ children, isLight, isCentered }) => (
+  <StyledTitle isLight={isLight} isCentered={isCentered}>
+    {children}
+  </StyledTitle>
 )
 
 Title.propTypes = {
   children: PropTypes.string.isRequired,
   isLight: PropTypes.bool,
+  isCentered: PropTypes.bool,
 }
 
 Title.defaultProps = {
   isLight: false,
+  isCentered: false,
 }
 
 export default Title

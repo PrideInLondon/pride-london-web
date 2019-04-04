@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Youtube = () => (
+const Youtube = ({ width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="30"
-    height="22"
+    width={width}
+    height={height}
     viewBox="0 0 30 22"
   >
     <path
@@ -14,5 +15,15 @@ const Youtube = () => (
     />
   </svg>
 )
+
+Youtube.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+}
+
+Youtube.defaultProps = {
+  width: 30,
+  height: 22,
+}
 
 export default Youtube
