@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnnouncementHeader renders with default values 1`] = `
+<styles__Header>
+  <styles__Head>
+    Announcement
+  </styles__Head>
+  <styles__Title>
+    View events from across the LGBT+ community
+  </styles__Title>
+</styles__Header>
+`;
+
+exports[`AnnouncementsContainer renders with default values 1`] = `
+<styles__CardAnnouncement>
+  <styles__CardImage
+    style={
+      Object {
+        "backgroundImage": "url('[object Object]')",
+      }
+    }
+  />
+  <styles__CardTitleWrapper>
+    <styles__CardTitle>
+      Title title
+    </styles__CardTitle>
+  </styles__CardTitleWrapper>
+</styles__CardAnnouncement>
+`;
+
+exports[`AnnouncementsContainer renders with default values 2`] = `
+<Fragment>
+  <StaticQuery
+    data={
+      Object {
+        "data": Object {
+          "allContentfulAnnouncements": Object {
+            "edges": Array [
+              Object {
+                "node": Object {
+                  "article": Object {
+                    "id": "1a0304c1-9e37-5adc-9e7c-7a67adc8aeba",
+                    "title": "Hey hooo hola",
+                  },
+                  "id": "2fb8c2fb-7b19-5239-b851-9c27fe99edb5",
+                  "image": Object {
+                    "file": Object {
+                      "url": "//images.ctfassets.net/n2o4hgsv6wcx/6PuOqKHrDhkl5M3r9lore2/73a90ef45cc976d42af6eb31a0b0999c/lgbt.png",
+                    },
+                  },
+                  "title": "Parade applications now open for Pride in London 2019",
+                },
+              },
+              Object {
+                "node": Object {
+                  "article": Object {
+                    "id": "fd1c8b68-8bd5-5734-84b7-b05de6410230",
+                    "title": "Article 2 About something else",
+                  },
+                  "id": "07d69fbc-f63d-5e8f-a5b1-00171eb41aaf",
+                  "image": Object {
+                    "file": Object {
+                      "url": "//images.ctfassets.net/n2o4hgsv6wcx/OMhkN2WfQW84AcwQ2WE4Q/5f9052662ec500c6e0975d69d8a281a0/Parade_Shuttle_Bus-Access_-_laura_williams.JPG",
+                    },
+                  },
+                  "title": "Parade applications now  Test  2 announcements",
+                },
+              },
+              Object {
+                "node": Object {
+                  "article": Object {
+                    "id": "b557d6cf-5300-5b3f-aeac-111bfa694bec",
+                    "title": "Article Title",
+                  },
+                  "id": "5d0df722-2bd7-537a-95f4-82b80080ef87",
+                  "image": Object {
+                    "file": Object {
+                      "url": "//images.ctfassets.net/n2o4hgsv6wcx/5Xohg513O0qaK64Yey00Kg/9505594ddad9bbde21dd2b81e7b7bcad/image.jpg",
+                    },
+                  },
+                  "title": "Title Ann Parade applications ssss kkddk",
+                },
+              },
+              Object {
+                "node": Object {
+                  "article": Object {
+                    "id": "b557d6cf-5300-5b3f-aeac-111bfa694bec",
+                    "title": "Article Title",
+                  },
+                  "id": "8c1215d5-1993-5c07-9118-9060dba6682a",
+                  "image": Object {
+                    "file": Object {
+                      "url": "//images.ctfassets.net/n2o4hgsv6wcx/6D93QCHkI0WeKgI0EeYAIe/af74d858b5ffb18d57028c1f64f56821/page-accessibility-at-the-parade.jpg",
+                    },
+                  },
+                  "title": "Title woow Work It",
+                },
+              },
+            ],
+          },
+        },
+      }
+    }
+    query="6382854"
+    render={[Function]}
+  />
+</Fragment>
+`;
