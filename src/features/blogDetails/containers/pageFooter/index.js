@@ -1,5 +1,5 @@
 import React from 'react'
-import OtherArticles from '../otherArticles'
+import OtherArticles from '../otherArticles/otherArticlesQuery'
 
 const PageFooter = () => <OtherArticles />
 

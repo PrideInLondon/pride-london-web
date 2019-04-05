@@ -4,7 +4,7 @@ import { BLOCKS } from '@contentful/rich-text-types'
 import Image from './Image'
 import Paragraph from './Paragraph'
 
-const renderParagraph = children => <Paragraph>{children}</Paragraph>
+const renderParagraph = (node, children) => <Paragraph>{children}</Paragraph>
 
 const renderImage = ({
   data: {

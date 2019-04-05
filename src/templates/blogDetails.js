@@ -39,7 +39,7 @@ const BlogDetails = ({
   )
 }
 
-export const eventPageQuery = graphql`
+export const articleDetailsQuery = graphql`
   query articleDetailsQuery($id: String!) {
     contentfulArticle(id: { eq: $id }) {
       id
