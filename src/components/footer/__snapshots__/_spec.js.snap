@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer/> should render and match snapshot 1`] = `
+<styles__FooterWrapper>
+  <styles__StyledFooter>
+    <Row>
+      <styles__SocialSection
+        width={1}
+      >
+        <div>
+          <styles__SocialList>
+            <styles__SocialItem>
+              <styles__SocialLink
+                aria-label="Follow us on"
+                href="https://www.facebook.com/pg/LondonLGBTPride"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Facebook
+                  height={20}
+                  width={20}
+                />
+              </styles__SocialLink>
+            </styles__SocialItem>
+            <styles__SocialItem>
+              <styles__SocialLink
+                aria-label="Follow us on Twitter"
+                href="https://twitter.com/PrideInLondon"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Twitter
+                  height={20}
+                  width={20}
+                />
+              </styles__SocialLink>
+            </styles__SocialItem>
+            <styles__SocialItem>
+              <styles__SocialLink
+                aria-label="Follow us on Instagram"
+                href="http://instagram.com/prideinlondon"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Instagram
+                  height={20}
+                  width={20}
+                />
+              </styles__SocialLink>
+            </styles__SocialItem>
+            <styles__SocialItem>
+              <styles__SocialLink
+                aria-label="Follow us on Youtube"
+                href="https://www.youtube.com/user/LondonLGBTPride?sub_confirmation=1"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Youtube
+                  height={20}
+                  width={20}
+                />
+              </styles__SocialLink>
+            </styles__SocialItem>
+            <styles__SocialItem>
+              <styles__SocialLink
+                aria-label="Follow us on Linkedin"
+                href="https://www.linkedin.com/company/prideinlondon/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Linkedin
+                  height={20}
+                  width={20}
+                />
+              </styles__SocialLink>
+            </styles__SocialItem>
+            <styles__SocialItem>
+              <styles__SocialLink
+                aria-label="Follow us on Snapchat"
+                href="http://www.snapchat.com/add/LondonLGBTPride"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Snapchat
+                  height={20}
+                  width={20}
+                />
+              </styles__SocialLink>
+            </styles__SocialItem>
+          </styles__SocialList>
+        </div>
+        <styles__HashTags
+          width={
+            Array [
+              1,
+              1,
+              0.4,
+            ]
+          }
+        >
+          <styles__HashTag
+            href="https://twitter.com/intent/tweet?button_hashtag=pride"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            #pride
+          </styles__HashTag>
+          <styles__HashTag
+            href="https://twitter.com/intent/tweet?button_hashtag=prideinlondon"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            #prideinlondon
+          </styles__HashTag>
+          <styles__HashTag
+            href="https://twitter.com/intent/tweet?button_hashtag=diversityFTW"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            #diversityFTW
+          </styles__HashTag>
+        </styles__HashTags>
+        <styles__EventsCTAWrapper
+          width={
+            Array [
+              1,
+              1,
+              0.3,
+            ]
+          }
+        >
+          <styles__EventsCTALink
+            to="/events"
+          >
+            Never miss an event
+          </styles__EventsCTALink>
+        </styles__EventsCTAWrapper>
+      </styles__SocialSection>
+      <styles__SponsorsSection
+        width={1}
+      >
+        <styles__SponsorsHeading>
+          Our amazing partners
+        </styles__SponsorsHeading>
+        <styles__SponsorsContainer>
+          <styles__SponsorImgWrapper
+            key="a1bc90c0-23c7-51e1-8ea2-4bce5224df33"
+          >
+            <img
+              alt="Blue Sun"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/12nAORbw80eC666kck4QgU/168f3efbd9c99f54c96cab367ac73943/4822573655_b22cb18c05.jpg?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="1e2d4e9d-1684-5657-a7b6-3c6a5e1e96c1"
+          >
+            <img
+              alt="Virtucon"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/2AfZNrit52m4WUm4IKUOOE/21323f2171228d475743a62938778c53/ed2cf58359281c503c8fd2d56992b0a9.png?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="73cee0dd-94a9-5426-b52b-35ce3214ad4d"
+          >
+            <img
+              alt="Abstergo"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/1hr2YDhECsMUeu0KMqsge2/0b6ca7913c2ce37bf5d077e716540e8a/Abstergo_industries_by_vesferatu-d39vask.gif?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="760bcc60-2704-54b5-8555-da4adab9f394"
+          >
+            <img
+              alt="Testy Badger"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/13iikTHlzcyA4oquoaWW4A/8e9e96aee3d35b5367b964e265894943/RB_Screen_Logos_For_Guardian.jpg?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="5f4a1bb1-6c2d-502a-b47f-ea357d8103e8"
+          >
+            <img
+              alt="Barclays"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/5R7cc2vejSyq6qquSqGiyk/7536e8a3e4e5663fa1dbec357603728a/Barclays_Logo.png?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="d5fde3eb-032f-513e-8852-26e6b02b5d2d"
+          >
+            <img
+              alt="Mayor of London"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/4rIPcvrYGk8uE24oWI08Yi/e70dc626716b5fb59efa22a4b7da263f/MayorOfLondon_Logo.png?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="6bace2aa-7fa9-5969-8e0f-e9170d7f015d"
+          >
+            <img
+              alt="Weyland-Yutani"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/3DzjJqij9m4Ka0Q8IS8sMQ/66d8f571a8ac73b550ff9ae4460834cf/e44d54b01d679a151f570ce9c7d85cb3.png?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="9f0f29b2-b53a-5b13-b0dd-d048041f8da5"
+          >
+            <img
+              alt="Omni Consumer Products"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/5yhojSLzLqgaSgAYMaAokW/63acd88bb36bcf035f823952eae9e1f6/kisspng-robocop-omni-consumer-products-ed-209-logo-cyborg-robocop-5acd74ab7e47c9.5852170415234141875173.jpg?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="6f20fdff-3cc4-54dc-9fdd-850de5a7f471"
+          >
+            <img
+              alt="Tesco"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/E59pqZoWxamyWW8caocm2/975a6e54d6aeac70d452e303e8422b8c/Tesco_Logo.png?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="e7f18314-f613-552f-9f07-031f14840914"
+          >
+            <img
+              alt="CMS"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/1vKEetL34E4ekk0EikWYm0/bad1e9109ae4fcbe4d138a650ece43cd/CMS_Logo.png?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+        </styles__SponsorsContainer>
+        <styles__SponsorsCTAWrapper>
+          <CTALink
+            contact={false}
+            external={false}
+            to="/sponsors"
+          >
+            View all
+          </CTALink>
+          <CTALink
+            contact={true}
+            external={false}
+            to="mailto:sponsor@prideinlondon.org"
+          >
+            Become a partner
+          </CTALink>
+        </styles__SponsorsCTAWrapper>
+      </styles__SponsorsSection>
+      <styles__LegalSection
+        width={1}
+      >
+        <styles__LegalList>
+          <styles__LegalListItem>
+            <styles__LegalLink
+              to="/privacy-and-cookies"
+            >
+              Privacy & cookies
+            </styles__LegalLink>
+          </styles__LegalListItem>
+          <styles__LegalListItem>
+            <styles__LegalLink
+              to="/media-centre"
+            >
+              Media centre
+            </styles__LegalLink>
+          </styles__LegalListItem>
+        </styles__LegalList>
+        <styles__LegalStrapline>
+          London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN - Registered in England and Wales as a Community Interest Company (no. 8321669)
+        </styles__LegalStrapline>
+      </styles__LegalSection>
+    </Row>
+  </styles__StyledFooter>
+</styles__FooterWrapper>
+`;

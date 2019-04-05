@@ -101,6 +101,13 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  border-bottom: 2px solid #2cda9d;
+  color: #000000;
+  transition: border-color 0.15s linear;
+}
+
 /*Desktop Styles*/
 @media (min-width: 768px) {
   h1 {

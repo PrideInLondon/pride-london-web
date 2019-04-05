@@ -5,9 +5,10 @@ import ImageBanner from '../components/imageBanner'
 import Button from '../components/button'
 import eventsBgLeft from '../theme/assets/images/featured-events-bg-left.png'
 import eventsBgRight from '../theme/assets/images/featured-events-bg-right.png'
-import EventCards from '../features/home/components/featuredEvents'
+import EventCards from '../features/homepage/components/featuredEvents'
 import { media } from '../theme/media'
 import { Container } from '../components/grid'
+import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
 
@@ -22,6 +23,12 @@ const FuturedEventsContainer = styled.div`
     margin-top: -33vh;
     padding: 60px 107px;
   `};
+`
+
+const SectionVolunteer = styled.div`
+  width: 100%;
+  padding-bottom: 50px;
+  display: block;
 `
 
 const FuturedEventsHeader = styled.div`
@@ -44,8 +51,8 @@ const ButtonMobile = styled.div`
   display: block;
 
   ${media.tablet`
-      display: none;
-    `};
+    display: none;
+  `};
 `
 
 const FuturedEventsTitle = styled.div`
@@ -110,6 +117,7 @@ const Home = () => (
       imageSrc={BannerImg}
       color={theme.colors.eucalyptusGreen}
       large
+      homepage
     >
       <Button wide={false} link white primary to="/events/">
         This year's event
@@ -150,6 +158,12 @@ const Home = () => (
     </Container>
 
     <LatestNewsContainer />
+
+    <SectionVolunteer>
+      <Container>
+        <VolunteerBoxInfo />
+      </Container>
+    </SectionVolunteer>
   </Fragment>
 )
 

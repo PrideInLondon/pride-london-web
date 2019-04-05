@@ -54,6 +54,8 @@ export const PanelListWrapper = styled(Column)`
   ${media.nav`
     padding-left: 40px;
     column-count: 2;
+    column-gap: 40px;
+    column-width: 250px;
 
     & > * {
         align-self: stretch;
@@ -76,7 +78,6 @@ export const PanelListSection = styled.div`
   ${media.nav`
     page-break-inside: avoid;
     break-inside: avoid;
-    column-gap: 40px;
   `};
 
   ${media.navMax`
@@ -106,6 +107,7 @@ export const PanelLink = styled(Link)`
   font-size: 1.125rem;
   padding: 15px 0;
   display: block;
+  border: none;
 
   ${media.nav`
     padding: 5px 0;
