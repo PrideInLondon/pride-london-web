@@ -19,6 +19,7 @@ export const SocialItem = styled.div`
 
 export const SocialLink = styled.a`
   display: block;
+  border-bottom: none;
   svg {
     height: 20px;
     width: 20px;

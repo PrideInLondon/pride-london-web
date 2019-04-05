@@ -7,7 +7,10 @@ exports[`SocialMediaList renders with default values 1`] = `
       aria-label="Link to Twitter page"
       href="https://twitter.com/PrideInLondon"
     >
-      <Twitter />
+      <Twitter
+        height={24}
+        width={30}
+      />
     </styles__SocialLink>
   </styles__SocialItem>
   <styles__SocialItem>
@@ -15,7 +18,10 @@ exports[`SocialMediaList renders with default values 1`] = `
       aria-label="Link to Facebook page"
       href="https://www.facebook.com/pg/LondonLGBTPride"
     >
-      <Facebook />
+      <Facebook
+        height={30}
+        width={30}
+      />
     </styles__SocialLink>
   </styles__SocialItem>
   <styles__SocialItem>
@@ -23,7 +29,10 @@ exports[`SocialMediaList renders with default values 1`] = `
       aria-label="Link to LinkedIn page"
       href="https://www.linkedin.com/company/prideinlondon"
     >
-      <Linkedin />
+      <Linkedin
+        height={30}
+        width={30}
+      />
     </styles__SocialLink>
   </styles__SocialItem>
 </styles__SocialList>
