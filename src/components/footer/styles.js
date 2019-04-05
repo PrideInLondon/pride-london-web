@@ -54,7 +54,6 @@ export const SocialItem = styled.li`
 export const SocialLink = styled.a`
   display: block;
   border: none;
-
   svg {
     path {
       fill: ${theme.colors.indigo};
