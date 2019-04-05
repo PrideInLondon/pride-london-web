@@ -32,6 +32,13 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      articles: allContentfulArticle(filter: {}) {
+        edges {
+          node {
+            id
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -103,6 +110,18 @@ exports.createPages = async ({ graphql, actions }) => {
           })
         })
       }
+    })
+
+    const blogDetailsTemplate = path.resolve('./src/templates/blogDetails.js')
+    result.data.articles.edges.forEach(edge => {
+      console.log('####CREATE ', edge.node.id, ' ARTICLE PAGE')
+      createPage({
+        path: `blog/${edge.node.id}/`,
+        component: blogDetailsTemplate,
+        context: {
+          id: edge.node.id,
+        },
+      })
     })
   })
   return events

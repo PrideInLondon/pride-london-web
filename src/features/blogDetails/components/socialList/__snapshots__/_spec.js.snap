@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialMediaList renders with default values 1`] = `
+<styles__SocialList>
+  <styles__SocialItem>
+    <styles__SocialLink
+      aria-label="Link to Twitter page"
+      href="https://twitter.com/PrideInLondon"
+    >
+      <Twitter />
+    </styles__SocialLink>
+  </styles__SocialItem>
+  <styles__SocialItem>
+    <styles__SocialLink
+      aria-label="Link to Facebook page"
+      href="https://www.facebook.com/pg/LondonLGBTPride"
+    >
+      <Facebook />
+    </styles__SocialLink>
+  </styles__SocialItem>
+  <styles__SocialItem>
+    <styles__SocialLink
+      aria-label="Link to LinkedIn page"
+      href="https://www.linkedin.com/company/prideinlondon"
+    >
+      <Linkedin />
+    </styles__SocialLink>
+  </styles__SocialItem>
+</styles__SocialList>
+`;

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogFooter renders with default values 1`] = `
+<Fragment>
+  <hr />
+  <styles__Summary>
+    <Author
+      author={Object {}}
+    />
+    <styles__FlexDiv>
+      <styles__ShareText>
+        Share this post
+      </styles__ShareText>
+      <SocialMediaList />
+    </styles__FlexDiv>
+  </styles__Summary>
+  <styles__NoteToEditor>
+    <Input
+      className={null}
+      handleChange={null}
+      id="noteToEditor"
+      label="Note to editors"
+      required={false}
+      type="text"
+    />
+  </styles__NoteToEditor>
+</Fragment>
+`;
