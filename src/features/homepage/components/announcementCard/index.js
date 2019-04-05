@@ -7,7 +7,7 @@ import {
   CardTitleWrapper,
 } from './styles'
 
-const AnnouncementCard = ({ image: url, title }) => {
+const AnnouncementCard = ({ image: url = '', title }) => {
   return (
     <CardAnnouncement>
       <CardImage style={{ backgroundImage: `url('${url}')` }} />

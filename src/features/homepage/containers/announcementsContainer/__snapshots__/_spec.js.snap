@@ -1,16 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AnnouncementHeader renders with default values 1`] = `
-<styles__Header>
-  <styles__Head>
-    Announcement
-  </styles__Head>
-  <styles__Title>
-    View events from across the LGBT+ community
-  </styles__Title>
-</styles__Header>
-`;
-
 exports[`AnnouncementsContainer renders with default values 1`] = `
 <styles__CardAnnouncement>
   <styles__CardImage
@@ -101,7 +90,7 @@ exports[`AnnouncementsContainer renders with default values 2`] = `
         },
       }
     }
-    query="6382854"
+    query="1581091391"
     render={[Function]}
   />
 </Fragment>
