@@ -6,5 +6,6 @@ exports[`<CTALink/> should render and match snapshot 1`] = `
   to="/"
 >
   View all
+   ›
 </ctaLink__StyledLink>
 `;
