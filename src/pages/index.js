@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import theme from '../theme/theme'
 import ImageBanner from '../components/imageBanner'
 import Button from '../components/button'
-import { Container } from '../components/grid'
-import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 import eventsBgLeft from '../theme/assets/images/featured-events-bg-left.png'
 import eventsBgRight from '../theme/assets/images/featured-events-bg-right.png'
 import EventCards from '../features/homepage/components/featuredEvents'
 import { media } from '../theme/media'
+import { Container } from '../components/grid'
+import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
 
@@ -51,8 +51,8 @@ const ButtonMobile = styled.div`
   display: block;
 
   ${media.tablet`
-      display: none;
-    `};
+    display: none;
+  `};
 `
 
 const FuturedEventsTitle = styled.div`
@@ -117,6 +117,7 @@ const Home = () => (
       imageSrc={BannerImg}
       color={theme.colors.eucalyptusGreen}
       large
+      homepage
     >
       <Button wide={false} link white primary to="/events/">
         This year's event

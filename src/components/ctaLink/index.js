@@ -17,11 +17,6 @@ const linkStyles = css`
   & + .cta-link {
     margin-left: 20px;
   }
-
-  &:hover,
-  &:focus {
-    border-color: transparent;
-  }
 `
 const StyledLink = styled(Link)`
   ${linkStyles}

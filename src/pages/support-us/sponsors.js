@@ -2,16 +2,16 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import ImageBanner from '../components/imageBanner'
-import SponsorsSubsection from '../features/sponsors/components/sponsorSubsection/index'
-import constants from '../constants'
-import theme from '../theme/theme'
-import { media } from '../theme/media'
-import { Container, Row, Column } from '../components/grid'
-import Button from '../components/button'
-import SponsorHeadline from '../components/icons/sponsorHeadline'
-import SponsorStar from '../components/icons/sponsorStar'
-import renderSponsors from '../features/sponsors/helpers'
+import ImageBanner from '../../components/imageBanner'
+import SponsorsSubsection from '../../features/sponsors/components/sponsorSubsection/index'
+import constants from '../../constants'
+import theme from '../../theme/theme'
+import { media } from '../../theme/media'
+import { Container, Row, Column } from '../../components/grid'
+import Button from '../../components/button'
+import SponsorHeadline from '../../components/icons/sponsorHeadline'
+import SponsorStar from '../../components/icons/sponsorStar'
+import renderSponsors from '../../features/sponsors/helpers'
 
 const ListTitle = styled.h2`
   margin-top: 0;
@@ -26,7 +26,10 @@ const MainContainer = styled(Container)`
 `
 
 const MainSponsorsContainer = styled.div`
+  margin-top: 30px;
+
   ${media.tablet`
+    margin-top: 40px;
     max-width: 646px;
   `};
 `
@@ -208,12 +211,9 @@ const Sponsors = ({ data }) => {
                 </SponsorsSubsection>
               )}
 
-              {sponsors[constants.sponsorLevels.digital] && (
-                <SponsorsSubsection
-                  title="Digital partners"
-                  icon={<SponsorStar color={theme.colors.bronze} />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.digital])}
+              {sponsors[constants.sponsorLevels.partners] && (
+                <SponsorsSubsection title="Partners">
+                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
                 </SponsorsSubsection>
               )}
             </BronzeSponsorsContainer>

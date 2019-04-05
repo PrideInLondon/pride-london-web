@@ -52,6 +52,7 @@ const FlexColumn = styled(Column)`
 
 const LogoWrapper = styled(Link)`
   display: block;
+  border: none;
 `
 
 const Logo = styled.img`

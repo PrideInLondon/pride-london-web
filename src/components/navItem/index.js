@@ -28,6 +28,7 @@ const linkStyles = css`
   display: flex;
   align-items: center;
   padding: 20px 0;
+  border: none;
 
   ${media.nav`
     padding: 35px 25px;
