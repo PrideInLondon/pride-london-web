@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Redirects
 /accessibility     /parade/accessibility     301
 /accommodation     /visitor-information/travel-and-accommodation     301
@@ -52,3 +53,25 @@
 /who-we-are     /about-us     301
 /why-we-exist     /about-us/why-we-exist     301
 /hire-a-stall/stalls-application     /parade/community-village/stalls-application     301
+=======
+# Redirect with a 301
+/who-we-are                         /about-us                                       301
+/why-we-exist                       /about-us/why-we-exist                          301
+/pride-matters                      /about-us/campaigns/2018                        301
+/impact-report-2018                 /about-us/impact/2018                           301
+/pgt                                /events/prides-got-talent                       301
+https://events.prideinlondon.org/   /events/whats-on                                301
+/join-the-parade                    /parade                                         301
+/hire-a-stall                       /parade/community-village/stalls-application    301
+/volunteer                          /support-us/volunteer                           301
+/donate                             /support-us/donate                              301
+https://www.thegayshop.co.uk/product-category/pride/pride-in-london-shop/       /support-us/merchandise     301
+/pledge-for-politicians             /support-us/political-pledge                    301
+/pride-in-the-city                  /support-us/pride-in-the-city                   301
+/sponsors                           /support-us/sponsors                            301
+/visit                              /visitor-information                            301
+/accommodation                      /visitor-information/travel-and-accommodation   301
+/pubs-bars                          /visitor-information/nightlife                  301
+/help-1                             /help                                           301
+/accessibility                      /parade/accessibility                           301
+>>>>>>> master
