@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageContent renders with default values 1`] = `
-<styles__Content>
+<Fragment>
   <BlogHeader
     category="Resaearch"
     datePublished="2019-03-28T20:30+00:00"
@@ -14,5 +14,5 @@ exports[`PageContent renders with default values 1`] = `
   <BlogFooter
     author={null}
   />
-</styles__Content>
+</Fragment>
 `;

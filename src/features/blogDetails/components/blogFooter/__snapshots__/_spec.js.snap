@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BlogFooter renders with default values 1`] = `
-<Fragment>
+<styles__BlogFooterContainer>
   <hr />
   <styles__Summary>
     <Author
@@ -21,5 +21,5 @@ exports[`BlogFooter renders with default values 1`] = `
       type="text"
     />
   </styles__NoteToEditor>
-</Fragment>
+</styles__BlogFooterContainer>
 `;

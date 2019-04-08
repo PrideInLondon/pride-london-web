@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const StyledParagraph = styled.p`
+export const StyledHeading = styled.div`
   max-width: 830px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0 30px;
 `

@@ -3,10 +3,9 @@ import PropTypes from 'prop-types'
 import BlogHeader from '../../components/blogHeader'
 import BlogContent from '../../components/blogContent'
 import BlogFooter from '../../components/blogFooter'
-import { Content } from './styles'
 
 const PageContent = ({ article, title, datePublished, category, author }) => (
-  <Content>
+  <>
     <BlogHeader
       title={title}
       datePublished={datePublished}
@@ -14,7 +13,7 @@ const PageContent = ({ article, title, datePublished, category, author }) => (
     />
     <BlogContent article={article} />
     <BlogFooter author={author} />
-  </Content>
+  </>
 )
 
 PageContent.propTypes = {

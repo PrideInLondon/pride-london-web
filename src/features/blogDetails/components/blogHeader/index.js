@@ -2,12 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import NewsDate from '../../../../features/blog/components/newsDate'
 import SocialList from '../socialList'
-import { Title, SubHeader, FlexDiv, ShareText, NewsCategory } from './styles'
+import {
+  Title,
+  SubHeader,
+  FlexDiv,
+  ShareText,
+  NewsCategory,
+  BlogHeaderContainer,
+} from './styles'
 
 const CenterDot = () => <span>·</span>
 
 const BlogHeader = ({ title, datePublished, category, readLength }) => (
-  <>
+  <BlogHeaderContainer>
     <Title>{title}</Title>
     <SubHeader>
       <FlexDiv>
@@ -27,7 +34,7 @@ const BlogHeader = ({ title, datePublished, category, readLength }) => (
         <SocialList />
       </FlexDiv>
     </SubHeader>
-  </>
+  </BlogHeaderContainer>
 )
 
 BlogHeader.propTypes = {

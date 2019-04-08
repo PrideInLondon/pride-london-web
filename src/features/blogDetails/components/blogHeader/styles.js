@@ -63,5 +63,14 @@ export const Title = styled.h1`
   letter-spacing: normal;
   color: #2c2c81;
   margin-bottom: 30px;
-  background-color: white;
+`
+export const BlogHeaderContainer = styled.div`
+  max-width: 830px;
+  margin: 0 auto;
+  margin-top: -140px;
+  background-color: ${theme.colors.white};
+  position: relative;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
 `

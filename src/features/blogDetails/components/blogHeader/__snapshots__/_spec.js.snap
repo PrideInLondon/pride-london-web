@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BlogHeader renders with default values 1`] = `
-<Fragment>
+<styles__BlogHeaderContainer>
   <styles__Title>
     Title
   </styles__Title>
@@ -25,5 +25,5 @@ exports[`BlogHeader renders with default values 1`] = `
       <SocialMediaList />
     </styles__FlexDiv>
   </styles__SubHeader>
-</Fragment>
+</styles__BlogHeaderContainer>
 `;

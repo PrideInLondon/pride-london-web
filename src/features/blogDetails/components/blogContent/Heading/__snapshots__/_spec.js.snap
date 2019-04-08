@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders with default values 1`] = `
+<styles__StyledHeading>
+  somecontent
+</styles__StyledHeading>
+`;

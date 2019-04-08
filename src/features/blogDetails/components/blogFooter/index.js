@@ -6,7 +6,7 @@ import Author from '../author'
 import SocialList from '../socialList'
 import { FlexDiv, ShareText } from '../blogHeader/styles'
 import Input from '../../../../components/input'
-import { Summary, NoteToEditor } from './styles'
+import { Summary, NoteToEditor, BlogFooterContainer } from './styles'
 
 export const StyledInput = styled(Input)`
   label {
@@ -18,7 +18,7 @@ export const StyledInput = styled(Input)`
 `
 
 const BlogFooter = ({ author }) => (
-  <>
+  <BlogFooterContainer>
     <hr />
     <Summary>
       {author && <Author author={author} />}
@@ -34,7 +34,7 @@ const BlogFooter = ({ author }) => (
         type={'text'}
       />
     </NoteToEditor>
-  </>
+  </BlogFooterContainer>
 )
 
 BlogFooter.propTypes = {
