@@ -21,7 +21,7 @@ const BlogFooter = ({ author }) => (
   <>
     <hr />
     <Summary>
-      <Author author={author} />
+      {author && <Author author={author} />}
       <FlexDiv>
         <ShareText>Share this post</ShareText>
         <SocialList />

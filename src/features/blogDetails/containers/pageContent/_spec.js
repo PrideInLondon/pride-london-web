@@ -15,6 +15,7 @@ describe(PageContent.name, () => {
         article={article}
         category={category}
         datePublished={datePublished}
+        author={null}
       />
     )
     expect(wrapper).toMatchSnapshot()
