@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import theme from '../../../../theme/theme'
-import { getMostReadable } from '../../../../features/blog/components/newsFilter/styles'
 
 export const FlexDiv = styled.div`
   display: flex;
@@ -32,23 +31,6 @@ export const SubHeader = styled.div`
     letter-spacing: normal;
     white-space: nowrap;
   }
-`
-export const NewsCategory = styled.div`
-  display: inline-block;
-  border: 2px solid;
-  background-color: ${props => props.backgroundColor};
-  border-color: ${props => props.backgroundColor};
-  border-radius: 4px;
-  color: ${props => getMostReadable(props.textColor)};
-  cursor: pointer;
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.14;
-  padding: 2px 4px;
-  white-space: nowrap;
-  text-align: center;
-  margin-right: 10px;
 `
 export const ReadLength = styled.span`
   margin-left: 4px;

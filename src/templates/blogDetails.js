@@ -24,21 +24,19 @@ const BlogDetails = ({
     },
     otherArticles,
   },
-}) => {
-  return (
-    <PageWrapper>
-      <PageHeader title={title} headerImage={headerImage} />
-      <PageContent
-        article={article}
-        title={title}
-        datePublished={datePublished}
-        category={category}
-        author={author}
-      />
-      <PageFooter otherArticles={otherArticles} />
-    </PageWrapper>
-  )
-}
+}) => (
+  <PageWrapper>
+    <PageHeader title={title} headerImage={headerImage} />
+    <PageContent
+      article={article}
+      title={title}
+      datePublished={datePublished}
+      category={category}
+      author={author}
+    />
+    <PageFooter otherArticles={otherArticles} />
+  </PageWrapper>
+)
 
 export const articleDetailsQuery = graphql`
   query articleDetailsQuery($id: String!) {
