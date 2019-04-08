@@ -12,7 +12,14 @@ exports[`PageContent renders with default values 1`] = `
     article={Object {}}
   />
   <BlogFooter
-    author={Object {}}
+    author={
+      Object {
+        "display_name": Object {
+          "display_name": "FullName",
+        },
+        "imageSrc": "imageSrc",
+      }
+    }
   />
 </styles__Content>
 `;
