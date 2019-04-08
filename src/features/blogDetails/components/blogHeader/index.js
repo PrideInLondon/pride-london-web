@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import NewsDate from '../../../../features/blog/components/newsDate'
 import SocialList from '../socialList'
-import { NewsCategory } from '../../../../features/homepage/components/latestNews/latestNewsCard/styles'
-import { Title, SubHeader, FlexDiv, ShareText } from './styles'
+import { Title, SubHeader, FlexDiv, ShareText, NewsCategory } from './styles'
 
 const CenterDot = () => <span>·</span>
 
