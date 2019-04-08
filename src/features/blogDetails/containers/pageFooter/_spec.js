@@ -4,11 +4,7 @@ import PageFooter from '.'
 
 describe(PageFooter.name, () => {
   it('renders with default values', () => {
-    const title = 'Title'
-    const headerImage = { file: { url: 'backgroundimageurl/image.png' } }
-    const wrapper = shallow(
-      <PageFooter title={title} headerImage={headerImage} />
-    )
+    const wrapper = shallow(<PageFooter otherArticles={{}} />)
     expect(wrapper).toMatchSnapshot()
   })
 })

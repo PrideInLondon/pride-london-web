@@ -1,6 +1,13 @@
 import React from 'react'
-import OtherArticles from '../otherArticles/otherArticlesQuery'
+import PropTypes from 'prop-types'
+import OtherArticles from '../otherArticles'
 
-const PageFooter = () => <OtherArticles />
+const PageFooter = ({ otherArticles }) => (
+  <OtherArticles otherArticles={otherArticles} />
+)
+
+PageFooter.propTypes = {
+  otherArticles: PropTypes.object.isRequired,
+}
 
 export default PageFooter

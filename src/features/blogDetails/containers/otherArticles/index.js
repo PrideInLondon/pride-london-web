@@ -11,11 +11,7 @@ export const ArticleCard = styled(NewsCard)`
   border-radius: 4px;
 `
 
-const OtherArticles = ({
-  data: {
-    allContentfulArticle: { edges: articles = [] },
-  },
-}) => (
+const OtherArticles = ({ otherArticles: { edges: articles = [] } }) => (
   <Container>
     <Row>
       <FlexColumn width={[1, 1, 1, 1]}>
@@ -40,9 +36,9 @@ const OtherArticles = ({
 )
 
 OtherArticles.propTypes = {
-  data: PropTypes.shape({
-    allContentfulArticle: PropTypes.shape({
-      edges: PropTypes.shape({
+  otherArticles: PropTypes.shape({
+    edges: PropTypes.arrayOf(
+      PropTypes.shape({
         articles: PropTypes.arrayOf(
           PropTypes.shape({
             node: PropTypes.shape({
@@ -53,8 +49,8 @@ OtherArticles.propTypes = {
             }),
           })
         ),
-      }),
-    }),
+      })
+    ),
   }).isRequired,
 }
 

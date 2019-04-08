@@ -22,6 +22,7 @@ const BlogDetails = ({
       category,
       author,
     },
+    otherArticles,
   },
 }) => {
   return (
@@ -34,14 +35,14 @@ const BlogDetails = ({
         category={category}
         author={author}
       />
-      <PageFooter />
+      <PageFooter otherArticles={otherArticles} />
     </PageWrapper>
   )
 }
 
 export const articleDetailsQuery = graphql`
   query articleDetailsQuery($id: String!) {
-    contentfulArticle(id: { eq: $id }) {
+    contentfulArticle: contentfulArticle(id: { eq: $id }) {
       id
       title
       article {
@@ -57,6 +58,20 @@ export const articleDetailsQuery = graphql`
       author {
         display_name {
           display_name
+        }
+      }
+    }
+    otherArticles: allContentfulArticle(
+      sort: { fields: [datePublished], order: DESC }
+      filter: { id: { ne: $id } }
+      limit: 3
+    ) {
+      edges {
+        node {
+          id
+          title
+          datePublished
+          category
         }
       }
     }
