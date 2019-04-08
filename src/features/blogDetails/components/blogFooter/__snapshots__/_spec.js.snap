@@ -15,12 +15,9 @@ exports[`BlogFooter renders with default values 1`] = `
     </styles__FlexDiv>
   </styles__Summary>
   <styles__NoteToEditor>
-    <Input
-      className={null}
-      handleChange={null}
+    <blogFooter__StyledInput
       id="noteToEditor"
       label="Note to editors"
-      required={false}
       type="text"
     />
   </styles__NoteToEditor>
