@@ -47,33 +47,6 @@ exports[`Carousel renders with default values 1`] = `
         />
       </styles__ImageContainer>
     </styles__SlickContainer>
-    <styles__SlickContainer
-      key="fG5o6zmR0Iy6m2emIEe2K"
-    >
-      <styles__ImageContainer>
-        <styles__CarouselImage
-          src="//images.ctfassets.net/n2o4hgsv6wcx/fG5o6zmR0Iy6m2emIEe2K/6e3db288392d8650d293bc2611add46a/hes-not-the-messia_2023026b.jpg"
-        />
-      </styles__ImageContainer>
-    </styles__SlickContainer>
-    <styles__SlickContainer
-      key="c75X03W1FsW2qg2KsYwGogK"
-    >
-      <styles__ImageContainer>
-        <styles__CarouselImage
-          src="//images.ctfassets.net/n2o4hgsv6wcx/75X03W1FsW2qg2KsYwGogK/2f0966160724c15706f0daef5b01234b/1801-12885.jpg"
-        />
-      </styles__ImageContainer>
-    </styles__SlickContainer>
-    <styles__SlickContainer
-      key="c213DAKWM64gu48QkKweiMI"
-    >
-      <styles__ImageContainer>
-        <styles__CarouselImage
-          src="//images.ctfassets.net/n2o4hgsv6wcx/213DAKWM64gu48QkKweiMI/fcb29557036a58e1f31fed6f0f22c0bd/rs-188604-untitled-5.jpg"
-        />
-      </styles__ImageContainer>
-    </styles__SlickContainer>
   </Carousel__StyledSlider>
 </styles__CarouselContainer>
 `;
