@@ -26,7 +26,12 @@ PageContent.propTypes = {
 }
 
 PageContent.defaultProps = {
-  author: {},
+  author: {
+    imageSrc: 'imageSrc',
+    display_name: {
+      display_name: 'FullName',
+    },
+  },
 }
 
 export default PageContent
