@@ -12,7 +12,9 @@ const AnnouncementCard = ({ image: url = '', title }) => {
     <CardAnnouncement>
       <CardImage style={{ backgroundImage: `url('${url}')` }} />
       <CardTitleWrapper>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle>
+          <span>{title}</span>
+        </CardTitle>
       </CardTitleWrapper>
     </CardAnnouncement>
   )

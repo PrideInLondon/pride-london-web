@@ -18,20 +18,45 @@ export const CardAnnouncement = styled.div`
 export const CardTitleWrapper = styled.div`
   position: block;
   padding: 0;
+  padding-left: 0.37em;
 
   ${media.tablet`
     position:absolute;
     bottom: 0;
     left: 0;
-    padding: 0 20px 20px;
+    padding: 0 35px 40px;
   `};
 `
 
-export const CardTitle = styled.span`
+export const CardTitle = styled.h2`
   background: #2d2f7f;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 31px;
-  font-weight: 600;
-  padding: 5px 7px;
+  margin: 0;
+  padding-right: 0.45em;
   color: #fff;
+  display: inline;
+  position: relative;
+  white-space: pre-wrap;
+  border: 0 solid #2d2f7f;
+  border-width: 0.35em 0; /* 0.25em is roughly equal to one space character. */
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -0.35em;
+    right: 100%;
+    bottom: -0.35em;
+    width: 0.35em;
+    background: #2d2f7f;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  ${media.tablet`
+    font-size: 24px;
+  `};
 `
