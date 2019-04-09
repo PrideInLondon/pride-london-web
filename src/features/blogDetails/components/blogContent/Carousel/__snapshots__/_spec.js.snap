@@ -6,6 +6,22 @@ exports[`Carousel renders with default values 1`] = `
     centerMode={true}
     centerPadding="300px"
     infinite={true}
+    nextArrow={
+      <Arrow
+        left={false}
+        onClick={[Function]}
+      >
+        <ChevronRight />
+      </Arrow>
+    }
+    prevArrow={
+      <Arrow
+        left={true}
+        onClick={[Function]}
+      >
+        <ChevronRight />
+      </Arrow>
+    }
     responsive={
       Array [
         Object {

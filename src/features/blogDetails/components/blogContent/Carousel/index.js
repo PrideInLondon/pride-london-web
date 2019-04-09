@@ -5,6 +5,8 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import theme from '../../../../../theme/theme'
+import ChevronRight from '../../../../../components/chevronRight'
+import Arrow from './Arrow'
 
 import {
   CarouselContainer,
@@ -20,6 +22,16 @@ const carouselSettings = {
   slidesToScroll: 1,
   centerPadding: '300px',
   centerMode: true,
+  nextArrow: (
+    <Arrow>
+      <ChevronRight />
+    </Arrow>
+  ),
+  prevArrow: (
+    <Arrow left>
+      <ChevronRight />
+    </Arrow>
+  ),
   responsive: [
     {
       breakpoint: theme.breakpoints[0],
