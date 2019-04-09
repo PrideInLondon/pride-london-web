@@ -10,10 +10,6 @@ const linkStyles = css`
   color: ${theme.colors.black};
   transition: border-color 0.15s linear;
 
-  &:after {
-    content: '\00a0›';
-  }
-
   & + .cta-link {
     margin-left: 20px;
   }
@@ -34,15 +30,15 @@ const CTALink = ({ to, children, external, contact }) =>
       target="_blank"
       rel="noopener noreferrer"
     >
-      {children}
+      {children}&nbsp;&rsaquo;
     </StyledExternalLink>
   ) : contact ? (
     <StyledExternalLink href={to} className="cta-link">
-      {children}
+      {children}&nbsp;&rsaquo;
     </StyledExternalLink>
   ) : (
     <StyledLink to={to} className="cta-link">
-      {children}
+      {children}&nbsp;&rsaquo;
     </StyledLink>
   )
 
