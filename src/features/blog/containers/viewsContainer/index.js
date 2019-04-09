@@ -14,7 +14,7 @@ const ViewsContainer = ({ views }) => {
         </Title>
         <CardContainer>
           {views.map(view => (
-            <ViewsCard {...view} />
+            <ViewsCard {...view} key={view.id} />
           ))}
         </CardContainer>
       </Container>
