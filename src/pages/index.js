@@ -11,6 +11,7 @@ import { Container } from '../components/grid'
 import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
+import AnnouncementsContainer from '../features/homepage/containers/announcementsContainer'
 
 const FuturedEventsContainer = styled.div`
   background-color: #282a80;
@@ -156,9 +157,8 @@ const Home = () => (
         </ButtonMobile>
       </FuturedEventsContainer>
     </Container>
-
+    <AnnouncementsContainer />
     <LatestNewsContainer />
-
     <SectionVolunteer>
       <Container>
         <VolunteerBoxInfo />

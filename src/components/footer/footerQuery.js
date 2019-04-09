@@ -6,6 +6,7 @@ const query = graphql`
   query footerSponsorsQuery {
     allContentfulSponsor(
       filter: { sponsorLevel: { regex: "/Headline|Gold|Silver|Bronze/" } }
+      sort: { fields: sponsorName, order: ASC }
     ) {
       edges {
         node {
