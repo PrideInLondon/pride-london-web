@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ImageContainer, StyledImage } from './styles'
 
-const Image = ({ src }) => (
+const Image = ({ file }) => (
   <ImageContainer>
-    <StyledImage src={src} />
+    <StyledImage src={file['en-GB'].url} />
   </ImageContainer>
 )
 
 Image.propTypes = {
-  src: PropTypes.string.isRequired,
+  file: PropTypes.object.isRequired,
 }
 
 export default Image

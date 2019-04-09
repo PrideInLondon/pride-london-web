@@ -1,7 +1,6 @@
 import styled from 'styled-components'
+import { blogContent } from '../styles'
 
 export const StyledHeading = styled.div`
-  max-width: 830px;
-  margin: auto;
-  padding: 0 30px;
+  ${blogContent}
 `

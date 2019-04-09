@@ -1,31 +1,39 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { BLOCKS } from '@contentful/rich-text-types'
+import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import Image from './Image'
 import Paragraph from './Paragraph'
 import Carousel from './Carousel'
 import Heading from './Heading'
+import List from './List'
+import Quote from './Quote'
+import Hr from './Hr'
 
-const renderParagraph = (node, children) => {
-  return <Paragraph>{children}</Paragraph>
-}
-const renderHeading = (heading, node, children) => {
-  return <Heading>{React.createElement(heading, null, children)}</Heading>
-}
-const renderCarousel = node => {
-  console.log(node.data.target.fields)
-  return <Carousel {...node.data.target.fields} />
-}
+const renderParagraph = (_node, children) => <Paragraph>{children}</Paragraph>
 
-const renderImage = ({
-  data: {
-    target: {
-      fields: { file },
-    },
-  },
-}) => {
-  return <Image src={file['en-GB'].url} />
-}
+const renderHeading = (heading, _node, children) => (
+  <Heading>{React.createElement(heading, null, children)}</Heading>
+)
+
+const renderList = (listType, _node, children) => (
+  <List>{React.createElement(listType, null, children)}</List>
+)
+
+const renderCarousel = node => <Carousel {...node.data.target.fields} />
+
+const renderQuote = (_node, children) => <Quote>{children}</Quote>
+
+const renderHr = () => <Hr />
+
+const renderImage = node => <Image {...node.data.target.fields} />
+
+const renderAssetHyperlink = (node, children) => (
+  <a href={node.data.target.fields.file['en-GB'].url}>{children}</a>
+)
+
+const rendeUrlHyperlink = (node, children) => (
+  <a href={node.data.uri}>{children}</a>
+)
 
 const renderEmbeddedEntry = (node, children) => {
   switch (node.data.target.sys.contentType.sys.id) {
@@ -44,8 +52,17 @@ export default {
     [BLOCKS.HEADING_4]: renderHeading.bind(this, 'h4'),
     [BLOCKS.HEADING_5]: renderHeading.bind(this, 'h5'),
     [BLOCKS.HEADING_6]: renderHeading.bind(this, 'h6'),
+    [BLOCKS.UL_LIST]: renderList.bind(this, 'ul'),
+    [BLOCKS.OL_LIST]: renderList.bind(this, 'ol'),
+    [BLOCKS.QUOTE]: renderQuote,
+    [BLOCKS.HR]: renderHr,
     [BLOCKS.EMBEDDED_ENTRY]: renderEmbeddedEntry,
     [BLOCKS.EMBEDDED_ASSET]: renderImage,
+
+    [INLINES.HYPERLINK]: rendeUrlHyperlink,
+    [INLINES.ENTRY_HYPERLINK]: () => null,
+    [INLINES.ASSET_HYPERLINK]: renderAssetHyperlink,
+    [INLINES.EMBEDDED_ENTRY]: () => null,
   },
 }
 
