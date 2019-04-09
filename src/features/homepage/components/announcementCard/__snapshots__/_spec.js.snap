@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnnouncementCard renders with default values 1`] = `
+<styles__CardAnnouncement>
+  <styles__CardImage
+    style={
+      Object {
+        "backgroundImage": "url('')",
+      }
+    }
+  />
+  <styles__CardTitleWrapper>
+    <styles__CardTitle>
+      <span />
+    </styles__CardTitle>
+  </styles__CardTitleWrapper>
+</styles__CardAnnouncement>
+`;
