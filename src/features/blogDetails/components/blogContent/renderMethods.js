@@ -11,11 +11,11 @@ import Hr from './Hr'
 
 const renderParagraph = (_node, children) => <Paragraph>{children}</Paragraph>
 
-const renderHeading = (heading, _node, children) => (
+const renderHeading = heading => (_node, children) => (
   <Heading>{React.createElement(heading, null, children)}</Heading>
 )
 
-const renderList = (listType, _node, children) => (
+const renderList = listType => (_node, children) => (
   <List>{React.createElement(listType, null, children)}</List>
 )
 
@@ -35,10 +35,10 @@ const rendeUrlHyperlink = (node, children) => (
   <a href={node.data.uri}>{children}</a>
 )
 
-const renderEmbeddedEntry = (node, children) => {
+const renderEmbeddedEntry = node => {
   switch (node.data.target.sys.contentType.sys.id) {
     case 'carousel':
-      return renderCarousel(node, children)
+      return renderCarousel(node)
   }
   return null
 }
@@ -46,14 +46,14 @@ const renderEmbeddedEntry = (node, children) => {
 export default {
   renderNode: {
     [BLOCKS.PARAGRAPH]: renderParagraph,
-    [BLOCKS.HEADING_1]: renderHeading.bind(this, 'h1'),
-    [BLOCKS.HEADING_2]: renderHeading.bind(this, 'h2'),
-    [BLOCKS.HEADING_3]: renderHeading.bind(this, 'h3'),
-    [BLOCKS.HEADING_4]: renderHeading.bind(this, 'h4'),
-    [BLOCKS.HEADING_5]: renderHeading.bind(this, 'h5'),
-    [BLOCKS.HEADING_6]: renderHeading.bind(this, 'h6'),
-    [BLOCKS.UL_LIST]: renderList.bind(this, 'ul'),
-    [BLOCKS.OL_LIST]: renderList.bind(this, 'ol'),
+    [BLOCKS.HEADING_1]: renderHeading('h1'),
+    [BLOCKS.HEADING_2]: renderHeading('h2'),
+    [BLOCKS.HEADING_3]: renderHeading('h3'),
+    [BLOCKS.HEADING_4]: renderHeading('h4'),
+    [BLOCKS.HEADING_5]: renderHeading('h5'),
+    [BLOCKS.HEADING_6]: renderHeading('h6'),
+    [BLOCKS.UL_LIST]: renderList('ul'),
+    [BLOCKS.OL_LIST]: renderList('ol'),
     [BLOCKS.QUOTE]: renderQuote,
     [BLOCKS.HR]: renderHr,
     [BLOCKS.EMBEDDED_ENTRY]: renderEmbeddedEntry,
