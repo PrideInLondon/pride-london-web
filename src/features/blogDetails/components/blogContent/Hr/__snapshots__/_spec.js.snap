@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hr renders with default values 1`] = `
+<styles__StyledHr>
+  <hr />
+</styles__StyledHr>
+`;

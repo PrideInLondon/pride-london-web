@@ -12,8 +12,8 @@ import {
 
 const CenterDot = () => <span>·</span>
 
-const NewsCard = ({ date, filterType, title, readLength }) => (
-  <Card>
+const NewsCard = ({ date, filterType, title, readLength, className }) => (
+  <Card className={className}>
     <CardHeader>
       <NewsFilter filterType={filterType} isOutline={false} />
       <NewsDate date={date} />
@@ -38,10 +38,12 @@ NewsCard.propTypes = {
     title: PropTypes.string,
   }).isRequired,
   title: PropTypes.string.isRequired,
+  className: PropTypes.string,
 }
 
 NewsCard.defaultProps = {
   readLength: null,
+  className: '',
 }
 
 export default NewsCard
