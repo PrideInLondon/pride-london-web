@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeader renders with default values 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="Title"
+  />
+  <styles__Background
+    backgroundImage="backgroundimageurl/image.png"
+  />
+</Fragment>
+`;

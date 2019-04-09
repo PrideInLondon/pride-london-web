@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsCard renders with default values 1`] = `
-<styles__Card>
+<styles__Card
+  className=""
+>
   <styles__CardHeader>
     <NewsFilter
       filterType={
