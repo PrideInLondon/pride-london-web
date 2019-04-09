@@ -6,6 +6,7 @@ import theme from '../theme/theme'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
 import StyledHR from '../components/horizontalRule'
+import mockData from './_mockdata'
 
 const mapEntries = news => {
   if (!news.edges || !Array.isArray(news.edges)) return []
@@ -15,9 +16,9 @@ const mapEntries = news => {
 const Blog = props => {
   console.log(props)
   const {
-    data: { news, views, categories },
+    data: { views, categories },
   } = props
-  const mappedArticles = mapEntries(news)
+  const mappedArticles = mapEntries(mockData.data)
   const mappedCategories = mapEntries(categories)
   const mappedViews = mapEntries(views)
   return (

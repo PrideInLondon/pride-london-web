@@ -47,7 +47,7 @@ NewsContainer.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
-      filterType: PropTypes.shape({
+      category: PropTypes.shape({
         hexColour: PropTypes.string,
         title: PropTypes.string,
       }),
