@@ -8,7 +8,7 @@ describe(PageContent.name, () => {
     const title = 'Title'
     const article = {}
     const datePublished = '2019-03-28T20:30+00:00'
-    const category = ['Resaearch']
+    const category = { title: 'Resaearch', hexColour: '#eeeeee' }
     const wrapper = shallow(
       <PageContent
         title={title}

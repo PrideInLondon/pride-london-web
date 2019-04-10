@@ -8,7 +8,7 @@ exports[`BlogHeader renders with default values 1`] = `
   <styles__SubHeader>
     <styles__FlexDiv>
       <styles__NewsCategory
-        backgroundColor="orange"
+        backgroundColor="#eeeeee"
       >
         Reseaarch
       </styles__NewsCategory>

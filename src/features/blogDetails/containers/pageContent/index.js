@@ -9,7 +9,7 @@ const PageContent = ({ article, title, datePublished, category, author }) => (
     <BlogHeader
       title={title}
       datePublished={datePublished}
-      category={category[0]}
+      category={category}
     />
     <BlogContent article={article} />
     <BlogFooter author={author} />
@@ -20,17 +20,11 @@ PageContent.propTypes = {
   article: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   datePublished: PropTypes.string.isRequired,
-  category: PropTypes.arrayOf(PropTypes.string).isRequired,
+  category: PropTypes.object.isRequired,
   author: PropTypes.object,
 }
-
 PageContent.defaultProps = {
-  author: {
-    imageSrc: 'imageSrc',
-    display_name: {
-      display_name: 'FullName',
-    },
-  },
+  author: null,
 }
 
 export default PageContent

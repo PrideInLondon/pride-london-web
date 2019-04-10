@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import theme from '../../../../theme/theme'
 import { Row, FlexColumn } from '../../../../components/grid'
 import OtherArticlesHeader from '../../components/otherArticlesHeader'
 import NewsCard from '../../../blog/components/newsCard'
@@ -11,7 +10,10 @@ export const ArticleCard = styled(NewsCard)`
   border-radius: 4px;
 `
 
-const OtherArticles = ({ otherArticles: { edges: articles = [] } }) => (
+const OtherArticles = ({
+  otherArticles: { edges: articles = [] },
+  categories: { edges: categories },
+}) => (
   <Container>
     <Row>
       <FlexColumn width={[1, 1, 1, 1]}>
@@ -22,10 +24,7 @@ const OtherArticles = ({ otherArticles: { edges: articles = [] } }) => (
       {articles.map(({ node: { id, title, category, datePublished } }) => (
         <FlexColumn key={id} width={[1, 1, 1 / 2, 1 / 3]}>
           <ArticleCard
-            filterType={{
-              hexColour: theme.colors.yellow,
-              title: category[0],
-            }}
+            filterType={categories.find(cat => cat.node.title == category).node}
             title={title}
             date={datePublished}
           />
@@ -49,6 +48,14 @@ OtherArticles.propTypes = {
             }),
           })
         ),
+      })
+    ),
+  }).isRequired,
+  categories: PropTypes.shape({
+    edges: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        hexColour: PropTypes.string,
       })
     ),
   }).isRequired,

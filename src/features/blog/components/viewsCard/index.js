@@ -10,11 +10,13 @@ import {
 
 const ViewsCard = props => {
   const { headerImage, author, title } = props
-  console.log(headerImage)
   const photoUrl = headerImage ? headerImage.file.url : ''
   return (
     <Container>
-      <ViewsThumbail src={photoUrl} altText={`${author} — ${title}`} />
+      <ViewsThumbail
+        src={photoUrl}
+        altText={`${author.display_name.display_name} — ${title}`}
+      />
       <ArticleAuthor>{author.display_name.display_name}</ArticleAuthor>
       <ArticleTitle>
         <ArticleTitleTextContainer>{title}</ArticleTitleTextContainer>

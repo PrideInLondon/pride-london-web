@@ -11,14 +11,14 @@ describe(LatestNews.name, () => {
     }
     const readLength = ''
     const date = '2019-03-28T20:30+00:00'
-    const images = [{ file: { url: 'backgroundimageurl/image.png' } }]
+    const headerImage = { file: { url: 'backgroundimageurl/image.png' } }
     const wrapper = shallow(
       <LatestNews
         newsCategory={newsCategory}
         title={title}
         date={date}
         readLength={readLength}
-        images={images}
+        headerImage={headerImage}
       />
     )
     expect(wrapper).toMatchSnapshot()

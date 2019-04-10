@@ -3,7 +3,7 @@
 exports[`Author renders with default values 1`] = `
 <styles__AuthorCard>
   <styles__Thumbnail
-    src="imageSrc"
+    src="imgSrc"
   />
   <styles__AuthorInfo>
     <styles__FullName>

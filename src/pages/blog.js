@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import ImageBanner from '../components/imageBanner'
 import theme from '../theme/theme'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
-// import NewsContainer from '../features/blog/containers/newsContainer'
+import NewsContainer from '../features/blog/containers/newsContainer'
 import StyledHR from '../components/horizontalRule'
 
 const mapEntries = news => {
@@ -12,10 +12,12 @@ const mapEntries = news => {
   return news.edges.map(({ node }) => ({ ...node }))
 }
 
-const Blog = ({ data: { views } }) => {
-  console.log(views)
-  // const mappedArticles = mapEntries(articles)
-  // const mappedCategories = mapEntries(categories)
+const Blog = ({ data: { articles, categories, views } }) => {
+  const mappedCategories = mapEntries(categories)
+  const mappedArticles = mapEntries(articles).map(art => ({
+    ...art,
+    category: mappedCategories.find(cat => cat.title == art.category),
+  }))
   const mappedViews = mapEntries(views)
   return (
     <Fragment>
@@ -29,7 +31,7 @@ const Blog = ({ data: { views } }) => {
       />
       <ViewsContainer views={mappedViews} />
       <StyledHR />
-      {/* <NewsContainer articles={mappedArticles} categories={mappedCategories} /> */}
+      <NewsContainer articles={mappedArticles} categories={mappedCategories} />
     </Fragment>
   )
 }

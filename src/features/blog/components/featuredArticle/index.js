@@ -14,13 +14,11 @@ const filterType = {
 
 export const query = graphql`
   query articleQuery {
-    allContentfulNews(filter: { isFeatured: { eq: true } }) {
-      edges {
-        node {
-          id
-          date
-          title
-        }
+    contentfulArticleFeatured {
+      featuredArticle {
+        id
+        datePublished
+        title
       }
     }
   }
@@ -32,14 +30,14 @@ const FeaturedArticle = () => {
       query={query}
       render={data => {
         const {
-          allContentfulNews: { edges: [{ node = {} } = {}] = [] } = {},
+          contentfulArticleFeatured: { featuredArticle = {} } = {},
         } = data
-        const { date, title } = node
+        const { datePublished, title } = featuredArticle
         return (
           <FeaturedArticleCard>
             <CardHeader>
               <NewsFilter filterType={filterType} icon={starIcon} />
-              <NewsDate date={date} />
+              <NewsDate date={datePublished} />
             </CardHeader>
             <FeaturedArticleTitle>{title}</FeaturedArticleTitle>
           </FeaturedArticleCard>

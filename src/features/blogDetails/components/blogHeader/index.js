@@ -18,7 +18,9 @@ const BlogHeader = ({ title, datePublished, category, readLength }) => (
     <Title>{title}</Title>
     <SubHeader>
       <FlexDiv>
-        <NewsCategory backgroundColor={'orange'}>{category}</NewsCategory>
+        <NewsCategory backgroundColor={category.hexColour}>
+          {category.title}
+        </NewsCategory>
         <span>
           <NewsDate date={datePublished} />
           {readLength && (
@@ -40,7 +42,10 @@ const BlogHeader = ({ title, datePublished, category, readLength }) => (
 BlogHeader.propTypes = {
   title: PropTypes.string.isRequired,
   datePublished: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  category: PropTypes.shape({
+    title: PropTypes.string,
+    hexColour: PropTypes.string,
+  }).isRequired,
   readLength: PropTypes.string,
 }
 BlogHeader.defaultProps = {

@@ -13,14 +13,14 @@ import {
 
 const CenterDot = () => <span>·</span>
 
-const LatestNewsCard = ({ date, newsCategory, title, readLength }) => (
+const LatestNewsCard = ({ datePublished, category, title, readLength }) => (
   <Card>
     <CardHeader>
-      <NewsCategory backgroundColor={newsCategory.hexColour}>
-        {newsCategory.title}
+      <NewsCategory backgroundColor={category.hexColour}>
+        {category.title}
       </NewsCategory>
       <NewsMetrics>
-        <NewsDate date={date} />
+        <NewsDate date={datePublished} />
         {readLength && (
           <>
             <CenterDot />
@@ -36,9 +36,9 @@ const LatestNewsCard = ({ date, newsCategory, title, readLength }) => (
 )
 
 LatestNewsCard.propTypes = {
-  date: PropTypes.string.isRequired,
+  datePublished: PropTypes.string.isRequired,
   readLength: PropTypes.string,
-  newsCategory: PropTypes.shape({
+  category: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,
