@@ -1,10 +1,9 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Row, FlexColumn } from '../../../../components/grid'
-import LatestNewsCard from '../../components/latestNews/latestNewsCard'
 import LatestNewsHeader from '../../components/latestNews/latestNewsHeader'
 import LatestNews from '../../components/latestNews'
-import { Container, SecondaryNews } from './styles'
+import { Container, SecondaryNews, NewsCard } from './styles'
 
 export const query = graphql`
   query latestNewsQuery {
@@ -80,7 +79,7 @@ const LatestNewsContainer = () => (
             >
               <SecondaryNews>
                 {newsArr.slice(1).map(({ node: singleNews }) => (
-                  <LatestNewsCard
+                  <NewsCard
                     key={singleNews.id}
                     {...{
                       ...singleNews,

@@ -3,11 +3,17 @@ import PropTypes from 'prop-types'
 import NewsCardHeader from '../../../../components/newsCardHeader'
 import { Card, CardTitle, UnderlineContainer } from './styles'
 
-const NewsCard = ({ date, filterType, title, readLength, className }) => (
+const NewsCard = ({
+  datePublished,
+  category,
+  title,
+  readLength,
+  className,
+}) => (
   <Card className={className}>
     <NewsCardHeader
-      category={filterType}
-      datePublished={date}
+      category={category}
+      datePublished={datePublished}
       readLength={readLength}
     />
     <CardTitle>
@@ -17,9 +23,9 @@ const NewsCard = ({ date, filterType, title, readLength, className }) => (
 )
 
 NewsCard.propTypes = {
-  date: PropTypes.string.isRequired,
+  datePublished: PropTypes.string.isRequired,
   readLength: PropTypes.string,
-  filterType: PropTypes.shape({
+  category: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,

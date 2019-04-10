@@ -6,7 +6,7 @@ import { FlexColumn, Row } from '../../../../components/grid'
 const NewsCards = ({ selectedFilter, articles }) => (
   <Row>
     {articles.map(
-      ({ datePublished: date, title, category, id }) =>
+      ({ datePublished, title, category, id }) =>
         (selectedFilter.title === 'All Articles' ||
           selectedFilter.title === category.title) && (
           /* eslint-disable */
@@ -19,7 +19,11 @@ const NewsCards = ({ selectedFilter, articles }) => (
               1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
             ]}
           >
-            <NewsCard filterType={category} title={title} date={date} />
+            <NewsCard
+              category={category}
+              title={title}
+              datePublished={datePublished}
+            />
           </FlexColumn>
         ) /* eslint-enable */
     )}
@@ -35,6 +39,7 @@ NewsCards.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
+      datePublished: PropTypes.string,
       filterType: PropTypes.shape({
         hexColour: PropTypes.string,
         title: PropTypes.string,
