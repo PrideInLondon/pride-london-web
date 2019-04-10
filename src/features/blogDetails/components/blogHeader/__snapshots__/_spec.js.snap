@@ -12,11 +12,11 @@ exports[`BlogHeader renders with default values 1`] = `
       >
         Reseaarch
       </styles__NewsCategory>
-      <span>
-        <NewsDate
-          date="2019-03-28T20:30+00:00"
-        />
-      </span>
+      <NewsMetrics
+        className="className"
+        datePublished="2019-03-28T20:30+00:00"
+        readLength={null}
+      />
     </styles__FlexDiv>
     <styles__FlexDiv>
       <styles__ShareText>

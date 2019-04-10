@@ -17,8 +17,10 @@ exports[`NewsCard renders with default values 1`] = `
       isButton={false}
       isOutline={false}
     />
-    <NewsDate
-      date="2019-03-28T20:30+00:00"
+    <NewsMetrics
+      className="className"
+      datePublished="2019-03-28T20:30+00:00"
+      readLength={null}
     />
   </styles__CardHeader>
   <styles__CardTitle>

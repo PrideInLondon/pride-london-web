@@ -1,17 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NewsDate from '../../../../blog/components/newsDate'
 import {
   Card,
   CardHeader,
-  ReadLength,
   CardTitle,
   UnderlineContainer,
   NewsCategory,
   NewsMetrics,
 } from './styles'
-
-const CenterDot = () => <span>·</span>
 
 const LatestNewsCard = ({ datePublished, category, title, readLength }) => (
   <Card>
@@ -19,15 +15,7 @@ const LatestNewsCard = ({ datePublished, category, title, readLength }) => (
       <NewsCategory backgroundColor={category.hexColour}>
         {category.title}
       </NewsCategory>
-      <NewsMetrics>
-        <NewsDate date={datePublished} />
-        {readLength && (
-          <>
-            <CenterDot />
-            <ReadLength>{readLength}</ReadLength>
-          </>
-        )}
-      </NewsMetrics>
+      <NewsMetrics datePublished={datePublished} readLength={readLength} />
     </CardHeader>
     <CardTitle>
       <UnderlineContainer>{title}</UnderlineContainer>

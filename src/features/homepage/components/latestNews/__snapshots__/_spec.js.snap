@@ -6,6 +6,13 @@ exports[`LatestNews renders with default values 1`] = `
 >
   <styles__LatestNewsCardContainer>
     <LatestNewsCard
+      category={
+        Object {
+          "hexColour": "#304242",
+          "title": "Amazing News!!",
+        }
+      }
+      datePublished="2019-03-28T20:30+00:00"
       readLength=""
       title="Here is some news!"
     />

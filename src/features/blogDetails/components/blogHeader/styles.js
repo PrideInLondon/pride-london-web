@@ -49,9 +49,6 @@ export const NewsCategory = styled.div`
   text-align: center;
   margin-right: 10px;
 `
-export const ReadLength = styled.span`
-  margin-left: 4px;
-`
 export const Title = styled.h1`
   font-family: Poppins;
   font-size: 32px;

@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { FeaturedArticleTitle } from '../../containers/newsContainer/styles'
 import NewsFilter from '../newsFilter'
 import theme from '../../../../theme/theme'
-import NewsDate from '../newsDate'
+import NewsMetrics from '../../../../components/newsMetrics'
 import { FeaturedArticleCard, CardHeader } from './styles'
 import starIcon from './starIcon.svg'
 
@@ -37,7 +37,7 @@ const FeaturedArticle = () => {
           <FeaturedArticleCard>
             <CardHeader>
               <NewsFilter filterType={filterType} icon={starIcon} />
-              <NewsDate date={datePublished} />
+              <NewsMetrics datePublished={datePublished} />
             </CardHeader>
             <FeaturedArticleTitle>{title}</FeaturedArticleTitle>
           </FeaturedArticleCard>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { default as NewsMetricsOryg } from '../../../../../components/newsMetrics'
 import { getMostReadable } from '../../../../blog/components/newsFilter/styles'
 import theme from '../../../../../theme/theme'
 
@@ -27,15 +28,12 @@ export const UnderlineContainer = styled.span`
     border-bottom-color: ${theme.colors.eucalyptusGreen};
   }
 `
+
 export const CardHeader = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   margin-bottom: 10px;
-`
-
-export const ReadLength = styled.span`
-  margin-left: 4px;
 `
 
 export const NewsCategory = styled.div`
@@ -53,12 +51,8 @@ export const NewsCategory = styled.div`
   text-align: center;
   margin-bottom: 23px;
 `
-
-export const NewsMetrics = styled.span`
-  color: ${theme.colors.darkGrey};
+export const NewsMetrics = styled(NewsMetricsOryg)`
+  font-family: ${theme.fonts.title};
   font-size: 16px;
-  font-weight: 600;
   line-height: 1.25;
-  letter-spacing: normal;
-  white-space: nowrap;
 `
