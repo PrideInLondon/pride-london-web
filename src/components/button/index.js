@@ -26,7 +26,14 @@ export const Button = props => {
     font-weight: 700;
     font-size: ${styleProps => (styleProps.small ? '0.875rem' : '1.125rem')};
     line-height: 1.388;
-    min-width: ${styleProps => (styleProps.wide ? '250px' : '180px')};
+    min-width: ${styleProps => {
+      console.log(styleProps)
+      return styleProps.wide
+        ? !styleProps.flexwidth
+          ? '250px'
+          : 'unset'
+        : '180px'
+    }};
     width: ${styleProps => (styleProps.fullmobile ? '100%' : 'auto')};
     cursor: pointer;
     text-decoration: none;
@@ -62,6 +69,7 @@ export const Button = props => {
       href={props.link ? props.to : null}
       small={props.small}
       wide={props.wide}
+      flexwidth={props.flexwidth}
       fullmobile={props.fullmobile}
       aria-controls={props['aria-controls']}
       aria-expanded={props['aria-expanded']}
@@ -83,6 +91,7 @@ Button.propTypes = {
   small: PropTypes.bool,
   to: PropTypes.string,
   wide: PropTypes.bool,
+  flexwidth: PropTypes.bool,
   fullmobile: PropTypes.bool,
   white: PropTypes.bool,
   'aria-controls': PropTypes.string,
@@ -102,6 +111,7 @@ Button.defaultProps = {
   fullmobile: false,
   white: false,
   onClick: null,
+  flexwidth: false,
   'aria-controls': undefined,
   'aria-expanded': undefined,
 }
