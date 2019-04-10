@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import LatestNewsCard from './latestNewsCard'
-import { Bacground, LatestNewsCardContainer } from './styles'
+
+import { Bacground, LatestNewsCardContainer, LatestNewsCard } from './styles'
 
 const LatestNews = ({
   datePublished,

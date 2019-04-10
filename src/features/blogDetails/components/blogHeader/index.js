@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SocialList from '../socialList'
-import NewsMetrics from '../../../../components/newsMetrics'
+import NewsCardHeader from '../../../../components/newsCardHeader'
 import {
   Title,
   SubHeader,
   FlexDiv,
   ShareText,
-  NewsCategory,
   BlogHeaderContainer,
 } from './styles'
 
@@ -15,12 +14,11 @@ const BlogHeader = ({ title, datePublished, category, readLength }) => (
   <BlogHeaderContainer>
     <Title>{title}</Title>
     <SubHeader>
-      <FlexDiv>
-        <NewsCategory backgroundColor={category.hexColour}>
-          {category.title}
-        </NewsCategory>
-        <NewsMetrics datePublished={datePublished} readLength={readLength} />
-      </FlexDiv>
+      <NewsCardHeader
+        category={category}
+        datePublished={datePublished}
+        readLength={readLength}
+      />
       <FlexDiv>
         <ShareText>Share this post</ShareText>
         <SocialList />

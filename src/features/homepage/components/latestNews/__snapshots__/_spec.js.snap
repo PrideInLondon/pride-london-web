@@ -5,7 +5,7 @@ exports[`LatestNews renders with default values 1`] = `
   backgroundImage="backgroundimageurl/image.png"
 >
   <styles__LatestNewsCardContainer>
-    <LatestNewsCard
+    <styles__LatestNewsCard
       category={
         Object {
           "hexColour": "#304242",

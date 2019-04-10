@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NewsFilter from '../newsFilter'
-import NewsMetrics from '../../../../components/newsMetrics'
-import { Card, CardHeader, CardTitle, UnderlineContainer } from './styles'
+import NewsCardHeader from '../../../../components/newsCardHeader'
+import { Card, CardTitle, UnderlineContainer } from './styles'
 
 const NewsCard = ({ date, filterType, title, readLength, className }) => (
   <Card className={className}>
-    <CardHeader>
-      <NewsFilter filterType={filterType} isOutline={false} />
-      <NewsMetrics datePublished={date} readLength={readLength} />
-    </CardHeader>
+    <NewsCardHeader
+      category={filterType}
+      datePublished={date}
+      readLength={readLength}
+    />
     <CardTitle>
       <UnderlineContainer>{title}</UnderlineContainer>
     </CardTitle>

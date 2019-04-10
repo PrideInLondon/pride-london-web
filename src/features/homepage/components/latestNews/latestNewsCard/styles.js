@@ -1,13 +1,11 @@
 import styled from 'styled-components'
-import { default as NewsMetricsOryg } from '../../../../../components/newsMetrics'
-import { getMostReadable } from '../../../../blog/components/newsFilter/styles'
+import { default as NewsCardHeaderOryg } from '../../../../../components/newsCardHeader'
 import theme from '../../../../../theme/theme'
 
 export const CardTitle = styled.h3`
   color: ${theme.colors.indigo};
   margin: 10px 0;
 `
-
 export const Card = styled.div`
   background-color: ${theme.colors.lightGrey};
   border-radius: 2px;
@@ -20,7 +18,6 @@ export const Card = styled.div`
     margin-bottom: 30px;
   }
 `
-
 export const UnderlineContainer = styled.span`
   border-bottom: 2px solid transparent;
   transition: border-bottom-color 200ms ease-out;
@@ -28,31 +25,16 @@ export const UnderlineContainer = styled.span`
     border-bottom-color: ${theme.colors.eucalyptusGreen};
   }
 `
-
-export const CardHeader = styled.div`
+export const NewsCardHeader = styled(NewsCardHeaderOryg)`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-bottom: 10px;
-`
-
-export const NewsCategory = styled.div`
-  border: 2px solid;
-  background-color: ${props => props.backgroundColor};
-  border-color: ${props => props.backgroundColor};
-  border-radius: 4px;
-  color: ${props => getMostReadable(props.textColor)};
-  cursor: pointer;
-  font-family: Poppins;
-  font-size: 16px;
-  height: 32px;
-  padding: 4px 8px;
-  white-space: nowrap;
-  text-align: center;
-  margin-bottom: 23px;
-`
-export const NewsMetrics = styled(NewsMetricsOryg)`
-  font-family: ${theme.fonts.title};
-  font-size: 16px;
-  line-height: 1.25;
+  & > * {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  & > *:nth-child(1) {
+    padding: 4px 18px;
+    margin-bottom: 23px;
+  }
 `

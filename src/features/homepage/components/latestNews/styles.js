@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { default as LatestNewsCardOryg } from './latestNewsCard'
 export const Bacground = styled.div`
   display: flex;
   background-image: url(${props => props.backgroundImage});
@@ -16,16 +16,17 @@ export const LatestNewsCardContainer = styled.div`
   right: 30px;
   bottom: 0;
   max-width: 616px;
-  & > div {
-    min-height: unset;
-    & > div:nth-child(1) {
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 15px;
-      &>div: nth-child(1) {
-        margin-bottom: 0;
-        margin-right: 10px;
-      }
+`
+
+export const LatestNewsCard = styled(LatestNewsCardOryg)`
+  min-height: unset;
+  & > div:nth-child(1) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    &>div: nth-child(1) {
+      margin-bottom: 0;
+      margin-right: 10px;
     }
   }
 `
