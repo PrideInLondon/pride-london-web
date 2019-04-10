@@ -9,12 +9,13 @@ import {
 } from './styles'
 
 const ViewsCard = props => {
-  const { portraitImage, author, title } = props
-  const photoUrl = portraitImage ? portraitImage.file.url : ''
+  const { headerImage, author, title } = props
+  console.log(headerImage)
+  const photoUrl = headerImage ? headerImage.file.url : ''
   return (
     <Container>
       <ViewsThumbail src={photoUrl} altText={`${author} — ${title}`} />
-      <ArticleAuthor>{author}</ArticleAuthor>
+      <ArticleAuthor>{author.display_name.display_name}</ArticleAuthor>
       <ArticleTitle>
         <ArticleTitleTextContainer>{title}</ArticleTitleTextContainer>
       </ArticleTitle>
@@ -23,9 +24,11 @@ const ViewsCard = props => {
 }
 
 ViewsCard.propTypes = {
-  author: PropTypes.string.isRequired,
+  author: PropTypes.shape({
+    display_name: PropTypes.shape({ display_name: PropTypes.string }),
+  }).isRequired,
   title: PropTypes.string.isRequired,
-  portraitImage: PropTypes.shape({}).isRequired,
+  headerImage: PropTypes.shape({}).isRequired,
 }
 
 export default ViewsCard
