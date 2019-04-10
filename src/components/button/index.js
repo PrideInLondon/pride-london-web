@@ -27,7 +27,6 @@ export const Button = props => {
     font-size: ${styleProps => (styleProps.small ? '0.875rem' : '1.125rem')};
     line-height: 1.388;
     min-width: ${styleProps => {
-      console.log(styleProps)
       return styleProps.wide
         ? !styleProps.flexwidth
           ? '250px'

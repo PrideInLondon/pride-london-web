@@ -13,7 +13,6 @@ const mapEntries = news => {
 }
 
 const Blog = props => {
-  console.log(props)
   const {
     data: { news, views, categories },
   } = props
