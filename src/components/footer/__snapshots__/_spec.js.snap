@@ -144,43 +144,11 @@ exports[`<Footer/> should render and match snapshot 1`] = `
         </styles__SponsorsHeading>
         <styles__SponsorsContainer>
           <styles__SponsorImgWrapper
-            key="73cee0dd-94a9-5426-b52b-35ce3214ad4d"
-          >
-            <img
-              alt="Abstergo"
-              src="//images.ctfassets.net/n2o4hgsv6wcx/1hr2YDhECsMUeu0KMqsge2/0b6ca7913c2ce37bf5d077e716540e8a/Abstergo_industries_by_vesferatu-d39vask.gif?w=800&h=168&q=90"
-            />
-          </styles__SponsorImgWrapper>
-          <styles__SponsorImgWrapper
-            key="5f4a1bb1-6c2d-502a-b47f-ea357d8103e8"
-          >
-            <img
-              alt="Barclays"
-              src="//images.ctfassets.net/n2o4hgsv6wcx/5R7cc2vejSyq6qquSqGiyk/7536e8a3e4e5663fa1dbec357603728a/Barclays_Logo.png?w=800&h=168&q=90"
-            />
-          </styles__SponsorImgWrapper>
-          <styles__SponsorImgWrapper
             key="a1bc90c0-23c7-51e1-8ea2-4bce5224df33"
           >
             <img
               alt="Blue Sun"
               src="//images.ctfassets.net/n2o4hgsv6wcx/12nAORbw80eC666kck4QgU/168f3efbd9c99f54c96cab367ac73943/4822573655_b22cb18c05.jpg?w=800&h=168&q=90"
-            />
-          </styles__SponsorImgWrapper>
-          <styles__SponsorImgWrapper
-            key="d5fde3eb-032f-513e-8852-26e6b02b5d2d"
-          >
-            <img
-              alt="Mayor of London"
-              src="//images.ctfassets.net/n2o4hgsv6wcx/4rIPcvrYGk8uE24oWI08Yi/e70dc626716b5fb59efa22a4b7da263f/MayorOfLondon_Logo.png?w=800&h=168&q=90"
-            />
-          </styles__SponsorImgWrapper>
-          <styles__SponsorImgWrapper
-            key="760bcc60-2704-54b5-8555-da4adab9f394"
-          >
-            <img
-              alt="Testy Badger"
-              src="//images.ctfassets.net/n2o4hgsv6wcx/13iikTHlzcyA4oquoaWW4A/8e9e96aee3d35b5367b964e265894943/RB_Screen_Logos_For_Guardian.jpg?w=800&h=168&q=90"
             />
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
@@ -192,11 +160,43 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             />
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
-            key="e7f18314-f613-552f-9f07-031f14840914"
+            key="73cee0dd-94a9-5426-b52b-35ce3214ad4d"
           >
             <img
-              alt="CMS"
-              src="//images.ctfassets.net/n2o4hgsv6wcx/1vKEetL34E4ekk0EikWYm0/bad1e9109ae4fcbe4d138a650ece43cd/CMS_Logo.png?w=800&h=168&q=90"
+              alt="Abstergo"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/1hr2YDhECsMUeu0KMqsge2/0b6ca7913c2ce37bf5d077e716540e8a/Abstergo_industries_by_vesferatu-d39vask.gif?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="760bcc60-2704-54b5-8555-da4adab9f394"
+          >
+            <img
+              alt="Testy Badger"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/13iikTHlzcyA4oquoaWW4A/8e9e96aee3d35b5367b964e265894943/RB_Screen_Logos_For_Guardian.jpg?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="5f4a1bb1-6c2d-502a-b47f-ea357d8103e8"
+          >
+            <img
+              alt="Barclays"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/5R7cc2vejSyq6qquSqGiyk/7536e8a3e4e5663fa1dbec357603728a/Barclays_Logo.png?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="d5fde3eb-032f-513e-8852-26e6b02b5d2d"
+          >
+            <img
+              alt="Mayor of London"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/4rIPcvrYGk8uE24oWI08Yi/e70dc626716b5fb59efa22a4b7da263f/MayorOfLondon_Logo.png?w=800&h=168&q=90"
+            />
+          </styles__SponsorImgWrapper>
+          <styles__SponsorImgWrapper
+            key="6bace2aa-7fa9-5969-8e0f-e9170d7f015d"
+          >
+            <img
+              alt="Weyland-Yutani"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/3DzjJqij9m4Ka0Q8IS8sMQ/66d8f571a8ac73b550ff9ae4460834cf/e44d54b01d679a151f570ce9c7d85cb3.png?w=800&h=168&q=90"
             />
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
@@ -216,11 +216,11 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             />
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
-            key="6bace2aa-7fa9-5969-8e0f-e9170d7f015d"
+            key="e7f18314-f613-552f-9f07-031f14840914"
           >
             <img
-              alt="Weyland-Yutani"
-              src="//images.ctfassets.net/n2o4hgsv6wcx/3DzjJqij9m4Ka0Q8IS8sMQ/66d8f571a8ac73b550ff9ae4460834cf/e44d54b01d679a151f570ce9c7d85cb3.png?w=800&h=168&q=90"
+              alt="CMS"
+              src="//images.ctfassets.net/n2o4hgsv6wcx/1vKEetL34E4ekk0EikWYm0/bad1e9109ae4fcbe4d138a650ece43cd/CMS_Logo.png?w=800&h=168&q=90"
             />
           </styles__SponsorImgWrapper>
         </styles__SponsorsContainer>

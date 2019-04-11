@@ -24,6 +24,7 @@ exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
     <Button
       className=""
       disabled={false}
+      flexwidth={false}
       fullmobile={false}
       link={true}
       onClick={null}

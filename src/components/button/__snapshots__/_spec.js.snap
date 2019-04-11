@@ -4,6 +4,7 @@ exports[`Button matches snapshot 1`] = `
 <button__StyledButton
   className=""
   disabled={false}
+  flexwidth={false}
   fullmobile={false}
   href={null}
   onClick={null}
