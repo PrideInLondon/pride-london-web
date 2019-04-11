@@ -85,7 +85,7 @@ const StyledWrapper = styled.div`
   `};
 `
 
-const ImageBanner = ({
+const BannerImage = ({
   titleText,
   subtitleText,
   date,
@@ -123,7 +123,7 @@ const ImageBanner = ({
   </StyledWrapper>
 )
 
-ImageBanner.propTypes = {
+BannerImage.propTypes = {
   large: PropTypes.bool,
   homepage: PropTypes.bool,
   imageSrc: PropTypes.string,
@@ -140,7 +140,7 @@ ImageBanner.propTypes = {
   allowContentUnderflow: PropTypes.bool,
 }
 
-ImageBanner.defaultProps = {
+BannerImage.defaultProps = {
   large: false,
   homepage: false,
   imageFullWidth: false,
@@ -154,4 +154,4 @@ ImageBanner.defaultProps = {
   allowContentUnderflow: false,
 }
 
-export default ImageBanner
+export default BannerImage

@@ -7,7 +7,7 @@ import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { EventListingCard } from '../features/events'
 import EventsFilters from '../features/events/components/eventsFilters'
-import ImageBanner from '../components/imageBanner'
+import BannerImage from '../components/bannerImage'
 import Button from '../components/button'
 import {
   Container,
@@ -150,7 +150,7 @@ class Events extends Component {
       <Consumer>
         {context => (
           <Fragment>
-            <ImageBanner
+            <BannerImage
               titleText="What's on"
               subtitleText="Checkout the huge array of events that Pride are running during the festival"
               imageSrc=""

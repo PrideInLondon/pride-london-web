@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import ImageBanner from '../components/imageBanner'
+import BannerImage from '../components/bannerImage'
 import theme from '../theme/theme'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
@@ -21,7 +21,7 @@ const Blog = ({ data: { articles, categories, views } }) => {
   const mappedViews = mapEntries(views)
   return (
     <Fragment>
-      <ImageBanner
+      <BannerImage
         titleText="The Voice of Pride in London"
         subtitleText="Find out what we're talking about in the Pride in London Community"
         altText="The Voice of Pride in London"

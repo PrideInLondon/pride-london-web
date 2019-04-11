@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import theme from '../theme/theme'
-import ImageBanner from '../components/imageBanner'
+import BannerImage from '../components/bannerImage'
 import Button from '../components/button'
 import eventsBgLeft from '../theme/assets/images/featured-events-bg-left.png'
 import eventsBgRight from '../theme/assets/images/featured-events-bg-right.png'
@@ -110,7 +110,7 @@ const EventsBackgroundRight = styled.div`
 
 const Home = () => (
   <Fragment>
-    <ImageBanner
+    <BannerImage
       titleText={'Pride in London'}
       subtitleText={
         'The UK’s biggest, most diverse pride. A  home for every part of London’s LGBT+ community'
@@ -124,7 +124,7 @@ const Home = () => (
       <Button wide={false} link white primary to="/events/">
         This year's event
       </Button>
-    </ImageBanner>
+    </BannerImage>
 
     <Container>
       <FuturedEventsContainer>

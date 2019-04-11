@@ -7,7 +7,7 @@ import Helmet from 'react-helmet'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { Column, Row, Container } from '../components/grid'
-import ImageBanner from '../components/imageBanner'
+import BannerImage from '../components/bannerImage'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -58,7 +58,7 @@ export default class GenericContentPage extends Component {
     return (
       <Fragment>
         <Helmet title={title} />
-        <ImageBanner
+        <BannerImage
           titleText={title}
           subtitleText={subtitle}
           imageSrc={bannerImage && responsiveBannerUrl(bannerImage.file.url)}
