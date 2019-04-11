@@ -1,10 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { media } from '../../theme/media'
-import theme from '../../theme/theme'
+import { media } from '../../../theme/media'
+import theme from '../../../theme/theme'
 
-const BannerDate = styled.p`
+export const BannerDate = styled.p`
   color: #ffffff;
   font-size: 0.888rem;
   font-family: ${theme.fonts.title};
@@ -21,7 +19,7 @@ const BannerDate = styled.p`
   `};
 `
 
-const BannerDateWrapper = styled.div`
+export const BannerDateWrapper = styled.div`
   max-width: 255px;
   margin-left: 10px;
   margin-bottom: 0;
@@ -30,18 +28,3 @@ const BannerDateWrapper = styled.div`
     max-width: 520px;
   `};
 `
-
-const StyledBannerDate = ({ children }) => (
-  <BannerDateWrapper>
-    <BannerDate>{children}</BannerDate>
-  </BannerDateWrapper>
-)
-
-StyledBannerDate.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
-}
-
-export default StyledBannerDate
