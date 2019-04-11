@@ -5,7 +5,7 @@ import BannerDate from './'
 import 'jest-styled-components'
 
 describe('<BannerDate/>', () => {
-  it('renders the component BannerDate', () => {
+  it('renders the component <BannerDate />', () => {
     const wrapper = shallow(<BannerDate>foo</BannerDate>)
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
