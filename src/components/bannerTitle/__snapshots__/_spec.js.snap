@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BannerTitle renders 1`] = `
-<bannerTitle__BannerTitleWrapper>
-  <bannerTitle__BannerTitle>
-    foo
-  </bannerTitle__BannerTitle>
-</bannerTitle__BannerTitleWrapper>
+exports[`<BannerTitle /> renders a child text  1`] = `
+<styles__BannerTitleWrapper>
+  <styles__BannerTitle>
+    Here is a test title!
+  </styles__BannerTitle>
+</styles__BannerTitleWrapper>
 `;
 
-exports[`BannerTitle renders child text  1`] = `
-<bannerTitle__BannerTitleWrapper>
-  <bannerTitle__BannerTitle>
-    Here is a test title!
-  </bannerTitle__BannerTitle>
-</bannerTitle__BannerTitleWrapper>
+exports[`<BannerTitle /> renders the component <BannerTitle /> 1`] = `
+<styles__BannerTitleWrapper>
+  <styles__BannerTitle>
+    foo
+  </styles__BannerTitle>
+</styles__BannerTitleWrapper>
 `;
