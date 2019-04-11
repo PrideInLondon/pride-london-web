@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DonateSection volunteer snapshot 1`] = `
+<styles__DonateSectionsWrapper>
+  <styles__BackgroundLeft>
+    <img
+      alt="bg donate"
+      src=""
+    />
+  </styles__BackgroundLeft>
+  <styles__BackgroundRight>
+    <picture>
+      <source
+        media="(min-width: 768px)"
+        srcSet=""
+      />
+      <img
+        alt="Mobile background"
+        src=""
+      />
+    </picture>
+  </styles__BackgroundRight>
+  <styles__LayerContent>
+    <Row>
+      <styles__HeadDonate>
+        Make a single donation
+      </styles__HeadDonate>
+    </Row>
+    <Row>
+      <DonateButtonsGroup />
+    </Row>
+  </styles__LayerContent>
+</styles__DonateSectionsWrapper>
+`;
