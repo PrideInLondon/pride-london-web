@@ -11,7 +11,6 @@ const PageWrapper = styled.div`
   background-color: white;
   margin: 0;
 `
-
 const BlogDetails = ({
   data: {
     contentfulArticle: {
@@ -23,6 +22,7 @@ const BlogDetails = ({
       author,
     },
     otherArticles,
+    categories,
   },
 }) => (
   <PageWrapper>
@@ -31,10 +31,10 @@ const BlogDetails = ({
       article={article}
       title={title}
       datePublished={datePublished}
-      category={category}
+      category={categories.edges.find(cat => cat.node.title == category).node}
       author={author}
     />
-    <PageFooter otherArticles={otherArticles} />
+    <PageFooter otherArticles={otherArticles} categories={categories} />
   </PageWrapper>
 )
 
@@ -57,11 +57,18 @@ export const articleDetailsQuery = graphql`
         display_name {
           display_name
         }
+        thumbnail {
+          id
+          file {
+            url
+          }
+        }
+        jobTitle
       }
     }
     otherArticles: allContentfulArticle(
       sort: { fields: [datePublished], order: DESC }
-      filter: { id: { ne: $id } }
+      filter: { id: { ne: $id }, category: { ne: "Views" } }
       limit: 3
     ) {
       edges {
@@ -70,6 +77,14 @@ export const articleDetailsQuery = graphql`
           title
           datePublished
           category
+        }
+      }
+    }
+    categories: allContentfulNewsCategory {
+      edges {
+        node {
+          title
+          hexColour
         }
       }
     }

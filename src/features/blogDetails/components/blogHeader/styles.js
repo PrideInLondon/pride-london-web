@@ -20,9 +20,8 @@ export const SubHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 30px;
   & > div {
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
   & span {
     color: ${theme.colors.darkGrey};
@@ -50,9 +49,6 @@ export const NewsCategory = styled.div`
   text-align: center;
   margin-right: 10px;
 `
-export const ReadLength = styled.span`
-  margin-left: 4px;
-`
 export const Title = styled.h1`
   font-family: Poppins;
   font-size: 32px;
@@ -62,12 +58,12 @@ export const Title = styled.h1`
   line-height: 1.19;
   letter-spacing: normal;
   color: #2c2c81;
-  margin-bottom: 30px;
 `
 export const BlogHeaderContainer = styled.div`
   max-width: 830px;
   margin: 0 auto;
   margin-top: -140px;
+  min-height: 140px;
   background-color: ${theme.colors.white};
   position: relative;
   padding-left: 30px;

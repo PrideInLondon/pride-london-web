@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { FeaturedArticleTitle } from '../../containers/newsContainer/styles'
 import NewsFilter from '../newsFilter'
 import theme from '../../../../theme/theme'
-import NewsDate from '../newsDate'
+import NewsMetrics from '../../../../components/newsMetrics'
 import { FeaturedArticleCard, CardHeader } from './styles'
 import starIcon from './starIcon.svg'
 
@@ -14,13 +14,11 @@ const filterType = {
 
 export const query = graphql`
   query articleQuery {
-    allContentfulNews(filter: { isFeatured: { eq: true } }) {
-      edges {
-        node {
-          id
-          date
-          title
-        }
+    contentfulArticleFeatured {
+      featuredArticle {
+        id
+        datePublished
+        title
       }
     }
   }
@@ -32,14 +30,14 @@ const FeaturedArticle = () => {
       query={query}
       render={data => {
         const {
-          allContentfulNews: { edges: [{ node = {} } = {}] = [] } = {},
+          contentfulArticleFeatured: { featuredArticle = {} } = {},
         } = data
-        const { date, title } = node
+        const { datePublished, title } = featuredArticle
         return (
           <FeaturedArticleCard>
             <CardHeader>
               <NewsFilter filterType={filterType} icon={starIcon} />
-              <NewsDate date={date} />
+              <NewsMetrics datePublished={datePublished} />
             </CardHeader>
             <FeaturedArticleTitle>{title}</FeaturedArticleTitle>
           </FeaturedArticleCard>

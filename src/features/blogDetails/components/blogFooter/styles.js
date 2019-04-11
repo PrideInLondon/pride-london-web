@@ -6,6 +6,7 @@ export const Summary = styled.div`
   align-items: center;
   margin-top: 30px;
   margin-bottom: 60px;
+  flex-wrap: wrap;
 `
 export const NoteToEditor = styled.div``
 

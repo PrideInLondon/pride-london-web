@@ -1,15 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import LatestNewsCard from './latestNewsCard'
-import { Bacground, LatestNewsCardContainer } from './styles'
 
-const LatestNews = ({ date, readLength, newsCategory, title, images }) => (
-  <Bacground backgroundImage={images[0].file.url}>
+import { Bacground, LatestNewsCardContainer, NewsCard } from './styles'
+
+const LatestNews = ({
+  datePublished,
+  readLength,
+  category,
+  title,
+  headerImage,
+}) => (
+  <Bacground backgroundImage={headerImage.file.url}>
     <LatestNewsCardContainer>
-      <LatestNewsCard
-        newsCategory={newsCategory}
+      <NewsCard
+        category={category}
         title={title}
-        date={date}
+        datePublished={datePublished}
         readLength={readLength}
       />
     </LatestNewsCardContainer>
@@ -17,19 +23,17 @@ const LatestNews = ({ date, readLength, newsCategory, title, images }) => (
 )
 
 LatestNews.propTypes = {
-  date: PropTypes.string.isRequired,
+  datePublished: PropTypes.string.isRequired,
   readLength: PropTypes.string,
-  newsCategory: PropTypes.shape({
+  category: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,
-  images: PropTypes.arrayOf(
-    PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string,
-      }),
-    })
-  ).isRequired,
+  headerImage: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    }),
+  }).isRequired,
   title: PropTypes.string.isRequired,
 }
 

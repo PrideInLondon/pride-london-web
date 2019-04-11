@@ -3,9 +3,9 @@ import { shallow } from 'enzyme'
 import ViewsCard from '.'
 
 describe('ViewsCard', () => {
-  const author = 'Bob Barker'
+  const author = { display_name: { display_name: 'Bob Barker' } }
   const title = 'My view'
-  const portraitImage = {
+  const headerImage = {
     file: {
       url: 'foo.bar/baz',
     },
@@ -15,7 +15,7 @@ describe('ViewsCard', () => {
     const props = {
       author,
       title,
-      portraitImage,
+      headerImage,
     }
     const wrapper = shallow(<ViewsCard {...props} />)
     expect(wrapper).toMatchSnapshot()

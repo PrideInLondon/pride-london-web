@@ -41,12 +41,7 @@ BlogFooter.propTypes = {
   author: PropTypes.object,
 }
 BlogFooter.defaultProps = {
-  author: {
-    imageSrc: 'imageSrc',
-    display_name: {
-      display_name: 'FullName',
-    },
-  },
+  author: null,
 }
 
 export default BlogFooter
