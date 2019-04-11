@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
-import BannerTitle from '../banner/bannerTitle'
-import BannerSubtitle from '../banner/bannerSubtitle'
+import BannerTitle from '../bannerTitle'
+import BannerSubtitle from '../bannerSubtitle'
 import BannerImage from '.'
 import 'jest-styled-components'
 

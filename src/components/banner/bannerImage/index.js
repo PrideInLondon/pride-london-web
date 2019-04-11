@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Column } from '../grid'
-import BannerTitle from '../banner/bannerTitle'
-import BannerSubtitle from '../banner/bannerSubtitle'
-import BannerDate from '../banner/bannerDate'
+import { Column } from '../../grid'
+import BannerTitle from '../bannerTitle'
+import BannerSubtitle from '../bannerSubtitle'
+import BannerDate from '../bannerDate'
 import { StyledContainer, StyledRow, StyledWrapper } from './styles'
 
 const BannerImage = ({

@@ -7,7 +7,7 @@ import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { EventListingCard } from '../features/events'
 import EventsFilters from '../features/events/components/eventsFilters'
-import BannerImage from '../components/bannerImage'
+import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
 import {
   Container,

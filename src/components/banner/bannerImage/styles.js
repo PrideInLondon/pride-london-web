@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import { media } from '../../theme/media'
-import { Row, Container } from '../grid'
+import { media } from '../../../theme/media'
+import { Row, Container } from '../../grid'
 
 export const StyledContainer = styled(Container)`
   flex-grow: 1;

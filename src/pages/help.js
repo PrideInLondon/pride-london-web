@@ -6,7 +6,7 @@ import theme from '../theme/theme'
 import AccordionWrapper from '../components/accordion/accordionWrapper'
 import Accordion from '../components/accordion'
 import ContactForm from '../features/help/components/contactForm'
-import BannerImage from '../components/bannerImage'
+import BannerImage from '../components/banner/bannerImage'
 
 const PageWrapper = styled.div`
   background-color: ${theme.colors.white};

@@ -1,5 +1,5 @@
 import React from 'react'
-import BannerImage from '../../../../components/bannerImage'
+import BannerImage from '../../../../components/banner/bannerImage'
 import FeaturedArticle from '../../components/featuredArticle'
 import { RelativeContainer, CenteredContainer } from './styles'
 

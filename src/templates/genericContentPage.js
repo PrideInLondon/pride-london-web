@@ -7,7 +7,7 @@ import Helmet from 'react-helmet'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { Column, Row, Container } from '../components/grid'
-import BannerImage from '../components/bannerImage'
+import BannerImage from '../components/banner/bannerImage'
 
 const PageWrapper = styled.div`
   position: relative;
