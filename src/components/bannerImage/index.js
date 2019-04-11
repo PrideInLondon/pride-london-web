@@ -5,7 +5,7 @@ import { media } from '../../theme/media'
 import { Column, Row, Container } from '../grid'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
-import BannerDate from '../bannerDate'
+import BannerDate from '../banner/bannerDate'
 
 const StyledContainer = styled(Container)`
   flex-grow: 1;
