@@ -7,10 +7,15 @@ describe(Author.name, () => {
     const wrapper = shallow(
       <Author
         author={{
-          imageSrc: 'imageSrc',
+          thumbnail: {
+            file: {
+              url: 'imgSrc',
+            },
+          },
           display_name: {
             display_name: 'FullName',
           },
+          jobTitle: 'Job Title',
         }}
       />
     )

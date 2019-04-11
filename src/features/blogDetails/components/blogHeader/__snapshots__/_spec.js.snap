@@ -6,18 +6,17 @@ exports[`BlogHeader renders with default values 1`] = `
     Title
   </styles__Title>
   <styles__SubHeader>
-    <styles__FlexDiv>
-      <styles__NewsCategory
-        backgroundColor="orange"
-      >
-        Reseaarch
-      </styles__NewsCategory>
-      <span>
-        <NewsDate
-          date="2019-03-28T20:30+00:00"
-        />
-      </span>
-    </styles__FlexDiv>
+    <NewsCardHeader
+      category={
+        Object {
+          "hexColour": "#eeeeee",
+          "title": "Reseaarch",
+        }
+      }
+      className=""
+      datePublished="2019-03-28T20:30+00:00"
+      readLength={null}
+    />
     <styles__FlexDiv>
       <styles__ShareText>
         Share this post

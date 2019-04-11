@@ -1,32 +1,36 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Row, FlexColumn } from '../../../../components/grid'
-import LatestNewsCard from '../../components/latestNews/latestNewsCard'
 import LatestNewsHeader from '../../components/latestNews/latestNewsHeader'
 import LatestNews from '../../components/latestNews'
-import { Container, SecondaryNews } from './styles'
+import { Container, SecondaryNews, NewsCard } from './styles'
 
 export const query = graphql`
   query latestNewsQuery {
-    allContentfulNews(
-      filter: { isFeatured: { eq: true } }
-      sort: { fields: [date], order: DESC }
+    articles: allContentfulArticle(
+      filter: { category: { ne: "Views" } }
+      sort: { fields: [datePublished], order: DESC }
       limit: 3
     ) {
       edges {
         node {
           id
-          date
+          datePublished
           title
-          newsCategory {
-            title
-            hexColour
-          }
-          images {
+          category
+          headerImage {
             file {
               url
             }
           }
+        }
+      }
+    }
+    categories: allContentfulNewsCategory {
+      edges {
+        node {
+          title
+          hexColour
         }
       }
     }
@@ -43,7 +47,10 @@ const LatestNewsContainer = () => (
     <Row>
       <StaticQuery
         query={query}
-        render={({ allContentfulNews: { edges: newsArr = [] } = {} }) => (
+        render={({
+          articles: { edges: newsArr = [] } = {},
+          categories: { edges: categories = [] },
+        }) => (
           <>
             <FlexColumn
               width={[
@@ -53,7 +60,14 @@ const LatestNewsContainer = () => (
                 2 / 3, // 66% between third breakpoint(1280px) and fourth breakpoint (1440px)
               ]}
             >
-              <LatestNews {...newsArr[0].node} />
+              <LatestNews
+                {...{
+                  ...newsArr[0].node,
+                  category: categories.find(
+                    cat => cat.node.title == newsArr[0].node.category
+                  ).node,
+                }}
+              />
             </FlexColumn>
             <FlexColumn
               width={[
@@ -65,7 +79,15 @@ const LatestNewsContainer = () => (
             >
               <SecondaryNews>
                 {newsArr.slice(1).map(({ node: singleNews }) => (
-                  <LatestNewsCard key={singleNews.id} {...singleNews} />
+                  <NewsCard
+                    key={singleNews.id}
+                    {...{
+                      ...singleNews,
+                      category: categories.find(
+                        cat => cat.node.title == singleNews.category
+                      ).node,
+                    }}
+                  />
                 ))}
               </SecondaryNews>
             </FlexColumn>
