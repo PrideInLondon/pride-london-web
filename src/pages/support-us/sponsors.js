@@ -41,7 +41,6 @@ const BronzeSponsorsContainer = styled.div`
 `
 
 const IntroContainer = styled(Column)`
-  border-bottom: 1px solid ${theme.colors.mediumGrey};
   margin-bottom: 30px;
   padding-bottom: 20px;
 `
