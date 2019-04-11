@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { media } from '../../theme/media'
-import theme from '../../theme/theme'
+import { media } from '../../../theme/media'
+import theme from '../../../theme/theme'
 
 export const BannerSubtitle = styled.h2`
   color: #ffffff;

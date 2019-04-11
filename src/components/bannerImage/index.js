@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import { media } from '../../theme/media'
 import { Column, Row, Container } from '../grid'
 import BannerTitle from '../bannerTitle'
-import BannerSubtitle from '../bannerSubtitle'
+import BannerSubtitle from '../banner/bannerSubtitle'
 import BannerDate from '../banner/bannerDate'
 
 const StyledContainer = styled(Container)`
