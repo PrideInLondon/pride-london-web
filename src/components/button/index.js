@@ -8,7 +8,7 @@ import theme from '../../theme/theme'
 export const Button = props => {
   const StyledButton = styled[props.link ? 'a' : 'button']`
     box-sizing: border-box;
-    padding: 12px;
+    padding: 12px 35px;
     border-radius: 4px;
     border: ${styleProps =>
       styleProps.primary ? 'none' : `2px solid ${theme.colors.white}`};
