@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BannerDate/> renders 1`] = `
-<bannerDate__BannerDateWrapper>
-  <bannerDate__BannerDate>
+exports[`<BannerDate/> renders the component BannerDate 1`] = `
+<styles__BannerDateWrapper>
+  <styles__BannerDate>
     foo
-  </bannerDate__BannerDate>
-</bannerDate__BannerDateWrapper>
+  </styles__BannerDate>
+</styles__BannerDateWrapper>
 `;
