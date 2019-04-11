@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageFooter renders with default values 1`] = `
+<OtherArticles
+  categories={Object {}}
+  otherArticles={Object {}}
+/>
+`;

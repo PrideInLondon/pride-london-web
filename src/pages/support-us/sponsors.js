@@ -12,6 +12,7 @@ import Button from '../../components/button'
 import SponsorHeadline from '../../components/icons/sponsorHeadline'
 import SponsorStar from '../../components/icons/sponsorStar'
 import renderSponsors from '../../features/sponsors/helpers'
+import BannerImg from '../../theme/assets/images/banners/sponsors/bg@2x.jpg'
 
 const ListTitle = styled.h2`
   margin-top: 0;
@@ -106,6 +107,7 @@ const Sponsors = ({ data }) => {
         titleText="Sponsor us"
         subtitleText="Help us to keep Pride free for everyone by becoming one of our sponsors"
         color={theme.colors.yellow}
+        imageSrc={BannerImg}
       />
       <CTAWrapper>
         <Container>

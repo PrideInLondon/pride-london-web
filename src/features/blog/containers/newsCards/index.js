@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import NewsCard from '../../components/newsCard'
 import { FlexColumn, Row } from '../../../../components/grid'
 
-const NewsCards = ({ selectedFilter, articles }) => {
-  return (
-    <Row>
-      {articles.map(({ date, title, newsCategory, id }) => {
-        return selectedFilter.title === 'All Articles' ||
-          selectedFilter.title === newsCategory.title ? (
+const NewsCards = ({ selectedFilter, articles }) => (
+  <Row>
+    {articles.map(
+      ({ datePublished, title, category, id }) =>
+        (selectedFilter.title === 'All Articles' ||
+          selectedFilter.title === category.title) && (
           /* eslint-disable */
           <FlexColumn
             key={id}
@@ -19,14 +19,16 @@ const NewsCards = ({ selectedFilter, articles }) => {
               1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
             ]}
           >
-            <NewsCard filterType={newsCategory} title={title} date={date} />
+            <NewsCard
+              category={category}
+              title={title}
+              datePublished={datePublished}
+            />
           </FlexColumn>
-        ) : /* eslint-enable */
-        null
-      })}
-    </Row>
-  )
-}
+        ) /* eslint-enable */
+    )}
+  </Row>
+)
 
 NewsCards.propTypes = {
   selectedFilter: PropTypes.shape({
@@ -37,6 +39,7 @@ NewsCards.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
+      datePublished: PropTypes.string,
       filterType: PropTypes.shape({
         hexColour: PropTypes.string,
         title: PropTypes.string,

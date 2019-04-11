@@ -20,6 +20,7 @@ import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
 import { dateFormat } from '../constants'
 import filterIcon from '../theme/assets/images/icon-filters.svg'
+import BannerImg from '../theme/assets/images/banners/events/bg@2x.jpg'
 
 const ColumnTextCenter = styled(Column)`
   text-align: center;
@@ -153,9 +154,8 @@ class Events extends Component {
             <ImageBanner
               titleText="What's on"
               subtitleText="Checkout the huge array of events that Pride are running during the festival"
-              imageSrc=""
-              altText=""
-              color={theme.colors.beachBlue}
+              imageSrc={BannerImg}
+              color={theme.colors.skyBlue}
             />
             <OffsetContainer>
               <EventsFilters
