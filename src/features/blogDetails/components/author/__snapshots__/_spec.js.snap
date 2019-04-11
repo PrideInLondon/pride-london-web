@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Author renders with default values 1`] = `
+<styles__AuthorCard>
+  <styles__Thumbnail
+    src="imgSrc"
+  />
+  <styles__AuthorInfo>
+    <styles__FullName>
+      FullName
+    </styles__FullName>
+    <styles__Job>
+      Job Title
+    </styles__Job>
+  </styles__AuthorInfo>
+</styles__AuthorCard>
+`;

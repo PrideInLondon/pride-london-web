@@ -5,20 +5,20 @@ import LatestNews from '.'
 describe(LatestNews.name, () => {
   it('renders with default values', () => {
     const title = 'Here is some news!'
-    const newsCategory = {
+    const category = {
       hexColour: '#304242',
       title: 'Amazing News!!',
     }
     const readLength = ''
-    const date = '2019-03-28T20:30+00:00'
-    const images = [{ file: { url: 'backgroundimageurl/image.png' } }]
+    const datePublished = '2019-03-28T20:30+00:00'
+    const headerImage = { file: { url: 'backgroundimageurl/image.png' } }
     const wrapper = shallow(
       <LatestNews
-        newsCategory={newsCategory}
+        category={category}
         title={title}
-        date={date}
+        datePublished={datePublished}
         readLength={readLength}
-        images={images}
+        headerImage={headerImage}
       />
     )
     expect(wrapper).toMatchSnapshot()

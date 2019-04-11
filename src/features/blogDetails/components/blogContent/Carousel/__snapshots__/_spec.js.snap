@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel renders with default values 1`] = `
+<styles__CarouselContainer>
+  <Carousel__StyledSlider
+    centerMode={true}
+    centerPadding="300px"
+    infinite={true}
+    nextArrow={
+      <Arrow
+        left={false}
+        onClick={[Function]}
+      >
+        <ChevronRight />
+      </Arrow>
+    }
+    prevArrow={
+      <Arrow
+        left={true}
+        onClick={[Function]}
+      >
+        <ChevronRight />
+      </Arrow>
+    }
+    responsive={
+      Array [
+        Object {
+          "breakpoint": 375,
+          "settings": Object {
+            "centerPadding": "10px",
+          },
+        },
+        Object {
+          "breakpoint": 768,
+          "settings": Object {
+            "centerPadding": "30px",
+          },
+        },
+        Object {
+          "breakpoint": 1024,
+          "settings": Object {
+            "centerPadding": "100px",
+          },
+        },
+        Object {
+          "breakpoint": 1440,
+          "settings": Object {
+            "centerPadding": "300px",
+          },
+        },
+      ]
+    }
+    slidesToScroll={1}
+    slidesToShow={1}
+    speed={500}
+  >
+    <styles__SlickContainer
+      key="c4qNhcpAIfewoQYwE8kcwoa"
+    >
+      <styles__ImageContainer>
+        <styles__CarouselImage
+          src="//images.ctfassets.net/n2o4hgsv6wcx/4qNhcpAIfewoQYwE8kcwoa/534c8fd313fb8aa1673b580354ecf13c/e2b675c430b3abb69b074c418afa6b4c.jpg"
+        />
+      </styles__ImageContainer>
+    </styles__SlickContainer>
+  </Carousel__StyledSlider>
+</styles__CarouselContainer>
+`;

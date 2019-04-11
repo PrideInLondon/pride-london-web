@@ -33,6 +33,23 @@ import {
 
 export const Footer = ({ data }) => {
   const { edges } = data.allContentfulSponsor
+  // Sort alphabetically
+  const sponsors = edges.sort((a, b) => {
+    const nameA = a.node.sponsorName.toUpperCase() // ignore upper and lowercase
+    const nameB = b.node.sponsorName.toUpperCase() // ignore upper and lowercase
+
+    switch (true) {
+      case nameA < nameB:
+        return -1
+        break
+      case nameA > nameB:
+        return 1
+        break
+      default:
+        return 0
+    }
+  })
+
   const iconSize = 20
   const sponsorOrder = ['Headline', 'Gold', 'Silver', 'Bronze']
   return (
@@ -135,7 +152,7 @@ export const Footer = ({ data }) => {
             <SponsorsHeading>Our amazing partners</SponsorsHeading>
             <SponsorsContainer>
               {sponsorOrder.map(order =>
-                edges.map(
+                sponsors.map(
                   ({ node: { sponsorLogo, sponsorLevel, sponsorName, id } }) =>
                     order === sponsorLevel && (
                       <SponsorImgWrapper key={id}>
