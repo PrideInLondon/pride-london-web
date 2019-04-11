@@ -13,6 +13,10 @@ const linkStyles = css`
   & + .cta-link {
     margin-left: 20px;
   }
+  &:hover,
+  &:focus {
+    color: ${theme.colors.eucalyptusGreen};
+  }
 `
 const StyledLink = styled(Link)`
   ${linkStyles}
