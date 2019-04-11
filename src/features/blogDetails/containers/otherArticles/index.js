@@ -24,9 +24,9 @@ const OtherArticles = ({
       {articles.map(({ node: { id, title, category, datePublished } }) => (
         <FlexColumn key={id} width={[1, 1, 1 / 2, 1 / 3]}>
           <ArticleCard
-            filterType={categories.find(cat => cat.node.title == category).node}
+            category={categories.find(cat => cat.node.title == category).node}
             title={title}
-            date={datePublished}
+            datePublished={datePublished}
           />
         </FlexColumn>
       ))}
