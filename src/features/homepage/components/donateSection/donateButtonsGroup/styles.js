@@ -53,6 +53,7 @@ export const ButtonsContainer = styled.div`
   a {
     min-width: 66px;
     font-weight: 600;
+    padding: 12px;
 
     ${media.tablet`
       min-width: 80px;
