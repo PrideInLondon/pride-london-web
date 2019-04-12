@@ -24,15 +24,15 @@ class NewsContainer extends Component {
   }
 
   handleFilterClick = label => {
-    this.setState({
+    this.setState((_state, props) => ({
       selectedFilter: label,
       ...initialPaginationState,
-      total: this.props.articles.filter(
+      total: props.articles.filter(
         article =>
           label.title === 'All Articles' ||
           label.title === article.category.title
       ),
-    })
+    }))
   }
 
   showMoreCards = () => {
