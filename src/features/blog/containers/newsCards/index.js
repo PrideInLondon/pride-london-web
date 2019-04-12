@@ -35,16 +35,12 @@ NewsCards.propTypes = {
       id: PropTypes.string,
       title: PropTypes.string,
       datePublished: PropTypes.string,
-      filterType: PropTypes.shape({
+      category: PropTypes.shape({
         hexColour: PropTypes.string,
         title: PropTypes.string,
       }),
     })
   ).isRequired,
-}
-
-NewsCards.defaultProps = {
-  selectedFilter: null,
 }
 
 export default NewsCards
