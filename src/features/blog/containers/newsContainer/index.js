@@ -4,8 +4,13 @@ import Title from '../../components/title'
 import FiltersContainer from '../filtersContainer'
 import NewsCards from '../newsCards'
 import FeaturedArticleContainer from '../featuredArticleContainer'
-import { Container } from './styles'
+import { FlexColumn, Row } from '../../../../components/grid'
+import { Container, ShowMoreButton } from './styles'
 
+const initialPaginationState = {
+  end: 9,
+  step: 9,
+}
 class NewsContainer extends Component {
   constructor(props) {
     super(props)
@@ -13,18 +18,33 @@ class NewsContainer extends Component {
       selectedFilter: props.categories.find(
         ({ title }) => title === 'All Articles'
       ),
+      ...initialPaginationState,
+      total: props.articles,
     }
   }
 
   handleFilterClick = label => {
     this.setState({
       selectedFilter: label,
+      ...initialPaginationState,
+      total: this.props.articles.filter(
+        article =>
+          label.title === 'All Articles' ||
+          label.title === article.category.title
+      ),
     })
   }
 
+  showMoreCards = () => {
+    this.setState(prevState => ({
+      start: (prevState.start += prevState.step),
+      end: (prevState.end += prevState.step),
+    }))
+  }
+
   render() {
-    const { selectedFilter } = this.state
-    const { articles, categories } = this.props
+    const { selectedFilter, end, total } = this.state
+    const { categories } = this.props
     return (
       <div>
         <Container>
@@ -36,7 +56,16 @@ class NewsContainer extends Component {
           handleFilterClick={this.handleFilterClick}
           categories={categories}
         />
-        <NewsCards selectedFilter={selectedFilter} articles={articles} />
+        <NewsCards articles={total.slice(0, end)} />
+        {end < total.length && (
+          <Row>
+            <FlexColumn width={[1, 1, 1, 1]}>
+              <ShowMoreButton onClick={this.showMoreCards} primary>
+                Show more articles
+              </ShowMoreButton>
+            </FlexColumn>
+          </Row>
+        )}
       </div>
     )
   }
