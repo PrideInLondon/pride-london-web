@@ -36,9 +36,8 @@ class NewsContainer extends Component {
   }
 
   showMoreCards = () => {
-    this.setState(prevState => ({
-      start: (prevState.start += prevState.step),
-      end: (prevState.end += prevState.step),
+    this.setState(state => ({
+      end: (state.end += state.step),
     }))
   }
 
