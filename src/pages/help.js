@@ -6,7 +6,7 @@ import theme from '../theme/theme'
 import AccordionWrapper from '../components/accordion/accordionWrapper'
 import Accordion from '../components/accordion'
 import ContactForm from '../features/help/components/contactForm'
-import ImageBanner from '../components/imageBanner'
+import BannerImage from '../components/banner/bannerImage'
 
 const PageWrapper = styled.div`
   background-color: ${theme.colors.white};
@@ -28,7 +28,7 @@ const Help = () => (
   <Fragment>
     <PageWrapper>
       <Container>
-        <ImageBanner />
+        <BannerImage />
         <Row>
           <Column width={[1, 1, 1, 0.6666]}>
             <h1> We're often asked... </h1>
