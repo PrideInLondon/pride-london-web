@@ -100,6 +100,7 @@ const selectSponsors = data =>
 
 const Sponsors = ({ data }) => {
   const sponsors = selectSponsors(data)
+  const date = new Date()
   return (
     <Fragment>
       <BannerImage
@@ -169,7 +170,7 @@ const Sponsors = ({ data }) => {
             </p>
           </IntroContainer>
           <Column>
-            <ListTitle>Our main 2018 partners</ListTitle>
+            <ListTitle>{`Our main ${date.getFullYear()} partners`}</ListTitle>
             <p>
               A huge thank you to our main partners for their continued support.
             </p>
