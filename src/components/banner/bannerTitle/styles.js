@@ -15,7 +15,7 @@ export const BannerTitle = styled.h1`
   background-color: white;
   color: ${theme.colors.indigo};
   font-size: 1.75rem;
-  line-height: 1.4;
+  line-height: 1.5;
 
   ${media.tablet`
     font-size: 3.5rem;

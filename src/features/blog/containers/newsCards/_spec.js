@@ -4,12 +4,17 @@ import NewsCards from '.'
 
 describe(NewsCards.name, () => {
   it('renders with default values', () => {
-    const selectedFilter = {
-      hexColour: '#000000',
-      title: 'Mock Filter',
-    }
     const wrapper = shallow(
-      <NewsCards selectedFilter={selectedFilter} articles={[]} />
+      <NewsCards
+        articles={[
+          {
+            category: {},
+            title: 'title',
+            id: 'id',
+            datePublished: '2019-03-28T20:30+00:00',
+          },
+        ]}
+      />
     )
     expect(wrapper).toMatchSnapshot()
   })
