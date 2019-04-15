@@ -82,6 +82,11 @@ const CTATitle = styled.h3`
   color: ${theme.colors.white};
 `
 
+const CTABody = styled.p`
+  font-size: 0.875rem;
+  line-height: 1.2857;
+`
+
 const selectSponsors = data =>
   data.allContentfulSponsor.edges
     .map(({ node }) => ({
@@ -115,10 +120,10 @@ const Sponsors = ({ data }) => {
             <RelativeColumn width={1}>
               <CTABox>
                 <CTATitle>Sponsor us!</CTATitle>
-                <p>
+                <CTABody>
                   Whether you're a big brand or a small business, and interested
                   in supporting Pride in London. We want to hear from you.
-                </p>
+                </CTABody>
                 <SponsorButton
                   link
                   to="mailto:sponsor@prideinlondon.org"
