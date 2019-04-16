@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import moment from 'moment'
@@ -69,6 +69,10 @@ const DateGroupHeading = styled.h2`
 
 const FilterIcon = styled.img`
   margin: 0 6px -2px 0;
+`
+
+const PageWrapper = styled.div`
+  background-color: ${theme.colors.lightGrey};
 `
 /* eslint-disable */
 class GroupedEventsCards extends Component {
@@ -150,7 +154,7 @@ class Events extends Component {
     return (
       <Consumer>
         {context => (
-          <Fragment>
+          <PageWrapper>
             <BannerImage
               titleText="What's on"
               subtitleText="Checkout the huge array of events that Pride are running during the festival"
@@ -225,7 +229,7 @@ class Events extends Component {
                 </ColumnPagination>
               </Row>
             </Container>
-          </Fragment>
+          </PageWrapper>
         )}
       </Consumer>
     )
