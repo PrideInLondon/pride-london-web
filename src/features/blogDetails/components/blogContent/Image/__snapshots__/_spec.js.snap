@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image renders with default values 1`] = `
+<styles__ImageContainer>
+  <styles__StyledImage
+    src="src"
+  />
+</styles__ImageContainer>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders with default values 1`] = `
+<styles__StyledList>
+  <ul>
+    <li>
+      some list item
+    </li>
+  </ul>
+</styles__StyledList>
+`;

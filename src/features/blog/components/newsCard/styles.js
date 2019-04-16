@@ -24,18 +24,3 @@ export const UnderlineContainer = styled.span`
     border-bottom-color: ${theme.colors.eucalyptusGreen};
   }
 `
-export const CardHeader = styled.div`
-  display: flex;
-  align-items: center;
-  height: 30px;
-  margin-bottom: 10px;
-`
-
-export const ReadLength = styled.span`
-  color: ${theme.colors.darkGrey};
-  font-size: 12px;
-  margin-left: 5px;
-  margin-right: 4px;
-  white-space: nowrap;
-  margin-left: 3px;
-`

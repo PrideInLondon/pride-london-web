@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnnouncementHeader renders with default values 1`] = `
+<styles__Header>
+  <styles__Head>
+    Announcement
+  </styles__Head>
+  <styles__Title>
+    View events from across the LGBT+ community
+  </styles__Title>
+</styles__Header>
+`;

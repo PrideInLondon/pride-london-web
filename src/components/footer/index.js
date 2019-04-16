@@ -165,8 +165,15 @@ export const Footer = ({ data }) => {
             </LegalList>
             <LegalStrapline>
               London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN -
-              Registered in England and Wales as a Community Interest Company
-              (no. 8321669)
+              Registered in England and Wales as a Community Interest Company (
+              <a
+                href="https://beta.companieshouse.gov.uk/company/08321669"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                no. 8321669
+              </a>
+              )
             </LegalStrapline>
           </LegalSection>
         </Row>

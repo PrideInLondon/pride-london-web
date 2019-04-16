@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsCardHeader renders with default values 1`] = `
+<styles__NewsCardHeaderContainer
+  className=""
+>
+  <NewsCategory
+    category={
+      Object {
+        "hexColour": "#eeeeee",
+        "title": "title",
+      }
+    }
+    className=""
+  />
+  <NewsMetrics
+    className="className"
+    datePublished="2019-03-28T20:30+00:00"
+    readLength=""
+  />
+</styles__NewsCardHeaderContainer>
+`;

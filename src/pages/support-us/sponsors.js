@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import ImageBanner from '../../components/imageBanner'
+import BannerImage from '../../components/banner/bannerImage'
 import SponsorsSubsection from '../../features/sponsors/components/sponsorSubsection/index'
 import constants from '../../constants'
 import theme from '../../theme/theme'
@@ -12,6 +12,7 @@ import Button from '../../components/button'
 import SponsorHeadline from '../../components/icons/sponsorHeadline'
 import SponsorStar from '../../components/icons/sponsorStar'
 import renderSponsors from '../../features/sponsors/helpers'
+import BannerImg from '../../theme/assets/images/banners/sponsors/bg@2x.jpg'
 
 const ListTitle = styled.h2`
   margin-top: 0;
@@ -40,7 +41,6 @@ const BronzeSponsorsContainer = styled.div`
 `
 
 const IntroContainer = styled(Column)`
-  border-bottom: 1px solid ${theme.colors.mediumGrey};
   margin-bottom: 30px;
   padding-bottom: 20px;
 `
@@ -82,6 +82,11 @@ const CTATitle = styled.h3`
   color: ${theme.colors.white};
 `
 
+const CTABody = styled.p`
+  font-size: 0.875rem;
+  line-height: 1.2857;
+`
+
 const selectSponsors = data =>
   data.allContentfulSponsor.edges
     .map(({ node }) => ({
@@ -100,12 +105,14 @@ const selectSponsors = data =>
 
 const Sponsors = ({ data }) => {
   const sponsors = selectSponsors(data)
+  const date = new Date()
   return (
     <Fragment>
-      <ImageBanner
+      <BannerImage
         titleText="Sponsor us"
         subtitleText="Help us to keep Pride free for everyone by becoming one of our sponsors"
         color={theme.colors.yellow}
+        imageSrc={BannerImg}
       />
       <CTAWrapper>
         <Container>
@@ -113,10 +120,10 @@ const Sponsors = ({ data }) => {
             <RelativeColumn width={1}>
               <CTABox>
                 <CTATitle>Sponsor us!</CTATitle>
-                <p>
+                <CTABody>
                   Whether you're a big brand or a small business, and interested
                   in supporting Pride in London. We want to hear from you.
-                </p>
+                </CTABody>
                 <SponsorButton
                   link
                   to="mailto:sponsor@prideinlondon.org"
@@ -168,7 +175,7 @@ const Sponsors = ({ data }) => {
             </p>
           </IntroContainer>
           <Column>
-            <ListTitle>Our main 2018 partners</ListTitle>
+            <ListTitle>{`Our main ${date.getFullYear()} partners`}</ListTitle>
             <p>
               A huge thank you to our main partners for their continued support.
             </p>

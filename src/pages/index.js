@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import theme from '../theme/theme'
-import ImageBanner from '../components/imageBanner'
+import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
 import eventsBgLeft from '../theme/assets/images/featured-events-bg-left.png'
 import eventsBgRight from '../theme/assets/images/featured-events-bg-right.png'
@@ -11,6 +11,8 @@ import { Container } from '../components/grid'
 import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
+import AnnouncementsContainer from '../features/homepage/containers/announcementsContainer'
+import DonateContainer from '../features/homepage/containers/donateContainer'
 
 const FuturedEventsContainer = styled.div`
   background-color: #282a80;
@@ -108,7 +110,7 @@ const EventsBackgroundRight = styled.div`
 
 const Home = () => (
   <Fragment>
-    <ImageBanner
+    <BannerImage
       titleText={'Pride in London'}
       subtitleText={
         'The UK’s biggest, most diverse pride. A  home for every part of London’s LGBT+ community'
@@ -122,7 +124,7 @@ const Home = () => (
       <Button wide={false} link white primary to="/events/">
         This year's event
       </Button>
-    </ImageBanner>
+    </BannerImage>
 
     <Container>
       <FuturedEventsContainer>
@@ -156,9 +158,9 @@ const Home = () => (
         </ButtonMobile>
       </FuturedEventsContainer>
     </Container>
-
+    <AnnouncementsContainer />
+    <DonateContainer />
     <LatestNewsContainer />
-
     <SectionVolunteer>
       <Container>
         <VolunteerBoxInfo />

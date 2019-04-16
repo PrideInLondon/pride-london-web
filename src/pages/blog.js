@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import ImageBanner from '../components/imageBanner'
+import BannerImage from '../components/banner/bannerImage'
 import theme from '../theme/theme'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
@@ -12,17 +12,16 @@ const mapEntries = news => {
   return news.edges.map(({ node }) => ({ ...node }))
 }
 
-const Blog = props => {
-  console.log(props)
-  const {
-    data: { news, views, categories },
-  } = props
-  const mappedArticles = mapEntries(news)
+const Blog = ({ data: { articles, categories, views } }) => {
   const mappedCategories = mapEntries(categories)
+  const mappedArticles = mapEntries(articles).map(art => ({
+    ...art,
+    category: mappedCategories.find(cat => cat.title == art.category),
+  }))
   const mappedViews = mapEntries(views)
   return (
     <Fragment>
-      <ImageBanner
+      <BannerImage
         titleText="The Voice of Pride in London"
         subtitleText="Find out what we're talking about in the Pride in London Community"
         altText="The Voice of Pride in London"
@@ -39,9 +38,9 @@ const Blog = props => {
 
 Blog.propTypes = {
   data: PropTypes.shape({
-    views: PropTypes.arrayOf(PropTypes.shape({})),
-    news: PropTypes.arrayOf(PropTypes.shape({})),
-    categories: PropTypes.arrayOf(PropTypes.shape({})),
+    views: PropTypes.shape({ edges: PropTypes.arrayOf(PropTypes.any) }),
+    news: PropTypes.shape({ edges: PropTypes.arrayOf(PropTypes.any) }),
+    categories: PropTypes.shape({ edges: PropTypes.arrayOf(PropTypes.any) }),
   }).isRequired,
 }
 
@@ -59,38 +58,33 @@ export const blogLandingPageQuery = graphql`
       }
     }
 
-    news: allContentfulNews(
-      filter: { isFeatured: { ne: true }, isView: { ne: true } }
-    ) {
+    articles: allContentfulArticle(filter: { category: { ne: "Views" } }) {
       edges {
         node {
           id
           title
-          date
-          newsCategory {
-            title
-            hexColour
-          }
+          category
+          datePublished
         }
       }
     }
 
-    views: allContentfulNews(
-      filter: { isFeatured: { ne: true }, isView: { eq: true } }
-    ) {
+    views: allContentfulArticle(filter: { category: { eq: "Views" } }) {
       edges {
         node {
           id
           title
-          date
-          portraitImage {
+          category
+          datePublished
+          headerImage {
             file {
               url
             }
           }
-          newsCategory {
-            title
-            hexColour
+          author {
+            display_name {
+              display_name
+            }
           }
         }
       }

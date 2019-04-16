@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BannerImage /> renders the component <BannerImage /> 1`] = `
+<styles__StyledWrapper
+  allowContentUnderflow={false}
+  color=""
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  role="banner"
+>
+  <styles__StyledContainer
+    homepage={false}
+    imageFullWidth={false}
+    imageSrc=""
+    mx="auto"
+  >
+    <styles__StyledRow>
+      <Column
+        width={1}
+      >
+        <StyledBannerTitle />
+        <StyledBannerSubtitle />
+      </Column>
+    </styles__StyledRow>
+  </styles__StyledContainer>
+</styles__StyledWrapper>
+`;
+
+exports[`<BannerImage /> renders the subtitleText from props to the component BannerSubtitle 1`] = `
+<styles__StyledWrapper
+  allowContentUnderflow={false}
+  color=""
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  role="banner"
+>
+  <styles__StyledContainer
+    homepage={false}
+    imageFullWidth={false}
+    imageSrc=""
+    mx="auto"
+  >
+    <styles__StyledRow>
+      <Column
+        width={1}
+      >
+        <StyledBannerTitle />
+        <StyledBannerSubtitle>
+          And here is a test subtitle!
+        </StyledBannerSubtitle>
+      </Column>
+    </styles__StyledRow>
+  </styles__StyledContainer>
+</styles__StyledWrapper>
+`;
+
+exports[`<BannerImage /> renders the titleText from props to the component BannerTitle 1`] = `
+<styles__StyledWrapper
+  allowContentUnderflow={false}
+  color=""
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  role="banner"
+>
+  <styles__StyledContainer
+    homepage={false}
+    imageFullWidth={false}
+    imageSrc=""
+    mx="auto"
+  >
+    <styles__StyledRow>
+      <Column
+        width={1}
+      >
+        <StyledBannerTitle>
+          Here is a test title!
+        </StyledBannerTitle>
+        <StyledBannerSubtitle />
+      </Column>
+    </styles__StyledRow>
+  </styles__StyledContainer>
+</styles__StyledWrapper>
+`;
