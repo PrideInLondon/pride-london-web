@@ -126,7 +126,7 @@ const Sponsors = ({ data }) => {
                 </CTABody>
                 <SponsorButton
                   link
-                  to="mailto:sponsor@prideinlondon.org"
+                  to="mailto:sponsor@prideinlondon.org?subject=I'd%20like%20to%20become%20a%20partner"
                   primary
                 >
                   Email us
