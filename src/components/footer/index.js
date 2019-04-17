@@ -119,13 +119,6 @@ export const Footer = ({ data }) => {
               >
                 #prideinlondon
               </HashTag>
-              <HashTag
-                href="https://twitter.com/intent/tweet?button_hashtag=diversityFTW"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                #diversityFTW
-              </HashTag>
             </HashTags>
             <EventsCTAWrapper width={[1, 1, 0.3]}>
               <EventsCTALink to="/events">Never miss an event</EventsCTALink>
