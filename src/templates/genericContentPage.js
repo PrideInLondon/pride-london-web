@@ -51,7 +51,7 @@ export default class GenericContentPage extends Component {
       subtitle,
       bannerImage,
       bannerColor,
-      content_rich: { json },
+      content: { json },
     } = this.props.data.contentfulGenericContentPage
     console.log(json)
     return (
