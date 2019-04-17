@@ -37,6 +37,10 @@ const Badge = styled.a`
             width: 185px;
           `};
         `};
+  a {
+    border: none;
+    display: block;
+  }
 `
 
 const BadgeImage = styled.img`
