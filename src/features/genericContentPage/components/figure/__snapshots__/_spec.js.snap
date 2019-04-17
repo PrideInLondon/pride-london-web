@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Figure/> renders with default values 1`] = `
-<figure>
+<styles__StyledFigure>
   <img
+    alt="Hello World"
     src="src"
   />
   <figcaption>
     Hello World
   </figcaption>
-</figure>
+</styles__StyledFigure>
 `;
