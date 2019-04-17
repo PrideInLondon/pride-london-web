@@ -13,7 +13,7 @@ const Badge = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: ${theme.colors.white};
+  background-color: ${theme.colors.lightGrey};
   margin: 0 10px 10px 0;
   padding: 10px;
   ${media.tablet`
@@ -36,6 +36,10 @@ const Badge = styled.div`
             width: 185px;
           `};
         `};
+  a {
+    border: none;
+    display: block;
+  }
 `
 
 const BadgeImage = styled.img`

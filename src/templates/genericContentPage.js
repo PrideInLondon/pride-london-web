@@ -11,7 +11,6 @@ import BannerImage from '../components/banner/bannerImage'
 
 const PageWrapper = styled.div`
   position: relative;
-  background-color: white;
 `
 
 const Content = styled(Column)`
