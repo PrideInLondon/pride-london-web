@@ -2,18 +2,15 @@
 
 exports[`<SponsorBadge/> Should render and match snapshot 1`] = `
 <sponsorBadge__Badge
+  href="https://sponsor1.com"
   level="Headline"
+  rel="noopener noreferrer"
+  target="_blank"
 >
-  <a
-    href="https://sponsor1.com"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <sponsorBadge__BadgeImage
-      alt="Sponsor One"
-      level="Headline"
-      src="/logo1"
-    />
-  </a>
+  <sponsorBadge__BadgeImage
+    alt="Sponsor One"
+    level="Headline"
+    src="/logo1"
+  />
 </sponsorBadge__Badge>
 `;

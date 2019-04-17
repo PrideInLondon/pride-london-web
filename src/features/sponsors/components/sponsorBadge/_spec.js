@@ -14,6 +14,6 @@ describe('<SponsorBadge/>', () => {
   it('Should render and match snapshot', () => {
     const wrapper = shallow(<SponsorBadge {...mockSponsor} />)
     expect(toJSON(wrapper)).toMatchSnapshot()
-    expect(wrapper.find('a').prop('href')).toBe(mockSponsor.url)
+    expect(wrapper.prop('href')).toBe(mockSponsor.url)
   })
 })
