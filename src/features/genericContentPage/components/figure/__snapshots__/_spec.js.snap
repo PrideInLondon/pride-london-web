@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Figure/> renders with default values 1`] = `
+<figure>
+  <img
+    src="src"
+  />
+  <figcaption>
+    Hello World
+  </figcaption>
+</figure>
+`;

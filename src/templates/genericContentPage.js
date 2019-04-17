@@ -2,12 +2,13 @@ import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import ReactMarkdown from 'react-markdown'
+// import ReactMarkdown from 'react-markdown'
 import Helmet from 'react-helmet'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { Column, Row, Container } from '../components/grid'
 import BannerImage from '../components/banner/bannerImage'
+import GenericContent from '../features/genericContentPage'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -51,9 +52,9 @@ export default class GenericContentPage extends Component {
       subtitle,
       bannerImage,
       bannerColor,
-      content: { content },
+      content_rich: { json },
     } = this.props.data.contentfulGenericContentPage
-
+    console.log(json)
     return (
       <Fragment>
         <Helmet title={title} />
@@ -68,7 +69,8 @@ export default class GenericContentPage extends Component {
           <Container>
             <Row>
               <Content width={[1, 1, 0.8]}>
-                <ReactMarkdown source={content} />
+                {/* <ReactMarkdown source={content} /> */}
+                <GenericContent content={json} />
               </Content>
             </Row>
           </Container>
@@ -97,6 +99,9 @@ export const query = graphql`
       bannerColor
       content {
         content
+      }
+      content_rich {
+        json
       }
     }
   }
