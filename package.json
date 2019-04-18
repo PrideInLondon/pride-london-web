@@ -68,7 +68,7 @@
     "react-helmet": "^5.2.0",
     "react-markdown": "^4.0.6",
     "react-onclickoutside": "^6.8.0",
-    "react-slick": "^0.23.2",
+    "react-slick": "^0.24.0",
     "react-test-renderer": "^16.8.6",
     "shortid": "^2.2.14",
     "slick-carousel": "^1.8.1",
