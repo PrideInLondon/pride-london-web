@@ -73,6 +73,7 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                   "url": "/",
                 }
               }
+              setNavOpen={[Function]}
             />
             <NavItem
               item={
@@ -106,6 +107,7 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                   "url": "/",
                 }
               }
+              setNavOpen={[Function]}
             />
             <NavItem
               item={
@@ -152,6 +154,7 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                   "url": "/",
                 }
               }
+              setNavOpen={[Function]}
             />
             <NavItem
               item={
@@ -194,6 +197,7 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                   "url": "/",
                 }
               }
+              setNavOpen={[Function]}
             />
             <NavItem
               item={
@@ -203,6 +207,7 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                   "url": "/visitor-information",
                 }
               }
+              setNavOpen={[Function]}
             />
             <NavItem
               item={
@@ -212,9 +217,11 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                   "url": "/blog",
                 }
               }
+              setNavOpen={[Function]}
             />
             <NavItem
               item={Object {}}
+              setNavOpen={[Function]}
             >
               <nav__DonateButton
                 fullmobile={true}
