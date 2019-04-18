@@ -132,6 +132,7 @@ function useOnClickOutside(ref, handler) {
 const NavItem = props => {
   const {
     children,
+    setNavOpen,
     item: { submenu = false, title, url, desc, id },
   } = props
 
@@ -172,7 +173,13 @@ const NavItem = props => {
           <Submenu item={{ submenu, title, url, desc, id }} isOpen={isOpen} />
         </Fragment>
       ) : (
-        <MenuLink to={url} itemProp="url">
+        <MenuLink
+          to={url}
+          itemProp="url"
+          onClick={() =>
+            !checkBreakpoint(theme.navBreakpoint) && setNavOpen(false)
+          }
+        >
           <span itemProp="name">{title}</span>
         </MenuLink>
       )}
@@ -182,6 +189,7 @@ const NavItem = props => {
 
 NavItem.propTypes = {
   children: PropTypes.node,
+  setNavOpen: PropTypes.func,
   item: PropTypes.shape({
     title: PropTypes.string,
     url: PropTypes.string,
@@ -193,6 +201,7 @@ NavItem.propTypes = {
 
 NavItem.defaultProps = {
   children: null,
+  setNavOpen: () => {},
   item: {},
 }
 
