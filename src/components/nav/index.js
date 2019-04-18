@@ -329,6 +329,20 @@ const Nav = () => {
                     ],
                   }}
                 />
+                <NavItem
+                  item={{
+                    id: 'nav-visitor-info',
+                    title: 'Visitor info',
+                    url: '/visitor-information',
+                  }}
+                />
+                <NavItem
+                  item={{
+                    id: 'nav-blog',
+                    title: 'Blog',
+                    url: '/blog',
+                  }}
+                />
                 <NavItem>
                   <DonateButton
                     link
