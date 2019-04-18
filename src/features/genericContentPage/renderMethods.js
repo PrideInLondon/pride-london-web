@@ -8,18 +8,25 @@ import Video from './components/video'
 const renderFigure = node =>
   console.log(node) || <Figure {...node.data.target.fields} />
 
-const renderButton = ({
-  data: {
-    target: {
-      fields: { buttonContent, buttonHref, buttonPrimary },
+const renderButton = node => {
+  const {
+    data: {
+      target: { fields },
     },
-  },
-}) => {
-  const primary = buttonPrimary['en-GB']
+  } = node
+
+  if (
+    typeof fields === 'undefined' ||
+    typeof fields.buttonContent === 'undefined'
+  ) {
+    return
+  }
+
+  const primary = fields.buttonPrimary['en-GB']
 
   return (
-    <Button primary={primary} link to={buttonHref['en-GB']}>
-      {buttonContent && buttonContent['en-GB']}
+    <Button primary={primary} link to={fields.buttonHref['en-GB']}>
+      {fields.buttonContent && fields.buttonContent['en-GB']}
     </Button>
   )
 }
