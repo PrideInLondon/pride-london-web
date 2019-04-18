@@ -29,6 +29,11 @@ const linkStyles = css`
 
 const MenuLink = styled(Link)`
   ${linkStyles}
+
+  ${media.navMax`
+    padding-left: 20px;
+    padding-right: 20px;
+  `};
 `
 
 const SubmenuToggle = styled.a`
