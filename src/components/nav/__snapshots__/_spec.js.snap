@@ -118,7 +118,7 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                       "links": Array [
                         Object {
                           "title": "This year's festival",
-                          "url": "events/festival",
+                          "url": "/events/festival",
                         },
                         Object {
                           "title": "What's on",
