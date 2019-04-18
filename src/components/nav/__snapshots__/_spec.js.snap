@@ -52,22 +52,19 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                   "id": "nav-about",
                   "submenu": Array [
                     Object {
+                      "heading": "About us",
                       "links": Array [
                         Object {
-                          "title": "Our mission",
-                          "url": "/",
-                        },
-                        Object {
-                          "title": "A history of Pride",
-                          "url": "/",
-                        },
-                        Object {
-                          "title": "Campaign",
-                          "url": "/",
+                          "title": "Our Story",
+                          "url": "/about-us",
                         },
                         Object {
                           "title": "Our impact",
-                          "url": "/",
+                          "url": "/about-us/impact",
+                        },
+                        Object {
+                          "title": "Campaigns",
+                          "url": "/about-us/campaigns",
                         },
                       ],
                     },
@@ -87,42 +84,20 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                       "heading": "Parade",
                       "links": Array [
                         Object {
-                          "title": "Watch the parade",
-                          "url": "/",
+                          "title": "This year's parade",
+                          "url": "/parade",
                         },
                         Object {
-                          "title": "Parade groups",
-                          "url": "/",
-                        },
-                      ],
-                    },
-                    Object {
-                      "heading": "Stages",
-                      "links": Array [
-                        Object {
-                          "title": "Cabaret stage",
-                          "url": "/",
+                          "title": "Accessibility",
+                          "url": "/parade/accessibility",
                         },
                         Object {
-                          "title": "Trafalgar Square",
-                          "url": "/",
+                          "title": "Take part",
+                          "url": "/parade/take-part",
                         },
                         Object {
-                          "title": "Women's stage",
-                          "url": "/",
-                        },
-                        Object {
-                          "title": "World stage",
-                          "url": "/",
-                        },
-                      ],
-                    },
-                    Object {
-                      "heading": "Community Village",
-                      "links": Array [
-                        Object {
-                          "title": "Stalls",
-                          "url": "/",
+                          "title": "Residents and businesses info",
+                          "url": "/parade/residents-and-businesses",
                         },
                       ],
                     },
@@ -139,15 +114,23 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                   "id": "nav-events",
                   "submenu": Array [
                     Object {
-                      "heading": "What's on",
+                      "heading": "Pride Festival",
                       "links": Array [
                         Object {
-                          "title": "Upcoming events",
-                          "url": "/",
+                          "title": "This year's festival",
+                          "url": "/events/festival",
+                        },
+                        Object {
+                          "title": "What's on",
+                          "url": "/events/whats-on",
                         },
                         Object {
                           "title": "Host an event",
-                          "url": "/",
+                          "url": "/events/host-an-event",
+                        },
+                        Object {
+                          "title": "Download our app",
+                          "url": "/app",
                         },
                       ],
                     },
@@ -155,16 +138,12 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                       "heading": "Pride's Got Talent",
                       "links": Array [
                         Object {
-                          "title": "This year's competition",
-                          "url": "/",
+                          "title": "About Pride's Got Talent",
+                          "url": "/events/prides-got-talent",
                         },
                         Object {
-                          "title": "How to take part",
-                          "url": "/",
-                        },
-                        Object {
-                          "title": "Hall of fame",
-                          "url": "/",
+                          "title": "Audition for Pride's Got Talent",
+                          "url": "/events/prides-got-talent/audition",
                         },
                       ],
                     },
@@ -185,15 +164,15 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                       "links": Array [
                         Object {
                           "title": "Volunteer",
-                          "url": "/",
+                          "url": "/support-us/volunteer",
                         },
                         Object {
                           "title": "Make a donation",
-                          "url": "/",
+                          "url": "/support-us/donate",
                         },
                         Object {
                           "title": "Buy merchandise",
-                          "url": "/",
+                          "url": "/support-us/merchandise",
                         },
                       ],
                     },
@@ -201,23 +180,36 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                       "heading": "As a business",
                       "links": Array [
                         Object {
-                          "title": "Partner with us",
-                          "url": "/",
+                          "title": "Become a partner",
+                          "url": "/support-us/partner-with-us",
                         },
-                      ],
-                    },
-                    Object {
-                      "heading": "As an MP",
-                      "links": Array [
                         Object {
-                          "title": "Sign the poilitical pledge",
-                          "url": "/",
+                          "title": "Pride in the City",
+                          "url": "/support-us/pride-in-the-city",
                         },
                       ],
                     },
                   ],
                   "title": "Support us",
                   "url": "/",
+                }
+              }
+            />
+            <NavItem
+              item={
+                Object {
+                  "id": "nav-visitor-info",
+                  "title": "Visitor info",
+                  "url": "/visitor-information",
+                }
+              }
+            />
+            <NavItem
+              item={
+                Object {
+                  "id": "nav-blog",
+                  "title": "Blog",
+                  "url": "/blog",
                 }
               }
             />

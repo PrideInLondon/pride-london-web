@@ -31,7 +31,7 @@ const theme = {
   },
   space: [0, 5, 10, 15, 20],
   breakpoints: [375, 768, 1024, 1440],
-  navBreakpoint: 1275,
+  navBreakpoint: 1360,
 }
 
 export default theme

@@ -201,11 +201,11 @@ const Nav = () => {
                     url: '/',
                     submenu: [
                       {
+                        heading: 'About us',
                         links: [
-                          { title: 'Our mission', url: '/' },
-                          { title: 'A history of Pride', url: '/' },
-                          { title: 'Campaign', url: '/' },
-                          { title: 'Our impact', url: '/' },
+                          { title: 'Our Story', url: '/about-us' },
+                          { title: 'Our impact', url: '/about-us/impact' },
+                          { title: 'Campaigns', url: '/about-us/campaigns' },
                         ],
                       },
                     ],
@@ -222,22 +222,23 @@ const Nav = () => {
                       {
                         heading: 'Parade',
                         links: [
-                          { title: 'Watch the parade', url: '/' },
-                          { title: 'Parade groups', url: '/' },
+                          {
+                            title: "This year's parade",
+                            url: '/parade',
+                          },
+                          {
+                            title: 'Accessibility',
+                            url: '/parade/accessibility',
+                          },
+                          {
+                            title: 'Take part',
+                            url: '/parade/take-part',
+                          },
+                          {
+                            title: 'Residents and businesses info',
+                            url: '/parade/residents-and-businesses',
+                          },
                         ],
-                      },
-                      {
-                        heading: 'Stages',
-                        links: [
-                          { title: 'Cabaret stage', url: '/' },
-                          { title: 'Trafalgar Square', url: '/' },
-                          { title: "Women's stage", url: '/' },
-                          { title: 'World stage', url: '/' },
-                        ],
-                      },
-                      {
-                        heading: 'Community Village',
-                        links: [{ title: 'Stalls', url: '/' }],
                       },
                     ],
                   }}
@@ -251,18 +252,37 @@ const Nav = () => {
                     url: '/',
                     submenu: [
                       {
-                        heading: "What's on",
+                        heading: 'Pride Festival',
                         links: [
-                          { title: 'Upcoming events', url: '/' },
-                          { title: 'Host an event', url: '/' },
+                          {
+                            title: "This year's festival",
+                            url: '/events/festival',
+                          },
+                          {
+                            title: "What's on",
+                            url: '/events/whats-on',
+                          },
+                          {
+                            title: 'Host an event',
+                            url: '/events/host-an-event',
+                          },
+                          {
+                            title: 'Download our app',
+                            url: '/app',
+                          },
                         ],
                       },
                       {
                         heading: "Pride's Got Talent",
                         links: [
-                          { title: "This year's competition", url: '/' },
-                          { title: 'How to take part', url: '/' },
-                          { title: 'Hall of fame', url: '/' },
+                          {
+                            title: "About Pride's Got Talent",
+                            url: '/events/prides-got-talent',
+                          },
+                          {
+                            title: "Audition for Pride's Got Talent",
+                            url: '/events/prides-got-talent/audition',
+                          },
                         ],
                       },
                     ],
@@ -279,22 +299,48 @@ const Nav = () => {
                       {
                         heading: 'As an individual',
                         links: [
-                          { title: 'Volunteer', url: '/' },
-                          { title: 'Make a donation', url: '/' },
-                          { title: 'Buy merchandise', url: '/' },
+                          {
+                            title: 'Volunteer',
+                            url: '/support-us/volunteer',
+                          },
+                          {
+                            title: 'Make a donation',
+                            url: '/support-us/donate',
+                          },
+                          {
+                            title: 'Buy merchandise',
+                            url: '/support-us/merchandise',
+                          },
                         ],
                       },
                       {
                         heading: 'As a business',
-                        links: [{ title: 'Partner with us', url: '/' }],
-                      },
-                      {
-                        heading: 'As an MP',
                         links: [
-                          { title: 'Sign the poilitical pledge', url: '/' },
+                          {
+                            title: 'Become a partner',
+                            url: '/support-us/partner-with-us',
+                          },
+                          {
+                            title: 'Pride in the City',
+                            url: '/support-us/pride-in-the-city',
+                          },
                         ],
                       },
                     ],
+                  }}
+                />
+                <NavItem
+                  item={{
+                    id: 'nav-visitor-info',
+                    title: 'Visitor info',
+                    url: '/visitor-information',
+                  }}
+                />
+                <NavItem
+                  item={{
+                    id: 'nav-blog',
+                    title: 'Blog',
+                    url: '/blog',
                   }}
                 />
                 <NavItem>
