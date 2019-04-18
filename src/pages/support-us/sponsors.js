@@ -34,7 +34,7 @@ const MainSponsorsContainer = styled.div`
     max-width: 646px;
   `};
 `
-const BronzeSponsorsContainer = styled.div`
+const SecondarySponsorsContainer = styled.div`
   ${media.tablet`
     max-width: 860px;
   `};
@@ -196,7 +196,9 @@ const Sponsors = ({ data }) => {
                   {renderSponsors(sponsors[constants.sponsorLevels.gold])}
                 </SponsorsSubsection>
               )}
+            </MainSponsorsContainer>
 
+            <SecondarySponsorsContainer>
               {sponsors[constants.sponsorLevels.silver] && (
                 <SponsorsSubsection
                   title="Silver sponsors"
@@ -205,9 +207,7 @@ const Sponsors = ({ data }) => {
                   {renderSponsors(sponsors[constants.sponsorLevels.silver])}
                 </SponsorsSubsection>
               )}
-            </MainSponsorsContainer>
 
-            <BronzeSponsorsContainer>
               {sponsors[constants.sponsorLevels.bronze] && (
                 <SponsorsSubsection
                   title="Bronze sponsors"
@@ -222,7 +222,7 @@ const Sponsors = ({ data }) => {
                   {renderSponsors(sponsors[constants.sponsorLevels.partners])}
                 </SponsorsSubsection>
               )}
-            </BronzeSponsorsContainer>
+            </SecondarySponsorsContainer>
           </Column>
         </Row>
       </MainContainer>
