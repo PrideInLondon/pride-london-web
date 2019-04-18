@@ -22,8 +22,8 @@ import {
   SponsorsCTAWrapper,
   SponsorsContainer,
   SponsorImgWrapper,
-  EventsCTAWrapper,
-  EventsCTALink,
+  SubscribeWrapper,
+  SubscribeLink,
   LegalSection,
   LegalStrapline,
   LegalList,
@@ -119,17 +119,16 @@ export const Footer = ({ data }) => {
               >
                 #prideinlondon
               </HashTag>
-              <HashTag
-                href="https://twitter.com/intent/tweet?button_hashtag=diversityFTW"
+            </HashTags>
+            <SubscribeWrapper width={[1, 1, 0.3]}>
+              <SubscribeLink
+                href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                #diversityFTW
-              </HashTag>
-            </HashTags>
-            <EventsCTAWrapper width={[1, 1, 0.3]}>
-              <EventsCTALink to="/events">Never miss an event</EventsCTALink>
-            </EventsCTAWrapper>
+                Subscribe for Pride updates
+              </SubscribeLink>
+            </SubscribeWrapper>
           </SocialSection>
           <SponsorsSection width={1}>
             <SponsorsHeading>Our amazing partners</SponsorsHeading>
@@ -165,8 +164,15 @@ export const Footer = ({ data }) => {
             </LegalList>
             <LegalStrapline>
               London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN -
-              Registered in England and Wales as a Community Interest Company
-              (no. 8321669)
+              Registered in England and Wales as a Community Interest Company (
+              <a
+                href="https://beta.companieshouse.gov.uk/company/08321669"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                no. 8321669
+              </a>
+              )
             </LegalStrapline>
           </LegalSection>
         </Row>

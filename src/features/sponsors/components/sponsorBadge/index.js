@@ -9,11 +9,12 @@ const isLargeBadge = level =>
   level === constants.sponsorLevels.headline ||
   level === constants.sponsorLevels.gold
 
-const Badge = styled.div`
+const Badge = styled.a`
+  border: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: ${theme.colors.white};
+  background-color: ${theme.colors.lightGrey};
   margin: 0 10px 10px 0;
   padding: 10px;
   ${media.tablet`
@@ -68,14 +69,12 @@ const NamePlaceholder = styled.h3`
 `
 
 const SponsorBadge = ({ logo, name, url, level }) => (
-  <Badge level={level}>
-    <a href={url} rel="noopener noreferrer" target="_blank">
-      {logo ? (
-        <BadgeImage src={logo} alt={name} level={level} />
-      ) : (
-        <NamePlaceholder>{name}</NamePlaceholder>
-      )}
-    </a>
+  <Badge level={level} href={url} rel="noopener noreferrer" target="_blank">
+    {logo ? (
+      <BadgeImage src={logo} alt={name} level={level} />
+    ) : (
+      <NamePlaceholder>{name}</NamePlaceholder>
+    )}
   </Badge>
 )
 
