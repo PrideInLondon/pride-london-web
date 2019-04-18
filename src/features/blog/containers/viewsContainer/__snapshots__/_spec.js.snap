@@ -44,7 +44,7 @@ exports[`ViewsContainer should render with default values 1`] = `
             "body": "Roboto, sans-serif",
             "title": "Poppins, sans-serif",
           },
-          "navBreakpoint": 1275,
+          "navBreakpoint": 1360,
           "space": Array [
             0,
             5,
