@@ -9,15 +9,6 @@ import { media } from '../../theme/media'
 import { checkBreakpoint } from '../../utilities'
 import ChevronDown from '../icons/chevronDown'
 
-const MenuItem = styled.li`
-  ${media.nav`
-    height: auto;
-    padding: 0;
-    background-color: ${props =>
-      props.isOpen && lighten(0.05, theme.colors.indigo)};
-  `};
-`
-
 const linkStyles = css`
   font-family: ${theme.fonts.title};
   font-size: 1.25rem;
@@ -71,6 +62,22 @@ const SubmenuToggle = styled.a`
       fill: ${theme.colors.eucalyptusGreen};
     }
   }
+`
+
+const MenuItem = styled.li`
+  ${media.nav`
+    height: auto;
+    padding: 0;
+    ${SubmenuToggle} {
+      background-color: ${props =>
+        props.isOpen && lighten(0.05, theme.colors.indigo)};
+    }
+
+    ${MenuLink} {
+      background-color: ${props =>
+        props.isOpen && lighten(0.05, theme.colors.indigo)};
+    }
+  `};
 `
 
 function reducer(state, action) {
@@ -132,14 +139,10 @@ const NavItem = props => {
   return (
     <MenuItem
       onMouseEnter={() =>
-        submenu &&
-        checkBreakpoint(theme.navBreakpoint) &&
-        dispatch({ type: 'open' })
+        checkBreakpoint(theme.navBreakpoint) && dispatch({ type: 'open' })
       }
       onMouseLeave={() =>
-        submenu &&
-        checkBreakpoint(theme.navBreakpoint) &&
-        dispatch({ type: 'close' })
+        checkBreakpoint(theme.navBreakpoint) && dispatch({ type: 'close' })
       }
       isOpen={isOpen}
       ref={ref}

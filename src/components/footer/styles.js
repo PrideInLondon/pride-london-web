@@ -116,22 +116,23 @@ export const HashTag = styled.a`
   }
 `
 
-export const EventsCTAWrapper = styled.div`
+export const SubscribeWrapper = styled.div`
   ${media.tabletMax`
     text-align: center;
   `};
 `
 
-export const EventsCTALink = styled(Link)`
+export const SubscribeLink = styled.a`
   color: ${theme.colors.indigo};
   font-family: ${theme.fonts.title};
   font-weight: 700;
   text-decoration: none;
   border-bottom: 2px solid ${theme.colors.indigo};
-  transition: border-color 0.15s linear;
+  transition: border-color 0.15s linear, color 0.15s linear;
 
   &:hover,
   &:focus {
+    color: ${theme.colors.eucalyptusGreen};
     border-color: ${theme.colors.eucalyptusGreen};
   }
 

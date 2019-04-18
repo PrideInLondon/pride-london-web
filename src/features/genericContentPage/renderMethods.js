@@ -5,8 +5,7 @@ import Button from '../../components/button'
 import Figure from './components/figure'
 import Video from './components/video'
 
-const renderFigure = node =>
-  console.log(node) || <Figure {...node.data.target.fields} />
+const renderFigure = node => <Figure {...node.data.target.fields} />
 
 const renderButton = node => {
   const {
