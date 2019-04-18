@@ -256,7 +256,7 @@ const Nav = () => {
                         links: [
                           {
                             title: "This year's festival",
-                            url: 'events/festival',
+                            url: '/events/festival',
                           },
                           {
                             title: "What's on",
