@@ -112,13 +112,6 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           >
             #prideinlondon
           </styles__HashTag>
-          <styles__HashTag
-            href="https://twitter.com/intent/tweet?button_hashtag=diversityFTW"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            #diversityFTW
-          </styles__HashTag>
         </styles__HashTags>
         <styles__EventsCTAWrapper
           width={
@@ -261,7 +254,15 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__LegalListItem>
         </styles__LegalList>
         <styles__LegalStrapline>
-          London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN - Registered in England and Wales as a Community Interest Company (no. 8321669)
+          London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN - Registered in England and Wales as a Community Interest Company (
+          <a
+            href="https://beta.companieshouse.gov.uk/company/08321669"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            no. 8321669
+          </a>
+          )
         </styles__LegalStrapline>
       </styles__LegalSection>
     </Row>
