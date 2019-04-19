@@ -328,10 +328,6 @@ const Nav = () => {
                             title: 'Pride in the City',
                             url: '/support-us/pride-in-the-city',
                           },
-                          {
-                            title: 'Sponsors',
-                            url: '/support-us/sponsors',
-                          },
                         ],
                       },
                     ],
