@@ -26,6 +26,8 @@ const Submenu = props => {
   const {
     item: { title, desc, id, submenu },
     isOpen,
+    setNavOpen,
+    setNavItemOpen,
   } = props
 
   const panelRef = useRef()
@@ -73,7 +75,15 @@ const Submenu = props => {
                 <PanelList>
                   {submenuList.links.map(link => (
                     <li key={link.title}>
-                      <PanelLink to={link.url} itemProp="url">
+                      <PanelLink
+                        to={link.url}
+                        itemProp="url"
+                        onClick={() =>
+                          checkBreakpoint(theme.navBreakpoint)
+                            ? setNavItemOpen({ type: 'close' })
+                            : setNavOpen(false)
+                        }
+                      >
                         <span itemProp="name">{link.title}</span>
                       </PanelLink>
                     </li>
@@ -88,8 +98,6 @@ const Submenu = props => {
   )
 }
 
-Submenu.PropTypes = {}
-
 Submenu.propTypes = {
   item: PropTypes.shape({
     title: PropTypes.string,
@@ -97,6 +105,8 @@ Submenu.propTypes = {
     submenu: PropTypes.array,
   }).isRequired,
   isOpen: PropTypes.bool.isRequired,
+  setNavOpen: PropTypes.func.isRequired,
+  setNavItemOpen: PropTypes.func.isRequired,
 }
 
 export default Submenu

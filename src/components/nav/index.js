@@ -193,6 +193,7 @@ const Nav = () => {
               </Burger>
               <Menu id="menu" isOpen={isOpen}>
                 <NavItem
+                  setNavOpen={setOpen}
                   item={{
                     id: 'nav-about',
                     title: 'About',
@@ -212,6 +213,7 @@ const Nav = () => {
                   }}
                 />
                 <NavItem
+                  setNavOpen={setOpen}
                   item={{
                     id: 'nav-parade-day',
                     title: 'Parade Day',
@@ -244,6 +246,7 @@ const Nav = () => {
                   }}
                 />
                 <NavItem
+                  setNavOpen={setOpen}
                   item={{
                     id: 'nav-events',
                     title: 'Events',
@@ -289,6 +292,7 @@ const Nav = () => {
                   }}
                 />
                 <NavItem
+                  setNavOpen={setOpen}
                   item={{
                     id: 'nav-support-us',
                     title: 'Support us',
@@ -318,7 +322,7 @@ const Nav = () => {
                         links: [
                           {
                             title: 'Become a partner',
-                            url: '/support-us/partner-with-us',
+                            url: '/support-us/partners',
                           },
                           {
                             title: 'Pride in the City',
@@ -330,6 +334,7 @@ const Nav = () => {
                   }}
                 />
                 <NavItem
+                  setNavOpen={setOpen}
                   item={{
                     id: 'nav-visitor-info',
                     title: 'Visitor info',
@@ -337,6 +342,7 @@ const Nav = () => {
                   }}
                 />
                 <NavItem
+                  setNavOpen={setOpen}
                   item={{
                     id: 'nav-blog',
                     title: 'Blog',
