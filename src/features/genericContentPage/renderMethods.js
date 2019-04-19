@@ -10,7 +10,7 @@ const StyledButton = styled(Button)`
   margin-bottom: 1.25em;
 `
 
-const renderFigure = node => <Figure {...node.data.target.fields} />
+export const renderFigure = node => <Figure {...node.data.target.fields} />
 
 const renderButton = node => {
   const {
@@ -37,7 +37,7 @@ const renderButton = node => {
 
 const renderVideo = ({ data }) => <Video {...data.target.fields} />
 
-const renderEmbeddedEntry = node => {
+export const renderEmbeddedEntry = node => {
   switch (node.data.target.sys.contentType.sys.id) {
     case 'video':
       return renderVideo(node)
