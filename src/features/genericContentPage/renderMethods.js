@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { BLOCKS, INLINES } from '@contentful/rich-text-types'
+import { BLOCKS } from '@contentful/rich-text-types'
 import Button from '../../components/button'
 import Figure from './components/figure'
 import Video from './components/video'
@@ -32,11 +32,23 @@ const renderButton = node => {
 
 const renderVideo = ({ data }) => <Video {...data.target.fields} />
 
+const renderEmbeddedEntry = node => {
+  switch (node.data.target.sys.contentType.sys.id) {
+    case 'video':
+      return renderVideo(node)
+      break
+    case 'button':
+      return renderButton(node)
+      break
+    default:
+      return null
+  }
+}
+
 export default {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: renderFigure,
-    [BLOCKS.EMBEDDED_ENTRY]: renderButton,
-    [INLINES.EMBEDDED_ENTRY]: renderVideo,
+    [BLOCKS.EMBEDDED_ENTRY]: renderEmbeddedEntry,
   },
 }
 

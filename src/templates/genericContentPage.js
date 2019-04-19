@@ -53,7 +53,6 @@ export default class GenericContentPage extends Component {
       bannerColor,
       content: { json },
     } = this.props.data.contentfulGenericContentPage
-    console.log(json)
     return (
       <>
         <Helmet title={title} />
