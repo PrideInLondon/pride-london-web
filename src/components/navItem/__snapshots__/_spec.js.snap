@@ -12,6 +12,8 @@ exports[`Desktop <NavItem/> renders and matches snapshot 1`] = `
     aria-haspopup="true"
     href="#"
     onClick={[Function]}
+    setNavItemOpen={[Function]}
+    setNavOpen={[Function]}
   >
     <span>
       Learn
@@ -93,6 +95,8 @@ exports[`Mobile <NavItem/> renders and matches snapshot 1`] = `
     aria-haspopup={false}
     href="#"
     onClick={[Function]}
+    setNavItemOpen={[Function]}
+    setNavOpen={[Function]}
   >
     <span>
       Learn

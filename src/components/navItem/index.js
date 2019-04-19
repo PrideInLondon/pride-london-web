@@ -170,7 +170,12 @@ const NavItem = props => {
             <span>{title}</span>
             <ChevronDown />
           </SubmenuToggle>
-          <Submenu item={{ submenu, title, url, desc, id }} isOpen={isOpen} />
+          <Submenu
+            item={{ submenu, title, url, desc, id }}
+            isOpen={isOpen}
+            setNavOpen={setNavOpen}
+            setNavItemOpen={dispatch}
+          />
         </Fragment>
       ) : (
         <MenuLink

@@ -47,6 +47,7 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
             >
               <styles__PanelLink
                 itemProp="url"
+                onClick={[Function]}
                 to="/"
               >
                 <span
@@ -61,6 +62,7 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
             >
               <styles__PanelLink
                 itemProp="url"
+                onClick={[Function]}
                 to="/"
               >
                 <span
@@ -75,6 +77,7 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
             >
               <styles__PanelLink
                 itemProp="url"
+                onClick={[Function]}
                 to="/"
               >
                 <span
@@ -89,6 +92,7 @@ exports[`<Submenu /> renders and matches snapshot when open 1`] = `
             >
               <styles__PanelLink
                 itemProp="url"
+                onClick={[Function]}
                 to="/"
               >
                 <span
