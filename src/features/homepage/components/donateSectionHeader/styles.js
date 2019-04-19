@@ -32,8 +32,11 @@ export const Title = styled.h2`
   margin: 0;
   font-size: 36px;
   line-height: 1.17;
-  font-weight: 700;
-  padding: 10px 0;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  padding: 10px 70px 10px 0;
 
   ${media.tablet`
     padding: 30px 0;
