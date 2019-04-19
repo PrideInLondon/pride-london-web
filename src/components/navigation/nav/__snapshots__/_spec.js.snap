@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Nav/> renders and matches snapshot 1`] = `
-<nav__HeaderWrapper>
-  <nav__Header>
-    <nav__FlexRow
+<styles__HeaderWrapper>
+  <styles__Header>
+    <styles__FlexRow
       mx={
         Array [
           0,
@@ -14,23 +14,23 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
         ]
       }
     >
-      <nav__FlexColumn
+      <styles__FlexColumn
         width={1}
       >
-        <nav__LogoWrapper
+        <styles__LogoWrapper
           to="/"
         >
-          <nav__Logo
+          <styles__Logo
             alt="Pride in London Logo"
             src=""
           />
-        </nav__LogoWrapper>
+        </styles__LogoWrapper>
         <nav
           itemScope="itemscope"
           itemType="http://www.schema.org/SiteNavigationElement"
           role="navigation"
         >
-          <nav__Burger
+          <styles__Burger
             aria-controls="menu"
             aria-expanded={false}
             isOpen={false}
@@ -40,8 +40,8 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
             <span>
               Menu
             </span>
-          </nav__Burger>
-          <nav__Menu
+          </styles__Burger>
+          <styles__Menu
             id="menu"
             isOpen={false}
           >
@@ -223,19 +223,19 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
               item={Object {}}
               setNavOpen={[Function]}
             >
-              <nav__DonateButton
+              <styles__DonateButton
                 fullmobile={true}
                 link={true}
                 primary={true}
                 to="https://prideinlondon.org/donate/"
               >
                 Donate
-              </nav__DonateButton>
+              </styles__DonateButton>
             </NavItem>
-          </nav__Menu>
+          </styles__Menu>
         </nav>
-      </nav__FlexColumn>
-    </nav__FlexRow>
-  </nav__Header>
-</nav__HeaderWrapper>
+      </styles__FlexColumn>
+    </styles__FlexRow>
+  </styles__Header>
+</styles__HeaderWrapper>
 `;
