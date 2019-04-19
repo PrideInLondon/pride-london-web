@@ -112,6 +112,13 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           >
             #prideinlondon
           </styles__HashTag>
+          <styles__HashTag
+            href="https://twitter.com/intent/tweet?button_hashtag=pridejubilee"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            #pridejubilee
+          </styles__HashTag>
         </styles__HashTags>
         <styles__SubscribeWrapper
           width={

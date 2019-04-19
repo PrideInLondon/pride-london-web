@@ -13,7 +13,9 @@ const Video = ({ videoId }) => (
 )
 
 Video.propTypes = {
-  videoId: PropTypes.string.isRequired,
+  videoId: PropTypes.shape({
+    'en-GB': PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default Video
