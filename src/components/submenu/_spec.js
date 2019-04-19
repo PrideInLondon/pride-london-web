@@ -23,8 +23,16 @@ const mockData = {
 }
 
 describe('<Submenu />', () => {
+  const mockFunc = jest.fn()
   it('renders and matches snapshot when open', () => {
-    const wrapper = shallow(<Submenu item={mockData} isOpen />)
+    const wrapper = shallow(
+      <Submenu
+        item={mockData}
+        isOpen
+        setNavOpen={mockFunc}
+        setNavItemOpen={mockFunc}
+      />
+    )
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 })

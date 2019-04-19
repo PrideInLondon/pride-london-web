@@ -77,6 +77,8 @@ exports[`Desktop <NavItem/> renders and matches snapshot 1`] = `
         "url": "/",
       }
     }
+    setNavItemOpen={[Function]}
+    setNavOpen={[Function]}
   />
 </navItem__MenuItem>
 `;
@@ -158,6 +160,8 @@ exports[`Mobile <NavItem/> renders and matches snapshot 1`] = `
         "url": "/",
       }
     }
+    setNavItemOpen={[Function]}
+    setNavOpen={[Function]}
   />
 </navItem__MenuItem>
 `;

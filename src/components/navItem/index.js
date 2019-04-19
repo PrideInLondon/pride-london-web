@@ -29,6 +29,11 @@ const linkStyles = css`
 
 const MenuLink = styled(Link)`
   ${linkStyles}
+
+  ${media.navMax`
+    padding-left: 20px;
+    padding-right: 20px;
+  `};
 `
 
 const SubmenuToggle = styled.a`
@@ -52,6 +57,8 @@ const SubmenuToggle = styled.a`
     padding-right: 20px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+    
     span {
         margin-right: 20px;
     }
@@ -127,6 +134,7 @@ function useOnClickOutside(ref, handler) {
 const NavItem = props => {
   const {
     children,
+    setNavOpen,
     item: { submenu = false, title, url, desc, id },
   } = props
 
@@ -164,10 +172,21 @@ const NavItem = props => {
             <span>{title}</span>
             <ChevronDown />
           </SubmenuToggle>
-          <Submenu item={{ submenu, title, url, desc, id }} isOpen={isOpen} />
+          <Submenu
+            item={{ submenu, title, url, desc, id }}
+            isOpen={isOpen}
+            setNavOpen={setNavOpen}
+            setNavItemOpen={dispatch}
+          />
         </Fragment>
       ) : (
-        <MenuLink to={url} itemProp="url">
+        <MenuLink
+          to={url}
+          itemProp="url"
+          onClick={() =>
+            !checkBreakpoint(theme.navBreakpoint) && setNavOpen(false)
+          }
+        >
           <span itemProp="name">{title}</span>
         </MenuLink>
       )}
@@ -177,6 +196,7 @@ const NavItem = props => {
 
 NavItem.propTypes = {
   children: PropTypes.node,
+  setNavOpen: PropTypes.func,
   item: PropTypes.shape({
     title: PropTypes.string,
     url: PropTypes.string,
@@ -188,6 +208,7 @@ NavItem.propTypes = {
 
 NavItem.defaultProps = {
   children: null,
+  setNavOpen: () => {},
   item: {},
 }
 
