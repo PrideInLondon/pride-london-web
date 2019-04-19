@@ -184,7 +184,7 @@ exports[`<Nav/> renders and matches snapshot 1`] = `
                       "links": Array [
                         Object {
                           "title": "Become a partner",
-                          "url": "/support-us/partner-with-us",
+                          "url": "/support-us/partners",
                         },
                         Object {
                           "title": "Pride in the City",

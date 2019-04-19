@@ -322,7 +322,7 @@ const Nav = () => {
                         links: [
                           {
                             title: 'Become a partner',
-                            url: '/support-us/partner-with-us',
+                            url: '/support-us/partners',
                           },
                           {
                             title: 'Pride in the City',
