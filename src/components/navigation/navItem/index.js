@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
 import { Link } from 'gatsby'
-import Submenu from '../submenu'
-import theme from '../../theme/theme'
-import { media } from '../../theme/media'
-import { checkBreakpoint } from '../../utilities'
-import ChevronDown from '../icons/chevronDown'
+import Submenu from '../../submenu'
+import theme from '../../../theme/theme'
+import { media } from '../../../theme/media'
+import { checkBreakpoint } from '../../../utilities'
+import ChevronDown from '../../icons/chevronDown'
 
 const linkStyles = css`
   font-family: ${theme.fonts.title};
