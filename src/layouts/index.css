@@ -13,6 +13,7 @@ html {
 
 html.no-scroll {
   position: fixed;
+
   /* Width 100% required as slick carousel breaks inside fixed positioned container */
   width: 100%;
 }
