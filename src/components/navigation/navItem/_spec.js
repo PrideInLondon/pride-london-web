@@ -37,8 +37,7 @@ const mockData = {
   ],
 }
 
-// Tests for Desktop version of Nav
-describe('Desktop <NavItem/>', () => {
+describe('Desktop version <NavItem/>', () => {
   beforeAll(() => {
     global.___loader = {
       enqueue: jest.fn(),
@@ -57,54 +56,53 @@ describe('Desktop <NavItem/>', () => {
     global.window.matchMedia.mockReset()
   })
 
-  it('renders and matches snapshot', () => {
+  it('renders the desktop version of the component <NavItem />', () => {
     const wrapper = shallow(<NavItem item={mockData} />)
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 
-  it('Should have the aria-haspopup attribute', () => {
+  it('has the aria-haspopup attribute', () => {
     const wrapper = shallow(<NavItem item={mockData} />)
     expect(
-      wrapper.find('navItem__SubmenuToggle').prop('aria-haspopup')
+      wrapper.find('styles__SubmenuToggle').prop('aria-haspopup')
     ).toBeTruthy()
   })
 
-  it('Should display the submenu on mouseenter and hide it on mouseleave', () => {
+  it('displays the submenu on mouseenter and hides it on mouseleave', () => {
     const wrapper = mount(<NavItem item={mockData} />)
     wrapper.simulate('mouseEnter')
     wrapper.update()
     expect(
-      wrapper.find('navItem__SubmenuToggle').prop('aria-expanded')
+      wrapper.find('styles__SubmenuToggle').prop('aria-expanded')
     ).toBeTruthy()
 
     wrapper.simulate('mouseLeave')
     wrapper.update()
     expect(
-      wrapper.find('navItem__SubmenuToggle').prop('aria-expanded')
+      wrapper.find('styles__SubmenuToggle').prop('aria-expanded')
     ).toBeFalsy()
   })
 
-  it('Should toggle the submenu on click', () => {
+  it('toggles the submenu on click', () => {
     const wrapper = mount(<NavItem item={mockData} />)
-    const SubmenuToggle = wrapper.find('navItem__SubmenuToggle')
+    const SubmenuToggle = wrapper.find('styles__SubmenuToggle')
     const isOpen = SubmenuToggle.prop('aria-expanded')
 
     SubmenuToggle.simulate('click')
     wrapper.update()
-    expect(wrapper.find('navItem__SubmenuToggle').prop('aria-expanded')).toBe(
+    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
       !isOpen
     )
 
     SubmenuToggle.simulate('click')
     wrapper.update()
-    expect(wrapper.find('navItem__SubmenuToggle').prop('aria-expanded')).toBe(
+    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
       isOpen
     )
   })
 })
 
-// Tests for Mobile version of Nav
-describe('Mobile <NavItem/>', () => {
+describe('Mobile version <NavItem/>', () => {
   beforeAll(() => {
     global.___loader = {
       enqueue: jest.fn(),
@@ -123,48 +121,48 @@ describe('Mobile <NavItem/>', () => {
     global.window.matchMedia.mockReset()
   })
 
-  it('renders and matches snapshot', () => {
+  it('renders the mobile version of the component <NavItem />', () => {
     const wrapper = shallow(<NavItem item={mockData} />)
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 
-  it('Should not have the aria-haspopup attribute', () => {
+  it('has not the aria-haspopup attribute', () => {
     const wrapper = shallow(<NavItem item={mockData} />)
     expect(
-      wrapper.find('navItem__SubmenuToggle').prop('aria-haspopup')
+      wrapper.find('styles__SubmenuToggle').prop('aria-haspopup')
     ).toBeFalsy()
   })
 
-  it('Should not open/close on mouseenter or mouseleave', () => {
+  it('does not open/close on mouseenter or mouseleave', () => {
     const wrapper = mount(<NavItem item={mockData} />)
-    const isOpen = wrapper.find('navItem__SubmenuToggle').prop('aria-expanded')
+    const isOpen = wrapper.find('styles__SubmenuToggle').prop('aria-expanded')
     wrapper.simulate('mouseEnter')
     wrapper.update()
-    expect(wrapper.find('navItem__SubmenuToggle').prop('aria-expanded')).toBe(
+    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
       isOpen
     )
 
     wrapper.simulate('mouseLeave')
     wrapper.update()
-    expect(wrapper.find('navItem__SubmenuToggle').prop('aria-expanded')).toBe(
+    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
       isOpen
     )
   })
 
-  it('Should toggle the submenu on click', () => {
+  it('toggles the submenu on click', () => {
     const wrapper = mount(<NavItem item={mockData} />)
-    const SubmenuToggle = wrapper.find('navItem__SubmenuToggle')
+    const SubmenuToggle = wrapper.find('styles__SubmenuToggle')
     const isOpen = SubmenuToggle.prop('aria-expanded')
 
     SubmenuToggle.simulate('click')
     wrapper.update()
-    expect(wrapper.find('navItem__SubmenuToggle').prop('aria-expanded')).toBe(
+    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
       !isOpen
     )
 
     SubmenuToggle.simulate('click')
     wrapper.update()
-    expect(wrapper.find('navItem__SubmenuToggle').prop('aria-expanded')).toBe(
+    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
       isOpen
     )
   })
