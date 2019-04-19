@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Nav/> renders and matches snapshot 1`] = `
+exports[`<Nav/> renders the component <Nav /> 1`] = `
 <styles__HeaderWrapper>
   <styles__Header>
     <styles__FlexRow
