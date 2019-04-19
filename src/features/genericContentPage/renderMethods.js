@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { BLOCKS } from '@contentful/rich-text-types'
+import styled from 'styled-components'
 import Button from '../../components/button'
 import Figure from './components/figure'
 import Video from './components/video'
+
+const StyledButton = styled(Button)`
+  margin-bottom: 1.25em;
+`
 
 const renderFigure = node => <Figure {...node.data.target.fields} />
 
@@ -24,9 +29,9 @@ const renderButton = node => {
   const primary = fields.buttonPrimary['en-GB']
 
   return (
-    <Button primary={primary} link to={fields.buttonHref['en-GB']}>
+    <StyledButton primary={primary} link to={fields.buttonHref['en-GB']}>
       {fields.buttonContent && fields.buttonContent['en-GB']}
-    </Button>
+    </StyledButton>
   )
 }
 
