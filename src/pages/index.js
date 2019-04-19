@@ -137,7 +137,7 @@ const Home = () => (
         <FuturedEventsHeader>
           <FuturedEventsTitle>
             <h2>Featured events</h2>
-            <p>View events drom across the LGBT+ comminuity </p>
+            <p>View events from across the LGBT+ community.</p>
           </FuturedEventsTitle>
           <Button wide={false} link to="/events/">
             View all events
