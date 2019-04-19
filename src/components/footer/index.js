@@ -119,6 +119,13 @@ export const Footer = ({ data }) => {
               >
                 #prideinlondon
               </HashTag>
+              <HashTag
+                href="https://twitter.com/intent/tweet?button_hashtag=pridejubilee"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                #pridejubilee
+              </HashTag>
             </HashTags>
             <SubscribeWrapper width={[1, 1, 0.3]}>
               <SubscribeLink
