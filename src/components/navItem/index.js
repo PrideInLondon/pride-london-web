@@ -57,6 +57,8 @@ const SubmenuToggle = styled.a`
     padding-right: 20px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+    
     span {
         margin-right: 20px;
     }
