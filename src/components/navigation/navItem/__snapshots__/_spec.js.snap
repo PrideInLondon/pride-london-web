@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Desktop <NavItem/> renders and matches snapshot 1`] = `
-<navItem__MenuItem
+exports[`Desktop version <NavItem/> renders the desktop version of the component <NavItem /> 1`] = `
+<styles__MenuItem
   isOpen={false}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  <navItem__SubmenuToggle
+  <styles__SubmenuToggle
     aria-controls="nav-learn"
     aria-expanded={false}
     aria-haspopup="true"
@@ -17,7 +17,7 @@ exports[`Desktop <NavItem/> renders and matches snapshot 1`] = `
       Learn
     </span>
     <ChevronDown />
-  </navItem__SubmenuToggle>
+  </styles__SubmenuToggle>
   <Submenu
     isOpen={false}
     item={
@@ -80,16 +80,16 @@ exports[`Desktop <NavItem/> renders and matches snapshot 1`] = `
     setNavItemOpen={[Function]}
     setNavOpen={[Function]}
   />
-</navItem__MenuItem>
+</styles__MenuItem>
 `;
 
-exports[`Mobile <NavItem/> renders and matches snapshot 1`] = `
-<navItem__MenuItem
+exports[`Mobile version <NavItem/> renders the mobile version of the component <NavItem /> 1`] = `
+<styles__MenuItem
   isOpen={false}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  <navItem__SubmenuToggle
+  <styles__SubmenuToggle
     aria-controls="nav-learn"
     aria-expanded={false}
     aria-haspopup={false}
@@ -100,7 +100,7 @@ exports[`Mobile <NavItem/> renders and matches snapshot 1`] = `
       Learn
     </span>
     <ChevronDown />
-  </navItem__SubmenuToggle>
+  </styles__SubmenuToggle>
   <Submenu
     isOpen={false}
     item={
@@ -163,5 +163,5 @@ exports[`Mobile <NavItem/> renders and matches snapshot 1`] = `
     setNavItemOpen={[Function]}
     setNavOpen={[Function]}
   />
-</navItem__MenuItem>
+</styles__MenuItem>
 `;

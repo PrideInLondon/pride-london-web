@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { lighten } from 'polished'
-import theme from '../../theme/theme'
-import { media } from '../../theme/media'
-import { Row, Column } from '../grid'
+import theme from '../../../theme/theme'
+import { media } from '../../../theme/media'
+import { Row, Column } from '../../grid'
 
 export const Panel = styled.div`
   background-color: ${lighten(0.05, theme.colors.indigo)};

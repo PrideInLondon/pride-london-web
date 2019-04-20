@@ -23,12 +23,12 @@ describe('<Nav/>', () => {
     global.window.matchMedia.mockReset()
   })
 
-  it('renders and matches snapshot', () => {
+  it('renders the component <Nav />', () => {
     const wrapper = shallow(<Nav />)
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 
-  it('menu button toggles open / close', () => {
+  it('toggles open / close the menu button', () => {
     const wrapper = mount(<Nav />)
     const menuToggle = wrapper.find('button[aria-controls="menu"]')
     const isOpen = wrapper
