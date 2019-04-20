@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SponsorBadge/> Should render and match snapshot 1`] = `
+exports[`<SponsorBadge/> renders the component <SponsorBadge /> 1`] = `
 <sponsorBadge__Badge
   href="https://sponsor1.com"
   level="Headline"
