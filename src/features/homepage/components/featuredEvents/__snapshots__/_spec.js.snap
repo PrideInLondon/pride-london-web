@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EventCards renders with default values 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;
-
 exports[`Featured Event Content renders with default values 1`] = `
 <StyledComponent
   forwardedComponent={
@@ -57,4 +51,10 @@ exports[`Featured Event Content renders with default values 1`] = `
   }
   forwardedRef={null}
 />
+`;
+
+exports[`FeaturedEvents renders with default values 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

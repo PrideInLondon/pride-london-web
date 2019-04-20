@@ -8,7 +8,7 @@ import { EventListingCard } from '../../../../features/events'
 import { FlexColumn } from '../../../../components/grid'
 import { FeaturedEventContent } from './styles'
 
-const EventCards = () => (
+const FeaturedEvents = () => (
   <Consumer>
     {context => (
       <FeaturedEventContent>
@@ -32,4 +32,4 @@ const EventCards = () => (
   </Consumer>
 )
 
-export default EventCards
+export default FeaturedEvents

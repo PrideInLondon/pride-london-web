@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "@rebass/grid": "^6.0.0",
+    "debounce": "^1.2.0",
     "dotenv": "^7.0.0",
     "gatsby": "^2.3.25",
     "gatsby-link": "^2.0.15",

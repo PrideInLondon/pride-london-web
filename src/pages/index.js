@@ -5,24 +5,24 @@ import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
 import eventsBgLeft from '../theme/assets/images/featured-events-bg-left.png'
 import eventsBgRight from '../theme/assets/images/featured-events-bg-right.png'
-import EventCards from '../features/homepage/components/featuredEvents'
+import FeaturedEvents from '../features/homepage/components/featuredEvents'
 import { media } from '../theme/media'
-import { Container } from '../components/grid'
+import { Container, Row, Column } from '../components/grid'
 import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
 import AnnouncementsContainer from '../features/homepage/containers/announcementsContainer'
 import DonateContainer from '../features/homepage/containers/donateContainer'
 
-const FuturedEventsContainer = styled.div`
+const FeaturedEventsContainer = styled.div`
   background-color: #282a80;
   width: 100%;
   position: relative;
   z-index: 1;
   padding: 30px 0;
-  margin-top: -15vh;
+  margin: 0 auto;
+
   ${media.tablet`
-    margin-top: -33vh;
     padding: 60px 107px;
   `};
 `
@@ -33,7 +33,7 @@ const SectionVolunteer = styled.div`
   display: block;
 `
 
-const FuturedEventsHeader = styled.div`
+const FeaturedEventsHeader = styled.div`
   display: flex;
   align-items: flex-start;
   padding: 0 22px;
@@ -57,7 +57,7 @@ const ButtonMobile = styled.div`
   `};
 `
 
-const FuturedEventsTitle = styled.div`
+const FeaturedEventsTitle = styled.div`
   h2 {
     font-size: 26px;
     line-height: 32px;
@@ -108,6 +108,24 @@ const EventsBackgroundRight = styled.div`
   }
 `
 
+const StyledContainer = styled(Container)`
+  ${media.tabletMax`
+      margin: 0;
+  `};
+`
+
+const StyledRow = styled(Row)`
+  ${media.tabletMax`
+      margin: 0;
+  `};
+`
+
+const StyledColumn = styled(Column)`
+  ${media.tabletMax`
+      padding: 0;
+  `};
+`
+
 const Home = () => (
   <Fragment>
     <BannerImage
@@ -119,45 +137,48 @@ const Home = () => (
       imageSrc={BannerImg}
       color={theme.colors.eucalyptusGreen}
       large
-      homepage
+      allowContentUnderflow
     >
       <Button wide={false} link white primary to="/events/">
         This year's event
       </Button>
     </BannerImage>
-
-    <Container>
-      <FuturedEventsContainer>
-        <EventsBackgroundLeft>
-          <img alt="backgroundEventsLeft" src={eventsBgLeft} />
-        </EventsBackgroundLeft>
-        <EventsBackgroundRight>
-          <img alt="backgroundEvents" src={eventsBgRight} />
-        </EventsBackgroundRight>
-        <FuturedEventsHeader>
-          <FuturedEventsTitle>
-            <h2>Featured events</h2>
-            <p>View events from across the LGBT+ community.</p>
-          </FuturedEventsTitle>
-          <Button wide={false} link to="/events/">
-            View all events
-          </Button>
-        </FuturedEventsHeader>
-        <EventCards />
-        <ButtonMobile>
-          <Button
-            isTabletHidden
-            secondary
-            small
-            wide={false}
-            link
-            to="/events/"
-          >
-            View all events
-          </Button>
-        </ButtonMobile>
-      </FuturedEventsContainer>
-    </Container>
+    <StyledContainer>
+      <StyledRow>
+        <StyledColumn width={1}>
+          <FeaturedEventsContainer>
+            <EventsBackgroundLeft>
+              <img alt="backgroundEventsLeft" src={eventsBgLeft} />
+            </EventsBackgroundLeft>
+            <EventsBackgroundRight>
+              <img alt="backgroundEvents" src={eventsBgRight} />
+            </EventsBackgroundRight>
+            <FeaturedEventsHeader>
+              <FeaturedEventsTitle>
+                <h2>Featured events</h2>
+                <p>View events from across the LGBT+ community.</p>
+              </FeaturedEventsTitle>
+              <Button wide={false} link to="/events/">
+                View all events
+              </Button>
+            </FeaturedEventsHeader>
+            <FeaturedEvents />
+            <ButtonMobile>
+              <Button
+                isTabletHidden
+                secondary
+                small
+                wide={false}
+                link
+                to="/events/"
+              >
+                View all events
+              </Button>
+            </ButtonMobile>
+          </FeaturedEventsContainer>
+        </StyledColumn>
+      </StyledRow>
+    </StyledContainer>
     <AnnouncementsContainer />
     <DonateContainer />
     <LatestNewsContainer />

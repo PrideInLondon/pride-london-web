@@ -7,11 +7,6 @@ export const StyledContainer = styled(Container)`
   align-items: center;
   display: flex;
   align-self: stretch;
-  padding-bottom: ${props => (props.homepage ? '17vh' : '0')};
-
-  ${media.tablet`
-    padding-bottom: ${props => (props.homepage ? '35vh' : '0')};
-  `};
 
   ${props =>
     props.imageSrc &&
@@ -26,6 +21,8 @@ export const StyledContainer = styled(Container)`
 
 export const StyledRow = styled(Row)`
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   ${media.tabletMax`
     align-self: flex-end;
@@ -40,26 +37,36 @@ export const StyledWrapper = styled.div`
   background-color: ${props => props.color};
   height: ${props => props.large && '400px'};
 
-  
-    ${props =>
-      props.imageSrc &&
-      props.imageFullWidth &&
-      css`
-        background-image: url(${props.imageSrc});
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-      `}
-
   ${props =>
-    props.allowContentUnderflow &&
+    props.imageSrc &&
+    props.imageFullWidth &&
     css`
-      align-items: flex-start;
-      min-height: 380px;
-      padding-top: 50px;
-      margin-bottom: -75px;
+      background-image: url(${props.imageSrc});
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
     `}
 
+    ${props =>
+      props.allowContentUnderflow &&
+      props.large &&
+      css`
+        ${media.tablet`
+          margin-bottom: -100px;
+          ${StyledRow} {
+            align-self: flex-start;
+          }
+        `};
+
+        ${media.desktop`
+          margin-bottom: -250px;
+        `};
+
+        ${media.desktopHD`
+          margin-bottom: -300px;
+        `};
+      `}
+  
 
   ${media.mobile`
     height: ${props => props.large && '400px'};
