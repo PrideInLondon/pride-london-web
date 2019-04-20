@@ -6,6 +6,7 @@ import theme from '../theme/theme'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
 import StyledHR from '../components/horizontalRule'
+import background from '../theme/assets/images/banners/blog/bg.svg'
 
 const mapEntries = news => {
   if (!news.edges || !Array.isArray(news.edges)) return []
@@ -19,6 +20,7 @@ const Blog = ({ data: { articles, categories, views } }) => {
     category: mappedCategories.find(cat => cat.title == art.category),
   }))
   const mappedViews = mapEntries(views)
+  console.log(mappedViews)
   return (
     <Fragment>
       <BannerImage
@@ -26,8 +28,9 @@ const Blog = ({ data: { articles, categories, views } }) => {
         subtitleText="Find out what we're talking about in the Pride in London Community"
         altText="The Voice of Pride in London"
         color={theme.colors.beachBlue}
+        imageSrc={background}
+        imageFullWidth
         large
-        allowContentUnderflow
       />
       <ViewsContainer views={mappedViews} />
       <StyledHR />
