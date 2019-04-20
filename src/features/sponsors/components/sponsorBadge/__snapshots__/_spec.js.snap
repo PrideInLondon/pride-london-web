@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SponsorBadge/> renders the component <SponsorBadge /> 1`] = `
-<sponsorBadge__Badge
+<styles__Badge
   href="https://sponsor1.com"
   level="Headline"
   rel="noopener noreferrer"
   target="_blank"
 >
-  <sponsorBadge__BadgeImage
+  <styles__BadgeImage
     alt="Sponsor One"
     level="Headline"
     src="/logo1"
   />
-</sponsorBadge__Badge>
+</styles__Badge>
 `;
