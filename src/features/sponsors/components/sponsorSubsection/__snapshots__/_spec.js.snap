@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SponsorSubsection/> Should render and match snapshot 1`] = `
+exports[`<SponsorSubsection/> renders the component <SponsorSubsection /> 1`] = `
 <Fragment>
   <sponsorSubsection__TitleWrapper>
     <SponsorStar
