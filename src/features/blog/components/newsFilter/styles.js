@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import tinycolor from 'tinycolor2'
+import { hideVisually } from 'polished'
 import theme from '../../../../theme/theme'
 
 export const getMostReadable = color =>
@@ -11,7 +12,7 @@ export const getMostReadable = color =>
     })
     .toHexString()
 
-export const FilterTextContainer = styled.p`
+export const FilterLabel = styled.label`
   align-items: center;
   border: 2px solid;
   background-color: ${props =>
@@ -22,11 +23,11 @@ export const FilterTextContainer = styled.p`
     props.isOutline ? theme.colors.black : getMostReadable(props.textColor)};
   cursor: pointer;
   display: flex;
-  font-family: Poppins;
-  font-size: 12px;
+  font-family: ${theme.fonts.title};
+  font-size: 1rem;
   height: ${props => (props.isButton ? '32px' : '23px')};
   justify-content: center;
-  padding: ${props => (props.isButton ? '0 5px' : '0 2px')};
+  padding: ${props => (props.isButton ? '0 10px' : '0 2px')};
   margin-right: 10px;
   margin-bottom: 0;
   white-space: nowrap;
@@ -37,4 +38,8 @@ export const FilterText = styled.span``
 export const FilterIcon = styled.img`
   margin-right: 3px;
   height: 11px;
+`
+
+export const FilterRadio = styled.input.attrs({ type: 'radio' })`
+  ${hideVisually()};
 `

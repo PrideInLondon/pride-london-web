@@ -1,18 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FilterTextContainer, FilterText, FilterIcon } from './styles'
+import { FilterLabel, FilterText, FilterIcon, FilterRadio } from './styles'
 
 const NewsFilter = ({ filterType, isOutline, handleClick, isButton, icon }) => {
   return (
-    <FilterTextContainer
+    <FilterLabel
       onClick={() => handleClick(filterType)}
       backgroundColor={filterType.hexColour}
       isOutline={isButton ? isOutline : false}
       isButton={isButton}
+      for={filterType.title}
+      tabindex="0"
     >
       {icon && <FilterIcon src={icon} alt="icon" />}
       <FilterText>{filterType.title}</FilterText>
-    </FilterTextContainer>
+      <FilterRadio
+        type="radio"
+        value={filterType.title}
+        id={filterType.title}
+        name="newsFilter"
+      />
+    </FilterLabel>
   )
 }
 

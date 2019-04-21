@@ -1,14 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsFilter renders with default values 1`] = `
-<styles__FilterTextContainer
+<styles__FilterLabel
   backgroundColor="#000000"
+  for="Mock Filter"
   isButton={false}
   isOutline={false}
   onClick={[Function]}
+  tabindex="0"
 >
   <styles__FilterText>
     Mock Filter
   </styles__FilterText>
-</styles__FilterTextContainer>
+  <styles__FilterRadio
+    id="Mock Filter"
+    name="newsFilter"
+    type="radio"
+    value="Mock Filter"
+  />
+</styles__FilterLabel>
 `;
