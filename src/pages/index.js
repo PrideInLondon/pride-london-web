@@ -126,6 +126,12 @@ const StyledColumn = styled(Column)`
   `};
 `
 
+const BannerButton = styled(Button)`
+  ${media.tabletMax`
+      margin-bottom: 20px;
+  `};
+`
+
 const Home = () => (
   <Fragment>
     <BannerImage
@@ -139,9 +145,9 @@ const Home = () => (
       large
       allowContentUnderflow
     >
-      <Button wide={false} link white primary to="/events/">
+      <BannerButton wide={false} link white primary to="/events/">
         This year's event
-      </Button>
+      </BannerButton>
     </BannerImage>
     <StyledContainer>
       <StyledRow>

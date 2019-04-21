@@ -21,8 +21,11 @@ export const StyledContainer = styled(Container)`
 
 export const StyledRow = styled(Row)`
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+
+  ${media.tablet`
+    padding-top: 50px;
+    padding-bottom: 50px;
+  `};
 
   ${media.tabletMax`
     align-self: flex-end;
