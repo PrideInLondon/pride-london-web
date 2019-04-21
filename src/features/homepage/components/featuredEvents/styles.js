@@ -14,6 +14,28 @@ export const FeaturedEventContent = styled.div`
     padding: 0 6px;
   }
 
+  .slick-track {
+    display: flex;
+
+    .slick-slide {
+      display: flex;
+      height: auto;
+
+      & > div {
+        height: 100%;
+        width: 100%;
+
+        & > div {
+          height: 100%;
+
+          & > a {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
   ${media.tablet`
     .slick-list {
       overflow: hidden;

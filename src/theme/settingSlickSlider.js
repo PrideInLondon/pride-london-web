@@ -3,19 +3,19 @@ import theme from './theme'
 export const settings = {
   speed: 500,
   slidesToShow: 3,
-  slidesToScroll: 3,
+  slidesToScroll: 1,
   infinite: true,
   arrows: true,
   responsive: [
     {
-      breakpoint: theme.breakpoints[2],
+      breakpoint: theme.breakpoints[2] - 1,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
       },
     },
     {
-      breakpoint: theme.breakpoints[1],
+      breakpoint: theme.breakpoints[1] - 1,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
