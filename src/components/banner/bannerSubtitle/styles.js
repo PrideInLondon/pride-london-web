@@ -7,14 +7,16 @@ export const BannerSubtitle = styled.h2`
   font-size: 1rem;
   display: inline;
   background-color: ${theme.colors.indigo};
-  line-height: 2;
-  box-shadow: 5px 0 0 5px ${theme.colors.indigo},
-    -5px 0 0 5px ${theme.colors.indigo};
+  line-height: 1.87;
+  box-shadow: 7px 0 0 3px ${theme.colors.indigo},
+    -7px 0 0 3px ${theme.colors.indigo};
   box-decoration-break: clone;
 
   ${media.tablet`  
     font-size: 1.5rem;
     line-height: 1.8;
+    box-shadow: 5px 0 0 5px ${theme.colors.indigo},
+    -5px 0 0 5px ${theme.colors.indigo};
   `};
 `
 

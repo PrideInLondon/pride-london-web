@@ -8,18 +8,20 @@ export const BannerTitleWrapper = styled.div`
 `
 
 export const BannerTitle = styled.h1`
-  margin: 0;
   display: inline;
-  box-shadow: 5px 0 0 5px ${theme.colors.white},
-    -5px 0 0 5px ${theme.colors.white};
+  box-shadow: 8px 0 0 2px ${theme.colors.white},
+    -8px 0 0 2px ${theme.colors.white};
   box-decoration-break: clone;
-  background-color: white;
+  background-color: ${theme.colors.white};
   color: ${theme.colors.indigo};
   font-size: 1.75rem;
-  line-height: 1.6;
+  line-height: 1.57;
 
   ${media.tablet`
     font-size: 3.5rem;
     max-width: 740px;
+    line-height: 1.6;
+    box-shadow: 5px 0 0 5px ${theme.colors.white},
+    -5px 0 0 5px ${theme.colors.white};
   `};
 `

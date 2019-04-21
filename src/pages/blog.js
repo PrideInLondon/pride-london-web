@@ -13,6 +13,7 @@ const mapEntries = news => {
 }
 
 const Blog = ({ data: { articles, categories, views } }) => {
+  console.log(categories)
   const mappedCategories = mapEntries(categories)
   const mappedArticles = mapEntries(articles).map(art => ({
     ...art,
