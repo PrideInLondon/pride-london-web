@@ -109,6 +109,18 @@ const EventsBackgroundRight = styled.div`
 `
 
 const StyledContainer = styled(Container)`
+  ${media.tablet`
+    margin-top: -100px;
+  `};
+
+  ${media.desktop`
+    margin-top: -250px;
+  `};
+
+  ${media.desktopHD`
+    margin-top: -320px;
+  `};
+
   ${media.tabletMax`
       margin: 0;
   `};
