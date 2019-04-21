@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import BannerImage from '../components/banner/bannerImage'
-import theme from '../theme/theme'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
 import StyledHR from '../components/horizontalRule'
@@ -22,13 +21,13 @@ const Blog = ({ data: { articles, views } }) => {
     category: articleCategories.find(cat => cat.title == art.category),
   }))
   const mappedViews = mapEntries(views)
+  console.log(mappedViews)
   return (
     <Fragment>
       <BannerImage
         titleText="The Voice of Pride in London"
         subtitleText="Find out what we're talking about in the Pride in London Community"
         altText="The Voice of Pride in London"
-        color={theme.colors.beachBlue}
         imageSrc={background}
         imageFullWidth
         large
