@@ -9,11 +9,6 @@ export const FeaturedEventContent = styled.div`
     overflow: visible;
   }
 
-  .slick-slide {
-    width: 85vw;
-    padding: 0 6px;
-  }
-
   .slick-track {
     display: flex;
 
@@ -42,6 +37,12 @@ export const FeaturedEventContent = styled.div`
     }
   `};
 
+  ${media.tabletMax`
+    .slick-list {
+      padding-left: 10px !important;
+    }
+  `};
+
   .slick-prev {
     width: 60px;
     height: 60px;
@@ -49,7 +50,7 @@ export const FeaturedEventContent = styled.div`
     background-color: ${theme.colors.white};
     position: absolute;
     top: 50%;
-    left: -74px;
+    left: -70px;
     background: url(${iconChevronLeft}) ${theme.colors.white} 50% 50% no-repeat;
     transform: translate(0, -50%);
 
@@ -71,7 +72,7 @@ export const FeaturedEventContent = styled.div`
     background-color: ${theme.colors.white};
     position: absolute;
     top: 50%;
-    right: -74px;
+    right: -70px;
     background: url(${iconChevronRight}) ${theme.colors.white} 50% 50% no-repeat;
     transform: translate(0, -50%);
 

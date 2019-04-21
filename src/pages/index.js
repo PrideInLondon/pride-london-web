@@ -23,7 +23,7 @@ const FeaturedEventsContainer = styled.div`
   margin: 0 auto;
 
   ${media.tablet`
-    padding: 60px 107px;
+    padding: 60px 90px;
   `};
 `
 
@@ -49,7 +49,7 @@ const FeaturedEventsHeader = styled.div`
 `
 
 const ButtonMobile = styled.div`
-  padding: 20px 10px 10px;
+  padding: 20px 20px 10px 20px;
   display: block;
 
   ${media.tablet`

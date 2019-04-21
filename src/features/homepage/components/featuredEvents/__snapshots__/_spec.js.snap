@@ -10,7 +10,7 @@ exports[`Featured Event Content renders with default values 1`] = `
         "componentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
         "isStatic": true,
         "rules": Array [
-          ".slick-list{overflow:visible;}.slick-slide{width:85vw;padding:0 6px;}",
+          ".slick-list{overflow:visible;}.slick-track{display:flex;.slick-slide{display:flex;height:auto;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
           "@media (min-width:",
           "768",
           "px){",
@@ -20,9 +20,19 @@ exports[`Featured Event Content renders with default values 1`] = `
     }
   ",
           ";}",
+          ";",
+          "@media (max-width:",
+          "767",
+          "px){",
+          "
+    .slick-list {
+      padding-left: 10px !important;
+    }
+  ",
+          ";}",
           ";.slick-prev{width:60px;height:60px;border-radius:4px;background-color:",
           "#FFFFFF",
-          ";position:absolute;top:50%;left:-74px;background:url(",
+          ";position:absolute;top:50%;left:-70px;background:url(",
           ") ",
           "#FFFFFF",
           " 50% 50% no-repeat;transform:translate(0,-50%);&:before{content:none;}&:hover,&:focus{background:url(",
@@ -30,7 +40,7 @@ exports[`Featured Event Content renders with default values 1`] = `
           "#FFFFFF",
           " 50% 50% no-repeat;}}.slick-next{width:60px;height:60px;border-radius:4px;background-color:",
           "#FFFFFF",
-          ";position:absolute;top:50%;right:-74px;background:url(",
+          ";position:absolute;top:50%;right:-70px;background:url(",
           ") ",
           "#FFFFFF",
           " 50% 50% no-repeat;transform:translate(0,-50%);&:before{content:none;}&:hover,&:focus{background:url(",

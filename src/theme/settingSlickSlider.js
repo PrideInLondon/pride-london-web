@@ -8,7 +8,7 @@ export const settings = {
   arrows: true,
   responsive: [
     {
-      breakpoint: theme.breakpoints[2] - 1,
+      breakpoint: 1279,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
