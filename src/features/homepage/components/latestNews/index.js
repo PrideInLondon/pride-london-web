@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Bacground, LatestNewsCardContainer, NewsCard } from './styles'
+import { Background, LatestNewsCardContainer, NewsCard } from './styles'
 
 const LatestNews = ({
   datePublished,
@@ -10,7 +10,7 @@ const LatestNews = ({
   title,
   headerImage,
 }) => (
-  <Bacground backgroundImage={headerImage.file.url}>
+  <Background backgroundImage={headerImage.file.url}>
     <LatestNewsCardContainer>
       <NewsCard
         category={category}
@@ -19,7 +19,7 @@ const LatestNews = ({
         readLength={readLength}
       />
     </LatestNewsCardContainer>
-  </Bacground>
+  </Background>
 )
 
 LatestNews.propTypes = {

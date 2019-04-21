@@ -11,8 +11,9 @@ import {
   getDuration,
   sanitizeDates,
 } from '../../features/events/helpers/index'
-import { itemsToLoad, dateFormat } from '../../constants'
+import constants from '../../constants'
 
+const { itemsToLoad, dateFormat } = constants
 const AppContext = React.createContext()
 const { Consumer } = AppContext
 

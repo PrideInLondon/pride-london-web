@@ -1,3 +1,5 @@
+import theme from '../theme/theme'
+
 const constants = {
   accessibilityOptions: [
     'Step free access',
@@ -35,6 +37,37 @@ const constants = {
   },
   itemsToLoad: 24,
   dateFormat: 'DD/MM/YYYY',
+  articleCategories: [
+    {
+      title: 'All Articles',
+      hexColour: theme.colors.yellow,
+    },
+    {
+      title: 'Events',
+      hexColour: theme.colors.tomato,
+    },
+    {
+      title: 'Fundraising',
+      hexColour: theme.colors.pink,
+    },
+    {
+      title: 'General',
+      hexColour: theme.colors.greyBlue,
+    },
+    {
+      title: 'Partnerships',
+      hexColour: theme.colors.bondiBlue,
+    },
+    {
+      title: 'Research',
+      hexColour: theme.colors.eucalyptusGreen,
+    },
+
+    {
+      title: 'Views',
+      hexColour: theme.colors.lemonGreen,
+    },
+  ],
 }
 
-module.exports = constants
+export default constants
