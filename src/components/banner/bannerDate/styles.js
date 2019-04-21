@@ -9,14 +9,14 @@ export const BannerDate = styled.p`
   font-weight: 600;
   display: inline;
   background-color: ${theme.colors.pink};
-  line-height: 2.6;
+  line-height: 2;
   box-shadow: 5px 0 0 5px ${theme.colors.pink},
     -5px 0 0 5px ${theme.colors.pink};
   box-decoration-break: clone;
 
   ${media.tablet`  
     font-size: 1.111rem;
-    line-height: 2;
+
   `};
 `
 

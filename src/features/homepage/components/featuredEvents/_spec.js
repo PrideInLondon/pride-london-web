@@ -1,11 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { FeaturedEventContent } from './styles'
-import EventCards from '.'
+import FeaturedEvents from '.'
 
-describe(EventCards.name, () => {
+describe(FeaturedEvents.name, () => {
   it('renders with default values', () => {
-    const wrapper = shallow(<EventCards />)
+    const wrapper = shallow(<FeaturedEvents />)
     expect(wrapper).toMatchSnapshot()
   })
 })
