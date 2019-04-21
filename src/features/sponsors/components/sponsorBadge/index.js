@@ -1,72 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
 import constants from '../../../../constants'
-import { media } from '../../../../theme/media'
-import theme from '../../../../theme/theme'
-
-const isLargeBadge = level =>
-  level === constants.sponsorLevels.headline ||
-  level === constants.sponsorLevels.gold
-
-const Badge = styled.a`
-  border: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: ${theme.colors.lightGrey};
-  margin: 0 10px 10px 0;
-  padding: 10px;
-  ${media.tablet`
-    margin: 0 30px 30px 0;
-  `};
-  ${({ level }) =>
-    isLargeBadge(level)
-      ? css`
-          height: 97px;
-          width: calc(50% - 10px);
-          ${media.tablet`
-            height: 175px;
-            width: 293px;
-          `};
-        `
-      : css`
-          height: 110px;
-          width: calc(33.3333% - 10px);
-          ${media.tablet`
-            width: 185px;
-          `};
-        `};
-`
-
-const BadgeImage = styled.img`
-  ${({ level }) =>
-    isLargeBadge(level)
-      ? css`
-          max-height: 80px;
-          max-width: 122px;
-          ${media.tablet`
-            max-height: 84px;
-            max-width: 220px;
-          `};
-        `
-      : css`
-          max-height: 78px;
-          max-width: 83px;
-          ${media.tablet`
-            max-height: 52px;
-            max-width: 95px;
-          `};
-        `};
-`
-
-const NamePlaceholder = styled.h3`
-  color: #9b9b9b;
-  display: inline-block;
-  margin: 0;
-  padding: 15px;
-  text-align: center;
-`
+import { Badge, BadgeImage, NamePlaceholder } from './styles'
 
 const SponsorBadge = ({ logo, name, url, level }) => (
   <Badge level={level} href={url} rel="noopener noreferrer" target="_blank">

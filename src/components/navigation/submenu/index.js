@@ -1,9 +1,9 @@
 import React, { useRef, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
 import shortid from 'shortid'
-import theme from '../../theme/theme'
-import { Container } from '../grid'
-import { checkBreakpoint } from '../../utilities'
+import theme from '../../../theme/theme'
+import { Container } from '../../grid'
+import { checkBreakpoint } from '../../../utilities'
 import {
   Panel,
   PanelRow,

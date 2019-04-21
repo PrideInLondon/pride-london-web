@@ -13,7 +13,7 @@ export const StyledContainer = styled(Container)`
     !props.imageFullWidth &&
     css`
       background-image: url(${props.imageSrc});
-      background-size: contain;
+      background-size: auto 100%;
       background-repeat: no-repeat;
       background-position: right bottom;
     `}
