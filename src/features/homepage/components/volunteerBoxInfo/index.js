@@ -5,12 +5,7 @@ import { ContentVolunteer, BackgroundVolunteer } from './styles'
 
 const VolunteerBoxInfo = () => (
   <Fragment>
-    <BackgroundVolunteer>
-      {/* <picture>
-        <source media="(min-width: 768px)" srcSet={volunteerBg} />
-        <img src={volunteerBgMobile} alt="Packhelp Logo" />
-      </picture> */}
-    </BackgroundVolunteer>
+    <BackgroundVolunteer />
     <Container>
       <Row>
         <Column>
