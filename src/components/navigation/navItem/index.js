@@ -1,77 +1,10 @@
 import React, { useReducer, useRef, useEffect, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
-import { lighten } from 'polished'
-import { Link } from 'gatsby'
 import Submenu from '../submenu'
-import theme from '../../theme/theme'
-import { media } from '../../theme/media'
-import { checkBreakpoint } from '../../utilities'
-import ChevronDown from '../icons/chevronDown'
-
-const MenuItem = styled.li`
-  ${media.nav`
-    height: auto;
-    padding: 0;
-    background-color: ${props =>
-      props.isOpen && lighten(0.05, theme.colors.indigo)};
-  `};
-`
-
-const linkStyles = css`
-  font-family: ${theme.fonts.title};
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: ${theme.colors.lightGrey};
-  text-decoration: none;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  padding: 20px 0;
-  border: none;
-
-  ${media.nav`
-    padding: 35px 25px;
-    line-height: 1.8125rem;
-  `};
-`
-
-const MenuLink = styled(Link)`
-  ${linkStyles}
-`
-
-const SubmenuToggle = styled.a`
-  ${linkStyles}
-  cursor: default;
-
-  &[aria-expanded='true'] {
-    svg {
-      transform: rotate(180deg);
-    }
-  }
-
-  ${media.nav`
-    svg {
-        display: none;
-    }
-  `};
-
-  ${media.navMax`
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    justify-content: space-between;
-    span {
-        margin-right: 20px;
-    }
-  `};
-
-  svg {
-    path {
-      fill: ${theme.colors.eucalyptusGreen};
-    }
-  }
-`
+import theme from '../../../theme/theme'
+import { checkBreakpoint } from '../../../utilities'
+import ChevronDown from '../../icons/chevronDown'
+import { MenuLink, SubmenuToggle, MenuItem } from './styles'
 
 function reducer(state, action) {
   switch (action.type) {
@@ -120,6 +53,7 @@ function useOnClickOutside(ref, handler) {
 const NavItem = props => {
   const {
     children,
+    setNavOpen,
     item: { submenu = false, title, url, desc, id },
   } = props
 
@@ -132,14 +66,10 @@ const NavItem = props => {
   return (
     <MenuItem
       onMouseEnter={() =>
-        submenu &&
-        checkBreakpoint(theme.navBreakpoint) &&
-        dispatch({ type: 'open' })
+        checkBreakpoint(theme.navBreakpoint) && dispatch({ type: 'open' })
       }
       onMouseLeave={() =>
-        submenu &&
-        checkBreakpoint(theme.navBreakpoint) &&
-        dispatch({ type: 'close' })
+        checkBreakpoint(theme.navBreakpoint) && dispatch({ type: 'close' })
       }
       isOpen={isOpen}
       ref={ref}
@@ -161,10 +91,21 @@ const NavItem = props => {
             <span>{title}</span>
             <ChevronDown />
           </SubmenuToggle>
-          <Submenu item={{ submenu, title, url, desc, id }} isOpen={isOpen} />
+          <Submenu
+            item={{ submenu, title, url, desc, id }}
+            isOpen={isOpen}
+            setNavOpen={setNavOpen}
+            setNavItemOpen={dispatch}
+          />
         </Fragment>
       ) : (
-        <MenuLink to={url} itemProp="url">
+        <MenuLink
+          to={url}
+          itemProp="url"
+          onClick={() =>
+            !checkBreakpoint(theme.navBreakpoint) && setNavOpen(false)
+          }
+        >
           <span itemProp="name">{title}</span>
         </MenuLink>
       )}
@@ -174,6 +115,7 @@ const NavItem = props => {
 
 NavItem.propTypes = {
   children: PropTypes.node,
+  setNavOpen: PropTypes.func,
   item: PropTypes.shape({
     title: PropTypes.string,
     url: PropTypes.string,
@@ -185,6 +127,7 @@ NavItem.propTypes = {
 
 NavItem.defaultProps = {
   children: null,
+  setNavOpen: () => {},
   item: {},
 }
 

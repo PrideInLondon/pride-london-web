@@ -113,14 +113,14 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             #prideinlondon
           </styles__HashTag>
           <styles__HashTag
-            href="https://twitter.com/intent/tweet?button_hashtag=diversityFTW"
+            href="https://twitter.com/intent/tweet?button_hashtag=pridejubilee"
             rel="noopener noreferrer"
             target="_blank"
           >
-            #diversityFTW
+            #pridejubilee
           </styles__HashTag>
         </styles__HashTags>
-        <styles__EventsCTAWrapper
+        <styles__SubscribeWrapper
           width={
             Array [
               1,
@@ -129,12 +129,14 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             ]
           }
         >
-          <styles__EventsCTALink
-            to="/events"
+          <styles__SubscribeLink
+            href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            Never miss an event
-          </styles__EventsCTALink>
-        </styles__EventsCTAWrapper>
+            Subscribe for Pride updates
+          </styles__SubscribeLink>
+        </styles__SubscribeWrapper>
       </styles__SocialSection>
       <styles__SponsorsSection
         width={1}

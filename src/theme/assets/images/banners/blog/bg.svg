@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="590" viewBox="0 0 1440 590">
+    <defs>
+        <path id="a" d="M0 0h1440v590H0z"/>
+        <path id="c" d="M584.59 1581.25L1769.2 558.042l25.039-451.533z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#FF5B44" xlink:href="#a"/>
+        <g mask="url(#b)">
+            <path fill="#2D2F7F" d="M0-140h1440v800H0z"/>
+            <g transform="translate(-125.087 -515.893)">
+                <mask id="d" fill="#fff">
+                    <use xlink:href="#c"/>
+                </mask>
+                <use fill="#FFD95E" xlink:href="#c"/>
+                <path fill="#C8D751" d="M710.288 740.94l-25.635 46.595h1130.985l6-188.439z" mask="url(#d)" transform="rotate(12 1253.146 693.316)"/>
+                <path fill="#2C77E5" d="M1251.392 909.424v403.474l1021.577 153.65-77.835-153.65z"/>
+                <path fill="#FF5B44" d="M132.987 0L.355 790.625l580.51 790.625L1990.86 0z"/>
+            </g>
+            <path fill="#660C63" fill-opacity=".09" d="M127.088-619.464l1747.214 150.388-1432.598 1496.04z" style="mix-blend-mode:multiply"/>
+        </g>
+    </g>
+</svg>

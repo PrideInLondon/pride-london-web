@@ -10,7 +10,6 @@ exports[`<BannerImage /> renders the component <BannerImage /> 1`] = `
   role="banner"
 >
   <styles__StyledContainer
-    homepage={false}
     imageFullWidth={false}
     imageSrc=""
     mx="auto"
@@ -37,7 +36,6 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
   role="banner"
 >
   <styles__StyledContainer
-    homepage={false}
     imageFullWidth={false}
     imageSrc=""
     mx="auto"
@@ -66,7 +64,6 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
   role="banner"
 >
   <styles__StyledContainer
-    homepage={false}
     imageFullWidth={false}
     imageSrc=""
     mx="auto"

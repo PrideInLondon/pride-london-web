@@ -13,6 +13,9 @@ html {
 
 html.no-scroll {
   position: fixed;
+
+  /* Width 100% required as slick carousel breaks inside fixed positioned container */
+  width: 100%;
 }
 
 * {
@@ -25,7 +28,6 @@ body {
   color: #000000;
   font-size: 1.125rem;
   line-height: 1.25;
-  background-color: #efefef;
   overflow-x: hidden;
 }
 

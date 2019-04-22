@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GenericContent/> renders with default values 1`] = `""`;
+
+exports[`render methods for Generic Content renders a Figure component for images 1`] = `
+<styles__StyledFigure>
+  <img
+    alt="Image description"
+    src="src"
+  />
+  <figcaption>
+    Image description
+  </figcaption>
+</styles__StyledFigure>
+`;
+
+exports[`render methods for Generic Content renders a button component if the id is button 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "renderMethods__StyledButton-sc-1003i2d-0",
+        "isStatic": true,
+        "rules": Array [
+          "margin-bottom:1.25em;",
+        ],
+      },
+      "displayName": "renderMethods__StyledButton",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "renderMethods__StyledButton-sc-1003i2d-0",
+      "target": [Function],
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+      Symbol(Symbol.hasInstance): [Function],
+    }
+  }
+  forwardedRef={null}
+  link={true}
+  primary={true}
+  to="https://prideinlondon.org/who-we-are"
+>
+  Button primary type
+</StyledComponent>
+`;
+
+exports[`render methods for Generic Content renders a video component if the id is video 1`] = `
+<styles__VideoContainer>
+  <iframe
+    allowFullScreen={true}
+    frameBorder="0"
+    src="https://www.youtube.com/embed/7ge36or-nz4"
+  />
+</styles__VideoContainer>
+`;

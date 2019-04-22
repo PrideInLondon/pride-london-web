@@ -22,8 +22,8 @@ import {
   SponsorsCTAWrapper,
   SponsorsContainer,
   SponsorImgWrapper,
-  EventsCTAWrapper,
-  EventsCTALink,
+  SubscribeWrapper,
+  SubscribeLink,
   LegalSection,
   LegalStrapline,
   LegalList,
@@ -120,16 +120,22 @@ export const Footer = ({ data }) => {
                 #prideinlondon
               </HashTag>
               <HashTag
-                href="https://twitter.com/intent/tweet?button_hashtag=diversityFTW"
+                href="https://twitter.com/intent/tweet?button_hashtag=pridejubilee"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                #diversityFTW
+                #pridejubilee
               </HashTag>
             </HashTags>
-            <EventsCTAWrapper width={[1, 1, 0.3]}>
-              <EventsCTALink to="/events">Never miss an event</EventsCTALink>
-            </EventsCTAWrapper>
+            <SubscribeWrapper width={[1, 1, 0.3]}>
+              <SubscribeLink
+                href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Subscribe for Pride updates
+              </SubscribeLink>
+            </SubscribeWrapper>
           </SocialSection>
           <SponsorsSection width={1}>
             <SponsorsHeading>Our amazing partners</SponsorsHeading>

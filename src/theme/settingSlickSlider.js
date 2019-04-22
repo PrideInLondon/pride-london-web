@@ -1,25 +1,26 @@
+import theme from './theme'
+
 export const settings = {
-  infinite: true,
   speed: 500,
   slidesToShow: 3,
-  slidesToScroll: 3,
+  slidesToScroll: 1,
+  infinite: true,
+  arrows: true,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1279,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: theme.breakpoints[1] - 1,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
-        arrows: false,
-        infinite: false,
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: true,
       },
     },
     {
@@ -28,8 +29,7 @@ export const settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        infinite: false,
-        variableWidth: true,
+        centerMode: true,
       },
     },
   ],

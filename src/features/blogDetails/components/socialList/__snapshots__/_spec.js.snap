@@ -4,8 +4,10 @@ exports[`SocialMediaList renders with default values 1`] = `
 <styles__SocialList>
   <styles__SocialItem>
     <styles__SocialLink
-      aria-label="Link to Twitter page"
-      href="https://twitter.com/PrideInLondon"
+      aria-label="Share on Twitter"
+      href="https://twitter.com/home?status=http://localhost/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <Twitter
         height={24}
@@ -15,8 +17,10 @@ exports[`SocialMediaList renders with default values 1`] = `
   </styles__SocialItem>
   <styles__SocialItem>
     <styles__SocialLink
-      aria-label="Link to Facebook page"
-      href="https://www.facebook.com/pg/LondonLGBTPride"
+      aria-label="Share on Facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u=http://localhost/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <Facebook
         height={30}
@@ -26,8 +30,10 @@ exports[`SocialMediaList renders with default values 1`] = `
   </styles__SocialItem>
   <styles__SocialItem>
     <styles__SocialLink
-      aria-label="Link to LinkedIn page"
-      href="https://www.linkedin.com/company/prideinlondon"
+      aria-label="Share on LinkedIn"
+      href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <Linkedin
         height={30}

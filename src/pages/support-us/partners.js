@@ -34,7 +34,7 @@ const MainSponsorsContainer = styled.div`
     max-width: 646px;
   `};
 `
-const BronzeSponsorsContainer = styled.div`
+const SecondarySponsorsContainer = styled.div`
   ${media.tablet`
     max-width: 860px;
   `};
@@ -105,7 +105,6 @@ const selectSponsors = data =>
 
 const Sponsors = ({ data }) => {
   const sponsors = selectSponsors(data)
-  const date = new Date()
   return (
     <Fragment>
       <BannerImage
@@ -126,7 +125,7 @@ const Sponsors = ({ data }) => {
                 </CTABody>
                 <SponsorButton
                   link
-                  to="mailto:sponsor@prideinlondon.org"
+                  to="mailto:sponsor@prideinlondon.org?subject=I'd%20like%20to%20become%20a%20partner"
                   primary
                 >
                   Email us
@@ -175,7 +174,7 @@ const Sponsors = ({ data }) => {
             </p>
           </IntroContainer>
           <Column>
-            <ListTitle>{`Our main ${date.getFullYear()} partners`}</ListTitle>
+            <ListTitle>Our main 2019 partners</ListTitle>
             <p>
               A huge thank you to our main partners for their continued support.
             </p>
@@ -197,7 +196,9 @@ const Sponsors = ({ data }) => {
                   {renderSponsors(sponsors[constants.sponsorLevels.gold])}
                 </SponsorsSubsection>
               )}
+            </MainSponsorsContainer>
 
+            <SecondarySponsorsContainer>
               {sponsors[constants.sponsorLevels.silver] && (
                 <SponsorsSubsection
                   title="Silver sponsors"
@@ -206,9 +207,7 @@ const Sponsors = ({ data }) => {
                   {renderSponsors(sponsors[constants.sponsorLevels.silver])}
                 </SponsorsSubsection>
               )}
-            </MainSponsorsContainer>
 
-            <BronzeSponsorsContainer>
               {sponsors[constants.sponsorLevels.bronze] && (
                 <SponsorsSubsection
                   title="Bronze sponsors"
@@ -223,7 +222,7 @@ const Sponsors = ({ data }) => {
                   {renderSponsors(sponsors[constants.sponsorLevels.partners])}
                 </SponsorsSubsection>
               )}
-            </BronzeSponsorsContainer>
+            </SecondarySponsorsContainer>
           </Column>
         </Row>
       </MainContainer>

@@ -16,7 +16,6 @@ const BannerImage = ({
   children,
   large,
   allowContentUnderflow,
-  homepage,
 }) => (
   <StyledWrapper
     color={color}
@@ -26,11 +25,7 @@ const BannerImage = ({
     imageFullWidth={imageFullWidth}
     role="banner"
   >
-    <StyledContainer
-      homepage={homepage}
-      imageSrc={imageSrc}
-      imageFullWidth={imageFullWidth}
-    >
+    <StyledContainer imageSrc={imageSrc} imageFullWidth={imageFullWidth}>
       <StyledRow>
         <Column width={1}>
           {date && <BannerDate>{date}</BannerDate>}
