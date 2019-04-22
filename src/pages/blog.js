@@ -48,7 +48,7 @@ Blog.propTypes = {
 export default Blog
 
 export const blogLandingPageQuery = graphql`
-  query allContentfulNews {
+  query articlesQuery {
     articles: allContentfulArticle(filter: { category: { ne: "Views" } }) {
       edges {
         node {
