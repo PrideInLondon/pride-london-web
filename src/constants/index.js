@@ -1,4 +1,4 @@
-import theme from '../theme/theme'
+const theme = require('../theme/theme')
 
 const constants = {
   accessibilityOptions: [
@@ -70,4 +70,4 @@ const constants = {
   ],
 }
 
-export default constants
+module.exports = constants

@@ -6,9 +6,7 @@ import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
 import StyledHR from '../components/horizontalRule'
 import background from '../theme/assets/images/banners/blog/bg.svg'
-import constants from '../constants'
-
-const { articleCategories } = constants
+import { articleCategories } from '../constants'
 
 const mapEntries = news => {
   if (!news.edges || !Array.isArray(news.edges)) return []

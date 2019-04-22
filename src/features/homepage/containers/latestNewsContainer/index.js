@@ -3,10 +3,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Row, FlexColumn } from '../../../../components/grid'
 import LatestNewsHeader from '../../components/latestNews/latestNewsHeader'
 import LatestNews from '../../components/latestNews'
-import constants from '../../../../constants'
+import { articleCategories } from '../../../../constants'
 import { Container, SecondaryNews, NewsCard } from './styles'
-
-const { articleCategories } = constants
 
 export const query = graphql`
   query latestNewsQuery {

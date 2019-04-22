@@ -18,11 +18,9 @@ import {
 } from '../components/grid'
 import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
-import constants from '../constants'
+import { dateFormat } from '../constants'
 import filterIcon from '../theme/assets/images/icon-filters.svg'
 import BannerImg from '../theme/assets/images/banners/events/bg@2x.jpg'
-
-const { dateFormat } = constants
 
 const ColumnTextCenter = styled(Column)`
   text-align: center;
