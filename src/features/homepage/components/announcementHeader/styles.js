@@ -12,7 +12,6 @@ export const Header = styled.div`
   flex-grow: 1;
   flex-direction: column;
   margin: 30px 0 0;
-  padding-left: 5px;
 `
 export const Head = styled.h2`
   margin: 0;

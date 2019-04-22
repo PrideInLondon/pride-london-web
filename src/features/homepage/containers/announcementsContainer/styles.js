@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-// import { media } from '../../../../theme/media'
+import { media } from '../../../../theme/media'
 // import theme from '../../../../theme/theme'
 
 export const AnnouncementsSliderWrapper = styled.div`
@@ -30,4 +30,10 @@ export const AnnouncementsSliderWrapper = styled.div`
       }
     }
   }
+
+  ${media.desktop`
+    .slick-list {
+      margin-left: -15px;
+    }
+  `};
 `
