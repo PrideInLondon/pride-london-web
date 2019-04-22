@@ -8,7 +8,7 @@ const linkStyles = css`
   border-bottom: 2px solid ${theme.colors.eucalyptusGreen};
   text-decoration: none;
   color: ${theme.colors.black};
-  transition: border-color 0.15s linear;
+  transition: color 0.15s linear;
 
   & + .cta-link {
     margin-left: 20px;
