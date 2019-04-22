@@ -9,8 +9,8 @@ const NewsFilter = ({ filterType, isOutline, handleClick, isButton, icon }) => {
       backgroundColor={filterType.hexColour}
       isOutline={isButton ? isOutline : false}
       isButton={isButton}
-      for={filterType.title}
-      tabindex="0"
+      htmlFor={filterType.title}
+      tabIndex="0"
     >
       {icon && <FilterIcon src={icon} alt="icon" />}
       <FilterText>{filterType.title}</FilterText>
@@ -19,6 +19,7 @@ const NewsFilter = ({ filterType, isOutline, handleClick, isButton, icon }) => {
         value={filterType.title}
         id={filterType.title}
         name="newsFilter"
+        tabIndex="-1"
       />
     </FilterLabel>
   )
