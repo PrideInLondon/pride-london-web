@@ -5,12 +5,14 @@ import PropTypes from 'prop-types'
 import PageHeader from '../features/blogDetails/containers/pageHeader'
 import PageContent from '../features/blogDetails/containers/pageContent'
 import PageFooter from '../features/blogDetails/containers/pageFooter'
+import { articleCategories } from '../constants'
 
 const PageWrapper = styled.div`
   position: relative;
   background-color: white;
   margin: 0;
 `
+
 const BlogDetails = ({
   data: {
     contentfulArticle: {
@@ -22,7 +24,6 @@ const BlogDetails = ({
       author,
     },
     otherArticles,
-    categories,
   },
 }) => (
   <PageWrapper>
@@ -31,10 +32,10 @@ const BlogDetails = ({
       article={article}
       title={title}
       datePublished={datePublished}
-      category={categories.edges.find(cat => cat.node.title == category).node}
+      category={articleCategories.find(cat => cat.title == category)}
       author={author}
     />
-    <PageFooter otherArticles={otherArticles} categories={categories} />
+    <PageFooter otherArticles={otherArticles} categories={articleCategories} />
   </PageWrapper>
 )
 
@@ -77,14 +78,6 @@ export const articleDetailsQuery = graphql`
           title
           datePublished
           category
-        }
-      }
-    }
-    categories: allContentfulNewsCategory {
-      edges {
-        node {
-          title
-          hexColour
         }
       }
     }

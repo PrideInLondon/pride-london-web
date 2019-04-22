@@ -8,9 +8,7 @@ describe(OtherArticles.name, () => {
     const wrapper = shallow(
       <OtherArticles
         otherArticles={otherArticlesMock}
-        categories={{
-          edges: [{ node: { title: 'Partners', hexColour: '#eeeeee' } }],
-        }}
+        categories={[{ title: 'Partners', hexColour: '#eeeeee' }]}
       />
     )
     expect(wrapper).toMatchSnapshot()
