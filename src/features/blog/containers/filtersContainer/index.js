@@ -9,7 +9,7 @@ const FilterContainer = ({ handleFilterClick, selectedFilter, categories }) => {
       {categories.map(filterType => {
         return (
           <NewsFilter
-            key={filterType.id}
+            key={filterType.title}
             handleClick={handleFilterClick}
             filterType={filterType}
             isOutline={selectedFilter.title !== filterType.title}

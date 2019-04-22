@@ -2,16 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { NewsCategoryContainer } from './styles'
 
-export const NewsCategory = ({ category, className }) => {
-  return (
-    <NewsCategoryContainer
-      backgroundColor={category.hexColour}
-      className={className}
-    >
-      {category.title}
-    </NewsCategoryContainer>
-  )
-}
+export const NewsCategory = ({ category, className }) => (
+  <NewsCategoryContainer
+    backgroundColor={category.hexColour}
+    className={className}
+  >
+    {category.title}
+  </NewsCategoryContainer>
+)
 
 NewsCategory.propTypes = {
   category: PropTypes.shape({

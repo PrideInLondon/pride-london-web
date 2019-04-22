@@ -8,7 +8,7 @@ const PageFooter = ({ otherArticles, categories }) => (
 
 PageFooter.propTypes = {
   otherArticles: PropTypes.object.isRequired,
-  categories: PropTypes.object.isRequired,
+  categories: PropTypes.array.isRequired,
 }
 
 export default PageFooter

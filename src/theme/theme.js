@@ -34,4 +34,4 @@ const theme = {
   navBreakpoint: 1360,
 }
 
-export default theme
+module.exports = theme

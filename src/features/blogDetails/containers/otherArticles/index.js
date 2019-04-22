@@ -12,7 +12,7 @@ export const ArticleCard = styled(NewsCard)`
 
 const OtherArticles = ({
   otherArticles: { edges: articles = [] },
-  categories: { edges: categories },
+  categories,
 }) => (
   <Container>
     <Row>
@@ -24,7 +24,7 @@ const OtherArticles = ({
       {articles.map(({ node: { id, title, category, datePublished } }) => (
         <FlexColumn key={id} width={[1, 1, 1 / 2, 1 / 3]}>
           <ArticleCard
-            category={categories.find(cat => cat.node.title == category).node}
+            category={categories.find(cat => cat.title == category)}
             title={title}
             datePublished={datePublished}
           />
@@ -51,14 +51,7 @@ OtherArticles.propTypes = {
       })
     ),
   }).isRequired,
-  categories: PropTypes.shape({
-    edges: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        hexColour: PropTypes.string,
-      })
-    ),
-  }).isRequired,
+  categories: PropTypes.array.isRequired,
 }
 
 export default OtherArticles
