@@ -3,7 +3,7 @@ import { default as NewsCardOryg } from '../../../blog/components/newsCard'
 import theme from '../../../../theme/theme'
 
 export const Container = styled.div`
-  background-color ${theme.colors.white};
+  background-color: ${theme.colors.white};
   padding-bottom: 4rem;
 `
 export const SecondaryNews = styled.div`

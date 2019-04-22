@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   margin: 0 -20px 0 -20px;
 
   .submit {
-      background-position: 38% 47% !important;
+    background-position: 38% 47% !important;
   }
 
   ${media.desktop`
@@ -30,9 +30,9 @@ const Wrapper = styled.div`
       background-position: 34% 47% !important;
     }
   `};
-  
+
   span {
-    margin-bottom 20px;
+    margin-bottom: 20px;
   }
 
   button {
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
       width: 18px;
     }
   }
-  
+
   .submit {
     background-size: 20px !important;
   }

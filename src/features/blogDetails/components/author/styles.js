@@ -4,7 +4,7 @@ import theme from '../../../../theme/theme'
 export const AuthorCard = styled.div`
   display: flex;
   align-items: center;
-  maring-top: 30px;
+  margin-top: 30px;
 `
 export const Thumbnail = styled.img`
   width: 70px;

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Slider from 'react-slick'
-import { FlexColumn, Container, Row } from '../../../../components/grid'
+import { FlexColumn, Container, Row, Column } from '../../../../components/grid'
 import { settings } from '../../../../theme/settingSlickSlider'
 import AnnouncementCard from '../../components/announcementCard'
 import { FeaturedEventContent } from '../../../homepage/components/featuredEvents/styles'
@@ -40,7 +40,9 @@ const AnnouncementsContainer = () => (
           <FeaturedEventContent>
             <Container>
               <Row>
-                <AnnouncementHeader />
+                <Column>
+                  <AnnouncementHeader />
+                </Column>
               </Row>
             </Container>
             <Slider {...settings}>
