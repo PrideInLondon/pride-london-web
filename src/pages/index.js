@@ -27,12 +27,6 @@ const FeaturedEventsContainer = styled.div`
   `};
 `
 
-const SectionVolunteer = styled.div`
-  width: 100%;
-  padding-bottom: 50px;
-  display: block;
-`
-
 const FeaturedEventsHeader = styled.div`
   display: flex;
   align-items: flex-start;
@@ -200,11 +194,7 @@ const Home = () => (
     <AnnouncementsContainer />
     <DonateContainer />
     <LatestNewsContainer />
-    <SectionVolunteer>
-      <Container>
-        <VolunteerBoxInfo />
-      </Container>
-    </SectionVolunteer>
+    <VolunteerBoxInfo />
   </Fragment>
 )
 

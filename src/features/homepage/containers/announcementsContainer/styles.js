@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { media } from '../../../../theme/media'
-// import theme from '../../../../theme/theme'
 
 export const AnnouncementsSliderWrapper = styled.div`
   .slick-list {
