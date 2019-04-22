@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import { media } from '../../../../theme/media'
 import theme from '../../../../theme/theme'
 
@@ -45,14 +46,15 @@ export const CardTitle = styled.h2`
   box-shadow: 10px 0 0 ${theme.colors.indigo}, -10px 0 0 ${theme.colors.indigo};
   box-decoration-break: clone;
 
-  a {
-    position: relative;
-    border: none;
-    color: ${theme.colors.white};
-    z-index: 1;
-  }
-
   ${media.tablet`
     font-size: 1.5rem;
   `};
+`
+
+export const CardLink = styled(Link)`
+  position: relative;
+  border: none;
+  color: ${theme.colors.white};
+  z-index: 1;
+  text-decoration: none;
 `

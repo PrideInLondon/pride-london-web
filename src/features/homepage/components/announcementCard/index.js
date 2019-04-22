@@ -5,6 +5,7 @@ import {
   CardTitle,
   CardAnnouncement,
   CardTitleWrapper,
+  CardLink,
 } from './styles'
 
 const AnnouncementCard = ({ image: url = '', title, id }) => {
@@ -13,7 +14,7 @@ const AnnouncementCard = ({ image: url = '', title, id }) => {
       <CardImage style={{ backgroundImage: `url('${url}')` }} />
       <CardTitleWrapper>
         <CardTitle>
-          <a href={`/blog/${id}`}>{title}</a>
+          <CardLink to={`/blog/${id}`}>{title}</CardLink>
         </CardTitle>
       </CardTitleWrapper>
     </CardAnnouncement>

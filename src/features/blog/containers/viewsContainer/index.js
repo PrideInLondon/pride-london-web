@@ -7,18 +7,16 @@ import { Container, CardContainer } from './styles'
 
 const ViewsContainer = ({ views }) => {
   return (
-    <>
-      <Container>
-        <Title theme={theme} isLight isCentered>
-          Views
-        </Title>
-        <CardContainer>
-          {views.map(view => (
-            <ViewsCard key={view.id} {...view} />
-          ))}
-        </CardContainer>
-      </Container>
-    </>
+    <Container>
+      <Title theme={theme} isLight isCentered>
+        Views
+      </Title>
+      <CardContainer>
+        {views.map(view => (
+          <ViewsCard {...view} key={view.id} />
+        ))}
+      </CardContainer>
+    </Container>
   )
 }
 
