@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { NewsCard as NewsCardHomepage } from '../../../homepage/containers/latestNewsContainer/styles'
-export const Bacground = styled.div`
+
+export const Background = styled.div`
   display: flex;
   background-image: url(${props => props.backgroundImage});
   background-size: cover;

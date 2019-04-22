@@ -9,14 +9,12 @@ export const NewsCardHeader = ({
   datePublished,
   readLength,
   className,
-}) => {
-  return (
-    <NewsCardHeaderContainer className={className}>
-      <NewsCategory category={category} />
-      <NewsMetrics datePublished={datePublished} readLength={readLength} />
-    </NewsCardHeaderContainer>
-  )
-}
+}) => (
+  <NewsCardHeaderContainer className={className}>
+    <NewsCategory category={category} />
+    <NewsMetrics datePublished={datePublished} readLength={readLength} />
+  </NewsCardHeaderContainer>
+)
 
 NewsCardHeader.propTypes = {
   category: PropTypes.object.isRequired,

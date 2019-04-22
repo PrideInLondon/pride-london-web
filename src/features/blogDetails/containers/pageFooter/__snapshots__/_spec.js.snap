@@ -2,7 +2,7 @@
 
 exports[`PageFooter renders with default values 1`] = `
 <OtherArticles
-  categories={Object {}}
+  categories={Array []}
   otherArticles={Object {}}
 />
 `;

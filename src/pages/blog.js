@@ -6,17 +6,17 @@ import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
 import StyledHR from '../components/horizontalRule'
 import background from '../theme/assets/images/banners/blog/bg.svg'
+import { articleCategories } from '../constants'
 
 const mapEntries = news => {
   if (!news.edges || !Array.isArray(news.edges)) return []
   return news.edges.map(({ node }) => ({ ...node }))
 }
 
-const Blog = ({ data: { articles, categories, views } }) => {
-  const mappedCategories = mapEntries(categories)
+const Blog = ({ data: { articles, views } }) => {
   const mappedArticles = mapEntries(articles).map(art => ({
     ...art,
-    category: mappedCategories.find(cat => cat.title == art.category),
+    category: articleCategories.find(cat => cat.title == art.category),
   }))
   const mappedViews = mapEntries(views)
   console.log(mappedViews)
@@ -29,11 +29,10 @@ const Blog = ({ data: { articles, categories, views } }) => {
         imageSrc={background}
         imageFullWidth
         large
-        allowContentUnderflow
       />
       <ViewsContainer views={mappedViews} />
       <StyledHR />
-      <NewsContainer articles={mappedArticles} categories={mappedCategories} />
+      <NewsContainer articles={mappedArticles} categories={articleCategories} />
     </Fragment>
   )
 }
@@ -49,17 +48,7 @@ Blog.propTypes = {
 export default Blog
 
 export const blogLandingPageQuery = graphql`
-  query allContentfulNews {
-    categories: allContentfulNewsCategory {
-      edges {
-        node {
-          id
-          title
-          hexColour
-        }
-      }
-    }
-
+  query articlesQuery {
     articles: allContentfulArticle(filter: { category: { ne: "Views" } }) {
       edges {
         node {
