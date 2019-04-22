@@ -11,8 +11,8 @@ exports[`AnnouncementCard renders with default values 1`] = `
   />
   <styles__CardTitleWrapper>
     <styles__CardTitle>
-      <a
-        href="/blog/"
+      <styles__CardLink
+        to="/blog/"
       />
     </styles__CardTitle>
   </styles__CardTitleWrapper>
