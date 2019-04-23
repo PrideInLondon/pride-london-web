@@ -34,4 +34,9 @@ describe('<Button/>', () => {
     expect(wrapper.find('a')).toBeTruthy()
     expect(wrapper.find('GatsbyLink').exists()).toBeFalsy()
   })
+
+  it('renders a button tag if there is no to prop', () => {
+    const wrapper = mount(<Button />)
+    expect(wrapper.find('button')).toBeTruthy()
+  })
 })
