@@ -13,7 +13,7 @@ export const SecondaryNews = styled.div`
 `
 export const NewsCard = styled(NewsCardOryg)`
   background-color: ${theme.colors.lightGrey};
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   min-height: 235px;
   padding: 30px;
