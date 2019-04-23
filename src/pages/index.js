@@ -151,7 +151,7 @@ const Home = () => (
       large
       allowContentUnderflow
     >
-      <BannerButton wide={false} link white primary to="/events/">
+      <BannerButton wide={false} link white primary to="/events/whats-on">
         This year's event
       </BannerButton>
     </BannerImage>
@@ -170,7 +170,7 @@ const Home = () => (
                 <h2>Featured events</h2>
                 <p>View events from across the LGBT+ community.</p>
               </FeaturedEventsTitle>
-              <Button wide={false} link to="/events/">
+              <Button wide={false} link to="/events/whats-on">
                 View all events
               </Button>
             </FeaturedEventsHeader>
