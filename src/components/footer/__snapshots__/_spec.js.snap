@@ -230,7 +230,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           <CTALink
             contact={false}
             external={false}
-            to="/sponsors"
+            to="/support-us/partners"
           >
             View all
           </CTALink>
