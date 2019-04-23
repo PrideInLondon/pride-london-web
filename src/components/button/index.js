@@ -72,35 +72,52 @@ FilteredLink.defaultProps = {
 }
 
 export const Button = props => {
+  const {
+    className,
+    type,
+    primary,
+    onClick,
+    disabled,
+    small,
+    wide,
+    flexwidth,
+    fullmobile,
+    'aria-controls': ariaControls,
+    'aria-expanded': ariaExpanded,
+    white,
+    children,
+    to,
+  } = props
   return (
     <StyledButton
-      className={props.className}
-      type={props.type}
-      primary={props.primary}
-      onClick={props.onClick}
-      disabled={props.disabled}
-      small={props.small}
-      wide={props.wide}
-      flexwidth={props.flexwidth}
-      fullmobile={props.fullmobile}
-      aria-controls={props['aria-controls']}
-      aria-expanded={props['aria-expanded']}
-      white={props.white}
-      {...props.to &&
-        !externalUrl(props.to) && { to: props.to, as: FilteredLink }}
-      {...props.to &&
-        (externalUrl(props.to) || contactUrl(props.to)) && {
-          href: props.to,
+      className={className}
+      type={type}
+      primary={primary}
+      onClick={onClick}
+      disabled={disabled}
+      small={small}
+      wide={wide}
+      flexwidth={flexwidth}
+      fullmobile={fullmobile}
+      aria-controls={ariaControls}
+      aria-expanded={ariaExpanded}
+      white={white}
+      {...to &&
+        !externalUrl(to) &&
+        !contactUrl(to) && { to: to, as: FilteredLink }}
+      {...to &&
+        (externalUrl(to) || contactUrl(to)) && {
+          href: to,
           as: 'a',
         }}
-      {...props.to && !externalUrl(props.to) && { to: props.to }}
-      {...props.to &&
-        externalUrl(props.to) && {
+      {...to && !externalUrl(to) && { to: to }}
+      {...to &&
+        externalUrl(to) && {
           rel: 'noopener noreferrer',
           target: '_blank',
         }}
     >
-      {props.children}
+      {children}
     </StyledButton>
   )
 }

@@ -7,6 +7,8 @@ import CTALink from '../ctaLink'
 const link = {
   text: 'View all',
   url: '/',
+  externalUrl: 'http://google.com',
+  contactUrl: 'mailto:test@test.com',
 }
 
 describe('<CTALink/>', () => {
@@ -31,22 +33,14 @@ describe('<CTALink/>', () => {
   })
 
   it('should render an external link if it has external props', () => {
-    const wrapper = mount(
-      <CTALink to={link.url} external>
-        {link.text}
-      </CTALink>
-    )
+    const wrapper = mount(<CTALink to={link.externalUrl}>{link.text}</CTALink>)
     expect(wrapper.find('GatsbyLink')).toHaveLength(0)
     expect(wrapper.find('a').prop('rel')).toBe('noopener noreferrer')
     expect(wrapper.find('a').prop('target')).toBe('_blank')
   })
 
-  it('should render a normal link without the rel attribute if it has contact props', () => {
-    const wrapper = mount(
-      <CTALink to={link.url} contact>
-        {link.text}
-      </CTALink>
-    )
+  it('should render a normal link without the rel attribute it is a contact link', () => {
+    const wrapper = mount(<CTALink to={link.contactUrl}>{link.text}</CTALink>)
     expect(wrapper.find('GatsbyLink')).toHaveLength(0)
     expect(wrapper.find('a').prop('rel')).toBeFalsy()
     expect(wrapper.find('a').prop('target')).toBeFalsy()
