@@ -1,12 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button matches snapshot 1`] = `
+exports[`<Button/> matches snapshot 1`] = `
 <button__StyledButton
   className=""
   disabled={false}
   flexwidth={false}
   fullmobile={false}
-  href={null}
   onClick={null}
   primary={false}
   small={false}

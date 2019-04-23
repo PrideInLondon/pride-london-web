@@ -199,7 +199,7 @@ export default function EventInfoCard({
       )}
       {(phone || email) && ticketingUrl && <VSpace />}
       {ticketingUrl && (
-        <Button primary link to={ticketingUrl}>
+        <Button primary to={ticketingUrl}>
           Get tickets
         </Button>
       )}

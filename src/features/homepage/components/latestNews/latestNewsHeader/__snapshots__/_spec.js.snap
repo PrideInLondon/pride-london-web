@@ -6,8 +6,6 @@ exports[`LatestNewsHeader renders with default values 1`] = `
     Latest News
   </styles__Title>
   <CTALink
-    contact={false}
-    external={false}
     to="/blog"
   >
     View all news

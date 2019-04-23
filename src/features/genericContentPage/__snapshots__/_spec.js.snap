@@ -39,7 +39,6 @@ exports[`render methods for Generic Content renders a button component if the id
     }
   }
   forwardedRef={null}
-  link={true}
   primary={true}
   to="https://prideinlondon.org/who-we-are"
 >

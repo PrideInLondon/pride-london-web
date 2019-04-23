@@ -29,7 +29,7 @@ const renderButton = node => {
   const primary = fields.buttonPrimary['en-GB']
 
   return (
-    <StyledButton primary={primary} link to={fields.buttonHref['en-GB']}>
+    <StyledButton primary={primary} to={fields.buttonHref['en-GB']}>
       {fields.buttonContent && fields.buttonContent['en-GB']}
     </StyledButton>
   )

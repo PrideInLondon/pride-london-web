@@ -1,8 +1,16 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import Button from './'
 
-describe('Button', () => {
+describe('<Button/>', () => {
+  beforeAll(() => {
+    global.___loader = {
+      enqueue: jest.fn(),
+    }
+  })
+  afterAll(() => {
+    global.___loader.enqueue.mockReset()
+  })
   it('matches snapshot', () => {
     const wrapper = shallow(<Button />)
     expect(wrapper).toMatchSnapshot()
@@ -14,5 +22,21 @@ describe('Button', () => {
     const wrapper = shallow(<Button onClick={handleClick} />)
     wrapper.prop('onClick')()
     expect(counter).toBe(1)
+  })
+
+  it('renders a gatsby link if the to prop is not http', () => {
+    const wrapper = mount(<Button to="/events/whats-on" />)
+    expect(wrapper.find('GatsbyLink').exists()).toBeTruthy()
+  })
+
+  it('renders a normal a tag if the to prop is https', () => {
+    const wrapper = mount(<Button to="https://google.com" />)
+    expect(wrapper.find('a')).toBeTruthy()
+    expect(wrapper.find('GatsbyLink').exists()).toBeFalsy()
+  })
+
+  it('renders a button tag if there is no to prop', () => {
+    const wrapper = mount(<Button />)
+    expect(wrapper.find('button')).toBeTruthy()
   })
 })

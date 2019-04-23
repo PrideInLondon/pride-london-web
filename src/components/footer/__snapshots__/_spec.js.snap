@@ -228,15 +228,12 @@ exports[`<Footer/> should render and match snapshot 1`] = `
         </styles__SponsorsContainer>
         <styles__SponsorsCTAWrapper>
           <CTALink
-            contact={false}
-            external={false}
             to="/support-us/partners"
           >
             View all
           </CTALink>
           <CTALink
             contact={true}
-            external={false}
             to="mailto:sponsor@prideinlondon.org"
           >
             Become a partner

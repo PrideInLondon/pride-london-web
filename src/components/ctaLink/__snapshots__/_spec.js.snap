@@ -2,6 +2,12 @@
 
 exports[`<CTALink/> should render and match snapshot 1`] = `
 <ctaLink__StyledLink
+  as={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    }
+  }
   className="cta-link"
   to="/"
 >
