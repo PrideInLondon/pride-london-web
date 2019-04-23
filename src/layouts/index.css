@@ -131,7 +131,7 @@ a:not([class]):focus {
   h3 {
     font-size: 1.5rem;
     line-height: 1.8125rem;
-    margin: 1.875rem 0;
+    margin: 2.5rem 0 0.9375 0;
   }
 
   h4 {
