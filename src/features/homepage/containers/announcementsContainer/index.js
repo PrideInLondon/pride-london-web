@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Slider from 'react-slick'
-import { FlexColumn, Container, Row } from '../../../../components/grid'
-import { settings } from '../../../../theme/settingSlickSlider'
+import { FlexColumn, Container, Row, Column } from '../../../../components/grid'
 import AnnouncementCard from '../../components/announcementCard'
 import { FeaturedEventContent } from '../../../homepage/components/featuredEvents/styles'
 import AnnouncementHeader from '../../../homepage/components/announcementHeader'
+import { settings } from './slickSettings'
+import { AnnouncementsSliderWrapper } from './styles'
 
 export const query = graphql`
   query announcementsQuery {
@@ -40,27 +41,32 @@ const AnnouncementsContainer = () => (
           <FeaturedEventContent>
             <Container>
               <Row>
-                <AnnouncementHeader />
+                <Column width={1}>
+                  <AnnouncementHeader />
+                  <AnnouncementsSliderWrapper>
+                    <Slider {...settings}>
+                      {announcements.map(announcement => (
+                        <FlexColumn
+                          width={[
+                            1, // 100% between 0px screen width and first breakpoint (375px)
+                            1, // 100% between first breakpoint(375px) and second breakpoint (768px)
+                            1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
+                            1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
+                          ]}
+                          key={announcement.node.id}
+                        >
+                          <AnnouncementCard
+                            image={announcement.node.image.file.url}
+                            title={announcement.node.title}
+                            id={announcement.node.article.id}
+                          />
+                        </FlexColumn>
+                      ))}
+                    </Slider>
+                  </AnnouncementsSliderWrapper>
+                </Column>
               </Row>
             </Container>
-            <Slider {...settings}>
-              {announcements.map(announcement => (
-                <FlexColumn
-                  width={[
-                    1, // 100% between 0px screen width and first breakpoint (375px)
-                    1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-                    1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
-                    1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
-                  ]}
-                  key={announcement.node.id}
-                >
-                  <AnnouncementCard
-                    image={announcement.node.image.file.url}
-                    title={announcement.node.title}
-                  />
-                </FlexColumn>
-              ))}
-            </Slider>
           </FeaturedEventContent>
         </>
       )}

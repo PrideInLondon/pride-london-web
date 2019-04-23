@@ -1,5 +1,7 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import { media } from '../../../../theme/media'
+import theme from '../../../../theme/theme'
 
 export const CardImage = styled.div`
   background-position: 50% 50%;
@@ -13,12 +15,14 @@ export const CardImage = styled.div`
 
 export const CardAnnouncement = styled.div`
   position: relative;
+  display: block;
+  border: none;
 `
 
 export const CardTitleWrapper = styled.div`
   position: block;
   padding: 0;
-  padding-left: 0.37em;
+  padding-left: 10px;
 
   ${media.tablet`
     position:absolute;
@@ -29,34 +33,28 @@ export const CardTitleWrapper = styled.div`
 `
 
 export const CardTitle = styled.h2`
-  background: #2d2f7f;
+  background-color: ${theme.colors.indigo};
   font-size: 20px;
   line-height: 31px;
   margin: 0;
-  padding-right: 0.45em;
   color: #fff;
   display: inline;
   position: relative;
   white-space: pre-wrap;
-  border: 0 solid #2d2f7f;
-  border-width: 0.35em 0; /* 0.25em is roughly equal to one space character. */
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: -0.35em;
-    right: 100%;
-    bottom: -0.35em;
-    width: 0.35em;
-    background: #2d2f7f;
-  }
-
-  span {
-    position: relative;
-    z-index: 1;
-  }
+  border: 0 solid ${theme.colors.indigo};
+  border-width: 0.35em 0;
+  box-shadow: 10px 0 0 ${theme.colors.indigo}, -10px 0 0 ${theme.colors.indigo};
+  box-decoration-break: clone;
 
   ${media.tablet`
-    font-size: 24px;
+    font-size: 1.5rem;
   `};
+`
+
+export const CardLink = styled(Link)`
+  position: relative;
+  border: none;
+  color: ${theme.colors.white};
+  z-index: 1;
+  text-decoration: none;
 `

@@ -152,7 +152,7 @@ export const Footer = ({ data }) => {
               )}
             </SponsorsContainer>
             <SponsorsCTAWrapper>
-              <CTALink to="/sponsors">View all</CTALink>
+              <CTALink to="/support-us/partners">View all</CTALink>
               <CTALink to="mailto:sponsor@prideinlondon.org" contact>
                 Become a partner
               </CTALink>

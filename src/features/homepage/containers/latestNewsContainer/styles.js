@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { default as NewsCardOryg } from '../../../blog/components/newsCard'
 import theme from '../../../../theme/theme'
+import { Container } from '../../../../components/grid'
 
-export const Container = styled.div`
-  background-color ${theme.colors.white};
+export const Wrapper = styled(Container)`
   padding-bottom: 4rem;
 `
 export const SecondaryNews = styled.div`

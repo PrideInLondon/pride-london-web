@@ -5,15 +5,16 @@ import {
   CardTitle,
   CardAnnouncement,
   CardTitleWrapper,
+  CardLink,
 } from './styles'
 
-const AnnouncementCard = ({ image: url = '', title }) => {
+const AnnouncementCard = ({ image: url = '', title, id }) => {
   return (
     <CardAnnouncement>
       <CardImage style={{ backgroundImage: `url('${url}')` }} />
       <CardTitleWrapper>
         <CardTitle>
-          <span>{title}</span>
+          <CardLink to={`/blog/${id}`}>{title}</CardLink>
         </CardTitle>
       </CardTitleWrapper>
     </CardAnnouncement>
@@ -23,11 +24,13 @@ const AnnouncementCard = ({ image: url = '', title }) => {
 AnnouncementCard.propTypes = {
   title: PropTypes.string,
   image: PropTypes.string,
+  id: PropTypes.string,
 }
 
 AnnouncementCard.defaultProps = {
   title: '',
   image: '',
+  id: '',
 }
 
 export default AnnouncementCard

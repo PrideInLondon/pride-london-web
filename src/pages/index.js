@@ -27,12 +27,6 @@ const FeaturedEventsContainer = styled.div`
   `};
 `
 
-const SectionVolunteer = styled.div`
-  width: 100%;
-  padding-bottom: 50px;
-  display: block;
-`
-
 const FeaturedEventsHeader = styled.div`
   display: flex;
   align-items: flex-start;
@@ -157,7 +151,7 @@ const Home = () => (
       large
       allowContentUnderflow
     >
-      <BannerButton wide={false} link white primary to="/events/">
+      <BannerButton wide={false} link white primary to="/events/whats-on">
         This year's event
       </BannerButton>
     </BannerImage>
@@ -176,7 +170,7 @@ const Home = () => (
                 <h2>Featured events</h2>
                 <p>View events from across the LGBT+ community.</p>
               </FeaturedEventsTitle>
-              <Button wide={false} link to="/events/">
+              <Button wide={false} link to="/events/whats-on">
                 View all events
               </Button>
             </FeaturedEventsHeader>
@@ -200,11 +194,7 @@ const Home = () => (
     <AnnouncementsContainer />
     <DonateContainer />
     <LatestNewsContainer />
-    <SectionVolunteer>
-      <Container>
-        <VolunteerBoxInfo />
-      </Container>
-    </SectionVolunteer>
+    <VolunteerBoxInfo />
   </Fragment>
 )
 

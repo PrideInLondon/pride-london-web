@@ -4,7 +4,7 @@ import { Row, FlexColumn } from '../../../../components/grid'
 import LatestNewsHeader from '../../components/latestNews/latestNewsHeader'
 import LatestNews from '../../components/latestNews'
 import { articleCategories } from '../../../../constants'
-import { Container, SecondaryNews, NewsCard } from './styles'
+import { Wrapper, SecondaryNews, NewsCard } from './styles'
 
 export const query = graphql`
   query latestNewsQuery {
@@ -31,9 +31,9 @@ export const query = graphql`
 `
 
 const LatestNewsContainer = () => (
-  <Container>
+  <Wrapper>
     <Row>
-      <FlexColumn width={[1, 1, 1, 1]}>
+      <FlexColumn width={1}>
         <LatestNewsHeader />
       </FlexColumn>
     </Row>
@@ -87,7 +87,7 @@ const LatestNewsContainer = () => (
         }
       />
     </Row>
-  </Container>
+  </Wrapper>
 )
 
 export default LatestNewsContainer

@@ -1,18 +1,28 @@
 import styled from 'styled-components'
 import { media } from '../../../../theme/media'
 import bgFigureVolunter from '../../../../theme/assets/images/volunteer-shapes.svg'
+import volunteerBg from '../../../../theme/assets/images/volunteer-bg.jpg'
+import volunteerBgMobile from '../../../../theme/assets/images/volunteer-bg-mobile.jpg'
 
 export const BackgroundVolunteer = styled.div`
   width: 100%;
+  background-image: url(${volunteerBgMobile});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 270px;
+
+  ${media.tablet`
+    background-image: url(${volunteerBg});
+    height: 400px;
+  `};
 `
 export const ContentVolunteer = styled.div`
   background: url(${bgFigureVolunter}) top right #fc4984 no-repeat;
   padding: 20px 0 40px;
   color: #fff;
-  margin: -20% 20px 0px;
+  margin-top: -20%;
   text-align: center;
-  z-index: 2;
-  position: relative;
   border-radius: 7px;
   background-size: 90% 90%;
 
@@ -36,7 +46,7 @@ export const ContentVolunteer = styled.div`
       max-width: 60%;
       font-size: 22px;
     }
-    margin: -10% 6% 0px 6%;
+    margin-top: -10%;
   `};
 
   h2 {
