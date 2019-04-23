@@ -124,7 +124,6 @@ const Sponsors = ({ data }) => {
                   in supporting Pride in London. We want to hear from you.
                 </CTABody>
                 <SponsorButton
-                  link
                   to="mailto:sponsor@prideinlondon.org?subject=I'd%20like%20to%20become%20a%20partner"
                   primary
                 >

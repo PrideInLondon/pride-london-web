@@ -11,40 +11,35 @@ const StyledButton = styled.button`
   box-sizing: border-box;
   padding: 12px 35px;
   border-radius: 4px;
-  border: ${styleProps =>
-    styleProps.primary ? 'none' : `2px solid ${theme.colors.white}`};
+  border: ${props =>
+    props.primary ? 'none' : `2px solid ${theme.colors.white}`};
   display: inline-block;
   text-align: center;
-  color: ${styleProps =>
-    styleProps.primary ? theme.colors.indigo : theme.colors.white};
-  background-color: ${styleProps =>
-    styleProps.white
+  color: ${props => (props.primary ? theme.colors.indigo : theme.colors.white)};
+  background-color: ${props =>
+    props.white
       ? theme.colors.white
-      : styleProps.primary
+      : props.primary
       ? theme.colors.eucalyptusGreen
       : theme.colors.indigo};
   font-family: ${theme.fonts.title};
   font-weight: 700;
-  font-size: ${styleProps => (styleProps.small ? '0.875rem' : '1.125rem')};
+  font-size: ${props => (props.small ? '0.875rem' : '1.125rem')};
   line-height: 1.388;
-  min-width: ${styleProps => {
-    return styleProps.wide
-      ? !styleProps.flexwidth
-        ? '250px'
-        : 'unset'
-      : '180px'
+  min-width: ${props => {
+    return props.wide ? (!props.flexwidth ? '250px' : 'unset') : '180px'
   }};
-  width: ${styleProps => (styleProps.fullmobile ? '100%' : 'auto')};
+  width: ${props => (props.fullmobile ? '100%' : 'auto')};
   cursor: pointer;
   text-decoration: none;
   text-align: center;
   transition: background-color 0.15s linear;
 
   &:hover {
-    background-color: ${styleProps =>
-      styleProps.white
+    background-color: ${props =>
+      props.white
         ? darken(0.1, theme.colors.white)
-        : styleProps.primary
+        : props.primary
         ? darken(0.1, theme.colors.eucalyptusGreen)
         : darken(0.1, theme.colors.indigo)};
   }
@@ -77,11 +72,10 @@ FilteredLink.defaultProps = {
 }
 
 export const Button = props => {
-  console.log(props)
   return (
     <StyledButton
       className={props.className}
-      type={props.link ? null : props.type}
+      type={props.type}
       primary={props.primary}
       onClick={props.onClick}
       disabled={props.disabled}
@@ -100,6 +94,11 @@ export const Button = props => {
           as: 'a',
         }}
       {...props.to && !externalUrl(props.to) && { to: props.to }}
+      {...props.to &&
+        externalUrl(props.to) && {
+          rel: 'noopener noreferrer',
+          target: '_blank',
+        }}
     >
       {props.children}
     </StyledButton>
@@ -108,7 +107,6 @@ export const Button = props => {
 
 Button.propTypes = {
   className: PropTypes.string,
-  link: PropTypes.bool,
   type: PropTypes.string,
   primary: PropTypes.bool,
   children: PropTypes.node,
