@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import Link from 'gatsby-link'
 import { darken } from 'polished'
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
+import { externalUrl, contactUrl } from '../../utilities/'
 
-const buttonStyles = css`
+const StyledButton = styled.button`
   box-sizing: border-box;
   padding: 12px 35px;
   border-radius: 4px;
@@ -56,24 +58,26 @@ const buttonStyles = css`
       width: auto;
   `};
 `
+// filter props off gatsby link to prevent styled component errors
+const FilteredLink = ({ className, to, children }) => (
+  <Link className={className} to={to}>
+    {children}
+  </Link>
+)
+
+FilteredLink.propTypes = {
+  className: PropTypes.string,
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node,
+}
+
+FilteredLink.defaultProps = {
+  className: null,
+  children: null,
+}
+
 export const Button = props => {
-  let StyledButton
-  const external = /^(http|https|ftp)/
-
-  if (props.link && props.to && !external.test(props.to)) {
-    StyledButton = styled(Link)`
-      ${buttonStyles}
-    `
-  } else if (props.link) {
-    StyledButton = styled.a`
-      ${buttonStyles}
-    `
-  } else {
-    StyledButton = styled.button`
-      ${buttonStyles}
-    `
-  }
-
+  console.log(props)
   return (
     <StyledButton
       className={props.className}
@@ -81,7 +85,6 @@ export const Button = props => {
       primary={props.primary}
       onClick={props.onClick}
       disabled={props.disabled}
-      href={props.link ? props.to : null}
       small={props.small}
       wide={props.wide}
       flexwidth={props.flexwidth}
@@ -89,6 +92,14 @@ export const Button = props => {
       aria-controls={props['aria-controls']}
       aria-expanded={props['aria-expanded']}
       white={props.white}
+      {...props.to &&
+        !externalUrl(props.to) && { to: props.to, as: FilteredLink }}
+      {...props.to &&
+        (externalUrl(props.to) || contactUrl(props.to)) && {
+          href: props.to,
+          as: 'a',
+        }}
+      {...props.to && !externalUrl(props.to) && { to: props.to }}
     >
       {props.children}
     </StyledButton>

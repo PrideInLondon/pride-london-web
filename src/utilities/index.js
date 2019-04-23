@@ -1,10 +1,20 @@
-function checkBreakpoint(breakpoint) {
+export function checkBreakpoint(breakpoint) {
   if (typeof window !== `undefined`) {
     return window.matchMedia(`(min-width: ${breakpoint}px)`).matches
   }
 }
 
-const noScroll = {
+export function externalUrl(url) {
+  const external = /^(http|https|ftp)/
+  return external.test(url)
+}
+
+export function contactUrl(url) {
+  const contact = /^(mailto:|tel:)/
+  return contact.test(url)
+}
+
+export const noScroll = {
   on() {
     document.querySelector('html').classList.add('no-scroll')
   },
@@ -15,5 +25,3 @@ const noScroll = {
     document.querySelector('html').classList.toggle('no-scroll')
   },
 }
-
-export { noScroll, checkBreakpoint }

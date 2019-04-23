@@ -6,7 +6,6 @@ exports[`Button matches snapshot 1`] = `
   disabled={false}
   flexwidth={false}
   fullmobile={false}
-  href={null}
   onClick={null}
   primary={false}
   small={false}
