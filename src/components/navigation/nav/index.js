@@ -66,7 +66,7 @@ const Nav = () => {
                       {
                         heading: 'About us',
                         links: [
-                          { title: 'Our Story', url: '/about-us' },
+                          { title: 'Our story', url: '/about-us' },
                           { title: 'Our impact', url: '/about-us/impact' },
                           { title: 'Campaigns', url: '/about-us/campaigns' },
                         ],
