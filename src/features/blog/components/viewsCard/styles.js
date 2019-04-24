@@ -1,31 +1,30 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import { media } from '../../../../theme/media'
 import theme from '../../../../theme/theme'
 
-export const Container = styled.div`
-  min-width: 162px;
-  padding: 5px;
+export const ViewsSlide = styled.div`
+  padding: 0 10px;
 
   ${media.tablet`
-    min-width: 400px;
+    padding: 0 15px;
   `};
-
-  &:hover {
-    cursor: pointer;
-  }
 `
 
-export const ArticleTitle = styled.h2`
+export const ArticleTitle = styled.h3`
+  margin: 0 0 0.5em 0;
+  display: inline;
+`
+
+export const ArticleLink = styled(Link)`
   color: ${theme.colors.indigo};
-  font-size: 24px;
-  margin: 0.5rem 0;
-`
-
-export const ArticleTitleTextContainer = styled.span`
   border-bottom: 2px solid transparent;
-  transition: border-bottom-color 200ms ease-out;
+  transition: border-bottom-color 0.15s ease-out;
+  text-decoration: none;
+  line-height: 1.5;
 
-  ${Container}:hover & {
+  &:hover,
+  &:focus {
     border-bottom-color: ${theme.colors.eucalyptusGreen};
   }
 `
@@ -37,14 +36,8 @@ export const ArticleAuthor = styled.p`
   font-size: 14px;
 `
 
-export const ViewsThumbail = styled.img`
+export const ViewsThumbnail = styled.img`
+  display: block;
   border-radius: 4px;
-  object-fit: cover;
-  width: 162px;
-  height: 220px;
-
-  ${media.tablet`
-    width: 400px;
-    height: 540px;
-    `}
+  width: 100%;
 `

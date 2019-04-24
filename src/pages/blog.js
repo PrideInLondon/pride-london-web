@@ -19,7 +19,6 @@ const Blog = ({ data: { articles, views } }) => {
     category: articleCategories.find(cat => cat.title == art.category),
   }))
   const mappedViews = mapEntries(views)
-  console.log(mappedViews)
   return (
     <Fragment>
       <BannerImage
@@ -28,7 +27,8 @@ const Blog = ({ data: { articles, views } }) => {
         altText="The Voice of Pride in London"
         imageSrc={background}
         imageFullWidth
-        large
+        medium
+        allowContentUnderflow
       />
       <ViewsContainer views={mappedViews} />
       <StyledHR />
@@ -68,6 +68,12 @@ export const blogLandingPageQuery = graphql`
           category
           datePublished
           headerImage {
+            file {
+              url
+            }
+          }
+          featuredImage {
+            title
             file {
               url
             }

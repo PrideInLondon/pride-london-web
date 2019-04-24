@@ -8,7 +8,8 @@ import Nav from '../components/navigation/nav'
 import Footer from '../components/footer/footerQuery'
 import favicon from '../favicon.ico'
 import theme from '../theme/theme'
-
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import './index.css'
 import './fonts.css'
 

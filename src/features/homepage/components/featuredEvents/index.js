@@ -1,8 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
 import { Consumer } from '../../../../components/appContext'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 import { EventListingCard } from '../../../../features/events'
 import { FlexColumn } from '../../../../components/grid'
 import { settings } from './slickSettings'

@@ -32,7 +32,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      articles: allContentfulArticle(filter: { category: { ne: "Views" } }) {
+      articles: allContentfulArticle(filter: {}) {
         edges {
           node {
             id

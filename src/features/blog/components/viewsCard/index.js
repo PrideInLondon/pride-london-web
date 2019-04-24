@@ -3,25 +3,24 @@ import PropTypes from 'prop-types'
 import {
   ArticleAuthor,
   ArticleTitle,
-  Container,
-  ViewsThumbail,
-  ArticleTitleTextContainer,
+  ViewsSlide,
+  ViewsThumbnail,
+  ArticleLink,
 } from './styles'
 
-const ViewsCard = props => {
-  const { headerImage, author, title } = props
-  const photoUrl = headerImage ? headerImage.file.url : ''
+const ViewsCard = ({ featuredImage, author, title, id }) => {
+  const photoUrl = featuredImage ? featuredImage.file.url : ''
   return (
-    <Container>
-      <ViewsThumbail
-        src={photoUrl}
+    <ViewsSlide>
+      <ViewsThumbnail
+        src={`${photoUrl}?fit=crop&w=400&h=400`}
         altText={`${author.display_name.display_name} — ${title}`}
       />
       <ArticleAuthor>{author.display_name.display_name}</ArticleAuthor>
       <ArticleTitle>
-        <ArticleTitleTextContainer>{title}</ArticleTitleTextContainer>
+        <ArticleLink to={`/blog/${id}`}>{title}</ArticleLink>
       </ArticleTitle>
-    </Container>
+    </ViewsSlide>
   )
 }
 
@@ -30,7 +29,8 @@ ViewsCard.propTypes = {
     display_name: PropTypes.shape({ display_name: PropTypes.string }),
   }).isRequired,
   title: PropTypes.string.isRequired,
-  headerImage: PropTypes.shape({}).isRequired,
+  featuredImage: PropTypes.shape({}).isRequired,
+  id: PropTypes.string.isRequired,
 }
 
 export default ViewsCard
