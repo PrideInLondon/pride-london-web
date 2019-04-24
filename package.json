@@ -52,7 +52,7 @@
     "dotenv": "^7.0.0",
     "gatsby": "^2.3.25",
     "gatsby-link": "^2.0.15",
-    "gatsby-plugin-layout": "^1.0.14",
+    "gatsby-plugin-layout": "^1.0.15",
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-robots-txt": "^1.4.0",
     "gatsby-plugin-rollbar": "^1.0.0",
