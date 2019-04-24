@@ -55,7 +55,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "About us",
                       "links": Array [
                         Object {
-                          "title": "Our Story",
+                          "title": "Our story",
                           "url": "/about-us",
                         },
                         Object {
