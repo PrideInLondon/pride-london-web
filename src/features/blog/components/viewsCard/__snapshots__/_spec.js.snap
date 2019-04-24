@@ -1,18 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ViewsCard renders with default values 1`] = `
-<styles__Container>
-  <styles__ViewsThumbail
+<styles__ViewsSlide>
+  <styles__ViewsThumbnail
     altText="Bob Barker — My view"
-    src="foo.bar/baz"
+    src="foo.bar/baz?fit=crop&w=400&h=400"
   />
   <styles__ArticleAuthor>
     Bob Barker
   </styles__ArticleAuthor>
   <styles__ArticleTitle>
-    <styles__ArticleTitleTextContainer>
+    <styles__ArticleLink
+      to="/blog/123456"
+    >
       My view
-    </styles__ArticleTitleTextContainer>
+    </styles__ArticleLink>
   </styles__ArticleTitle>
-</styles__Container>
+</styles__ViewsSlide>
 `;

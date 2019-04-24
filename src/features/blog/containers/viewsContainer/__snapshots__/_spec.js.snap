@@ -1,104 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ViewsContainer should render with default values 1`] = `
-<styles__Container>
-  <Title
-    isCentered={true}
-    isLight={true}
-    theme={
-      Object {
-        "breakpoints": Array [
-          375,
-          768,
-          1024,
-          1440,
-        ],
-        "colors": Object {
-          "amber": "#FFCA00",
-          "beachBlue": "#2C77E5",
-          "black": "#000000",
-          "bondiBlue": "#00A3BD",
-          "bronze": "#B59035",
-          "darkGrey": "#5B5B5B",
-          "darkPurple": "#660C63",
-          "electricPurple": "#BC01FF",
-          "eucalyptusGreen": "#2CDA9D",
-          "fuscia": "#FF88F1",
-          "gold": "#FFE16C",
-          "green": "#34C30A",
-          "greyBlue": "#5770D1",
-          "indigo": "#2D2F7F",
-          "lemonGreen": "#C3D30E",
-          "lightGrey": "#EFEFEF",
-          "mediumGrey": "#E1E1E1",
-          "pink": "#ED2C6E",
-          "red": "#D0021B",
-          "silver": "#E0DFDC",
-          "skyBlue": "#2ACFFF",
-          "tomato": "#FF5B44",
-          "white": "#FFFFFF",
-          "yellow": "#FFD95E",
-        },
-        "fonts": Object {
-          "body": "Roboto, sans-serif",
-          "title": "Poppins, sans-serif",
-        },
-        "navBreakpoint": 1360,
-        "space": Array [
-          0,
-          5,
-          10,
-          15,
-          20,
-        ],
-      }
-    }
-  >
-    Views
-  </Title>
-  <styles__CardContainer>
-    <ViewsCard
-      author={
-        Object {
-          "display_name": Object {
-            "display_name": "Test",
-          },
-        }
-      }
-      category="Views"
-      datePublished="2019-05-17"
-      headerImage={
-        Object {
-          "file": Object {
-            "url": "src",
-          },
-        }
-      }
-      id="1"
-      key="1"
-      title="test"
-    />
-    <ViewsCard
-      author={
-        Object {
-          "display_name": Object {
-            "display_name": "Test",
-          },
-        }
-      }
-      category="Views"
-      datePublished="2019-05-17"
-      headerImage={
-        Object {
-          "file": Object {
-            "url": "src",
-          },
-        }
-      }
-      id="2"
-      key="2"
-      title="test"
-    />
-  </styles__CardContainer>
-</styles__Container>
+<grid__Container
+  mx="auto"
+>
+  <Row>
+    <Column
+      px={null}
+      py={null}
+      width={1}
+    >
+      <styles__CardContainer>
+        <styles__ViewsTitle
+          isCentered={true}
+          isLight={true}
+        >
+          Views
+        </styles__ViewsTitle>
+        <Slider
+          arrows={true}
+          infinite={true}
+          responsive={
+            Array [
+              Object {
+                "breakpoint": 767,
+                "settings": Object {
+                  "arrows": false,
+                  "centerMode": true,
+                  "centerPadding": "100px",
+                  "slidesToScroll": 1,
+                  "slidesToShow": 1,
+                },
+              },
+              Object {
+                "breakpoint": 550,
+                "settings": Object {
+                  "arrows": false,
+                  "centerMode": true,
+                  "centerPadding": "40px",
+                  "slidesToScroll": 1,
+                  "slidesToShow": 1,
+                },
+              },
+            ]
+          }
+          slidesToScroll={1}
+          slidesToShow={3}
+          speed={500}
+        >
+          <ViewsCard
+            author={
+              Object {
+                "display_name": Object {
+                  "display_name": "Test",
+                },
+              }
+            }
+            category="Views"
+            datePublished="2019-05-17"
+            featuredImage={
+              Object {
+                "file": Object {
+                  "url": "src",
+                },
+              }
+            }
+            id="1"
+            key="1"
+            readTime={null}
+            title="test"
+          />
+          <ViewsCard
+            author={
+              Object {
+                "display_name": Object {
+                  "display_name": "Test 2",
+                },
+              }
+            }
+            category="Views"
+            datePublished="2019-05-17"
+            featuredImage={
+              Object {
+                "file": Object {
+                  "url": "src",
+                },
+              }
+            }
+            id="2"
+            key="2"
+            readTime={null}
+            title="test"
+          />
+        </Slider>
+      </styles__CardContainer>
+    </Column>
+  </Row>
+</grid__Container>
 `;

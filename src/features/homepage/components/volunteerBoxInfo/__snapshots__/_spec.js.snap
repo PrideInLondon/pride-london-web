@@ -7,7 +7,10 @@ exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
     mx="auto"
   >
     <Row>
-      <Column>
+      <Column
+        px={null}
+        py={null}
+      >
         <styles__ContentVolunteer>
           <h2>
             Volunteer

@@ -2,6 +2,7 @@
 
 exports[`Title renders with default values 1`] = `
 <styles__StyledTitle
+  className={null}
   isCentered={false}
   isLight={false}
 >

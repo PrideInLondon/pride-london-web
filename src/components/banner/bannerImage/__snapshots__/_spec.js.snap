@@ -7,6 +7,7 @@ exports[`<BannerImage /> renders the component <BannerImage /> 1`] = `
   imageFullWidth={false}
   imageSrc=""
   large={false}
+  medium={false}
   role="banner"
 >
   <styles__StyledContainer
@@ -16,6 +17,8 @@ exports[`<BannerImage /> renders the component <BannerImage /> 1`] = `
   >
     <styles__StyledRow>
       <Column
+        px={null}
+        py={null}
         width={1}
       >
         <StyledBannerTitle />
@@ -33,6 +36,7 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
   imageFullWidth={false}
   imageSrc=""
   large={false}
+  medium={false}
   role="banner"
 >
   <styles__StyledContainer
@@ -42,6 +46,8 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
   >
     <styles__StyledRow>
       <Column
+        px={null}
+        py={null}
         width={1}
       >
         <StyledBannerTitle />
@@ -61,6 +67,7 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
   imageFullWidth={false}
   imageSrc=""
   large={false}
+  medium={false}
   role="banner"
 >
   <styles__StyledContainer
@@ -70,6 +77,8 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
   >
     <styles__StyledRow>
       <Column
+        px={null}
+        py={null}
         width={1}
       >
         <StyledBannerTitle>
