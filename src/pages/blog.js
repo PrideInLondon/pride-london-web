@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import BannerImage from '../components/banner/bannerImage'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
-import StyledHR from '../components/horizontalRule'
+import { Container, Row, Column } from '../components/grid'
 import background from '../theme/assets/images/banners/blog/bg.svg'
 import { articleCategories } from '../constants'
 
@@ -31,7 +31,13 @@ const Blog = ({ data: { articles, views } }) => {
         allowContentUnderflow
       />
       <ViewsContainer views={mappedViews} />
-      <StyledHR />
+      <Container>
+        <Row>
+          <Column width={1}>
+            <hr />
+          </Column>
+        </Row>
+      </Container>
       <NewsContainer articles={mappedArticles} categories={articleCategories} />
     </Fragment>
   )

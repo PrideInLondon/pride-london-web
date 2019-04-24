@@ -115,6 +115,11 @@ a:not([class]):focus {
   color: #2cda9d;
 }
 
+hr {
+  border-top: none;
+  border-color: #efefef;
+}
+
 .slick-prev,
 .slick-prev:hover,
 .slick-prev:focus {
@@ -180,5 +185,9 @@ a:not([class]):focus {
   li {
     font-size: 1.125rem;
     line-height: 1.6875rem;
+  }
+
+  hr {
+    margin: 30px 0;
   }
 }
