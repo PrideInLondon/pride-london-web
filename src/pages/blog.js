@@ -33,7 +33,7 @@ const Blog = ({ data: { articles, views } }) => {
       <ViewsContainer views={mappedViews} />
       <Container>
         <Row>
-          <Column width={1}>
+          <Column width={1} py={0}>
             <hr />
           </Column>
         </Row>

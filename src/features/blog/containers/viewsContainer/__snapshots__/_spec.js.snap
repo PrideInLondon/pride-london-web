@@ -6,6 +6,8 @@ exports[`ViewsContainer should render with default values 1`] = `
 >
   <Row>
     <Column
+      px={null}
+      py={null}
       width={1}
     >
       <styles__CardContainer>
