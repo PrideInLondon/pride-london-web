@@ -74,7 +74,7 @@ exports[`ViewsContainer should render with default values 1`] = `
             author={
               Object {
                 "display_name": Object {
-                  "display_name": "Test",
+                  "display_name": "Test 2",
                 },
               }
             }

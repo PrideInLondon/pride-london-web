@@ -126,7 +126,6 @@ hr {
   width: 60px;
   height: 60px;
   border-radius: 4px;
-  background-color: #ffffff;
   background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgOSAxNCIgd2lkdGg9IjkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTMxLjM3ODY3OTcgMzAtNC45MzkzMzk5LTQuNjEwMDUwNWMtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5LjU4NTc4NjUtLjU0NjczNCAxLjUzNTUzMzktLjU0NjczNCAyLjEyMTMyMDQgMGw2IDUuNmMuNTg1Nzg2NC41NDY3MzQuNTg1Nzg2NCAxLjQzMzE2NSAwIDEuOTc5ODk5bC02IDUuNmMtLjU4NTc4NjUuNTQ2NzM0LTEuNTM1NTMzOS41NDY3MzQtMi4xMjEzMjA0IDAtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5eiIgZmlsbD0iIzJkMmY3ZiIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgMzUgLTIzKSIvPjwvc3ZnPg==');
   background-color: #ffffff;
   background-position: 50% 50%;
