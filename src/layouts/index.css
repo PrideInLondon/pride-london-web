@@ -144,8 +144,8 @@ hr {
   background-repeat: no-repeat;
 }
 
-.slick-prev:before,
-.slick-next:before {
+.slick-prev::before,
+.slick-next::before {
   content: none;
 }
 
