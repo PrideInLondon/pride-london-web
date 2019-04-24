@@ -4,14 +4,14 @@ exports[`ViewsCard renders with default values 1`] = `
 <styles__ViewsSlide>
   <styles__ViewsThumbnail
     altText="Bob Barker — My view"
-    src="?fit=crop&w=400&h=400"
+    src="foo.bar/baz?fit=crop&w=400&h=400"
   />
   <styles__ArticleAuthor>
     Bob Barker
   </styles__ArticleAuthor>
   <styles__ArticleTitle>
     <styles__ArticleLink
-      to="/blog/undefined"
+      to="/blog/123456"
     >
       My view
     </styles__ArticleLink>

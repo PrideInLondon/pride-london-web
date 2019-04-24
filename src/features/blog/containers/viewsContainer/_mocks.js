@@ -7,7 +7,7 @@ export const views = [
     },
     category: 'Views',
     datePublished: '2019-05-17',
-    headerImage: {
+    featuredImage: {
       file: {
         url: 'src',
       },
@@ -23,7 +23,7 @@ export const views = [
     },
     category: 'Views',
     datePublished: '2019-05-17',
-    headerImage: {
+    featuredImage: {
       file: {
         url: 'src',
       },

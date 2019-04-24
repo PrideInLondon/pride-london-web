@@ -116,7 +116,8 @@ a:not([class]):focus {
 }
 
 .slick-prev,
-.slick-prev:hover {
+.slick-prev:hover,
+.slick-prev:focus {
   width: 60px;
   height: 60px;
   border-radius: 4px;
@@ -128,7 +129,8 @@ a:not([class]):focus {
 }
 
 .slick-next,
-.slick-next:hover {
+.slick-next:hover,
+.slick-next:focus {
   width: 60px;
   height: 60px;
   border-radius: 4px;

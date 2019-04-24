@@ -34,6 +34,12 @@ export const ArticleAuthor = styled.p`
   font-family: ${theme.fonts.title};
   margin: 0.25rem 0;
   font-size: 14px;
+
+  ${media.tabletMax`
+    span {
+        display: none;
+    }
+  `};
 `
 
 export const ViewsThumbnail = styled.img`

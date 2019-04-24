@@ -37,6 +37,7 @@ export const CardContainer = styled.div`
   ${media.tabletMax`
     .slick-list {
         padding-left: 0 !important;
+        overflow: visible;
     }
   `};
 `

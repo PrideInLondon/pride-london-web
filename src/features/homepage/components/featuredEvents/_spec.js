@@ -1,7 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import toJSON from 'enzyme-to-json'
 import { FeaturedEventContent } from './styles'
 import FeaturedEvents from '.'
+import 'jest-styled-components'
 
 describe(FeaturedEvents.name, () => {
   it('renders with default values', () => {
@@ -13,7 +15,7 @@ describe(FeaturedEvents.name, () => {
 describe('Featured Event Content', () => {
   it('renders with default values', () => {
     const wrapper = shallow(<FeaturedEventContent />)
-    expect(wrapper).toMatchSnapshot()
+    expect(toJSON(wrapper)).toMatchSnapshot()
   })
 })
 

@@ -65,6 +65,7 @@ export const blogLandingPageQuery = graphql`
         node {
           id
           title
+          readTime
           category
           datePublished
           headerImage {

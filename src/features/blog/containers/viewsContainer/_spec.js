@@ -5,14 +5,23 @@ import { views } from './_mocks'
 import ViewsContainer from '.'
 
 describe('ViewsContainer', () => {
+  beforeAll(() => {
+    global.___loader = {
+      enqueue: jest.fn(),
+    }
+  })
+  afterAll(() => {
+    global.___loader.enqueue.mockReset()
+  })
   it('should render with default values', () => {
     const wrapper = shallow(<ViewsContainer views={views} />)
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 
-  it('should render 2 views', () => {
+  it('should render 4 views', () => {
     const viewsCount = views.length
     const wrapper = mount(<ViewsContainer views={views} />)
-    expect(wrapper.find('img')).toHaveLength(viewsCount)
+    // Count should be double because slick carousel clones all its slides for infinite scrolling
+    expect(wrapper.find('ViewsCard')).toHaveLength(viewsCount * 2)
   })
 })

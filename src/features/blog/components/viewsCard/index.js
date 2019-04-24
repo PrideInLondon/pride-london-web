@@ -8,7 +8,7 @@ import {
   ArticleLink,
 } from './styles'
 
-const ViewsCard = ({ featuredImage, author, title, id }) => {
+const ViewsCard = ({ featuredImage, author, title, id, readTime }) => {
   const photoUrl = featuredImage ? featuredImage.file.url : ''
   return (
     <ViewsSlide>
@@ -16,7 +16,10 @@ const ViewsCard = ({ featuredImage, author, title, id }) => {
         src={`${photoUrl}?fit=crop&w=400&h=400`}
         altText={`${author.display_name.display_name} — ${title}`}
       />
-      <ArticleAuthor>{author.display_name.display_name}</ArticleAuthor>
+      <ArticleAuthor>
+        {author.display_name.display_name}
+        {readTime && <span> • {readTime} min read</span>}
+      </ArticleAuthor>
       <ArticleTitle>
         <ArticleLink to={`/blog/${id}`}>{title}</ArticleLink>
       </ArticleTitle>
@@ -29,8 +32,13 @@ ViewsCard.propTypes = {
     display_name: PropTypes.shape({ display_name: PropTypes.string }),
   }).isRequired,
   title: PropTypes.string.isRequired,
-  featuredImage: PropTypes.shape({}).isRequired,
   id: PropTypes.string.isRequired,
+  featuredImage: PropTypes.shape({}).isRequired,
+  readTime: PropTypes.number,
+}
+
+ViewsCard.defaultProps = {
+  readTime: null,
 }
 
 export default ViewsCard
