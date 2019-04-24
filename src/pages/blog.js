@@ -19,7 +19,6 @@ const Blog = ({ data: { articles, views } }) => {
     category: articleCategories.find(cat => cat.title == art.category),
   }))
   const mappedViews = mapEntries(views)
-  console.log(mappedViews)
   return (
     <Fragment>
       <BannerImage

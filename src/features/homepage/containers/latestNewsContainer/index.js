@@ -40,51 +40,49 @@ const LatestNewsContainer = () => (
     <Row>
       <StaticQuery
         query={query}
-        render={({ articles: { edges: newsArr = [] } = {} }) =>
-          console.log(newsArr) || (
-            <>
-              <FlexColumn
-                width={[
-                  1, // 100% between 0px screen width and first breakpoint (375px)
-                  1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-                  1, // 100% between second breakpoint(768px) and third breakpoint (1024px)
-                  2 / 3, // 66% between third breakpoint(1280px) and fourth breakpoint (1440px)
-                ]}
-              >
-                <LatestNews
-                  {...{
-                    ...newsArr[0].node,
-                    category: articleCategories.find(
-                      cat => cat.title == newsArr[0].node.category
-                    ),
-                  }}
-                />
-              </FlexColumn>
-              <FlexColumn
-                width={[
-                  1, // 100% between 0px screen width and first breakpoint (375px)
-                  1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-                  1, // 100% between second breakpoint(768px) and third breakpoint (1024px)
-                  1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
-                ]}
-              >
-                <SecondaryNews>
-                  {newsArr.slice(1).map(({ node: singleNews }) => (
-                    <NewsCard
-                      key={singleNews.id}
-                      {...{
-                        ...singleNews,
-                        category: articleCategories.find(
-                          cat => cat.title == singleNews.category
-                        ),
-                      }}
-                    />
-                  ))}
-                </SecondaryNews>
-              </FlexColumn>
-            </>
-          )
-        }
+        render={({ articles: { edges: newsArr = [] } = {} }) => (
+          <>
+            <FlexColumn
+              width={[
+                1, // 100% between 0px screen width and first breakpoint (375px)
+                1, // 100% between first breakpoint(375px) and second breakpoint (768px)
+                1, // 100% between second breakpoint(768px) and third breakpoint (1024px)
+                2 / 3, // 66% between third breakpoint(1280px) and fourth breakpoint (1440px)
+              ]}
+            >
+              <LatestNews
+                {...{
+                  ...newsArr[0].node,
+                  category: articleCategories.find(
+                    cat => cat.title == newsArr[0].node.category
+                  ),
+                }}
+              />
+            </FlexColumn>
+            <FlexColumn
+              width={[
+                1, // 100% between 0px screen width and first breakpoint (375px)
+                1, // 100% between first breakpoint(375px) and second breakpoint (768px)
+                1, // 100% between second breakpoint(768px) and third breakpoint (1024px)
+                1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
+              ]}
+            >
+              <SecondaryNews>
+                {newsArr.slice(1).map(({ node: singleNews }) => (
+                  <NewsCard
+                    key={singleNews.id}
+                    {...{
+                      ...singleNews,
+                      category: articleCategories.find(
+                        cat => cat.title == singleNews.category
+                      ),
+                    }}
+                  />
+                ))}
+              </SecondaryNews>
+            </FlexColumn>
+          </>
+        )}
       />
     </Row>
   </Wrapper>
