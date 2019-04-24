@@ -62,11 +62,6 @@ const constants = {
       title: 'Research',
       hexColour: theme.colors.eucalyptusGreen,
     },
-
-    {
-      title: 'Views',
-      hexColour: theme.colors.lemonGreen,
-    },
   ],
 }
 
