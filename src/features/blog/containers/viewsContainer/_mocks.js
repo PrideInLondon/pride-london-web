@@ -18,7 +18,7 @@ export const views = [
   {
     author: {
       display_name: {
-        display_name: 'Test',
+        display_name: 'Test 2',
       },
     },
     category: 'Views',
