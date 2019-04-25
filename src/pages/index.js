@@ -30,7 +30,7 @@ const FeaturedEventsContainer = styled.div`
 const FeaturedEventsHeader = styled.div`
   display: flex;
   align-items: flex-start;
-  padding: 0 22px;
+  padding: 0 20px;
   justify-content: space-between;
 
   ${media.tablet`
@@ -143,6 +143,11 @@ const BannerButton = styled(Button)`
   `};
 `
 
+const StyledButton = styled(Button)`
+  background-color: transparent;
+  padding: 12px 28px;
+`
+
 const Home = () => (
   <Fragment>
     <BannerImage
@@ -175,9 +180,9 @@ const Home = () => (
                 <h2>Featured events</h2>
                 <p>View events from across the LGBT+ community.</p>
               </FeaturedEventsTitle>
-              <Button wide={false} to="/events/whats-on">
+              <StyledButton wide={false} to="/events/whats-on">
                 View all events
-              </Button>
+              </StyledButton>
             </FeaturedEventsHeader>
             <FeaturedEvents />
             <ButtonMobile>
