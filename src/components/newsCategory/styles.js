@@ -14,4 +14,9 @@ export const NewsCategoryContainer = styled.div`
   text-align: center;
   white-space: nowrap;
   padding: 2px 4px;
+  margin-right: 10px;
+`
+
+export const StarWrapper = styled.span`
+  margin-right: 5px;
 `

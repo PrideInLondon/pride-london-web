@@ -15,7 +15,7 @@ exports[`BlogHeader renders with default values 1`] = `
       }
       className=""
       datePublished="2019-03-28T20:30+00:00"
-      readLength={null}
+      readTime={null}
     />
     <styles__FlexDiv>
       <styles__ShareText>

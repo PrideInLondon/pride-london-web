@@ -4,7 +4,7 @@ import { Background, LatestNewsCardContainer, NewsCard } from './styles'
 
 const LatestNews = ({
   datePublished,
-  readLength,
+  readTime,
   category,
   title,
   headerImage,
@@ -15,7 +15,7 @@ const LatestNews = ({
         category={category}
         title={title}
         datePublished={datePublished}
-        readLength={readLength}
+        readTime={readTime}
       />
     </LatestNewsCardContainer>
   </Background>
@@ -23,7 +23,7 @@ const LatestNews = ({
 
 LatestNews.propTypes = {
   datePublished: PropTypes.string.isRequired,
-  readLength: PropTypes.string,
+  readTime: PropTypes.string,
   category: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,
@@ -37,7 +37,7 @@ LatestNews.propTypes = {
 }
 
 LatestNews.defaultProps = {
-  readLength: null,
+  readTime: null,
 }
 
 export default LatestNews

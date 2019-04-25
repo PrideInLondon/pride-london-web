@@ -20,7 +20,12 @@ exports[`The Events You May Like component should matchsnapshot 1`] = `
         <ChevronRight />
       </eventsYouMayLike__ViewAll>
     </eventsYouMayLike__HeadingRow>
-    <Row>
+    <Row
+      flexWrap={null}
+      ml={null}
+      mr={null}
+      mx={null}
+    >
       <eventsYouMayLike__FlexColumn
         key="123"
         width={
