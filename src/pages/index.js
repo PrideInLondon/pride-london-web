@@ -23,7 +23,7 @@ const FeaturedEventsContainer = styled.div`
   margin: 0 auto;
 
   ${media.tablet`
-    padding: 60px 90px;
+    padding: 58px 90px;
   `};
 `
 
@@ -32,6 +32,10 @@ const FeaturedEventsHeader = styled.div`
   align-items: flex-start;
   padding: 0 20px;
   justify-content: space-between;
+
+  ${media.tablet`
+    padding-bottom: 9px;
+  `};
 
   a {
     display: none;
@@ -60,21 +64,22 @@ const FeaturedEventsTitle = styled.div`
     color: ${theme.colors.white};
 
     ${media.tablet`
-    font-size: 36px;
-    line-height: 38px;
-    font-weight: 600;
+      font-size: 36px;
+      line-height: 38px;
+      font-weight: 600;
   `};
   }
 
   p {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 1.38;
     color: #ffffff;
     margin: 0 0 10px;
     color: ${theme.colors.white};
+
     ${media.tablet`
-    font-size: 18px;
-    line-height: 26px;
+      font-size: 18px;
+      line-height: 1.44;
   `};
   }
 `
