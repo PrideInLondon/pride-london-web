@@ -23,15 +23,19 @@ const FeaturedEventsContainer = styled.div`
   margin: 0 auto;
 
   ${media.tablet`
-    padding: 60px 90px;
+    padding: 58px 90px;
   `};
 `
 
 const FeaturedEventsHeader = styled.div`
   display: flex;
   align-items: flex-start;
-  padding: 0 22px;
+  padding: 0 20px;
   justify-content: space-between;
+
+  ${media.tablet`
+    padding-bottom: 9px;
+  `};
 
   a {
     display: none;
@@ -55,26 +59,26 @@ const FeaturedEventsTitle = styled.div`
   h2 {
     font-size: 26px;
     line-height: 32px;
-    font-weight: 600;
+    font-weight: bold;
     margin: 0;
     color: ${theme.colors.white};
 
     ${media.tablet`
-    font-size: 36px;
-    line-height: 38px;
-    font-weight: 600;
-  `};
+      font-size: 36px;
+      line-height: 38px;
+    `};
   }
 
   p {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 1.38;
     color: #ffffff;
     margin: 0 0 10px;
     color: ${theme.colors.white};
+
     ${media.tablet`
-    font-size: 18px;
-    line-height: 26px;
+      font-size: 18px;
+      line-height: 1.44;
   `};
   }
 `
@@ -138,6 +142,11 @@ const BannerButton = styled(Button)`
   `};
 `
 
+const StyledButton = styled(Button)`
+  background-color: transparent;
+  padding: 12px 28px;
+`
+
 const Home = () => (
   <Fragment>
     <BannerImage
@@ -170,9 +179,9 @@ const Home = () => (
                 <h2>Featured events</h2>
                 <p>View events from across the LGBT+ community.</p>
               </FeaturedEventsTitle>
-              <Button wide={false} to="/events/whats-on">
+              <StyledButton wide={false} to="/events/whats-on">
                 View all events
-              </Button>
+              </StyledButton>
             </FeaturedEventsHeader>
             <FeaturedEvents />
             <ButtonMobile>
