@@ -17,6 +17,10 @@ exports[`<BannerImage /> renders the component <BannerImage /> 1`] = `
   >
     <styles__StyledRow>
       <Column
+        pb={null}
+        pl={null}
+        pr={null}
+        pt={null}
         px={null}
         py={null}
         width={1}
@@ -46,6 +50,10 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
   >
     <styles__StyledRow>
       <Column
+        pb={null}
+        pl={null}
+        pr={null}
+        pt={null}
         px={null}
         py={null}
         width={1}
@@ -77,6 +85,10 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
   >
     <styles__StyledRow>
       <Column
+        pb={null}
+        pl={null}
+        pr={null}
+        pt={null}
         px={null}
         py={null}
         width={1}

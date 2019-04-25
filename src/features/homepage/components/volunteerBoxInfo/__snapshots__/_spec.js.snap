@@ -8,6 +8,10 @@ exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
   >
     <Row>
       <Column
+        pb={null}
+        pl={null}
+        pr={null}
+        pt={null}
         px={null}
         py={null}
       >

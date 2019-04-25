@@ -118,6 +118,7 @@ a:not([class]):focus {
 hr {
   border-top: none;
   border-color: #efefef;
+  margin: 20px 0;
 }
 
 .slick-prev,
