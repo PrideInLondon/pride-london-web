@@ -87,21 +87,17 @@ const VSpace = styled.div`
 const dateFormat = 'D MMMM YYYY'
 
 const formatDayRange = (startTime, endTime) => {
-  if (startTime.parseZone().isSame('day', endTime)) {
-    return startTime.parseZone().format(dateFormat)
+  if (startTime.isSame('day', endTime)) {
+    return startTime.format(dateFormat)
   }
 
-  return `${startTime
-    .parseZone()
-    .format(dateFormat)} to ${endTime.parseZone().format(dateFormat)}`
+  return `${startTime.format(dateFormat)} to ${endTime.format(dateFormat)}`
 }
 
 const timeFormat = 'h:mma'
 
 const formatTimeRange = (startTime, endTime) =>
-  `${startTime.parseZone().format(timeFormat)} to ${endTime
-    .parseZone()
-    .format(timeFormat)}`
+  `${startTime.format(timeFormat)} to ${endTime.format(timeFormat)}`
 
 const formatPrice = (eventPriceLow, eventPriceHigh) => {
   if (eventPriceLow === 0 && eventPriceHigh === 0) {
