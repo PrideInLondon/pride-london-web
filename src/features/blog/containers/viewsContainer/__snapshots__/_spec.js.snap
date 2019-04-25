@@ -1,104 +1,106 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ViewsContainer should render with default values 1`] = `
-<grid__Container
-  mx="auto"
->
-  <Row>
-    <Column
-      pb={null}
-      pl={null}
-      pr={null}
-      pt={null}
-      px={null}
-      py={null}
-      width={1}
-    >
-      <styles__CardContainer>
-        <styles__ViewsTitle
-          isCentered={true}
-          isLight={true}
-        >
-          Views
-        </styles__ViewsTitle>
-        <Slider
-          arrows={true}
-          infinite={true}
-          responsive={
-            Array [
-              Object {
-                "breakpoint": 767,
-                "settings": Object {
-                  "arrows": false,
-                  "centerMode": true,
-                  "centerPadding": "100px",
-                  "slidesToScroll": 1,
-                  "slidesToShow": 1,
+<section>
+  <grid__Container
+    mx="auto"
+  >
+    <Row>
+      <Column
+        pb={null}
+        pl={null}
+        pr={null}
+        pt={null}
+        px={null}
+        py={null}
+        width={1}
+      >
+        <styles__CardContainer>
+          <styles__ViewsTitle
+            isCentered={true}
+            isLight={true}
+          >
+            Views
+          </styles__ViewsTitle>
+          <Slider
+            arrows={true}
+            infinite={true}
+            responsive={
+              Array [
+                Object {
+                  "breakpoint": 767,
+                  "settings": Object {
+                    "arrows": false,
+                    "centerMode": true,
+                    "centerPadding": "100px",
+                    "slidesToScroll": 1,
+                    "slidesToShow": 1,
+                  },
                 },
-              },
-              Object {
-                "breakpoint": 550,
-                "settings": Object {
-                  "arrows": false,
-                  "centerMode": true,
-                  "centerPadding": "40px",
-                  "slidesToScroll": 1,
-                  "slidesToShow": 1,
+                Object {
+                  "breakpoint": 550,
+                  "settings": Object {
+                    "arrows": false,
+                    "centerMode": true,
+                    "centerPadding": "40px",
+                    "slidesToScroll": 1,
+                    "slidesToShow": 1,
+                  },
                 },
-              },
-            ]
-          }
-          slidesToScroll={1}
-          slidesToShow={3}
-          speed={500}
-        >
-          <ViewsCard
-            author={
-              Object {
-                "display_name": Object {
-                  "display_name": "Test",
-                },
-              }
+              ]
             }
-            category="Views"
-            datePublished="2019-05-17"
-            featuredImage={
-              Object {
-                "file": Object {
-                  "url": "src",
-                },
+            slidesToScroll={1}
+            slidesToShow={3}
+            speed={500}
+          >
+            <ViewsCard
+              author={
+                Object {
+                  "display_name": Object {
+                    "display_name": "Test",
+                  },
+                }
               }
-            }
-            id="1"
-            key="1"
-            readTime={null}
-            title="test"
-          />
-          <ViewsCard
-            author={
-              Object {
-                "display_name": Object {
-                  "display_name": "Test 2",
-                },
+              category="Views"
+              datePublished="2019-05-17"
+              featuredImage={
+                Object {
+                  "file": Object {
+                    "url": "src",
+                  },
+                }
               }
-            }
-            category="Views"
-            datePublished="2019-05-17"
-            featuredImage={
-              Object {
-                "file": Object {
-                  "url": "src",
-                },
+              id="1"
+              key="1"
+              readTime={null}
+              title="test"
+            />
+            <ViewsCard
+              author={
+                Object {
+                  "display_name": Object {
+                    "display_name": "Test 2",
+                  },
+                }
               }
-            }
-            id="2"
-            key="2"
-            readTime={null}
-            title="test"
-          />
-        </Slider>
-      </styles__CardContainer>
-    </Column>
-  </Row>
-</grid__Container>
+              category="Views"
+              datePublished="2019-05-17"
+              featuredImage={
+                Object {
+                  "file": Object {
+                    "url": "src",
+                  },
+                }
+              }
+              id="2"
+              key="2"
+              readTime={null}
+              title="test"
+            />
+          </Slider>
+        </styles__CardContainer>
+      </Column>
+    </Row>
+  </grid__Container>
+</section>
 `;

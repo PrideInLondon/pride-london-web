@@ -18,8 +18,11 @@ export const CardTitle = styled.h3`
   margin: 10px 0;
   border-bottom: 2px solid transparent;
   transition: border-bottom-color 0.15s linear;
+  display: inline;
+  line-height: 1.3;
 
-  ${Card}:hover & {
+  ${Card}:hover &,
+  ${Card}:focus & {
     border-bottom-color: ${theme.colors.eucalyptusGreen};
   }
 `

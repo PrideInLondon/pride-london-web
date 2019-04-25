@@ -8,22 +8,24 @@ import { settings } from './slickSettings'
 
 const ViewsContainer = ({ views }) => {
   return (
-    <Container>
-      <Row>
-        <Column width={1}>
-          <CardContainer>
-            <ViewsTitle isLight isCentered>
-              Views
-            </ViewsTitle>
-            <Slider {...settings}>
-              {views.map(view => (
-                <ViewsCard {...view} key={view.id} />
-              ))}
-            </Slider>
-          </CardContainer>
-        </Column>
-      </Row>
-    </Container>
+    <section>
+      <Container>
+        <Row>
+          <Column width={1}>
+            <CardContainer>
+              <ViewsTitle isLight isCentered>
+                Views
+              </ViewsTitle>
+              <Slider {...settings}>
+                {views.map(view => (
+                  <ViewsCard {...view} key={view.id} />
+                ))}
+              </Slider>
+            </CardContainer>
+          </Column>
+        </Row>
+      </Container>
+    </section>
   )
 }
 

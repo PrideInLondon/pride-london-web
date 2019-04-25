@@ -8,7 +8,7 @@ const FilterContainer = ({ handleFilterClick, selectedFilter, categories }) => {
   return (
     <Container>
       <Row>
-        <Column width={1} py={40}>
+        <Column width={1} py={[20, 20, 40]}>
           <FiltersWrapper>
             {categories.map(filterType => {
               return (

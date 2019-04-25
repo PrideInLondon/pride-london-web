@@ -6,12 +6,12 @@ import NewsCards from '../newsCards'
 import FeaturedArticleContainer from '../featuredArticleContainer'
 import {
   Container,
-  FlexColumn,
   Column,
   Row,
   GreyWrapper,
 } from '../../../../components/grid'
-import { ShowMoreButton } from './styles'
+// import { ShowMoreButton } from './styles'
+import Button from '../../../../components/button'
 
 const initialPaginationState = {
   end: 9,
@@ -69,12 +69,12 @@ class NewsContainer extends Component {
 
           <NewsCards articles={total.slice(0, end)} />
           {end < total.length && (
-            <Row>
-              <FlexColumn width={[1, 1, 1, 1]}>
-                <ShowMoreButton onClick={this.showMoreCards} primary>
+            <Row pb={[30, 30, 50]}>
+              <Column mx="auto" pt={[30, 30, 50]}>
+                <Button onClick={this.showMoreCards} primary>
                   Show more articles
-                </ShowMoreButton>
-              </FlexColumn>
+                </Button>
+              </Column>
             </Row>
           )}
         </GreyWrapper>

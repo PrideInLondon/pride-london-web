@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FeaturedArticleTitle } from '../../containers/newsContainer/styles'
 import theme from '../../../../theme/theme'
 import NewsMetrics from '../../../../components/newsMetrics'
 import NewsCategory from '../../../../components/newsCategory'
-import { FeaturedArticleCard, CardHeader } from './styles'
+import { FeaturedArticleCard, CardHeader, FeaturedArticleTitle } from './styles'
 
 const category = {
   title: 'Featured',
@@ -13,9 +12,9 @@ const category = {
 
 const FeaturedArticle = ({ data }) => {
   const { contentfulArticleFeatured: { featuredArticle = {} } = {} } = data
-  const { datePublished, title } = featuredArticle
+  const { datePublished, title, id } = featuredArticle
   return (
-    <FeaturedArticleCard>
+    <FeaturedArticleCard to={`/blog/${id}`}>
       <CardHeader>
         <NewsCategory category={category} />
         <NewsMetrics datePublished={datePublished} />
