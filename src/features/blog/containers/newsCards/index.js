@@ -9,25 +9,25 @@ const NewsCards = ({ articles }) => (
       {articles.map(
         ({ datePublished, title, category, id, readTime }) => (
           /* eslint-disable */
-        <FlexColumn
-          key={id}
-          width={[
-            1, // 100% between 0px screen width and first breakpoint (375px)
-            1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-            1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
-            1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
-          ]}
-          py={[2,2,2,3]}
-        >
-          <NewsCard
-            category={category}
-            title={title}
-            datePublished={datePublished}
-            id={id}
-            readTime={readTime}
-          />
-        </FlexColumn>
-      )
+          <FlexColumn
+            key={id}
+            width={[
+              1, // 100% between 0px screen width and first breakpoint (375px)
+              1, // 100% between first breakpoint(375px) and second breakpoint (768px)
+              1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
+              1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
+            ]}
+            py={[2, 2, 2, 3]}
+          >
+            <NewsCard
+              category={category}
+              title={title}
+              datePublished={datePublished}
+              id={id}
+              readTime={readTime}
+            />
+          </FlexColumn>
+        )
         /* eslint-enable */
       )}
     </Row>

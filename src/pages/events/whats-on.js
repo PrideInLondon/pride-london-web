@@ -108,7 +108,7 @@ class GroupedEventsCards extends Component {
           1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
         ]}
         key={event.node.id}
-        py={[2,2,2,3]}
+        py={[2, 2, 2, 3]}
       >
         {header && <DateGroupHeading>{header}</DateGroupHeading>}
         <EventListingCard event={event.node} />
