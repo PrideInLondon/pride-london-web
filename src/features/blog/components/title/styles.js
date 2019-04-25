@@ -3,7 +3,6 @@ import theme from '../../../../theme/theme'
 import { media } from '../../../../theme/media'
 
 export const StyledTitle = styled.h2`
-  font-weight: 700;
   color: ${props => (props.isLight ? theme.colors.white : theme.colors.indigo)};
   margin: 0 0 0.5em 0;
 

@@ -10,11 +10,13 @@ describe(NewsCard.name, () => {
       title: 'Amazing News!!',
     }
     const datePublished = '2019-03-28T20:30+00:00'
+    const id = 'abc123'
     const wrapper = shallow(
       <NewsCard
         category={category}
         title={title}
         datePublished={datePublished}
+        id={id}
       />
     )
     expect(wrapper).toMatchSnapshot()

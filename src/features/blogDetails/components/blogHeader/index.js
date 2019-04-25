@@ -10,14 +10,14 @@ import {
   BlogHeaderContainer,
 } from './styles'
 
-const BlogHeader = ({ title, datePublished, category, readLength }) => (
+const BlogHeader = ({ title, datePublished, category, readTime }) => (
   <BlogHeaderContainer>
     <Title>{title}</Title>
     <SubHeader>
       <NewsCardHeader
         category={category}
         datePublished={datePublished}
-        readLength={readLength}
+        readTime={readTime}
       />
       <FlexDiv>
         <ShareText>Share this post</ShareText>
@@ -34,10 +34,10 @@ BlogHeader.propTypes = {
     title: PropTypes.string,
     hexColour: PropTypes.string,
   }).isRequired,
-  readLength: PropTypes.string,
+  readTime: PropTypes.string,
 }
 BlogHeader.defaultProps = {
-  readLength: null,
+  readTime: null,
 }
 
 export default BlogHeader

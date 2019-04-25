@@ -1,22 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsFilter from '../../components/newsFilter'
-import { Container } from './styles'
+import { Container, Row, Column } from '../../../../components/grid'
+import { FiltersWrapper } from './styles'
 
 const FilterContainer = ({ handleFilterClick, selectedFilter, categories }) => {
+  const filteredCategories = categories.filter(
+    category => category.title !== 'Views'
+  )
   return (
     <Container>
-      {categories.map(filterType => {
-        return (
-          <NewsFilter
-            key={filterType.title}
-            handleClick={handleFilterClick}
-            filterType={filterType}
-            isOutline={selectedFilter.title !== filterType.title}
-            isButton
-          />
-        )
-      })}
+      <Row>
+        <Column width={1} py={[20, 20, 40]}>
+          <FiltersWrapper>
+            {filteredCategories.map(filterType => {
+              return (
+                <NewsFilter
+                  key={filterType.title}
+                  handleClick={handleFilterClick}
+                  filterType={filterType}
+                  isOutline={selectedFilter.title !== filterType.title}
+                  isButton
+                />
+              )
+            })}
+          </FiltersWrapper>
+        </Column>
+      </Row>
     </Container>
   )
 }

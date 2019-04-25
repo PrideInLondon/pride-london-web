@@ -32,6 +32,13 @@ export const CardContainer = styled.div`
       z-index: 1;
       margin-top: calc(16.6667% - 15px);
     }
+
+    .slick-next {
+        right: -15px;
+    }
+    .slick-prev {
+        left: -15px;
+    }
   `};
 
   ${media.tabletMax`

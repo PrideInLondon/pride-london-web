@@ -16,7 +16,7 @@ exports[`NewsCardHeader renders with default values 1`] = `
   <NewsMetrics
     className="className"
     datePublished="2019-03-28T20:30+00:00"
-    readLength=""
+    readTime={null}
   />
 </styles__NewsCardHeaderContainer>
 `;

@@ -6,8 +6,17 @@ exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
   <grid__Container
     mx="auto"
   >
-    <Row>
+    <Row
+      flexWrap={null}
+      ml={null}
+      mr={null}
+      mx={null}
+    >
       <Column
+        pb={null}
+        pl={null}
+        pr={null}
+        pt={null}
         px={null}
         py={null}
       >
