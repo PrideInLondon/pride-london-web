@@ -28,20 +28,55 @@ const Container = styled(Box)`
 Container.defaultProps = {
   mx: 'auto',
 }
+// Margin right/left. 0-4 represent index on the spacing scale. Numbers 5+ represents px value
+const rowMargin = [
+  1, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
+  10, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
+  40, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
+  75, // Margin between 3nd breakpoint(1024px) and 4th breakpoint (1440px)
+]
 
-const Row = props => (
-  <Flex
-    {...props}
-    // Margin right/left. 0-4 represent index on the spacing scale. Numbers 5+ represents px value
-    mx={[
-      1, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
-      10, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
-      40, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
-      75, // Margin between 3nd breakpoint(1024px) and 4th breakpoint (1440px)
-    ]}
-    flexWrap="wrap"
-  />
-)
+const Row = props => {
+  const { mx, mr, ml, flexWrap } = props
+  return (
+    <Flex
+      {...props}
+      {...(mx === null
+        ? {
+            mr: mr === null ? rowMargin : mr,
+            ml: ml === null ? rowMargin : ml,
+          }
+        : { mx })}
+      {...(flexWrap ? { flexWrap } : { flexWrap: 'wrap' })}
+    />
+  )
+}
+
+Row.propTypes = {
+  mx: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
+  mr: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
+  ml: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
+  flexWrap: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+}
+
+Row.defaultProps = {
+  mx: null,
+  mr: null,
+  ml: null,
+  flexWrap: null,
+}
 
 // Padding right/left. 0-4 represent index on the spacing scale on the theme.js. Numbers 5+ represents px value
 const columnXPadding = [
@@ -74,20 +109,6 @@ const Column = props => {
   )
 }
 
-const FlexColumn = styled(Column)`
-  display: block;
-
-  ${media.tablet`
-    display: flex;
-  `};
-`
-
-const StyledFlipMove = styled(FlipMove)`
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: 100%;
-`
-
 Column.propTypes = {
   px: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
   py: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
@@ -105,6 +126,20 @@ Column.defaultProps = {
   pt: null,
   pb: null,
 }
+
+const FlexColumn = styled(Column)`
+  display: block;
+
+  ${media.tablet`
+    display: flex;
+  `};
+`
+
+const StyledFlipMove = styled(FlipMove)`
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+`
 
 const GreyWrapper = styled.div`
   background-color: ${theme.colors.lightGrey};

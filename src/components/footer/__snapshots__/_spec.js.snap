@@ -3,7 +3,12 @@
 exports[`<Footer/> should render and match snapshot 1`] = `
 <styles__FooterWrapper>
   <styles__StyledFooter>
-    <Row>
+    <Row
+      flexWrap={null}
+      ml={null}
+      mr={null}
+      mx={null}
+    >
       <styles__SocialSection
         width={1}
       >

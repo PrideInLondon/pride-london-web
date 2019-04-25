@@ -5,7 +5,12 @@ exports[`ViewsContainer should render with default values 1`] = `
   <grid__Container
     mx="auto"
   >
-    <Row>
+    <Row
+      flexWrap={null}
+      ml={null}
+      mr={null}
+      mx={null}
+    >
       <Column
         pb={null}
         pl={null}
