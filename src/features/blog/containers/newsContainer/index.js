@@ -4,8 +4,14 @@ import Title from '../../components/title'
 import FiltersContainer from '../filtersContainer'
 import NewsCards from '../newsCards'
 import FeaturedArticleContainer from '../featuredArticleContainer'
-import { FlexColumn, Row } from '../../../../components/grid'
-import { Container, ShowMoreButton } from './styles'
+import {
+  Container,
+  FlexColumn,
+  Column,
+  Row,
+  GreyWrapper,
+} from '../../../../components/grid'
+import { ShowMoreButton } from './styles'
 
 const initialPaginationState = {
   end: 9,
@@ -45,27 +51,34 @@ class NewsContainer extends Component {
     const { selectedFilter, end, total } = this.state
     const { categories } = this.props
     return (
-      <div>
+      <section>
         <Container>
-          <Title>News</Title>
-        </Container>
-        <FeaturedArticleContainer />
-        <FiltersContainer
-          selectedFilter={selectedFilter}
-          handleFilterClick={this.handleFilterClick}
-          categories={categories}
-        />
-        <NewsCards articles={total.slice(0, end)} />
-        {end < total.length && (
           <Row>
-            <FlexColumn width={[1, 1, 1, 1]}>
-              <ShowMoreButton onClick={this.showMoreCards} primary>
-                Show more articles
-              </ShowMoreButton>
-            </FlexColumn>
+            <Column width={1}>
+              <Title>News</Title>
+            </Column>
           </Row>
-        )}
-      </div>
+        </Container>
+        <GreyWrapper>
+          <FeaturedArticleContainer />
+          <FiltersContainer
+            selectedFilter={selectedFilter}
+            handleFilterClick={this.handleFilterClick}
+            categories={categories}
+          />
+
+          <NewsCards articles={total.slice(0, end)} />
+          {end < total.length && (
+            <Row>
+              <FlexColumn width={[1, 1, 1, 1]}>
+                <ShowMoreButton onClick={this.showMoreCards} primary>
+                  Show more articles
+                </ShowMoreButton>
+              </FlexColumn>
+            </Row>
+          )}
+        </GreyWrapper>
+      </section>
     )
   }
 }
@@ -75,6 +88,7 @@ NewsContainer.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
+      readTime: PropTypes.number,
       category: PropTypes.shape({
         hexColour: PropTypes.string,
         title: PropTypes.string,

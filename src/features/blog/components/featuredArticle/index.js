@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FeaturedArticleTitle } from '../../containers/newsContainer/styles'
-import NewsFilter from '../newsFilter'
 import theme from '../../../../theme/theme'
 import NewsMetrics from '../../../../components/newsMetrics'
+import NewsCategory from '../../../../components/newsCategory'
 import { FeaturedArticleCard, CardHeader } from './styles'
-import starIcon from './starIcon.svg'
 
-const filterType = {
+const category = {
   title: 'Featured',
   hexColour: theme.colors.indigo,
 }
@@ -18,7 +17,7 @@ const FeaturedArticle = ({ data }) => {
   return (
     <FeaturedArticleCard>
       <CardHeader>
-        <NewsFilter filterType={filterType} icon={starIcon} />
+        <NewsCategory category={category} />
         <NewsMetrics datePublished={datePublished} />
       </CardHeader>
       <FeaturedArticleTitle>{title}</FeaturedArticleTitle>

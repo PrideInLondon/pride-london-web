@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import Button from '../../../../components/button'
 import theme from '../../../../theme/theme'
 
-export const Container = styled.div`
-  margin: 1rem;
-`
+// export const Container = styled.div`
+//   margin: 1rem;
+// `
 
 export const FeaturedArticleContainer = styled.div`
   position: relative;

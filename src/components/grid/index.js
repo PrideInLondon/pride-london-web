@@ -106,4 +106,8 @@ Column.defaultProps = {
   pb: null,
 }
 
-export { Container, Row, Column, FlexColumn, StyledFlipMove }
+const GreyWrapper = styled.div`
+  background-color: ${theme.colors.lightGrey};
+`
+
+export { Container, Row, Column, FlexColumn, StyledFlipMove, GreyWrapper }

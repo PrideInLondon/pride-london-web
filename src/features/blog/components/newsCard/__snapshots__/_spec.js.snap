@@ -3,6 +3,7 @@
 exports[`NewsCard renders with default values 1`] = `
 <styles__Card
   className=""
+  to="/"
 >
   <NewsCardHeader
     category={
@@ -13,12 +14,10 @@ exports[`NewsCard renders with default values 1`] = `
     }
     className=""
     datePublished="2019-03-28T20:30+00:00"
-    readLength={null}
+    readTime={null}
   />
   <styles__CardTitle>
-    <styles__UnderlineContainer>
-      Here is some news!
-    </styles__UnderlineContainer>
+    Here is some news!
   </styles__CardTitle>
 </styles__Card>
 `;

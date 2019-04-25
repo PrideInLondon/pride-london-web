@@ -7,10 +7,12 @@ export const FeaturedArticleCard = styled.div`
   border-radius: 2px;
   color: ${theme.colors.darkPurple};
   padding: 30px 15px;
-  width: 90%;
+  margin: -50px auto 0 auto;
+  position: relative;
 
   ${media.tablet`
     max-width: 830px;
+    margin-top: -100px;
   `};
 `
 export const CardHeader = styled.div`

@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import BannerImage from '../../../../components/banner/bannerImage'
 import FeaturedArticle from '../../components/featuredArticle'
-import { RelativeContainer, CenteredContainer } from './styles'
+import { Container, Row, Column } from '../../../../components/grid'
 
 export const query = graphql`
   query articleQuery {
@@ -31,12 +31,16 @@ const FeaturedArticleContainer = () => {
         } = data.contentfulArticleFeatured.featuredArticle.headerImage.sizes
 
         return (
-          <RelativeContainer>
+          <>
             <BannerImage color="blue" imageSrc={src} imageFullWidth />
-            <CenteredContainer>
-              <FeaturedArticle data={data} />
-            </CenteredContainer>
-          </RelativeContainer>
+            <Container>
+              <Row>
+                <Column width={1}>
+                  <FeaturedArticle data={data} />
+                </Column>
+              </Row>
+            </Container>
+          </>
         )
       }}
     />
