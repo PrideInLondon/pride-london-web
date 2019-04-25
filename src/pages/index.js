@@ -59,15 +59,14 @@ const FeaturedEventsTitle = styled.div`
   h2 {
     font-size: 26px;
     line-height: 32px;
-    font-weight: 600;
+    font-weight: bold;
     margin: 0;
     color: ${theme.colors.white};
 
     ${media.tablet`
       font-size: 36px;
       line-height: 38px;
-      font-weight: 600;
-  `};
+    `};
   }
 
   p {
