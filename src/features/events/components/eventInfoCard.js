@@ -15,6 +15,7 @@ import {
   TicketIcon,
 } from '../../../components/icons'
 import Button from '../../../components/button'
+import { formatPrice } from '../helpers'
 
 const Wrapper = styled.div`
   background-color: ${theme.colors.indigo};
@@ -61,15 +62,16 @@ const Detail = styled.p`
   font-size: 0.875rem;
 `
 
-const Item = ({ title, icon, detail }) => (
-  <Row>
-    <IconWrapper>{icon}</IconWrapper>
-    <div>
-      {title && <Title>{title}</Title>}
-      {detail && <Detail>{detail}</Detail>}
-    </div>
-  </Row>
-)
+const Item = ({ title, icon, detail }) =>
+  console.log(title, detail) || (
+    <Row>
+      <IconWrapper>{icon}</IconWrapper>
+      <div>
+        {title && <Title>{title}</Title>}
+        {detail && <Detail>{detail}</Detail>}
+      </div>
+    </Row>
+  )
 
 const Hr = styled.hr`
   border: none;
@@ -99,13 +101,6 @@ const timeFormat = 'h:mma'
 const formatTimeRange = (startTime, endTime) =>
   `${startTime.format(timeFormat)} to ${endTime.format(timeFormat)}`
 
-const formatPrice = (eventPriceLow, eventPriceHigh) => {
-  if (eventPriceLow === 0 && eventPriceHigh === 0) {
-    return 'Free'
-  }
-  return `From £${eventPriceLow}`
-}
-
 const formatAddress = (addressLine1, addressLine2, city, postcode) =>
   [addressLine1, addressLine2, [city, postcode].filter(Boolean).join(' ')]
     .filter(Boolean)
@@ -125,24 +120,25 @@ const VENUE_DETAILS = {
   indoors: 'Indoors',
 }
 
-export default function EventInfoCard({
-  data: {
-    locationName,
-    addressLine1,
-    addressLine2,
-    city,
-    postcode,
-    startTime,
-    endTime,
-    eventPriceLow,
-    eventPriceHigh,
-    email,
-    phone,
-    venueDetails,
-    ticketingUrl,
-    accessibilityOptions,
-  },
-}) {
+export default function EventInfoCard(props) {
+  const {
+    data: {
+      locationName,
+      addressLine1,
+      addressLine2,
+      city,
+      postcode,
+      eventPriceLow,
+      eventPriceHigh,
+      email,
+      phone,
+      venueDetails,
+      ticketingUrl,
+      accessibilityOptions,
+    },
+    pageContext: { startTime, endTime },
+  } = props
+  console.log(props)
   return (
     <Wrapper>
       {startTime && endTime && (
@@ -221,8 +217,6 @@ EventInfoCard.propTypes = {
     addressLine2: PropTypes.string,
     city: PropTypes.string,
     postcode: PropTypes.string,
-    startTime: PropTypes.string.isRequired,
-    endTime: PropTypes.string.isRequired,
     eventPriceLow: PropTypes.number,
     eventPriceHigh: PropTypes.number,
     email: PropTypes.string,
@@ -230,6 +224,11 @@ EventInfoCard.propTypes = {
     ticketingUrl: PropTypes.string,
     accessibilityOptions: PropTypes.arrayOf(PropTypes.string),
     venueDetails: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+  pageContext: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    startTime: PropTypes.string.isRequired,
+    endTime: PropTypes.string.isRequired,
   }).isRequired,
 }
 
@@ -240,8 +239,6 @@ export const query = graphql`
     addressLine2
     city
     postcode
-    startTime
-    endTime
     eventPriceLow
     eventPriceHigh
     email
