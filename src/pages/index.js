@@ -21,7 +21,8 @@ const FeaturedEventsContainer = styled.div`
   z-index: 1;
   padding: 30px 0;
   margin: 0 auto;
-
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
   ${media.tablet`
     padding: 60px 90px;
   `};
@@ -88,6 +89,8 @@ const EventsBackgroundLeft = styled.div`
 
   & img {
     max-height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 `
 const EventsBackgroundRight = styled.div`
@@ -99,6 +102,8 @@ const EventsBackgroundRight = styled.div`
 
   & img {
     max-height: 100%;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 `
 
