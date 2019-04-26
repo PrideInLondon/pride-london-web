@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsCardHeader from '../../../../components/newsCardHeader'
+import { handleSlug } from '../../../../utilities'
 import { Card, CardTitle } from './styles'
 
 const NewsCard = ({
-  id,
+  slug,
   datePublished,
   category,
   title,
   readTime,
   className,
 }) => (
-  <Card className={className} to={`/blog/${id}`}>
+  <Card className={className} to={handleSlug(slug)}>
     <NewsCardHeader
       category={category}
       datePublished={datePublished}
@@ -22,9 +23,9 @@ const NewsCard = ({
 )
 
 NewsCard.propTypes = {
+  slug: PropTypes.string.isRequired,
   datePublished: PropTypes.string.isRequired,
   readTime: PropTypes.number,
-  id: PropTypes.string.isRequired,
   category: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,

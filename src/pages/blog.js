@@ -59,6 +59,7 @@ export const blogLandingPageQuery = graphql`
       edges {
         node {
           id
+          slug
           title
           readTime
           category
@@ -71,6 +72,7 @@ export const blogLandingPageQuery = graphql`
       edges {
         node {
           id
+          slug
           title
           readTime
           category

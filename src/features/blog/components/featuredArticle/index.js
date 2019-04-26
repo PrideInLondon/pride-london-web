@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import theme from '../../../../theme/theme'
 import NewsMetrics from '../../../../components/newsMetrics'
 import NewsCategory from '../../../../components/newsCategory'
+import { handleSlug } from '../../../../utilities'
 import { FeaturedArticleCard, CardHeader, FeaturedArticleTitle } from './styles'
 
 const category = {
@@ -12,9 +13,9 @@ const category = {
 
 const FeaturedArticle = ({ data }) => {
   const { contentfulArticleFeatured: { featuredArticle = {} } = {} } = data
-  const { datePublished, title, id } = featuredArticle
+  const { datePublished, title, slug } = featuredArticle
   return (
-    <FeaturedArticleCard to={`/blog/${id}`}>
+    <FeaturedArticleCard to={handleSlug(slug)}>
       <CardHeader>
         <NewsCategory category={category} />
         <NewsMetrics datePublished={datePublished} />

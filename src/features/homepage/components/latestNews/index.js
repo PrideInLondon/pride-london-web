@@ -8,7 +8,7 @@ const LatestNews = ({
   category,
   title,
   headerImage,
-  id,
+  slug,
 }) => (
   <Background backgroundImage={headerImage.file.url}>
     <LatestNewsCardContainer>
@@ -17,7 +17,7 @@ const LatestNews = ({
         title={title}
         datePublished={datePublished}
         readTime={readTime}
-        id={id}
+        slug={slug}
       />
     </LatestNewsCardContainer>
   </Background>
@@ -26,7 +26,7 @@ const LatestNews = ({
 LatestNews.propTypes = {
   datePublished: PropTypes.string.isRequired,
   readTime: PropTypes.string,
-  id: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
   category: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,

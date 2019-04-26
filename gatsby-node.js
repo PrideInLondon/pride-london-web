@@ -36,6 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             id
+            slug
           }
         }
       }
@@ -115,7 +116,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const blogDetailsTemplate = path.resolve('./src/templates/blogDetails.js')
     result.data.articles.edges.forEach(edge => {
       createPage({
-        path: `blog/${edge.node.id}/`,
+        path: `/${edge.node.slug}/`,
         component: blogDetailsTemplate,
         context: {
           id: edge.node.id,
