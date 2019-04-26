@@ -9,7 +9,9 @@ import { formatDate } from '../helpers'
 // We have to skip displayColumn prop here to not render it in the DOM
 // eslint-disable-next-line no-unused-vars
 const Card = styled(({ displaycolumn, ...rest }) => <Link {...rest} />)`
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   border: none;
   text-decoration: none;
   color: ${theme.colors.black};
@@ -40,9 +42,10 @@ const CardImageOverflow = styled.div`
   height: auto;
   position: relative;
   padding-top: ${props => (props.displaycolumn ? '56.25%' : '0')};
-  min-height: 231px;
+  min-height: 180px;
 
   ${media.tablet`
+    min-height: 231px;
     padding-top: 56.25%;
   `};
 `
@@ -107,12 +110,7 @@ const CardPrice = styled.div`
   font-family: ${theme.fonts.title};
   font-weight: 600;
   padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.75rem;
-
-  ${media.tablet`
-    font-size: 1rem;
-  `};
+  font-size: 1rem;
 `
 
 const CardHeading = styled.h3`
