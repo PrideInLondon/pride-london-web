@@ -3,7 +3,7 @@
 exports[`NewsCard renders with default values 1`] = `
 <styles__Card
   className=""
-  to="/blog/abc123"
+  to="/undefined"
 >
   <NewsCardHeader
     category={

@@ -44,6 +44,7 @@ export const articleDetailsQuery = graphql`
     contentfulArticle: contentfulArticle(id: { eq: $id }) {
       id
       title
+      slug
       article {
         json
       }
@@ -75,6 +76,7 @@ export const articleDetailsQuery = graphql`
       edges {
         node {
           id
+          slug
           title
           datePublished
           category

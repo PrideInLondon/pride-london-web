@@ -33,7 +33,6 @@ exports[`NewsCards renders with default values 1`] = `
         category={Object {}}
         className=""
         datePublished="2019-03-28T20:30+00:00"
-        id="id"
         readTime={null}
         title="title"
       />

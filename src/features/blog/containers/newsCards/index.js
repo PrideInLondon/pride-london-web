@@ -7,7 +7,7 @@ const NewsCards = ({ articles }) => (
   <Container>
     <Row>
       {articles.map(
-        ({ datePublished, title, category, id, readTime }) => (
+        ({ datePublished, title, category, id, readTime, slug }) => (
           /* eslint-disable */
           <FlexColumn
             key={id}
@@ -23,8 +23,9 @@ const NewsCards = ({ articles }) => (
               category={category}
               title={title}
               datePublished={datePublished}
-              id={id}
+            //   id={id}
               readTime={readTime}
+              slug={slug}
             />
           </FlexColumn>
         )
@@ -37,7 +38,7 @@ const NewsCards = ({ articles }) => (
 NewsCards.propTypes = {
   articles: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
+      slug: PropTypes.string.isRequired,
       title: PropTypes.string,
       readTime: PropTypes.number,
       datePublished: PropTypes.string,

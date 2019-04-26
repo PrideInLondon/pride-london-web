@@ -8,7 +8,7 @@ export const query = graphql`
   query articleQuery {
     contentfulArticleFeatured {
       featuredArticle {
-        id
+        slug
         datePublished
         title
         headerImage {
