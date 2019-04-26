@@ -1,1 +1,1 @@
-Template
+Issue Template
