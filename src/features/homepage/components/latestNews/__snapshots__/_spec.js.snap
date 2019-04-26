@@ -14,6 +14,7 @@ exports[`LatestNews renders with default values 1`] = `
       }
       datePublished="2019-03-28T20:30+00:00"
       readTime=""
+      slug="some/slug"
       title="Here is some news!"
     />
   </styles__LatestNewsCardContainer>

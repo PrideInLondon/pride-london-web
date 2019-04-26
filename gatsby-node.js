@@ -96,10 +96,7 @@ exports.createPages = async ({ graphql, actions }) => {
             .minutes(originalStartTime.minutes())
             .toISOString()
           const endTime = moment(startTime)
-            .add(
-              getDuration(edge.node.startTime, edge.node.endTime),
-              'milliseconds'
-            )
+            .add(getDuration(edge.node.startTime, edge.node.endTime), 'ms')
             .toISOString()
 
           createPage({

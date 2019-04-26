@@ -62,16 +62,15 @@ const Detail = styled.p`
   font-size: 0.875rem;
 `
 
-const Item = ({ title, icon, detail }) =>
-  console.log(title, detail) || (
-    <Row>
-      <IconWrapper>{icon}</IconWrapper>
-      <div>
-        {title && <Title>{title}</Title>}
-        {detail && <Detail>{detail}</Detail>}
-      </div>
-    </Row>
-  )
+const Item = ({ title, icon, detail }) => (
+  <Row>
+    <IconWrapper>{icon}</IconWrapper>
+    <div>
+      {title && <Title>{title}</Title>}
+      {detail && <Detail>{detail}</Detail>}
+    </div>
+  </Row>
+)
 
 const Hr = styled.hr`
   border: none;
@@ -120,25 +119,23 @@ const VENUE_DETAILS = {
   indoors: 'Indoors',
 }
 
-export default function EventInfoCard(props) {
-  const {
-    data: {
-      locationName,
-      addressLine1,
-      addressLine2,
-      city,
-      postcode,
-      eventPriceLow,
-      eventPriceHigh,
-      email,
-      phone,
-      venueDetails,
-      ticketingUrl,
-      accessibilityOptions,
-    },
-    pageContext: { startTime, endTime },
-  } = props
-  console.log(props)
+export default function EventInfoCard({
+  data: {
+    locationName,
+    addressLine1,
+    addressLine2,
+    city,
+    postcode,
+    eventPriceLow,
+    eventPriceHigh,
+    email,
+    phone,
+    venueDetails,
+    ticketingUrl,
+    accessibilityOptions,
+  },
+  pageContext: { startTime, endTime },
+}) {
   return (
     <Wrapper>
       {startTime && endTime && (
@@ -202,7 +199,7 @@ export default function EventInfoCard(props) {
 Item.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object.isRequired,
-  detail: PropTypes.string,
+  detail: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 }
 
 Item.defaultProps = {
