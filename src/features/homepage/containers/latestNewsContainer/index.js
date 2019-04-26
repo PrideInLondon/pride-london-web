@@ -16,6 +16,7 @@ export const query = graphql`
       edges {
         node {
           id
+          slug
           datePublished
           title
           category

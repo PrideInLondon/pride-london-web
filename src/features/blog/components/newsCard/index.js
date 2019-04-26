@@ -1,30 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsCardHeader from '../../../../components/newsCardHeader'
-import { Card, CardTitle, UnderlineContainer } from './styles'
+import { handleSlug } from '../../../../utilities'
+import { Card, CardTitle } from './styles'
 
 const NewsCard = ({
+  slug,
   datePublished,
   category,
   title,
-  readLength,
+  readTime,
   className,
 }) => (
-  <Card className={className}>
+  <Card className={className} to={handleSlug(slug)}>
     <NewsCardHeader
       category={category}
       datePublished={datePublished}
-      readLength={readLength}
+      readTime={readTime}
     />
-    <CardTitle>
-      <UnderlineContainer>{title}</UnderlineContainer>
-    </CardTitle>
+    <CardTitle>{title}</CardTitle>
   </Card>
 )
 
 NewsCard.propTypes = {
+  slug: PropTypes.string.isRequired,
   datePublished: PropTypes.string.isRequired,
-  readLength: PropTypes.string,
+  readTime: PropTypes.number,
   category: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,
@@ -34,7 +35,7 @@ NewsCard.propTypes = {
 }
 
 NewsCard.defaultProps = {
-  readLength: null,
+  readTime: null,
   className: '',
 }
 

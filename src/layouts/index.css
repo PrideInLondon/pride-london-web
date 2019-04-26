@@ -59,7 +59,7 @@ h2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   margin: 3.125rem 0 1.875rem 0;
 }
@@ -115,6 +115,41 @@ a:not([class]):focus {
   color: #2cda9d;
 }
 
+hr {
+  border-top: none;
+  border-color: #efefef;
+  margin: 20px 0;
+}
+
+.slick-prev,
+.slick-prev:hover,
+.slick-prev:focus {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgOSAxNCIgd2lkdGg9IjkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTMxLjM3ODY3OTcgMzAtNC45MzkzMzk5LTQuNjEwMDUwNWMtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5LjU4NTc4NjUtLjU0NjczNCAxLjUzNTUzMzktLjU0NjczNCAyLjEyMTMyMDQgMGw2IDUuNmMuNTg1Nzg2NC41NDY3MzQuNTg1Nzg2NCAxLjQzMzE2NSAwIDEuOTc5ODk5bC02IDUuNmMtLjU4NTc4NjUuNTQ2NzM0LTEuNTM1NTMzOS41NDY3MzQtMi4xMjEzMjA0IDAtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5eiIgZmlsbD0iIzJkMmY3ZiIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgMzUgLTIzKSIvPjwvc3ZnPg==');
+  background-color: #fff;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.slick-next,
+.slick-next:hover,
+.slick-next:focus {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgOSAxNCIgd2lkdGg9IjkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTMxLjM3ODY3OTcgMzAtNC45MzkzMzk5LTQuNjEwMDUwNWMtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5LjU4NTc4NjUtLjU0NjczNCAxLjUzNTUzMzktLjU0NjczNCAyLjEyMTMyMDQgMGw2IDUuNmMuNTg1Nzg2NC41NDY3MzQuNTg1Nzg2NCAxLjQzMzE2NSAwIDEuOTc5ODk5bC02IDUuNmMtLjU4NTc4NjUuNTQ2NzM0LTEuNTM1NTMzOS41NDY3MzQtMi4xMjEzMjA0IDAtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5eiIgZmlsbD0iIzJkMmY3ZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI2IC0yMykiLz48L3N2Zz4=');
+  background-color: #fff;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  content: none;
+}
+
 /*Desktop Styles*/
 @media (min-width: 768px) {
   h1 {
@@ -150,5 +185,9 @@ a:not([class]):focus {
   li {
     font-size: 1.125rem;
     line-height: 1.6875rem;
+  }
+
+  hr {
+    margin: 40px 0;
   }
 }

@@ -7,7 +7,7 @@ export const views = [
     },
     category: 'Views',
     datePublished: '2019-05-17',
-    headerImage: {
+    featuredImage: {
       file: {
         url: 'src',
       },
@@ -18,12 +18,12 @@ export const views = [
   {
     author: {
       display_name: {
-        display_name: 'Test',
+        display_name: 'Test 2',
       },
     },
     category: 'Views',
     datePublished: '2019-05-17',
-    headerImage: {
+    featuredImage: {
       file: {
         url: 'src',
       },

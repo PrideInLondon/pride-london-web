@@ -21,15 +21,18 @@ const OtherArticles = ({
       </FlexColumn>
     </Row>
     <Row>
-      {articles.map(({ node: { id, title, category, datePublished } }) => (
-        <FlexColumn key={id} width={[1, 1, 1 / 2, 1 / 3]}>
-          <ArticleCard
-            category={categories.find(cat => cat.title == category)}
-            title={title}
-            datePublished={datePublished}
-          />
-        </FlexColumn>
-      ))}
+      {articles.map(
+        ({ node: { id, title, category, datePublished, slug } }) => (
+          <FlexColumn key={id} width={[1, 1, 1 / 2, 1 / 3]}>
+            <ArticleCard
+              category={categories.find(cat => cat.title == category)}
+              title={title}
+              datePublished={datePublished}
+              slug={slug}
+            />
+          </FlexColumn>
+        )
+      )}
     </Row>
   </Container>
 )

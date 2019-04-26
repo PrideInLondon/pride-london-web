@@ -4,7 +4,6 @@ import theme from '../../../theme/theme'
 
 export const BannerTitleWrapper = styled.div`
   margin-left: 10px;
-  max-width: 80%;
 `
 
 export const BannerTitle = styled.h1`

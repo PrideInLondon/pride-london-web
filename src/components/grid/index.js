@@ -2,6 +2,7 @@ import React from 'react'
 import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 import FlipMove from 'react-flip-move'
+import PropTypes from 'prop-types'
 
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
@@ -27,35 +28,104 @@ const Container = styled(Box)`
 Container.defaultProps = {
   mx: 'auto',
 }
+// Margin right/left. 0-4 represent index on the spacing scale. Numbers 5+ represents px value
+const rowMargin = [
+  1, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
+  10, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
+  40, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
+  75, // Margin between 3nd breakpoint(1024px) and 4th breakpoint (1440px)
+]
 
-const Row = props => (
-  <Flex
-    {...props}
-    // Margin right/left. 0-4 represent index on the spacing scale. Numbers 5+ represents px value
-    mx={[
-      1, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
-      10, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
-      40, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
-      75, // Margin between 3nd breakpoint(1024px) and 4th breakpoint (1440px)
-    ]}
-    flexWrap="wrap"
-  />
-)
+const Row = props => {
+  const { mx, mr, ml, flexWrap } = props
+  return (
+    <Flex
+      {...props}
+      {...(mx === null
+        ? {
+            mr: mr === null ? rowMargin : mr,
+            ml: ml === null ? rowMargin : ml,
+          }
+        : { mx })}
+      {...(flexWrap ? { flexWrap } : { flexWrap: 'wrap' })}
+    />
+  )
+}
 
-const Column = props => (
-  <Box
-    {...props}
-    // Padding right/left. 0-4 represent index on the spacing scale. Numbers 5+ represents px value
-    px={[
-      1, // pad btwn 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
-      2, // pad btwn 1st breakpoint(375px) and 2nd breakpoint (768px). 2 = 10px on spacing scale
-      2, // pad btwn 2nd breakpoint(768px) and 3rd breakpoint (1280px). 2 = 10px on spacing scale
-      3, // pad from 3rd breakpoint(1024px) onwards
-    ]}
-    // Padding top/bottom. 0-4 represent index on the spacing scale. Numbers 5+ represents px value
-    py={2} // Global padding. 2 = 10px on spacing scale
-  />
-)
+Row.propTypes = {
+  mx: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
+  mr: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
+  ml: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
+  flexWrap: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+}
+
+Row.defaultProps = {
+  mx: null,
+  mr: null,
+  ml: null,
+  flexWrap: null,
+}
+
+// Padding right/left. 0-4 represent index on the spacing scale on the theme.js. Numbers 5+ represents px value
+const columnXPadding = [
+  1, // pad btwn 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
+  2, // pad btwn 1st breakpoint(375px) and 2nd breakpoint (768px). 2 = 10px on spacing scale
+  2, // pad btwn 2nd breakpoint(768px) and 3rd breakpoint (1280px). 2 = 10px on spacing scale
+  3, // pad from 3rd breakpoint(1024px) onwards
+]
+// Padding top/bottom. 0-4 represent index on the spacing scale. Numbers 5+ represents px value
+const columnYPadding = 2
+
+const Column = props => {
+  const { px, py, pr, pl, pt, pb } = props
+  return (
+    <Box
+      {...props}
+      {...(px === null
+        ? {
+            pr: pr === null ? columnXPadding : pr,
+            pl: pl === null ? columnXPadding : pl,
+          }
+        : { px })}
+      {...(py === null
+        ? {
+            pt: pt === null ? columnYPadding : pt,
+            pb: pb === null ? columnYPadding : pb,
+          }
+        : { py })}
+    />
+  )
+}
+
+Column.propTypes = {
+  px: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
+  py: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
+  pr: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
+  pl: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
+  pt: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
+  pb: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
+}
+
+Column.defaultProps = {
+  px: null,
+  py: null,
+  pr: null,
+  pl: null,
+  pt: null,
+  pb: null,
+}
 
 const FlexColumn = styled(Column)`
   display: block;
@@ -71,4 +141,8 @@ const StyledFlipMove = styled(FlipMove)`
   flex-basis: 100%;
 `
 
-export { Container, Row, Column, FlexColumn, StyledFlipMove }
+const GreyWrapper = styled.div`
+  background-color: ${theme.colors.lightGrey};
+`
+
+export { Container, Row, Column, FlexColumn, StyledFlipMove, GreyWrapper }

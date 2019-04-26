@@ -3,8 +3,9 @@ import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
 
 export const BannerSubtitle = styled.h2`
-  color: #ffffff;
+  color: ${theme.colors.white};
   font-size: 1rem;
+  font-weight: 600;
   display: inline;
   background-color: ${theme.colors.indigo};
   line-height: 1.87;

@@ -14,6 +14,7 @@ import {
   EventDirectionsSection,
 } from '../features/events'
 import { Container, Row, Column } from '../components/grid'
+import { formatPrice } from '../features/events/helpers'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -79,6 +80,18 @@ const EventInfoCardWrapper = styled.div`
   `};
 `
 
+const AccessibilityHeading = styled.h2`
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  margin: 1.875rem 0 0.9375rem 0;
+  ${media.tablet`
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+    margin: 1.875rem 0;
+  `};
+`
+
 // eslint-disable-next-line react/prefer-stateless-function
 export default class Event extends Component {
   render() {
@@ -88,12 +101,146 @@ export default class Event extends Component {
       eventDescription,
       name,
       performances,
+      eventPriceLow,
+      eventPriceHigh,
       eventCategories,
+      accessibilityDetails,
+      location,
+      locationName,
+      addressLine1,
+      addressLine2,
+      city,
+      postcode,
     } = this.props.data.contentfulEvent
+
+    const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
+    const metaUrl =
+      this.props.data.site.siteMetadata.siteUrl + this.props.location.pathname
 
     return (
       <PageWrapper>
-        <Helmet title={name} />
+        <Helmet
+          title={name}
+          meta={[
+            // Schema meta tags
+            {
+              itemprop: 'name',
+              content: name,
+            },
+            {
+              itemprop: 'description',
+              content: eventDescription.eventDescription,
+            },
+            {
+              itemprop: 'url',
+              content: metaUrl,
+            },
+            {
+              itemprop: 'thumbnailUrl',
+              content: metaImg,
+            },
+            {
+              itemprop: 'image',
+              content: metaImg,
+            },
+            {
+              itemprop: 'startDate',
+              content: this.props.pageContext.startTime,
+            },
+            {
+              itemprop: 'endDate',
+              content: this.props.pageContext.endTime,
+            },
+            {
+              itemprop: 'isAccessibleForFree',
+              content: eventPriceLow === 0 ? true : false,
+            },
+            {
+              itemprop: 'offers',
+              itemscope: true,
+              itemtype: 'http://schema.org/Offer',
+              itemref: 'meta-price',
+            },
+            {
+              itemprop: 'price',
+              id: 'meta-price',
+              content: formatPrice(eventPriceLow, eventPriceHigh),
+            },
+
+            // OpenGraph Meta Tags
+            {
+              property: 'og:title',
+              content: name,
+            },
+            {
+              property: 'og:description',
+              content: eventDescription.eventDescription,
+            },
+            {
+              property: 'og:latitude',
+              content: location.lat,
+            },
+            {
+              property: 'og:longitude',
+              content: location.lon,
+            },
+            {
+              property: 'og:street-address',
+              content: !addressLine1
+                ? ''
+                : addressLine2
+                ? `${locationName}, ${addressLine1}, ${addressLine2}`
+                : `${locationName}, ${addressLine1}`,
+            },
+            {
+              property: 'og:locality',
+              content: city && city,
+            },
+            {
+              property: 'og:postal-code',
+              content: postcode && postcode,
+            },
+            {
+              property: 'og:url',
+              content: metaUrl,
+            },
+            {
+              property: 'og:image',
+              content: metaImg,
+            },
+            {
+              property: 'og:image:secure_url',
+              content: metaImg,
+            },
+
+            // Twitter Meta Tags
+            {
+              name: 'twitter:title',
+              content: name,
+            },
+            {
+              name: 'twitter:description',
+              content: eventDescription.eventDescription,
+            },
+            {
+              name: 'twitter:image',
+              content: metaImg,
+            },
+            {
+              name: 'twitter:url',
+              content: metaUrl,
+            },
+          ]}
+          htmlAttributes={{
+            itemtype: 'http://schema.org/Event',
+          }}
+          link={[
+            {
+              rel: 'canonical',
+              href: metaUrl,
+            },
+          ]}
+        />
         <HeroImageAndTitle>
           <HeroImage
             src={individualEventPicture.file.url}
@@ -104,7 +251,10 @@ export default class Event extends Component {
           <Container>
             <Row>
               <RelativeColumn width={1}>
-                <EventInfoCard data={this.props.data.contentfulEvent} />
+                <EventInfoCard
+                  data={this.props.data.contentfulEvent}
+                  pageContext={this.props.pageContext}
+                />
               </RelativeColumn>
             </Row>
           </Container>
@@ -119,6 +269,16 @@ export default class Event extends Component {
               <Section>
                 <ReactMarkdown source={eventDescription.eventDescription} />
               </Section>
+              {accessibilityDetails && (
+                <>
+                  <AccessibilityHeading>Accessibility</AccessibilityHeading>
+                  <Section>
+                    <ReactMarkdown
+                      source={accessibilityDetails.accessibilityDetails}
+                    />
+                  </Section>
+                </>
+              )}
               {performances && (
                 <Section>
                   <EventSchedule schedule={performances} />
@@ -136,10 +296,21 @@ export default class Event extends Component {
 
 Event.propTypes = {
   data: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired,
 }
 
 export const eventPageQuery = graphql`
   query eventQuery($id: String!) {
+    site {
+      siteMetadata {
+        name
+        title
+        description
+        siteUrl
+      }
+    }
+
     contentfulEvent(id: { eq: $id }) {
       id
       name
@@ -156,6 +327,9 @@ export const eventPageQuery = graphql`
       }
       eventDescription {
         eventDescription
+      }
+      accessibilityDetails {
+        accessibilityDetails
       }
       ...eventDirectionsFragment
       ...eventInfoCardQuery

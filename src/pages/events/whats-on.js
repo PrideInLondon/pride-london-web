@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import moment from 'moment'
+import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import { noScroll } from '../../utilities'
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
@@ -108,6 +110,7 @@ class GroupedEventsCards extends Component {
           1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
         ]}
         key={event.node.id}
+        py={[2, 2, 2, 3]}
       >
         {header && <DateGroupHeading>{header}</DateGroupHeading>}
         <EventListingCard event={event.node} />
@@ -155,6 +158,16 @@ class Events extends Component {
       <Consumer>
         {context => (
           <PageWrapper>
+            <Helmet
+              meta={[
+                {
+                  name: 'apple-itunes-app',
+                  content: `app-id=${
+                    this.props.data.site.siteMetadata.appleAppId
+                  }`,
+                },
+              ]}
+            />
             <BannerImage
               titleText="What's on"
               subtitleText="Checkout the huge array of events that Pride are running during the festival"
@@ -236,4 +249,18 @@ class Events extends Component {
   }
 }
 
+Events.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
 export default Events
+
+export const EventsPageQuery = graphql`
+  query EventsPageQuery {
+    site {
+      siteMetadata {
+        appleAppId
+      }
+    }
+  }
+`

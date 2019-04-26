@@ -4,10 +4,11 @@ import { Background, LatestNewsCardContainer, NewsCard } from './styles'
 
 const LatestNews = ({
   datePublished,
-  readLength,
+  readTime,
   category,
   title,
   headerImage,
+  slug,
 }) => (
   <Background backgroundImage={headerImage.file.url}>
     <LatestNewsCardContainer>
@@ -15,7 +16,8 @@ const LatestNews = ({
         category={category}
         title={title}
         datePublished={datePublished}
-        readLength={readLength}
+        readTime={readTime}
+        slug={slug}
       />
     </LatestNewsCardContainer>
   </Background>
@@ -23,7 +25,8 @@ const LatestNews = ({
 
 LatestNews.propTypes = {
   datePublished: PropTypes.string.isRequired,
-  readLength: PropTypes.string,
+  readTime: PropTypes.string,
+  slug: PropTypes.string.isRequired,
   category: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,
@@ -37,7 +40,7 @@ LatestNews.propTypes = {
 }
 
 LatestNews.defaultProps = {
-  readLength: null,
+  readTime: null,
 }
 
 export default LatestNews

@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsDate from '../../features/blog/components/newsDate'
-import { NewsMetricsContainer, ReadLength } from './styles'
+import { NewsMetricsContainer, ReadTime } from './styles'
 
-const CenterDot = () => <span> · </span>
-export const NewsMetrics = ({ datePublished, readLength, className }) => {
+const CenterDot = () => <span> • </span>
+export const NewsMetrics = ({ datePublished, readTime, className }) => {
   return (
     <NewsMetricsContainer className={className}>
       <NewsDate date={datePublished} />
-      {readLength && (
+      {readTime && (
         <>
           <CenterDot />
-          <ReadLength>{readLength}</ReadLength>
+          <ReadTime>{readTime} min read</ReadTime>
         </>
       )}
     </NewsMetricsContainer>
@@ -20,12 +20,12 @@ export const NewsMetrics = ({ datePublished, readLength, className }) => {
 
 NewsMetrics.propTypes = {
   datePublished: PropTypes.string.isRequired,
-  readLength: PropTypes.string,
+  readTime: PropTypes.number,
   className: PropTypes.string,
 }
 
 NewsMetrics.defaultProps = {
-  readLength: null,
+  readTime: null,
   className: 'className',
 }
 

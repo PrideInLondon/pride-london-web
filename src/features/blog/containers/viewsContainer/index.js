@@ -1,22 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import theme from '../../../../theme/theme'
+import Slider from 'react-slick'
 import ViewsCard from '../../components/viewsCard'
-import Title from '../../components/title'
-import { Container, CardContainer } from './styles'
+import { Container, Row, Column } from '../../../../components/grid'
+import { CardContainer, ViewsTitle } from './styles'
+import { settings } from './slickSettings'
 
 const ViewsContainer = ({ views }) => {
   return (
-    <Container>
-      <Title theme={theme} isLight isCentered>
-        Views
-      </Title>
-      <CardContainer>
-        {views.map(view => (
-          <ViewsCard {...view} key={view.id} />
-        ))}
-      </CardContainer>
-    </Container>
+    <section>
+      <Container>
+        <Row>
+          <Column width={1}>
+            <CardContainer>
+              <ViewsTitle isLight isCentered>
+                Views
+              </ViewsTitle>
+              <Slider {...settings}>
+                {views.map(view => (
+                  <ViewsCard {...view} key={view.id} />
+                ))}
+              </Slider>
+            </CardContainer>
+          </Column>
+        </Row>
+      </Container>
+    </section>
   )
 }
 

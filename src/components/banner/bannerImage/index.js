@@ -15,11 +15,13 @@ const BannerImage = ({
   color,
   children,
   large,
+  medium,
   allowContentUnderflow,
 }) => (
   <StyledWrapper
     color={color}
     large={large}
+    medium={medium}
     allowContentUnderflow={allowContentUnderflow}
     imageSrc={imageSrc}
     imageFullWidth={imageFullWidth}
@@ -40,6 +42,7 @@ const BannerImage = ({
 
 BannerImage.propTypes = {
   large: PropTypes.bool,
+  medium: PropTypes.bool,
   homepage: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageFullWidth: PropTypes.bool,
@@ -57,6 +60,7 @@ BannerImage.propTypes = {
 
 BannerImage.defaultProps = {
   large: false,
+  medium: false,
   homepage: false,
   imageFullWidth: false,
   imageSrc: '',

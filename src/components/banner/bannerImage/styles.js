@@ -38,7 +38,7 @@ export const StyledWrapper = styled.div`
   overflow: hidden;
   position: relative;
   background-color: ${props => props.color};
-  height: ${props => props.large && '400px'};
+  min-height: ${props => (props.large || props.medium) && '400px'};
 
   ${props =>
     props.imageSrc &&
@@ -50,42 +50,45 @@ export const StyledWrapper = styled.div`
       background-position: center center;
     `}
 
-    ${props =>
-      props.allowContentUnderflow &&
-      props.large &&
-      css`
-        ${media.tablet`
-          margin-bottom: -100px;
-          ${StyledRow} {
-            align-self: flex-start;
-          }
-        `};
+  ${props =>
+    props.allowContentUnderflow &&
+    (props.large || props.medium) &&
+    css`
+      ${media.tablet`
+        ${StyledRow} {
+        align-self: flex-start;
+        }
+    `};
+    `}
 
-        ${media.desktop`
-          margin-bottom: -250px;
-        `};
-
-        ${media.desktopHD`
-          margin-bottom: -300px;
-        `};
-      `}
-  
+  ${props =>
+    props.allowContentUnderflow &&
+    props.medium &&
+    css`
+      ${media.tabletMax`
+      ${StyledRow} {
+        align-self: flex-start;
+        padding-top: 20px;
+      }
+    `};
+    `}
 
   ${media.mobile`
-    height: ${props => props.large && '400px'};
+    min-height: ${props => props.large && '400px'};
   `};
 
   ${media.tablet`
     align-items: center;
-    height: ${props => (props.large ? '500px' : '400px')};
+    min-height: ${props => (props.large || props.medium ? '500px' : '400px')};
     padding: 0;
   `};
 
   ${media.desktop`
-    height: ${props => props.large && '650px'};
+    min-height: ${props =>
+      props.large ? '650px' : props.medium ? '590px' : '400px'};
   `};
 
   ${media.desktopHD`
-    height: ${props => props.large && '800px'};
+    min-height: ${props => props.large && '800px'};
   `};
 `

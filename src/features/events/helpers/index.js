@@ -1,24 +1,31 @@
 const moment = require('moment')
 const { dateFormat } = require('../../../constants')
 
-const formatTime = time => {
-  if (moment.parseZone(time).format('mm') === '00') {
-    return moment.parseZone(time).format('ha')
+const formatPrice = (eventPriceLow, eventPriceHigh) => {
+  if (eventPriceLow === 0 && (eventPriceHigh === 0 || eventPriceHigh == null)) {
+    return 'Free'
   }
-  return moment.parseZone(time).format('h:mma')
+  return `From £${eventPriceLow.toFixed(2).replace('.00', '')}`
+}
+
+const formatTime = time => {
+  if (moment(time).format('mm') === '00') {
+    return moment(time).format('ha')
+  }
+  return moment(time).format('h:mma')
 }
 
 const formatDate = event => {
-  const year = moment.parseZone(event.startTime).year()
+  const year = moment(event.startTime).year()
 
-  const startDate = moment.parseZone(event.startTime).format('L')
-  const endDate = moment.parseZone(event.endTime).format('L')
+  const startDate = moment(event.startTime).format('L')
+  const endDate = moment(event.endTime).format('L')
 
-  const startMonth = moment.parseZone(event.startTime).format('MMM')
-  const endMonth = moment.parseZone(event.endTime).format('MMM')
+  const startMonth = moment(event.startTime).format('MMM')
+  const endMonth = moment(event.endTime).format('MMM')
 
-  const startDay = moment.parseZone(event.startTime).date()
-  const endDay = moment.parseZone(event.endTime).date()
+  const startDay = moment(event.startTime).date()
+  const endDay = moment(event.endTime).date()
 
   const startTime = formatTime(event.startTime)
   const endTime = formatTime(event.endTime)
@@ -158,6 +165,7 @@ function getDuration(start, end) {
 module.exports = {
   formatDate,
   formatTime,
+  formatPrice,
   filterByDate,
   filterByFree,
   filterByCategory,

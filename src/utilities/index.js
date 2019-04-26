@@ -14,6 +14,12 @@ export function contactUrl(url) {
   return contact.test(url)
 }
 
+export function handleSlug(slug) {
+  const hasLeadingSlash = /^[\/]/
+  if (hasLeadingSlash.test(slug)) return slug
+  return `/${slug}`
+}
+
 export const noScroll = {
   on() {
     document.querySelector('html').classList.add('no-scroll')
