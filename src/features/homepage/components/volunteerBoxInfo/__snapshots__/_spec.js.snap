@@ -6,8 +6,17 @@ exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
   <grid__Container
     mx="auto"
   >
-    <Row>
+    <Row
+      flexWrap={null}
+      ml={null}
+      mr={null}
+      mx={null}
+    >
       <Column
+        pb={null}
+        pl={null}
+        pr={null}
+        pt={null}
         px={null}
         py={null}
       >
@@ -27,7 +36,7 @@ exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
             onClick={null}
             primary={true}
             small={false}
-            to="#"
+            to="/support-us/volunteer/"
             type="button"
             white={false}
             wide={false}

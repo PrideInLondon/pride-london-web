@@ -11,4 +11,4 @@ export const NewsMetricsContainer = styled.span`
   line-height: 1.43;
   letter-spacing: normal;
 `
-export const ReadLength = styled.span``
+export const ReadTime = styled.span``

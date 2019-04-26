@@ -7,25 +7,25 @@ import { NewsCardHeaderContainer } from './styles'
 export const NewsCardHeader = ({
   category,
   datePublished,
-  readLength,
+  readTime,
   className,
 }) => (
   <NewsCardHeaderContainer className={className}>
     <NewsCategory category={category} />
-    <NewsMetrics datePublished={datePublished} readLength={readLength} />
+    <NewsMetrics datePublished={datePublished} readTime={readTime} />
   </NewsCardHeaderContainer>
 )
 
 NewsCardHeader.propTypes = {
   category: PropTypes.object.isRequired,
   datePublished: PropTypes.string.isRequired,
-  readLength: PropTypes.string,
+  readTime: PropTypes.number,
   className: PropTypes.string,
 }
 
 NewsCardHeader.defaultProps = {
   className: '',
-  readLength: '',
+  readTime: null,
 }
 
 export default NewsCardHeader

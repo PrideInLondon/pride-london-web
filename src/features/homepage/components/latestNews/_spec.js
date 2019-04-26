@@ -9,7 +9,7 @@ describe(LatestNews.name, () => {
       hexColour: '#304242',
       title: 'Amazing News!!',
     }
-    const readLength = ''
+    const readTime = ''
     const datePublished = '2019-03-28T20:30+00:00'
     const headerImage = { file: { url: 'backgroundimageurl/image.png' } }
     const wrapper = shallow(
@@ -17,7 +17,7 @@ describe(LatestNews.name, () => {
         category={category}
         title={title}
         datePublished={datePublished}
-        readLength={readLength}
+        readTime={readTime}
         headerImage={headerImage}
       />
     )

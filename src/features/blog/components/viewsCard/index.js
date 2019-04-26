@@ -14,7 +14,7 @@ const ViewsCard = ({ featuredImage, author, title, id, readTime }) => {
     <ViewsSlide>
       <ViewsThumbnail
         src={`${photoUrl}?fit=crop&w=400&h=400`}
-        altText={`${author.display_name.display_name} — ${title}`}
+        alt={`${author.display_name.display_name} — ${title}`}
       />
       <ArticleAuthor>
         {author.display_name.display_name}

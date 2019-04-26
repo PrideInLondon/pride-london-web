@@ -59,7 +59,7 @@ h2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   margin: 3.125rem 0 1.875rem 0;
 }
@@ -118,6 +118,7 @@ a:not([class]):focus {
 hr {
   border-top: none;
   border-color: #efefef;
+  margin: 20px 0;
 }
 
 .slick-prev,
