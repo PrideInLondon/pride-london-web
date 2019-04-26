@@ -1,1 +1,1 @@
-This is a PR Template
+Template
