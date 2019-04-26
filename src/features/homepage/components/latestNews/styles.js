@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import { NewsCard as NewsCardHomepage } from '../../../homepage/containers/latestNewsContainer/styles'
 
-export const Background = styled.div`
+export const Background = styled(Link)`
   display: flex;
   background-image: url(${props => props.backgroundImage});
   background-size: cover;

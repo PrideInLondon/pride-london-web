@@ -3,6 +3,7 @@
 exports[`LatestNews renders with default values 1`] = `
 <styles__Background
   backgroundImage="backgroundimageurl/image.png"
+  to="/undefined"
 >
   <styles__LatestNewsCardContainer>
     <styles__NewsCard
