@@ -23,7 +23,7 @@ const NewsCards = ({ articles }) => (
               category={category}
               title={title}
               datePublished={datePublished}
-            //   id={id}
+              //   id={id}
               readTime={readTime}
               slug={slug}
             />
