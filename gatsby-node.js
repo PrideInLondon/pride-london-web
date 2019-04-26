@@ -2,7 +2,6 @@ const path = require('path')
 const moment = require('moment')
 const {
   sanitizeDates,
-  formatTime,
   getDuration,
   filterPastEvents,
 } = require('./src/features/events/helpers')
