@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { NewsCard as NewsCardHomepage } from '../../../homepage/containers/latestNewsContainer/styles'
+import { media } from '../../../../theme/media'
 
 export const Background = styled.div`
   display: flex;
@@ -13,10 +14,16 @@ export const Background = styled.div`
 `
 export const LatestNewsCardContainer = styled.div`
   position: absolute;
-  left: 30px;
-  right: 30px;
-  bottom: 0;
+  left: 20px;
+  right: 20px;
+  bottom: -98px;
   max-width: 616px;
+
+  ${media.tablet`  
+    left: 30px;
+    right: 30px;
+    bottom: 0;
+  `};
 `
 
 export const NewsCard = styled(NewsCardHomepage)`
