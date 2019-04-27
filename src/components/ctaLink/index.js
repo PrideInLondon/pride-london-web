@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import theme from '../../theme/theme'
-import { externalUrl, contactUrl } from '../../utilities'
+import { handleUrl } from '../../utilities'
 
 const StyledLink = styled.a`
   border-bottom: 2px solid ${theme.colors.eucalyptusGreen};
@@ -21,16 +20,7 @@ const StyledLink = styled.a`
 `
 
 const CTALink = ({ to, children }) => (
-  <StyledLink
-    {...to && !externalUrl(to) && !contactUrl(to) && { to: to, as: Link }}
-    {...to && (externalUrl(to) || contactUrl(to)) && { href: to }}
-    {...to &&
-      externalUrl(to) && {
-        rel: 'noopener noreferrer',
-        target: '_blank',
-      }}
-    className="cta-link"
-  >
+  <StyledLink {...handleUrl(to)} className="cta-link">
     {children}&nbsp;&rsaquo;
   </StyledLink>
 )

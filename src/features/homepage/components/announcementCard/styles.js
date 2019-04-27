@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'gatsby-link'
 import { media } from '../../../../theme/media'
 import theme from '../../../../theme/theme'
 
@@ -51,7 +50,7 @@ export const CardTitle = styled.h2`
   `};
 `
 
-export const CardLink = styled(Link)`
+export const CardLink = styled.a`
   position: relative;
   border: none;
   color: ${theme.colors.white};

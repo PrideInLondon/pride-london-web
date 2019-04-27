@@ -41,10 +41,8 @@ export const renderEmbeddedEntry = node => {
   switch (node.data.target.sys.contentType.sys.id) {
     case 'video':
       return renderVideo(node)
-      break
     case 'button':
       return renderButton(node)
-      break
     default:
       return null
   }

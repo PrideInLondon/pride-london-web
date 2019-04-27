@@ -43,6 +43,6 @@ describe('<CTALink/>', () => {
     const wrapper = mount(<CTALink to={link.contactUrl}>{link.text}</CTALink>)
     expect(wrapper.find('GatsbyLink')).toHaveLength(0)
     expect(wrapper.find('a').prop('rel')).toBeFalsy()
-    expect(wrapper.find('a').prop('target')).toBeFalsy()
+    expect(wrapper.find('a').prop('target')).toBeTruthy()
   })
 })
