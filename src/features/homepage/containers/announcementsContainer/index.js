@@ -11,7 +11,7 @@ import { AnnouncementsSliderWrapper } from './styles'
 
 export const query = graphql`
   query announcementsQuery {
-    allContentfulAnnouncements(limit: 6) {
+    allContentfulAnnouncement(limit: 6) {
       edges {
         node {
           id
@@ -51,7 +51,7 @@ const AnnouncementsContainer = () => (
     <StaticQuery
       query={query}
       render={({
-        allContentfulAnnouncements: { edges: announcements = [] } = {},
+        allContentfulAnnouncement: { edges: announcements = [] } = {},
       }) => (
         <>
           <FeaturedEventContent>
