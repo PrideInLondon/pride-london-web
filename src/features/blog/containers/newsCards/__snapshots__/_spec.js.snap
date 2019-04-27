@@ -34,6 +34,7 @@ exports[`NewsCards renders with default values 1`] = `
         className=""
         datePublished="2019-03-28T20:30+00:00"
         readTime={null}
+        slug="news/article"
         title="title"
       />
     </grid__FlexColumn>

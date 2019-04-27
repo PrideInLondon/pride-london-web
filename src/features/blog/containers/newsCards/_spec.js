@@ -12,6 +12,7 @@ describe(NewsCards.name, () => {
             title: 'title',
             id: 'id',
             datePublished: '2019-03-28T20:30+00:00',
+            slug: 'news/article',
           },
         ]}
       />
