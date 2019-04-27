@@ -9,6 +9,16 @@ import AnnouncementHeader from '../../../homepage/components/announcementHeader'
 import { settings } from './slickSettings'
 import { AnnouncementsSliderWrapper } from './styles'
 
+export const contentfulAssetFixed = graphql`
+  fragment GatsbyContentfulFixed on ContentfulFixed {
+    base64
+    width
+    height
+    src
+    srcSet
+  }
+`
+
 export const query = graphql`
   query announcementsQuery {
     allContentfulAnnouncement(limit: 6) {
@@ -18,6 +28,9 @@ export const query = graphql`
           title
           url
           image {
+            fixed {
+              ...GatsbyContentfulFixed
+            }
             file {
               url
             }
@@ -53,53 +66,55 @@ const AnnouncementsContainer = () => (
       query={query}
       render={({
         allContentfulAnnouncement: { edges: announcements = [] } = {},
-      }) => (
-        <>
-          <FeaturedEventContent>
-            <BgAnnouncement>
-              <Container>
-                <Row>
-                  <Column width={1}>
-                    <AnnouncementHeader />
-                    <AnnouncementsSliderWrapper>
-                      <Slider {...settings}>
-                        {announcements.map(
-                          ({
-                            node: {
-                              id,
-                              title,
-                              url,
-                              image: {
-                                file: { url: image },
+      }) =>
+        console.log(announcements) || (
+          <>
+            <FeaturedEventContent>
+              <BgAnnouncement>
+                <Container>
+                  <Row>
+                    <Column width={1}>
+                      <AnnouncementHeader />
+                      <AnnouncementsSliderWrapper>
+                        <Slider {...settings}>
+                          {announcements.map(
+                            ({
+                              node: {
+                                id,
+                                title,
+                                url,
+                                image: {
+                                  file: { url: image },
+                                },
                               },
-                            },
-                          }) => (
-                            <FlexColumn
-                              width={[
-                                1, // 100% between 0px screen width and first breakpoint (375px)
-                                1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-                                1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
-                                1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
-                              ]}
-                              key={id}
-                            >
-                              <AnnouncementCard
-                                image={image}
-                                title={title}
-                                url={url}
-                              />
-                            </FlexColumn>
-                          )
-                        )}
-                      </Slider>
-                    </AnnouncementsSliderWrapper>
-                  </Column>
-                </Row>
-              </Container>
-            </BgAnnouncement>
-          </FeaturedEventContent>
-        </>
-      )}
+                            }) => (
+                              <FlexColumn
+                                width={[
+                                  1, // 100% between 0px screen width and first breakpoint (375px)
+                                  1, // 100% between first breakpoint(375px) and second breakpoint (768px)
+                                  1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
+                                  1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
+                                ]}
+                                key={id}
+                              >
+                                <AnnouncementCard
+                                  image={image}
+                                  title={title}
+                                  url={url}
+                                />
+                              </FlexColumn>
+                            )
+                          )}
+                        </Slider>
+                      </AnnouncementsSliderWrapper>
+                    </Column>
+                  </Row>
+                </Container>
+              </BgAnnouncement>
+            </FeaturedEventContent>
+          </>
+        )
+      }
     />
   </Fragment>
 )
