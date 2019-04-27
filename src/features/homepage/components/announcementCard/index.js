@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { handleUrl } from '../../../../utilities'
 import {
   CardImage,
   CardTitle,
@@ -8,13 +9,13 @@ import {
   CardLink,
 } from './styles'
 
-const AnnouncementCard = ({ image: url = '', title, id }) => {
+const AnnouncementCard = ({ image, title, url }) => {
   return (
     <CardAnnouncement>
-      <CardImage style={{ backgroundImage: `url('${url}')` }} />
+      <CardImage style={{ backgroundImage: `url('${image}')` }} />
       <CardTitleWrapper>
         <CardTitle>
-          <CardLink to={`/blog/${id}`}>{title}</CardLink>
+          <CardLink {...handleUrl(url)}>{title}</CardLink>
         </CardTitle>
       </CardTitleWrapper>
     </CardAnnouncement>
@@ -24,13 +25,13 @@ const AnnouncementCard = ({ image: url = '', title, id }) => {
 AnnouncementCard.propTypes = {
   title: PropTypes.string,
   image: PropTypes.string,
-  id: PropTypes.string,
+  url: PropTypes.string,
 }
 
 AnnouncementCard.defaultProps = {
   title: '',
   image: '',
-  id: '',
+  url: '',
 }
 
 export default AnnouncementCard

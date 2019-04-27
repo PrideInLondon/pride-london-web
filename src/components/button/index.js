@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 import { darken } from 'polished'
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
-import { externalUrl, contactUrl } from '../../utilities/'
+import { externalUrl, contactUrl, handleSlug } from '../../utilities/'
 
 const StyledButton = styled.button`
   box-sizing: border-box;
@@ -104,17 +104,16 @@ export const Button = props => {
       white={white}
       {...to &&
         !externalUrl(to) &&
-        !contactUrl(to) && { to: to, as: FilteredLink }}
+        !contactUrl(to) && { to: handleSlug(to), as: FilteredLink }}
       {...to &&
         (externalUrl(to) || contactUrl(to)) && {
           href: to,
           as: 'a',
+          target: '_blank',
         }}
-      {...to && !externalUrl(to) && { to: to }}
       {...to &&
         externalUrl(to) && {
           rel: 'noopener noreferrer',
-          target: '_blank',
         }}
     >
       {children}
