@@ -22,10 +22,6 @@ export const query = graphql`
               url
             }
           }
-          article {
-            id
-            title
-          }
         }
       }
     }
