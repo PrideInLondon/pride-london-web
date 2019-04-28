@@ -216,15 +216,15 @@ const PrivacyPolicyPage = () => (
             <li>
               Identity Data from the following parties:
               <ul style={{ listStyleType: 'lower-alpha' }}>
-                <li>(a) event organisers for third party events;</li>
+                <li>event organisers for third party events;</li>
               </ul>
             </li>
             <li>
               Technical Data from the following parties:
               <ul style={{ listStyleType: 'lower-alpha' }}>
                 <li>
-                  (a) analytics providers such as Google Analytics (based
-                  outside the EU).
+                  analytics providers such as Google Analytics (based outside
+                  the EU).
                 </li>
               </ul>
             </li>
