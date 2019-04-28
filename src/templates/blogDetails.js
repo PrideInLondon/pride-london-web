@@ -23,26 +23,29 @@ const BlogDetails = ({
       datePublished,
       category,
       author,
-      slug,
     },
     site: {
       siteMetadata: { siteUrl },
     },
     otherArticles,
   },
+  location: { pathname },
 }) => {
   const metaImg = `https:${headerImage.file.url}?w=1000&h=562`
-  const metaUrl = `${siteUrl}/${slug}`
-  console.log(slug)
+  const metaUrl = `${siteUrl}/${pathname}`
   return (
     <PageWrapper>
       <Helmet
-        title={name}
+        title={title}
         meta={[
+          {
+            name: 'description',
+            content: '',
+          },
           // Schema meta tags
           {
             itemprop: 'name',
-            content: name,
+            content: title,
           },
           {
             itemprop: 'description',
@@ -64,7 +67,7 @@ const BlogDetails = ({
           // OpenGraph Meta Tags
           {
             property: 'og:title',
-            content: name,
+            content: title,
           },
           {
             property: 'og:description',
@@ -86,7 +89,7 @@ const BlogDetails = ({
           // Twitter Meta Tags
           {
             name: 'twitter:title',
-            content: name,
+            content: title,
           },
           {
             name: 'twitter:description',
@@ -103,8 +106,8 @@ const BlogDetails = ({
         ]}
         link={[
           {
-            rel: 'canonical',
-            href: metaUrl,
+            rel: 'image_src',
+            content: metaImg,
           },
         ]}
       />
@@ -182,6 +185,9 @@ export const articleDetailsQuery = graphql`
 
 BlogDetails.propTypes = {
   data: PropTypes.object.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default BlogDetails
