@@ -87,7 +87,8 @@ h3 {
   color: #2d2f7f;
 }
 
-p {
+p,
+address {
   font-size: 1rem;
   line-height: 1.25rem;
   margin: 0 0 1.25rem 0;
@@ -119,6 +120,10 @@ hr {
   border-top: none;
   border-color: #efefef;
   margin: 20px 0;
+}
+
+address {
+  font-style: normal;
 }
 
 .slick-prev,
@@ -177,7 +182,8 @@ hr {
     margin: 0 0 0.3125rem 0;
   }
 
-  p {
+  p,
+  address {
     font-size: 1.125rem;
     line-height: 1.6875rem;
   }

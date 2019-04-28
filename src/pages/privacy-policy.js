@@ -1,15 +1,17 @@
 import React from 'react'
 import { Container, Row, Column } from '../components/grid'
+import BannerImage from '../components/banner/bannerImage'
+import theme from '../theme/theme'
 
 const PrivacyPolicyPage = () => (
   <>
     <BannerImage
       titleText="Privacy and cookies policy"
-      altText="The Voice of Pride in London"
+      color={theme.colors.greyBlue}
     />
     <Container>
       <Row>
-        <Column width={[1, 1, 2 / 3]}>
+        <Column width={[1, 1, 2 / 3]} pt={[30, 30, 60]}>
           <p>
             London LGBT Community Pride CIC respects your privacy and is
             committed to protecting your personal data. This privacy policy will
@@ -535,7 +537,6 @@ const PrivacyPolicyPage = () => (
               info@prideinlondon.org
             </a>
           </address>
-          <br />
           <address>
             Matthew Kent, Data Protection Officer London
             <br />
