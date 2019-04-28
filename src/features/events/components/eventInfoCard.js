@@ -88,10 +88,9 @@ const VSpace = styled.div`
 const dateFormat = 'D MMMM YYYY'
 
 const formatDayRange = (startTime, endTime) => {
-  if (startTime.isSame('day', endTime)) {
+  if (startTime.isSame(endTime, 'day')) {
     return startTime.format(dateFormat)
   }
-
   return `${startTime.format(dateFormat)} to ${endTime.format(dateFormat)}`
 }
 
@@ -136,6 +135,8 @@ export default function EventInfoCard({
   },
   pageContext: { startTime, endTime },
 }) {
+  //   console.log(startTime, endTime)
+  //   moment(startTime)
   return (
     <Wrapper>
       {startTime && endTime && (

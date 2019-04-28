@@ -33,6 +33,8 @@ const constants = {
     gold: 'Gold',
     silver: 'Silver',
     bronze: 'Bronze',
+    digitalPartners: 'Digital Partners',
+    mediaPartners: 'Media Partners',
     partners: 'Partners',
   },
   itemsToLoad: 24,

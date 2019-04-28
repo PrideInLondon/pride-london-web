@@ -85,8 +85,6 @@ exports.createPages = async ({ graphql, actions }) => {
           ...edge.node.recurrenceDates,
         ])
 
-        console.log(recurrenceDates)
-
         recurrenceDates.filter(filterPastEvents).forEach(date => {
           const customId = `${edge.node.id}-${date.split('/').join('')}`
           const originalStartTime = moment(edge.node.startTime)
