@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import { NewsCard as NewsCardHomepage } from '../../../homepage/containers/latestNewsContainer/styles'
 import { media } from '../../../../theme/media'
+import theme from '../../../../theme/theme'
+import { CardTitle } from '../../../blog/components/newsCard/styles'
 
 export const Background = styled(Link)`
   display: flex;
@@ -12,6 +14,11 @@ export const Background = styled(Link)`
   min-height: 250px;
   position: relative;
   border-radius: 4px;
+  &:hover {
+    ${CardTitle} {
+      border-bottom-color: ${theme.colors.eucalyptusGreen};
+    }
+  }
 `
 export const LatestNewsCardContainer = styled.div`
   position: absolute;

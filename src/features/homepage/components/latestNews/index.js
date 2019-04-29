@@ -19,6 +19,7 @@ const LatestNews = ({
         datePublished={datePublished}
         readTime={readTime}
         slug={slug}
+        renderAs={'div'}
       />
     </LatestNewsCardContainer>
   </Background>
