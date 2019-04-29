@@ -5,7 +5,7 @@ import ViewsCard from '.'
 import 'jest-styled-components'
 
 describe('ViewsCard', () => {
-  const author = { display_name: { display_name: 'Bob Barker' } }
+  const author = { displayName: 'Bob Barker' }
   const title = 'My view'
   const featuredImage = {
     file: {

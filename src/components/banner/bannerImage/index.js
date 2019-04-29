@@ -27,16 +27,18 @@ const BannerImage = ({
     imageFullWidth={imageFullWidth}
     role="banner"
   >
-    <StyledContainer imageSrc={imageSrc} imageFullWidth={imageFullWidth}>
-      <StyledRow>
-        <Column width={1}>
-          {date && <BannerDate>{date}</BannerDate>}
-          <BannerTitle>{titleText}</BannerTitle>
-          <BannerSubtitle>{subtitleText}</BannerSubtitle>
-          {children}
-        </Column>
-      </StyledRow>
-    </StyledContainer>
+    {titleText && (
+      <StyledContainer imageSrc={imageSrc} imageFullWidth={imageFullWidth}>
+        <StyledRow>
+          <Column width={1} pb={[30, 30, 2]}>
+            {date && <BannerDate>{date}</BannerDate>}
+            <BannerTitle>{titleText}</BannerTitle>
+            {subtitleText && <BannerSubtitle>{subtitleText}</BannerSubtitle>}
+            {children}
+          </Column>
+        </StyledRow>
+      </StyledContainer>
+    )}
   </StyledWrapper>
 )
 

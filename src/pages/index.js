@@ -142,9 +142,7 @@ const StyledColumn = styled(Column)`
 `
 
 const BannerButton = styled(Button)`
-  ${media.tabletMax`
-      margin-bottom: 20px;
-  `};
+  margin-top: 1.5rem;
 `
 
 const StyledButton = styled(Button)`

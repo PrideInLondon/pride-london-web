@@ -89,9 +89,7 @@ export const blogLandingPageQuery = graphql`
             }
           }
           author {
-            display_name {
-              display_name
-            }
+            displayName
           }
         }
       }

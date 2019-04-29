@@ -9,28 +9,7 @@ exports[`<BannerImage /> renders the component <BannerImage /> 1`] = `
   large={false}
   medium={false}
   role="banner"
->
-  <styles__StyledContainer
-    imageFullWidth={false}
-    imageSrc=""
-    mx="auto"
-  >
-    <styles__StyledRow>
-      <Column
-        pb={null}
-        pl={null}
-        pr={null}
-        pt={null}
-        px={null}
-        py={null}
-        width={1}
-      >
-        <StyledBannerTitle />
-        <StyledBannerSubtitle />
-      </Column>
-    </styles__StyledRow>
-  </styles__StyledContainer>
-</styles__StyledWrapper>
+/>
 `;
 
 exports[`<BannerImage /> renders the subtitleText from props to the component BannerSubtitle 1`] = `
@@ -50,7 +29,13 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
   >
     <styles__StyledRow>
       <Column
-        pb={null}
+        pb={
+          Array [
+            30,
+            30,
+            2,
+          ]
+        }
         pl={null}
         pr={null}
         pt={null}
@@ -58,7 +43,9 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
         py={null}
         width={1}
       >
-        <StyledBannerTitle />
+        <StyledBannerTitle>
+          Here is a title
+        </StyledBannerTitle>
         <StyledBannerSubtitle>
           And here is a test subtitle!
         </StyledBannerSubtitle>
@@ -85,7 +72,13 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
   >
     <styles__StyledRow>
       <Column
-        pb={null}
+        pb={
+          Array [
+            30,
+            30,
+            2,
+          ]
+        }
         pl={null}
         pr={null}
         pt={null}
@@ -96,7 +89,6 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
         <StyledBannerTitle>
           Here is a test title!
         </StyledBannerTitle>
-        <StyledBannerSubtitle />
       </Column>
     </styles__StyledRow>
   </styles__StyledContainer>
