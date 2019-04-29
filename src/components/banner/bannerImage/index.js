@@ -30,7 +30,7 @@ const BannerImage = ({
     {titleText && (
       <StyledContainer imageSrc={imageSrc} imageFullWidth={imageFullWidth}>
         <StyledRow>
-          <Column width={1}>
+          <Column width={1} pb={[30, 30, 2]}>
             {date && <BannerDate>{date}</BannerDate>}
             <BannerTitle>{titleText}</BannerTitle>
             {subtitleText && <BannerSubtitle>{subtitleText}</BannerSubtitle>}

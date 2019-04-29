@@ -29,7 +29,13 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
   >
     <styles__StyledRow>
       <Column
-        pb={null}
+        pb={
+          Array [
+            30,
+            30,
+            2,
+          ]
+        }
         pl={null}
         pr={null}
         pt={null}
@@ -66,7 +72,13 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
   >
     <styles__StyledRow>
       <Column
-        pb={null}
+        pb={
+          Array [
+            30,
+            30,
+            2,
+          ]
+        }
         pl={null}
         pr={null}
         pt={null}
