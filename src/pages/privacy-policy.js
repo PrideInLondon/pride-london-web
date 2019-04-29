@@ -26,46 +26,49 @@ const ResponsiveTable = styled.table`
     padding: 15px;
   }
 
-  ${media.tabletMax`
-
-    thead {
-        ${hideVisually()}
-    }
-
-    tbody {
-        display: block;
-    }
-
-    tr {
-        display: block;
-        margin-bottom: 2rem;
-
-        &:last-child {
-            margin-bottom: 1rem;
+  ${props =>
+    props.responsive &&
+    css`
+      ${media.tabletMax`
+        thead {
+            ${hideVisually()}
         }
-    }
 
-    td {
-        padding: 10px;
-        display: block;
-
-        ${props =>
-          props.columns.map((column, index) => {
-            return css`
-          &:nth-of-type(${index + 1}):before {
-            content: '${column}';
-            font-family: ${theme.fonts.title};
-            font-weight: 600;
-            padding: 10px;
+        tbody {
             display: block;
-            color: ${theme.colors.white};
-            background-color: ${theme.colors.indigo};
-            margin: -10px -10px 10px -10px;
+        }
+
+        tr {
+            display: block;
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 1rem;
+            }
+        }
+
+        td {
+          padding: 10px;
+          display: block;
+
+          ${props =>
+            props.columns.map((column, index) => {
+              return css`
+                  &:nth-of-type(${index + 1}):before {
+                  content: '${column}';
+                  font-family: ${theme.fonts.title};
+                  font-weight: 600;
+                  padding: 10px;
+                  display: block;
+                  color: ${theme.colors.white};
+                  background-color: ${theme.colors.indigo};
+                  margin: -10px -10px 10px -10px;
+                }
+            `
+            })}
           }
-        `
-          })}
-    }
-  `};
+      `};
+    `}
 `
 
 const PrivacyPolicyPage = () => (
@@ -343,6 +346,7 @@ const PrivacyPolicyPage = () => (
             than one ground has been set out in the table below.
           </p>
           <ResponsiveTable
+            responsive
             columns={[
               'PURPOSE/ACTIVITY',
               'TYPE OF DATA',
@@ -704,7 +708,86 @@ const PrivacyPolicyPage = () => (
             You can find more information about the individual cookies we use
             and the purposes for which we use them in the table below:{' '}
           </p>
-          {/* <p>INSERT TABLE</p> */}
+          <ResponsiveTable columns={['COOKIE', 'PURPOSE']}>
+            <thead>
+              <tr>
+                <th>COOKIE</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>atuvc</p>
+                </td>
+                <td>
+                  <p>Sharing functionality</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>fr</p>
+                </td>
+                <td>
+                  <p>Facebook tracking cookie</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>_pinterest_cm</p>
+                </td>
+                <td>
+                  <p>Social sharing, tracking, and advert targeting</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>IDE</p>
+                  <p>1P_JAR</p>
+                </td>
+                <td>
+                  <p>
+                    Google advertising cookie used for user tracking and advert
+                    targeting purposes
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>NID</p>
+                  <p>SNID</p>
+                  <p>SIDCC</p>
+                </td>
+                <td>
+                  <p>
+                    Google advertising cookie used for user tracking and advert
+                    targeting purposes
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>NID</p>
+                  <p>HSID</p>
+                  <p>SAPISID</p>
+                </td>
+                <td>
+                  <p>
+                    Used by Google to store user preferences and information of
+                    Google Maps
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>crumb</p>
+                </td>
+                <td>
+                  <p>Cookie for fraud prevention</p>
+                </td>
+              </tr>
+            </tbody>
+          </ResponsiveTable>
           <p>
             Please note that third parties (including, for example, advertising
             networks and providers of external services like web traffic
