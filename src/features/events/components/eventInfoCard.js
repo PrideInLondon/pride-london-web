@@ -135,8 +135,6 @@ export default function EventInfoCard({
   },
   pageContext: { startTime, endTime },
 }) {
-  //   console.log(startTime, endTime)
-  //   moment(startTime)
   return (
     <Wrapper>
       {startTime && endTime && (
