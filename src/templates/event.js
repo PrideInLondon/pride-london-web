@@ -96,32 +96,44 @@ const AccessibilityHeading = styled.h2`
 export default class Event extends Component {
   render() {
     const {
-      id,
-      individualEventPicture,
-      eventDescription,
-      name,
-      performances,
-      eventPriceLow,
-      eventPriceHigh,
-      eventCategories,
-      accessibilityDetails,
-      location,
-      locationName,
-      addressLine1,
-      addressLine2,
-      city,
-      postcode,
-    } = this.props.data.contentfulEvent
+      data: {
+        contentfulEvent: {
+          id,
+          individualEventPicture,
+          eventDescription: { eventDescription },
+          name,
+          performances,
+          eventPriceLow,
+          eventPriceHigh,
+          eventCategories,
+          accessibilityDetails,
+          location,
+          locationName,
+          addressLine1,
+          addressLine2,
+          city,
+          postcode,
+        },
+        site: {
+          siteMetadata: { siteUrl },
+        },
+      },
+      location: { pathname },
+    } = this.props
 
     const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
-    const metaUrl =
-      this.props.data.site.siteMetadata.siteUrl + this.props.location.pathname
+    const metaUrl = siteUrl + pathname
+    const metaImgUrl = siteUrl + metaImg
 
     return (
       <PageWrapper>
         <Helmet
           title={name}
           meta={[
+            {
+              name: 'description',
+              content: eventDescription,
+            },
             // Schema meta tags
             {
               itemprop: 'name',
@@ -129,7 +141,7 @@ export default class Event extends Component {
             },
             {
               itemprop: 'description',
-              content: eventDescription.eventDescription,
+              content: eventDescription,
             },
             {
               itemprop: 'url',
@@ -174,7 +186,7 @@ export default class Event extends Component {
             },
             {
               property: 'og:description',
-              content: eventDescription.eventDescription,
+              content: eventDescription,
             },
             {
               property: 'og:latitude',
@@ -220,7 +232,7 @@ export default class Event extends Component {
             },
             {
               name: 'twitter:description',
-              content: eventDescription.eventDescription,
+              content: eventDescription,
             },
             {
               name: 'twitter:image',
@@ -236,8 +248,8 @@ export default class Event extends Component {
           }}
           link={[
             {
-              rel: 'canonical',
-              href: metaUrl,
+              rel: 'image_src',
+              content: metaImgUrl,
             },
           ]}
         />
@@ -267,7 +279,7 @@ export default class Event extends Component {
                 <EventTagList values={eventCategories} />
               </TitleWrapper>
               <Section>
-                <ReactMarkdown source={eventDescription.eventDescription} />
+                <ReactMarkdown source={eventDescription} />
               </Section>
               {accessibilityDetails && (
                 <>
