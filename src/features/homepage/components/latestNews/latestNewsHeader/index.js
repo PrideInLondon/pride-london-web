@@ -1,11 +1,13 @@
 import React from 'react'
 import CTALink from '../../../../../components/ctaLink'
-import { Header, Title } from './styles'
+import { Header, Title, HiddeOnlyMobile } from './styles'
 
 const LatestNewsHeader = () => (
   <Header>
     <Title>Latest News</Title>
-    <CTALink to="/blog">View all news</CTALink>
+    <HiddeOnlyMobile>
+      <CTALink to="/blog">View all news</CTALink>
+    </HiddeOnlyMobile>
   </Header>
 )
 

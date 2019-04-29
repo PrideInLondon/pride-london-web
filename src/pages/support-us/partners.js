@@ -216,6 +216,18 @@ const Sponsors = ({ data }) => {
                 </SponsorsSubsection>
               )}
 
+              {sponsors[constants.sponsorLevels.digitalPartners] && (
+                <SponsorsSubsection title="Partners">
+                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
+                </SponsorsSubsection>
+              )}
+
+              {sponsors[constants.sponsorLevels.mediaPartners] && (
+                <SponsorsSubsection title="Partners">
+                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
+                </SponsorsSubsection>
+              )}
+
               {sponsors[constants.sponsorLevels.partners] && (
                 <SponsorsSubsection title="Partners">
                   {renderSponsors(sponsors[constants.sponsorLevels.partners])}
