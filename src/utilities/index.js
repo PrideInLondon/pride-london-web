@@ -1,3 +1,5 @@
+import Link from 'gatsby-link'
+
 export function checkBreakpoint(breakpoint) {
   if (typeof window !== `undefined`) {
     return window.matchMedia(`(min-width: ${breakpoint}px)`).matches
@@ -18,6 +20,20 @@ export function handleSlug(slug) {
   const hasLeadingSlash = /^[\/]/
   if (hasLeadingSlash.test(slug)) return slug
   return `/${slug}`
+}
+
+// Function to determine what properties to determine if gatsy Link or regular <a> tag should be used, and the relevant attributes.
+export function handleUrl(url) {
+  switch (true) {
+    case url && !externalUrl(url) && !contactUrl(url):
+      return { to: handleSlug(url), as: Link }
+    case url && externalUrl(url):
+      return { href: url, rel: 'noopener noreferrer', target: '_blank' }
+    case url && contactUrl(url):
+      return { href: url, target: '_blank' }
+    default:
+      return
+  }
 }
 
 export const noScroll = {

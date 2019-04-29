@@ -5,10 +5,12 @@ exports[`LatestNewsHeader renders with default values 1`] = `
   <styles__Title>
     Latest News
   </styles__Title>
-  <CTALink
-    to="/blog"
-  >
-    View all news
-  </CTALink>
+  <styles__HiddeOnlyMobile>
+    <CTALink
+      to="/blog"
+    >
+      View all news
+    </CTALink>
+  </styles__HiddeOnlyMobile>
 </styles__Header>
 `;

@@ -15,6 +15,7 @@ import {
   TicketIcon,
 } from '../../../components/icons'
 import Button from '../../../components/button'
+import { formatPrice } from '../helpers'
 
 const Wrapper = styled.div`
   background-color: ${theme.colors.indigo};
@@ -87,10 +88,9 @@ const VSpace = styled.div`
 const dateFormat = 'D MMMM YYYY'
 
 const formatDayRange = (startTime, endTime) => {
-  if (startTime.isSame('day', endTime)) {
+  if (startTime.isSame(endTime, 'day')) {
     return startTime.format(dateFormat)
   }
-
   return `${startTime.format(dateFormat)} to ${endTime.format(dateFormat)}`
 }
 
@@ -98,13 +98,6 @@ const timeFormat = 'h:mma'
 
 const formatTimeRange = (startTime, endTime) =>
   `${startTime.format(timeFormat)} to ${endTime.format(timeFormat)}`
-
-const formatPrice = (eventPriceLow, eventPriceHigh) => {
-  if (eventPriceLow === 0 && eventPriceHigh === 0) {
-    return 'Free'
-  }
-  return `From £${eventPriceLow}`
-}
 
 const formatAddress = (addressLine1, addressLine2, city, postcode) =>
   [addressLine1, addressLine2, [city, postcode].filter(Boolean).join(' ')]
@@ -132,8 +125,6 @@ export default function EventInfoCard({
     addressLine2,
     city,
     postcode,
-    startTime,
-    endTime,
     eventPriceLow,
     eventPriceHigh,
     email,
@@ -142,7 +133,10 @@ export default function EventInfoCard({
     ticketingUrl,
     accessibilityOptions,
   },
+  pageContext: { startTime, endTime },
 }) {
+  //   console.log(startTime, endTime)
+  //   moment(startTime)
   return (
     <Wrapper>
       {startTime && endTime && (
@@ -206,7 +200,7 @@ export default function EventInfoCard({
 Item.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.object.isRequired,
-  detail: PropTypes.string,
+  detail: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 }
 
 Item.defaultProps = {
@@ -221,8 +215,6 @@ EventInfoCard.propTypes = {
     addressLine2: PropTypes.string,
     city: PropTypes.string,
     postcode: PropTypes.string,
-    startTime: PropTypes.string.isRequired,
-    endTime: PropTypes.string.isRequired,
     eventPriceLow: PropTypes.number,
     eventPriceHigh: PropTypes.number,
     email: PropTypes.string,
@@ -230,6 +222,11 @@ EventInfoCard.propTypes = {
     ticketingUrl: PropTypes.string,
     accessibilityOptions: PropTypes.arrayOf(PropTypes.string),
     venueDetails: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+  pageContext: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    startTime: PropTypes.string.isRequired,
+    endTime: PropTypes.string.isRequired,
   }).isRequired,
 }
 
@@ -240,8 +237,6 @@ export const query = graphql`
     addressLine2
     city
     postcode
-    startTime
-    endTime
     eventPriceLow
     eventPriceHigh
     email
