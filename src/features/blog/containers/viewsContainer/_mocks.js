@@ -1,9 +1,7 @@
 export const views = [
   {
     author: {
-      display_name: {
-        display_name: 'Test',
-      },
+      displayName: 'Test',
     },
     category: 'Views',
     datePublished: '2019-05-17',
@@ -17,9 +15,7 @@ export const views = [
   },
   {
     author: {
-      display_name: {
-        display_name: 'Test 2',
-      },
+      displayName: 'Test 2',
     },
     category: 'Views',
     datePublished: '2019-05-17',

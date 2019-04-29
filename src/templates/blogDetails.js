@@ -56,9 +56,7 @@ export const articleDetailsQuery = graphql`
       datePublished
       category
       author {
-        display_name {
-          display_name
-        }
+        displayName
         thumbnail {
           id
           file {

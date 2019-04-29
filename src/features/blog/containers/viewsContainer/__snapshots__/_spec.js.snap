@@ -61,9 +61,7 @@ exports[`ViewsContainer should render with default values 1`] = `
             <ViewsCard
               author={
                 Object {
-                  "display_name": Object {
-                    "display_name": "Test",
-                  },
+                  "displayName": "Test",
                 }
               }
               category="Views"
@@ -83,9 +81,7 @@ exports[`ViewsContainer should render with default values 1`] = `
             <ViewsCard
               author={
                 Object {
-                  "display_name": Object {
-                    "display_name": "Test 2",
-                  },
+                  "displayName": "Test 2",
                 }
               }
               category="Views"
