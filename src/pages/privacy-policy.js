@@ -1,7 +1,72 @@
 import React from 'react'
+import styled, { css } from 'styled-components'
+import { hideVisually } from 'polished'
 import { Container, Row, Column } from '../components/grid'
 import BannerImage from '../components/banner/bannerImage'
 import theme from '../theme/theme'
+import { media } from '../theme/media'
+
+const ResponsiveTable = styled.table`
+  border-collapse: collapse;
+
+  th {
+    vertical-align: top;
+    text-align: left;
+    padding: 15px;
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.indigo};
+    font-family: ${theme.fonts.title};
+    font-weight: 600;
+    border: 1px solid ${theme.colors.indigo};
+  }
+
+  td {
+    vertical-align: top;
+    border: 1px solid ${theme.colors.darkGrey};
+    padding: 15px;
+  }
+
+  ${media.tabletMax`
+
+    thead {
+        ${hideVisually()}
+    }
+
+    tbody {
+        display: block;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 1rem;
+        }
+    }
+
+    td {
+        padding: 10px;
+        display: block;
+
+        ${props =>
+          props.columns.map((column, index) => {
+            return css`
+          &:nth-of-type(${index + 1}):before {
+            content: '${column}';
+            font-family: ${theme.fonts.title};
+            font-weight: 600;
+            padding: 10px;
+            display: block;
+            color: ${theme.colors.white};
+            background-color: ${theme.colors.indigo};
+            margin: -10px -10px 10px -10px;
+          }
+        `
+          })}
+    }
+  `};
+`
 
 const PrivacyPolicyPage = () => (
   <>
@@ -11,7 +76,7 @@ const PrivacyPolicyPage = () => (
     />
     <Container>
       <Row>
-        <Column width={[1, 1, 2 / 3]} pt={[30, 30, 60]}>
+        <Column width={[1, 1, 1, 2 / 3]} pt={[30, 30, 60]}>
           <p>
             London LGBT Community Pride CIC respects your privacy and is
             committed to protecting your personal data. This privacy policy will
@@ -277,7 +342,209 @@ const PrivacyPolicyPage = () => (
             ground we are relying on to process your personal data where more
             than one ground has been set out in the table below.
           </p>
-          {/* <p>INSERT TABLE</p> */}
+          <ResponsiveTable
+            columns={[
+              'PURPOSE/ACTIVITY',
+              'TYPE OF DATA',
+              'LAWFUL BASIS FOR PROCESSING INCLUDING BASIS OF LEGITIMATE INTEREST',
+            ]}
+          >
+            <thead>
+              <tr>
+                <th>PURPOSE/ACTIVITY</th>
+                <th>TYPE OF DATA</th>
+                <th>
+                  LAWFUL BASIS FOR PROCESSING INCLUDING BASIS OF LEGITIMATE
+                  INTEREST
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>To enable you to:</p>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>volunteer with us;</li>
+                    <li>
+                      attend and participate in our festivals and parades and
+                      other events (e.g. march in a parade or host a stall at
+                      our events);
+                    </li>
+                    <li>donate to us; and</li>
+                    <li>
+                      to enable us to Manage payments, fees and charges and
+                      collect and recover money owed to us.
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>Identity</li>
+                    <li>Contact</li>
+                    <li>Financial</li>
+                    <li>Transaction</li>
+                    <li>Marketing and Communications</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>Performance of a contract with you</li>
+                    <li>
+                      Necessary for our legitimate interests (to recover debts
+                      due to us, and to promote and support the LGBTQ community)
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    To allow you to sign up for our mailing list, or, remove you
+                    where you no longer wish to receive our updates
+                  </p>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>Identity</li>
+                    <li>Contact</li>
+                    <li>Profile</li>
+                    <li>Marketing and Communications</li>
+                  </ul>
+                </td>
+                <td>
+                  <p>Consent</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>To manage our relationship with you which will include:</p>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>
+                      notifying you about changes to our terms or privacy
+                      policy; and
+                    </li>
+                  </ul>
+                  <p>
+                    any other activity relating to the management of our
+                    relationship with you.
+                  </p>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>Identity</li>
+                    <li>Contact</li>
+                    <li>Profile</li>
+                    <li>Marketing and Communications</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>Performance of a contract with you</li>
+                    <li>Necessary to comply with a legal obligation</li>
+                    <li>
+                      Necessary for our legitimate interests (to keep our
+                      records updated)
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    To administer and protect our organisation and this website
+                    and/or our app (including troubleshooting, data analysis,
+                    testing, system maintenance, support, reporting and hosting
+                    of data)
+                  </p>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>Identity</li>
+                    <li>Contact</li>
+                    <li>Technical</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>
+                      Necessary for our legitimate interests (for running our
+                      organisation, provision of administration and IT services,
+                      network security, to prevent fraud)
+                    </li>
+                    <li>Necessary to comply with a legal obligation</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    To deliver relevant website and/or app content and
+                    advertisements to you and measure or understand the
+                    effectiveness of the advertising we serve to you
+                  </p>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>Identity</li>
+                    <li>Contact</li>
+                    <li>Profile</li>
+                    <li>Usage</li>
+                    <li>Marketing and Communications</li>
+                    <li>Technical</li>
+                  </ul>
+                </td>
+                <td>
+                  <p>
+                    Necessary for our legitimate interests (to study how users
+                    of our website and/or our app use our services and to inform
+                    our marketing strategy)
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    To use data analytics to improve our website and/or our app,
+                    events, products and services and marketing
+                  </p>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>Technical</li>
+                    <li>Usage</li>
+                  </ul>
+                </td>
+                <td>
+                  <p>
+                    Necessary for our legitimate interests (to develop our
+                    products/services and grow our organisation)
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    To enable you to take part in our surveys and research and
+                    to allow us to report on the outcome of our research.
+                  </p>
+                </td>
+                <td>
+                  <ul style={{ listStyleType: 'lower-alpha' }}>
+                    <li>Identity</li>
+                    <li>Contact</li>
+                    <li>Technical</li>
+                    <li>Usage</li>
+                    <li>Profile</li>
+                    <li>Aggregated Data</li>
+                    <li>Sensitive Personal Data</li>
+                  </ul>
+                </td>
+                <td>
+                  <p>Consent</p>
+                </td>
+              </tr>
+            </tbody>
+          </ResponsiveTable>
           <h2>4. MARKETING</h2>
           <p>
             We strive to provide you with choices regarding certain personal

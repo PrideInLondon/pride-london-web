@@ -126,6 +126,11 @@ address {
   font-style: normal;
 }
 
+ul,
+ol {
+  margin: 0 0 1.25rem 0;
+}
+
 .slick-prev,
 .slick-prev:hover,
 .slick-prev:focus {
