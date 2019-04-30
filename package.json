@@ -50,7 +50,7 @@
     "@rebass/grid": "^6.0.0",
     "debounce": "^1.2.0",
     "dotenv": "^7.0.0",
-    "gatsby": "^2.3.31",
+    "gatsby": "^2.3.33",
     "gatsby-link": "^2.0.15",
     "gatsby-plugin-google-tagmanager": "^2.0.13",
     "gatsby-plugin-layout": "^1.0.15",
