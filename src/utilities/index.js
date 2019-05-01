@@ -27,13 +27,10 @@ export function handleUrl(url) {
   switch (true) {
     case url && !externalUrl(url) && !contactUrl(url):
       return { to: handleSlug(url), as: Link }
-      break
     case url && externalUrl(url):
       return { href: url, rel: 'noopener noreferrer', target: '_blank' }
-      break
     case url && contactUrl(url):
       return { href: url, target: '_blank' }
-      break
     default:
       return
   }

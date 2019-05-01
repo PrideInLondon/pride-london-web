@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { handleSlug } from '../../../../utilities'
 import { Background, LatestNewsCardContainer, NewsCard } from './styles'
 
 const LatestNews = ({
@@ -10,7 +11,7 @@ const LatestNews = ({
   headerImage,
   slug,
 }) => (
-  <Background backgroundImage={headerImage.file.url}>
+  <Background to={handleSlug(slug)} backgroundImage={headerImage.file.url}>
     <LatestNewsCardContainer>
       <NewsCard
         category={category}
@@ -18,6 +19,7 @@ const LatestNews = ({
         datePublished={datePublished}
         readTime={readTime}
         slug={slug}
+        renderAs={'div'}
       />
     </LatestNewsCardContainer>
   </Background>

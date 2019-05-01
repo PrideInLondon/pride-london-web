@@ -14,10 +14,10 @@ const ViewsCard = ({ featuredImage, author, title, id, readTime }) => {
     <ViewsSlide>
       <ViewsThumbnail
         src={`${photoUrl}?fit=crop&w=400&h=400`}
-        alt={`${author.display_name.display_name} — ${title}`}
+        alt={`${author.displayName} — ${title}`}
       />
       <ArticleAuthor>
-        {author.display_name.display_name}
+        {author.displayName}
         {readTime && <span> • {readTime} min read</span>}
       </ArticleAuthor>
       <ArticleTitle>
@@ -29,7 +29,7 @@ const ViewsCard = ({ featuredImage, author, title, id, readTime }) => {
 
 ViewsCard.propTypes = {
   author: PropTypes.shape({
-    display_name: PropTypes.shape({ display_name: PropTypes.string }),
+    displayName: PropTypes.string,
   }).isRequired,
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,

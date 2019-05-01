@@ -50,133 +50,147 @@ const query = graphql`
   }
 `
 
-const Layout = props => (
+const Layout = ({ children, location: { pathname } }) => (
   <ThemeProvider theme={theme}>
     <StaticQuery
       query={query}
-      render={data => (
-        <Provider events={data.allContentfulEvent.edges}>
-          <Fragment>
-            <Helmet
-              title={data.site.siteMetadata.title}
-              title={data.site.siteMetadata.title}
-              meta={[
-                {
-                  name: 'description',
-                  content: data.site.siteMetadata.description,
-                },
+      render={({
+        allContentfulEvent: { edges: events },
+        site: {
+          siteMetadata: { title, siteUrl, description },
+        },
+      }) => {
+        const metaUrl = pathname === '/' ? siteUrl : siteUrl + pathname
+        const metaImgUrl = `${siteUrl}${metaImg}`
+        return (
+          <Provider events={events}>
+            <Fragment>
+              <Helmet
+                title={title}
+                title={title}
+                meta={[
+                  {
+                    name: 'description',
+                    content: description,
+                  },
 
-                // Schema meta tags
-                {
-                  itemprop: 'name',
-                  content: data.site.siteMetadata.title,
-                },
-                {
-                  itemprop: 'url',
-                  content: data.site.siteMetadata.siteUrl,
-                },
-                {
-                  itemprop: 'thumbnailUrl',
-                  content: data.site.siteMetadata.siteUrl + metaImg,
-                },
-                {
-                  itemprop: 'image',
-                  content: data.site.siteMetadata.siteUrl + metaImg,
-                },
-                // OpenGraph Meta Tags
-                {
-                  property: 'og:site_name',
-                  content: data.site.siteMetadata.name,
-                },
-                {
-                  property: 'og:title',
-                  content: data.site.siteMetadata.title,
-                },
-                {
-                  property: 'og:type',
-                  content: 'website',
-                },
-                {
-                  property: 'og:url',
-                  content: data.site.siteMetadata.siteUrl,
-                },
-                {
-                  property: 'og:description',
-                  content: data.site.siteMetadata.description,
-                },
-                {
-                  property: 'og:image',
-                  content: data.site.siteMetadata.siteUrl + metaImg,
-                },
-                {
-                  property: 'og:image:secure_url',
-                  content: data.site.siteMetadata.siteUrl + metaImg,
-                },
-                {
-                  property: 'og:image:width',
-                  content: '1000',
-                },
-                {
-                  property: 'og:image:height',
-                  content: '562',
-                },
-                // Twitter Meta Tags
-                {
-                  name: 'twitter:card',
-                  content: 'summary',
-                },
-                {
-                  name: 'twitter:title',
-                  content: data.site.siteMetadata.title,
-                },
-                {
-                  name: 'twitter:image',
-                  content: data.site.siteMetadata.siteUrl + metaImg,
-                },
-                {
-                  name: 'twitter:url',
-                  content: data.site.siteMetadata.siteUrl,
-                },
-              ]}
-              link={[
-                {
-                  rel: 'icon',
-                  href: favicon,
-                },
-                {
-                  rel: 'image_src',
-                  content: data.site.siteMetadata.siteUrl + metaImg,
-                },
-                {
-                  rel: 'canonical',
-                  href: data.site.siteMetadata.siteUrl,
-                },
-              ]}
-              htmlAttributes={{
-                lang: 'en-GB',
-                itemscope: true,
-                itemtype: 'http://schema.org/WebPage',
-              }}
-              script={[
-                {
-                  src:
-                    'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.2.5/polyfill.js',
-                },
-              ]}
-            />
+                  // Schema meta tags
+                  {
+                    itemprop: 'name',
+                    content: title,
+                  },
+                  {
+                    itemprop: 'url',
+                    content: siteUrl,
+                  },
+                  {
+                    itemprop: 'thumbnailUrl',
+                    content: metaImgUrl,
+                  },
+                  {
+                    itemprop: 'image',
+                    content: metaImgUrl,
+                  },
 
-            <Nav />
-            <main>{props.children}</main>
-            <Footer />
-          </Fragment>
-        </Provider>
-      )}
+                  // OpenGraph Meta Tags
+                  {
+                    property: 'og:site_name',
+                    content: title,
+                  },
+                  {
+                    property: 'og:title',
+                    content: title,
+                  },
+                  {
+                    property: 'og:type',
+                    content: 'website',
+                  },
+                  {
+                    property: 'og:url',
+                    content: siteUrl,
+                  },
+                  {
+                    property: 'og:description',
+                    content: description,
+                  },
+                  {
+                    property: 'og:image',
+                    content: metaImgUrl,
+                  },
+                  {
+                    property: 'og:image:secure_url',
+                    content: metaImgUrl,
+                  },
+                  {
+                    property: 'og:image:width',
+                    content: '1000',
+                  },
+                  {
+                    property: 'og:image:height',
+                    content: '562',
+                  },
+
+                  // Twitter Meta Tags
+                  {
+                    name: 'twitter:card',
+                    content: 'summary',
+                  },
+                  {
+                    name: 'twitter:title',
+                    content: title,
+                  },
+                  {
+                    name: 'twitter:image',
+                    content: metaImgUrl,
+                  },
+                  {
+                    name: 'twitter:url',
+                    content: siteUrl,
+                  },
+                ]}
+                link={[
+                  {
+                    rel: 'icon',
+                    href: favicon,
+                  },
+                  {
+                    rel: 'image_src',
+                    content: metaImgUrl,
+                  },
+                  {
+                    rel: 'canonical',
+                    href: metaUrl,
+                  },
+                ]}
+                htmlAttributes={{
+                  lang: 'en-GB',
+                  itemscope: true,
+                  itemtype: 'http://schema.org/WebPage',
+                }}
+                script={[
+                  {
+                    src:
+                      'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.2.5/polyfill.js',
+                  },
+                ]}
+              />
+
+              <Nav />
+              <main>{children}</main>
+              <Footer />
+            </Fragment>
+          </Provider>
+        )
+      }}
     />
   </ThemeProvider>
 )
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default Layout

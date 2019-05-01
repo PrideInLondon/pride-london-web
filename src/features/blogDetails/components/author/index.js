@@ -6,7 +6,7 @@ const Author = ({ author }) => (
   <AuthorCard>
     {author.thumbnail && <Thumbnail src={author.thumbnail.file.url} />}
     <AuthorInfo>
-      <FullName>{author.display_name.display_name}</FullName>
+      <FullName>{author.displayName}</FullName>
       {author.jobTitle && <Job>{author.jobTitle}</Job>}
     </AuthorInfo>
   </AuthorCard>
@@ -19,9 +19,7 @@ Author.propTypes = {
         url: PropTypes.string,
       }),
     }),
-    display_name: PropTypes.shape({
-      display_name: PropTypes.string,
-    }),
+    displayName: PropTypes.string,
     jobTitle: PropTypes.string,
   }),
 }
@@ -32,9 +30,7 @@ Author.defaultProps = {
         url: 'imgSrc',
       },
     },
-    display_name: {
-      display_name: 'FullName',
-    },
+    displayName: 'FullName',
     jobTitle: 'Job Title',
   },
 }

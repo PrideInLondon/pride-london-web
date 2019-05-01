@@ -11,8 +11,9 @@ const NewsCard = ({
   title,
   readTime,
   className,
+  renderAs,
 }) => (
-  <Card className={className} to={handleSlug(slug)}>
+  <Card className={className} to={handleSlug(slug)} as={renderAs}>
     <NewsCardHeader
       category={category}
       datePublished={datePublished}
@@ -32,11 +33,13 @@ NewsCard.propTypes = {
   }).isRequired,
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
+  renderAs: PropTypes.string,
 }
 
 NewsCard.defaultProps = {
   readTime: null,
   className: '',
+  renderAs: 'div',
 }
 
 export default NewsCard
