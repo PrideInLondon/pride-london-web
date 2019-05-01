@@ -1,34 +1,37 @@
-version: 2.1
-
-orbs:
-  codecov: codecov/codecov@1.0.3
-
+version: 2
 jobs:
   build:
-    docker: 
-      - image: circleci/node:8
+    docker:
+    - image: circleci/node:8
 
     working_directory: ~/repo
 
     steps:
-      - checkout
-      
-      - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-      
-      - run:
-          name: Install Dependencies
-          command: yarn install --frozen-lockfile
+    - checkout
 
-      - save_cache: 
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn 
-            
-      - run: yarn lint
+    - restore_cache:
+        name: Restore Yarn Package Cache
+        keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
 
-      - run: yarn test
-      
+    - run:
+        name: Install Dependencies
+        command: yarn install --frozen-lockfile
+
+    - save_cache:
+        name: Save Yarn Package Cache
+        key: yarn-packages-{{ checksum "yarn.lock" }}
+        paths:
+        - ~/.cache/yarn
+
+    - run:
+        command: yarn lint
+
+    - run:
+        command: yarn test
+        
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - build
