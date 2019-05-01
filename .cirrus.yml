@@ -6,5 +6,5 @@ check_task:
     folder: node_modules
     fingerprint_script: cat yarn.lock
     populate_script: yarn install
-  test_script: yarn lint
+  lint_script: yarn lint
   test_script: yarn test
