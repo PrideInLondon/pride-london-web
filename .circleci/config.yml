@@ -5,18 +5,17 @@ orbs:
 
 jobs:
   build:
+    working_directory: ~/repo
+
     docker: 
       - image: circleci/node:8
-
-    working_directory: ~/repo
 
     steps:
       - checkout
       
       - restore_cache:
           name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+          key: yarn-packages-{{ checksum "yarn.lock" }}
       
       - run:
           name: Install Dependencies
@@ -28,7 +27,24 @@ jobs:
           paths:
             - ~/.cache/yarn 
             
-      - run: yarn lint
+  test:
+    docker:
+      - image: circleci/node:8
 
-      - run: yarn test
+    steps:
+      - checkout
+      - run:
+          name: Lint
+          command: yarn lint
+      - run:
+          name: Test
+          command: yarn test
       
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
