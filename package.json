@@ -51,7 +51,7 @@
     "debounce": "^1.2.0",
     "dotenv": "^7.0.0",
     "gatsby": "^2.3.34",
-    "gatsby-link": "^2.0.15",
+    "gatsby-link": "^2.0.17",
     "gatsby-plugin-google-tagmanager": "^2.0.13",
     "gatsby-plugin-layout": "^1.0.15",
     "gatsby-plugin-react-helmet": "^3.0.11",
