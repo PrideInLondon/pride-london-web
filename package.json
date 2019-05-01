@@ -61,7 +61,7 @@
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-contentful": "^2.0.54",
     "gatsby-source-filesystem": "^2.0.33",
-    "jest": "^23.6.0",
+    "jest": "^24.0.0",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
     "polished": "^3.2.0",
