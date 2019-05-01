@@ -11,8 +11,8 @@
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint 'src/**/*.js'",
     "lint-fix": "eslint --fix 'src/**/*.js'",
-    "test": "yarn run jest && codecov",
-    "test:watch": "yarn run jest --watch"
+    "test": "jest --runInBand && codecov",
+    "test:watch": "jest --watch"
   },
   "jest": {
     "moduleNameMapper": {
@@ -50,6 +50,7 @@
     "@rebass/grid": "^6.0.0",
     "debounce": "^1.2.0",
     "dotenv": "^7.0.0",
+    "eslint": "^5.16.0",
     "gatsby": "^2.3.34",
     "gatsby-link": "^2.0.17",
     "gatsby-plugin-google-tagmanager": "^2.0.13",
