@@ -159,6 +159,7 @@ class Events extends Component {
         {context => (
           <PageWrapper>
             <Helmet
+              title="What's on - LGBT+ events happening in and around London"
               meta={[
                 {
                   name: 'apple-itunes-app',
@@ -170,7 +171,7 @@ class Events extends Component {
             />
             <BannerImage
               titleText="What's on"
-              subtitleText="Checkout the huge array of events that Pride are running during the festival"
+              subtitleText="LGBT+ events happening in and around London"
               imageSrc={BannerImg}
               color={theme.colors.skyBlue}
             />
