@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - checkout
-      - run: yarn test
+      - run: yarn run test
       
 workflows:
   version: 2
