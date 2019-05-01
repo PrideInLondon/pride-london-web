@@ -27,13 +27,23 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn 
-            
+
+  lint:
+    docker:
+      - image: circleci/node:8
+
+    steps:
+      - checkout
+      
+      - run: yarn run lint            
+
   test:
     docker:
       - image: circleci/node:8
 
     steps:
       - checkout
+
       - run: yarn run test
       
 workflows:
@@ -41,6 +51,9 @@ workflows:
   build_and_test:
     jobs:
       - build
+      - lint:
+          requires:
+            - build
       - test:
           requires:
             - build
