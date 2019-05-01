@@ -33,18 +33,12 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: Lint
-          command: yarn lint
-      - run:
-          name: Test
-          command: yarn test
+      - run: yarn lint
+      - run: yarn test
       
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build
-      - test:
-          requires:
-            - build
+      - test
