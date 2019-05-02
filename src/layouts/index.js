@@ -67,7 +67,6 @@ const Layout = ({ children, location: { pathname } }) => (
             <Fragment>
               <Helmet
                 title={title}
-                title={title}
                 meta={[
                   {
                     name: 'description',
