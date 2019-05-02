@@ -18,11 +18,9 @@ export const query = graphql`
           title
           url
           image {
+            title
             fixed(width: 600, height: 600, resizingBehavior: FILL) {
               ...GatsbyContentfulFixed
-            }
-            file {
-              url
             }
           }
         }
@@ -61,17 +59,7 @@ const AnnouncementsContainer = () => (
                 <AnnouncementsSliderWrapper>
                   <Slider {...settings}>
                     {announcements.map(
-                      ({
-                        node: {
-                          id,
-                          title,
-                          url,
-                          image: {
-                            fixed,
-                            file: { url: image },
-                          },
-                        },
-                      }) => (
+                      ({ node: { id, title, url, image } }) => (
                         <FlexColumn
                           width={[
                             1, // 100% between 0px screen width and first breakpoint (375px)
@@ -82,7 +70,6 @@ const AnnouncementsContainer = () => (
                           key={id}
                         >
                           <AnnouncementCard
-                            fixed={fixed}
                             image={image}
                             title={title}
                             url={url}

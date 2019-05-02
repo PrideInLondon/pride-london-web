@@ -9,10 +9,10 @@ import {
   CardLink,
 } from './styles'
 
-const AnnouncementCard = ({ title, url, fixed }) => {
+const AnnouncementCard = ({ title, url, image }) => {
   return (
     <CardAnnouncement>
-      <CardImage fixed={fixed} />
+      <CardImage fixed={image.fixed} alt={image.title} />
       <CardTitleWrapper>
         <CardTitle>
           <CardLink {...handleUrl(url)}>{title}</CardLink>
@@ -24,7 +24,7 @@ const AnnouncementCard = ({ title, url, fixed }) => {
 
 AnnouncementCard.propTypes = {
   title: PropTypes.string.isRequired,
-  fixed: PropTypes.object.isRequired,
+  image: PropTypes.object.isRequired,
   url: PropTypes.string.isRequired,
 }
 
