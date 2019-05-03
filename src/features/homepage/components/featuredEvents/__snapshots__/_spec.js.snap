@@ -48,7 +48,103 @@ exports[`Featured Event Content renders with default values 1`] = `
 `;
 
 exports[`FeaturedEvents renders with default values 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<styles__FeaturedEventContent>
+  <Slider
+    arrows={true}
+    infinite={true}
+    responsive={
+      Array [
+        Object {
+          "breakpoint": 1279,
+          "settings": Object {
+            "slidesToScroll": 1,
+            "slidesToShow": 2,
+          },
+        },
+        Object {
+          "breakpoint": 767,
+          "settings": Object {
+            "arrows": true,
+            "centerMode": true,
+            "slidesToScroll": 1,
+            "slidesToShow": 2,
+          },
+        },
+        Object {
+          "breakpoint": 480,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+      ]
+    }
+    slidesToScroll={1}
+    slidesToShow={3}
+    speed={500}
+  >
+    <grid__FlexColumn
+      key="123abcPride Quiz"
+      width={
+        Array [
+          1,
+          1,
+          0.5,
+          0.3333333333333333,
+        ]
+      }
+    >
+      <EventListingCard
+        displaycolumn={true}
+        event={
+          Object {
+            "endTime": "2019-06-05T23:00+01:00",
+            "eventPriceLow": 3,
+            "eventsListPicture": Object {
+              "file": Object {
+                "title": "image alt",
+                "url": "test/image.jpg",
+              },
+            },
+            "id": "123abc",
+            "name": "Pride Quiz",
+            "startTime": "2019-06-05T20:00+01:00",
+          }
+        }
+      />
+    </grid__FlexColumn>
+    <grid__FlexColumn
+      key="123abcdPride Quiz 2"
+      width={
+        Array [
+          1,
+          1,
+          0.5,
+          0.3333333333333333,
+        ]
+      }
+    >
+      <EventListingCard
+        displaycolumn={true}
+        event={
+          Object {
+            "endTime": "2019-06-05T23:00+01:00",
+            "eventPriceLow": 3,
+            "eventsListPicture": Object {
+              "file": Object {
+                "title": "image alt",
+                "url": "test/image.jpg",
+              },
+            },
+            "id": "123abcd",
+            "name": "Pride Quiz 2",
+            "startTime": "2019-06-05T20:00+01:00",
+          }
+        }
+      />
+    </grid__FlexColumn>
+  </Slider>
+</styles__FeaturedEventContent>
 `;
