@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from 'gatsby-link'
 import NewsCardHeader from '../../../../components/newsCardHeader'
 import { handleSlug } from '../../../../utilities'
 import { Card, CardTitle } from './styles'
@@ -33,13 +34,13 @@ NewsCard.propTypes = {
   }).isRequired,
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
-  renderAs: PropTypes.string,
+  renderAs: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 }
 
 NewsCard.defaultProps = {
   readTime: null,
   className: '',
-  renderAs: 'div',
+  renderAs: Link,
 }
 
 export default NewsCard
