@@ -1,10 +1,16 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import CardAnnouncement from '.'
+import AnnouncementCard from '.'
 
-describe(CardAnnouncement.name, () => {
+describe('<AnnouncementCard/>', () => {
   it('renders with default values', () => {
-    const wrapper = shallow(<CardAnnouncement />)
+    const wrapper = shallow(
+      <AnnouncementCard
+        title="foobar"
+        url="http://google.com"
+        image={{ fixed: {}, alt: 'blah blah' }}
+      />
+    )
     expect(wrapper).toMatchSnapshot()
   })
 })
