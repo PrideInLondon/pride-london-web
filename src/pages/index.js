@@ -5,7 +5,7 @@ import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
 import eventsBgLeft from '../theme/assets/images/featured-events-bg-left.png'
 import eventsBgRight from '../theme/assets/images/featured-events-bg-right.png'
-import FeaturedEvents from '../features/homepage/components/featuredEvents'
+import FeaturedEventsQuery from '../features/homepage/components/featuredEvents/featuredEventsQuery'
 import { media } from '../theme/media'
 import { Container, Row, Column } from '../components/grid'
 import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
@@ -186,7 +186,7 @@ const Home = () => (
                 View all events
               </StyledButton>
             </FeaturedEventsHeader>
-            <FeaturedEvents />
+            <FeaturedEventsQuery />
             <ButtonMobile>
               <Button
                 isTabletHidden
