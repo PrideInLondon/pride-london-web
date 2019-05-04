@@ -15,6 +15,7 @@ export const views = [
       },
     },
     id: '1',
+    slug: 'somewhere1',
     title: 'test',
   },
   {
@@ -33,6 +34,7 @@ export const views = [
       },
     },
     id: '2',
+    slug: 'somewhere2',
     title: 'test',
   },
 ]

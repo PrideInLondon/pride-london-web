@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { handleSlug } from '../../../../utilities'
 import {
   ArticleAuthor,
   ArticleTitle,
   ViewsSlide,
   ViewsThumbnail,
-  ArticleLink,
 } from './styles'
 
-const ViewsCard = ({ featuredImage, author, title, id, readTime }) => {
+const ViewsCard = ({ featuredImage, author, title, readTime, slug }) => {
   return (
-    <ViewsSlide>
+    <ViewsSlide to={handleSlug(slug)}>
       <ViewsThumbnail
         fixed={featuredImage.fixed}
         alt={`${author.displayName} — ${title}`}
@@ -19,9 +19,7 @@ const ViewsCard = ({ featuredImage, author, title, id, readTime }) => {
         {author.displayName}
         {readTime && <span> • {readTime} min read</span>}
       </ArticleAuthor>
-      <ArticleTitle>
-        <ArticleLink to={`/blog/${id}`}>{title}</ArticleLink>
-      </ArticleTitle>
+      <ArticleTitle>{title}</ArticleTitle>
     </ViewsSlide>
   )
 }
@@ -31,7 +29,7 @@ ViewsCard.propTypes = {
     displayName: PropTypes.string,
   }).isRequired,
   title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
   featuredImage: PropTypes.shape({}).isRequired,
   readTime: PropTypes.number,
 }
