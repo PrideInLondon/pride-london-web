@@ -7,7 +7,7 @@ export const Card = styled(Link)`
   display: block;
   background-color: ${theme.colors.white};
   border-radius: 4px;
-  padding: 30px 20px;
+  padding: 30px;
   width: 100%;
   font-family: ${theme.fonts.title};
   text-decoration: none;

@@ -60,7 +60,7 @@ const Nav = () => {
                     id: 'nav-about',
                     title: 'About',
                     desc:
-                      'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
+                      'Find out more about our not-for-profit organisation, run by volunteers passionate about equality and diversity.',
                     url: '/',
                     submenu: [
                       {
@@ -80,7 +80,7 @@ const Nav = () => {
                     id: 'nav-parade-day',
                     title: 'Parade Day',
                     desc:
-                      'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
+                      'Plan your Parade Day where charities, businesses and community groups come together to march for equality.',
                     url: '/',
                     submenu: [
                       {
@@ -113,7 +113,7 @@ const Nav = () => {
                     id: 'nav-events',
                     title: 'Events',
                     desc:
-                      'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
+                      'Discover and attend the Pride and LGBT+ events happening all across London.',
                     url: '/',
                     submenu: [
                       {
@@ -159,7 +159,7 @@ const Nav = () => {
                     id: 'nav-support-us',
                     title: 'Support us',
                     desc:
-                      'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
+                      'If you’re passionate about the LGBT+ community please consider supporting Pride by donating, sponsoring or volunteering.',
                     url: '/',
                     submenu: [
                       {
