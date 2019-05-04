@@ -23,7 +23,7 @@ export const StyledRow = styled(Row)`
   width: 100%;
 
   ${media.tablet`
-    padding-top: 50px;
+    padding-top: ${props => (props.medium ? 120 : 50)}px;
     padding-bottom: 50px;
   `};
 

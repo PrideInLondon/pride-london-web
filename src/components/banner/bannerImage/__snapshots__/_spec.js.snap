@@ -27,7 +27,9 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
     imageSrc=""
     mx="auto"
   >
-    <styles__StyledRow>
+    <styles__StyledRow
+      medium={false}
+    >
       <Column
         pb={
           Array [
@@ -70,7 +72,9 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
     imageSrc=""
     mx="auto"
   >
-    <styles__StyledRow>
+    <styles__StyledRow
+      medium={false}
+    >
       <Column
         pb={
           Array [

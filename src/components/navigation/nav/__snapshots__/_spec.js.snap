@@ -48,7 +48,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
             <NavItem
               item={
                 Object {
-                  "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
+                  "desc": "Find out more about our not-for-profit organisation, run by volunteers passionate about equality and diversity.",
                   "id": "nav-about",
                   "submenu": Array [
                     Object {
@@ -78,7 +78,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
             <NavItem
               item={
                 Object {
-                  "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
+                  "desc": "Plan your Parade Day where charities, businesses and community groups come together to march for equality.",
                   "id": "nav-parade-day",
                   "submenu": Array [
                     Object {
@@ -112,7 +112,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
             <NavItem
               item={
                 Object {
-                  "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
+                  "desc": "Discover and attend the Pride and LGBT+ events happening all across London.",
                   "id": "nav-events",
                   "submenu": Array [
                     Object {
@@ -159,7 +159,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
             <NavItem
               item={
                 Object {
-                  "desc": "Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.",
+                  "desc": "If you’re passionate about the LGBT+ community please consider supporting Pride by donating, sponsoring or volunteering.",
                   "id": "nav-support-us",
                   "submenu": Array [
                     Object {
@@ -227,7 +227,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                 fullmobile={true}
                 link={true}
                 primary={true}
-                to="https://prideinlondon.org/donate/"
+                to="https://donate.prideinlondon.org/"
               >
                 Donate
               </styles__DonateButton>

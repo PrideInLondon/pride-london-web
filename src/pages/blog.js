@@ -55,7 +55,10 @@ export default Blog
 
 export const blogLandingPageQuery = graphql`
   query articlesQuery {
-    articles: allContentfulArticle(filter: { category: { ne: "Views" } }) {
+    articles: allContentfulArticle(
+      filter: { category: { ne: "Views" } }
+      sort: { fields: [datePublished], order: DESC }
+    ) {
       edges {
         node {
           id
