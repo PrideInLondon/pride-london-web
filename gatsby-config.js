@@ -14,10 +14,9 @@ module.exports = {
   siteMetadata: {
     siteUrl,
     name: 'Pride in London Events Listing',
-    title:
-      'Pride Festival 9 June - 7 July 2018 | Pride in London — Pride in London',
+    title: 'Pride in London',
     description:
-      "This June and July, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances on July 7th 2018.",
+      "This June and July, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances on July 6th 2019.",
     appleAppId: '1250496471',
   },
   plugins: [

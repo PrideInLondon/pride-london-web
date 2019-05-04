@@ -4,8 +4,11 @@ import Img from 'gatsby-image'
 import { media } from '../../../../theme/media'
 import theme from '../../../../theme/theme'
 
-export const ViewsSlide = styled.div`
+export const ViewsSlide = styled(Link)`
+  display: block;
   padding: 0 10px;
+  color: ${theme.colors.indigo};
+  text-decoration: none;
 
   ${media.tablet`
     padding: 0 15px;
@@ -15,17 +18,12 @@ export const ViewsSlide = styled.div`
 export const ArticleTitle = styled.h3`
   margin: 0 0 0.5em 0;
   display: inline;
-`
-
-export const ArticleLink = styled(Link)`
-  color: ${theme.colors.indigo};
   border-bottom: 2px solid transparent;
   transition: border-bottom-color 0.15s ease-out;
-  text-decoration: none;
   line-height: 1.5;
 
-  &:hover,
-  &:focus {
+  ${ViewsSlide}:hover &,
+  ${ViewsSlide}:focus & {
     border-bottom-color: ${theme.colors.eucalyptusGreen};
   }
 `
@@ -47,6 +45,7 @@ export const ViewsThumbnail = styled(Img)`
   border-radius: 4px;
   max-width: 100%;
   padding-top: 100%;
+  width: 100% !important;
   height: auto !important;
 
   img {

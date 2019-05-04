@@ -3,7 +3,7 @@
 exports[`AnnouncementHeader renders with default values 1`] = `
 <styles__Header>
   <styles__Head>
-    Announcement
+    Announcements
   </styles__Head>
   <styles__Title>
     View events from across the LGBT+ community

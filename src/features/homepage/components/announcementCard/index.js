@@ -6,17 +6,14 @@ import {
   CardTitle,
   CardAnnouncement,
   CardTitleWrapper,
-  CardLink,
 } from './styles'
 
 const AnnouncementCard = ({ title, url, image }) => {
   return (
-    <CardAnnouncement>
+    <CardAnnouncement {...handleUrl(url)}>
       <CardImage fixed={image.fixed} alt={image.title} />
       <CardTitleWrapper>
-        <CardTitle>
-          <CardLink {...handleUrl(url)}>{title}</CardLink>
-        </CardTitle>
+        <CardTitle>{title}</CardTitle>
       </CardTitleWrapper>
     </CardAnnouncement>
   )

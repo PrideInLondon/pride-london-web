@@ -3,7 +3,7 @@ import { Head, Header, Title } from './styles'
 
 const AnnouncementHeader = () => (
   <Header>
-    <Head>Announcement</Head>
+    <Head>Announcements</Head>
     <Title>View events from across the LGBT+ community</Title>
   </Header>
 )

@@ -155,7 +155,7 @@ const Home = () => (
     <BannerImage
       titleText={'Pride in London'}
       subtitleText={
-        'The UK’s biggest, most diverse pride. A  home for every part of London’s LGBT+ community'
+        'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community.'
       }
       date={'Saturday 6 July'}
       imageSrc={BannerImg}
