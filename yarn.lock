@@ -5628,10 +5628,10 @@ gatsby-image@^2.0.41:
     object-fit-images "^3.2.4"
     prop-types "^15.6.1"
 
-gatsby-link@^2.0.17:
-  version "2.0.17"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.0.17.tgz#f6129a942c9138466fceb25cce89d579f3a62f85"
-  integrity sha512-PAvQTAwjebiwzso2PeLGT/P365q4iqE62YYY0heK46VKMvhSklCOx0MjldYsUjp0lvtU23plwwVabitmBuPztQ==
+gatsby-link@^2.0.17, gatsby-link@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.1.1.tgz#603326df8557720935f60eeffac3f60150d11eeb"
+  integrity sha512-5krDc87NAUDztbir5OOs3ec/2CxSSXnIIxhRKrG+yJXKK+dIcxxnPr+qjydEsyHMf7McBuxb1x5/r6rouzcBqQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@types/reach__router" "^1.0.0"
