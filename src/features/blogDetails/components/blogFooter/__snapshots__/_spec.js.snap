@@ -14,12 +14,5 @@ exports[`BlogFooter renders with default values 1`] = `
       <SocialMediaList />
     </styles__FlexDiv>
   </styles__Summary>
-  <styles__NoteToEditor>
-    <blogFooter__StyledInput
-      id="noteToEditor"
-      label="Note to editors"
-      type="text"
-    />
-  </styles__NoteToEditor>
 </styles__BlogFooterContainer>
 `;

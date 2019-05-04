@@ -153,6 +153,13 @@ class Events extends Component {
 
   render() {
     const { showFiltersMobile } = this.state
+    const {
+      data: {
+        site: {
+          siteMetadata: { appleAppId },
+        },
+      },
+    } = this.props
 
     return (
       <Consumer>
@@ -163,9 +170,7 @@ class Events extends Component {
               meta={[
                 {
                   name: 'apple-itunes-app',
-                  content: `app-id=${
-                    this.props.data.site.siteMetadata.appleAppId
-                  }`,
+                  content: `app-id=${appleAppId}`,
                 },
               ]}
             />
@@ -210,6 +215,12 @@ class Events extends Component {
                 <StyledFlipMove>
                   {context.filteredEvents
                     .filter(filterByLimit, context.state.eventsToShow)
+                    .sort((event1, event2) => {
+                      return (
+                        new Date(event1.node.startTime) -
+                        new Date(event2.node.startTime)
+                      )
+                    })
                     .map((event, index, events) => (
                       <GroupedEventsCards
                         events={events}
