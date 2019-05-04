@@ -55,7 +55,7 @@ const TitleWrapper = styled.div`
 const HeroImage = styled.div`
   background-size: cover;
   background-image: url(${props => props.src});
-
+  background-position: center;
   height: 240px;
   ${media.desktop`
     height: 480px;
