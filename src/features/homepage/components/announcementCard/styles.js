@@ -15,10 +15,14 @@ export const CardImage = styled(Img)`
   }
 `
 
-export const CardAnnouncement = styled.div`
+export const CardAnnouncement = styled.a`
   position: relative;
   display: block;
   border: none;
+  position: relative;
+  color: ${theme.colors.white};
+  z-index: 1;
+  text-decoration: none;
 `
 
 export const CardTitleWrapper = styled.div`
@@ -51,12 +55,4 @@ export const CardTitle = styled.h2`
   ${media.tablet`
     font-size: 1.5rem;
   `};
-`
-
-export const CardLink = styled.a`
-  position: relative;
-  border: none;
-  color: ${theme.colors.white};
-  z-index: 1;
-  text-decoration: none;
 `
