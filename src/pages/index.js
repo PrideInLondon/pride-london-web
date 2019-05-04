@@ -163,8 +163,8 @@ const Home = () => (
       large
       allowContentUnderflow
     >
-      <BannerButton wide={false} white primary to="/events/whats-on">
-        This year's event
+      <BannerButton wide={false} white primary to="/parade">
+        This year's parade
       </BannerButton>
     </BannerImage>
     <StyledContainer>
