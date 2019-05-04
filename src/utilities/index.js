@@ -31,8 +31,6 @@ export function handleUrl(url) {
       return { href: url, rel: 'noopener noreferrer', target: '_blank' }
     case url && contactUrl(url):
       return { href: url, target: '_blank' }
-    default:
-      return
   }
 }
 
