@@ -9,11 +9,10 @@ import {
 } from './styles'
 
 const ViewsCard = ({ featuredImage, author, title, id, readTime }) => {
-  const photoUrl = featuredImage ? featuredImage.file.url : ''
   return (
     <ViewsSlide>
       <ViewsThumbnail
-        src={`${photoUrl}?fit=crop&w=400&h=400`}
+        fixed={featuredImage.fixed}
         alt={`${author.displayName} — ${title}`}
       />
       <ArticleAuthor>

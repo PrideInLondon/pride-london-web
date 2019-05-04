@@ -87,8 +87,8 @@ export const blogLandingPageQuery = graphql`
           }
           featuredImage {
             title
-            file {
-              url
+            fixed(width: 400, height: 400, resizingBehavior: FILL) {
+              ...GatsbyContentfulFixed
             }
           }
           author {
