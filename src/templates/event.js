@@ -28,6 +28,7 @@ const Title = styled.h1`
   font-size: 1.75em;
   line-height: 1.4;
   margin-bottom: 20px;
+  font-weight: 700;
 `
 
 const HeroImageAndTitle = styled.div`
@@ -114,11 +115,14 @@ export default class Event extends Component {
           city,
           postcode,
         },
+        contentfulEvent,
         site: {
           siteMetadata: { siteUrl },
         },
       },
       location: { pathname },
+      pageContext: { startTime, endTime },
+      pageContext,
     } = this.props
 
     const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
@@ -157,15 +161,15 @@ export default class Event extends Component {
             },
             {
               itemprop: 'startDate',
-              content: this.props.pageContext.startTime,
+              content: startTime,
             },
             {
               itemprop: 'endDate',
-              content: this.props.pageContext.endTime,
+              content: endTime,
             },
             {
               itemprop: 'isAccessibleForFree',
-              content: eventPriceLow === 0 ? true : false,
+              content: eventPriceLow === 0,
             },
             {
               itemprop: 'offers',
@@ -264,8 +268,8 @@ export default class Event extends Component {
             <Row>
               <RelativeColumn width={1}>
                 <EventInfoCard
-                  data={this.props.data.contentfulEvent}
-                  pageContext={this.props.pageContext}
+                  data={contentfulEvent}
+                  pageContext={pageContext}
                 />
               </RelativeColumn>
             </Row>
@@ -299,7 +303,7 @@ export default class Event extends Component {
             </Column>
           </Row>
         </Container>
-        <EventDirectionsSection data={this.props.data.contentfulEvent} />
+        <EventDirectionsSection data={contentfulEvent} />
         <EventsYouMayLike eventId={id} />
       </PageWrapper>
     )

@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import hash from 'string-hash'
+import Theme from '../../../theme/theme'
 
 const hotPink = css`
   background-color: hsl(339, 87%, 55%);
@@ -38,10 +39,9 @@ const EventTagListItem = styled.li`
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
-  font-family: Poppins, sans-serif;
-  margin: 10px 10px 6px 0;
-  margin-right: 10px;
-  margin-bottom: 6px;
+  font-family: ${Theme.fonts.title};
+  margin: 0 10px 6px 0;
+  margin-top: 0;
 `
 
 const EventTagUl = styled.ul`
