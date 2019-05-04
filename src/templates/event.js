@@ -46,7 +46,6 @@ const TitleWrapper = styled.div`
   `};
   ${media.desktop`
     padding: 60px 0px 50px;
-    width: calc(100% - 400px);
   `};
   ${media.desktopHD`
     max-width: 830px;
@@ -277,7 +276,7 @@ export default class Event extends Component {
         </EventInfoCardWrapper>
         <Container>
           <Row>
-            <Column width={1}>
+            <Column width={[1, 1, 0.6]}>
               <TitleWrapper>
                 <Title>{name}</Title>
                 <EventTagList values={eventCategories} />
