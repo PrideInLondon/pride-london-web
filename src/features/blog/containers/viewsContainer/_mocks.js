@@ -6,8 +6,12 @@ export const views = [
     category: 'Views',
     datePublished: '2019-05-17',
     featuredImage: {
-      file: {
-        url: 'src',
+      fixed: {
+        base64: 'abc',
+        height: 400,
+        width: 400,
+        src: 'src',
+        srcSet: 'srcset',
       },
     },
     id: '1',
@@ -20,8 +24,12 @@ export const views = [
     category: 'Views',
     datePublished: '2019-05-17',
     featuredImage: {
-      file: {
-        url: 'src',
+      fixed: {
+        base64: 'abc',
+        height: 400,
+        width: 400,
+        src: 'src',
+        srcSet: 'srcset',
       },
     },
     id: '2',

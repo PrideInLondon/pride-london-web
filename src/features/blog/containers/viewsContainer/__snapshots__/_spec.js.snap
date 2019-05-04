@@ -68,8 +68,12 @@ exports[`ViewsContainer should render with default values 1`] = `
               datePublished="2019-05-17"
               featuredImage={
                 Object {
-                  "file": Object {
-                    "url": "src",
+                  "fixed": Object {
+                    "base64": "abc",
+                    "height": 400,
+                    "src": "src",
+                    "srcSet": "srcset",
+                    "width": 400,
                   },
                 }
               }
@@ -88,8 +92,12 @@ exports[`ViewsContainer should render with default values 1`] = `
               datePublished="2019-05-17"
               featuredImage={
                 Object {
-                  "file": Object {
-                    "url": "src",
+                  "fixed": Object {
+                    "base64": "abc",
+                    "height": 400,
+                    "src": "src",
+                    "srcSet": "srcset",
+                    "width": 400,
                   },
                 }
               }
