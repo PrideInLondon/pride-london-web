@@ -62,7 +62,6 @@ const Layout = ({ children, location: { pathname } }) => (
       }) => {
         const metaUrl = pathname === '/' ? siteUrl : siteUrl + pathname
         const metaImgUrl = `${siteUrl}${metaImg}`
-        console.log(events)
         return (
           <Provider events={events}>
             <Fragment>
