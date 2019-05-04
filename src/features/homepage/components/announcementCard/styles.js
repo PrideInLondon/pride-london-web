@@ -1,15 +1,18 @@
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 import { media } from '../../../../theme/media'
 import theme from '../../../../theme/theme'
 
-export const CardImage = styled.div`
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  padding-top: 100%;
+export const CardImage = styled(Img)`
   border-radius: 4px;
-  border-bottom-right-radius: 0;
+  max-width: 100%;
+  padding-top: 100%;
+  height: auto !important;
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
 `
 
 export const CardAnnouncement = styled.div`

@@ -13,18 +13,26 @@ describe('<BannerImage />', () => {
   })
 
   it('renders the component <BannerTitle />', () => {
-    const wrapper = shallow(<BannerImage />)
+    const wrapper = shallow(<BannerImage titleText={'Hello world'} />)
     expect(wrapper.find('StyledBannerTitle')).toHaveLength(1)
   })
 
   it('renders the component <BannerSubtitle />', () => {
-    const wrapper = shallow(<BannerImage />)
+    const wrapper = shallow(
+      <BannerImage titleText={'Hello world'} subtitleText={'foobar'} />
+    )
     expect(wrapper.find('StyledBannerSubtitle')).toHaveLength(1)
   })
 
   it('renders the component <BannerDate /> if  a date prop is passed', () => {
     const date = 'Saturday 6th July'
-    const wrapper = shallow(<BannerImage date={date} />)
+    const wrapper = shallow(
+      <BannerImage
+        titleText={'Hello world'}
+        subtitleText={'foobar'}
+        date={date}
+      />
+    )
     expect(wrapper.find('StyledBannerDate')).toHaveLength(1)
   })
 
@@ -39,7 +47,13 @@ describe('<BannerImage />', () => {
 
   it('renders a background image on the container if an imageSrc prop is passed', () => {
     const src = 'foo'
-    const wrapper = mount(<BannerImage imageSrc={src} />)
+    const wrapper = mount(
+      <BannerImage
+        imageSrc={src}
+        titleText={'Hello world'}
+        subtitleText={'foobar'}
+      />
+    )
     expect(wrapper.find('styles__StyledContainer')).toHaveStyleRule(
       'background-image',
       `url(${src})`
@@ -60,7 +74,9 @@ describe('<BannerImage />', () => {
 
   it('renders the subtitleText from props to the component BannerSubtitle', () => {
     const subtitleText = 'And here is a test subtitle!'
-    const wrapper = shallow(<BannerImage subtitleText={subtitleText} />)
+    const wrapper = shallow(
+      <BannerImage titleText={'Here is a title'} subtitleText={subtitleText} />
+    )
     expect(toJSON(wrapper)).toMatchSnapshot()
     expect(
       wrapper

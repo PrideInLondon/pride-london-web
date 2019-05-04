@@ -8,6 +8,7 @@ describe('<Figure/>', () => {
   const fields = {
     file: { 'en-GB': { url: 'src' } },
     description: { 'en-GB': 'Hello World' },
+    title: { 'en-GB': 'Foo Bar' },
   }
   it('renders with default values', () => {
     const wrapper = shallow(<Figure {...fields} />)

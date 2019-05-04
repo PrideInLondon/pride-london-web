@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from 'gatsby-link'
 import NewsCardHeader from '../../../../components/newsCardHeader'
 import { handleSlug } from '../../../../utilities'
 import { Card, CardTitle } from './styles'
@@ -11,8 +12,9 @@ const NewsCard = ({
   title,
   readTime,
   className,
+  renderAs,
 }) => (
-  <Card className={className} to={handleSlug(slug)}>
+  <Card className={className} to={handleSlug(slug)} as={renderAs}>
     <NewsCardHeader
       category={category}
       datePublished={datePublished}
@@ -32,11 +34,13 @@ NewsCard.propTypes = {
   }).isRequired,
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
+  renderAs: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 }
 
 NewsCard.defaultProps = {
   readTime: null,
   className: '',
+  renderAs: Link,
 }
 
 export default NewsCard

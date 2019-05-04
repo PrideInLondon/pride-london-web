@@ -39,6 +39,7 @@ export const imageNode = {
   data: {
     target: {
       fields: {
+        title: { 'en-GB': 'Hello World' },
         description: {
           'en-GB': 'Image description',
         },

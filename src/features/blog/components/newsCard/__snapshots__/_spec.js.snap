@@ -2,6 +2,12 @@
 
 exports[`NewsCard renders with default values 1`] = `
 <styles__Card
+  as={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    }
+  }
   className=""
   to="/news/slug"
 >

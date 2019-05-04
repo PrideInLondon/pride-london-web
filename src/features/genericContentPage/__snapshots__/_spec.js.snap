@@ -5,7 +5,7 @@ exports[`<GenericContent/> renders with default values 1`] = `""`;
 exports[`render methods for Generic Content renders a Figure component for images 1`] = `
 <styles__StyledFigure>
   <img
-    alt="Image description"
+    alt="Hello World"
     src="src"
   />
   <figcaption>

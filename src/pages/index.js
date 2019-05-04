@@ -5,7 +5,7 @@ import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
 import eventsBgLeft from '../theme/assets/images/featured-events-bg-left.png'
 import eventsBgRight from '../theme/assets/images/featured-events-bg-right.png'
-import FeaturedEvents from '../features/homepage/components/featuredEvents'
+import FeaturedEventsQuery from '../features/homepage/components/featuredEvents/featuredEventsQuery'
 import { media } from '../theme/media'
 import { Container, Row, Column } from '../components/grid'
 import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
@@ -142,9 +142,7 @@ const StyledColumn = styled(Column)`
 `
 
 const BannerButton = styled(Button)`
-  ${media.tabletMax`
-      margin-bottom: 20px;
-  `};
+  margin-top: 1.5rem;
 `
 
 const StyledButton = styled(Button)`
@@ -165,8 +163,8 @@ const Home = () => (
       large
       allowContentUnderflow
     >
-      <BannerButton wide={false} white primary to="/events/whats-on">
-        This year's event
+      <BannerButton wide={false} white primary to="/parade">
+        This year's parade
       </BannerButton>
     </BannerImage>
     <StyledContainer>
@@ -188,7 +186,7 @@ const Home = () => (
                 View all events
               </StyledButton>
             </FeaturedEventsHeader>
-            <FeaturedEvents />
+            <FeaturedEventsQuery />
             <ButtonMobile>
               <Button
                 isTabletHidden

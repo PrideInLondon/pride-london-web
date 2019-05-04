@@ -34,6 +34,12 @@ exports[`NewsCards renders with default values 1`] = `
         className=""
         datePublished="2019-03-28T20:30+00:00"
         readTime={null}
+        renderAs={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
         slug="news/article"
         title="title"
       />

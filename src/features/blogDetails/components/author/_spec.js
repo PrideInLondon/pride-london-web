@@ -12,9 +12,7 @@ describe(Author.name, () => {
               url: 'imgSrc',
             },
           },
-          display_name: {
-            display_name: 'FullName',
-          },
+          displayName: 'FullName',
           jobTitle: 'Job Title',
         }}
       />
