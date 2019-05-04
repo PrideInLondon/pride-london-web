@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import theme from '../../../../theme/theme'
+
 export const Summary = styled.div`
   display: flex;
   justify-content: space-between;
@@ -8,7 +9,6 @@ export const Summary = styled.div`
   margin-bottom: 60px;
   flex-wrap: wrap;
 `
-export const NoteToEditor = styled.div``
 
 export const BlogFooterContainer = styled.div`
   max-width: 830px;

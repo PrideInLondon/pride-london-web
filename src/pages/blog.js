@@ -55,7 +55,10 @@ export default Blog
 
 export const blogLandingPageQuery = graphql`
   query articlesQuery {
-    articles: allContentfulArticle(filter: { category: { ne: "Views" } }) {
+    articles: allContentfulArticle(
+      filter: { category: { ne: "Views" } }
+      sort: { fields: [datePublished], order: DESC }
+    ) {
       edges {
         node {
           id
@@ -84,8 +87,8 @@ export const blogLandingPageQuery = graphql`
           }
           featuredImage {
             title
-            file {
-              url
+            fixed(width: 400, height: 400, resizingBehavior: FILL) {
+              ...GatsbyContentfulFixed
             }
           }
           author {

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from '../../../../theme/theme'
-import { getMostReadable } from '../../../../features/blog/components/newsFilter/styles'
+import { getMostReadable } from '../../../blog/components/newsFilter/styles'
 
 export const FlexDiv = styled.div`
   display: flex;
@@ -61,7 +61,7 @@ export const Title = styled.h1`
 `
 export const BlogHeaderContainer = styled.div`
   max-width: 830px;
-  margin: 0 auto;
+  margin: 0 auto 60px auto;
   margin-top: -140px;
   min-height: 140px;
   background-color: ${theme.colors.white};

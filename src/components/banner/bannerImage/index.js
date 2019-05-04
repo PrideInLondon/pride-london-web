@@ -29,7 +29,7 @@ const BannerImage = ({
   >
     {titleText && (
       <StyledContainer imageSrc={imageSrc} imageFullWidth={imageFullWidth}>
-        <StyledRow>
+        <StyledRow medium={medium}>
           <Column width={1} pb={[30, 30, 2]}>
             {date && <BannerDate>{date}</BannerDate>}
             <BannerTitle>{titleText}</BannerTitle>
@@ -45,10 +45,8 @@ const BannerImage = ({
 BannerImage.propTypes = {
   large: PropTypes.bool,
   medium: PropTypes.bool,
-  homepage: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageFullWidth: PropTypes.bool,
-  altText: PropTypes.string,
   subtitleText: PropTypes.string,
   titleText: PropTypes.string,
   color: PropTypes.string,

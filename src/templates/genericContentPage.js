@@ -47,12 +47,16 @@ const responsiveBannerUrl = url => {
 export default class GenericContentPage extends Component {
   render() {
     const {
-      title,
-      subtitle,
-      bannerImage,
-      bannerColor,
-      content: { json },
-    } = this.props.data.contentfulGenericContentPage
+      data: {
+        contentfulGenericContentPage: {
+          title,
+          subtitle,
+          bannerImage,
+          bannerColor,
+          content: { json },
+        },
+      },
+    } = this.props
     return (
       <>
         <Helmet title={title} />
@@ -60,13 +64,13 @@ export default class GenericContentPage extends Component {
           titleText={title}
           subtitleText={subtitle}
           imageSrc={bannerImage && responsiveBannerUrl(bannerImage.file.url)}
-          color={bannerColor ? bannerColor : theme.colors.beachBlue}
+          color={bannerColor || theme.colors.beachBlue}
           imageFullWidth
         />
         <PageWrapper>
           <Container>
             <Row>
-              <Content width={[1, 1, 0.8]}>
+              <Content width={[1, 1, 0.666]}>
                 <GenericContent content={json} />
               </Content>
             </Row>
