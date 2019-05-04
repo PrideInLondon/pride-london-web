@@ -16,9 +16,9 @@ import BannerImg from '../../theme/assets/images/banners/sponsors/bg@2x.jpg'
 
 const ListTitle = styled.h2`
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   ${media.tablet`
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   `};
 `
 
@@ -83,6 +83,7 @@ const CTATitle = styled.h3`
 `
 
 const CTABody = styled.p`
+  margin: 0 0 1.875rem;
   font-size: 0.875rem;
   line-height: 1.2857;
 `
