@@ -227,7 +227,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                 fullmobile={true}
                 link={true}
                 primary={true}
-                to="https://prideinlondon.org/donate/"
+                to="https://donate.prideinlondon.org/"
               >
                 Donate
               </styles__DonateButton>
