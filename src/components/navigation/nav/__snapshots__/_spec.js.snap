@@ -98,7 +98,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                         },
                         Object {
                           "title": "Residents and businesses info",
-                          "url": "/parade/residents-and-businesses",
+                          "url": "/parade/residents-and-businesses-info",
                         },
                       ],
                     },
@@ -204,7 +204,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                 Object {
                   "id": "nav-visitor-info",
                   "title": "Visitor info",
-                  "url": "/visitor-information",
+                  "url": "/visitor-info",
                 }
               }
               setNavOpen={[Function]}

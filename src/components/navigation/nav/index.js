@@ -100,7 +100,7 @@ const Nav = () => {
                           },
                           {
                             title: 'Residents and businesses info',
-                            url: '/parade/residents-and-businesses',
+                            url: '/parade/residents-and-businesses-info',
                           },
                         ],
                       },
@@ -200,7 +200,7 @@ const Nav = () => {
                   item={{
                     id: 'nav-visitor-info',
                     title: 'Visitor info',
-                    url: '/visitor-information',
+                    url: '/visitor-info',
                   }}
                 />
                 <NavItem
