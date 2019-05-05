@@ -922,7 +922,7 @@ const PrivacyPolicyPage = () => (
               target="_blank"
             >
               http://ico.org.uk/concerns
-            </a>
+            </a>{' '}
             or telephone: 0303 123 1113.
           </p>
         </Column>

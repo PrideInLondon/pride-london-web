@@ -161,9 +161,7 @@ export const Footer = ({ data }) => {
           <LegalSection width={1}>
             <LegalList>
               <LegalListItem>
-                <LegalLink to="/privacy-and-cookies">
-                  Privacy &amp; cookies
-                </LegalLink>
+                <LegalLink to="/privacy">Privacy &amp; cookies</LegalLink>
               </LegalListItem>
               <LegalListItem>
                 <LegalLink to="/media-centre">Media centre</LegalLink>

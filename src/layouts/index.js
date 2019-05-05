@@ -6,7 +6,24 @@ import { ThemeProvider } from 'styled-components'
 import { Provider } from '../components/appContext'
 import Nav from '../components/navigation/nav'
 import Footer from '../components/footer/footerQuery'
-import favicon from '../favicon.ico'
+import favicon from '../theme/assets/images/favicons/favicon.ico'
+import favicon16 from '../theme/assets/images/favicons/favicon-16x16.png'
+import favicon32 from '../theme/assets/images/favicons/favicon-32x32.png'
+import favicon96 from '../theme/assets/images/favicons/favicon-96x96.png'
+import favicon128 from '../theme/assets/images/favicons/favicon-128x128.png'
+import favicon196 from '../theme/assets/images/favicons/favicon-196x196.png'
+import apple57 from '../theme/assets/images/favicons/apple-touch-icon-57x57.png'
+import apple60 from '../theme/assets/images/favicons/apple-touch-icon-60x60.png'
+import apple72 from '../theme/assets/images/favicons/apple-touch-icon-72x72.png'
+import apple76 from '../theme/assets/images/favicons/apple-touch-icon-76x76.png'
+import apple114 from '../theme/assets/images/favicons/apple-touch-icon-114x114.png'
+import apple152 from '../theme/assets/images/favicons/apple-touch-icon-152x152.png'
+import mstile70 from '../theme/assets/images/favicons/mstile-70x70.png'
+import mstile144 from '../theme/assets/images/favicons/mstile-144x144.png'
+import mstile150 from '../theme/assets/images/favicons/mstile-150x150.png'
+import mstile310 from '../theme/assets/images/favicons/mstile-310x310.png'
+import mstile310150 from '../theme/assets/images/favicons/mstile-310x150.png'
+
 import theme from '../theme/theme'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -146,11 +163,72 @@ const Layout = ({ children, location: { pathname } }) => (
                     name: 'twitter:url',
                     content: siteUrl,
                   },
+
+                  // MS Application
+                  {
+                    name: 'application-name',
+                    content: title,
+                  },
+                  {
+                    name: 'msapplication-TileColor',
+                    content: '#FFFFFF',
+                  },
+                  {
+                    name: 'msapplication-TileImage',
+                    content: mstile144,
+                  },
+                  {
+                    name: 'msapplication-square70x70logo',
+                    content: mstile70,
+                  },
+                  {
+                    name: 'msapplication-square150x150logo',
+                    content: mstile150,
+                  },
+                  {
+                    name: 'msapplication-wide310x150logo',
+                    content: mstile310150,
+                  },
+                  {
+                    name: 'msapplication-square310x310logo',
+                    content: mstile310,
+                  },
                 ]}
                 link={[
                   {
                     rel: 'icon',
+                    type: 'image/x-icon',
                     href: favicon,
+                  },
+                  {
+                    rel: 'icon',
+                    type: 'image/png',
+                    sizes: '16x16',
+                    href: favicon16,
+                  },
+                  {
+                    rel: 'icon',
+                    type: 'image/png',
+                    sizes: '32x32',
+                    href: favicon32,
+                  },
+                  {
+                    rel: 'icon',
+                    type: 'image/png',
+                    sizes: '96x96',
+                    href: favicon96,
+                  },
+                  {
+                    rel: 'icon',
+                    type: 'image/png',
+                    sizes: '128x128',
+                    href: favicon128,
+                  },
+                  {
+                    rel: 'icon',
+                    type: 'image/png',
+                    sizes: '196x196',
+                    href: favicon196,
                   },
                   {
                     rel: 'image_src',
@@ -159,6 +237,36 @@ const Layout = ({ children, location: { pathname } }) => (
                   {
                     rel: 'canonical',
                     href: metaUrl,
+                  },
+                  {
+                    rel: 'apple-touch-icon-precomposed',
+                    sizes: '57x57',
+                    href: apple57,
+                  },
+                  {
+                    rel: 'apple-touch-icon-precomposed',
+                    sizes: '60x60',
+                    href: apple60,
+                  },
+                  {
+                    rel: 'apple-touch-icon-precomposed',
+                    sizes: '72x72',
+                    href: apple72,
+                  },
+                  {
+                    rel: 'apple-touch-icon-precomposed',
+                    sizes: '76x76',
+                    href: apple76,
+                  },
+                  {
+                    rel: 'apple-touch-icon-precomposed',
+                    sizes: '114x114',
+                    href: apple114,
+                  },
+                  {
+                    rel: 'apple-touch-icon-precomposed',
+                    sizes: '152x152',
+                    href: apple152,
                   },
                 ]}
                 htmlAttributes={{
