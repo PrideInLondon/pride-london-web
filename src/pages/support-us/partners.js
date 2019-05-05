@@ -218,14 +218,18 @@ const Sponsors = ({ data }) => {
               )}
 
               {sponsors[constants.sponsorLevels.digitalPartners] && (
-                <SponsorsSubsection title="Partners">
-                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
+                <SponsorsSubsection title="Digital Partners">
+                  {renderSponsors(
+                    sponsors[constants.sponsorLevels.digitalPartners]
+                  )}
                 </SponsorsSubsection>
               )}
 
               {sponsors[constants.sponsorLevels.mediaPartners] && (
-                <SponsorsSubsection title="Partners">
-                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
+                <SponsorsSubsection title="Media Partners">
+                  {renderSponsors(
+                    sponsors[constants.sponsorLevels.mediaPartners]
+                  )}
                 </SponsorsSubsection>
               )}
 
