@@ -52,7 +52,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                   "id": "nav-about",
                   "submenu": Array [
                     Object {
-                      "heading": "About us",
+                      "heading": "Pride",
                       "links": Array [
                         Object {
                           "title": "Our story",
@@ -62,9 +62,14 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                           "title": "Our impact",
                           "url": "/about-us/impact",
                         },
+                      ],
+                    },
+                    Object {
+                      "heading": "Campaigns",
+                      "links": Array [
                         Object {
-                          "title": "Campaigns",
-                          "url": "/about-us/campaigns",
+                          "title": "Jubilee",
+                          "url": "/about-us/campaigns/jubilee",
                         },
                       ],
                     },
@@ -124,7 +129,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                         },
                         Object {
                           "title": "What's on",
-                          "url": "/events/whats-on",
+                          "url": "/events",
                         },
                         Object {
                           "title": "Host an event",
@@ -144,7 +149,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                           "url": "/events/prides-got-talent",
                         },
                         Object {
-                          "title": "Audition for Pride's Got Talent",
+                          "title": "Audition",
                           "url": "/events/prides-got-talent/audition",
                         },
                       ],

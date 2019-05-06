@@ -11,8 +11,8 @@
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint 'src/**/*.js'",
     "lint-fix": "eslint --fix 'src/**/*.js'",
-    "test": "jest --runInBand && codecov",
-    "test:watch": "jest --watch"
+    "test": "yarn jest --runInBand && codecov",
+    "test:watch": "yarn jest --watch"
   },
   "jest": {
     "moduleNameMapper": {

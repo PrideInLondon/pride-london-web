@@ -64,11 +64,19 @@ const Nav = () => {
                     url: '/',
                     submenu: [
                       {
-                        heading: 'About us',
+                        heading: 'Pride',
                         links: [
                           { title: 'Our story', url: '/about-us' },
                           { title: 'Our impact', url: '/about-us/impact' },
-                          { title: 'Campaigns', url: '/about-us/campaigns' },
+                        ],
+                      },
+                      {
+                        heading: 'Campaigns',
+                        links: [
+                          {
+                            title: 'Jubilee',
+                            url: '/about-us/campaigns/jubilee',
+                          },
                         ],
                       },
                     ],
@@ -125,7 +133,7 @@ const Nav = () => {
                           },
                           {
                             title: "What's on",
-                            url: '/events/whats-on',
+                            url: '/events',
                           },
                           {
                             title: 'Host an event',
@@ -145,7 +153,7 @@ const Nav = () => {
                             url: '/events/prides-got-talent',
                           },
                           {
-                            title: "Audition for Pride's Got Talent",
+                            title: 'Audition',
                             url: '/events/prides-got-talent/audition',
                           },
                         ],
