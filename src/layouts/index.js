@@ -29,7 +29,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './index.css'
 import './fonts.css'
-import metaImg from '../theme/assets/images/Pride-in-London-2018-save-the-date1024.jpg'
+import metaImg from '../theme/assets/images/pride-logo-social.png'
 
 const query = graphql`
   query rootQuery {
