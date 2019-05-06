@@ -45,7 +45,11 @@ export const Footer = ({
   const sponsorOrder = ['Headline', 'Gold', 'Silver', 'Bronze']
   return (
     <FooterWrapper>
-      <StyledFooter>
+      <StyledFooter
+        role="contentinfo"
+        itemscope
+        itemtype="http://schema.org/WPFooter"
+      >
         <Row>
           <SocialSection width={1}>
             <div>
