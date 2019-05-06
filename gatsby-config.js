@@ -13,11 +13,25 @@ require('dotenv').config({ path: `.env.${env}` })
 module.exports = {
   siteMetadata: {
     siteUrl,
-    name: 'Pride in London Events Listing',
+    name: 'Pride in London',
+    legalName: 'London LGBT+ Community Pride CIC',
     title: 'Pride in London',
     description:
       "This June and July, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances on July 6th 2019.",
     appleAppId: '1250496471',
+    phone: '+448443445428',
+    email: 'info@prideinlondon.org',
+    streetAddress: 'PO Box 71920',
+    addressLocality: 'London',
+    addressRegion: 'London',
+    postalCode: 'NW2 9QN',
+    addressCountry: 'UK',
+    facebook: 'https://www.facebook.com/pg/LondonLGBTPride',
+    twitter: 'https://twitter.com/PrideInLondon',
+    instagram: 'http://instagram.com/prideinlondon',
+    youtube: 'https://www.youtube.com/user/LondonLGBTPride',
+    linkedin: 'https://www.linkedin.com/company/prideinlondon/',
+    snapchat: 'http://www.snapchat.com/add/LondonLGBTPride',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -47,8 +61,7 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            // policy: [{ userAgent: '*' }], // restore when switching over domain name to prideinlondon.org
-            policy: [{ userAgent: '*', disallow: ['/'] }],
+            policy: [{ userAgent: '*' }],
             sitemap: null,
             host: null,
           },

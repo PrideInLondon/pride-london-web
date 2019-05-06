@@ -1,6 +1,6 @@
 # Pride in London - Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/94c5776f-6b68-460b-9d6f-400504d691a4/deploy-status)](https://app.netlify.com/sites/fervent-albattani-72bcb1/deploys)   
+[![Netlify Status](https://api.netlify.com/api/v1/badges/94c5776f-6b68-460b-9d6f-400504d691a4/deploy-status)](https://app.netlify.com/sites/prideinlondon-production/deploys)   
 [![CircleCI](https://circleci.com/gh/PrideInLondon/pride-london-web.svg?style=svg)](https://circleci.com/gh/PrideInLondon/pride-london-web)   
 [![CodeFactor](https://www.codefactor.io/repository/github/prideinlondon/pride-london-web/badge)](https://www.codefactor.io/repository/github/prideinlondon/pride-london-web)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f0c3e56f477040a288ecbe6b8d00b437)](https://www.codacy.com/app/PrideInLondon/pride-london-web?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PrideInLondon/pride-london-web&amp;utm_campaign=Badge_Grade)
@@ -15,7 +15,7 @@ This project is a community effort to release a brand new web platform to suppla
 
 Want to help out? That's amazing! The Contribution Guide should hopefully get you on your way.
 
-Check the [issues](https://github.com/kiraarghy/pride-london-web-gatsby/issues) section of the repo for tickets to pick up.
+Check the [issues](https://github.com/PrideInLondon/pride-london-web/issues) section of the repo for tickets to pick up.
 
 ## Install
 

@@ -79,7 +79,6 @@ exports[`ViewsContainer should render with default values 1`] = `
               }
               id="1"
               key="1"
-              readTime={null}
               slug="somewhere1"
               title="test"
             />
@@ -104,7 +103,6 @@ exports[`ViewsContainer should render with default values 1`] = `
               }
               id="2"
               key="2"
-              readTime={null}
               slug="somewhere2"
               title="test"
             />

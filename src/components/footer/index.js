@@ -31,20 +31,32 @@ import {
   LegalLink,
 } from './styles'
 
-export const Footer = ({ data }) => {
+export const Footer = ({
+  data,
+  facebook,
+  twitter,
+  instagram,
+  youtube,
+  linkedin,
+  snapchat,
+}) => {
   const { edges } = data.allContentfulSponsor
   const iconSize = 20
   const sponsorOrder = ['Headline', 'Gold', 'Silver', 'Bronze']
   return (
     <FooterWrapper>
-      <StyledFooter>
+      <StyledFooter
+        role="contentinfo"
+        itemScope
+        itemType="http://schema.org/WPFooter"
+      >
         <Row>
           <SocialSection width={1}>
             <div>
               <SocialList>
                 <SocialItem>
                   <SocialLink
-                    href="https://www.facebook.com/pg/LondonLGBTPride"
+                    href={facebook}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Follow us on"
@@ -54,7 +66,7 @@ export const Footer = ({ data }) => {
                 </SocialItem>
                 <SocialItem>
                   <SocialLink
-                    href="https://twitter.com/PrideInLondon"
+                    href={twitter}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Follow us on Twitter"
@@ -64,7 +76,7 @@ export const Footer = ({ data }) => {
                 </SocialItem>
                 <SocialItem>
                   <SocialLink
-                    href="http://instagram.com/prideinlondon"
+                    href={instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Follow us on Instagram"
@@ -74,7 +86,7 @@ export const Footer = ({ data }) => {
                 </SocialItem>
                 <SocialItem>
                   <SocialLink
-                    href="https://www.youtube.com/user/LondonLGBTPride?sub_confirmation=1"
+                    href={youtube + '?sub_confirmation=1'}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Follow us on Youtube"
@@ -84,7 +96,7 @@ export const Footer = ({ data }) => {
                 </SocialItem>
                 <SocialItem>
                   <SocialLink
-                    href="https://www.linkedin.com/company/prideinlondon/"
+                    href={linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Follow us on Linkedin"
@@ -94,7 +106,7 @@ export const Footer = ({ data }) => {
                 </SocialItem>
                 <SocialItem>
                   <SocialLink
-                    href="http://www.snapchat.com/add/LondonLGBTPride"
+                    href={snapchat}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Follow us on Snapchat"
@@ -187,6 +199,12 @@ export const Footer = ({ data }) => {
 }
 
 Footer.propTypes = {
+  facebook: PropTypes.string,
+  twitter: PropTypes.string,
+  instagram: PropTypes.string,
+  youtube: PropTypes.string,
+  linkedin: PropTypes.string,
+  snapchat: PropTypes.string,
   data: PropTypes.shape({
     allContentfulSponsor: PropTypes.shape({
       edges: PropTypes.array,
@@ -196,6 +214,12 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
   data: {},
+  facebook: '',
+  twitter: '',
+  instagram: '',
+  youtube: '',
+  linkedin: '',
+  snapchat: '',
 }
 
 export default Footer
