@@ -54,5 +54,7 @@ export const CardTitle = styled.h2`
 
   ${media.tablet`
     font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 600;
   `};
 `
