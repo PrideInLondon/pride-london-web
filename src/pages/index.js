@@ -182,7 +182,7 @@ const Home = () => (
                 <h2>Featured events</h2>
                 <p>View events from across the LGBT+ community.</p>
               </FeaturedEventsTitle>
-              <StyledButton wide={false} to="/events/whats-on">
+              <StyledButton wide={false} to="/events">
                 View all events
               </StyledButton>
             </FeaturedEventsHeader>

@@ -109,8 +109,8 @@ const Sponsors = ({ data }) => {
   return (
     <Fragment>
       <BannerImage
-        titleText="Sponsor us"
-        subtitleText="Help us to keep Pride free for everyone by becoming one of our sponsors"
+        titleText="Partner with us"
+        subtitleText="Find out how your company can help us to keep Pride free for everyone"
         color={theme.colors.yellow}
         imageSrc={BannerImg}
       />
@@ -119,7 +119,7 @@ const Sponsors = ({ data }) => {
           <Row>
             <RelativeColumn width={1}>
               <CTABox>
-                <CTATitle>Sponsor us!</CTATitle>
+                <CTATitle>Find out more about becoming a Partner</CTATitle>
                 <CTABody>
                   Whether you're a big brand or a small business, and interested
                   in supporting Pride in London. We want to hear from you.
