@@ -22,9 +22,9 @@ const Blog = ({ data: { articles, views } }) => {
   return (
     <Fragment>
       <BannerImage
-        titleText="The Voice of Pride in London"
-        subtitleText="Find out what we're talking about in the Pride in London Community"
-        altText="The Voice of Pride in London"
+        titleText="News and views"
+        subtitleText="Read about what we’re talking about in the London LGBT+ community"
+        altText="News and views"
         imageSrc={background}
         imageFullWidth
         medium

@@ -185,6 +185,10 @@ const Nav = () => {
                             title: 'Buy merchandise',
                             url: '/support-us/merchandise',
                           },
+                          {
+                            title: 'Work for Pride',
+                            url: '/support-us/jobs',
+                          },
                         ],
                       },
                       {

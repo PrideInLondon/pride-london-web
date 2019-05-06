@@ -182,6 +182,10 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                           "title": "Buy merchandise",
                           "url": "/support-us/merchandise",
                         },
+                        Object {
+                          "title": "Work for Pride",
+                          "url": "/support-us/jobs",
+                        },
                       ],
                     },
                     Object {
