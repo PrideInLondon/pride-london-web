@@ -92,6 +92,7 @@ export const blogLandingPageQuery = graphql`
               height: 400
               resizingBehavior: FILL
               quality: 90
+              cropFocus: FACE
             ) {
               ...GatsbyContentfulFixed
             }
