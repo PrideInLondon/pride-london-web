@@ -128,10 +128,6 @@ const Nav = () => {
                         heading: 'Pride Festival',
                         links: [
                           {
-                            title: "This year's festival",
-                            url: '/events/festival',
-                          },
-                          {
                             title: "What's on",
                             url: '/events',
                           },
