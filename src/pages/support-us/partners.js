@@ -217,11 +217,15 @@ const Sponsors = ({ data }) => {
                 </SponsorsSubsection>
               )}
 
-              {sponsors[constants.sponsorLevels.digitalPartners] && (
-                <SponsorsSubsection title="Digital Partners">
-                  {renderSponsors(
-                    sponsors[constants.sponsorLevels.digitalPartners]
-                  )}
+              {sponsors[constants.sponsorLevels.partners] && (
+                <SponsorsSubsection title="Partners">
+                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
+                </SponsorsSubsection>
+              )}
+
+              {sponsors[constants.sponsorLevels.supporters] && (
+                <SponsorsSubsection title="Supporters">
+                  {renderSponsors(sponsors[constants.sponsorLevels.supporters])}
                 </SponsorsSubsection>
               )}
 
@@ -233,9 +237,11 @@ const Sponsors = ({ data }) => {
                 </SponsorsSubsection>
               )}
 
-              {sponsors[constants.sponsorLevels.partners] && (
-                <SponsorsSubsection title="Partners">
-                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
+              {sponsors[constants.sponsorLevels.digitalPartners] && (
+                <SponsorsSubsection title="Digital Partners">
+                  {renderSponsors(
+                    sponsors[constants.sponsorLevels.digitalPartners]
+                  )}
                 </SponsorsSubsection>
               )}
             </SecondarySponsorsContainer>
