@@ -61,8 +61,7 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            // policy: [{ userAgent: '*' }], // restore when switching over domain name to prideinlondon.org
-            policy: [{ userAgent: '*', disallow: ['/'] }],
+            policy: [{ userAgent: '*' }],
             sitemap: null,
             host: null,
           },
