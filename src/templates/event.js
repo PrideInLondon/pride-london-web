@@ -14,7 +14,6 @@ import {
   EventDirectionsSection,
 } from '../features/events'
 import { Container, Row, Column } from '../components/grid'
-import { formatPrice } from '../features/events/helpers'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -104,8 +103,8 @@ export default class Event extends Component {
           name,
           performances,
           eventPriceLow,
-          eventPriceHigh,
           eventCategories,
+          ticketingUrl,
           accessibilityDetails,
           location,
           locationName,
@@ -126,7 +125,6 @@ export default class Event extends Component {
 
     const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
     const metaUrl = siteUrl + pathname
-    const metaImgUrl = siteUrl + metaImg
 
     return (
       <PageWrapper>
@@ -136,50 +134,6 @@ export default class Event extends Component {
             {
               name: 'description',
               content: eventDescription,
-            },
-            // Schema meta tags
-            {
-              itemprop: 'name',
-              content: name,
-            },
-            {
-              itemprop: 'description',
-              content: eventDescription,
-            },
-            {
-              itemprop: 'url',
-              content: metaUrl,
-            },
-            {
-              itemprop: 'thumbnailUrl',
-              content: metaImg,
-            },
-            {
-              itemprop: 'image',
-              content: metaImg,
-            },
-            {
-              itemprop: 'startDate',
-              content: startTime,
-            },
-            {
-              itemprop: 'endDate',
-              content: endTime,
-            },
-            {
-              itemprop: 'isAccessibleForFree',
-              content: eventPriceLow === 0,
-            },
-            {
-              itemprop: 'offers',
-              itemscope: true,
-              itemtype: 'http://schema.org/Offer',
-              itemref: 'meta-price',
-            },
-            {
-              itemprop: 'price',
-              id: 'meta-price',
-              content: formatPrice(eventPriceLow, eventPriceHigh),
             },
 
             // OpenGraph Meta Tags
@@ -246,13 +200,43 @@ export default class Event extends Component {
               content: metaUrl,
             },
           ]}
-          htmlAttributes={{
-            itemtype: 'http://schema.org/Event',
-          }}
           link={[
             {
               rel: 'image_src',
-              content: metaImgUrl,
+              content: metaImg,
+            },
+          ]}
+          script={[
+            {
+              type: 'application/ld+json',
+              innerHTML: JSON.stringify({
+                '@context': 'https://www.schema.org',
+                '@type': 'Event',
+                name,
+                url: metaUrl,
+                description: eventDescription,
+                startDate: startTime,
+                endDate: endTime,
+                image: metaImg,
+                location: {
+                  '@type': 'Place',
+                  name: "Joe's Party Palace",
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: addressLine1,
+                    ...(addressLine2 && { addressLocality: addressLine2 }),
+                    addressRegion: city,
+                    postalCode: postcode,
+                    addressCountry: 'UK',
+                  },
+                },
+                offers: {
+                  '@type': 'Offer',
+                  price: eventPriceLow,
+                  priceCurrency: 'GBP',
+                  ...(ticketingUrl && { url: ticketingUrl }),
+                },
+              }),
             },
           ]}
         />
@@ -319,9 +303,6 @@ export const eventPageQuery = graphql`
   query eventQuery($id: String!) {
     site {
       siteMetadata {
-        name
-        title
-        description
         siteUrl
       }
     }

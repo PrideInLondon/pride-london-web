@@ -2,7 +2,11 @@
 
 exports[`<Footer/> should render and match snapshot 1`] = `
 <styles__FooterWrapper>
-  <styles__StyledFooter>
+  <styles__StyledFooter
+    itemScope={true}
+    itemType="http://schema.org/WPFooter"
+    role="contentinfo"
+  >
     <Row
       flexWrap={null}
       ml={null}
