@@ -5,7 +5,7 @@ exports[`ViewsCard renders with default values 1`] = `
   to="/123456"
 >
   <styles__ViewsThumbnail
-    alt="Bob Barker — My view"
+    alt="My view"
     fixed={
       Object {
         "base64": "abc",
@@ -16,9 +16,6 @@ exports[`ViewsCard renders with default values 1`] = `
       }
     }
   />
-  <styles__ArticleAuthor>
-    Bob Barker
-  </styles__ArticleAuthor>
   <styles__ArticleTitle>
     My view
   </styles__ArticleTitle>

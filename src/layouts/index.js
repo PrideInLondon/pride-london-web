@@ -23,21 +23,37 @@ import mstile144 from '../theme/assets/images/favicons/mstile-144x144.png'
 import mstile150 from '../theme/assets/images/favicons/mstile-150x150.png'
 import mstile310 from '../theme/assets/images/favicons/mstile-310x310.png'
 import mstile310150 from '../theme/assets/images/favicons/mstile-310x150.png'
+import logo from '../theme/assets/images/logo-pride.svg'
 
 import theme from '../theme/theme'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './index.css'
 import './fonts.css'
-import metaImg from '../theme/assets/images/Pride-in-London-2018-save-the-date1024.jpg'
+import metaImg from '../theme/assets/images/pride-logo-social.png'
 
 const query = graphql`
   query rootQuery {
     site {
       siteMetadata {
         title
+        name
+        legalName
         siteUrl
         description
+        phone
+        email
+        streetAddress
+        addressLocality
+        addressRegion
+        postalCode
+        addressCountry
+        facebook
+        twitter
+        instagram
+        youtube
+        linkedin
+        snapchat
       }
     }
 
@@ -74,7 +90,26 @@ const Layout = ({ children, location: { pathname } }) => (
       render={({
         allContentfulEvent: { edges: events },
         site: {
-          siteMetadata: { title, siteUrl, description },
+          siteMetadata: {
+            name,
+            legalName,
+            title,
+            siteUrl,
+            description,
+            phone,
+            email,
+            streetAddress,
+            addressLocality,
+            addressRegion,
+            postalCode,
+            addressCountry,
+            facebook,
+            twitter,
+            instagram,
+            youtube,
+            linkedin,
+            snapchat,
+          },
         },
       }) => {
         const metaUrl = pathname === '/' ? siteUrl : siteUrl + pathname
@@ -279,12 +314,52 @@ const Layout = ({ children, location: { pathname } }) => (
                     src:
                       'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.2.5/polyfill.js',
                   },
+                  {
+                    type: 'application/ld+json',
+                    innerHTML: JSON.stringify({
+                      '@context': 'https://schema.org',
+                      '@type': 'Organization',
+                      name: name,
+                      legalName,
+                      url: siteUrl,
+                      logo,
+                      address: {
+                        '@type': 'PostalAddress',
+                        streetAddress,
+                        addressLocality,
+                        addressRegion,
+                        postalCode,
+                        addressCountry,
+                      },
+                      contactPoint: {
+                        '@type': 'ContactPoint',
+                        contactType: 'customer support',
+                        telephone: phone,
+                        email: email,
+                      },
+                      sameAs: [
+                        facebook,
+                        twitter,
+                        instagram,
+                        youtube,
+                        linkedin,
+                        snapchat,
+                      ],
+                    }),
+                  },
                 ]}
               />
 
               <Nav />
               <main>{children}</main>
-              <Footer />
+              <Footer
+                facebook={facebook}
+                twitter={twitter}
+                instagram={instagram}
+                youtube={youtube}
+                linkedin={linkedin}
+                snapchat={snapchat}
+              />
             </Fragment>
           </Provider>
         )
