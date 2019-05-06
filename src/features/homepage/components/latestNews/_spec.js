@@ -11,7 +11,16 @@ describe(LatestNews.name, () => {
     }
     const readTime = ''
     const datePublished = '2019-03-28T20:30+00:00'
-    const headerImage = { file: { url: 'backgroundimageurl/image.png' } }
+    const headerImage = {
+      title: 'Latest News Image',
+      fixed: {
+        base64: 'abc',
+        height: 830,
+        width: 500,
+        src: 'src',
+        srcSet: 'srcset',
+      },
+    }
     const slug = 'some/slug'
     const wrapper = shallow(
       <LatestNews

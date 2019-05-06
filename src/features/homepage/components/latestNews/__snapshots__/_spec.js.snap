@@ -2,9 +2,22 @@
 
 exports[`LatestNews renders with default values 1`] = `
 <styles__Background
-  backgroundImage="backgroundimageurl/image.png"
   to="/some/slug"
 >
+  <styles__ImgWrapper>
+    <styles__LatestNewsImg
+      alt="Latest News Image"
+      fixed={
+        Object {
+          "base64": "abc",
+          "height": 830,
+          "src": "src",
+          "srcSet": "srcset",
+          "width": 500,
+        }
+      }
+    />
+  </styles__ImgWrapper>
   <styles__LatestNewsCardContainer>
     <styles__NewsCard
       category={

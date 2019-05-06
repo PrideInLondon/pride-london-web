@@ -29,4 +29,8 @@ export const BannerSubtitleWrapper = styled.div`
   ${media.tablet`  
     max-width: 520px;
   `};
+
+  ${media.desktop`  
+    max-width: 600px;
+  `};
 `

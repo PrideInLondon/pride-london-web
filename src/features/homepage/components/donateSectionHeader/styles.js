@@ -42,5 +42,6 @@ export const Title = styled.h2`
     padding: 30px 0;
     font-size: 56px;
     line-height: 1.21;
+    text-align: center;
   `};
 `
