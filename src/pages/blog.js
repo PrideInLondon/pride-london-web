@@ -87,7 +87,12 @@ export const blogLandingPageQuery = graphql`
           }
           featuredImage {
             title
-            fixed(width: 400, height: 400, resizingBehavior: FILL) {
+            fixed(
+              width: 400
+              height: 400
+              resizingBehavior: FILL
+              quality: 90
+            ) {
               ...GatsbyContentfulFixed
             }
           }

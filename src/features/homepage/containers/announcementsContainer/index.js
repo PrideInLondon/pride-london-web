@@ -19,7 +19,12 @@ export const query = graphql`
           url
           image {
             title
-            fixed(width: 600, height: 600, resizingBehavior: FILL) {
+            fixed(
+              width: 600
+              height: 600
+              resizingBehavior: FILL
+              quality: 90
+            ) {
               ...GatsbyContentfulFixed
             }
           }
