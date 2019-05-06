@@ -47,8 +47,8 @@ export const Footer = ({
     <FooterWrapper>
       <StyledFooter
         role="contentinfo"
-        itemscope
-        itemtype="http://schema.org/WPFooter"
+        itemScope
+        itemType="http://schema.org/WPFooter"
       >
         <Row>
           <SocialSection width={1}>
