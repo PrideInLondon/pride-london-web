@@ -17,7 +17,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             <styles__SocialItem>
               <styles__SocialLink
                 aria-label="Follow us on"
-                href="https://www.facebook.com/pg/LondonLGBTPride"
+                href=""
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -30,7 +30,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             <styles__SocialItem>
               <styles__SocialLink
                 aria-label="Follow us on Twitter"
-                href="https://twitter.com/PrideInLondon"
+                href=""
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -43,7 +43,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             <styles__SocialItem>
               <styles__SocialLink
                 aria-label="Follow us on Instagram"
-                href="http://instagram.com/prideinlondon"
+                href=""
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -56,7 +56,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             <styles__SocialItem>
               <styles__SocialLink
                 aria-label="Follow us on Youtube"
-                href="https://www.youtube.com/user/LondonLGBTPride?sub_confirmation=1"
+                href="?sub_confirmation=1"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -69,7 +69,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             <styles__SocialItem>
               <styles__SocialLink
                 aria-label="Follow us on Linkedin"
-                href="https://www.linkedin.com/company/prideinlondon/"
+                href=""
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -82,7 +82,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             <styles__SocialItem>
               <styles__SocialLink
                 aria-label="Follow us on Snapchat"
-                href="http://www.snapchat.com/add/LondonLGBTPride"
+                href=""
                 rel="noopener noreferrer"
                 target="_blank"
               >
