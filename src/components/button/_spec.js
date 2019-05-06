@@ -25,7 +25,7 @@ describe('<Button/>', () => {
   })
 
   it('renders a gatsby link if the to prop is not http', () => {
-    const wrapper = mount(<Button to="/events/whats-on" />)
+    const wrapper = mount(<Button to="/events" />)
     expect(wrapper.find('GatsbyLink').exists()).toBeTruthy()
   })
 

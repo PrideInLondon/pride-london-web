@@ -4,25 +4,25 @@ import styled from 'styled-components'
 import moment from 'moment'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import { noScroll } from '../../utilities'
-import { media } from '../../theme/media'
-import theme from '../../theme/theme'
-import { EventListingCard } from '../../features/events'
-import EventsFilters from '../../features/events/components/eventsFilters'
-import BannerImage from '../../components/banner/bannerImage'
-import Button from '../../components/button'
+import { noScroll } from '../utilities'
+import { media } from '../theme/media'
+import theme from '../theme/theme'
+import { EventListingCard } from '../features/events'
+import EventsFilters from '../features/events/components/eventsFilters'
+import BannerImage from '../components/banner/bannerImage'
+import Button from '../components/button'
 import {
   Container,
   Row,
   Column,
   StyledFlipMove,
   FlexColumn,
-} from '../../components/grid'
-import { Consumer } from '../../components/appContext'
-import { filterByLimit } from '../../features/events/helpers'
-import { dateFormat } from '../../constants'
-import filterIcon from '../../theme/assets/images/icon-filters.svg'
-import BannerImg from '../../theme/assets/images/banners/events/bg@2x.jpg'
+} from '../components/grid'
+import { Consumer } from '../components/appContext'
+import { filterByLimit } from '../features/events/helpers'
+import { dateFormat } from '../constants'
+import filterIcon from '../theme/assets/images/icon-filters.svg'
+import BannerImg from '../theme/assets/images/banners/events/bg@2x.jpg'
 
 const ColumnTextCenter = styled(Column)`
   text-align: center;

@@ -6,7 +6,7 @@ exports[`AnnouncementHeader renders with default values 1`] = `
     Announcements
   </styles__Head>
   <styles__Title>
-    View events from across the LGBT+ community
+    Check out the latest updates from the Pride in London team.
   </styles__Title>
 </styles__Header>
 `;
