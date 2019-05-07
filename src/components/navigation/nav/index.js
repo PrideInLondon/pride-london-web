@@ -218,7 +218,7 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-blog',
-                    title: 'News and Views',
+                    title: 'News & Views',
                     url: '/news-and-views',
                   }}
                 />

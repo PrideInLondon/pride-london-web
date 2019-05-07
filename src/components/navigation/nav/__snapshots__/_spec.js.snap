@@ -221,7 +221,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
               item={
                 Object {
                   "id": "nav-blog",
-                  "title": "News and Views",
+                  "title": "News & Views",
                   "url": "/news-and-views",
                 }
               }
