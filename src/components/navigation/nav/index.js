@@ -112,7 +112,7 @@ const Nav = () => {
                           },
                           {
                             title: 'Hire a Stall',
-                            url: 'parade/stalls/hire-a-stall',
+                            url: '/parade/stalls/hire-a-stall',
                           },
                         ],
                       },

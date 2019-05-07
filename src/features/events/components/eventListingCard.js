@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
 import { formatDate } from '../helpers'
@@ -51,10 +52,6 @@ const CardImageOverflow = styled.div`
 `
 
 const CardImageWrapper = styled.div`
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-image: url(${props => props.src});
   transition: transform 0.15s ease-out;
   position: absolute;
   top: 0;
@@ -63,14 +60,13 @@ const CardImageWrapper = styled.div`
   right: 0;
 `
 
-const CardImage = styled.img`
-  display: block;
-  width: 100%;
-  height: auto;
+const CardImage = styled(Img)`
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
 `
 
 const CardBody = styled.div`
@@ -133,19 +129,10 @@ export const EventListingCard = props => {
   return (
     <Card to={`/events/${event.id}`} displaycolumn={displaycolumn}>
       <CardImageOverflow displaycolumn={displaycolumn}>
-        <CardImageWrapper
-          className="card-img-wrapper"
-          src={`${
-            event.eventsListPicture.file.url
-          }?fit=fill&w=400&h=225&f=faces`}
-        >
+        <CardImageWrapper className="card-img-wrapper">
           <CardImage
-            src={`${
-              event.eventsListPicture.file.url
-            }?fit=fill&w=400&h=225&f=faces`}
+            fixed={event.eventsListPicture.fixed}
             alt={event.eventsListPicture.title}
-            width="400"
-            height="225"
           />
         </CardImageWrapper>
       </CardImageOverflow>
