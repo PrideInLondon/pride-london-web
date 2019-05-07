@@ -76,7 +76,6 @@ const Submenu = props => {
                   {submenuList.links.map(link => (
                     <li key={link.title}>
                       <PanelLink
-                        to={link.url}
                         {...handleUrl(link.url)}
                         itemProp="url"
                         onClick={() =>
