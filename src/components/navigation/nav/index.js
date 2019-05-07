@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { noScroll } from '../../../utilities/'
+import { noScroll } from '../../../utilities'
 import logo from '../../../theme/assets/images/logo-pride.svg'
 import NavItem from '../navItem'
 import {
@@ -110,6 +110,10 @@ const Nav = () => {
                             title: 'Residents and businesses info',
                             url: '/parade/residents-and-businesses-info',
                           },
+                          {
+                            title: 'Hire a Stall',
+                            url: 'parade/stalls/hire-a-stall',
+                          },
                         ],
                       },
                     ],
@@ -215,8 +219,8 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-blog',
-                    title: 'Blog',
-                    url: '/blog',
+                    title: 'News and Views',
+                    url: '/news-and-views',
                   }}
                 />
                 <NavItem>
