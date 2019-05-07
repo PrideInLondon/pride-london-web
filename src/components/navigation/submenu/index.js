@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import shortid from 'shortid'
 import theme from '../../../theme/theme'
 import { Container } from '../../grid'
-import { checkBreakpoint } from '../../../utilities'
+import { checkBreakpoint, handleUrl } from '../../../utilities'
 import {
   Panel,
   PanelRow,
@@ -76,7 +76,7 @@ const Submenu = props => {
                   {submenuList.links.map(link => (
                     <li key={link.title}>
                       <PanelLink
-                        to={link.url}
+                        {...handleUrl(link.url)}
                         itemProp="url"
                         onClick={() =>
                           checkBreakpoint(theme.navBreakpoint)

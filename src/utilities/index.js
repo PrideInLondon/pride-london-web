@@ -28,9 +28,14 @@ export function handleUrl(url) {
     case url && !externalUrl(url) && !contactUrl(url):
       return { to: handleSlug(url), as: Link }
     case url && externalUrl(url):
-      return { href: url, rel: 'noopener noreferrer', target: '_blank' }
+      return {
+        href: url,
+        rel: 'noopener noreferrer',
+        target: '_blank',
+        as: 'a',
+      }
     case url && contactUrl(url):
-      return { href: url, target: '_blank' }
+      return { href: url, target: '_blank', as: 'a' }
   }
 }
 
