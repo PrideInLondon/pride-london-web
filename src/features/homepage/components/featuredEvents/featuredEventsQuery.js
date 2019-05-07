@@ -26,9 +26,6 @@ const query = graphql`
               ) {
                 ...GatsbyContentfulFixed
               }
-              file {
-                url
-              }
             }
           }
         }

@@ -72,6 +72,7 @@ const query = graphql`
           accessibilityOptions
           postcode
           eventsListPicture {
+            title
             fixed(
               width: 400
               height: 235
@@ -80,10 +81,6 @@ const query = graphql`
               cropFocus: FACE
             ) {
               ...GatsbyContentfulFixed
-            }
-            title
-            file {
-              url
             }
           }
         }
