@@ -2,6 +2,7 @@
 
 exports[`<AnnouncementCard/> renders with default values 1`] = `
 <styles__CardAnnouncement
+  as="a"
   href="http://google.com"
   rel="noopener noreferrer"
   target="_blank"
