@@ -17,8 +17,14 @@ const query = graphql`
             eventPriceLow
             eventsListPicture {
               title
-              file {
-                url
+              fixed(
+                width: 400
+                height: 235
+                resizingBehavior: FILL
+                quality: 90
+                cropFocus: FACE
+              ) {
+                ...GatsbyContentfulFixed
               }
             }
           }

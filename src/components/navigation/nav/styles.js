@@ -54,12 +54,15 @@ export const LogoWrapper = styled(Link)`
 export const Logo = styled.img`
   width: 102px;
   height: 40px;
-  margin: 0 20px;
+  margin: 0;
 
   ${media.nav`
     width: 164px;
     height: 64px;
-    margin: 0;
+  `};
+
+  ${media.tabletMax`
+    margin-left: 10px;
   `};
 `
 

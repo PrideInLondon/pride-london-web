@@ -103,10 +103,14 @@ exports[`FeaturedEvents renders with default values 1`] = `
             "endTime": "2019-06-05T23:00+01:00",
             "eventPriceLow": 3,
             "eventsListPicture": Object {
-              "file": Object {
-                "title": "image alt",
-                "url": "test/image.jpg",
+              "fixed": Object {
+                "base64": "abc",
+                "height": 235,
+                "src": "src",
+                "srcSet": "srcset",
+                "width": 400,
               },
+              "title": "img alt",
             },
             "id": "123abc",
             "name": "Pride Quiz",
@@ -133,10 +137,14 @@ exports[`FeaturedEvents renders with default values 1`] = `
             "endTime": "2019-06-05T23:00+01:00",
             "eventPriceLow": 3,
             "eventsListPicture": Object {
-              "file": Object {
-                "title": "image alt",
-                "url": "test/image.jpg",
+              "fixed": Object {
+                "base64": "abc",
+                "height": 235,
+                "src": "src",
+                "srcSet": "srcset",
+                "width": 400,
               },
+              "title": "img alt",
             },
             "id": "123abcd",
             "name": "Pride Quiz 2",

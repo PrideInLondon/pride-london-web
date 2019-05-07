@@ -30,9 +30,8 @@ const Nav = () => {
           mx={[
             0, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
             0, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
-            50, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
-            50, // Margin between 2nd breakpoint(1024px) and 3rd breakpoint (1440px)
-            90, // Margin 1440 onwards
+            40, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
+            75, // Margin 1440 onwards
           ]}
         >
           <FlexColumn width={1}>
@@ -112,7 +111,7 @@ const Nav = () => {
                           },
                           {
                             title: 'Hire a Stall',
-                            url: 'parade/stalls/hire-a-stall',
+                            url: '/parade/stalls/hire-a-stall',
                           },
                         ],
                       },

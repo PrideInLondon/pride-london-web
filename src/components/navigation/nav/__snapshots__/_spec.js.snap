@@ -8,9 +8,8 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
         Array [
           0,
           0,
-          50,
-          50,
-          90,
+          40,
+          75,
         ]
       }
     >
@@ -107,7 +106,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                         },
                         Object {
                           "title": "Hire a Stall",
-                          "url": "parade/stalls/hire-a-stall",
+                          "url": "/parade/stalls/hire-a-stall",
                         },
                       ],
                     },
