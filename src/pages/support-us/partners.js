@@ -172,6 +172,12 @@ const Sponsors = ({ data }) => {
               in London are proud to be working with our partners to ensure
               diversity is embedded in the core of each company we work with.
             </p>
+            <p>
+              For more information download information on the
+              <a href="https://assets.ctfassets.net/0ho16wyr4i9n/37Lg8PnUVi1t08XEjPUyuz/7d445d8622f55a85fe394ab861b51407/Partnership_Packages_2019.pptx">
+                2019 Partnership Packages.
+              </a>
+            </p>
           </IntroContainer>
           <Column>
             <ListTitle>Our main 2019 partners</ListTitle>
