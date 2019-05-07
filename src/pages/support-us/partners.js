@@ -14,6 +14,9 @@ import SponsorStar from '../../components/icons/sponsorStar'
 import renderSponsors from '../../features/sponsors/helpers'
 import BannerImg from '../../theme/assets/images/banners/sponsors/bg@2x.jpg'
 
+const ppLink =
+  'https://assets.ctfassets.net/0ho16wyr4i9n/37Lg8PnUVi1t08XEjPUyuz/7d445d8622f55a85fe394ab861b51407/Partnership_Packages_2019.pptx'
+
 const ListTitle = styled.h2`
   margin-top: 0;
   margin-bottom: 10px;
@@ -173,10 +176,8 @@ const Sponsors = ({ data }) => {
               diversity is embedded in the core of each company we work with.
             </p>
             <p>
-              For more information download information on the
-              <a href="https://assets.ctfassets.net/0ho16wyr4i9n/37Lg8PnUVi1t08XEjPUyuz/7d445d8622f55a85fe394ab861b51407/Partnership_Packages_2019.pptx">
-                2019 Partnership Packages.
-              </a>
+              For more information download information on the{' ' /*eslint-disable-line */}
+              <a href={ppLink}>2019 Partnership Packages.</a>
             </p>
           </IntroContainer>
           <Column>
