@@ -223,6 +223,7 @@ export const LegalList = styled.ul`
   ${media.tabletMax`
     justify-content: center;
     margin: 0 0 20px 0;
+    flex-wrap: wrap;
   `};
 `
 
