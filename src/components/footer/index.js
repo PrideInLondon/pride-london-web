@@ -178,6 +178,15 @@ export const Footer = ({
               <LegalListItem>
                 <LegalLink to="/media-centre">Media centre</LegalLink>
               </LegalListItem>
+              <LegalListItem>
+                <LegalLink
+                  as="a"
+                  href="mailto:info@prideinlondon.org"
+                  target="_blank"
+                >
+                  Contact us
+                </LegalLink>
+              </LegalListItem>
             </LegalList>
             <LegalStrapline>
               London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN -
