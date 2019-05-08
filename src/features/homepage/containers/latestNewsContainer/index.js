@@ -106,7 +106,7 @@ const LatestNewsContainer = () => (
         py={[1, 2, 0]}
       >
         <CTALinkOnlyMobile>
-          <CTALink to="/blog">View all news</CTALink>
+          <CTALink to="/news-and-views">View all news</CTALink>
         </CTALinkOnlyMobile>
       </FlexColumn>
     </Row>

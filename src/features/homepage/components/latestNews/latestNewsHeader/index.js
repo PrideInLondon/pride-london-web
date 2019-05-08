@@ -6,7 +6,7 @@ const LatestNewsHeader = () => (
   <Header>
     <Title>Latest News</Title>
     <HiddeOnlyMobile>
-      <CTALink to="/blog">View all news</CTALink>
+      <CTALink to="/news-and-views">View all news</CTALink>
     </HiddeOnlyMobile>
   </Header>
 )

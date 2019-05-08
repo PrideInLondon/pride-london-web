@@ -7,7 +7,7 @@ exports[`LatestNewsHeader renders with default values 1`] = `
   </styles__Title>
   <styles__HiddeOnlyMobile>
     <CTALink
-      to="/blog"
+      to="/news-and-views"
     >
       View all news
     </CTALink>
