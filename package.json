@@ -93,7 +93,7 @@
     "babel-plugin-remove-graphql-queries": "^2.6.3",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "codecov": "^3.2.0",
+    "codecov": "^3.4.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
