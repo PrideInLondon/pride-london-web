@@ -185,8 +185,6 @@ export const SponsorImgWrapper = styled.div`
     height: auto;
     width: auto;
     align-self: center;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
     margin: 0 auto;
     flex-shrink: 0; /* needed to stop images stretching on IE11 */
   }
