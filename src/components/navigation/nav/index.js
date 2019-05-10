@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { noScroll } from '../../../utilities/'
+import { noScroll } from '../../../utilities'
 import logo from '../../../theme/assets/images/logo-pride.svg'
 import NavItem from '../navItem'
 import {
@@ -30,9 +30,8 @@ const Nav = () => {
           mx={[
             0, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
             0, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
-            50, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
-            50, // Margin between 2nd breakpoint(1024px) and 3rd breakpoint (1440px)
-            90, // Margin 1440 onwards
+            40, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
+            75, // Margin 1440 onwards
           ]}
         >
           <FlexColumn width={1}>
@@ -110,6 +109,10 @@ const Nav = () => {
                             title: 'Residents and businesses info',
                             url: '/parade/residents-and-businesses-info',
                           },
+                          {
+                            title: 'Hire a Stall',
+                            url: '/parade/stalls/hire-a-stall',
+                          },
                         ],
                       },
                     ],
@@ -127,10 +130,6 @@ const Nav = () => {
                       {
                         heading: 'Pride Festival',
                         links: [
-                          {
-                            title: "This year's festival",
-                            url: '/events/festival',
-                          },
                           {
                             title: "What's on",
                             url: '/events',
@@ -183,7 +182,8 @@ const Nav = () => {
                           },
                           {
                             title: 'Buy merchandise',
-                            url: '/support-us/merchandise',
+                            url:
+                              'https://www.thegayshop.co.uk/product-category/pride/pride-in-london-shop/',
                           },
                           {
                             title: 'Work for Pride',
@@ -219,8 +219,8 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-blog',
-                    title: 'Blog',
-                    url: '/blog',
+                    title: 'News & Views',
+                    url: '/news-and-views',
                   }}
                 />
                 <NavItem>

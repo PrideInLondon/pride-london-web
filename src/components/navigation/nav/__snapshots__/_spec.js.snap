@@ -8,9 +8,8 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
         Array [
           0,
           0,
-          50,
-          50,
-          90,
+          40,
+          75,
         ]
       }
     >
@@ -105,6 +104,10 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                           "title": "Residents and businesses info",
                           "url": "/parade/residents-and-businesses-info",
                         },
+                        Object {
+                          "title": "Hire a Stall",
+                          "url": "/parade/stalls/hire-a-stall",
+                        },
                       ],
                     },
                   ],
@@ -123,10 +126,6 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                     Object {
                       "heading": "Pride Festival",
                       "links": Array [
-                        Object {
-                          "title": "This year's festival",
-                          "url": "/events/festival",
-                        },
                         Object {
                           "title": "What's on",
                           "url": "/events",
@@ -180,7 +179,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                         },
                         Object {
                           "title": "Buy merchandise",
-                          "url": "/support-us/merchandise",
+                          "url": "https://www.thegayshop.co.uk/product-category/pride/pride-in-london-shop/",
                         },
                         Object {
                           "title": "Work for Pride",
@@ -222,8 +221,8 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
               item={
                 Object {
                   "id": "nav-blog",
-                  "title": "Blog",
-                  "url": "/blog",
+                  "title": "News & Views",
+                  "url": "/news-and-views",
                 }
               }
               setNavOpen={[Function]}

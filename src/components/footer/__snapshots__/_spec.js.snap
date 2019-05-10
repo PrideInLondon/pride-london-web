@@ -267,6 +267,15 @@ exports[`<Footer/> should render and match snapshot 1`] = `
               Media centre
             </styles__LegalLink>
           </styles__LegalListItem>
+          <styles__LegalListItem>
+            <styles__LegalLink
+              as="a"
+              href="mailto:info@prideinlondon.org"
+              target="_blank"
+            >
+              Contact us
+            </styles__LegalLink>
+          </styles__LegalListItem>
         </styles__LegalList>
         <styles__LegalStrapline>
           London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN - Registered in England and Wales as a Community Interest Company (

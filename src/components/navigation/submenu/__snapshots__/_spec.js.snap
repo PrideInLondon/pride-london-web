@@ -46,6 +46,12 @@ exports[`<Submenu /> renders the component <Submenu /> when opened 1`] = `
               key="Cupcake ipsum dolor sit"
             >
               <styles__PanelLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  }
+                }
                 itemProp="url"
                 onClick={[Function]}
                 to="/"
@@ -61,6 +67,12 @@ exports[`<Submenu /> renders the component <Submenu /> when opened 1`] = `
               key="Cupcake ipsum sit"
             >
               <styles__PanelLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  }
+                }
                 itemProp="url"
                 onClick={[Function]}
                 to="/"
@@ -76,6 +88,12 @@ exports[`<Submenu /> renders the component <Submenu /> when opened 1`] = `
               key="Cupcake dolor sit"
             >
               <styles__PanelLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  }
+                }
                 itemProp="url"
                 onClick={[Function]}
                 to="/"
@@ -91,6 +109,12 @@ exports[`<Submenu /> renders the component <Submenu /> when opened 1`] = `
               key="Cupcake ipsum dolor"
             >
               <styles__PanelLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  }
+                }
                 itemProp="url"
                 onClick={[Function]}
                 to="/"

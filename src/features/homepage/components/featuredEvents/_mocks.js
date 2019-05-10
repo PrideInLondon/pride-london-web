@@ -7,9 +7,13 @@ export const mockEvents = [
       endTime: '2019-06-05T23:00+01:00',
       eventPriceLow: 3,
       eventsListPicture: {
-        file: {
-          url: 'test/image.jpg',
-          title: 'image alt',
+        title: 'img alt',
+        fixed: {
+          base64: 'abc',
+          height: 235,
+          width: 400,
+          src: 'src',
+          srcSet: 'srcset',
         },
       },
     },
@@ -22,9 +26,13 @@ export const mockEvents = [
       endTime: '2019-06-05T23:00+01:00',
       eventPriceLow: 3,
       eventsListPicture: {
-        file: {
-          url: 'test/image.jpg',
-          title: 'image alt',
+        title: 'img alt',
+        fixed: {
+          base64: 'abc',
+          height: 235,
+          width: 400,
+          src: 'src',
+          srcSet: 'srcset',
         },
       },
     },
