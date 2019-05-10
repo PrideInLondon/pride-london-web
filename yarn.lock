@@ -5672,10 +5672,10 @@ gatsby-plugin-rollbar@^1.0.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-rollbar/-/gatsby-plugin-rollbar-1.0.0.tgz#90fc3ca1ed08f54cab6824f5e94cc3ec85283cc0"
   integrity sha512-RPF/8CyU1u56NOZOcvrCwYUkj7Beg4jElyYH97e3iipwPxM97hsgzULg8EhiquumpHmRNDH4TCNtw2dRkUfwUQ==
 
-gatsby-plugin-sharp@^2.0.35, gatsby-plugin-sharp@^2.0.36:
-  version "2.0.36"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.36.tgz#a8877cea81a7f2f6a0a1af2d0b96705a03b943d2"
-  integrity sha512-/JD6JalZEXHmotdshITazIe0nWUIgZ29JIv1KiDZIwSlSPi7Mlg0n6FJLA0OlxLvc2q5+0NwbSAoegqVLV/qZA==
+gatsby-plugin-sharp@^2.0.35, gatsby-plugin-sharp@^2.0.37:
+  version "2.0.37"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.37.tgz#3cc07de6b3eb13df80317ad45bd639074a4f2d59"
+  integrity sha512-SB0aLXx+wP6dm9ph5r+4TKHyaBdOWmADADIzyxvWF3BQiL2ErqSvoRc16GuAhQUeUJYNkU5cUs+NvA0lVMz0Mg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -5710,10 +5710,10 @@ gatsby-react-router-scroll@^2.0.7:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.0.54:
-  version "2.0.55"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.55.tgz#d199cebf9409280dabca4933f6db10d68f8ef439"
-  integrity sha512-ooVChWMGf1ngCZxHTL6BimrBQkVRSmLcKnIT6/VOJXAec0jlv7F6vMgUSBniQhU1RI+IQtlOf/Li53JSrKln7w==
+gatsby-source-contentful@^2.0.56:
+  version "2.0.56"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.56.tgz#94f274d9ddee7a32d642ec4b3311025716b1b2e8"
+  integrity sha512-hTb9CVNsuSTvus2eLmnIY1/6oWJ5t7Mli6hVGd/HMjLwYcv0ncAMnSfMCP/XI+RxPsJcgxUfpXqqVPPsYHFqSw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -5722,7 +5722,7 @@ gatsby-source-contentful@^2.0.54:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.0.36"
+    gatsby-plugin-sharp "^2.0.37"
     gatsby-source-filesystem "^2.0.33"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
