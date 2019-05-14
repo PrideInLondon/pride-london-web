@@ -85,9 +85,9 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-parade-day',
-                    title: 'Parade Day',
+                    title: 'Parade day',
                     desc:
-                      'Plan your Parade Day where charities, businesses and community groups come together to march for equality.',
+                      'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
                     url: '/',
                     submenu: [
                       {
@@ -109,8 +109,13 @@ const Nav = () => {
                             title: 'Residents and businesses info',
                             url: '/parade/residents-and-businesses-info',
                           },
+                        ],
+                      },
+                      {
+                        heading: 'Stalls',
+                        links: [
                           {
-                            title: 'Hire a Stall',
+                            title: 'Hire a stall',
                             url: '/parade/stalls/hire-a-stall',
                           },
                         ],
@@ -219,7 +224,7 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-blog',
-                    title: 'News & Views',
+                    title: 'News & views',
                     url: '/news-and-views',
                   }}
                 />

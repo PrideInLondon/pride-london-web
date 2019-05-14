@@ -82,7 +82,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
             <NavItem
               item={
                 Object {
-                  "desc": "Plan your Parade Day where charities, businesses and community groups come together to march for equality.",
+                  "desc": "Plan your Parade day where charities, businesses and community groups come together to march for equality.",
                   "id": "nav-parade-day",
                   "submenu": Array [
                     Object {
@@ -104,14 +104,19 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                           "title": "Residents and businesses info",
                           "url": "/parade/residents-and-businesses-info",
                         },
+                      ],
+                    },
+                    Object {
+                      "heading": "Stalls",
+                      "links": Array [
                         Object {
-                          "title": "Hire a Stall",
+                          "title": "Hire a stall",
                           "url": "/parade/stalls/hire-a-stall",
                         },
                       ],
                     },
                   ],
-                  "title": "Parade Day",
+                  "title": "Parade day",
                   "url": "/",
                 }
               }
@@ -221,7 +226,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
               item={
                 Object {
                   "id": "nav-blog",
-                  "title": "News & Views",
+                  "title": "News & views",
                   "url": "/news-and-views",
                 }
               }
