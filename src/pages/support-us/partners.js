@@ -266,7 +266,10 @@ Sponsors.propTypes = {
 
 export const query = graphql`
   query sponsorsQuery {
-    allContentfulSponsor(filter: {}) {
+    allContentfulSponsor(
+      filter: {}
+      sort: { fields: [sponsorName], order: DESC }
+    ) {
       edges {
         node {
           sponsorName
