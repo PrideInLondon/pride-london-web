@@ -5727,10 +5727,10 @@ gatsby-react-router-scroll@^2.0.7:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.0.56:
-  version "2.0.56"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.56.tgz#94f274d9ddee7a32d642ec4b3311025716b1b2e8"
-  integrity sha512-hTb9CVNsuSTvus2eLmnIY1/6oWJ5t7Mli6hVGd/HMjLwYcv0ncAMnSfMCP/XI+RxPsJcgxUfpXqqVPPsYHFqSw==
+gatsby-source-contentful@^2.0.57:
+  version "2.0.57"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.57.tgz#7b2c7d08a6fb87a8edea8671b36d61857855ff8e"
+  integrity sha512-uBww+w5vIR4RJZhV772KGzicPM9NzqntX0VRGZ0YiJVacVaGT4hYsyTRF9RbbLdLe34hMC4+7e0NqAtLXI4bJA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -5740,16 +5740,16 @@ gatsby-source-contentful@^2.0.56:
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
     gatsby-plugin-sharp "^2.0.37"
-    gatsby-source-filesystem "^2.0.33"
+    gatsby-source-filesystem "^2.0.34"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.10"
     qs "^6.4.0"
 
-gatsby-source-filesystem@^2.0.33:
-  version "2.0.33"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.33.tgz#c8b4ed9a231a325ca356f739bab77ea8fad5824d"
-  integrity sha512-GH/Y8dJ/+EKie3ckMrcHn1MsYcLVNbglCKNoTaDuY31rFCh3gq6310bdi8u//J+dcgcz7ggHXTN0W7FXxWF9FQ==
+gatsby-source-filesystem@^2.0.33, gatsby-source-filesystem@^2.0.34:
+  version "2.0.34"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.34.tgz#8e96f52ed25096c345bddfc230f9265304041a81"
+  integrity sha512-QXGMrAh9wwcZ2dH14/KQtMER6LPUWy9sSxz0MDI5E7ZIqeJfeDfOfDXT5Yl+eu9JFPWyoc8vMw6dd4O5CzOhiw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
