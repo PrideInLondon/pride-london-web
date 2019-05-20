@@ -71,7 +71,10 @@ export const blogLandingPageQuery = graphql`
       }
     }
 
-    views: allContentfulArticle(filter: { category: { eq: "Views" } }) {
+    views: allContentfulArticle(
+      filter: { category: { eq: "Views" } }
+      sort: { fields: [datePublished], order: DESC }
+    ) {
       edges {
         node {
           id

@@ -176,7 +176,8 @@ const Sponsors = ({ data }) => {
               diversity is embedded in the core of each company we work with.
             </p>
             <p>
-              For more information download information on the{' ' /*eslint-disable-line */}
+              For more information download information on the
+              {' ' /*eslint-disable-line */}
               <a href={ppLink}>2019 Partnership Packages.</a>
             </p>
           </IntroContainer>
@@ -265,7 +266,10 @@ Sponsors.propTypes = {
 
 export const query = graphql`
   query sponsorsQuery {
-    allContentfulSponsor(filter: {}) {
+    allContentfulSponsor(
+      filter: {}
+      sort: { fields: [sponsorName], order: DESC }
+    ) {
       edges {
         node {
           sponsorName
