@@ -5729,7 +5729,7 @@ gatsby-react-router-scroll@^2.0.7:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.0.56:
+gatsby-source-contentful@^2.0.60:
   version "2.0.61"
   resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.61.tgz#bf557ccdf013c2074e6a16cf3508804e6cddfa2e"
   integrity sha512-/tnclUI49RHCQ4uiAN3/fzjo6PTfCYSMemywVRYPORPTYRcUMNgCH4pcBinq9Wo7lLKh9iaoLLTGdSEV8Ok26w==
