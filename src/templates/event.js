@@ -136,6 +136,28 @@ export default class Event extends Component {
               content: eventDescription,
             },
 
+            // Schema meta tags http://schema.org/WebPage
+            {
+              itemprop: 'name',
+              content: name,
+            },
+            {
+              itemprop: 'description',
+              content: eventDescription,
+            },
+            {
+              itemprop: 'url',
+              content: metaUrl,
+            },
+            {
+              itemprop: 'thumbnailUrl',
+              content: metaImg,
+            },
+            {
+              itemprop: 'image',
+              content: metaImg,
+            },
+
             // OpenGraph Meta Tags
             {
               property: 'og:title',
