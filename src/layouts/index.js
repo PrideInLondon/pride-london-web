@@ -131,10 +131,14 @@ const Layout = ({ children, location: { pathname } }) => (
                     content: description,
                   },
 
-                  // Schema meta tags
+                  // Schema meta tags for http://schema.org/WebPage
                   {
                     itemprop: 'name',
                     content: title,
+                  },
+                  {
+                    itemprop: 'description',
+                    content: description,
                   },
                   {
                     itemprop: 'url',
