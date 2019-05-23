@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LetterLink should render correctly 1`] = `
+<styles__StyledLetterLink
+  href="#parade-group-a"
+  isDisabled={false}
+>
+  A
+</styles__StyledLetterLink>
+`;
