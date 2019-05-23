@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ParadeGroupsContainer should render correctly 1`] = `
-<styles__Container>
+<Fragment>
   <styles__LetterContainer>
+    <LetterLink
+      isDisabled={false}
+      key="#"
+      letter="#"
+    />
     <LetterLink
       isDisabled={false}
       key="a"
@@ -149,5 +154,5 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
   >
     group 2
   </p>
-</styles__Container>
+</Fragment>
 `;
