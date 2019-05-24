@@ -5724,10 +5724,10 @@ gatsby-plugin-rollbar@^1.0.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-rollbar/-/gatsby-plugin-rollbar-1.0.0.tgz#90fc3ca1ed08f54cab6824f5e94cc3ec85283cc0"
   integrity sha512-RPF/8CyU1u56NOZOcvrCwYUkj7Beg4jElyYH97e3iipwPxM97hsgzULg8EhiquumpHmRNDH4TCNtw2dRkUfwUQ==
 
-gatsby-plugin-sharp@^2.0.37:
-  version "2.0.37"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.37.tgz#3cc07de6b3eb13df80317ad45bd639074a4f2d59"
-  integrity sha512-SB0aLXx+wP6dm9ph5r+4TKHyaBdOWmADADIzyxvWF3BQiL2ErqSvoRc16GuAhQUeUJYNkU5cUs+NvA0lVMz0Mg==
+gatsby-plugin-sharp@^2.0.37, gatsby-plugin-sharp@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.1.0.tgz#d943276cf6a67b886e8e705b9c30630db3c33c8e"
+  integrity sha512-4mUBWbjQEHGcQJ7RJv45GVEA4jfhAt4XCcRemK4WRiunmv9hV03qLKTaElAvNkvttpP6CqJCRKmYz36VnJRzSQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -5772,10 +5772,10 @@ gatsby-react-router-scroll@^2.0.7:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.0.60:
-  version "2.0.61"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.61.tgz#bf557ccdf013c2074e6a16cf3508804e6cddfa2e"
-  integrity sha512-/tnclUI49RHCQ4uiAN3/fzjo6PTfCYSMemywVRYPORPTYRcUMNgCH4pcBinq9Wo7lLKh9iaoLLTGdSEV8Ok26w==
+gatsby-source-contentful@^2.0.62:
+  version "2.0.62"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.62.tgz#9293db5dd3c501f32176c53cb8750b8375d519dd"
+  integrity sha512-Z8mKH5SwDGn552BeTL8J2ZFWV8WnB9DjIvL0Jvi0mK/ehKOfa3+F2zsjfmavt5jUZ4uXx0nzSKkKDwdaVT0QSQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -5785,7 +5785,7 @@ gatsby-source-contentful@^2.0.60:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.0.37"
+    gatsby-plugin-sharp "^2.1.0"
     gatsby-source-filesystem "^2.0.37"
     is-online "^7.0.0"
     joi "^14.0.0"
