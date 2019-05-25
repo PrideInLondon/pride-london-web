@@ -1,23 +1,73 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import LetterLink from '../../components/letterLink'
-import { LetterContainer } from './styles'
+import { LetterContainer, ScrollingContainer } from './styles'
+import LetterGroup from '../../components/letterGroup'
 
-const lettersArray = '#abcdefghijklmnopqrstuvwxwyz'.split('')
+const lettersArray = 'abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
 
-const ParadeGroupsContainer = props => {
-  const { paradeGroups } = props
+const filterGroupByFirstLetter = (groupName, letter) => {
+  return (
+    groupName.startsWith(letter) || groupName.startsWith(letter.toUpperCase())
+  )
+}
+
+const ParadeGroupsContainer = ({ paradeGroups }) => {
+  const availableLetters = lettersArray.reduce((acc, letter) => {
+    if (
+      // Checks the parade groups to see
+      // if any of them start with the letter.
+      // If they do, add it to available letters.
+      paradeGroups.some(group => filterGroupByFirstLetter(group.name, letter))
+    ) {
+      return [...acc, letter]
+    }
+    return acc
+  }, [])
+
+  // This assumes there will be groups that
+  // start with something other than a letter.
+  // Might need to be changed to be conditional
+  // based on groups
+  availableLetters.unshift('#')
 
   return (
     <>
-      <LetterContainer>
-        {lettersArray.map(letter => (
-          <LetterLink key={letter} letter={letter} />
-        ))}
-      </LetterContainer>
-      {paradeGroups.map(group => (
-        <p key={group.name}>{group.name}</p>
-      ))}
+      <ScrollingContainer>
+        <LetterContainer>
+          {lettersArray.map(letter => (
+            <LetterLink
+              key={letter}
+              letter={letter}
+              isDisabled={!availableLetters.includes(letter)}
+            />
+          ))}
+        </LetterContainer>
+        <div>
+          {availableLetters.map(availableLetter => {
+            return (
+              <Fragment key={availableLetter}>
+                <LetterGroup letter={availableLetter}>
+                  {paradeGroups
+                    .filter(group => {
+                      if (availableLetter === '#') {
+                        // get groups starting with non-letter characters
+                        return group.name.charCodeAt(0) < 65
+                      }
+                      return filterGroupByFirstLetter(
+                        group.name,
+                        availableLetter
+                      )
+                    })
+                    .map(group => (
+                      <p key={group.name}>{group.name}</p>
+                    ))}
+                </LetterGroup>
+              </Fragment>
+            )
+          })}
+        </div>
+      </ScrollingContainer>
     </>
   )
 }
