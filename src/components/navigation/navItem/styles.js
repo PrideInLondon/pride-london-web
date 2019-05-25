@@ -6,7 +6,7 @@ import theme from '../../../theme/theme'
 
 export const linkStyles = css`
   font-family: ${theme.fonts.title};
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.5;
   color: ${theme.colors.lightGrey};
   text-decoration: none;
