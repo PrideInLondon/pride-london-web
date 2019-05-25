@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 import { Provider } from '../components/appContext'
 import Nav from '../components/navigation/nav'
 import Footer from '../components/footer/footerQuery'
@@ -24,13 +24,19 @@ import mstile150 from '../theme/assets/images/favicons/mstile-150x150.png'
 import mstile310 from '../theme/assets/images/favicons/mstile-310x310.png'
 import mstile310150 from '../theme/assets/images/favicons/mstile-310x150.png'
 import logo from '../theme/assets/images/logo-pride.svg'
-
 import theme from '../theme/theme'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './index.css'
 import './fonts.css'
 import metaImg from '../theme/assets/images/pride-logo-social.png'
+
+const SiteWrapper = styled.div`
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: ${theme.colors.white};
+`
 
 const query = graphql`
   query rootQuery {
@@ -359,17 +365,18 @@ const Layout = ({ children, location: { pathname } }) => (
                   },
                 ]}
               />
-
-              <Nav />
-              <main>{children}</main>
-              <Footer
-                facebook={facebook}
-                twitter={twitter}
-                instagram={instagram}
-                youtube={youtube}
-                linkedin={linkedin}
-                snapchat={snapchat}
-              />
+              <SiteWrapper>
+                <Nav />
+                <main>{children}</main>
+                <Footer
+                  facebook={facebook}
+                  twitter={twitter}
+                  instagram={instagram}
+                  youtube={youtube}
+                  linkedin={linkedin}
+                  snapchat={snapchat}
+                />
+              </SiteWrapper>
             </Fragment>
           </Provider>
         )

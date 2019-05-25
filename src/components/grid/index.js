@@ -22,7 +22,7 @@ const Container = styled(Box)`
 
   ${media.desktopHD`
     min-width: 1260px;
-    max-width: ${theme.breakpoints[3]}px;
+    max-width: ${theme.breakpoints[3]}px;    
   `};
 `
 Container.defaultProps = {
