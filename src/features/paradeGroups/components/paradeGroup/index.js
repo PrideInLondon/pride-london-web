@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import { RowContainer, TitleContainer, IconContainer } from './styles'
 import Facebook from '../../../../components/icons/facebook'
 import Twitter from '../../../../components/icons/twitter'
 import Instagram from '../../../../components/icons/instagram'
 import Globe from '../../../../components/icons/globe'
-
 import theme from '../../../../theme/theme'
+import { RowContainer, TitleContainer, IconContainer } from './styles'
 
 const ParadeGroup = ({
   facebookUrl,
