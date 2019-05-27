@@ -10,6 +10,7 @@ exports[`SocialMediaList renders with default values 1`] = `
       target="_blank"
     >
       <Twitter
+        fill="#2CDA9D"
         height={24}
         width={30}
       />
@@ -23,6 +24,7 @@ exports[`SocialMediaList renders with default values 1`] = `
       target="_blank"
     >
       <Facebook
+        fill="#2CDA9D"
         height={30}
         width={30}
       />
