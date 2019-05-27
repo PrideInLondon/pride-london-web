@@ -4,7 +4,7 @@ import theme from '../../../../theme/theme'
 const StyledLetterLink = styled.a`
   color: ${props => (props.isDisabled ? 'grey' : 'initial')};
   font-size: 16px;
-  padding: 4px;
+  margin-right: 8px;
   text-decoration: none;
 
   &:hover {

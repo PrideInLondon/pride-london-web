@@ -142,16 +142,20 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       <LetterGroup
         letter="g"
       >
-        <p
-          key="group 1"
-        >
-          group 1
-        </p>
-        <p
-          key="group 2"
-        >
-          group 2
-        </p>
+        <ParadeGroup
+          facebookUrl={null}
+          instagramUrl={null}
+          name="group 1"
+          twitterUrl={null}
+          websiteUrl={null}
+        />
+        <ParadeGroup
+          facebookUrl={null}
+          instagramUrl={null}
+          name="group 2"
+          twitterUrl={null}
+          websiteUrl={null}
+        />
       </LetterGroup>
     </div>
   </styles__ScrollingContainer>
