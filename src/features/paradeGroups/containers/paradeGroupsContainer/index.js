@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import LetterLink from '../../components/letterLink'
 import LetterGroup from '../../components/letterGroup'
+import ParadeGroup from '../../components/paradeGroup'
 import { LetterContainer, ScrollingContainer } from './styles'
 
 const lettersArray = 'abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
@@ -59,9 +60,27 @@ const ParadeGroupsContainer = ({ paradeGroups }) => {
                         availableLetter
                       )
                     })
-                    .map(group => (
-                      <p key={group.name}>{group.name}</p>
-                    ))}
+                    .map(
+                      ({
+                        id,
+                        name,
+                        facebookUrl,
+                        instagramUrl,
+                        twitterUrl,
+                        websiteUrl,
+                      }) => {
+                        return (
+                          <ParadeGroup
+                            key={id}
+                            name={name}
+                            facebookUrl={facebookUrl}
+                            instagramUrl={instagramUrl}
+                            twitterUrl={twitterUrl}
+                            websiteUrl={websiteUrl}
+                          />
+                        )
+                      }
+                    )}
                 </LetterGroup>
               </Fragment>
             )

@@ -20,7 +20,10 @@ export const Heading = styled.div`
 
 export const GroupsContainer = styled.div`
   margin-bottom: 40px;
-  padding: 0 20px;
+
+  ${media.tablet`
+    padding: 0px 20px;
+  `}
 `
 
 export const Wrapper = styled.div`

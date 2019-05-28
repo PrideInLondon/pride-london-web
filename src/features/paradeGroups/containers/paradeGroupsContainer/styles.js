@@ -11,6 +11,8 @@ export const LetterContainer = styled.div`
   margin-bottom: 20px;
   position: sticky;
   top: 0;
+
+  padding: 0px 20px;
 `
 
 export const ScrollingContainer = styled.div`
