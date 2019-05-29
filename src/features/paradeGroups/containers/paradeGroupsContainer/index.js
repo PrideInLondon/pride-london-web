@@ -5,7 +5,7 @@ import LetterGroup from '../../components/letterGroup'
 import ParadeGroup from '../../components/paradeGroup'
 import { LetterContainer, ScrollingContainer } from './styles'
 
-const lettersArray = 'abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
+const lettersArray = '#abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
 
 const filterGroupByFirstLetter = (groupName, letter) => {
   return (
@@ -31,7 +31,6 @@ const ParadeGroupsContainer = ({ paradeGroups }) => {
   // Might need to be changed to be conditional
   // based on groups
   availableLetters.unshift('#')
-
   return (
     <>
       <ScrollingContainer>
