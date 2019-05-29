@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import LetterLink from '../../components/letterLink'
 import LetterGroup from '../../components/letterGroup'
-import { LetterContainer } from './styles'
 import ParadeGroup from '../../components/paradeGroup'
+import { LetterContainer } from './styles'
 
 const lettersArray = '#abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
 
