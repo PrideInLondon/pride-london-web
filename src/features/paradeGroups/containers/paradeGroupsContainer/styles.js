@@ -14,8 +14,3 @@ export const LetterContainer = styled.div`
 
   padding: 0px 20px;
 `
-
-export const ScrollingContainer = styled.div`
-  overflow: scroll;
-  height: 500px;
-`
