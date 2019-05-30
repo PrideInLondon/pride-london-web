@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import LetterLink from '../../components/letterLink'
 import LetterGroup from '../../components/letterGroup'
 import ParadeGroup from '../../components/paradeGroup'
-import { LetterContainer, ScrollingContainer } from './styles'
+import { LetterContainer } from './styles'
 
-const lettersArray = 'abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
+const lettersArray = '#abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
 
 const filterGroupByFirstLetter = (groupName, letter) => {
   return (
@@ -31,62 +31,56 @@ const ParadeGroupsContainer = ({ paradeGroups }) => {
   // Might need to be changed to be conditional
   // based on groups
   availableLetters.unshift('#')
-
   return (
     <>
-      <ScrollingContainer>
-        <LetterContainer>
-          {lettersArray.map(letter => (
-            <LetterLink
-              key={letter}
-              letter={letter}
-              isDisabled={!availableLetters.includes(letter)}
-            />
-          ))}
-        </LetterContainer>
-        <div>
-          {availableLetters.map(availableLetter => {
-            return (
-              <Fragment key={availableLetter}>
-                <LetterGroup letter={availableLetter}>
-                  {paradeGroups
-                    .filter(group => {
-                      if (availableLetter === '#') {
-                        // get groups starting with non-letter characters
-                        return group.name.charCodeAt(0) < 65
-                      }
-                      return filterGroupByFirstLetter(
-                        group.name,
-                        availableLetter
+      <LetterContainer>
+        {lettersArray.map(letter => (
+          <LetterLink
+            key={letter}
+            letter={letter}
+            isDisabled={!availableLetters.includes(letter)}
+          />
+        ))}
+      </LetterContainer>
+      <div>
+        {availableLetters.map(availableLetter => {
+          return (
+            <Fragment key={availableLetter}>
+              <LetterGroup letter={availableLetter}>
+                {paradeGroups
+                  .filter(group => {
+                    if (availableLetter === '#') {
+                      // get groups starting with non-letter characters
+                      return group.name.charCodeAt(0) < 65
+                    }
+                    return filterGroupByFirstLetter(group.name, availableLetter)
+                  })
+                  .map(
+                    ({
+                      id,
+                      name,
+                      facebookUrl,
+                      instagramUrl,
+                      twitterUrl,
+                      websiteUrl,
+                    }) => {
+                      return (
+                        <ParadeGroup
+                          key={id}
+                          name={name}
+                          facebookUrl={facebookUrl}
+                          instagramUrl={instagramUrl}
+                          twitterUrl={twitterUrl}
+                          websiteUrl={websiteUrl}
+                        />
                       )
-                    })
-                    .map(
-                      ({
-                        id,
-                        name,
-                        facebookUrl,
-                        instagramUrl,
-                        twitterUrl,
-                        websiteUrl,
-                      }) => {
-                        return (
-                          <ParadeGroup
-                            key={id}
-                            name={name}
-                            facebookUrl={facebookUrl}
-                            instagramUrl={instagramUrl}
-                            twitterUrl={twitterUrl}
-                            websiteUrl={websiteUrl}
-                          />
-                        )
-                      }
-                    )}
-                </LetterGroup>
-              </Fragment>
-            )
-          })}
-        </div>
-      </ScrollingContainer>
+                    }
+                  )}
+              </LetterGroup>
+            </Fragment>
+          )
+        })}
+      </div>
     </>
   )
 }
