@@ -5750,10 +5750,10 @@ gatsby-plugin-rollbar@^1.0.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-rollbar/-/gatsby-plugin-rollbar-1.0.0.tgz#90fc3ca1ed08f54cab6824f5e94cc3ec85283cc0"
   integrity sha512-RPF/8CyU1u56NOZOcvrCwYUkj7Beg4jElyYH97e3iipwPxM97hsgzULg8EhiquumpHmRNDH4TCNtw2dRkUfwUQ==
 
-gatsby-plugin-sharp@^2.1.0, gatsby-plugin-sharp@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.1.1.tgz#a282ead8575466d0ee01e88ff65f7b32838c800a"
-  integrity sha512-KPBygBMHgx3MIFUjKmcBsZOAKsiWbNPE+ATrZWcbthIv0tlrYQ0vlcmnx+yKDKoxZuBffixlC8d8RZn3YjtBpw==
+gatsby-plugin-sharp@^2.1.0, gatsby-plugin-sharp@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.1.2.tgz#5cdb237f8b5258a327958349d74c5255f09877d1"
+  integrity sha512-AU+qGJheXMmR1Z9TJxvoeQmSrIuMgWJRDdhb8QZq0MRgvAMuy8sdAj6hB+TnjAPAfxEgxp6JnF2+Ti2AWtECgA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -5798,10 +5798,10 @@ gatsby-react-router-scroll@^2.0.7:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.0.62:
-  version "2.0.63"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.63.tgz#934d1343e88bdcecd298685a6ec7eb070feaabba"
-  integrity sha512-osiVmHuWh4oJse3iHZ/KNmFYE6hE2w5FfDGeSG8W8L2BJTbQ7FdZb7B4U5HTDVcxPNrWI2JaASBcDCbvrJau5g==
+gatsby-source-contentful@^2.0.65:
+  version "2.0.65"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.65.tgz#7dbd9ea887ed1cbfb3ba1b781653d40e15ae36da"
+  integrity sha512-ShBQl5JEyMwDDr4MtbttE2YvkRqhrBETWoziSHk6ORC3fJ55afpMth1whTMzvhlep2oyBBInNpzZ5Q6Fmr4fFg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -5811,7 +5811,7 @@ gatsby-source-contentful@^2.0.62:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.1.1"
+    gatsby-plugin-sharp "^2.1.2"
     gatsby-source-filesystem "^2.0.37"
     is-online "^7.0.0"
     joi "^14.0.0"
