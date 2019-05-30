@@ -5702,10 +5702,10 @@ gatsby-link@^2.0.17, gatsby-link@^2.1.1:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-google-tagmanager@^2.0.13:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.0.13.tgz#c2a0e4cb02c8a96c591d022c50bdda4f8fa2a861"
-  integrity sha512-QVw4vsRBNHSeO7iOyirki2LQk4JIH3TXvSB9Labd95rhLu3uTr+b7bt93dQEL88qlkM1/VacYUEh/+Uw+t0ZoA==
+gatsby-plugin-google-tagmanager@^2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.0.14.tgz#156cee72e97bdc1bee7eb642066dfb86c126335d"
+  integrity sha512-7xg48obCrxDhafcZscv8GIySU2QxRCJn2VRlcmMY/cUz2aOrP6IO6dab1BnSYdf/+314FX0UJsLnWHieK8LxAw==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
