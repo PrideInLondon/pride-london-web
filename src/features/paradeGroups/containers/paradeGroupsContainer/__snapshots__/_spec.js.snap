@@ -149,6 +149,7 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       <ParadeGroup
         facebookUrl={null}
         instagramUrl={null}
+        key="1"
         name="group 1"
         twitterUrl={null}
         websiteUrl={null}
@@ -156,6 +157,7 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       <ParadeGroup
         facebookUrl={null}
         instagramUrl={null}
+        key="2"
         name="group 2"
         twitterUrl={null}
         websiteUrl={null}
