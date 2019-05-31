@@ -64,7 +64,7 @@
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-contentful": "^2.0.62",
     "gatsby-source-filesystem": "^2.0.33",
-    "gatsby-transformer-sharp": "^2.1.18",
+    "gatsby-transformer-sharp": "^2.1.21",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
     "polished": "^3.4.0",
