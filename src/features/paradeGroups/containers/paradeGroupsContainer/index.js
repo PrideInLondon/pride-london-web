@@ -30,7 +30,10 @@ const ParadeGroupsContainer = ({ paradeGroups }) => {
   // start with something other than a letter.
   // Might need to be changed to be conditional
   // based on groups
-  availableLetters.unshift('#')
+  if (!availableLetters.includes('#')) {
+    availableLetters.unshift('#')
+  }
+
   return (
     <>
       <LetterContainer>
