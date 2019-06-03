@@ -1,14 +1,14 @@
 import React from 'react'
+// import { graphql } from 'gatsby'
 import BannerImage from '../components/banner/bannerImage'
 import theme from '../theme/theme'
 import PageIntro from '../components/pageIntro'
 
 const VisitorInformationPage = () => {
-  console.log('HELLOOOOO VISI')
   return (
     <div>
       <BannerImage
-        titleText="Places to Eat & Drink"
+        titleText="Visitor Information"
         subtitleText="Find out about this year’s Pride Partners"
         color={theme.colors.yellow}
       />
@@ -35,3 +35,28 @@ const VisitorInformationPage = () => {
 }
 
 export default VisitorInformationPage
+
+// const CommunityPartnersQuery = graphql`
+//   query CommunityPartnersQuery {
+//     allContentfulCommunityPartner(sort: { fields: venueName, order: ASC }) {
+//       edges {
+//         node {
+//           id
+//           venueName
+//           location {
+//             lon
+//             lat
+//           }
+//           category
+//           accessibilityDetails
+//           featuredImage {
+//             id
+//           }
+//           websiteUrl
+//           twitterUrl
+//           facebookUrl
+//         }
+//       }
+//     }
+//   }
+// `
