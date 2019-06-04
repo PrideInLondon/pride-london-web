@@ -13,10 +13,17 @@ exports[`<PageIntro/> renders with default values 1`] = `
     title="Title"
   />
   <styles__MainContainer
+    as="section"
     mx="auto"
   >
     <Row
       flexWrap={null}
+      mb={
+        Array [
+          "30px",
+          "60px",
+        ]
+      }
       ml={null}
       mr={null}
       mx={null}

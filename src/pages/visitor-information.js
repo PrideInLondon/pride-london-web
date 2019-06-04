@@ -1,10 +1,22 @@
 import React from 'react'
-// import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import { Container, Row, Column, GreyWrapper } from '../components/grid'
 import BannerImage from '../components/banner/bannerImage'
 import theme from '../theme/theme'
 import PageIntro from '../components/pageIntro'
+import CommunityPartnerCard from '../features/visitorInformation/components/communityPartnerCard'
 
-const VisitorInformationPage = () => {
+const SectionTitle = styled.h2`
+  text-align: center;
+`
+
+const VisitorInformationPage = ({
+  data: {
+    allContentfulCommunityPartner: { edges: partners },
+  },
+}) => {
   return (
     <div>
       <BannerImage
@@ -30,33 +42,70 @@ const VisitorInformationPage = () => {
           culpa qui officia deserunt.
         </p>
       </PageIntro>
+      <GreyWrapper as="section">
+        <Container>
+          <Row>
+            <Column width={1}>
+              <SectionTitle>2019 Partners</SectionTitle>
+            </Column>
+          </Row>
+        </Container>
+        <Container>
+          <Row pb={[30, 30, 60]}>
+            {partners.length &&
+              partners.map(({ node: partner }) => {
+                return (
+                  <Column width={[1, 1, 0.3333]} key={partner.id}>
+                    <CommunityPartnerCard partner={partner} />
+                  </Column>
+                )
+              })}
+          </Row>
+        </Container>
+      </GreyWrapper>
     </div>
   )
 }
 
+VisitorInformationPage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
 export default VisitorInformationPage
 
-// const CommunityPartnersQuery = graphql`
-//   query CommunityPartnersQuery {
-//     allContentfulCommunityPartner(sort: { fields: venueName, order: ASC }) {
-//       edges {
-//         node {
-//           id
-//           venueName
-//           location {
-//             lon
-//             lat
-//           }
-//           category
-//           accessibilityDetails
-//           featuredImage {
-//             id
-//           }
-//           websiteUrl
-//           twitterUrl
-//           facebookUrl
-//         }
-//       }
-//     }
-//   }
-// `
+export const CommunityPartnersQuery = graphql`
+  query CommunityPartnersQuery {
+    allContentfulCommunityPartner(sort: { fields: venueName, order: ASC }) {
+      edges {
+        node {
+          id
+          venueName
+          location {
+            lon
+            lat
+          }
+          description {
+            description
+          }
+          category
+          accessibilityDetails
+          featuredImage {
+            id
+            fixed(
+              width: 400
+              height: 235
+              resizingBehavior: FILL
+              quality: 90
+              cropFocus: FACE
+            ) {
+              ...GatsbyContentfulFixed
+            }
+          }
+          websiteUrl
+          twitterUrl
+          facebookUrl
+        }
+      }
+    }
+  }
+`

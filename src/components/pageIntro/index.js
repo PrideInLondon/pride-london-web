@@ -8,8 +8,8 @@ const PageIntro = ({ children, cta }) => {
   return (
     <>
       {cta && <CTABox link={cta.link} title={cta.title} body={cta.body} />}
-      <MainContainer>
-        <Row>
+      <MainContainer as="section">
+        <Row mb={['30px', '60px']}>
           <IntroContainer
             width={[
               1, // 100% between 0px screen width and first breakpoint (375px)

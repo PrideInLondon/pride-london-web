@@ -109,6 +109,24 @@ const constants = {
     },
   ],
   filterTypes: ['checkbox', 'radio'],
+  communityPartnerCategories: [
+    {
+      title: 'Bar or pub',
+      hexColour: theme.colors.yellow,
+    },
+    {
+      title: 'Club',
+      hexColour: theme.colors.tomato,
+    },
+    {
+      title: 'Hotel',
+      hexColour: theme.colors.pink,
+    },
+    {
+      title: 'Restaurant',
+      hexColour: theme.colors.greyBlue,
+    },
+  ],
 }
 
 module.exports = constants
