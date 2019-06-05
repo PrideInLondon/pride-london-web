@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
 import { Provider } from '../components/appContext'
+import CookieNotice from '../components/cookieNotice'
 import Nav from '../components/navigation/nav'
 import Footer from '../components/footer/footerQuery'
 import favicon from '../theme/assets/images/favicons/favicon.ico'
@@ -366,6 +367,7 @@ const Layout = ({ children, location: { pathname } }) => (
                 ]}
               />
               <SiteWrapper>
+                <CookieNotice />
                 <Nav />
                 <main>{children}</main>
                 <Footer
