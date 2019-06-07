@@ -1,5 +1,5 @@
-{
-  "plugins": ["prettier", "react", "import"],
+module.exports = {
+  "plugins": ["prettier", "react", "import", "react-hooks"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
@@ -59,6 +59,8 @@
     "react/prop-types": "error",
     "react/require-default-props": 2,
     "react/sort-comp": 2,
-    "semi": "off"
+    "semi": "off",
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
   }
 }
