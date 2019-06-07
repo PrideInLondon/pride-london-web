@@ -30,7 +30,6 @@ exports[`render methods for Generic Content renders a button component if the id
       "displayName": "renderMethods__StyledButton",
       "foldedComponentIds": Array [],
       "render": [Function],
-      "self": [Circular],
       "styledComponentId": "renderMethods__StyledButton-sc-1003i2d-0",
       "target": [Function],
       "toString": [Function],
