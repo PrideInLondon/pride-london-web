@@ -187,8 +187,7 @@ const Nav = () => {
                           },
                           {
                             title: 'Buy merchandise',
-                            url:
-                              'https://www.thegayshop.co.uk/product-category/pride/pride-in-london-shop/',
+                            url: '/support-us/buy-merchandise',
                           },
                           {
                             title: 'Work for Pride',
