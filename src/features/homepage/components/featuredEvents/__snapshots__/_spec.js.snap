@@ -36,7 +36,6 @@ exports[`Featured Event Content renders with default values 1`] = `
       "displayName": "styles__FeaturedEventContent",
       "foldedComponentIds": Array [],
       "render": [Function],
-      "self": [Circular],
       "styledComponentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
       "target": "div",
       "toString": [Function],

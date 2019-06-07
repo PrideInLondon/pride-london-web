@@ -184,7 +184,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                         },
                         Object {
                           "title": "Buy merchandise",
-                          "url": "https://www.thegayshop.co.uk/product-category/pride/pride-in-london-shop/",
+                          "url": "/support-us/buy-merchandise",
                         },
                         Object {
                           "title": "Work for Pride",
