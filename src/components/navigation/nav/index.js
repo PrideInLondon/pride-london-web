@@ -187,7 +187,7 @@ const Nav = () => {
                           },
                           {
                             title: 'Buy merchandise',
-                            url: '/support-us/buy-merchandise',
+                            url: '/support-us/merchandise',
                           },
                           {
                             title: 'Work for Pride',
