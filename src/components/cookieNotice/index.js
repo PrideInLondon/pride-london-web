@@ -11,7 +11,7 @@ import CloseIcon from '../icons/closeIcon'
 const CookieWrapper = styled.div`
   color: ${theme.colors.white};
   background-color: ${theme.colors.black};
-  display: ${props => (props.cookie ? 'none' : 'block')};
+  display: ${({ cookie }) => (!cookie ? 'block' : 'none')};
   position: fixed;
   bottom: 0;
   left: 0;
@@ -91,7 +91,9 @@ function loadGTM() {
 }
 
 const CookieNotice = () => {
-  const [hasCookie, setHasCookie] = useState(Cookies.get('accept') || false)
+  const initialCookieState = Cookies.get('accept') ? true : false
+  const [hasCookie, setHasCookie] = useState(initialCookieState)
+
   let initialAcceptedState
   if (Cookies.get('accept')) {
     initialAcceptedState = JSON.parse(Cookies.get('accept'))
@@ -114,32 +116,37 @@ const CookieNotice = () => {
   }
 
   return (
-    <CookieWrapper cookie={hasCookie}>
+    <>
       {accepted && loadGTM()}
-      <Container>
-        <Row>
-          <Column width={[1, 1, 0.6]}>
-            <CookieText>
-              We process information about your visit using cookies for
-              performance and usage analysis, and to allow bespoke marketing to
-              your individual interests. For further information see our{' '}
-              <CookieLink to="/privacy">Privacy & Cookie Policy</CookieLink>.
-            </CookieText>
-          </Column>
-          <CookieActions width={[1, 1, 0.4]}>
-            <CookieAgree role="button" onClick={handleAgree}>
-              I agree to cookies
-            </CookieAgree>
-            <CookieDismiss
-              aria-label="I do not agree and close"
-              onClick={handleDismiss}
-            >
-              <CloseIcon />
-            </CookieDismiss>
-          </CookieActions>
-        </Row>
-      </Container>
-    </CookieWrapper>
+      {!hasCookie && (
+        <CookieWrapper>
+          <Container>
+            <Row>
+              <Column width={[1, 1, 0.6]}>
+                <CookieText>
+                  We process information about your visit using cookies for
+                  performance and usage analysis, and to allow bespoke marketing
+                  to your individual interests. For further information see our{' '}
+                  <CookieLink to="/privacy">Privacy & Cookie Policy</CookieLink>
+                  .
+                </CookieText>
+              </Column>
+              <CookieActions width={[1, 1, 0.4]}>
+                <CookieAgree role="button" onClick={handleAgree}>
+                  I agree to cookies
+                </CookieAgree>
+                <CookieDismiss
+                  aria-label="I do not agree and close"
+                  onClick={handleDismiss}
+                >
+                  <CloseIcon />
+                </CookieDismiss>
+              </CookieActions>
+            </Row>
+          </Container>
+        </CookieWrapper>
+      )}
+    </>
   )
 }
 
