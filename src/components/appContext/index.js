@@ -79,7 +79,17 @@ class Provider extends Component {
           })
         }
       })
-      return { events: allEventOccurences.filter(filterPastEvents) }
+      return {
+        events: allEventOccurences
+          .filter(filterPastEvents)
+          .sort((a, b) =>
+            a.node.startTime < b.node.startTime
+              ? -1
+              : a.node.startTime > b.node.startTime
+              ? 1
+              : 0
+          ),
+      }
     }
   }
 
