@@ -367,6 +367,7 @@ const Layout = ({ children, location: { pathname } }) => (
                 ]}
               />
               <SiteWrapper>
+                <CookieNotice />
                 <Nav />
                 <main>{children}</main>
                 <Footer
