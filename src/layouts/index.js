@@ -367,7 +367,6 @@ const Layout = ({ children, location: { pathname } }) => (
                 ]}
               />
               <SiteWrapper>
-                <CookieNotice />
                 <Nav />
                 <main>{children}</main>
                 <Footer
@@ -378,6 +377,7 @@ const Layout = ({ children, location: { pathname } }) => (
                   linkedin={linkedin}
                   snapchat={snapchat}
                 />
+                <CookieNotice />
               </SiteWrapper>
             </Fragment>
           </Provider>
