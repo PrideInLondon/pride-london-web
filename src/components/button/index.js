@@ -102,19 +102,19 @@ export const Button = props => {
       aria-controls={ariaControls}
       aria-expanded={ariaExpanded}
       white={white}
-      {...to &&
+      {...(to &&
         !externalUrl(to) &&
-        !contactUrl(to) && { to: handleSlug(to), as: FilteredLink }}
-      {...to &&
+        !contactUrl(to) && { to: handleSlug(to), as: FilteredLink })}
+      {...(to &&
         (externalUrl(to) || contactUrl(to)) && {
           href: to,
           as: 'a',
           target: '_blank',
-        }}
-      {...to &&
+        })}
+      {...(to &&
         externalUrl(to) && {
           rel: 'noopener noreferrer',
-        }}
+        })}
     >
       {children}
     </StyledButton>
