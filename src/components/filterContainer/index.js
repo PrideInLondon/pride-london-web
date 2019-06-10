@@ -30,34 +30,32 @@ const FilterContainer = ({
   filterNames,
   selected,
   handleFilterSelect,
-}) => {
-  return (
-    <Container>
-      <Row>
-        <Column width={1} py={[20, 20, 40]}>
-          <FilterContainerWrapper>
-            {filterNames.map((filterName, index) => {
-              return (
-                <FilterLabel
-                  key={filterName}
-                  filterName={filterName}
-                  filterColor={FILTER_COLORS[index]}
-                  filterType={filterType}
-                  isSelected={calculateIsSelected(
-                    filterType,
-                    filterName,
-                    selected
-                  )}
-                  handleSelect={handleFilterSelect}
-                />
-              )
-            })}
-          </FilterContainerWrapper>
-        </Column>
-      </Row>
-    </Container>
-  )
-}
+}) => (
+  <Container>
+    <Row>
+      <Column width={1} py={[20, 20, 40]}>
+        <FilterContainerWrapper>
+          {filterNames.map((filterName, index) => {
+            return (
+              <FilterLabel
+                key={filterName}
+                filterName={filterName}
+                filterColor={FILTER_COLORS[index]}
+                filterType={filterType}
+                isSelected={calculateIsSelected(
+                  filterType,
+                  filterName,
+                  selected
+                )}
+                handleSelect={handleFilterSelect}
+              />
+            )
+          })}
+        </FilterContainerWrapper>
+      </Column>
+    </Row>
+  </Container>
+)
 
 FilterContainer.propTypes = {
   filterType: PropTypes.oneOf(filterTypes).isRequired,

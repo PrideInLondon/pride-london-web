@@ -9,26 +9,24 @@ const FilterLabel = ({
   filterType,
   isSelected,
   handleSelect,
-}) => {
-  return (
-    <Label
-      onClick={() => handleSelect(filterName)}
-      backgroundColor={filterColor}
-      isSelected={isSelected}
-      htmlFor={filterName}
-      tabIndex="0"
-    >
-      <Text>{filterName}</Text>
-      <Input
-        type={filterType}
-        value={filterName}
-        id={filterName}
-        name="filterLabel"
-        tabIndex="-1"
-      />
-    </Label>
-  )
-}
+}) => (
+  <Label
+    onClick={() => handleSelect(filterName)}
+    backgroundColor={filterColor}
+    isSelected={isSelected}
+    htmlFor={filterName}
+    tabIndex="0"
+  >
+    <Text>{filterName}</Text>
+    <Input
+      type={filterType}
+      value={filterName}
+      id={filterName}
+      name="filterLabel"
+      tabIndex="-1"
+    />
+  </Label>
+)
 
 FilterLabel.propTypes = {
   filterName: PropTypes.string.isRequired,
