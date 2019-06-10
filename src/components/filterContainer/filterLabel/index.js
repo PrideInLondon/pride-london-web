@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { filterTypes } from '../../../constants'
 import { Label, Text, Input } from './styles'
-
-export const FILTER_TYPES = ['checkbox', 'radio']
 
 const FilterLabel = ({
   filterName,
@@ -34,7 +33,7 @@ const FilterLabel = ({
 FilterLabel.propTypes = {
   filterName: PropTypes.string.isRequired,
   filterColor: PropTypes.string.isRequired,
-  filterType: PropTypes.oneOf(FILTER_TYPES).isRequired,
+  filterType: PropTypes.oneOf(filterTypes).isRequired,
   isSelected: PropTypes.bool.isRequired,
   handleSelect: PropTypes.func.isRequired,
 }

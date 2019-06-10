@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Container, Row, Column } from '../../components/grid'
 import theme from '../../theme/theme'
-import FilterLabel, { FILTER_TYPES } from './filterLabel'
+import { filterTypes } from '../../constants'
+import FilterLabel from './filterLabel'
 import { FilterContainerWrapper } from './styles'
 
 const FILTER_COLORS = [
@@ -59,7 +60,7 @@ const FilterContainer = ({
 }
 
 FilterContainer.propTypes = {
-  filterType: PropTypes.oneOf(FILTER_TYPES).isRequired,
+  filterType: PropTypes.oneOf(filterTypes).isRequired,
   filterNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   selected: PropTypes.oneOfType([
     PropTypes.string,
