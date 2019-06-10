@@ -55,7 +55,7 @@ const VisitorInformationPage = ({
             {partners.length &&
               partners.map(({ node: partner }) => {
                 return (
-                  <Column width={[1, 1, 0.3333]} key={partner.id}>
+                  <Column width={[1, 1, 0.5, 0.3333]} key={partner.id}>
                     <CommunityPartnerCard partner={partner} />
                   </Column>
                 )
@@ -84,11 +84,16 @@ export const CommunityPartnersQuery = graphql`
             lon
             lat
           }
+          addressLine1
+          addressLine2
+          city
+          postcode
           description {
             description
           }
           category
           accessibilityDetails
+          genderNeutralToilets
           featuredImage {
             id
             fixed(
@@ -104,6 +109,7 @@ export const CommunityPartnersQuery = graphql`
           websiteUrl
           twitterUrl
           facebookUrl
+          instagramUrl
         }
       }
     }

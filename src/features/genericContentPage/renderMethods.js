@@ -11,8 +11,7 @@ const StyledButton = styled(Button)`
   margin-bottom: 1.25em;
 `
 
-export const renderFigure = node =>
-  console.log(node) || <Figure {...node.data.target.fields} />
+export const renderFigure = node => <Figure {...node.data.target.fields} />
 
 const renderStyledButton = ({ primary, to, content }) => (
   <StyledButton primary={primary} to={to}>

@@ -111,20 +111,24 @@ const constants = {
   filterTypes: ['checkbox', 'radio'],
   communityPartnerCategories: [
     {
-      title: 'Bar or pub',
+      title: 'Drink',
       hexColour: theme.colors.yellow,
     },
     {
-      title: 'Club',
+      title: 'Eat',
       hexColour: theme.colors.tomato,
     },
     {
-      title: 'Hotel',
+      title: 'Party',
       hexColour: theme.colors.pink,
     },
     {
-      title: 'Restaurant',
+      title: 'Sleep',
       hexColour: theme.colors.greyBlue,
+    },
+    {
+      title: 'Shop',
+      hexColour: theme.colors.eucalyptusGreen,
     },
   ],
 }

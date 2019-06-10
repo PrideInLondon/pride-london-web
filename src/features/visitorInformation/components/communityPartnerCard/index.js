@@ -7,7 +7,15 @@ import Category from '../../../../components/newsCategory'
 import { communityPartnerCategories } from '../../../../constants'
 import theme from '../../../../theme/theme'
 import { media } from '../../../../theme/media'
-import { AccessibilityIcon, MapPinIcon } from '../../../../components/icons'
+import {
+  AccessibilityIcon,
+  MapPinIcon,
+  GenderIcon,
+} from '../../../../components/icons'
+import Facebook from '../../../../components/icons/facebook'
+import Twitter from '../../../../components/icons/twitter'
+import Instagram from '../../../../components/icons/instagram'
+import Globe from '../../../../components/icons/globe'
 
 const Card = styled.div`
   height: 100%;
@@ -17,7 +25,9 @@ const Card = styled.div`
 `
 
 const CardImg = styled(Img)`
+  padding-top: 58.75%;
   width: 100% !important;
+  height: auto !important;
 `
 
 const CardTitle = styled.h3`
@@ -31,15 +41,6 @@ const CardCategories = styled.div`
 const CardBody = styled.div`
   padding: 20px;
 
-  ${media.tablet`
-    padding: 30px;
- `};
-`
-const CardCategory = styled(Category)`
-  margin-bottom: 10px;
-`
-
-const CardDesc = styled(ReactMarkdown)`
   p,
   ul,
   ol,
@@ -48,6 +49,13 @@ const CardDesc = styled(ReactMarkdown)`
     color: ${theme.colors.darkGrey};
     line-height: 1.3;
   }
+
+  ${media.tablet`
+    padding: 30px;
+ `};
+`
+const CardCategory = styled(Category)`
+  margin-bottom: 10px;
 `
 
 const CardItem = styled.div`
@@ -57,41 +65,174 @@ const IconWrapper = styled.div`
   margin-right: 15px;
 `
 
+const CardItemTitle = styled.h4`
+  display: inline;
+  font-family: ${theme.fonts.body};
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: ${theme.colors.indigo};
+
+  &[href] {
+    text-decoration: none;
+    border-bottom: 1px solid ${theme.colors.eucalyptusGreen};
+    transition: color 0.15s linear;
+
+    &:hover,
+    &:focus {
+      color: ${theme.colors.eucalyptusGreen};
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    margin-bottom: 0.3em;
+  }
+`
+
+const Social = styled.div`
+  display: flex;
+  margin-top: 1em;
+`
+
+const SocialLink = styled.a`
+  margin-right: 15px;
+
+  svg {
+    path {
+      transition: fill 0.15s linear;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      path {
+        fill: ${theme.colors.eucalyptusGreen};
+      }
+    }
+  }
+`
+
 const CommunityPartnerCard = ({ partner }) => {
-  console.log(partner, communityPartnerCategories)
+  const {
+    featuredImage,
+    category,
+    venueName,
+    description: { description },
+    addressLine1,
+    addressLine2,
+    city,
+    postcode,
+    genderNeutralToilets,
+    location: { lat, lon },
+    facebookUrl,
+    instagramUrl,
+    twitterUrl,
+    websiteUrl,
+    accessibilityDetails,
+  } = partner
   return (
     <Card>
-      <CardImg fixed={partner.featuredImage.fixed} />
+      <CardImg fixed={featuredImage.fixed} />
       <CardBody>
         <CardCategories>
-          {partner.category.map(category => {
+          {category.map(category => {
             const cat = communityPartnerCategories.find(obj => {
               return obj.title === category
             })
             return <CardCategory category={cat} key={category} />
           })}
         </CardCategories>
-        <CardTitle>{partner.venueName}</CardTitle>
-        <CardDesc source={partner.description.description} />
-        <CardItem>
-          <IconWrapper>
-            <AccessibilityIcon dark />
-          </IconWrapper>
-
-          <div>
-            <h4>Accessibility</h4>
-            <p>hello</p>
-          </div>
-        </CardItem>
+        <CardTitle>{venueName}</CardTitle>
+        <ReactMarkdown source={description} />
         <CardItem>
           <IconWrapper>
             <MapPinIcon dark />
           </IconWrapper>
           <div>
-            <h4>Location</h4>
-            <p>hello</p>
+            <CardItemTitle
+              as="a"
+              href={`https://www.google.com/maps/search/?api=1&query=${lat},${lon}>`}
+            >
+              {venueName}
+            </CardItemTitle>
+            <p>{`${addressLine1}, ${addressLine2 &&
+              `${addressLine2},`} ${city}, ${postcode}`}</p>
           </div>
         </CardItem>
+        <CardItem>
+          <IconWrapper>
+            <AccessibilityIcon dark />
+          </IconWrapper>
+          <div>
+            <CardItemTitle>Accessibility</CardItemTitle>
+            <p>
+              {accessibilityDetails.map(
+                (detail, index) =>
+                  `${
+                    /^BSL/.test(detail) || index === 0
+                      ? detail
+                      : detail.toLowerCase()
+                  }${index < accessibilityDetails.length - 1 ? ', ' : ''}`
+              )}
+            </p>
+          </div>
+        </CardItem>
+        {genderNeutralToilets && (
+          <CardItem>
+            <IconWrapper>
+              <GenderIcon dark />
+            </IconWrapper>
+            <div>
+              <CardItemTitle>Gender Neutral Toilets</CardItemTitle>
+            </div>
+          </CardItem>
+        )}
+        <Social>
+          {facebookUrl && (
+            <SocialLink
+              href={facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Follow ${venueName} Facebook`}
+            >
+              <Facebook width={24} height={24} fill={theme.colors.indigo} />
+            </SocialLink>
+          )}
+
+          {instagramUrl && (
+            <SocialLink
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Follow ${venueName} Instagram`}
+            >
+              <Instagram width={24} height={24} fill={theme.colors.indigo} />
+            </SocialLink>
+          )}
+          {twitterUrl && (
+            <SocialLink
+              href={twitterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Follow ${venueName} Twitter`}
+            >
+              <Twitter width={24} height={24} fill={theme.colors.indigo} />
+            </SocialLink>
+          )}
+          {websiteUrl && (
+            <SocialLink
+              href={websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit ${venueName} Website`}
+            >
+              <Globe width={24} height={24} fill={theme.colors.indigo} />
+            </SocialLink>
+          )}
+        </Social>
       </CardBody>
     </Card>
   )
