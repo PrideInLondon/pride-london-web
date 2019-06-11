@@ -20,6 +20,9 @@ const ViewAll = styled.a`
 
 const FlexColumn = styled(Column)`
   display: flex;
+  ${media.tabletMax`
+    width: 100%;
+  `}
 `
 
 export const StyledContainer = styled(Container)`
