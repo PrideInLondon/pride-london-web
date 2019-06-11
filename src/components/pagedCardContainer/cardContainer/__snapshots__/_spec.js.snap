@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer renders component CardContainer 1`] = `
+<grid__Container
+  mx="auto"
+>
+  <Row
+    flexWrap={null}
+    ml={null}
+    mr={null}
+    mx={null}
+  >
+    <grid__FlexColumn
+      key="id-foo"
+      py={
+        Array [
+          2,
+          2,
+          2,
+          3,
+        ]
+      }
+      width={
+        Array [
+          1,
+          1,
+          0.5,
+          0.3333333333333333,
+        ]
+      }
+    >
+      <CardComponent
+        text="text-foo"
+      />
+    </grid__FlexColumn>
+    <grid__FlexColumn
+      key="id-bar"
+      py={
+        Array [
+          2,
+          2,
+          2,
+          3,
+        ]
+      }
+      width={
+        Array [
+          1,
+          1,
+          0.5,
+          0.3333333333333333,
+        ]
+      }
+    >
+      <CardComponent
+        text="text-bar"
+      />
+    </grid__FlexColumn>
+    <grid__FlexColumn
+      key="id-baz"
+      py={
+        Array [
+          2,
+          2,
+          2,
+          3,
+        ]
+      }
+      width={
+        Array [
+          1,
+          1,
+          0.5,
+          0.3333333333333333,
+        ]
+      }
+    >
+      <CardComponent
+        text="text-baz"
+      />
+    </grid__FlexColumn>
+  </Row>
+</grid__Container>
+`;
