@@ -132,6 +132,10 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "Pride Festival",
                       "links": Array [
                         Object {
+                          "title": "This year's festival",
+                          "url": "/events/festival",
+                        },
+                        Object {
                           "title": "What's on",
                           "url": "/events",
                         },
