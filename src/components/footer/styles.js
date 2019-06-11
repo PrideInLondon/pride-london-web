@@ -179,6 +179,12 @@ export const SponsorImgWrapper = styled.div`
     max-width: 12.5%;
   `};
 
+  a {
+    border: none !important;
+    text-decoration: none !important;
+    color: initial !important;
+  }
+
   img {
     max-height: 80px;
     max-width: 100%;
