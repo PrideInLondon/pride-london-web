@@ -7,22 +7,22 @@ exports[`ParadeGroup given correct props should render as expected 1`] = `
   </styles__TitleContainer>
   <styles__IconContainer>
     <a
-      href="facebook.com/2j2j"
+      href="www.group.com"
       rel="noopener noreferrer"
       target="_blank"
     >
-      <Facebook
+      <Globe
         fill="#2D2F7F"
         height={24}
         width={24}
       />
     </a>
     <a
-      href="instagram.com/1234"
+      href="facebook.com/2j2j"
       rel="noopener noreferrer"
       target="_blank"
     >
-      <Instagram
+      <Facebook
         fill="#2D2F7F"
         height={24}
         width={24}
@@ -40,11 +40,11 @@ exports[`ParadeGroup given correct props should render as expected 1`] = `
       />
     </a>
     <a
-      href="www.group.com"
+      href="instagram.com/1234"
       rel="noopener noreferrer"
       target="_blank"
     >
-      <Globe
+      <Instagram
         fill="#2D2F7F"
         height={24}
         width={24}
