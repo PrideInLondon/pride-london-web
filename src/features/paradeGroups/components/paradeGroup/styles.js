@@ -7,12 +7,13 @@ export const RowContainer = styled.div`
   display: flex;
   flex-direction: row;
   min-height: 80px;
-  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
   padding: 0 20px;
 
   ${media.tablet`
     padding: 0;
-    `}
+  `}
 `
 
 export const TitleContainer = styled.h3`
