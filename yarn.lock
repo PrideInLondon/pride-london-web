@@ -5781,10 +5781,10 @@ gatsby-react-router-scroll@^2.0.7:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.0.66:
-  version "2.0.67"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.67.tgz#cda63d712c1098b7e132bc0f8758c8755a514a86"
-  integrity sha512-W+C63T88rRaJzuuK7yYKqbJX2wWkUC0xZp1nap/v05M+hF0L6xavrenDSeVR3XgjLahkcn+RyAfDlQbRZ3e/Og==
+gatsby-source-contentful@^2.0.69:
+  version "2.0.69"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.69.tgz#5c90c6accd7e41067d0c3b1b7447bea254b7e7ec"
+  integrity sha512-HzE8/4p40Hn5ZvAEZofyfVgz0ATVuhhYda1w8ltH7XGM1c58E4WPBJdfIOFrL4M45XHx4TJy/Jfdq8t32A2sdg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.19.0"
@@ -5795,17 +5795,17 @@ gatsby-source-contentful@^2.0.66:
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
     gatsby-plugin-sharp "^2.1.3"
-    gatsby-source-filesystem "^2.0.38"
+    gatsby-source-filesystem "^2.0.39"
     is-online "^7.0.0"
     joi "^14.0.0"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.10"
     qs "^6.4.0"
 
-gatsby-source-filesystem@^2.0.33, gatsby-source-filesystem@^2.0.38:
-  version "2.0.38"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.38.tgz#8f9c2b8c0f17d1f8c464c3488a14e15c62c6eca2"
-  integrity sha512-r7LNTSVtgFz0n4Ox0iDc8PkOSM8nja+ONkcvyFWSyV1KjnvQdcsxXbVZba0S+ngUp+R+wSFS/GGD2LqdV0mCVA==
+gatsby-source-filesystem@^2.0.33, gatsby-source-filesystem@^2.0.39:
+  version "2.0.39"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.39.tgz#39d0f55aae594eea65454728676d92f1b43ba6e5"
+  integrity sha512-RL5J1WTrb6snyTeCmylt8/6cmhJxftjZGFLFHByEERyVEgMMiNDRHWqmrW/oWwkQ6Gvxi4GNnYUPsps+9Azv8Q==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
@@ -5819,7 +5819,6 @@ gatsby-source-filesystem@^2.0.33, gatsby-source-filesystem@^2.0.38:
     pretty-bytes "^4.0.2"
     progress "^1.1.8"
     read-chunk "^3.0.0"
-    slash "^1.0.0"
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
