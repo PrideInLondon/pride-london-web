@@ -1,5 +1,5 @@
 import React from 'react'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { Container, FlexColumn, Row } from '../../grid'
 
 const CardContainer = ({ CardComponent, cardContent }) => (
@@ -24,8 +24,8 @@ const CardContainer = ({ CardComponent, cardContent }) => (
 )
 
 CardContainer.propTypes = {
-  CardComponent: propTypes.node.isRequired,
-  cardContent: propTypes.arrayOf(propTypes.shape({ id: propTypes.any }))
+  CardComponent: PropTypes.node.isRequired,
+  cardContent: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.any }))
     .isRequired,
 }
 

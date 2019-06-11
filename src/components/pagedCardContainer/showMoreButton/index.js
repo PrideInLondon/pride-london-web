@@ -1,5 +1,5 @@
 import React from 'react'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { Column, Row } from '../../grid'
 import Button from '../../button'
 
@@ -14,8 +14,8 @@ const ShowMoreButton = ({ text, onClick }) => (
 )
 
 ShowMoreButton.propTypes = {
-  text: propTypes.string.isRequired,
-  onClick: propTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 }
 
 export default ShowMoreButton

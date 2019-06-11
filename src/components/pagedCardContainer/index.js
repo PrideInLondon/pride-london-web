@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import CardContainer from './cardContainer'
 import ShowMoreButton from './showMoreButton'
 
@@ -30,10 +30,10 @@ const PagedCardContainer = ({
 }
 
 PagedCardContainer.propTypes = {
-  pageSize: propTypes.number,
-  cardContent: propTypes.arrayOf(propTypes.shape({ id: propTypes.any })),
-  CardComponent: propTypes.node.isRequired,
-  showMoreButtonText: propTypes.string,
+  pageSize: PropTypes.number,
+  cardContent: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.any })),
+  CardComponent: PropTypes.node.isRequired,
+  showMoreButtonText: PropTypes.string,
 }
 
 PagedCardContainer.defaultProps = {
