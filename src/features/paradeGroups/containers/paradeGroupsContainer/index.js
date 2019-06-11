@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import LetterLink from '../../components/letterLink'
 import LetterGroup from '../../components/letterGroup'
 import ParadeGroup from '../../components/paradeGroup'
-import { LetterContainer } from './styles'
+import { LetterContainer, ScrolledLetters } from './styles'
 
 const lettersArray = '#abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
 
@@ -37,13 +37,15 @@ const ParadeGroupsContainer = ({ paradeGroups }) => {
   return (
     <>
       <LetterContainer>
-        {lettersArray.map(letter => (
-          <LetterLink
-            key={letter}
-            letter={letter}
-            isDisabled={!availableLetters.includes(letter)}
-          />
-        ))}
+        <ScrolledLetters>
+          {lettersArray.map(letter => (
+            <LetterLink
+              key={letter}
+              letter={letter}
+              isDisabled={!availableLetters.includes(letter)}
+            />
+          ))}
+        </ScrolledLetters>
       </LetterContainer>
       <div>
         {availableLetters.map(availableLetter => {

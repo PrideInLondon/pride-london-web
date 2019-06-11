@@ -154,10 +154,24 @@ export const Footer = ({
             <SponsorsContainer>
               {sponsorOrder.map(order =>
                 edges.map(
-                  ({ node: { sponsorLogo, sponsorLevel, sponsorName, id } }) =>
+                  ({
+                    node: {
+                      sponsorLogo,
+                      sponsorLevel,
+                      sponsorName,
+                      sponsorUrl,
+                      id,
+                    },
+                  }) =>
                     order === sponsorLevel && (
                       <SponsorImgWrapper key={id}>
-                        <img src={sponsorLogo.sizes.src} alt={sponsorName} />
+                        <a
+                          href={sponsorUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img src={sponsorLogo.sizes.src} alt={sponsorName} />
+                        </a>
                       </SponsorImgWrapper>
                     )
                 )
