@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import tinycolor from 'tinycolor2'
 import { hideVisually } from 'polished'
-import theme from '../../../../theme/theme'
+import theme from '../../theme/theme'
 
 export const getMostReadable = color =>
   tinycolor
@@ -33,6 +33,10 @@ export const FilterLabel = styled.label`
   margin-right: 10px;
   margin-bottom: 10px;
   white-space: nowrap;
+
+  &:focus {
+    outline: none;
+  }
 `
 
 export const FilterText = styled.span``

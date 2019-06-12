@@ -7,6 +7,7 @@ import { graphql } from 'gatsby'
 import NotFoundPage from './404'
 // import ParadeGroupsContainer from '../features/paradeGroups/containers/paradeGroupsContainer'
 // import { media } from '../theme/media'
+// import { paradeGroupCategories } from '../constants'
 
 const ParadeGroups = () => <NotFoundPage />
 
@@ -42,7 +43,10 @@ const ParadeGroups = () => <NotFoundPage />
 //       />
 //       <Container>
 //         <TextContainer>Blurb text</TextContainer>
-//         <ParadeGroupsContainer paradeGroups={mappedParadeGroups} />
+//         <ParadeGroupsContainer
+//           paradeGroups={mappedParadeGroups}
+//           categories={paradeGroupCategories}
+//         />
 //       </Container>
 //     </>
 //   )
@@ -67,6 +71,7 @@ export const paradeGroupsQuery = graphql`
           websiteUrl
           facebookUrl
           instagramUrl
+          category
         }
       }
     }
