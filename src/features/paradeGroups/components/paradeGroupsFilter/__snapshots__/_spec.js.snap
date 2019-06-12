@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParadeGroupsFilter not-selected filter render correctly 1`] = `
+<styles__FilterDiv
+  backgroundColor="#FFD95E"
+  data-test="All groups"
+  isOutline={false}
+  onClick={[Function]}
+>
+  <styles__FilterText>
+    All groups
+  </styles__FilterText>
+</styles__FilterDiv>
+`;
+
+exports[`ParadeGroupsFilter selected filter render correctly 1`] = `
+<styles__FilterDiv
+  backgroundColor="#FFD95E"
+  data-test="All groups"
+  isOutline={true}
+  onClick={[Function]}
+>
+  <styles__FilterText>
+    All groups
+  </styles__FilterText>
+</styles__FilterDiv>
+`;

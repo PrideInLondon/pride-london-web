@@ -2,6 +2,31 @@
 
 exports[`ParadeGroupsContainer should render correctly 1`] = `
 <Fragment>
+  <ParadeGroupsFilterContainer
+    categories={
+      Array [
+        Object {
+          "hexColour": "#FFD95E",
+          "title": "All groups",
+        },
+        Object {
+          "hexColour": "#FF5B44",
+          "title": "Arts",
+        },
+        Object {
+          "hexColour": "#ED2C6E",
+          "title": "Business",
+        },
+      ]
+    }
+    handleFilterClick={[Function]}
+    selectedFilter={
+      Object {
+        "hexColour": "#FFD95E",
+        "title": "All groups",
+      }
+    }
+  />
   <styles__LetterContainer>
     <styles__ScrolledLetters>
       <LetterLink

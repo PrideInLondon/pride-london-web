@@ -70,6 +70,44 @@ const constants = {
       hexColour: theme.colors.lemonGreen,
     },
   ],
+  paradeGroupCategories: [
+    {
+      title: 'All groups',
+      hexColour: theme.colors.yellow,
+    },
+    {
+      title: 'Arts',
+      hexColour: theme.colors.tomato,
+    },
+    {
+      title: 'Business',
+      hexColour: theme.colors.pink,
+    },
+    {
+      title: 'Charity',
+      hexColour: theme.colors.greyBlue,
+    },
+    {
+      title: 'Community group',
+      hexColour: theme.colors.bondiBlue,
+    },
+    {
+      title: 'Politics',
+      hexColour: theme.colors.darkPurple,
+    },
+    {
+      title: 'Profession',
+      hexColour: theme.colors.eucalyptusGreen,
+    },
+    {
+      title: 'Sports',
+      hexColour: theme.colors.fuscia,
+    },
+    {
+      title: 'Other',
+      hexColour: theme.colors.skyBlue,
+    },
+  ],
 }
 
 module.exports = constants
