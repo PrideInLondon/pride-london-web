@@ -2,7 +2,8 @@
 
 exports[`ParadeGroupsFilterContainer should render correctly 1`] = `
 <styles__ParadeGroupsFiltersWrapper>
-  <ParadeGroupsFilter
+  <FilterButton
+    filterName="paradeGroupsFilter"
     filterType={
       Object {
         "hexColour": "#FFD95E",
@@ -10,11 +11,13 @@ exports[`ParadeGroupsFilterContainer should render correctly 1`] = `
       }
     }
     handleClick={[MockFunction]}
+    icon={null}
     isButton={true}
     isOutline={false}
     key="All groups"
   />
-  <ParadeGroupsFilter
+  <FilterButton
+    filterName="paradeGroupsFilter"
     filterType={
       Object {
         "hexColour": "#FF5B44",
@@ -22,6 +25,7 @@ exports[`ParadeGroupsFilterContainer should render correctly 1`] = `
       }
     }
     handleClick={[MockFunction]}
+    icon={null}
     isButton={true}
     isOutline={true}
     key="Arts"

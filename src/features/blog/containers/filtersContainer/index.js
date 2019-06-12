@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NewsFilter from '../../components/newsFilter'
 import { Container, Row, Column } from '../../../../components/grid'
+import FilterButton from '../../../../components/filterButton'
 import { FiltersWrapper } from './styles'
 
 const FilterContainer = ({ handleFilterClick, selectedFilter, categories }) => {
@@ -15,12 +15,13 @@ const FilterContainer = ({ handleFilterClick, selectedFilter, categories }) => {
           <FiltersWrapper>
             {filteredCategories.map(filterType => {
               return (
-                <NewsFilter
+                <FilterButton
                   key={filterType.title}
                   handleClick={handleFilterClick}
                   filterType={filterType}
                   isOutline={selectedFilter.title !== filterType.title}
                   isButton
+                  filterName="newsFilter"
                 />
               )
             })}

@@ -2,7 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FilterLabel, FilterText, FilterIcon, FilterRadio } from './styles'
 
-const NewsFilter = ({ filterType, isOutline, handleClick, isButton, icon }) => {
+const FilterButton = ({
+  filterType,
+  isOutline,
+  handleClick,
+  isButton,
+  icon,
+  filterName,
+}) => {
   return (
     <FilterLabel
       onClick={() => handleClick(filterType)}
@@ -18,14 +25,14 @@ const NewsFilter = ({ filterType, isOutline, handleClick, isButton, icon }) => {
         type="radio"
         value={filterType.title}
         id={filterType.title}
-        name="newsFilter"
+        name={filterName}
         tabIndex="-1"
       />
     </FilterLabel>
   )
 }
 
-NewsFilter.propTypes = {
+FilterButton.propTypes = {
   isButton: PropTypes.bool,
   isOutline: PropTypes.bool,
   handleClick: PropTypes.func,
@@ -34,13 +41,15 @@ NewsFilter.propTypes = {
     hexColour: PropTypes.string,
   }).isRequired,
   icon: PropTypes.string,
+  filterName: PropTypes.string,
 }
 
-NewsFilter.defaultProps = {
+FilterButton.defaultProps = {
   isOutline: true,
   isButton: false,
   handleClick: () => {},
   icon: null,
+  filterName: 'filter',
 }
 
-export default NewsFilter
+export default FilterButton

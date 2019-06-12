@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ParadeGroupsFilter from '../../components/paradeGroupsFilter'
+import FilterButton from '../../../../components/filterButton'
 import { paradeGroupFilterPropType } from '../../paradeGroupFilterPropType'
 import { ParadeGroupsFiltersWrapper } from './styles'
 
@@ -13,12 +13,13 @@ const ParadeGroupsFilterContainer = ({
     <ParadeGroupsFiltersWrapper>
       {categories.map(filterType => {
         return (
-          <ParadeGroupsFilter
+          <FilterButton
             key={filterType.title}
             handleClick={handleFilterClick}
             filterType={filterType}
             isOutline={selectedFilter.title !== filterType.title}
             isButton
+            filterName="paradeGroupsFilter"
           />
         )
       })}
