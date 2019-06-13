@@ -9,19 +9,17 @@ const PagedCardContainer = ({
   moreCardsToShow,
   showMoreButtonText,
   onShowMoreButtonClick,
-}) => {
-  return (
-    <>
-      <CardContainer cardContent={cardContent} CardComponent={CardComponent} />
-      {moreCardsToShow && (
-        <ShowMoreButton
-          text={showMoreButtonText}
-          onClick={onShowMoreButtonClick}
-        />
-      )}
-    </>
-  )
-}
+}) => (
+  <>
+    <CardContainer cardContent={cardContent} CardComponent={CardComponent} />
+    {moreCardsToShow && (
+      <ShowMoreButton
+        text={showMoreButtonText}
+        onClick={onShowMoreButtonClick}
+      />
+    )}
+  </>
+)
 
 PagedCardContainer.propTypes = {
   cardContent: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.any })),
