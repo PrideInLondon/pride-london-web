@@ -36,7 +36,6 @@ div#___gatsby {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 main {
@@ -93,6 +92,7 @@ address {
   font-size: 1rem;
   line-height: 1.25rem;
   margin: 0 0 1.25rem 0;
+  word-wrap: break-word;
 }
 
 li {
