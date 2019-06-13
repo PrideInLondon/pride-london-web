@@ -123,16 +123,14 @@ const CookieNotice = () => {
             <Row>
               <Column width={[1, 1, 0.6]}>
                 <CookieText>
-                  We process information about your visit using cookies for
-                  performance and usage analysis, and to allow bespoke marketing
-                  to your individual interests. For further information see our{' '}
-                  <CookieLink to="/privacy">Privacy & Cookie Policy</CookieLink>
-                  .
+                  We use cookies to make sure that you have the best experience
+                  on our website and to learn how we can make it better for you.{' '}
+                  <CookieLink to="/privacy">Learn more</CookieLink>
                 </CookieText>
               </Column>
               <CookieActions width={[1, 1, 0.4]}>
                 <CookieAgree role="button" onClick={handleAgree}>
-                  I agree to cookies
+                  Got it
                 </CookieAgree>
                 <CookieDismiss
                   aria-label="I do not agree and close"
