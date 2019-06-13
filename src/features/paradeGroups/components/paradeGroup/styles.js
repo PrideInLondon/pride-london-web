@@ -8,7 +8,7 @@ export const RowContainer = styled.div`
   flex-direction: row;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 17px 20px 23px 20px;
+  padding: 15px 20px;
 
   ${media.tablet`
     padding: 17px 0 23px 0;
