@@ -11,7 +11,6 @@ const FilterLabel = ({
   handleSelect,
 }) => (
   <Label
-    onClick={() => handleSelect(filterName)}
     backgroundColor={filterColour}
     isSelected={isSelected}
     htmlFor={filterName}
@@ -19,6 +18,7 @@ const FilterLabel = ({
   >
     <Text>{filterName}</Text>
     <Input
+      onClick={() => handleSelect(filterName)}
       type={filterType}
       value={filterName}
       id={filterName}

@@ -40,7 +40,7 @@ describe('FilterLabel', () => {
         handleSelect={handleSelect}
       />
     )
-    wrapper.find('styles__Label').simulate('click')
+    wrapper.find('styles__Input').simulate('click')
     expect(handleSelect).toHaveBeenCalledTimes(1)
     expect(handleSelect).toHaveBeenCalledWith('foo')
   })

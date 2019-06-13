@@ -248,7 +248,10 @@ describe('FilteredPagedCardContainer', () => {
         />
       )
 
-      wrapper.find('FilterLabel#foo').simulate('click')
+      wrapper
+        .find('FilterLabel#foo')
+        .find('styles__Input')
+        .simulate('click')
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(2)
@@ -266,7 +269,10 @@ describe('FilteredPagedCardContainer', () => {
         />
       )
 
-      wrapper.find('FilterLabel#foo').simulate('click')
+      wrapper
+        .find('FilterLabel#foo')
+        .find('styles__Input')
+        .simulate('click')
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(3)
@@ -313,7 +319,10 @@ describe('FilteredPagedCardContainer', () => {
         />
       )
 
-      wrapper.find('FilterLabel#foo').simulate('click')
+      wrapper
+        .find('FilterLabel#foo')
+        .find('styles__Input')
+        .simulate('click')
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(2)
@@ -331,7 +340,10 @@ describe('FilteredPagedCardContainer', () => {
         />
       )
 
-      wrapper.find('FilterLabel#foo').simulate('click')
+      wrapper
+        .find('FilterLabel#foo')
+        .find('styles__Input')
+        .simulate('click')
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(3)

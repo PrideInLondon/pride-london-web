@@ -12,7 +12,6 @@ exports[`FilterLabel renders when not selected 1`] = `
     backgroundColor="bar"
     htmlFor="foo"
     isSelected={false}
-    onClick={[Function]}
     tabIndex="0"
   >
     <StyledComponent
@@ -50,13 +49,11 @@ exports[`FilterLabel renders when not selected 1`] = `
       forwardedRef={null}
       htmlFor="foo"
       isSelected={false}
-      onClick={[Function]}
       tabIndex="0"
     >
       <label
         className="styles__Label-sc-1wu4f6z-0 iCqvVS"
         htmlFor="foo"
-        onClick={[Function]}
         tabIndex="0"
       >
         <styles__Text>
@@ -93,6 +90,7 @@ exports[`FilterLabel renders when not selected 1`] = `
         <styles__Input
           id="foo"
           name="filterLabel"
+          onClick={[Function]}
           tabIndex="-1"
           type="radio"
           value="foo"
@@ -135,6 +133,7 @@ exports[`FilterLabel renders when not selected 1`] = `
             forwardedRef={null}
             id="foo"
             name="filterLabel"
+            onClick={[Function]}
             tabIndex="-1"
             type="radio"
             value="foo"
@@ -143,6 +142,7 @@ exports[`FilterLabel renders when not selected 1`] = `
               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
               id="foo"
               name="filterLabel"
+              onClick={[Function]}
               tabIndex="-1"
               type="radio"
               value="foo"
@@ -167,7 +167,6 @@ exports[`FilterLabel renders when selected 1`] = `
     backgroundColor="bar"
     htmlFor="foo"
     isSelected={true}
-    onClick={[Function]}
     tabIndex="0"
   >
     <StyledComponent
@@ -205,13 +204,11 @@ exports[`FilterLabel renders when selected 1`] = `
       forwardedRef={null}
       htmlFor="foo"
       isSelected={true}
-      onClick={[Function]}
       tabIndex="0"
     >
       <label
         className="styles__Label-sc-1wu4f6z-0 dqvWqB"
         htmlFor="foo"
-        onClick={[Function]}
         tabIndex="0"
       >
         <styles__Text>
@@ -248,6 +245,7 @@ exports[`FilterLabel renders when selected 1`] = `
         <styles__Input
           id="foo"
           name="filterLabel"
+          onClick={[Function]}
           tabIndex="-1"
           type="checkbox"
           value="foo"
@@ -290,6 +288,7 @@ exports[`FilterLabel renders when selected 1`] = `
             forwardedRef={null}
             id="foo"
             name="filterLabel"
+            onClick={[Function]}
             tabIndex="-1"
             type="checkbox"
             value="foo"
@@ -298,6 +297,7 @@ exports[`FilterLabel renders when selected 1`] = `
               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
               id="foo"
               name="filterLabel"
+              onClick={[Function]}
               tabIndex="-1"
               type="checkbox"
               value="foo"

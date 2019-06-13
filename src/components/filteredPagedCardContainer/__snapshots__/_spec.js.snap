@@ -498,7 +498,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                     backgroundColor="#foo"
                                     htmlFor="foo"
                                     isSelected={true}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -536,13 +535,11 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                       forwardedRef={null}
                                       htmlFor="foo"
                                       isSelected={true}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 VUpCb"
                                         htmlFor="foo"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -579,6 +576,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                         <styles__Input
                                           id="foo"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="checkbox"
                                           value="foo"
@@ -621,6 +619,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                             forwardedRef={null}
                                             id="foo"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="checkbox"
                                             value="foo"
@@ -629,6 +628,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="foo"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="checkbox"
                                               value="foo"
@@ -652,7 +652,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                     backgroundColor="#bar"
                                     htmlFor="bar"
                                     isSelected={false}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -690,13 +689,11 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                       forwardedRef={null}
                                       htmlFor="bar"
                                       isSelected={false}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 iLlQa"
                                         htmlFor="bar"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -733,6 +730,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                         <styles__Input
                                           id="bar"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="checkbox"
                                           value="bar"
@@ -775,6 +773,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                             forwardedRef={null}
                                             id="bar"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="checkbox"
                                             value="bar"
@@ -783,6 +782,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="bar"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="checkbox"
                                               value="bar"
@@ -2803,7 +2803,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                     backgroundColor="#foo"
                                     htmlFor="foo"
                                     isSelected={true}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -2841,13 +2840,11 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                       forwardedRef={null}
                                       htmlFor="foo"
                                       isSelected={true}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 VUpCb"
                                         htmlFor="foo"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -2884,6 +2881,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                         <styles__Input
                                           id="foo"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="checkbox"
                                           value="foo"
@@ -2926,6 +2924,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                             forwardedRef={null}
                                             id="foo"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="checkbox"
                                             value="foo"
@@ -2934,6 +2933,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="foo"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="checkbox"
                                               value="foo"
@@ -2957,7 +2957,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                     backgroundColor="#bar"
                                     htmlFor="bar"
                                     isSelected={false}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -2995,13 +2994,11 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                       forwardedRef={null}
                                       htmlFor="bar"
                                       isSelected={false}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 iLlQa"
                                         htmlFor="bar"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -3038,6 +3035,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                         <styles__Input
                                           id="bar"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="checkbox"
                                           value="bar"
@@ -3080,6 +3078,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                             forwardedRef={null}
                                             id="bar"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="checkbox"
                                             value="bar"
@@ -3088,6 +3087,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="bar"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="checkbox"
                                               value="bar"
@@ -4371,7 +4371,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                     backgroundColor="#foo"
                                     htmlFor="foo"
                                     isSelected={true}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -4409,13 +4408,11 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                       forwardedRef={null}
                                       htmlFor="foo"
                                       isSelected={true}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 VUpCb"
                                         htmlFor="foo"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -4452,6 +4449,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                         <styles__Input
                                           id="foo"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="radio"
                                           value="foo"
@@ -4494,6 +4492,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                             forwardedRef={null}
                                             id="foo"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="radio"
                                             value="foo"
@@ -4502,6 +4501,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="foo"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="radio"
                                               value="foo"
@@ -4525,7 +4525,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                     backgroundColor="#bar"
                                     htmlFor="bar"
                                     isSelected={false}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -4563,13 +4562,11 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                       forwardedRef={null}
                                       htmlFor="bar"
                                       isSelected={false}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 iLlQa"
                                         htmlFor="bar"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -4606,6 +4603,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                         <styles__Input
                                           id="bar"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="radio"
                                           value="bar"
@@ -4648,6 +4646,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                             forwardedRef={null}
                                             id="bar"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="radio"
                                             value="bar"
@@ -4656,6 +4655,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="bar"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="radio"
                                               value="bar"
@@ -4679,7 +4679,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                     backgroundColor="#baz"
                                     htmlFor="baz"
                                     isSelected={false}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -4717,13 +4716,11 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                       forwardedRef={null}
                                       htmlFor="baz"
                                       isSelected={false}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 ivKLXq"
                                         htmlFor="baz"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -4760,6 +4757,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                         <styles__Input
                                           id="baz"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="radio"
                                           value="baz"
@@ -4802,6 +4800,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                             forwardedRef={null}
                                             id="baz"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="radio"
                                             value="baz"
@@ -4810,6 +4809,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="baz"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="radio"
                                               value="baz"
@@ -6834,7 +6834,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                     backgroundColor="#foo"
                                     htmlFor="foo"
                                     isSelected={true}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -6872,13 +6871,11 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                       forwardedRef={null}
                                       htmlFor="foo"
                                       isSelected={true}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 VUpCb"
                                         htmlFor="foo"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -6915,6 +6912,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                         <styles__Input
                                           id="foo"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="radio"
                                           value="foo"
@@ -6957,6 +6955,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                             forwardedRef={null}
                                             id="foo"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="radio"
                                             value="foo"
@@ -6965,6 +6964,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="foo"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="radio"
                                               value="foo"
@@ -6988,7 +6988,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                     backgroundColor="#bar"
                                     htmlFor="bar"
                                     isSelected={false}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -7026,13 +7025,11 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                       forwardedRef={null}
                                       htmlFor="bar"
                                       isSelected={false}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 iLlQa"
                                         htmlFor="bar"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -7069,6 +7066,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                         <styles__Input
                                           id="bar"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="radio"
                                           value="bar"
@@ -7111,6 +7109,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                             forwardedRef={null}
                                             id="bar"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="radio"
                                             value="bar"
@@ -7119,6 +7118,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="bar"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="radio"
                                               value="bar"
@@ -7142,7 +7142,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                     backgroundColor="#baz"
                                     htmlFor="baz"
                                     isSelected={false}
-                                    onClick={[Function]}
                                     tabIndex="0"
                                   >
                                     <StyledComponent
@@ -7180,13 +7179,11 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                       forwardedRef={null}
                                       htmlFor="baz"
                                       isSelected={false}
-                                      onClick={[Function]}
                                       tabIndex="0"
                                     >
                                       <label
                                         className="styles__Label-sc-1wu4f6z-0 ivKLXq"
                                         htmlFor="baz"
-                                        onClick={[Function]}
                                         tabIndex="0"
                                       >
                                         <styles__Text>
@@ -7223,6 +7220,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                         <styles__Input
                                           id="baz"
                                           name="filterLabel"
+                                          onClick={[Function]}
                                           tabIndex="-1"
                                           type="radio"
                                           value="baz"
@@ -7265,6 +7263,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                             forwardedRef={null}
                                             id="baz"
                                             name="filterLabel"
+                                            onClick={[Function]}
                                             tabIndex="-1"
                                             type="radio"
                                             value="baz"
@@ -7273,6 +7272,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="baz"
                                               name="filterLabel"
+                                              onClick={[Function]}
                                               tabIndex="-1"
                                               type="radio"
                                               value="baz"
