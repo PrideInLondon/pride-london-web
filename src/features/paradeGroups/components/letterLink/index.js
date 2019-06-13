@@ -2,9 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import StyledLetterLink from './styles'
 
-const LetterLink = ({ letter, isDisabled }) => {
+const LetterLink = ({ letter, isDisabled, isActive }) => {
   return (
-    <StyledLetterLink isDisabled={isDisabled} href={`#parade-group-${letter}`}>
+    <StyledLetterLink
+      isDisabled={isDisabled}
+      href={`#parade-group-${letter}`}
+      isActive={isActive}
+    >
       {letter.toUpperCase()}
     </StyledLetterLink>
   )
@@ -13,10 +17,12 @@ const LetterLink = ({ letter, isDisabled }) => {
 LetterLink.propTypes = {
   letter: PropTypes.string.isRequired,
   isDisabled: PropTypes.bool,
+  isActive: PropTypes.bool,
 }
 
 LetterLink.defaultProps = {
   isDisabled: false,
+  isActive: false,
 }
 
 export default LetterLink

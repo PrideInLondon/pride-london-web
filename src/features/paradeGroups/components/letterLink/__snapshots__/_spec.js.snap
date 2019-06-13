@@ -1,8 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LetterLink should render correctly 1`] = `
+exports[`LetterLink renders active letter 1`] = `
 <styles__StyledLetterLink
   href="#parade-group-a"
+  isActive={true}
+  isDisabled={false}
+>
+  A
+</styles__StyledLetterLink>
+`;
+
+exports[`LetterLink renders disabled letter 1`] = `
+<styles__StyledLetterLink
+  href="#parade-group-a"
+  isActive={false}
+  isDisabled={true}
+>
+  A
+</styles__StyledLetterLink>
+`;
+
+exports[`LetterLink renders with default values 1`] = `
+<styles__StyledLetterLink
+  href="#parade-group-a"
+  isActive={false}
   isDisabled={false}
 >
   A

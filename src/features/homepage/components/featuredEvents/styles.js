@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { media } from '../../../../theme/media'
 
 export const FeaturedEventContent = styled.div`
+  overflow: hidden;
+
   .slick-list {
     overflow: visible;
   }

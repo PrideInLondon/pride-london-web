@@ -30,136 +30,163 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
   <styles__LetterContainer>
     <styles__ScrolledLetters>
       <LetterLink
+        isActive={false}
         isDisabled={false}
         key="#"
         letter="#"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="a"
         letter="a"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="b"
         letter="b"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="c"
         letter="c"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="d"
         letter="d"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="e"
         letter="e"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="f"
         letter="f"
       />
       <LetterLink
+        isActive={false}
         isDisabled={false}
         key="g"
         letter="g"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="h"
         letter="h"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="i"
         letter="i"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="j"
         letter="j"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="k"
         letter="k"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="l"
         letter="l"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="m"
         letter="m"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="n"
         letter="n"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="o"
         letter="o"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="p"
         letter="p"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="q"
         letter="q"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="r"
         letter="r"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="s"
         letter="s"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="t"
         letter="t"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="u"
         letter="u"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="v"
         letter="v"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="w"
         letter="w"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="x"
         letter="x"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="y"
         letter="y"
       />
       <LetterLink
+        isActive={false}
         isDisabled={true}
         key="z"
         letter="z"
