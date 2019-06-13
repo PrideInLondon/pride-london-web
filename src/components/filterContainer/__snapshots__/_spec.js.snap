@@ -31,6 +31,7 @@ exports[`FilterContainer renders checkbox filter container 1`] = `
           filterName="foo"
           filterType="checkbox"
           handleSelect={[Function]}
+          id="foo"
           isSelected={true}
           key="foo"
         />
@@ -39,6 +40,7 @@ exports[`FilterContainer renders checkbox filter container 1`] = `
           filterName="bar"
           filterType="checkbox"
           handleSelect={[Function]}
+          id="bar"
           isSelected={false}
           key="bar"
         />
@@ -47,6 +49,7 @@ exports[`FilterContainer renders checkbox filter container 1`] = `
           filterName="baz"
           filterType="checkbox"
           handleSelect={[Function]}
+          id="baz"
           isSelected={true}
           key="baz"
         />
@@ -87,6 +90,7 @@ exports[`FilterContainer renders radio filter container 1`] = `
           filterName="foo"
           filterType="radio"
           handleSelect={[Function]}
+          id="foo"
           isSelected={false}
           key="foo"
         />
@@ -95,6 +99,7 @@ exports[`FilterContainer renders radio filter container 1`] = `
           filterName="bar"
           filterType="radio"
           handleSelect={[Function]}
+          id="bar"
           isSelected={true}
           key="bar"
         />
@@ -103,6 +108,7 @@ exports[`FilterContainer renders radio filter container 1`] = `
           filterName="baz"
           filterType="radio"
           handleSelect={[Function]}
+          id="baz"
           isSelected={false}
           key="baz"
         />

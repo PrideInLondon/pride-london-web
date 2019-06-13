@@ -857,35 +857,30 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
             "category": Array [
               "foo",
             ],
-            "id": 0,
             "text": "text-foo",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 1,
             "text": "text-foo2",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 2,
             "text": "text-foo3",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 3,
             "text": "text-foo4",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 4,
             "text": "text-foo5",
           },
         ]
@@ -1090,7 +1085,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                     className="sc-bdVaJa sc-bwzfXH guKgGl"
                   >
                     <grid__FlexColumn
-                      key="0"
                       py={
                         Array [
                           2,
@@ -1345,7 +1339,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="1"
                       py={
                         Array [
                           2,
@@ -1600,7 +1593,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="2"
                       py={
                         Array [
                           2,
@@ -1855,7 +1847,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="3"
                       py={
                         Array [
                           2,
@@ -2110,7 +2101,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="4"
                       py={
                         Array [
                           2,
@@ -3154,14 +3144,12 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
             "category": Array [
               "foo",
             ],
-            "id": 0,
             "text": "text-foo",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 1,
             "text": "text-foo2",
           },
         ]
@@ -3366,7 +3354,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                     className="sc-bdVaJa sc-bwzfXH guKgGl"
                   >
                     <grid__FlexColumn
-                      key="0"
                       py={
                         Array [
                           2,
@@ -3621,7 +3608,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="1"
                       py={
                         Array [
                           2,
@@ -4898,35 +4884,30 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
             "category": Array [
               "foo",
             ],
-            "id": 0,
             "text": "text-foo",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 1,
             "text": "text-foo2",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 2,
             "text": "text-foo3",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 3,
             "text": "text-foo4",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 4,
             "text": "text-foo5",
           },
         ]
@@ -5131,7 +5112,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                     className="sc-bdVaJa sc-bwzfXH guKgGl"
                   >
                     <grid__FlexColumn
-                      key="0"
                       py={
                         Array [
                           2,
@@ -5386,7 +5366,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="1"
                       py={
                         Array [
                           2,
@@ -5641,7 +5620,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="2"
                       py={
                         Array [
                           2,
@@ -5896,7 +5874,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="3"
                       py={
                         Array [
                           2,
@@ -6151,7 +6128,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="4"
                       py={
                         Array [
                           2,
@@ -7353,14 +7329,12 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
             "category": Array [
               "foo",
             ],
-            "id": 0,
             "text": "text-foo",
           },
           Object {
             "category": Array [
               "foo",
             ],
-            "id": 1,
             "text": "text-foo2",
           },
         ]
@@ -7565,7 +7539,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                     className="sc-bdVaJa sc-bwzfXH guKgGl"
                   >
                     <grid__FlexColumn
-                      key="0"
                       py={
                         Array [
                           2,
@@ -7820,7 +7793,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
-                      key="1"
                       py={
                         Array [
                           2,
