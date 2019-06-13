@@ -7,7 +7,7 @@ describe('FilterLabel', () => {
     const wrapper = mount(
       <FilterLabel
         filterName="foo"
-        filterColor="bar"
+        filterColour="bar"
         filterType="checkbox"
         isSelected
         handleSelect={() => {}}
@@ -20,7 +20,7 @@ describe('FilterLabel', () => {
     const wrapper = mount(
       <FilterLabel
         filterName="foo"
-        filterColor="bar"
+        filterColour="bar"
         filterType="radio"
         isSelected={false}
         handleSelect={() => {}}
@@ -34,7 +34,7 @@ describe('FilterLabel', () => {
     const wrapper = shallow(
       <FilterLabel
         filterName="foo"
-        filterColor="bar"
+        filterColour="bar"
         filterType="checkbox"
         isSelected
         handleSelect={handleSelect}

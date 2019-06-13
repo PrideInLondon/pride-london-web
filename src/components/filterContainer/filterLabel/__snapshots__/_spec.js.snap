@@ -2,7 +2,7 @@
 
 exports[`FilterLabel renders when not selected 1`] = `
 <FilterLabel
-  filterColor="bar"
+  filterColour="bar"
   filterName="foo"
   filterType="radio"
   handleSelect={[Function]}
@@ -157,7 +157,7 @@ exports[`FilterLabel renders when not selected 1`] = `
 
 exports[`FilterLabel renders when selected 1`] = `
 <FilterLabel
-  filterColor="bar"
+  filterColour="bar"
   filterName="foo"
   filterType="checkbox"
   handleSelect={[Function]}

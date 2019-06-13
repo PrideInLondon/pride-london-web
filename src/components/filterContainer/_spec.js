@@ -2,12 +2,18 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import FilterContainer, { calculateIsSelected } from '.'
 
+const CATEGORIES = [
+  { title: 'foo', hexColour: '#FFD95E' },
+  { title: 'bar', hexColour: '#FF5B44' },
+  { title: 'baz', hexColour: '#ED2C6E' },
+]
+
 describe('FilterContainer', () => {
   it('renders checkbox filter container', () => {
     const wrapper = shallow(
       <FilterContainer
         filterType="checkbox"
-        filterNames={['foo', 'bar', 'baz']}
+        categories={CATEGORIES}
         selected={['foo', 'baz']}
         handleFilterSelect={() => {}}
       />
@@ -19,7 +25,7 @@ describe('FilterContainer', () => {
     const wrapper = shallow(
       <FilterContainer
         filterType="radio"
-        filterNames={['foo', 'bar', 'baz']}
+        categories={CATEGORIES}
         selected="bar"
         handleFilterSelect={() => {}}
       />

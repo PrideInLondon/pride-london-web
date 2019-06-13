@@ -5,14 +5,14 @@ import { Label, Text, Input } from './styles'
 
 const FilterLabel = ({
   filterName,
-  filterColor,
+  filterColour,
   filterType,
   isSelected,
   handleSelect,
 }) => (
   <Label
     onClick={() => handleSelect(filterName)}
-    backgroundColor={filterColor}
+    backgroundColor={filterColour}
     isSelected={isSelected}
     htmlFor={filterName}
     tabIndex="0"
@@ -30,7 +30,7 @@ const FilterLabel = ({
 
 FilterLabel.propTypes = {
   filterName: PropTypes.string.isRequired,
-  filterColor: PropTypes.string.isRequired,
+  filterColour: PropTypes.string.isRequired,
   filterType: PropTypes.oneOf(filterTypes).isRequired,
   isSelected: PropTypes.bool.isRequired,
   handleSelect: PropTypes.func.isRequired,

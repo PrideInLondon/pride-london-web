@@ -27,7 +27,7 @@ exports[`FilterContainer renders checkbox filter container 1`] = `
     >
       <styles__FilterContainerWrapper>
         <FilterLabel
-          filterColor="#FFD95E"
+          filterColour="#FFD95E"
           filterName="foo"
           filterType="checkbox"
           handleSelect={[Function]}
@@ -35,7 +35,7 @@ exports[`FilterContainer renders checkbox filter container 1`] = `
           key="foo"
         />
         <FilterLabel
-          filterColor="#FF5B44"
+          filterColour="#FF5B44"
           filterName="bar"
           filterType="checkbox"
           handleSelect={[Function]}
@@ -43,7 +43,7 @@ exports[`FilterContainer renders checkbox filter container 1`] = `
           key="bar"
         />
         <FilterLabel
-          filterColor="#ED2C6E"
+          filterColour="#ED2C6E"
           filterName="baz"
           filterType="checkbox"
           handleSelect={[Function]}
@@ -83,7 +83,7 @@ exports[`FilterContainer renders radio filter container 1`] = `
     >
       <styles__FilterContainerWrapper>
         <FilterLabel
-          filterColor="#FFD95E"
+          filterColour="#FFD95E"
           filterName="foo"
           filterType="radio"
           handleSelect={[Function]}
@@ -91,7 +91,7 @@ exports[`FilterContainer renders radio filter container 1`] = `
           key="foo"
         />
         <FilterLabel
-          filterColor="#FF5B44"
+          filterColour="#FF5B44"
           filterName="bar"
           filterType="radio"
           handleSelect={[Function]}
@@ -99,7 +99,7 @@ exports[`FilterContainer renders radio filter container 1`] = `
           key="bar"
         />
         <FilterLabel
-          filterColor="#ED2C6E"
+          filterColour="#ED2C6E"
           filterName="baz"
           filterType="radio"
           handleSelect={[Function]}
