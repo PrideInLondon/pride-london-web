@@ -5,6 +5,21 @@ import PagedCardContainer from '.'
 // eslint-disable-next-line react/prop-types
 const CardComponent = ({ text }) => <div>{text}</div>
 
+const cardContent = [
+  {
+    id: 'id-foo',
+    text: 'text-foo',
+  },
+  {
+    id: 'id-bar',
+    text: 'text-bar',
+  },
+  {
+    id: 'id-baz',
+    text: 'text-baz',
+  },
+]
+
 describe('PagedCardContainer', () => {
   it('renders component with default props', () => {
     const wrapper = shallow(
@@ -15,27 +30,13 @@ describe('PagedCardContainer', () => {
   })
 
   it('renders component with specified non-default props', () => {
-    const cardContent = [
-      {
-        id: 'id-foo',
-        text: 'text-foo',
-      },
-      {
-        id: 'id-bar',
-        text: 'text-bar',
-      },
-      {
-        id: 'id-baz',
-        text: 'text-baz',
-      },
-    ]
-
     const wrapper = mount(
       <PagedCardContainer
-        pageSize={3}
         cardContent={cardContent}
         CardComponent={CardComponent}
+        moreCardsToShow
         showMoreButtonText="Show More Foo"
+        onShowMoreButtonClick={jest.fn()}
       />
     )
 
@@ -44,51 +45,22 @@ describe('PagedCardContainer', () => {
     expect(wrapper.find('CardComponent')).toHaveLength(3)
   })
 
-  it('shows more cards when show more button is selected', () => {
-    const cardContent = [
-      {
-        id: 'id-foo',
-        text: 'text-foo',
-      },
-      {
-        id: 'id-bar',
-        text: 'text-bar',
-      },
-      {
-        id: 'id-baz',
-        text: 'text-baz',
-      },
-      {
-        id: 'id-foo2',
-        text: 'text-foo2',
-      },
-      {
-        id: 'id-bar2',
-        text: 'text-bar2',
-      },
-      {
-        id: 'id-baz2',
-        text: 'text-baz2',
-      },
-    ]
+  it('executes onClick when show more button is selected', () => {
+    const onShowMoreButtonClick = jest.fn()
 
     const wrapper = mount(
       <PagedCardContainer
-        pageSize={3}
-        cardContent={cardContent}
         CardComponent={CardComponent}
+        moreCardsToShow
+        onShowMoreButtonClick={onShowMoreButtonClick}
       />
     )
-
-    expect(wrapper.find('CardComponent')).toHaveLength(3)
 
     wrapper
       .find('ShowMoreButton')
       .find('Button')
       .simulate('click')
 
-    expect(wrapper.find('CardComponent')).toHaveLength(6)
-
-    expect(wrapper).toMatchSnapshot()
+    expect(onShowMoreButtonClick).toHaveBeenCalledTimes(1)
   })
 })
