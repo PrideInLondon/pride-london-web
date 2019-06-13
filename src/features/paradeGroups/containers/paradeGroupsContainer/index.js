@@ -1,4 +1,10 @@
-import React, { Fragment, useState, useCallback } from 'react'
+import React, {
+  Fragment,
+  useState,
+  useCallback,
+  useEffect,
+  useRef,
+} from 'react'
 import PropTypes from 'prop-types'
 import LetterLink from '../../components/letterLink'
 import LetterGroup from '../../components/letterGroup'
@@ -9,14 +15,36 @@ import { paradeGroupCategories } from '../../../../constants'
 import { LetterContainer, ScrolledLetters } from './styles'
 
 const lettersArray = '#abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
+const lettersContainerHeight = 50
 
 const filterGroupByFirstLetter = (groupName, letter) => {
   return groupName.toUpperCase().startsWith(letter.toUpperCase())
 }
 
+const isInViewport = (e, { top: t, height: h } = e.getBoundingClientRect()) =>
+  t <= innerHeight && t - lettersContainerHeight + h >= 0
+
 const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
   const [selectedFilter, setSelectedFilter] = useState(paradeGroupCategories[0])
   const [groups, setGroups] = useState(paradeGroups)
+  const [activeLetter, setActiveLetter] = useState(null)
+  const paradeGroupLettersSection = useRef(null)
+
+  const handleScroll = useCallback(() => {
+    let _activeLetter = null
+    for (const paradeGroupLetterSection of paradeGroupLettersSection.current
+      .children) {
+      if (isInViewport(paradeGroupLetterSection)) {
+        if (paradeGroupLetterSection.id) {
+          _activeLetter = paradeGroupLetterSection.id.substr(-1)
+          break
+        }
+      }
+    }
+    if (_activeLetter !== activeLetter) {
+      setActiveLetter(_activeLetter)
+    }
+  }, [activeLetter])
 
   const handleFilterClick = useCallback(
     group => {
@@ -30,9 +58,17 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
                 paradeGroup.category.includes(group.title)
             )
       )
+      handleScroll()
     },
-    [paradeGroups]
+    [paradeGroups, handleScroll]
   )
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [handleScroll])
 
   const availableLetters = lettersArray.reduce((acc, letter) => {
     if (
@@ -71,11 +107,12 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
               key={letter}
               letter={letter}
               isDisabled={!availableLetters.includes(letter)}
+              isActive={activeLetter === letter}
             />
           ))}
         </ScrolledLetters>
       </LetterContainer>
-      <div>
+      <div ref={paradeGroupLettersSection}>
         {availableLetters.map(availableLetter => {
           return (
             <Fragment key={availableLetter}>

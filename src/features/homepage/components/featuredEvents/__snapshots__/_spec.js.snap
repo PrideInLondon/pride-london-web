@@ -10,7 +10,7 @@ exports[`Featured Event Content renders with default values 1`] = `
         "componentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
         "isStatic": true,
         "rules": Array [
-          ".slick-list{overflow:visible;}.slick-track{display:flex;.slick-slide{display:flex;height:auto;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
+          "overflow:hidden;.slick-list{overflow:visible;}.slick-track{display:flex;.slick-slide{display:flex;height:auto;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
           "@media (min-width:",
           "768",
           "px){",

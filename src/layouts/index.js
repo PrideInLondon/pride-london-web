@@ -35,7 +35,6 @@ import metaImg from '../theme/assets/images/pride-logo-social.png'
 const SiteWrapper = styled.div`
   max-width: 1600px;
   margin: 0 auto;
-  overflow: hidden;
   background-color: ${theme.colors.white};
 `
 
