@@ -32,7 +32,7 @@ const FilterContainer = ({
                 filterColour={hexColour}
                 filterType={filterType}
                 isSelected={calculateIsSelected(filterType, title, selected)}
-                handleSelect={handleFilterSelect}
+                handleSelect={filterName => handleFilterSelect(filterName)}
               />
             )
           })}
