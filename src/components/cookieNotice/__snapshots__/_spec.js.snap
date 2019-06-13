@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CookieNotice /> renders and matches snapshot 1`] = `
+<Fragment>
+  <cookieNotice__CookieWrapper
+    hide={true}
+  >
+    <grid__Container
+      mx="auto"
+    >
+      <Row
+        flexWrap={null}
+        ml={null}
+        mr={null}
+        mx={null}
+      >
+        <Column
+          pb={null}
+          pl={null}
+          pr={null}
+          pt={null}
+          px={null}
+          py={null}
+          width={
+            Array [
+              1,
+              1,
+              0.6,
+            ]
+          }
+        >
+          <cookieNotice__CookieText>
+            We process information about your visit using cookies for performance and usage analysis, and to allow bespoke marketing to your individual interests. For further information see our
+             
+            <cookieNotice__CookieLink
+              to="/privacy"
+            >
+              Privacy & Cookie Policy
+            </cookieNotice__CookieLink>
+            .
+          </cookieNotice__CookieText>
+        </Column>
+        <cookieNotice__CookieActions
+          width={
+            Array [
+              1,
+              1,
+              0.4,
+            ]
+          }
+        >
+          <cookieNotice__CookieAgree
+            onClick={[Function]}
+            role="button"
+          >
+            I agree to cookies
+          </cookieNotice__CookieAgree>
+          <cookieNotice__CookieDismiss
+            aria-label="I do not agree and close"
+            onClick={[Function]}
+          >
+            <CloseIcon />
+          </cookieNotice__CookieDismiss>
+        </cookieNotice__CookieActions>
+      </Row>
+    </grid__Container>
+  </cookieNotice__CookieWrapper>
+</Fragment>
+`;

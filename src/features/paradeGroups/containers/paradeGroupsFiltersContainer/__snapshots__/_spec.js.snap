@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParadeGroupsFilterContainer should render correctly 1`] = `
+<styles__ParadeGroupsFiltersWrapper>
+  <FilterButton
+    filterName="paradeGroupsFilter"
+    filterType={
+      Object {
+        "hexColour": "#FFD95E",
+        "title": "All groups",
+      }
+    }
+    handleClick={[MockFunction]}
+    icon={null}
+    isButton={true}
+    isOutline={false}
+    key="All groups"
+  />
+  <FilterButton
+    filterName="paradeGroupsFilter"
+    filterType={
+      Object {
+        "hexColour": "#FF5B44",
+        "title": "Arts",
+      }
+    }
+    handleClick={[MockFunction]}
+    icon={null}
+    isButton={true}
+    isOutline={true}
+    key="Arts"
+  />
+</styles__ParadeGroupsFiltersWrapper>
+`;

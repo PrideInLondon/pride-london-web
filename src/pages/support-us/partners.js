@@ -152,11 +152,11 @@ const Sponsors = ({ data }) => {
               Without our dedicated and loyal partners, Pride in London simply
               would not exist. Since the current community group took over the
               running of Pride in 2012, the office of the Mayor of London and
-              Barclays have remained committed to keeping Pride on the road.
-              They have proved to be great allies of the LGBTQ+ community and we
-              are eternally grateful for their support. In 2018, Sadiq Khan,
-              Mayor of London extended Pride in London’s contract, committing to
-              support our work for a further 5 years.
+              our headline partners have remained committed to keeping Pride on
+              the road. They have proved to be great allies of the LGBTQ+
+              community and we are eternally grateful for their support. In
+              2018, Sadiq Khan, Mayor of London extended Pride in London’s
+              contract, committing to support our work for a further 5 years.
             </p>
             <p>
               For many years LGBTQ+ people have faced hiding their true selves

@@ -6,6 +6,8 @@ import { media } from '../../../../theme/media'
 
 export const Wrapper = styled(Container)`
   padding-bottom: 4rem;
+  position: relative;
+  z-index: 0;
 
   ${media.tabletMax`  
     padding-bottom: 1.5rem;

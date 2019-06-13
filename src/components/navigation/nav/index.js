@@ -136,6 +136,10 @@ const Nav = () => {
                         heading: 'Pride Festival',
                         links: [
                           {
+                            title: "This year's festival",
+                            url: '/events/festival',
+                          },
+                          {
                             title: "What's on",
                             url: '/events',
                           },
@@ -187,8 +191,7 @@ const Nav = () => {
                           },
                           {
                             title: 'Buy merchandise',
-                            url:
-                              'https://www.thegayshop.co.uk/product-category/pride/pride-in-london-shop/',
+                            url: '/support-us/merchandise',
                           },
                           {
                             title: 'Work for Pride',

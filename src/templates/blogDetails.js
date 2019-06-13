@@ -21,11 +21,12 @@ const BlogDetails = ({
       headerImage,
       article,
       datePublished,
+      updatedAt,
       category,
       author,
     },
     site: {
-      siteMetadata: { siteUrl },
+      siteMetadata: { siteUrl, name },
     },
     otherArticles,
   },
@@ -33,6 +34,12 @@ const BlogDetails = ({
 }) => {
   const metaImg = `https:${headerImage.file.url}?w=1000&h=562`
   const metaUrl = `${siteUrl}/${pathname}`
+  const logoUrl = `${siteUrl}/logo-pride-153x60.png`
+  const paragraphs = article.json.content.filter(node => {
+    return node.nodeType === 'paragraph'
+  })
+  const firstParagraph = paragraphs[0].content[0].value
+
   return (
     <PageWrapper>
       <Helmet
@@ -40,8 +47,9 @@ const BlogDetails = ({
         meta={[
           {
             name: 'description',
-            content: '',
+            content: firstParagraph,
           },
+
           // Schema meta tags
           {
             itemprop: 'name',
@@ -49,7 +57,7 @@ const BlogDetails = ({
           },
           {
             itemprop: 'description',
-            content: '',
+            content: firstParagraph,
           },
           {
             itemprop: 'url',
@@ -110,6 +118,43 @@ const BlogDetails = ({
             content: metaImg,
           },
         ]}
+        script={[
+          {
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify({
+              '@context': 'http://schema.org',
+              '@type': 'BlogPosting',
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': metaUrl,
+              },
+              headline: 'title',
+              image: {
+                '@type': 'ImageObject',
+                url: metaImg,
+              },
+              datePublished,
+              dateModified: updatedAt,
+              author: author
+                ? {
+                    '@type': 'Person',
+                    name: author.displayName,
+                  }
+                : { '@type': 'Organization', name },
+              publisher: {
+                '@type': 'Organization',
+                name,
+                logo: {
+                  '@type': 'ImageObject',
+                  url: logoUrl,
+                  height: 60,
+                  width: 153,
+                },
+              },
+              description: firstParagraph,
+            }),
+          },
+        ]}
       />
       <PageHeader title={title} headerImage={headerImage} />
       <PageContent
@@ -151,6 +196,7 @@ export const articleDetailsQuery = graphql`
         }
       }
       datePublished
+      updatedAt
       category
       author {
         displayName
