@@ -27,12 +27,13 @@ const FilterContainer = ({
           {categories.map(({ title, hexColour }) => {
             return (
               <FilterLabel
+                id={title}
                 key={title}
                 filterName={title}
                 filterColour={hexColour}
                 filterType={filterType}
                 isSelected={calculateIsSelected(filterType, title, selected)}
-                handleSelect={filterName => handleFilterSelect(filterName)}
+                handleSelect={handleFilterSelect}
               />
             )
           })}
