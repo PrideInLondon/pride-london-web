@@ -23,7 +23,8 @@ const PagedCardContainer = ({
 
 PagedCardContainer.propTypes = {
   cardContent: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.any })),
-  CardComponent: PropTypes.node.isRequired,
+  CardComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
+    .isRequired,
   moreCardsToShow: PropTypes.bool.isRequired,
   showMoreButtonText: PropTypes.string,
   onShowMoreButtonClick: PropTypes.func.isRequired,

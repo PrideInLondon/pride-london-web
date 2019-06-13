@@ -232,6 +232,7 @@ describe('FilteredPagedCardContainer', () => {
           CardComponent={CardComponent}
           pageSize={3}
           showAllCategoryTitle="foo"
+          categories={categories}
         />
       )
 
@@ -303,6 +304,7 @@ describe('FilteredPagedCardContainer', () => {
           CardComponent={CardComponent}
           pageSize={3}
           showAllCategoryTitle="foo"
+          categories={categories}
         />
       )
 

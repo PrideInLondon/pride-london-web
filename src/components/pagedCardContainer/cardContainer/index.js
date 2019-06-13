@@ -24,7 +24,8 @@ const CardContainer = ({ CardComponent, cardContent }) => (
 )
 
 CardContainer.propTypes = {
-  CardComponent: PropTypes.node.isRequired,
+  CardComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
+    .isRequired,
   cardContent: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.any }))
     .isRequired,
 }

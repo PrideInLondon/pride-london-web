@@ -3,6 +3,18 @@
 exports[`FilteredPagedCardContainer with checkbox filter type renders component 1`] = `
 <Fragment>
   <FilterContainer
+    categories={
+      Array [
+        Object {
+          "hexColour": "#foo",
+          "title": "foo",
+        },
+        Object {
+          "hexColour": "#bar",
+          "title": "bar",
+        },
+      ]
+    }
     filterType="checkbox"
     handleFilterSelect={[Function]}
     selected={
@@ -3876,6 +3888,22 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
 exports[`FilteredPagedCardContainer with radio filter type renders component 1`] = `
 <Fragment>
   <FilterContainer
+    categories={
+      Array [
+        Object {
+          "hexColour": "#foo",
+          "title": "foo",
+        },
+        Object {
+          "hexColour": "#bar",
+          "title": "bar",
+        },
+        Object {
+          "hexColour": "#baz",
+          "title": "baz",
+        },
+      ]
+    }
     filterType="radio"
     handleFilterSelect={[Function]}
     selected="foo"

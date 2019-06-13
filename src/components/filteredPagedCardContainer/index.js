@@ -126,7 +126,8 @@ FilteredCardContainer.propTypes = {
   pageSize: PropTypes.number,
   cardContent: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.any }))
     .isRequired,
-  CardComponent: PropTypes.node.isRequired,
+  CardComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
+    .isRequired,
   showMoreButtonText: PropTypes.string,
 }
 
