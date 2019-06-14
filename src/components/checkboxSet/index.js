@@ -48,7 +48,7 @@ class CheckboxSet extends Component {
 
   render() {
     const { filterName, sort } = this.props
-    const options = constants[filterName]
+    const options = constants[filterName] || []
 
     if (sort) {
       options.sort()
