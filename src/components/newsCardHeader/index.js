@@ -19,7 +19,7 @@ export const NewsCardHeader = ({
 NewsCardHeader.propTypes = {
   category: PropTypes.object.isRequired,
   datePublished: PropTypes.string.isRequired,
-  readTime: PropTypes.number,
+  readTime: PropTypes.string,
   className: PropTypes.string,
 }
 

@@ -23,7 +23,7 @@ const renderButton = node => {
     typeof fields === 'undefined' ||
     typeof fields.buttonContent === 'undefined'
   ) {
-    return
+    return null
   }
 
   const primary = fields.buttonPrimary['en-GB']
