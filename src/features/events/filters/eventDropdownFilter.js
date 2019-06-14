@@ -150,7 +150,10 @@ class EventDropdownFilter extends Component {
               aria-hidden={!this.state.isOpen}
               aria-labelledby={`button_${this.props.filterName}`}
             >
-              <CheckboxSet filterName={this.props.filterName} />
+              <CheckboxSet
+                filterName={this.props.filterName}
+                sort={this.props.sort}
+              />
             </DropDown>
           </Wrapper>
         )}
@@ -164,10 +167,12 @@ EventDropdownFilter.propTypes = {
   filterName: PropTypes.string.isRequired,
   closeSiblingFilters: PropTypes.func.isRequired,
   filterOpen: PropTypes.string,
+  sort: PropTypes.oneOf(['ASC', 'DESC']),
 }
 
 EventDropdownFilter.defaultProps = {
   filterOpen: null,
+  sort: null,
 }
 
 export default onClickOutside(EventDropdownFilter)

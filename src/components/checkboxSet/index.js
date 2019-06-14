@@ -47,27 +47,32 @@ class CheckboxSet extends Component {
   }
 
   render() {
+    const { filterName, sort } = this.props
+    const options = constants[filterName] || []
+
+    if (sort) {
+      options.sort()
+      if (sort === 'DESC') {
+        options.reverse()
+      }
+    }
+
     return (
       <Consumer>
         {context => (
           <List>
-            {constants[this.props.filterName].map(option => (
+            {options.map(option => (
               <ListItem key={this.makeId(option)}>
                 <Checkbox
                   checked={
-                    context.state.filters[this.props.filterName].indexOf(
-                      option
-                    ) >= 0
+                    context.state.filters[filterName].indexOf(option) >= 0
                   }
                   label={option}
                   value={option}
                   id={this.makeId(option)}
                   name={this.makeId(option)}
                   handleChange={e =>
-                    context.actions.getCheckboxSetValues(
-                      e,
-                      this.props.filterName
-                    )
+                    context.actions.getCheckboxSetValues(e, filterName)
                   }
                 />
               </ListItem>
@@ -81,6 +86,11 @@ class CheckboxSet extends Component {
 
 CheckboxSet.propTypes = {
   filterName: PropTypes.string.isRequired,
+  sort: PropTypes.oneOf(['ASC', 'DESC']),
+}
+
+CheckboxSet.defaultProps = {
+  sort: null,
 }
 
 export default CheckboxSet
