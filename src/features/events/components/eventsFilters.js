@@ -249,6 +249,7 @@ class EventsFilters extends Component {
                 filterName="eventCategories"
                 filterOpen={context.state.filterOpen}
                 closeSiblingFilters={context.actions.closeSiblingFilters}
+                sort="ASC"
               />
             </FlexColumn>
             <FlexColumn width={[1, 1, 0.5, 0.3333]}>
@@ -292,6 +293,7 @@ class EventsFilters extends Component {
                 filterName="accessibilityOptions"
                 filterOpen={context.state.filterOpen}
                 closeSiblingFilters={context.actions.closeSiblingFilters}
+                sort="ASC"
               />
             </FlexColumn>
             <FlexColumn width={[1, 1, 0.5, 0.3333]}>
