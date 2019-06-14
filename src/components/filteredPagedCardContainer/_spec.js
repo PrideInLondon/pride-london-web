@@ -93,6 +93,21 @@ describe('calculateSelected', () => {
 
       expect(selected).toEqual(['bar'])
     })
+
+    it('should reselect any "all" category filters when all non-"all" are deselected', () => {
+      const filterNameSelected = 'foo'
+      const currentlySelected = ['foo']
+      const showAllCategoryTitle = 'bar'
+
+      const selected = calculateSelected(
+        'checkbox',
+        filterNameSelected,
+        currentlySelected,
+        showAllCategoryTitle
+      )
+
+      expect(selected).toEqual(['bar'])
+    })
   })
 
   describe('with radio filter type', () => {

@@ -19,8 +19,11 @@ export const calculateSelected = (
   currentlySelected,
   showAllCategoryTitle
 ) => {
-  if (filterNameSelected === showAllCategoryTitle)
-    return calculateInitialSelected(filterType, showAllCategoryTitle)
+  const initialSelected = calculateInitialSelected(
+    filterType,
+    showAllCategoryTitle
+  )
+  if (filterNameSelected === showAllCategoryTitle) return initialSelected
 
   switch (filterType) {
     case 'checkbox': {
@@ -32,9 +35,10 @@ export const calculateSelected = (
       const filteredSelected = currentlySelected.filter(
         selected => selected !== showAllCategoryTitle
       )
-      return isCurrentlySelected
+      const newlySelected = isCurrentlySelected
         ? filteredSelected.filter(current => current !== filterNameSelected)
         : [...filteredSelected, filterNameSelected]
+      return newlySelected.length === 0 ? initialSelected : newlySelected
     }
     case 'radio':
       return filterNameSelected
