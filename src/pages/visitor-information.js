@@ -5,7 +5,9 @@ import PropTypes from 'prop-types'
 import { Container, Row, Column, GreyWrapper } from '../components/grid'
 import BannerImage from '../components/banner/bannerImage'
 import theme from '../theme/theme'
+import { communityPartnerCategories } from '../constants'
 import PageIntro from '../components/pageIntro'
+import FilteredPagedCardContainer from '../components/filteredPagedCardContainer'
 import CommunityPartnerCard from '../features/visitorInformation/components/communityPartnerCard'
 
 const SectionTitle = styled.h2`
@@ -50,18 +52,17 @@ const VisitorInformationPage = ({
             </Column>
           </Row>
         </Container>
-        <Container>
-          <Row pb={[30, 30, 60]}>
-            {partners.length &&
-              partners.map(({ node: partner }) => {
-                return (
-                  <Column width={[1, 1, 0.5, 0.3333]} key={partner.id}>
-                    <CommunityPartnerCard partner={partner} />
-                  </Column>
-                )
-              })}
-          </Row>
-        </Container>
+        <FilteredPagedCardContainer
+          filterType="checkbox"
+          categories={communityPartnerCategories}
+          showAllCategoryTitle="Everything"
+          cardContent={partners.map(({ node: partner }) => ({
+            category: partner.category,
+            partner,
+          }))}
+          CardComponent={CommunityPartnerCard}
+          showMoreButtonText="Show more partners"
+        />
       </GreyWrapper>
     </div>
   )
