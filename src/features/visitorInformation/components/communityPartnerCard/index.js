@@ -191,46 +191,27 @@ const CommunityPartnerCard = ({ partner }) => {
           </CardItem>
         )}
         <Social>
-          {facebookUrl && (
-            <SocialLink
-              href={facebookUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Follow ${venueName} Facebook`}
-            >
-              <Facebook width={24} height={24} fill={theme.colors.indigo} />
-            </SocialLink>
-          )}
-
-          {instagramUrl && (
-            <SocialLink
-              href={instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Follow ${venueName} Instagram`}
-            >
-              <Instagram width={24} height={24} fill={theme.colors.indigo} />
-            </SocialLink>
-          )}
-          {twitterUrl && (
-            <SocialLink
-              href={twitterUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Follow ${venueName} Twitter`}
-            >
-              <Twitter width={24} height={24} fill={theme.colors.indigo} />
-            </SocialLink>
-          )}
-          {websiteUrl && (
-            <SocialLink
-              href={websiteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Visit ${venueName} Website`}
-            >
-              <Globe width={24} height={24} fill={theme.colors.indigo} />
-            </SocialLink>
+          {[
+            { url: facebookUrl, name: 'Facebook', Component: Facebook },
+            { url: instagramUrl, name: 'Instagram', Component: Instagram },
+            { url: twitterUrl, name: 'Twitter', Component: Twitter },
+            { url: websiteUrl, name: 'Website', Component: Globe },
+          ].map(
+            ({ url, name, Component }) =>
+              url && (
+                <SocialLink
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Follow ${venueName} ${name}`}
+                >
+                  <Component
+                    width={24}
+                    height={24}
+                    fill={theme.colors.indigo}
+                  />
+                </SocialLink>
+              )
           )}
         </Social>
       </CardBody>
