@@ -30,7 +30,7 @@ exports[`Featured Event Content renders with default values 1`] = `
     }
   ",
           ";}",
-          ";.slick-prev{position:absolute;top:50%;left:-70px;transform:translate(0,-50%);}.slick-next{position:absolute;top:50%;right:-70px;transform:translate(0,-50%);}",
+          ";.slick-slider{position:static;}.slick-prev{position:absolute;top:50%;left:25px;transform:translate(0,-50%);}.slick-next{position:absolute;top:50%;right:25px;transform:translate(0,-50%);}",
         ],
       },
       "displayName": "styles__FeaturedEventContent",
