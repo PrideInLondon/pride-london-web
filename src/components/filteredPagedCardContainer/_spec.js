@@ -7,195 +7,76 @@ import FilteredPagedCardContainer, {
 } from './'
 
 describe('calculateInitialSelected', () => {
-  it('with checkbox filter type returns array containing only the "all" category', () => {
-    const initialSelected = calculateInitialSelected('checkbox', 'foo')
+  it.each`
+    filterType    | showAllCategoryTitle | expected
+    ${'checkbox'} | ${'foo'}             | ${['foo']}
+    ${'checkbox'} | ${''}                | ${[]}
+    ${'radio'}    | ${'foo'}             | ${'foo'}
+    ${'radio'}    | ${''}                | ${''}
+  `(
+    'with $filterType filter type returns $expected when show all category is $showAllCategoryTitle',
+    ({ filterType, showAllCategoryTitle, expected }) => {
+      const initialSelected = calculateInitialSelected(
+        filterType,
+        showAllCategoryTitle
+      )
 
-    expect(initialSelected).toEqual(['foo'])
-  })
-
-  it('with checkbox filter type returns empty array when no "all" category', () => {
-    const initialSelected = calculateInitialSelected('checkbox', '')
-
-    expect(initialSelected).toEqual([])
-  })
-
-  it('with radio filter type returns the "all" category', () => {
-    const initialSelected = calculateInitialSelected('radio', 'foo')
-
-    expect(initialSelected).toEqual('foo')
-  })
-
-  it('with radio filter type returns empty string when no "all" category', () => {
-    const initialSelected = calculateInitialSelected('radio', '')
-
-    expect(initialSelected).toEqual('')
-  })
+      expect(initialSelected).toEqual(expected)
+    }
+  )
 })
 
 describe('calculateSelected', () => {
-  describe('with checkbox filter type', () => {
-    it('should add filter to selected if not already a member', () => {
-      const filterNameSelected = 'baz'
-      const currentlySelected = ['foo', 'bar']
-      const showAllCategoryTitle = ''
-
+  it.each`
+    filterType    | filterNameSelected | currentlySelected        | showAllCategoryTitle | expected
+    ${'checkbox'} | ${'baz'}           | ${['foo', 'bar']}        | ${''}                | ${['foo', 'bar', 'baz']}
+    ${'checkbox'} | ${'bar'}           | ${['foo', 'bar', 'baz']} | ${''}                | ${['foo', 'baz']}
+    ${'checkbox'} | ${'foo'}           | ${['foo', 'bar', 'baz']} | ${'foo'}             | ${['foo']}
+    ${'checkbox'} | ${'foo'}           | ${['foo']}               | ${'bar'}             | ${['bar']}
+    ${'radio'}    | ${'bar'}           | ${'foo'}                 | ${''}                | ${'bar'}
+  `(
+    'with $filterType should return $expected when selected filter is $filterNameSelected, currently selected is $currentlySelected, and show all category is $showAllCategoryTitle',
+    ({
+      filterType,
+      filterNameSelected,
+      currentlySelected,
+      showAllCategoryTitle,
+      expected,
+    }) => {
       const selected = calculateSelected(
-        'checkbox',
+        filterType,
         filterNameSelected,
         currentlySelected,
         showAllCategoryTitle
       )
 
-      expect(selected).toEqual(['foo', 'bar', 'baz'])
-    })
-
-    it('should remove filter from selected if already a member', () => {
-      const filterNameSelected = 'bar'
-      const currentlySelected = ['foo', 'bar', 'baz']
-      const showAllCategoryTitle = ''
-
-      const selected = calculateSelected(
-        'checkbox',
-        filterNameSelected,
-        currentlySelected,
-        showAllCategoryTitle
-      )
-
-      expect(selected).toEqual(['foo', 'baz'])
-    })
-
-    it('should deselect any non-"all" category filters when "all" is selected', () => {
-      const filterNameSelected = 'foo'
-      const currentlySelected = ['foo', 'bar', 'baz']
-      const showAllCategoryTitle = 'foo'
-
-      const selected = calculateSelected(
-        'checkbox',
-        filterNameSelected,
-        currentlySelected,
-        showAllCategoryTitle
-      )
-
-      expect(selected).toEqual(['foo'])
-    })
-
-    it('should deselect any "all" category filters when non-"all" is selected', () => {
-      const filterNameSelected = 'bar'
-      const currentlySelected = ['foo']
-      const showAllCategoryTitle = 'foo'
-
-      const selected = calculateSelected(
-        'checkbox',
-        filterNameSelected,
-        currentlySelected,
-        showAllCategoryTitle
-      )
-
-      expect(selected).toEqual(['bar'])
-    })
-
-    it('should reselect any "all" category filters when all non-"all" are deselected', () => {
-      const filterNameSelected = 'foo'
-      const currentlySelected = ['foo']
-      const showAllCategoryTitle = 'bar'
-
-      const selected = calculateSelected(
-        'checkbox',
-        filterNameSelected,
-        currentlySelected,
-        showAllCategoryTitle
-      )
-
-      expect(selected).toEqual(['bar'])
-    })
-  })
-
-  describe('with radio filter type', () => {
-    it('should name filter as selected if not already selected', () => {
-      const filterNameSelected = 'bar'
-      const currentlySelected = 'foo'
-
-      const selected = calculateSelected(
-        'radio',
-        filterNameSelected,
-        currentlySelected
-      )
-
-      expect(selected).toEqual('bar')
-    })
-  })
+      expect(selected).toEqual(expected)
+    }
+  )
 })
 
 describe('calculateShouldShowCard', () => {
-  describe('with checkbox filter type', () => {
-    it('returns true if category is selected for current card', () => {
+  it.each`
+    filterType    | selected          | category          | showAllCategoryTitle | expected
+    ${'checkbox'} | ${['foo', 'bar']} | ${['etc', 'foo']} | ${''}                | ${true}
+    ${'checkbox'} | ${['foo', 'bar']} | ${['baz', 'etc']} | ${''}                | ${false}
+    ${'checkbox'} | ${['foo']}        | ${['baz']}        | ${'foo'}             | ${true}
+    ${'radio'}    | ${'foo'}          | ${['foo', 'etc']} | ${''}                | ${true}
+    ${'radio'}    | ${'foo'}          | ${['bar', 'etc']} | ${''}                | ${false}
+    ${'radio'}    | ${'foo'}          | ${['baz']}        | ${'foo'}             | ${true}
+  `(
+    'with $filterType should return $expected if category is $category and already selected is $selected',
+    ({ filterType, selected, category, showAllCategoryTitle, expected }) => {
       const shouldShowCard = calculateShouldShowCard(
-        'checkbox',
-        ['foo', 'bar'],
-        ['etc', 'foo'],
-        ''
+        filterType,
+        selected,
+        category,
+        showAllCategoryTitle
       )
 
-      expect(shouldShowCard).toBeTruthy()
-    })
-
-    it('returns false if category is not selected for current card', () => {
-      const shouldShowCard = calculateShouldShowCard(
-        'checkbox',
-        ['foo', 'bar'],
-        ['baz', 'etc'],
-        ''
-      )
-
-      expect(shouldShowCard).toBeFalsy()
-    })
-
-    it('returns true if category selected is "all"', () => {
-      const shouldShowCard = calculateShouldShowCard(
-        'checkbox',
-        ['foo'],
-        ['baz'],
-        'foo'
-      )
-
-      expect(shouldShowCard).toBeTruthy()
-    })
-  })
-
-  describe('with radio filter type', () => {
-    it('returns true if category is selected for current card', () => {
-      const shouldShowCard = calculateShouldShowCard(
-        'radio',
-        'foo',
-        ['foo', 'etc'],
-        ''
-      )
-
-      expect(shouldShowCard).toBeTruthy()
-    })
-
-    it('returns false if category is not selected for current card', () => {
-      const shouldShowCard = calculateShouldShowCard(
-        'radio',
-        'foo',
-        ['bar', 'etc'],
-        ''
-      )
-
-      expect(shouldShowCard).toBeFalsy()
-    })
-
-    it('returns true if category selected is "all"', () => {
-      const shouldShowCard = calculateShouldShowCard(
-        'checkbox',
-        'foo',
-        ['baz'],
-        'foo'
-      )
-
-      expect(shouldShowCard).toBeTruthy()
-    })
-  })
+      expect(shouldShowCard).toBe(expected)
+    }
+  )
 })
 
 describe('FilteredPagedCardContainer', () => {
@@ -245,7 +126,7 @@ describe('FilteredPagedCardContainer', () => {
     { title: 'baz', hexColour: '#baz' },
   ]
 
-  it.only('snaps back to one page displayed on filter change', () => {
+  it('snaps back to one page displayed on filter change', () => {
     const wrapper = mount(
       <FilteredPagedCardContainer
         filterType="radio"

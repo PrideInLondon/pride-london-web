@@ -1825,18 +1825,21 @@ exports[`FilteredPagedCardContainer with checkbox filter type renders component 
           "category": Array [
             "foo",
           ],
+          "id": "id-foo",
           "text": "text-foo",
         },
         Object {
           "category": Array [
             "bar",
           ],
+          "id": "id-bar",
           "text": "text-bar",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo2",
           "text": "text-foo2",
         },
       ]
@@ -1858,36 +1861,42 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
         "category": Array [
           "foo",
         ],
+        "id": "id-foo",
         "text": "text-foo",
       },
       Object {
         "category": Array [
           "bar",
         ],
+        "id": "id-bar",
         "text": "text-bar",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo2",
         "text": "text-foo2",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo3",
         "text": "text-foo3",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo4",
         "text": "text-foo4",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo5",
         "text": "text-foo5",
       },
     ]
@@ -2388,6 +2397,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="foo"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -2396,6 +2406,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                           value="foo"
                                         >
                                           <StyledComponent
+                                            aria-label="foo"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -2439,6 +2450,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                             value="foo"
                                           >
                                             <input
+                                              aria-label="foo"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="foo"
                                               name="filterLabel"
@@ -2542,6 +2554,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="bar"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -2550,6 +2563,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                           value="bar"
                                         >
                                           <StyledComponent
+                                            aria-label="bar"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -2593,6 +2607,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                             value="bar"
                                           >
                                             <input
+                                              aria-label="bar"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="bar"
                                               name="filterLabel"
@@ -2696,6 +2711,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="baz"
                                           id="baz"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -2704,6 +2720,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                           value="baz"
                                         >
                                           <StyledComponent
+                                            aria-label="baz"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -2747,6 +2764,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                             value="baz"
                                           >
                                             <input
+                                              aria-label="baz"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="baz"
                                               name="filterLabel"
@@ -2784,30 +2802,35 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
           "category": Array [
             "foo",
           ],
+          "id": "id-foo",
           "text": "text-foo",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo2",
           "text": "text-foo2",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo3",
           "text": "text-foo3",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo4",
           "text": "text-foo4",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo5",
           "text": "text-foo5",
         },
       ]
@@ -2825,30 +2848,35 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
             "category": Array [
               "foo",
             ],
+            "id": "id-foo",
             "text": "text-foo",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo2",
             "text": "text-foo2",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo3",
             "text": "text-foo3",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo4",
             "text": "text-foo4",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo5",
             "text": "text-foo5",
           },
         ]
@@ -3053,6 +3081,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                     className="sc-bdVaJa sc-bwzfXH guKgGl"
                   >
                     <grid__FlexColumn
+                      key="id-foo"
                       py={
                         Array [
                           2,
@@ -3307,6 +3336,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo2"
                       py={
                         Array [
                           2,
@@ -3561,6 +3591,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo3"
                       py={
                         Array [
                           2,
@@ -3815,6 +3846,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo4"
                       py={
                         Array [
                           2,
@@ -4069,6 +4101,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo5"
                       py={
                         Array [
                           2,
@@ -4343,18 +4376,21 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
         "category": Array [
           "foo",
         ],
+        "id": "id-foo",
         "text": "text-foo",
       },
       Object {
         "category": Array [
           "bar",
         ],
+        "id": "id-bar",
         "text": "text-bar",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo2",
         "text": "text-foo2",
       },
     ]
@@ -4855,6 +4891,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="foo"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -4863,6 +4900,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                           value="foo"
                                         >
                                           <StyledComponent
+                                            aria-label="foo"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -4906,6 +4944,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                             value="foo"
                                           >
                                             <input
+                                              aria-label="foo"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="foo"
                                               name="filterLabel"
@@ -5009,6 +5048,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="bar"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -5017,6 +5057,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                           value="bar"
                                         >
                                           <StyledComponent
+                                            aria-label="bar"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -5060,6 +5101,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                             value="bar"
                                           >
                                             <input
+                                              aria-label="bar"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="bar"
                                               name="filterLabel"
@@ -5163,6 +5205,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="baz"
                                           id="baz"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -5171,6 +5214,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                           value="baz"
                                         >
                                           <StyledComponent
+                                            aria-label="baz"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -5214,6 +5258,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                             value="baz"
                                           >
                                             <input
+                                              aria-label="baz"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="baz"
                                               name="filterLabel"
@@ -5251,12 +5296,14 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
           "category": Array [
             "foo",
           ],
+          "id": "id-foo",
           "text": "text-foo",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo2",
           "text": "text-foo2",
         },
       ]
@@ -5274,12 +5321,14 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
             "category": Array [
               "foo",
             ],
+            "id": "id-foo",
             "text": "text-foo",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo2",
             "text": "text-foo2",
           },
         ]
@@ -5484,6 +5533,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                     className="sc-bdVaJa sc-bwzfXH guKgGl"
                   >
                     <grid__FlexColumn
+                      key="id-foo"
                       py={
                         Array [
                           2,
@@ -5738,6 +5788,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo2"
                       py={
                         Array [
                           2,
@@ -6034,18 +6085,21 @@ exports[`FilteredPagedCardContainer with radio filter type renders component 1`]
           "category": Array [
             "foo",
           ],
+          "id": "id-foo",
           "text": "text-foo",
         },
         Object {
           "category": Array [
             "bar",
           ],
+          "id": "id-bar",
           "text": "text-bar",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo2",
           "text": "text-foo2",
         },
       ]
@@ -6067,36 +6121,42 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
         "category": Array [
           "foo",
         ],
+        "id": "id-foo",
         "text": "text-foo",
       },
       Object {
         "category": Array [
           "bar",
         ],
+        "id": "id-bar",
         "text": "text-bar",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo2",
         "text": "text-foo2",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo3",
         "text": "text-foo3",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo4",
         "text": "text-foo4",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo5",
         "text": "text-foo5",
       },
     ]
@@ -6593,6 +6653,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="foo"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -6601,6 +6662,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                           value="foo"
                                         >
                                           <StyledComponent
+                                            aria-label="foo"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -6644,6 +6706,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                             value="foo"
                                           >
                                             <input
+                                              aria-label="foo"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="foo"
                                               name="filterLabel"
@@ -6747,6 +6810,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="bar"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -6755,6 +6819,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                           value="bar"
                                         >
                                           <StyledComponent
+                                            aria-label="bar"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -6798,6 +6863,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                             value="bar"
                                           >
                                             <input
+                                              aria-label="bar"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="bar"
                                               name="filterLabel"
@@ -6901,6 +6967,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="baz"
                                           id="baz"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -6909,6 +6976,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                           value="baz"
                                         >
                                           <StyledComponent
+                                            aria-label="baz"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -6952,6 +7020,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                             value="baz"
                                           >
                                             <input
+                                              aria-label="baz"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="baz"
                                               name="filterLabel"
@@ -6989,30 +7058,35 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
           "category": Array [
             "foo",
           ],
+          "id": "id-foo",
           "text": "text-foo",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo2",
           "text": "text-foo2",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo3",
           "text": "text-foo3",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo4",
           "text": "text-foo4",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo5",
           "text": "text-foo5",
         },
       ]
@@ -7030,30 +7104,35 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
             "category": Array [
               "foo",
             ],
+            "id": "id-foo",
             "text": "text-foo",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo2",
             "text": "text-foo2",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo3",
             "text": "text-foo3",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo4",
             "text": "text-foo4",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo5",
             "text": "text-foo5",
           },
         ]
@@ -7258,6 +7337,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                     className="sc-bdVaJa sc-bwzfXH guKgGl"
                   >
                     <grid__FlexColumn
+                      key="id-foo"
                       py={
                         Array [
                           2,
@@ -7512,6 +7592,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo2"
                       py={
                         Array [
                           2,
@@ -7766,6 +7847,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo3"
                       py={
                         Array [
                           2,
@@ -8020,6 +8102,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo4"
                       py={
                         Array [
                           2,
@@ -8274,6 +8357,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo5"
                       py={
                         Array [
                           2,
@@ -8548,18 +8632,21 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
         "category": Array [
           "foo",
         ],
+        "id": "id-foo",
         "text": "text-foo",
       },
       Object {
         "category": Array [
           "bar",
         ],
+        "id": "id-bar",
         "text": "text-bar",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo2",
         "text": "text-foo2",
       },
     ]
@@ -9056,6 +9143,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="foo"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -9064,6 +9152,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                           value="foo"
                                         >
                                           <StyledComponent
+                                            aria-label="foo"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -9107,6 +9196,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                             value="foo"
                                           >
                                             <input
+                                              aria-label="foo"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="foo"
                                               name="filterLabel"
@@ -9210,6 +9300,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="bar"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -9218,6 +9309,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                           value="bar"
                                         >
                                           <StyledComponent
+                                            aria-label="bar"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -9261,6 +9353,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                             value="bar"
                                           >
                                             <input
+                                              aria-label="bar"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="bar"
                                               name="filterLabel"
@@ -9364,6 +9457,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="baz"
                                           id="baz"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -9372,6 +9466,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                           value="baz"
                                         >
                                           <StyledComponent
+                                            aria-label="baz"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -9415,6 +9510,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                                             value="baz"
                                           >
                                             <input
+                                              aria-label="baz"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="baz"
                                               name="filterLabel"
@@ -9452,12 +9548,14 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
           "category": Array [
             "foo",
           ],
+          "id": "id-foo",
           "text": "text-foo",
         },
         Object {
           "category": Array [
             "foo",
           ],
+          "id": "id-foo2",
           "text": "text-foo2",
         },
       ]
@@ -9475,12 +9573,14 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
             "category": Array [
               "foo",
             ],
+            "id": "id-foo",
             "text": "text-foo",
           },
           Object {
             "category": Array [
               "foo",
             ],
+            "id": "id-foo2",
             "text": "text-foo2",
           },
         ]
@@ -9685,6 +9785,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                     className="sc-bdVaJa sc-bwzfXH guKgGl"
                   >
                     <grid__FlexColumn
+                      key="id-foo"
                       py={
                         Array [
                           2,
@@ -9939,6 +10040,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows only cards with
                       </StyledComponent>
                     </grid__FlexColumn>
                     <grid__FlexColumn
+                      key="id-foo2"
                       py={
                         Array [
                           2,
