@@ -138,12 +138,14 @@ const CommunityPartnerCard = ({ partner }) => {
       <CardImg fixed={featuredImage.fixed} />
       <CardBody>
         <CardCategories>
-          {categories.map(category => {
-            const cat = communityPartnerCategories.find(obj => {
-              return obj.title === category
-            })
-            return <CardCategory category={cat} key={category} />
-          })}
+          {categories.map(category => (
+            <CardCategory
+              category={communityPartnerCategories.find(
+                obj => obj.title === category
+              )}
+              key={category}
+            />
+          ))}
         </CardCategories>
         <CardTitle>{venueName}</CardTitle>
         <ReactMarkdown source={description} />
