@@ -118,7 +118,7 @@ const SocialLink = styled.a`
 const CommunityPartnerCard = ({ partner }) => {
   const {
     featuredImage,
-    category,
+    category: categories,
     venueName,
     description: { description },
     addressLine1,
@@ -138,7 +138,7 @@ const CommunityPartnerCard = ({ partner }) => {
       <CardImg fixed={featuredImage.fixed} />
       <CardBody>
         <CardCategories>
-          {category.map(category => {
+          {categories.map(category => {
             const cat = communityPartnerCategories.find(obj => {
               return obj.title === category
             })
