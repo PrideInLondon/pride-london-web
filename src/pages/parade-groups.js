@@ -36,13 +36,22 @@ const ParadeGroups = ({ data: { paradeGroups } }) => {
     <>
       <BannerImage
         titleText="Parade groups"
-        subtitleText="Lorem ipsum dolor sit amet"
+        subtitleText="Find out more about each group marching in this year’s parade below!"
         altText="Parade groups"
         imageSrc={background}
         imageFullWidth
       />
       <Container>
-        <TextContainer>Blurb text</TextContainer>
+        <TextContainer>
+          Pride in London are proud to welcome more than 30,000 people to the
+          streets of London for this year’s parade. With more than twice the
+          number of people who took part in 2015, it’s set to be our most
+          diverse parade yet with more groups representing trans*, BAME and
+          bisexual communities than last year. We’re also excited to welcome so
+          many different kinds of organisations from so many industries. More
+          than half of parade-goers will represent charities or not-for-profit
+          organisations.
+        </TextContainer>
         <ParadeGroupsContainer
           paradeGroups={mappedParadeGroups}
           categories={paradeGroupCategories}
