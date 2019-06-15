@@ -10,7 +10,7 @@ exports[`Featured Event Content renders with default values 1`] = `
         "componentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
         "isStatic": true,
         "rules": Array [
-          ".slick-list{overflow:visible;}.slick-track{display:flex;.slick-slide{display:flex;height:auto;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
+          "overflow:hidden;.slick-list{overflow:visible;}.slick-track{display:flex;.slick-slide{display:flex;height:auto;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
           "@media (min-width:",
           "768",
           "px){",
@@ -30,7 +30,7 @@ exports[`Featured Event Content renders with default values 1`] = `
     }
   ",
           ";}",
-          ";.slick-prev{position:absolute;top:50%;left:-70px;transform:translate(0,-50%);}.slick-next{position:absolute;top:50%;right:-70px;transform:translate(0,-50%);}",
+          ";.slick-slider{position:static;}.slick-prev{position:absolute;top:50%;left:25px;transform:translate(0,-50%);}.slick-next{position:absolute;top:50%;right:25px;transform:translate(0,-50%);}",
         ],
       },
       "displayName": "styles__FeaturedEventContent",
@@ -64,7 +64,7 @@ exports[`FeaturedEvents renders with default values 1`] = `
         Object {
           "breakpoint": 767,
           "settings": Object {
-            "arrows": true,
+            "arrows": false,
             "centerMode": true,
             "slidesToScroll": 1,
             "slidesToShow": 2,

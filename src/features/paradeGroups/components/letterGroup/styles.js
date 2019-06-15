@@ -5,7 +5,6 @@ import { media } from '../../../../theme/media'
 export const Heading = styled.div`
   background-color: ${theme.colors.lightGrey};
   padding: 6px 20px;
-  margin-bottom: 15px;
   display: flex;
   align-items: center;
 
@@ -19,7 +18,7 @@ export const Heading = styled.div`
 `
 
 export const GroupsContainer = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 
   ${media.tablet`
     padding: 0px 20px;

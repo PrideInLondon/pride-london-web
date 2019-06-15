@@ -2,7 +2,9 @@
 
 exports[`<CookieNotice /> renders and matches snapshot 1`] = `
 <Fragment>
-  <cookieNotice__CookieWrapper>
+  <cookieNotice__CookieWrapper
+    hide={true}
+  >
     <grid__Container
       mx="auto"
     >
@@ -28,14 +30,13 @@ exports[`<CookieNotice /> renders and matches snapshot 1`] = `
           }
         >
           <cookieNotice__CookieText>
-            We process information about your visit using cookies for performance and usage analysis, and to allow bespoke marketing to your individual interests. For further information see our
+            We use cookies to make sure that you have the best experience on our website and to learn how we can make it better for you.
              
             <cookieNotice__CookieLink
               to="/privacy"
             >
-              Privacy & Cookie Policy
+              Learn more
             </cookieNotice__CookieLink>
-            .
           </cookieNotice__CookieText>
         </Column>
         <cookieNotice__CookieActions
@@ -51,7 +52,7 @@ exports[`<CookieNotice /> renders and matches snapshot 1`] = `
             onClick={[Function]}
             role="button"
           >
-            I agree to cookies
+            Got it
           </cookieNotice__CookieAgree>
           <cookieNotice__CookieDismiss
             aria-label="I do not agree and close"

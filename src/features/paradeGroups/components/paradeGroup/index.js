@@ -18,15 +18,14 @@ const ParadeGroup = ({
     <RowContainer>
       <TitleContainer>{name}</TitleContainer>
       <IconContainer>
+        {websiteUrl && (
+          <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
+            <Globe width={24} height={24} fill={theme.colors.indigo} />
+          </a>
+        )}
         {facebookUrl && (
           <a href={facebookUrl} target="_blank" rel="noopener noreferrer">
             <Facebook width={24} height={24} fill={theme.colors.indigo} />
-          </a>
-        )}
-
-        {instagramUrl && (
-          <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
-            <Instagram width={24} height={24} fill={theme.colors.indigo} />
           </a>
         )}
         {twitterUrl && (
@@ -34,9 +33,9 @@ const ParadeGroup = ({
             <Twitter width={24} height={24} fill={theme.colors.indigo} />
           </a>
         )}
-        {websiteUrl && (
-          <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
-            <Globe width={24} height={24} fill={theme.colors.indigo} />
+        {instagramUrl && (
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+            <Instagram width={24} height={24} fill={theme.colors.indigo} />
           </a>
         )}
       </IconContainer>

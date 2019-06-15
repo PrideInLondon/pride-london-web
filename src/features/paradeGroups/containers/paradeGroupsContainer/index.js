@@ -1,25 +1,81 @@
-import React, { Fragment } from 'react'
+import React, {
+  Fragment,
+  useState,
+  useCallback,
+  useEffect,
+  useRef,
+} from 'react'
 import PropTypes from 'prop-types'
 import LetterLink from '../../components/letterLink'
 import LetterGroup from '../../components/letterGroup'
 import ParadeGroup from '../../components/paradeGroup'
-import { LetterContainer } from './styles'
+import ParadeGroupsFilterContainer from '../paradeGroupsFiltersContainer'
+import { paradeGroupFilterPropType } from '../../paradeGroupFilterPropType'
+import { paradeGroupCategories } from '../../../../constants'
+import { LetterContainer, ScrolledLetters } from './styles'
 
 const lettersArray = '#abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
+const lettersContainerHeight = 50
 
 const filterGroupByFirstLetter = (groupName, letter) => {
-  return (
-    groupName.startsWith(letter) || groupName.startsWith(letter.toUpperCase())
-  )
+  return groupName.toUpperCase().startsWith(letter.toUpperCase())
 }
 
-const ParadeGroupsContainer = ({ paradeGroups }) => {
+const isInViewport = (e, { top: t, height: h } = e.getBoundingClientRect()) =>
+  t <= innerHeight && t - lettersContainerHeight + h >= 0
+
+const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
+  const [selectedFilter, setSelectedFilter] = useState(paradeGroupCategories[0])
+  const [groups, setGroups] = useState(paradeGroups)
+  const [activeLetter, setActiveLetter] = useState(null)
+  const paradeGroupLettersSection = useRef(null)
+
+  const handleScroll = useCallback(() => {
+    let _activeLetter = null
+    for (const paradeGroupLetterSection of paradeGroupLettersSection.current
+      .children) {
+      if (isInViewport(paradeGroupLetterSection)) {
+        if (paradeGroupLetterSection.id) {
+          _activeLetter = paradeGroupLetterSection.id.substr(-1)
+          break
+        }
+      }
+    }
+    if (_activeLetter !== activeLetter) {
+      setActiveLetter(_activeLetter)
+    }
+  }, [activeLetter])
+
+  const handleFilterClick = useCallback(
+    group => {
+      setSelectedFilter(group)
+      setGroups(
+        group === paradeGroupCategories[0]
+          ? paradeGroups
+          : paradeGroups.filter(
+              paradeGroup =>
+                paradeGroup.category &&
+                paradeGroup.category.includes(group.title)
+            )
+      )
+      handleScroll()
+    },
+    [paradeGroups, handleScroll]
+  )
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [handleScroll])
+
   const availableLetters = lettersArray.reduce((acc, letter) => {
     if (
       // Checks the parade groups to see
       // if any of them start with the letter.
       // If they do, add it to available letters.
-      paradeGroups.some(group => filterGroupByFirstLetter(group.name, letter))
+      groups.some(group => filterGroupByFirstLetter(group.name, letter))
     ) {
       return [...acc, letter]
     }
@@ -28,29 +84,40 @@ const ParadeGroupsContainer = ({ paradeGroups }) => {
 
   // This assumes there will be groups that
   // start with something other than a letter.
-  // Might need to be changed to be conditional
-  // based on groups
-  if (!availableLetters.includes('#')) {
+  if (
+    !availableLetters.includes('#') &&
+    groups.some(group =>
+      lettersArray.some(letter => group.name.startsWith(letter))
+    )
+  ) {
     availableLetters.unshift('#')
   }
 
   return (
     <>
+      <ParadeGroupsFilterContainer
+        categories={categories}
+        selectedFilter={selectedFilter}
+        handleFilterClick={handleFilterClick}
+      />
       <LetterContainer>
-        {lettersArray.map(letter => (
-          <LetterLink
-            key={letter}
-            letter={letter}
-            isDisabled={!availableLetters.includes(letter)}
-          />
-        ))}
+        <ScrolledLetters>
+          {lettersArray.map(letter => (
+            <LetterLink
+              key={letter}
+              letter={letter}
+              isDisabled={!availableLetters.includes(letter)}
+              isActive={activeLetter === letter}
+            />
+          ))}
+        </ScrolledLetters>
       </LetterContainer>
-      <div>
+      <div ref={paradeGroupLettersSection}>
         {availableLetters.map(availableLetter => {
           return (
             <Fragment key={availableLetter}>
               <LetterGroup letter={availableLetter}>
-                {paradeGroups
+                {groups
                   .filter(group => {
                     if (availableLetter === '#') {
                       // get groups starting with non-letter characters
@@ -90,6 +157,7 @@ const ParadeGroupsContainer = ({ paradeGroups }) => {
 
 ParadeGroupsContainer.propTypes = {
   paradeGroups: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  categories: PropTypes.arrayOf(paradeGroupFilterPropType).isRequired,
 }
 
 export default ParadeGroupsContainer

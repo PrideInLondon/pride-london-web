@@ -115,6 +115,10 @@ const Nav = () => {
                         heading: 'Stalls',
                         links: [
                           {
+                            title: 'This year’s stalls',
+                            url: '/parade/stalls',
+                          },
+                          {
                             title: 'Hire a stall',
                             url: '/parade/stalls/hire-a-stall',
                           },
@@ -135,6 +139,10 @@ const Nav = () => {
                       {
                         heading: 'Pride Festival',
                         links: [
+                          {
+                            title: "This year's festival",
+                            url: '/events/festival',
+                          },
                           {
                             title: "What's on",
                             url: '/events',

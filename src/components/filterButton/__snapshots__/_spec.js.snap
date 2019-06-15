@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterButton not-selected filter render correctly 1`] = `
+<styles__FilterLabel
+  backgroundColor="#000000"
+  htmlFor="Mock Filter"
+  isButton={false}
+  isOutline={false}
+  onClick={[Function]}
+  tabIndex="0"
+>
+  <styles__FilterText>
+    Mock Filter
+  </styles__FilterText>
+  <styles__FilterRadio
+    id="Mock Filter"
+    name="filter"
+    tabIndex="-1"
+    type="radio"
+    value="Mock Filter"
+  />
+</styles__FilterLabel>
+`;
+
+exports[`FilterButton renders with default values 1`] = `
+<styles__FilterLabel
+  backgroundColor="#000000"
+  htmlFor="Mock Filter"
+  isButton={false}
+  isOutline={false}
+  onClick={[Function]}
+  tabIndex="0"
+>
+  <styles__FilterText>
+    Mock Filter
+  </styles__FilterText>
+  <styles__FilterRadio
+    id="Mock Filter"
+    name="filter"
+    tabIndex="-1"
+    type="radio"
+    value="Mock Filter"
+  />
+</styles__FilterLabel>
+`;
+
+exports[`FilterButton renders with icon 1`] = `
+<styles__FilterLabel
+  backgroundColor="#000000"
+  htmlFor="Mock Filter"
+  isButton={false}
+  isOutline={false}
+  onClick={[Function]}
+  tabIndex="0"
+>
+  <styles__FilterIcon
+    alt="icon"
+    src="foo"
+  />
+  <styles__FilterText>
+    Mock Filter
+  </styles__FilterText>
+  <styles__FilterRadio
+    id="Mock Filter"
+    name="filter"
+    tabIndex="-1"
+    type="radio"
+    value="Mock Filter"
+  />
+</styles__FilterLabel>
+`;
+
+exports[`FilterButton selected filter render correctly 1`] = `
+<styles__FilterLabel
+  backgroundColor="#000000"
+  htmlFor="Mock Filter"
+  isButton={true}
+  isOutline={true}
+  onClick={[Function]}
+  tabIndex="0"
+>
+  <styles__FilterText>
+    Mock Filter
+  </styles__FilterText>
+  <styles__FilterRadio
+    id="Mock Filter"
+    name="filter"
+    tabIndex="-1"
+    type="radio"
+    value="Mock Filter"
+  />
+</styles__FilterLabel>
+`;

@@ -110,6 +110,10 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "Stalls",
                       "links": Array [
                         Object {
+                          "title": "This year’s stalls",
+                          "url": "/parade/stalls",
+                        },
+                        Object {
                           "title": "Hire a stall",
                           "url": "/parade/stalls/hire-a-stall",
                         },
@@ -131,6 +135,10 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                     Object {
                       "heading": "Pride Festival",
                       "links": Array [
+                        Object {
+                          "title": "This year's festival",
+                          "url": "/events/festival",
+                        },
                         Object {
                           "title": "What's on",
                           "url": "/events",

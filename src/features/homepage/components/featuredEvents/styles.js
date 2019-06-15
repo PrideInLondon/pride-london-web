@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { media } from '../../../../theme/media'
 
 export const FeaturedEventContent = styled.div`
+  overflow: hidden;
+
   .slick-list {
     overflow: visible;
   }
@@ -40,17 +42,21 @@ export const FeaturedEventContent = styled.div`
     }
   `};
 
+  .slick-slider {
+    position: static;
+  }
+
   .slick-prev {
     position: absolute;
     top: 50%;
-    left: -70px;
+    left: 25px;
     transform: translate(0, -50%);
   }
 
   .slick-next {
     position: absolute;
     top: 50%;
-    right: -70px;
+    right: 25px;
     transform: translate(0, -50%);
   }
 `
