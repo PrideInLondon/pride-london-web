@@ -115,6 +115,10 @@ const Nav = () => {
                         heading: 'Stalls',
                         links: [
                           {
+                            title: 'This year’s stalls',
+                            url: '/parade/stalls',
+                          },
+                          {
                             title: 'Hire a stall',
                             url: '/parade/stalls/hire-a-stall',
                           },
