@@ -64,7 +64,7 @@ exports[`FeaturedEvents renders with default values 1`] = `
         Object {
           "breakpoint": 767,
           "settings": Object {
-            "arrows": true,
+            "arrows": false,
             "centerMode": true,
             "slidesToScroll": 1,
             "slidesToShow": 2,

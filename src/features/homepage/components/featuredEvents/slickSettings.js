@@ -19,7 +19,7 @@ export const settings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         centerMode: true,
       },
     },
