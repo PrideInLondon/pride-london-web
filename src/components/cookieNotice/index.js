@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import Cookies from 'js-cookie'
@@ -11,7 +11,9 @@ import CloseIcon from '../icons/closeIcon'
 const CookieWrapper = styled.div`
   color: ${theme.colors.white};
   background-color: ${theme.colors.black};
-  display: ${({ cookie }) => (!cookie ? 'block' : 'none')};
+  transform: ${({ hide }) => (hide ? 'translateY(100%)' : 'translateY(0)')};
+  opacity: ${({ hide }) => (hide ? '0' : '1')};
+  transition: transform 0.3s ease, opacity 0.3s ease;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -91,49 +93,48 @@ function loadGTM() {
 }
 
 const CookieNotice = () => {
-  const initialCookieState = Cookies.get('accept') ? true : false
-  const [hasCookie, setHasCookie] = useState(initialCookieState)
+  // Set as rejected so that when gatsby builds for production the server side rendering will generate the html for the cookie notice as closed.
+  const [cookie, setCookie] = useState('rejected')
 
-  let initialAcceptedState
-  if (Cookies.get('accept')) {
-    initialAcceptedState = JSON.parse(Cookies.get('accept'))
-  } else {
-    initialAcceptedState = false
-  }
-  const [accepted, setAccepted] = useState(initialAcceptedState)
+  useEffect(() => {
+    setCookie(Cookies.get('accept') || 'unspecified')
+  }, [])
+
+  useEffect(() => {
+    if (cookie === 'accepted') {
+      Cookies.set('accept', cookie, { expires: 30 })
+    } else {
+      Cookies.set('accept', cookie)
+    }
+  }, [cookie])
+
   const handleAgree = e => {
     e.preventDefault()
-    Cookies.set('accept', 'true')
-    setHasCookie(true)
-    setAccepted(true)
+    setCookie('accepted')
   }
 
   const handleDismiss = e => {
     e.preventDefault()
-    Cookies.set('accept', 'false')
-    setHasCookie(true)
-    setAccepted(false)
+    setCookie('rejected')
   }
 
   return (
     <>
-      {accepted && loadGTM()}
-      {!hasCookie && (
-        <CookieWrapper>
+      {cookie === 'accepted' && loadGTM()}
+      {
+        <CookieWrapper hide={cookie !== 'unspecified'}>
           <Container>
             <Row>
               <Column width={[1, 1, 0.6]}>
                 <CookieText>
-                  We process information about your visit using cookies for
-                  performance and usage analysis, and to allow bespoke marketing
-                  to your individual interests. For further information see our{' '}
-                  <CookieLink to="/privacy">Privacy & Cookie Policy</CookieLink>
-                  .
+                  We use cookies to make sure that you have the best experience
+                  on our website and to learn how we can make it better for you.{' '}
+                  <CookieLink to="/privacy">Learn more</CookieLink>
                 </CookieText>
               </Column>
               <CookieActions width={[1, 1, 0.4]}>
                 <CookieAgree role="button" onClick={handleAgree}>
-                  I agree to cookies
+                  Got it
                 </CookieAgree>
                 <CookieDismiss
                   aria-label="I do not agree and close"
@@ -145,7 +146,7 @@ const CookieNotice = () => {
             </Row>
           </Container>
         </CookieWrapper>
-      )}
+      }
     </>
   )
 }
