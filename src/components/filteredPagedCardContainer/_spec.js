@@ -204,14 +204,17 @@ describe('FilteredPagedCardContainer', () => {
 
   const cardContent = [
     {
+      id: 'id-foo',
       text: 'text-foo',
       category: ['foo'],
     },
     {
+      id: 'id-bar',
       text: 'text-bar',
       category: ['bar'],
     },
     {
+      id: 'id-foo2',
       text: 'text-foo2',
       category: ['foo'],
     },
@@ -220,14 +223,17 @@ describe('FilteredPagedCardContainer', () => {
   const moreCardContent = [
     ...cardContent,
     {
+      id: 'id-foo3',
       text: 'text-foo3',
       category: ['foo'],
     },
     {
+      id: 'id-foo4',
       text: 'text-foo4',
       category: ['foo'],
     },
     {
+      id: 'id-foo5',
       text: 'text-foo5',
       category: ['foo'],
     },

@@ -57,6 +57,7 @@ const VisitorInformationPage = ({
           categories={communityPartnerCategories}
           showAllCategoryTitle="Everything"
           cardContent={partners.map(({ node: partner }) => ({
+            id: partner.venueName,
             category: partner.category,
             partner,
           }))}

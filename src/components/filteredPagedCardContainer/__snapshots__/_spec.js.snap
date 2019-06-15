@@ -9,36 +9,42 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
         "category": Array [
           "foo",
         ],
+        "id": "id-foo",
         "text": "text-foo",
       },
       Object {
         "category": Array [
           "bar",
         ],
+        "id": "id-bar",
         "text": "text-bar",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo2",
         "text": "text-foo2",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo3",
         "text": "text-foo3",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo4",
         "text": "text-foo4",
       },
       Object {
         "category": Array [
           "foo",
         ],
+        "id": "id-foo5",
         "text": "text-foo5",
       },
     ]
@@ -931,6 +937,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
           "category": Array [
             "foo",
           ],
+          "id": "id-foo",
           "text": "text-foo",
         },
       ]
@@ -948,6 +955,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
             "category": Array [
               "foo",
             ],
+            "id": "id-foo",
             "text": "text-foo",
           },
         ]
@@ -1152,6 +1160,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                     className="sc-bdVaJa sc-bwzfXH guKgGl"
                   >
                     <grid__FlexColumn
+                      key="id-foo"
                       py={
                         Array [
                           2,
