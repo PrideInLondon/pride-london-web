@@ -24,6 +24,7 @@ const FilterLabel = ({
       id={filterName}
       name="filterLabel"
       tabIndex="-1"
+      aria-label={filterName}
     />
   </Label>
 )

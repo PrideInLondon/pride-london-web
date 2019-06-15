@@ -88,6 +88,7 @@ exports[`FilterLabel renders when not selected 1`] = `
           </StyledComponent>
         </styles__Text>
         <styles__Input
+          aria-label="foo"
           id="foo"
           name="filterLabel"
           onClick={[Function]}
@@ -96,6 +97,7 @@ exports[`FilterLabel renders when not selected 1`] = `
           value="foo"
         >
           <StyledComponent
+            aria-label="foo"
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
@@ -139,6 +141,7 @@ exports[`FilterLabel renders when not selected 1`] = `
             value="foo"
           >
             <input
+              aria-label="foo"
               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
               id="foo"
               name="filterLabel"
@@ -243,6 +246,7 @@ exports[`FilterLabel renders when selected 1`] = `
           </StyledComponent>
         </styles__Text>
         <styles__Input
+          aria-label="foo"
           id="foo"
           name="filterLabel"
           onClick={[Function]}
@@ -251,6 +255,7 @@ exports[`FilterLabel renders when selected 1`] = `
           value="foo"
         >
           <StyledComponent
+            aria-label="foo"
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
@@ -294,6 +299,7 @@ exports[`FilterLabel renders when selected 1`] = `
             value="foo"
           >
             <input
+              aria-label="foo"
               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
               id="foo"
               name="filterLabel"

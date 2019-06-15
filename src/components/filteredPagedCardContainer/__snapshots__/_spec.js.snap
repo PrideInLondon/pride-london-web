@@ -541,6 +541,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="foo"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -549,6 +550,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                                           value="foo"
                                         >
                                           <StyledComponent
+                                            aria-label="foo"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -592,6 +594,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                                             value="foo"
                                           >
                                             <input
+                                              aria-label="foo"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="foo"
                                               name="filterLabel"
@@ -695,6 +698,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="bar"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -703,6 +707,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                                           value="bar"
                                         >
                                           <StyledComponent
+                                            aria-label="bar"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -746,6 +751,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                                             value="bar"
                                           >
                                             <input
+                                              aria-label="bar"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="bar"
                                               name="filterLabel"
@@ -849,6 +855,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                                           </StyledComponent>
                                         </styles__Text>
                                         <styles__Input
+                                          aria-label="baz"
                                           id="baz"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -857,6 +864,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                                           value="baz"
                                         >
                                           <StyledComponent
+                                            aria-label="baz"
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -900,6 +908,7 @@ exports[`FilteredPagedCardContainer snaps back to one page displayed on filter c
                                             value="baz"
                                           >
                                             <input
+                                              aria-label="baz"
                                               className="styles__Input-sc-1wu4f6z-2 kgGtRH"
                                               id="baz"
                                               name="filterLabel"
