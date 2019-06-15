@@ -200,6 +200,7 @@ const CommunityPartnerCard = ({ partner }) => {
             ({ url, name, Component }) =>
               url && (
                 <SocialLink
+                  key={name}
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
