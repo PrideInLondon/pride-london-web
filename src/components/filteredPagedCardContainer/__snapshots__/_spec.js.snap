@@ -1,5 +1,1777 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FilteredPagedCardContainer snaps back to one page displayed on filter change 1`] = `
+<FilteredCardContainer
+  CardComponent={[Function]}
+  cardContent={
+    Array [
+      Object {
+        "category": Array [
+          "foo",
+        ],
+        "text": "text-foo",
+      },
+      Object {
+        "category": Array [
+          "bar",
+        ],
+        "text": "text-bar",
+      },
+      Object {
+        "category": Array [
+          "foo",
+        ],
+        "text": "text-foo2",
+      },
+      Object {
+        "category": Array [
+          "foo",
+        ],
+        "text": "text-foo3",
+      },
+      Object {
+        "category": Array [
+          "foo",
+        ],
+        "text": "text-foo4",
+      },
+      Object {
+        "category": Array [
+          "foo",
+        ],
+        "text": "text-foo5",
+      },
+    ]
+  }
+  categories={
+    Array [
+      Object {
+        "hexColour": "#foo",
+        "title": "foo",
+      },
+      Object {
+        "hexColour": "#bar",
+        "title": "bar",
+      },
+      Object {
+        "hexColour": "#baz",
+        "title": "baz",
+      },
+    ]
+  }
+  filterType="radio"
+  pageSize={1}
+  showAllCategoryTitle="bar"
+  showMoreButtonText="Show more"
+>
+  <FilterContainer
+    categories={
+      Array [
+        Object {
+          "hexColour": "#foo",
+          "title": "foo",
+        },
+        Object {
+          "hexColour": "#bar",
+          "title": "bar",
+        },
+        Object {
+          "hexColour": "#baz",
+          "title": "baz",
+        },
+      ]
+    }
+    filterType="radio"
+    handleFilterSelect={[Function]}
+    selected="foo"
+  >
+    <grid__Container
+      mx="auto"
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "_foldedDefaultProps": Object {
+              "mx": "auto",
+            },
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "grid__Container-l0wsyy-0",
+              "isStatic": false,
+              "lastClassName": "eEEIRW",
+              "rules": Array [
+                "box-sizing: border-box;",
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                "@media (min-width:",
+                "375",
+                "px){",
+                "
+    min-width: 335px;
+  ",
+                ";}",
+                ";",
+                "@media (min-width:",
+                "768",
+                "px){",
+                "
+    min-width: 668px;
+  ",
+                ";}",
+                ";",
+                "@media (min-width:",
+                "1024",
+                "px){",
+                "
+    min-width: 960px;
+  ",
+                ";}",
+                ";",
+                "@media (min-width:",
+                "1440",
+                "px){",
+                "
+    min-width: 1260px;
+    max-width: ",
+                "1440",
+                "px;    
+  ",
+                ";}",
+                ";",
+              ],
+            },
+            "displayName": "grid__Container",
+            "foldedComponentIds": Array [
+              "sc-bdVaJa",
+            ],
+            "propTypes": Object {
+              "backgroundColor": [Function],
+              "bg": [Function],
+              "color": [Function],
+              "fontSize": [Function],
+              "m": [Function],
+              "margin": [Function],
+              "marginBottom": [Function],
+              "marginLeft": [Function],
+              "marginRight": [Function],
+              "marginTop": [Function],
+              "mb": [Function],
+              "ml": [Function],
+              "mr": [Function],
+              "mt": [Function],
+              "p": [Function],
+              "padding": [Function],
+              "paddingBottom": [Function],
+              "paddingLeft": [Function],
+              "paddingRight": [Function],
+              "paddingTop": [Function],
+              "pb": [Function],
+              "pl": [Function],
+              "pr": [Function],
+              "pt": [Function],
+              "width": [Function],
+            },
+            "render": [Function],
+            "styledComponentId": "grid__Container-l0wsyy-0",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        mx="auto"
+      >
+        <div
+          className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW"
+        >
+          <Row
+            flexWrap={null}
+            ml={null}
+            mr={null}
+            mx={null}
+          >
+            <Flex
+              flexWrap="wrap"
+              ml={
+                Array [
+                  1,
+                  10,
+                  40,
+                  75,
+                ]
+              }
+              mr={
+                Array [
+                  1,
+                  10,
+                  40,
+                  75,
+                ]
+              }
+              mx={null}
+            >
+              <StyledComponent
+                flexWrap="wrap"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": false,
+                      "lastClassName": "leDAiW",
+                      "rules": Array [
+                        "box-sizing: border-box;",
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        "display: flex;",
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                      ],
+                    },
+                    "displayName": "Flex",
+                    "foldedComponentIds": Array [
+                      "sc-bdVaJa",
+                    ],
+                    "propTypes": Object {
+                      "alignItems": [Function],
+                      "flexDirection": [Function],
+                      "flexWrap": [Function],
+                      "justifyContent": [Function],
+                    },
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                ml={
+                  Array [
+                    1,
+                    10,
+                    40,
+                    75,
+                  ]
+                }
+                mr={
+                  Array [
+                    1,
+                    10,
+                    40,
+                    75,
+                  ]
+                }
+                mx={null}
+              >
+                <div
+                  className="sc-bdVaJa sc-bwzfXH guKgGl"
+                >
+                  <Column
+                    pb={null}
+                    pl={null}
+                    pr={null}
+                    pt={null}
+                    px={null}
+                    py={
+                      Array [
+                        20,
+                        20,
+                        40,
+                      ]
+                    }
+                    width={1}
+                  >
+                    <Box
+                      pb={null}
+                      pl={
+                        Array [
+                          1,
+                          2,
+                          2,
+                          3,
+                        ]
+                      }
+                      pr={
+                        Array [
+                          1,
+                          2,
+                          2,
+                          3,
+                        ]
+                      }
+                      pt={null}
+                      px={null}
+                      py={
+                        Array [
+                          20,
+                          20,
+                          40,
+                        ]
+                      }
+                      width={1}
+                    >
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bdVaJa",
+                              "isStatic": false,
+                              "lastClassName": "gzZQhn",
+                              "rules": Array [
+                                "box-sizing: border-box;",
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                            },
+                            "displayName": "Box",
+                            "foldedComponentIds": Array [],
+                            "propTypes": Object {
+                              "backgroundColor": [Function],
+                              "bg": [Function],
+                              "color": [Function],
+                              "fontSize": [Function],
+                              "m": [Function],
+                              "margin": [Function],
+                              "marginBottom": [Function],
+                              "marginLeft": [Function],
+                              "marginRight": [Function],
+                              "marginTop": [Function],
+                              "mb": [Function],
+                              "ml": [Function],
+                              "mr": [Function],
+                              "mt": [Function],
+                              "p": [Function],
+                              "padding": [Function],
+                              "paddingBottom": [Function],
+                              "paddingLeft": [Function],
+                              "paddingRight": [Function],
+                              "paddingTop": [Function],
+                              "pb": [Function],
+                              "pl": [Function],
+                              "pr": [Function],
+                              "pt": [Function],
+                              "width": [Function],
+                            },
+                            "render": [Function],
+                            "styledComponentId": "sc-bdVaJa",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        pb={null}
+                        pl={
+                          Array [
+                            1,
+                            2,
+                            2,
+                            3,
+                          ]
+                        }
+                        pr={
+                          Array [
+                            1,
+                            2,
+                            2,
+                            3,
+                          ]
+                        }
+                        pt={null}
+                        px={null}
+                        py={
+                          Array [
+                            20,
+                            20,
+                            40,
+                          ]
+                        }
+                        width={1}
+                      >
+                        <div
+                          className="sc-bdVaJa nwjPA"
+                          width={1}
+                        >
+                          <styles__FilterContainerWrapper>
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "styles__FilterContainerWrapper-kd1mao-0",
+                                    "isStatic": true,
+                                    "lastClassName": "kWUFNq",
+                                    "rules": Array [
+                                      "display:flex;flex-wrap:wrap;justify-content:center;",
+                                    ],
+                                  },
+                                  "displayName": "styles__FilterContainerWrapper",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "styles__FilterContainerWrapper-kd1mao-0",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="styles__FilterContainerWrapper-kd1mao-0 kWUFNq"
+                              >
+                                <FilterLabel
+                                  filterColour="#foo"
+                                  filterName="foo"
+                                  filterType="radio"
+                                  handleSelect={[Function]}
+                                  id="foo"
+                                  isSelected={true}
+                                  key="foo"
+                                >
+                                  <styles__Label
+                                    backgroundColor="#foo"
+                                    htmlFor="foo"
+                                    isSelected={true}
+                                    tabIndex="0"
+                                  >
+                                    <StyledComponent
+                                      backgroundColor="#foo"
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "styles__Label-sc-1wu4f6z-0",
+                                            "isStatic": false,
+                                            "lastClassName": "ivKLXq",
+                                            "rules": Array [
+                                              "align-items:center;border:2px solid;background-color:",
+                                              [Function],
+                                              ";border-color:",
+                                              [Function],
+                                              ";border-radius:4px;color:",
+                                              [Function],
+                                              ";cursor:pointer;display:flex;font-family:",
+                                              "Poppins, sans-serif",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                            ],
+                                          },
+                                          "displayName": "styles__Label",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "styles__Label-sc-1wu4f6z-0",
+                                          "target": "label",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      htmlFor="foo"
+                                      isSelected={true}
+                                      tabIndex="0"
+                                    >
+                                      <label
+                                        className="styles__Label-sc-1wu4f6z-0 VUpCb"
+                                        htmlFor="foo"
+                                        tabIndex="0"
+                                      >
+                                        <styles__Text>
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Text-sc-1wu4f6z-1",
+                                                  "isStatic": true,
+                                                  "lastClassName": "cywyfl",
+                                                  "rules": Array [],
+                                                },
+                                                "displayName": "styles__Text",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Text-sc-1wu4f6z-1",
+                                                "target": "span",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                          >
+                                            <span
+                                              className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                            >
+                                              foo
+                                            </span>
+                                          </StyledComponent>
+                                        </styles__Text>
+                                        <styles__Input
+                                          id="foo"
+                                          name="filterLabel"
+                                          onClick={[Function]}
+                                          tabIndex="-1"
+                                          type="radio"
+                                          value="foo"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [
+                                                  [Function],
+                                                ],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Input-sc-1wu4f6z-2",
+                                                  "isStatic": false,
+                                                  "lastClassName": "kgGtRH",
+                                                  "rules": Array [
+                                                    "border: 0;",
+                                                    "clip: rect(0 0 0 0);",
+                                                    "clip-path: inset(50%);",
+                                                    "height: 1px;",
+                                                    "margin: -1px;",
+                                                    "overflow: hidden;",
+                                                    "padding: 0;",
+                                                    "position: absolute;",
+                                                    "white-space: nowrap;",
+                                                    "width: 1px;",
+                                                    ";",
+                                                  ],
+                                                },
+                                                "displayName": "styles__Input",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Input-sc-1wu4f6z-2",
+                                                "target": "input",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            id="foo"
+                                            name="filterLabel"
+                                            onClick={[Function]}
+                                            tabIndex="-1"
+                                            type="radio"
+                                            value="foo"
+                                          >
+                                            <input
+                                              className="styles__Input-sc-1wu4f6z-2 kgGtRH"
+                                              id="foo"
+                                              name="filterLabel"
+                                              onClick={[Function]}
+                                              tabIndex="-1"
+                                              type="radio"
+                                              value="foo"
+                                            />
+                                          </StyledComponent>
+                                        </styles__Input>
+                                      </label>
+                                    </StyledComponent>
+                                  </styles__Label>
+                                </FilterLabel>
+                                <FilterLabel
+                                  filterColour="#bar"
+                                  filterName="bar"
+                                  filterType="radio"
+                                  handleSelect={[Function]}
+                                  id="bar"
+                                  isSelected={false}
+                                  key="bar"
+                                >
+                                  <styles__Label
+                                    backgroundColor="#bar"
+                                    htmlFor="bar"
+                                    isSelected={false}
+                                    tabIndex="0"
+                                  >
+                                    <StyledComponent
+                                      backgroundColor="#bar"
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "styles__Label-sc-1wu4f6z-0",
+                                            "isStatic": false,
+                                            "lastClassName": "ivKLXq",
+                                            "rules": Array [
+                                              "align-items:center;border:2px solid;background-color:",
+                                              [Function],
+                                              ";border-color:",
+                                              [Function],
+                                              ";border-radius:4px;color:",
+                                              [Function],
+                                              ";cursor:pointer;display:flex;font-family:",
+                                              "Poppins, sans-serif",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                            ],
+                                          },
+                                          "displayName": "styles__Label",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "styles__Label-sc-1wu4f6z-0",
+                                          "target": "label",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      htmlFor="bar"
+                                      isSelected={false}
+                                      tabIndex="0"
+                                    >
+                                      <label
+                                        className="styles__Label-sc-1wu4f6z-0 iLlQa"
+                                        htmlFor="bar"
+                                        tabIndex="0"
+                                      >
+                                        <styles__Text>
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Text-sc-1wu4f6z-1",
+                                                  "isStatic": true,
+                                                  "lastClassName": "cywyfl",
+                                                  "rules": Array [],
+                                                },
+                                                "displayName": "styles__Text",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Text-sc-1wu4f6z-1",
+                                                "target": "span",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                          >
+                                            <span
+                                              className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                            >
+                                              bar
+                                            </span>
+                                          </StyledComponent>
+                                        </styles__Text>
+                                        <styles__Input
+                                          id="bar"
+                                          name="filterLabel"
+                                          onClick={[Function]}
+                                          tabIndex="-1"
+                                          type="radio"
+                                          value="bar"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [
+                                                  [Function],
+                                                ],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Input-sc-1wu4f6z-2",
+                                                  "isStatic": false,
+                                                  "lastClassName": "kgGtRH",
+                                                  "rules": Array [
+                                                    "border: 0;",
+                                                    "clip: rect(0 0 0 0);",
+                                                    "clip-path: inset(50%);",
+                                                    "height: 1px;",
+                                                    "margin: -1px;",
+                                                    "overflow: hidden;",
+                                                    "padding: 0;",
+                                                    "position: absolute;",
+                                                    "white-space: nowrap;",
+                                                    "width: 1px;",
+                                                    ";",
+                                                  ],
+                                                },
+                                                "displayName": "styles__Input",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Input-sc-1wu4f6z-2",
+                                                "target": "input",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            id="bar"
+                                            name="filterLabel"
+                                            onClick={[Function]}
+                                            tabIndex="-1"
+                                            type="radio"
+                                            value="bar"
+                                          >
+                                            <input
+                                              className="styles__Input-sc-1wu4f6z-2 kgGtRH"
+                                              id="bar"
+                                              name="filterLabel"
+                                              onClick={[Function]}
+                                              tabIndex="-1"
+                                              type="radio"
+                                              value="bar"
+                                            />
+                                          </StyledComponent>
+                                        </styles__Input>
+                                      </label>
+                                    </StyledComponent>
+                                  </styles__Label>
+                                </FilterLabel>
+                                <FilterLabel
+                                  filterColour="#baz"
+                                  filterName="baz"
+                                  filterType="radio"
+                                  handleSelect={[Function]}
+                                  id="baz"
+                                  isSelected={false}
+                                  key="baz"
+                                >
+                                  <styles__Label
+                                    backgroundColor="#baz"
+                                    htmlFor="baz"
+                                    isSelected={false}
+                                    tabIndex="0"
+                                  >
+                                    <StyledComponent
+                                      backgroundColor="#baz"
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "styles__Label-sc-1wu4f6z-0",
+                                            "isStatic": false,
+                                            "lastClassName": "ivKLXq",
+                                            "rules": Array [
+                                              "align-items:center;border:2px solid;background-color:",
+                                              [Function],
+                                              ";border-color:",
+                                              [Function],
+                                              ";border-radius:4px;color:",
+                                              [Function],
+                                              ";cursor:pointer;display:flex;font-family:",
+                                              "Poppins, sans-serif",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                            ],
+                                          },
+                                          "displayName": "styles__Label",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "styles__Label-sc-1wu4f6z-0",
+                                          "target": "label",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      htmlFor="baz"
+                                      isSelected={false}
+                                      tabIndex="0"
+                                    >
+                                      <label
+                                        className="styles__Label-sc-1wu4f6z-0 ivKLXq"
+                                        htmlFor="baz"
+                                        tabIndex="0"
+                                      >
+                                        <styles__Text>
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Text-sc-1wu4f6z-1",
+                                                  "isStatic": true,
+                                                  "lastClassName": "cywyfl",
+                                                  "rules": Array [],
+                                                },
+                                                "displayName": "styles__Text",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Text-sc-1wu4f6z-1",
+                                                "target": "span",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                          >
+                                            <span
+                                              className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                            >
+                                              baz
+                                            </span>
+                                          </StyledComponent>
+                                        </styles__Text>
+                                        <styles__Input
+                                          id="baz"
+                                          name="filterLabel"
+                                          onClick={[Function]}
+                                          tabIndex="-1"
+                                          type="radio"
+                                          value="baz"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [
+                                                  [Function],
+                                                ],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Input-sc-1wu4f6z-2",
+                                                  "isStatic": false,
+                                                  "lastClassName": "kgGtRH",
+                                                  "rules": Array [
+                                                    "border: 0;",
+                                                    "clip: rect(0 0 0 0);",
+                                                    "clip-path: inset(50%);",
+                                                    "height: 1px;",
+                                                    "margin: -1px;",
+                                                    "overflow: hidden;",
+                                                    "padding: 0;",
+                                                    "position: absolute;",
+                                                    "white-space: nowrap;",
+                                                    "width: 1px;",
+                                                    ";",
+                                                  ],
+                                                },
+                                                "displayName": "styles__Input",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Input-sc-1wu4f6z-2",
+                                                "target": "input",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            id="baz"
+                                            name="filterLabel"
+                                            onClick={[Function]}
+                                            tabIndex="-1"
+                                            type="radio"
+                                            value="baz"
+                                          >
+                                            <input
+                                              className="styles__Input-sc-1wu4f6z-2 kgGtRH"
+                                              id="baz"
+                                              name="filterLabel"
+                                              onClick={[Function]}
+                                              tabIndex="-1"
+                                              type="radio"
+                                              value="baz"
+                                            />
+                                          </StyledComponent>
+                                        </styles__Input>
+                                      </label>
+                                    </StyledComponent>
+                                  </styles__Label>
+                                </FilterLabel>
+                              </div>
+                            </StyledComponent>
+                          </styles__FilterContainerWrapper>
+                        </div>
+                      </StyledComponent>
+                    </Box>
+                  </Column>
+                </div>
+              </StyledComponent>
+            </Flex>
+          </Row>
+        </div>
+      </StyledComponent>
+    </grid__Container>
+  </FilterContainer>
+  <PagedCardContainer
+    CardComponent={[Function]}
+    cardContent={
+      Array [
+        Object {
+          "category": Array [
+            "foo",
+          ],
+          "text": "text-foo",
+        },
+      ]
+    }
+    moreCardsToShow={true}
+    onShowMoreButtonClick={[Function]}
+    pageSize={1}
+    showMoreButtonText="Show more"
+  >
+    <CardContainer
+      CardComponent={[Function]}
+      cardContent={
+        Array [
+          Object {
+            "category": Array [
+              "foo",
+            ],
+            "text": "text-foo",
+          },
+        ]
+      }
+    >
+      <grid__Container
+        mx="auto"
+      >
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "_foldedDefaultProps": Object {
+                "mx": "auto",
+              },
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "grid__Container-l0wsyy-0",
+                "isStatic": false,
+                "lastClassName": "eEEIRW",
+                "rules": Array [
+                  "box-sizing: border-box;",
+                  [Function],
+                  [Function],
+                  [Function],
+                  [Function],
+                  [Function],
+                  [Function],
+                  [Function],
+                  "@media (min-width:",
+                  "375",
+                  "px){",
+                  "
+    min-width: 335px;
+  ",
+                  ";}",
+                  ";",
+                  "@media (min-width:",
+                  "768",
+                  "px){",
+                  "
+    min-width: 668px;
+  ",
+                  ";}",
+                  ";",
+                  "@media (min-width:",
+                  "1024",
+                  "px){",
+                  "
+    min-width: 960px;
+  ",
+                  ";}",
+                  ";",
+                  "@media (min-width:",
+                  "1440",
+                  "px){",
+                  "
+    min-width: 1260px;
+    max-width: ",
+                  "1440",
+                  "px;    
+  ",
+                  ";}",
+                  ";",
+                ],
+              },
+              "displayName": "grid__Container",
+              "foldedComponentIds": Array [
+                "sc-bdVaJa",
+              ],
+              "propTypes": Object {
+                "backgroundColor": [Function],
+                "bg": [Function],
+                "color": [Function],
+                "fontSize": [Function],
+                "m": [Function],
+                "margin": [Function],
+                "marginBottom": [Function],
+                "marginLeft": [Function],
+                "marginRight": [Function],
+                "marginTop": [Function],
+                "mb": [Function],
+                "ml": [Function],
+                "mr": [Function],
+                "mt": [Function],
+                "p": [Function],
+                "padding": [Function],
+                "paddingBottom": [Function],
+                "paddingLeft": [Function],
+                "paddingRight": [Function],
+                "paddingTop": [Function],
+                "pb": [Function],
+                "pl": [Function],
+                "pr": [Function],
+                "pt": [Function],
+                "width": [Function],
+              },
+              "render": [Function],
+              "styledComponentId": "grid__Container-l0wsyy-0",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          mx="auto"
+        >
+          <div
+            className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW"
+          >
+            <Row
+              flexWrap={null}
+              ml={null}
+              mr={null}
+              mx={null}
+            >
+              <Flex
+                flexWrap="wrap"
+                ml={
+                  Array [
+                    1,
+                    10,
+                    40,
+                    75,
+                  ]
+                }
+                mr={
+                  Array [
+                    1,
+                    10,
+                    40,
+                    75,
+                  ]
+                }
+                mx={null}
+              >
+                <StyledComponent
+                  flexWrap="wrap"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "leDAiW",
+                        "rules": Array [
+                          "box-sizing: border-box;",
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          "display: flex;",
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "displayName": "Flex",
+                      "foldedComponentIds": Array [
+                        "sc-bdVaJa",
+                      ],
+                      "propTypes": Object {
+                        "alignItems": [Function],
+                        "flexDirection": [Function],
+                        "flexWrap": [Function],
+                        "justifyContent": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  ml={
+                    Array [
+                      1,
+                      10,
+                      40,
+                      75,
+                    ]
+                  }
+                  mr={
+                    Array [
+                      1,
+                      10,
+                      40,
+                      75,
+                    ]
+                  }
+                  mx={null}
+                >
+                  <div
+                    className="sc-bdVaJa sc-bwzfXH guKgGl"
+                  >
+                    <grid__FlexColumn
+                      py={
+                        Array [
+                          2,
+                          2,
+                          2,
+                          3,
+                        ]
+                      }
+                      width={
+                        Array [
+                          1,
+                          1,
+                          0.5,
+                          0.3333333333333333,
+                        ]
+                      }
+                    >
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "grid__FlexColumn-l0wsyy-1",
+                              "isStatic": true,
+                              "lastClassName": "bsrdHZ",
+                              "rules": Array [
+                                "display:block;",
+                                "@media (min-width:",
+                                "768",
+                                "px){",
+                                "
+    display: flex;
+  ",
+                                ";}",
+                                ";",
+                              ],
+                            },
+                            "displayName": "grid__FlexColumn",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "grid__FlexColumn-l0wsyy-1",
+                            "target": [Function],
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                            Symbol(Symbol.hasInstance): [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        py={
+                          Array [
+                            2,
+                            2,
+                            2,
+                            3,
+                          ]
+                        }
+                        width={
+                          Array [
+                            1,
+                            1,
+                            0.5,
+                            0.3333333333333333,
+                          ]
+                        }
+                      >
+                        <Column
+                          className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                          pb={null}
+                          pl={null}
+                          pr={null}
+                          pt={null}
+                          px={null}
+                          py={
+                            Array [
+                              2,
+                              2,
+                              2,
+                              3,
+                            ]
+                          }
+                          width={
+                            Array [
+                              1,
+                              1,
+                              0.5,
+                              0.3333333333333333,
+                            ]
+                          }
+                        >
+                          <Box
+                            className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                            pb={null}
+                            pl={
+                              Array [
+                                1,
+                                2,
+                                2,
+                                3,
+                              ]
+                            }
+                            pr={
+                              Array [
+                                1,
+                                2,
+                                2,
+                                3,
+                              ]
+                            }
+                            pt={null}
+                            px={null}
+                            py={
+                              Array [
+                                2,
+                                2,
+                                2,
+                                3,
+                              ]
+                            }
+                            width={
+                              Array [
+                                1,
+                                1,
+                                0.5,
+                                0.3333333333333333,
+                              ]
+                            }
+                          >
+                            <StyledComponent
+                              className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-bdVaJa",
+                                    "isStatic": false,
+                                    "lastClassName": "gzZQhn",
+                                    "rules": Array [
+                                      "box-sizing: border-box;",
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                  },
+                                  "displayName": "Box",
+                                  "foldedComponentIds": Array [],
+                                  "propTypes": Object {
+                                    "backgroundColor": [Function],
+                                    "bg": [Function],
+                                    "color": [Function],
+                                    "fontSize": [Function],
+                                    "m": [Function],
+                                    "margin": [Function],
+                                    "marginBottom": [Function],
+                                    "marginLeft": [Function],
+                                    "marginRight": [Function],
+                                    "marginTop": [Function],
+                                    "mb": [Function],
+                                    "ml": [Function],
+                                    "mr": [Function],
+                                    "mt": [Function],
+                                    "p": [Function],
+                                    "padding": [Function],
+                                    "paddingBottom": [Function],
+                                    "paddingLeft": [Function],
+                                    "paddingRight": [Function],
+                                    "paddingTop": [Function],
+                                    "pb": [Function],
+                                    "pl": [Function],
+                                    "pr": [Function],
+                                    "pt": [Function],
+                                    "width": [Function],
+                                  },
+                                  "render": [Function],
+                                  "styledComponentId": "sc-bdVaJa",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              pb={null}
+                              pl={
+                                Array [
+                                  1,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              pr={
+                                Array [
+                                  1,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              pt={null}
+                              px={null}
+                              py={
+                                Array [
+                                  2,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              width={
+                                Array [
+                                  1,
+                                  1,
+                                  0.5,
+                                  0.3333333333333333,
+                                ]
+                              }
+                            >
+                              <div
+                                className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                width={
+                                  Array [
+                                    1,
+                                    1,
+                                    0.5,
+                                    0.3333333333333333,
+                                  ]
+                                }
+                              >
+                                <CardComponent
+                                  category={
+                                    Array [
+                                      "foo",
+                                    ]
+                                  }
+                                  text="text-foo"
+                                >
+                                  <div>
+                                    text-foo
+                                  </div>
+                                </CardComponent>
+                              </div>
+                            </StyledComponent>
+                          </Box>
+                        </Column>
+                      </StyledComponent>
+                    </grid__FlexColumn>
+                  </div>
+                </StyledComponent>
+              </Flex>
+            </Row>
+          </div>
+        </StyledComponent>
+      </grid__Container>
+    </CardContainer>
+    <ShowMoreButton
+      onClick={[Function]}
+      text="Show more"
+    >
+      <Row
+        flexWrap={null}
+        ml={null}
+        mr={null}
+        mx={null}
+        pb={
+          Array [
+            30,
+            30,
+            50,
+          ]
+        }
+      >
+        <Flex
+          flexWrap="wrap"
+          ml={
+            Array [
+              1,
+              10,
+              40,
+              75,
+            ]
+          }
+          mr={
+            Array [
+              1,
+              10,
+              40,
+              75,
+            ]
+          }
+          mx={null}
+          pb={
+            Array [
+              30,
+              30,
+              50,
+            ]
+          }
+        >
+          <StyledComponent
+            flexWrap="wrap"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": false,
+                  "lastClassName": "leDAiW",
+                  "rules": Array [
+                    "box-sizing: border-box;",
+                    [Function],
+                    [Function],
+                    [Function],
+                    [Function],
+                    [Function],
+                    [Function],
+                    [Function],
+                    "display: flex;",
+                    [Function],
+                    [Function],
+                    [Function],
+                    [Function],
+                  ],
+                },
+                "displayName": "Flex",
+                "foldedComponentIds": Array [
+                  "sc-bdVaJa",
+                ],
+                "propTypes": Object {
+                  "alignItems": [Function],
+                  "flexDirection": [Function],
+                  "flexWrap": [Function],
+                  "justifyContent": [Function],
+                },
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            ml={
+              Array [
+                1,
+                10,
+                40,
+                75,
+              ]
+            }
+            mr={
+              Array [
+                1,
+                10,
+                40,
+                75,
+              ]
+            }
+            mx={null}
+            pb={
+              Array [
+                30,
+                30,
+                50,
+              ]
+            }
+          >
+            <div
+              className="sc-bdVaJa sc-bwzfXH leDAiW"
+            >
+              <Column
+                mx="auto"
+                pb={null}
+                pl={null}
+                pr={null}
+                pt={
+                  Array [
+                    30,
+                    30,
+                    50,
+                  ]
+                }
+                px={null}
+                py={null}
+              >
+                <Box
+                  mx="auto"
+                  pb={2}
+                  pl={
+                    Array [
+                      1,
+                      2,
+                      2,
+                      3,
+                    ]
+                  }
+                  pr={
+                    Array [
+                      1,
+                      2,
+                      2,
+                      3,
+                    ]
+                  }
+                  pt={
+                    Array [
+                      30,
+                      30,
+                      50,
+                    ]
+                  }
+                  px={null}
+                  py={null}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bdVaJa",
+                          "isStatic": false,
+                          "lastClassName": "gzZQhn",
+                          "rules": Array [
+                            "box-sizing: border-box;",
+                            [Function],
+                            [Function],
+                            [Function],
+                            [Function],
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                        },
+                        "displayName": "Box",
+                        "foldedComponentIds": Array [],
+                        "propTypes": Object {
+                          "backgroundColor": [Function],
+                          "bg": [Function],
+                          "color": [Function],
+                          "fontSize": [Function],
+                          "m": [Function],
+                          "margin": [Function],
+                          "marginBottom": [Function],
+                          "marginLeft": [Function],
+                          "marginRight": [Function],
+                          "marginTop": [Function],
+                          "mb": [Function],
+                          "ml": [Function],
+                          "mr": [Function],
+                          "mt": [Function],
+                          "p": [Function],
+                          "padding": [Function],
+                          "paddingBottom": [Function],
+                          "paddingLeft": [Function],
+                          "paddingRight": [Function],
+                          "paddingTop": [Function],
+                          "pb": [Function],
+                          "pl": [Function],
+                          "pr": [Function],
+                          "pt": [Function],
+                          "width": [Function],
+                        },
+                        "render": [Function],
+                        "styledComponentId": "sc-bdVaJa",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    mx="auto"
+                    pb={2}
+                    pl={
+                      Array [
+                        1,
+                        2,
+                        2,
+                        3,
+                      ]
+                    }
+                    pr={
+                      Array [
+                        1,
+                        2,
+                        2,
+                        3,
+                      ]
+                    }
+                    pt={
+                      Array [
+                        30,
+                        30,
+                        50,
+                      ]
+                    }
+                    px={null}
+                    py={null}
+                  >
+                    <div
+                      className="sc-bdVaJa gzZQhn"
+                    >
+                      <Button
+                        className=""
+                        disabled={false}
+                        flexwidth={false}
+                        fullmobile={false}
+                        link={false}
+                        onClick={[Function]}
+                        primary={true}
+                        small={false}
+                        to={null}
+                        type="button"
+                        white={false}
+                        wide={true}
+                      >
+                        <button__StyledButton
+                          className=""
+                          disabled={false}
+                          flexwidth={false}
+                          fullmobile={false}
+                          onClick={[Function]}
+                          primary={true}
+                          small={false}
+                          type="button"
+                          white={false}
+                          wide={true}
+                        >
+                          <StyledComponent
+                            className=""
+                            disabled={false}
+                            flexwidth={false}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "button__StyledButton-sc-1gywmhy-0",
+                                  "isStatic": false,
+                                  "lastClassName": "lgTyhb",
+                                  "rules": Array [
+                                    "box-sizing:border-box;padding:12px 35px;border-radius:4px;border:",
+                                    [Function],
+                                    ";display:inline-block;text-align:center;color:",
+                                    [Function],
+                                    ";background-color:",
+                                    [Function],
+                                    ";font-family:",
+                                    "Poppins, sans-serif",
+                                    ";font-weight:700;font-size:",
+                                    [Function],
+                                    ";line-height:1.388;min-width:",
+                                    [Function],
+                                    ";width:",
+                                    [Function],
+                                    ";cursor:pointer;text-decoration:none;text-align:center;transition:background-color 0.15s linear;&:hover{background-color:",
+                                    [Function],
+                                    ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
+                                    "@media (min-width:",
+                                    "768",
+                                    "px){",
+                                    "
+      width: auto;
+  ",
+                                    ";}",
+                                    ";",
+                                  ],
+                                },
+                                "displayName": "button__StyledButton",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "button__StyledButton-sc-1gywmhy-0",
+                                "target": "button",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            fullmobile={false}
+                            onClick={[Function]}
+                            primary={true}
+                            small={false}
+                            type="button"
+                            white={false}
+                            wide={true}
+                          >
+                            <button
+                              className="button__StyledButton-sc-1gywmhy-0 lgTyhb"
+                              disabled={false}
+                              onClick={[Function]}
+                              type="button"
+                            >
+                              Show more
+                            </button>
+                          </StyledComponent>
+                        </button__StyledButton>
+                      </Button>
+                    </div>
+                  </StyledComponent>
+                </Box>
+              </Column>
+            </div>
+          </StyledComponent>
+        </Flex>
+      </Row>
+    </ShowMoreButton>
+  </PagedCardContainer>
+</FilteredCardContainer>
+`;
+
 exports[`FilteredPagedCardContainer with checkbox filter type renders component 1`] = `
 <Fragment>
   <FilterContainer
@@ -12,6 +1784,10 @@ exports[`FilteredPagedCardContainer with checkbox filter type renders component 
         Object {
           "hexColour": "#bar",
           "title": "bar",
+        },
+        Object {
+          "hexColour": "#baz",
+          "title": "baz",
         },
       ]
     }
@@ -108,6 +1884,10 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
         "hexColour": "#bar",
         "title": "bar",
       },
+      Object {
+        "hexColour": "#baz",
+        "title": "baz",
+      },
     ]
   }
   filterType="checkbox"
@@ -125,6 +1905,10 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
         Object {
           "hexColour": "#bar",
           "title": "bar",
+        },
+        Object {
+          "hexColour": "#baz",
+          "title": "baz",
         },
       ]
     }
@@ -521,7 +2305,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "ivKLXq",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -675,7 +2459,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "ivKLXq",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -798,6 +2582,160 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                               tabIndex="-1"
                                               type="checkbox"
                                               value="bar"
+                                            />
+                                          </StyledComponent>
+                                        </styles__Input>
+                                      </label>
+                                    </StyledComponent>
+                                  </styles__Label>
+                                </FilterLabel>
+                                <FilterLabel
+                                  filterColour="#baz"
+                                  filterName="baz"
+                                  filterType="checkbox"
+                                  handleSelect={[Function]}
+                                  id="baz"
+                                  isSelected={false}
+                                  key="baz"
+                                >
+                                  <styles__Label
+                                    backgroundColor="#baz"
+                                    htmlFor="baz"
+                                    isSelected={false}
+                                    tabIndex="0"
+                                  >
+                                    <StyledComponent
+                                      backgroundColor="#baz"
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "styles__Label-sc-1wu4f6z-0",
+                                            "isStatic": false,
+                                            "lastClassName": "ivKLXq",
+                                            "rules": Array [
+                                              "align-items:center;border:2px solid;background-color:",
+                                              [Function],
+                                              ";border-color:",
+                                              [Function],
+                                              ";border-radius:4px;color:",
+                                              [Function],
+                                              ";cursor:pointer;display:flex;font-family:",
+                                              "Poppins, sans-serif",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                            ],
+                                          },
+                                          "displayName": "styles__Label",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "styles__Label-sc-1wu4f6z-0",
+                                          "target": "label",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      htmlFor="baz"
+                                      isSelected={false}
+                                      tabIndex="0"
+                                    >
+                                      <label
+                                        className="styles__Label-sc-1wu4f6z-0 ivKLXq"
+                                        htmlFor="baz"
+                                        tabIndex="0"
+                                      >
+                                        <styles__Text>
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Text-sc-1wu4f6z-1",
+                                                  "isStatic": true,
+                                                  "lastClassName": "cywyfl",
+                                                  "rules": Array [],
+                                                },
+                                                "displayName": "styles__Text",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Text-sc-1wu4f6z-1",
+                                                "target": "span",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                          >
+                                            <span
+                                              className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                            >
+                                              baz
+                                            </span>
+                                          </StyledComponent>
+                                        </styles__Text>
+                                        <styles__Input
+                                          id="baz"
+                                          name="filterLabel"
+                                          onClick={[Function]}
+                                          tabIndex="-1"
+                                          type="checkbox"
+                                          value="baz"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [
+                                                  [Function],
+                                                ],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Input-sc-1wu4f6z-2",
+                                                  "isStatic": false,
+                                                  "lastClassName": "kgGtRH",
+                                                  "rules": Array [
+                                                    "border: 0;",
+                                                    "clip: rect(0 0 0 0);",
+                                                    "clip-path: inset(50%);",
+                                                    "height: 1px;",
+                                                    "margin: -1px;",
+                                                    "overflow: hidden;",
+                                                    "padding: 0;",
+                                                    "position: absolute;",
+                                                    "white-space: nowrap;",
+                                                    "width: 1px;",
+                                                    ";",
+                                                  ],
+                                                },
+                                                "displayName": "styles__Input",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Input-sc-1wu4f6z-2",
+                                                "target": "input",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            id="baz"
+                                            name="filterLabel"
+                                            onClick={[Function]}
+                                            tabIndex="-1"
+                                            type="checkbox"
+                                            value="baz"
+                                          >
+                                            <input
+                                              className="styles__Input-sc-1wu4f6z-2 kgGtRH"
+                                              id="baz"
+                                              name="filterLabel"
+                                              onClick={[Function]}
+                                              tabIndex="-1"
+                                              type="checkbox"
+                                              value="baz"
                                             />
                                           </StyledComponent>
                                         </styles__Input>
@@ -2413,6 +4351,10 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
         "hexColour": "#bar",
         "title": "bar",
       },
+      Object {
+        "hexColour": "#baz",
+        "title": "baz",
+      },
     ]
   }
   filterType="checkbox"
@@ -2430,6 +4372,10 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
         Object {
           "hexColour": "#bar",
           "title": "bar",
+        },
+        Object {
+          "hexColour": "#baz",
+          "title": "baz",
         },
       ]
     }
@@ -2826,7 +4772,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "ivKLXq",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -2980,7 +4926,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "ivKLXq",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -3103,6 +5049,160 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows only cards w
                                               tabIndex="-1"
                                               type="checkbox"
                                               value="bar"
+                                            />
+                                          </StyledComponent>
+                                        </styles__Input>
+                                      </label>
+                                    </StyledComponent>
+                                  </styles__Label>
+                                </FilterLabel>
+                                <FilterLabel
+                                  filterColour="#baz"
+                                  filterName="baz"
+                                  filterType="checkbox"
+                                  handleSelect={[Function]}
+                                  id="baz"
+                                  isSelected={false}
+                                  key="baz"
+                                >
+                                  <styles__Label
+                                    backgroundColor="#baz"
+                                    htmlFor="baz"
+                                    isSelected={false}
+                                    tabIndex="0"
+                                  >
+                                    <StyledComponent
+                                      backgroundColor="#baz"
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "styles__Label-sc-1wu4f6z-0",
+                                            "isStatic": false,
+                                            "lastClassName": "ivKLXq",
+                                            "rules": Array [
+                                              "align-items:center;border:2px solid;background-color:",
+                                              [Function],
+                                              ";border-color:",
+                                              [Function],
+                                              ";border-radius:4px;color:",
+                                              [Function],
+                                              ";cursor:pointer;display:flex;font-family:",
+                                              "Poppins, sans-serif",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                            ],
+                                          },
+                                          "displayName": "styles__Label",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "styles__Label-sc-1wu4f6z-0",
+                                          "target": "label",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      htmlFor="baz"
+                                      isSelected={false}
+                                      tabIndex="0"
+                                    >
+                                      <label
+                                        className="styles__Label-sc-1wu4f6z-0 ivKLXq"
+                                        htmlFor="baz"
+                                        tabIndex="0"
+                                      >
+                                        <styles__Text>
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Text-sc-1wu4f6z-1",
+                                                  "isStatic": true,
+                                                  "lastClassName": "cywyfl",
+                                                  "rules": Array [],
+                                                },
+                                                "displayName": "styles__Text",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Text-sc-1wu4f6z-1",
+                                                "target": "span",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                          >
+                                            <span
+                                              className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                            >
+                                              baz
+                                            </span>
+                                          </StyledComponent>
+                                        </styles__Text>
+                                        <styles__Input
+                                          id="baz"
+                                          name="filterLabel"
+                                          onClick={[Function]}
+                                          tabIndex="-1"
+                                          type="checkbox"
+                                          value="baz"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [
+                                                  [Function],
+                                                ],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "styles__Input-sc-1wu4f6z-2",
+                                                  "isStatic": false,
+                                                  "lastClassName": "kgGtRH",
+                                                  "rules": Array [
+                                                    "border: 0;",
+                                                    "clip: rect(0 0 0 0);",
+                                                    "clip-path: inset(50%);",
+                                                    "height: 1px;",
+                                                    "margin: -1px;",
+                                                    "overflow: hidden;",
+                                                    "padding: 0;",
+                                                    "position: absolute;",
+                                                    "white-space: nowrap;",
+                                                    "width: 1px;",
+                                                    ";",
+                                                  ],
+                                                },
+                                                "displayName": "styles__Input",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "styles__Input-sc-1wu4f6z-2",
+                                                "target": "input",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            id="baz"
+                                            name="filterLabel"
+                                            onClick={[Function]}
+                                            tabIndex="-1"
+                                            type="checkbox"
+                                            value="baz"
+                                          >
+                                            <input
+                                              className="styles__Input-sc-1wu4f6z-2 kgGtRH"
+                                              id="baz"
+                                              name="filterLabel"
+                                              onClick={[Function]}
+                                              tabIndex="-1"
+                                              type="checkbox"
+                                              value="baz"
                                             />
                                           </StyledComponent>
                                         </styles__Input>

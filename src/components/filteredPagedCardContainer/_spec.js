@@ -233,12 +233,43 @@ describe('FilteredPagedCardContainer', () => {
     },
   ]
 
-  describe('with checkbox filter type', () => {
-    const categories = [
-      { title: 'foo', hexColour: '#foo' },
-      { title: 'bar', hexColour: '#bar' },
-    ]
+  const categories = [
+    { title: 'foo', hexColour: '#foo' },
+    { title: 'bar', hexColour: '#bar' },
+    { title: 'baz', hexColour: '#baz' },
+  ]
 
+  it.only('snaps back to one page displayed on filter change', () => {
+    const wrapper = mount(
+      <FilteredPagedCardContainer
+        filterType="radio"
+        categories={categories}
+        cardContent={moreCardContent}
+        CardComponent={CardComponent}
+        pageSize={1}
+        showAllCategoryTitle="bar"
+      />
+    )
+
+    wrapper
+      .find('ShowMoreButton')
+      .find('Button')
+      .simulate('click')
+    wrapper.update()
+
+    expect(wrapper.find('CardComponent')).toHaveLength(2)
+
+    wrapper
+      .find('FilterLabel#foo')
+      .find('styles__Input')
+      .simulate('click')
+    wrapper.update()
+
+    expect(wrapper.find('CardComponent')).toHaveLength(1)
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  describe('with checkbox filter type', () => {
     it('renders component', () => {
       const wrapper = shallow(
         <FilteredPagedCardContainer
@@ -305,12 +336,6 @@ describe('FilteredPagedCardContainer', () => {
   })
 
   describe('with radio filter type', () => {
-    const categories = [
-      { title: 'foo', hexColour: '#foo' },
-      { title: 'bar', hexColour: '#bar' },
-      { title: 'baz', hexColour: '#baz' },
-    ]
-
     it('renders component', () => {
       const wrapper = shallow(
         <FilteredPagedCardContainer

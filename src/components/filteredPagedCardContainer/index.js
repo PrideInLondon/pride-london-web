@@ -105,6 +105,7 @@ const FilteredCardContainer = ({
               showAllCategoryTitle
             )
           )
+          setNumberOfCardsToShow(pageSize)
         }}
       />
       <PagedCardContainer
