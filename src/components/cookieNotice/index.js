@@ -101,7 +101,11 @@ const CookieNotice = () => {
   }, [])
 
   useEffect(() => {
-    Cookies.set('accept', cookie)
+    if (cookie === 'accepted') {
+      Cookies.set('accept', cookie, { expires: 30 })
+    } else {
+      Cookies.set('accept', cookie)
+    }
   }, [cookie])
 
   const handleAgree = e => {
