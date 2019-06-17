@@ -67,7 +67,7 @@
     "js-cookie": "^2.2.0",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
-    "polished": "^3.4.0",
+    "polished": "^3.4.1",
     "querystring": "^0.2.0",
     "react-accessible-accordion": "^2.4.5",
     "react-dates": "16.7.0",
