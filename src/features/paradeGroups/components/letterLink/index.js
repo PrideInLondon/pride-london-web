@@ -3,12 +3,11 @@ import PropTypes from 'prop-types'
 import StyledLetterLink from './styles'
 
 const LetterLink = ({ letter, isDisabled, isActive }) => {
+  const letterAttributes = isDisabled
+    ? { isDisabled }
+    : { href: `#parade-group-${letter}`, isDisabled }
   return (
-    <StyledLetterLink
-      isDisabled={isDisabled}
-      href={`#parade-group-${letter}`}
-      isActive={isActive}
-    >
+    <StyledLetterLink isActive={isActive} {...letterAttributes}>
       {letter.toUpperCase()}
     </StyledLetterLink>
   )

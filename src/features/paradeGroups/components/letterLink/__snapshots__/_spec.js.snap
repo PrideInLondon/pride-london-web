@@ -12,7 +12,6 @@ exports[`LetterLink renders active letter 1`] = `
 
 exports[`LetterLink renders disabled letter 1`] = `
 <styles__StyledLetterLink
-  href="#parade-group-a"
   isActive={false}
   isDisabled={true}
 >
