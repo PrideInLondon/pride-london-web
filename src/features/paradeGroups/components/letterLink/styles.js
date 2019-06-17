@@ -6,7 +6,7 @@ const StyledLetterLink = styled.a`
   color: ${props => (props.isDisabled ? 'grey' : 'initial')};
   cursor: ${props => (props.isDisabled ? 'default' : 'pointer')};
   font-size: 16px;
-  margin-right: 8px;
+  margin-right: 16px;
   text-decoration: none;
   border-bottom: 2px solid transparent;
 
@@ -34,6 +34,7 @@ const StyledLetterLink = styled.a`
 
   ${media.tablet`
     font-size: 18px;
+    margin-right: 8px;
   `}
 `
 

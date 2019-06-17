@@ -11,10 +11,11 @@ export const LetterContainer = styled.div`
   overflow-x: hidden;
   position: sticky;
   top: 0;
-  padding: 0 20px;
+  padding: 10px 20px;
+  border-bottom: 1px solid ${theme.colors.mediumGrey};
 
   ${media.tablet`
-    padding: 0;
+    padding: 10px 0px;
   `}
 `
 
