@@ -9,9 +9,9 @@ import FilteredPagedCardContainer, {
 describe('calculateInitialSelected', () => {
   it.each`
     filterType    | showAllCategoryTitle | expected
-    ${'checkbox'} | ${'foo'}             | ${['foo']}
+    ${'checkbox'} | ${'all'}             | ${['all']}
     ${'checkbox'} | ${''}                | ${[]}
-    ${'radio'}    | ${'foo'}             | ${'foo'}
+    ${'radio'}    | ${'all'}             | ${'all'}
     ${'radio'}    | ${''}                | ${''}
   `(
     'with $filterType filter type returns $expected when show all category is $showAllCategoryTitle',
@@ -31,8 +31,8 @@ describe('calculateSelected', () => {
     filterType    | filterNameSelected | currentlySelected        | showAllCategoryTitle | expected
     ${'checkbox'} | ${'baz'}           | ${['foo', 'bar']}        | ${''}                | ${['foo', 'bar', 'baz']}
     ${'checkbox'} | ${'bar'}           | ${['foo', 'bar', 'baz']} | ${''}                | ${['foo', 'baz']}
-    ${'checkbox'} | ${'foo'}           | ${['foo', 'bar', 'baz']} | ${'foo'}             | ${['foo']}
-    ${'checkbox'} | ${'foo'}           | ${['foo']}               | ${'bar'}             | ${['bar']}
+    ${'checkbox'} | ${'all'}           | ${['bar', 'baz']}        | ${'all'}             | ${['all']}
+    ${'checkbox'} | ${'foo'}           | ${['foo']}               | ${'all'}             | ${['all']}
     ${'radio'}    | ${'bar'}           | ${'foo'}                 | ${''}                | ${'bar'}
   `(
     'with $filterType filter type should return $expected when selected filter is $filterNameSelected, currently selected is $currentlySelected, and show all category is $showAllCategoryTitle',
@@ -60,10 +60,10 @@ describe('calculateShouldShowCard', () => {
     filterType    | selected          | category          | showAllCategoryTitle | expected
     ${'checkbox'} | ${['foo', 'bar']} | ${['etc', 'foo']} | ${''}                | ${true}
     ${'checkbox'} | ${['foo', 'bar']} | ${['baz', 'etc']} | ${''}                | ${false}
-    ${'checkbox'} | ${['foo']}        | ${['baz']}        | ${'foo'}             | ${true}
+    ${'checkbox'} | ${['all']}        | ${['baz']}        | ${'all'}             | ${true}
     ${'radio'}    | ${'foo'}          | ${['foo', 'etc']} | ${''}                | ${true}
     ${'radio'}    | ${'foo'}          | ${['bar', 'etc']} | ${''}                | ${false}
-    ${'radio'}    | ${'foo'}          | ${['baz']}        | ${'foo'}             | ${true}
+    ${'radio'}    | ${'all'}          | ${['baz']}        | ${'all'}             | ${true}
   `(
     'with $filterType filter type should return $expected if category is $category and already selected is $selected',
     ({ filterType, selected, category, showAllCategoryTitle, expected }) => {
@@ -93,7 +93,7 @@ describe('FilteredPagedCardContainer', () => {
     })
   }
 
-  const categories = ['foo', 'bar', 'baz'].map(cat => ({
+  const categories = ['all', 'foo', 'bar'].map(cat => ({
     title: cat,
     hexColour: `#${cat}`,
   }))
@@ -121,7 +121,7 @@ describe('FilteredPagedCardContainer', () => {
         cardContent={cardContent.slice(0, 3)}
         CardComponent={CardComponent}
         pageSize={3}
-        showAllCategoryTitle="foo"
+        showAllCategoryTitle="all"
         categories={categories}
       />
     )
@@ -167,7 +167,7 @@ describe('FilteredPagedCardContainer', () => {
       const wrapper = mountComponent({
         filterType,
         pageSize: 1,
-        showAllCategoryTitle: 'bar',
+        showAllCategoryTitle: 'all',
       })
 
       wrapper
