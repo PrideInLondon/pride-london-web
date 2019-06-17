@@ -22,7 +22,7 @@ const ParadeGroups = () => <NotFoundPage />
 // `
 
 // const TextContainer = styled.div`
-//   padding: 20px;
+//   padding: 20px 0;
 // `
 
 // const mapEntries = paradeGroups => {
@@ -36,7 +36,7 @@ const ParadeGroups = () => <NotFoundPage />
 //     <>
 //       <BannerImage
 //         titleText="Parade groups"
-//         subtitleText="Lorem ipsum dolor sit amet"
+//         subtitleText="Find out more about each group marching in this year’s parade below!"
 //         altText="Parade groups"
 //         imageSrc={background}
 //         imageFullWidth
