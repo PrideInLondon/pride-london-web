@@ -4,6 +4,7 @@ import { media } from '../../../../theme/media'
 
 const StyledLetterLink = styled.a`
   color: ${props => (props.isDisabled ? 'grey' : 'initial')};
+  cursor: ${props => (props.isDisabled ? 'default' : 'pointer')};
   font-size: 16px;
   margin-right: 16px;
   text-decoration: none;
