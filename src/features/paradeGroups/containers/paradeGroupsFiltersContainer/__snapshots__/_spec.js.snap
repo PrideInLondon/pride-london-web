@@ -2,6 +2,9 @@
 
 exports[`ParadeGroupsFilterContainer should render correctly 1`] = `
 <styles__ParadeGroupsFiltersWrapper>
+  <styles__ParadeGroupsFilterLabel>
+    Filter groups by category
+  </styles__ParadeGroupsFilterLabel>
   <FilterButton
     filterName="paradeGroupsFilter"
     filterType={
