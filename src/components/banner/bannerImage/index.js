@@ -28,22 +28,23 @@ const BannerImage = ({
   const wrapper = useRef(null)
   const [height, setHeight] = useState()
   const [width, setWidth] = useState()
-  const setDimensions = debounce(function() {
-    setWidth(wrapper.current.offsetWidth)
-    setHeight(wrapper.current.offsetHeight)
-  }, 250)
 
   useEffect(() => {
+    const setDimensions = debounce(function() {
+      setWidth(wrapper.current.offsetWidth)
+      setHeight(wrapper.current.offsetHeight)
+    }, 250)
+
     if (typeof window !== 'undefined' && videoId) {
       setDimensions()
-      window.addEventListener('resize', setDimensions())
+      window.addEventListener('resize', setDimensions)
     }
     return () => {
       if (typeof window !== 'undefined' && videoId) {
-        window.removeEventListener('resize', setDimensions())
+        window.removeEventListener('resize', setDimensions)
       }
     }
-  }, [setDimensions, videoId])
+  }, [videoId])
 
   return (
     <StyledWrapper
