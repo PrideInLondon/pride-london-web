@@ -112,6 +112,36 @@ const Nav = () => {
                         ],
                       },
                       {
+                        heading: 'Lineup',
+                        links: [
+                          {
+                            title: 'Pride in London Trafalgar Square',
+                            url:
+                              '/events/e0bc2fe9-1563-5c2c-929b-d440d5f7cfd9/',
+                          },
+                          {
+                            title: "Pride in London Women's Area",
+                            url:
+                              '/events/c88f24f1-d97c-5a7a-be4f-3158740c31a8/',
+                          },
+                          {
+                            title: 'Pride in Cabaret Stage',
+                            url:
+                              '/events/1c96cd4e-e29c-5a8e-a530-0d7d1c9f3489/',
+                          },
+                          {
+                            title: 'Pride in London Community Village',
+                            url:
+                              '/events/dc43e038-d3b1-5d73-8b06-c68dc734f9f1/',
+                          },
+                          {
+                            title: 'Pride in London World Area',
+                            url:
+                              '/events/aee4171a-97ba-5a83-8954-b264240d1cee/',
+                          },
+                        ],
+                      },
+                      {
                         heading: 'Stalls',
                         links: [
                           {
