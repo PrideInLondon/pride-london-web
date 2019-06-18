@@ -65,6 +65,7 @@
     "gatsby-source-filesystem": "^2.0.39",
     "gatsby-transformer-sharp": "^2.1.21",
     "js-cookie": "^2.2.0",
+    "lodash.debounce": "^4.0.8",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
     "polished": "^3.4.0",

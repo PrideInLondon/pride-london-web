@@ -21,6 +21,7 @@ export const StyledContainer = styled(Container)`
 
 export const StyledRow = styled(Row)`
   width: 100%;
+  z-index: 1;
 
   ${media.tablet`
     padding-top: ${props => (props.medium ? 120 : 50)}px;
@@ -91,4 +92,24 @@ export const StyledWrapper = styled.div`
   ${media.desktopHD`
     min-height: ${props => props.large && '800px'};
   `};
+`
+
+export const VideoWrapper = styled.div`
+  padding-top: 56.25%;
+  width: ${({ width, height }) =>
+    height / width > 0.5625 ? `${height * (16 / 9)}px` : '100%'};
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `

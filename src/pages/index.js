@@ -162,6 +162,7 @@ const Home = () => (
       color={theme.colors.eucalyptusGreen}
       large
       allowContentUnderflow
+      videoId="76979871"
     >
       <BannerButton wide={false} white primary to="/parade">
         This year's parade
