@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Img from 'gatsby-image/withIEPolyfill'
 import { media } from '../../../theme/media'
 import { Row, Container } from '../../grid'
 
@@ -9,6 +10,7 @@ export const StyledContainer = styled(Container)`
   align-self: stretch;
 
   ${props =>
+    !props.fixed &&
     props.imageSrc &&
     !props.imageFullWidth &&
     css`
@@ -21,6 +23,7 @@ export const StyledContainer = styled(Container)`
 
 export const StyledRow = styled(Row)`
   width: 100%;
+  z-index: 1;
 
   ${media.tablet`
     padding-top: ${props => (props.medium ? 120 : 50)}px;
@@ -33,26 +36,34 @@ export const StyledRow = styled(Row)`
 `
 
 export const StyledWrapper = styled.div`
+  ${({
+    color,
+    large,
+    medium,
+    imageSrc,
+    imageFullWidth,
+    allowContentUnderflow,
+    fixed,
+  }) => css`
   display: flex;
   min-height: 270px;
   overflow: hidden;
   position: relative;
-  background-color: ${props => props.color};
-  min-height: ${props => (props.large || props.medium) && '400px'};
+  background-color: ${color};
+  min-height: ${(large || medium) && '400px'};
 
-  ${props =>
-    props.imageSrc &&
-    props.imageFullWidth &&
+  ${!fixed &&
+    imageSrc &&
+    imageFullWidth &&
     css`
-      background-image: url(${props.imageSrc});
+      background-image: url(${imageSrc});
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
     `}
 
-  ${props =>
-    props.allowContentUnderflow &&
-    (props.large || props.medium) &&
+  ${allowContentUnderflow &&
+    (large || medium) &&
     css`
       ${media.tablet`
         ${StyledRow} {
@@ -61,34 +72,48 @@ export const StyledWrapper = styled.div`
     `};
     `}
 
-  ${props =>
-    props.allowContentUnderflow &&
-    props.medium &&
-    css`
-      ${media.tabletMax`
+    ${allowContentUnderflow &&
+      medium &&
+      css`
+        ${media.tabletMax`
       ${StyledRow} {
         align-self: flex-start;
         padding-top: 20px;
       }
     `};
-    `}
+      `}
 
   ${media.mobile`
-    min-height: ${props => props.large && '400px'};
+    min-height: ${large && '400px'};
   `};
 
   ${media.tablet`
     align-items: center;
-    min-height: ${props => (props.large || props.medium ? '500px' : '400px')};
+    min-height: ${large || medium ? '500px' : '400px'};
     padding: 0;
   `};
 
   ${media.desktop`
-    min-height: ${props =>
-      props.large ? '650px' : props.medium ? '590px' : '400px'};
+    min-height: ${large ? '650px' : medium ? '590px' : '400px'};
   `};
 
   ${media.desktopHD`
-    min-height: ${props => props.large && '800px'};
+    min-height: ${large && '800px'};
+  `};
+`}
+`
+export const ResponsiveImg = styled(Img)`
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  height: 100% !important;
+  width: 100% !important;
+  transform: translate(-50%, -50%);
+
+  ${media.ie11`
+    img {
+      min-height: 100% !important;
+      width: 100% !important;
+    }
   `};
 `
