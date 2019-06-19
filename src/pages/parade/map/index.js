@@ -70,6 +70,9 @@ const Map = styled.iframe`
   & > * {
     background-color: red !important;
   }
+  ${media.tabletMax`
+    height: 100vh !important;
+  `}
 `
 
 // const DownloadPDFButton = styled(Button)`
@@ -166,7 +169,10 @@ const ParadeMap = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={appStoreBadge} />
+                <img
+                  alt="Pride in London on the App Store"
+                  src={appStoreBadge}
+                />
               </AppDownloadButton>
               <AppDownloadButton
                 href="https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en"
@@ -174,7 +180,10 @@ const ParadeMap = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={googlePlayBadge} />
+                <img
+                  alt="Pride in London in the Google Play"
+                  src={googlePlayBadge}
+                />
               </AppDownloadButton>
             </AppDownloadButtons>
             {/* <DownloadPDFLinkMobile href="">

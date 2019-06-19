@@ -63,6 +63,7 @@ exports[`ParadeMap render correctly 1`] = `
               target="_blank"
             >
               <img
+                alt="Pride in London on the App Store"
                 src=""
               />
             </map__AppDownloadButton>
@@ -73,6 +74,7 @@ exports[`ParadeMap render correctly 1`] = `
               target="_blank"
             >
               <img
+                alt="Pride in London in the Google Play"
                 src=""
               />
             </map__AppDownloadButton>
