@@ -232,7 +232,7 @@ const Nav = () => {
                         heading: 'As a business',
                         links: [
                           {
-                            title: 'Become a partner',
+                            title: 'Partner with us',
                             url: '/support-us/partners',
                           },
                           {
