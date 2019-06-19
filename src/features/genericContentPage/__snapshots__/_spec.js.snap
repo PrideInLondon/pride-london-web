@@ -35,6 +35,7 @@ exports[`render methods for Generic Content renders a button component if the id
       "toString": [Function],
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
+      Symbol(Symbol.hasInstance): [Function],
     }
   }
   forwardedRef={null}
