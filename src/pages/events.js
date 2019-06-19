@@ -176,9 +176,10 @@ class Events extends Component {
             />
             <BannerImage
               titleText="What's on"
-              subtitleText="LGBT+ events happening in and around London"
+              subtitleText="Pride Festival: Jun 8 - Jul 6 2019"
               imageSrc={BannerImg}
-              color={theme.colors.skyBlue}
+              color={theme.colors.lightGrey}
+              imageFullWidth
             />
             <OffsetContainer>
               <EventsFilters
