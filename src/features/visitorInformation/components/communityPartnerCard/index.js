@@ -40,6 +40,8 @@ const CardCategories = styled.div`
 `
 const CardBody = styled.div`
   padding: 20px;
+  position: relative;
+  height: 480px;
 
   p,
   ul,
@@ -94,6 +96,12 @@ const CardItemTitle = styled.h4`
 const Social = styled.div`
   display: flex;
   margin-top: 1em;
+  position: absolute;
+  bottom: 20px;
+
+  ${media.tablet`
+    bottom: 30px;
+ `};
 `
 
 const SocialLink = styled.a`
