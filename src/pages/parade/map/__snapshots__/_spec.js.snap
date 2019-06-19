@@ -2,7 +2,7 @@
 
 exports[`ParadeMap render correctly 1`] = `
 <Fragment>
-  <styles__ParadeMapContainer
+  <map__ParadeMapContainer
     mx={0}
   >
     <Column
@@ -36,7 +36,7 @@ exports[`ParadeMap render correctly 1`] = `
         ]
       }
     >
-      <styles__ParadeMapContent>
+      <map__ParadeMapContent>
         <div
           style={
             Object {
@@ -44,26 +44,19 @@ exports[`ParadeMap render correctly 1`] = `
             }
           }
         >
-          <styles__Title>
+          <map__Title>
             Parade map
-          </styles__Title>
-          <styles__Subtitle>
+          </map__Title>
+          <map__Subtitle>
             Use it to find the best places to watch the parade and navigate to the different stages & areas.
-          </styles__Subtitle>
-          <styles__DownloadPDFButton
-            link={true}
-            primary={true}
-            to=""
-          >
-            Download map as a PDF
-          </styles__DownloadPDFButton>
+          </map__Subtitle>
         </div>
-        <styles__BottomSection>
-          <styles__DownloadAppLabel>
+        <map__BottomSection>
+          <map__DownloadAppLabel>
             Download our iOS & Android app to carry the map around with you, internet connection is poor on the day.
-          </styles__DownloadAppLabel>
-          <styles__AppDownloadButtons>
-            <styles__AppDownloadButton
+          </map__DownloadAppLabel>
+          <map__AppDownloadButtons>
+            <map__AppDownloadButton
               aria-label="Download from App Store"
               href="https://itunes.apple.com/gb/app/pride-in-london/id1250496471"
               rel="noopener noreferrer"
@@ -72,8 +65,8 @@ exports[`ParadeMap render correctly 1`] = `
               <img
                 src=""
               />
-            </styles__AppDownloadButton>
-            <styles__AppDownloadButton
+            </map__AppDownloadButton>
+            <map__AppDownloadButton
               aria-label="Download from Google Play"
               href="https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en"
               rel="noopener noreferrer"
@@ -82,15 +75,10 @@ exports[`ParadeMap render correctly 1`] = `
               <img
                 src=""
               />
-            </styles__AppDownloadButton>
-          </styles__AppDownloadButtons>
-          <styles__DownloadPDFLinkMobile
-            href=""
-          >
-            Download map as a PDF
-          </styles__DownloadPDFLinkMobile>
-        </styles__BottomSection>
-      </styles__ParadeMapContent>
+            </map__AppDownloadButton>
+          </map__AppDownloadButtons>
+        </map__BottomSection>
+      </map__ParadeMapContent>
     </Column>
     <Column
       pb={0}
@@ -113,12 +101,12 @@ exports[`ParadeMap render correctly 1`] = `
         ]
       }
     >
-      <styles__Map
+      <map__Map
         allowFullScreen={true}
         frameBorder="0"
         src="https://www.google.com/maps/d/embed?mid=1I5M9Oyc1damFcMhsi6yfODAMD6NXeIxi&z=16&ll=51.51004%2C%20-0.13501&hl=en&output=embed&t=m"
       />
     </Column>
-  </styles__ParadeMapContainer>
+  </map__ParadeMapContainer>
 </Fragment>
 `;
