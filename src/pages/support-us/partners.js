@@ -116,6 +116,7 @@ const Sponsors = ({ data }) => {
         subtitleText="Find out how your company can help us to keep Pride free for everyone"
         color={theme.colors.yellow}
         imageSrc={BannerImg}
+        imageFullWidth
       />
       <CTAWrapper>
         <Container>
