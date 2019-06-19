@@ -5616,10 +5616,10 @@ g-status@^2.0.2:
     matcher "^1.0.0"
     simple-git "^1.85.0"
 
-gatsby-cli@^2.6.9:
-  version "2.6.9"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.6.9.tgz#68cd3d5b29800aaf2a4e3f6d75c0da5506815b05"
-  integrity sha512-WVjcSEBTaS1Qi42+zpfK/34G+1yqsONudVAkOu+06W7N4d/fk9DyoMDJcFm1AaRMwJ/nB51UYaGMpnKloFicBA==
+gatsby-cli@^2.6.13:
+  version "2.6.13"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.6.13.tgz#03194f7a67064e47535ab7c37286a993548cefec"
+  integrity sha512-jYyInlZ8Qup3wbUcuMxqjRFrgsr5VmlxTFS4RwvZylkNZ9+9t+pM8kMR2rv5wrzS5KUQaN+OV0R/jwIp+a+paw==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5640,7 +5640,7 @@ gatsby-cli@^2.6.9:
     is-valid-path "^0.1.1"
     lodash "^4.17.10"
     meant "^1.0.1"
-    node-fetch "2.3.0"
+    node-fetch "^2.6.0"
     object.entries "^1.1.0"
     opentracing "^0.14.3"
     pretty-error "^2.1.1"
@@ -5850,10 +5850,10 @@ gatsby-transformer-sharp@^2.1.21:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby@^2.9.4:
-  version "2.9.6"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.9.6.tgz#b5f6c5bdddb36e462921e7c1180d68d293158034"
-  integrity sha512-HKVPa7x5dKKr3cXpb9aKHqLioTl4s1r2Kh8gIpLLY1DQkcE1WnzWScptWRMBCrAnZxZqnWKkpjcXNLoIFz0idw==
+gatsby@^2.9.11:
+  version "2.9.11"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.9.11.tgz#b5519f1c454d6d12a76211f66a7a77cb11d4c304"
+  integrity sha512-9Dkn4y0P7RIYtTUQSl9+L96R3sonHlaj+RbCxCrrtdH+EWABja2iTPO+qKZWTELFaQkvr+Z3Kfsxed+aRpzmLQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5911,7 +5911,7 @@ gatsby@^2.9.4:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.6.9"
+    gatsby-cli "^2.6.13"
     gatsby-graphiql-explorer "^0.1.2"
     gatsby-link "^2.1.1"
     gatsby-plugin-page-creator "^2.0.13"
@@ -9406,7 +9406,7 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-fetch@^2.2.0:
+node-fetch@^2.2.0, node-fetch@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
