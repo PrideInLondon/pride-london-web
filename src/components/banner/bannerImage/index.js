@@ -52,6 +52,7 @@ const BannerImage = ({
           </StyledRow>
           {fixed && (
             <ResponsiveImg
+              aria-hidden="true"
               objectFit="cover"
               objectPosition="50% 50%"
               fixed={
