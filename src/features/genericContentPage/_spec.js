@@ -1,9 +1,16 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import 'jest-styled-components'
 import { renderEmbeddedEntry, renderFigure } from './renderMethods'
-import { buttonNode, videoNode, imageNode } from './_mocks'
+import {
+  buttonNode,
+  videoNode,
+  imageNode,
+  typeformButtonNode,
+  buttonNullContentNode,
+  notRecognizedNode,
+} from './_mocks'
 import GenericContent from '.'
 
 describe('<GenericContent/>', () => {
@@ -27,6 +34,33 @@ describe('render methods for Generic Content', () => {
 
   it('renders a Figure component for images', () => {
     const wrapper = shallow(renderFigure(imageNode))
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders a typeform button component if the id is button', () => {
+    const wrapper = shallow(renderEmbeddedEntry(typeformButtonNode))
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders a button component if the content is null', () => {
+    const wrapper = shallow(
+      <span>{renderEmbeddedEntry(buttonNullContentNode)}</span>
+    )
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders a null if the id is not recognized', () => {
+    const wrapper = shallow(
+      <span>{renderEmbeddedEntry(notRecognizedNode)}</span>
+    )
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('click on typeform button', () => {
+    const wrapper = mount(renderEmbeddedEntry(typeformButtonNode))
+    expect(toJSON(wrapper)).toMatchSnapshot()
+    const button = wrapper.find('button')
+    button.simulate('click')
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 })

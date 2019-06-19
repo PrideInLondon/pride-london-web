@@ -17,6 +17,23 @@ export const buttonNode = {
   },
 }
 
+export const buttonNullContentNode = {
+  data: {
+    target: {
+      fields: {
+        buttonContent: undefined,
+      },
+      sys: {
+        contentType: {
+          sys: {
+            id: 'button',
+          },
+        },
+      },
+    },
+  },
+}
+
 export const videoNode = {
   data: {
     target: {
@@ -52,6 +69,40 @@ export const imageNode = {
             },
             fileName: 'image.jpg',
             url: 'src',
+          },
+        },
+      },
+    },
+  },
+}
+
+export const typeformButtonNode = {
+  data: {
+    target: {
+      fields: {
+        buttonContent: { 'en-GB': 'Button typeform type' },
+        buttonHref: { 'en-GB': 'https://prideinlondon.typeform.com/to/Z3WuCL' },
+        buttonPrimary: { 'en-GB': true },
+      },
+      sys: {
+        contentType: {
+          sys: {
+            id: 'button',
+          },
+        },
+      },
+    },
+  },
+}
+
+export const notRecognizedNode = {
+  data: {
+    target: {
+      fields: {},
+      sys: {
+        contentType: {
+          sys: {
+            id: 'not-recognized',
           },
         },
       },

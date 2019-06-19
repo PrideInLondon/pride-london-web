@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { BLOCKS } from '@contentful/rich-text-types'
 import styled from 'styled-components'
+import { ReactTypeformEmbed } from 'react-typeform-embed'
 import Button from '../../components/button'
 import Figure from './components/figure'
 import Video from './components/video'
@@ -12,13 +13,49 @@ const StyledButton = styled(Button)`
 
 export const renderFigure = node => <Figure {...node.data.target.fields} />
 
+const renderStyledButton = ({ primary, to, content }) => (
+  <StyledButton primary={primary} to={to}>
+    {content}
+  </StyledButton>
+)
+
+const renderTypeformButton = ({ primary, content, to }) => {
+  let typeformEmbed = null
+
+  const openForm = () => {
+    if (typeformEmbed && typeformEmbed.typeform) {
+      typeformEmbed.typeform.open()
+    }
+  }
+
+  return (
+    <span>
+      <ReactTypeformEmbed
+        popup
+        autoOpen={false}
+        url={to}
+        style={{ zIndex: -1 }}
+        hideHeaders
+        hideFooter
+        mode="drawer_left"
+        ref={tf => {
+          typeformEmbed = tf
+        }}
+        autoClose={5}
+      />
+      <StyledButton primary={primary} onClick={openForm}>
+        {content}
+      </StyledButton>
+    </span>
+  )
+}
+
 const renderButton = node => {
   const {
     data: {
       target: { fields },
     },
   } = node
-
   if (
     typeof fields === 'undefined' ||
     typeof fields.buttonContent === 'undefined'
@@ -27,12 +64,14 @@ const renderButton = node => {
   }
 
   const primary = fields.buttonPrimary['en-GB']
+  const to = fields.buttonHref['en-GB']
+  const content = fields.buttonContent ? fields.buttonContent['en-GB'] : null
 
-  return (
-    <StyledButton primary={primary} to={fields.buttonHref['en-GB']}>
-      {fields.buttonContent && fields.buttonContent['en-GB']}
-    </StyledButton>
-  )
+  if (to.indexOf('prideinlondon.typeform.com') > -1) {
+    return renderTypeformButton({ primary, to, content })
+  }
+
+  return renderStyledButton({ primary, to, content })
 }
 
 const renderVideo = ({ data }) => <Video {...data.target.fields} />
@@ -57,6 +96,18 @@ export default {
 
 renderFigure.propTypes = {
   data: PropTypes.object.isRequired,
+}
+
+renderStyledButton.propTypes = {
+  primary: PropTypes.bool.isRequired,
+  to: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+}
+
+renderTypeformButton.propTypes = {
+  primary: PropTypes.bool.isRequired,
+  to: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 }
 
 renderButton.propTypes = {
