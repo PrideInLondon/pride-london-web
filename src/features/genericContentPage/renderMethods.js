@@ -67,7 +67,9 @@ const renderButton = node => {
   const to = fields.buttonHref['en-GB']
   const content = fields.buttonContent ? fields.buttonContent['en-GB'] : null
 
-  if (to.startsWith('https://prideinlondon.typeform.com')) {
+  const typeformUrl = 'https://prideinlondon.typeform.com'
+
+  if (to.substr(0, typeformUrl.length) === typeformUrl) {
     return renderTypeformButton({ primary, to, content })
   }
 
