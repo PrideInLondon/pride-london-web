@@ -6,7 +6,6 @@ import Helmet from 'react-helmet'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
 import { Container, Row, Column } from '../grid'
-// import CloseIcon from '../icons/closeIcon'
 
 const CookieWrapper = styled.div`
   color: ${theme.colors.white};
@@ -54,28 +53,6 @@ const CookieAgree = styled.a`
   }
 `
 
-// const CookieDismiss = styled.a`
-//   display: block;
-//   padding: 5px;
-//   margin-left: 20px;
-//   cursor: pointer;
-//   svg {
-//     g {
-//       transition: stroke 0.15s linear;
-//       stroke: ${theme.colors.white};
-//     }
-//   }
-
-//   &:hover,
-//   &:focus {
-//     svg {
-//       g {
-//         stroke: ${theme.colors.eucalyptusGreen};
-//       }
-//     }
-//   }
-// `
-
 const gtm = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -113,11 +90,6 @@ const CookieNotice = () => {
     setCookie('accepted')
   }
 
-  // const handleDismiss = e => {
-  //   e.preventDefault()
-  //   setCookie('rejected')
-  // }
-
   return (
     <>
       {cookie === 'accepted' && loadGTM()}
@@ -136,12 +108,6 @@ const CookieNotice = () => {
                 <CookieAgree role="button" onClick={handleAgree}>
                   Got it
                 </CookieAgree>
-                {/* <CookieDismiss
-                  aria-label="I do not agree and close"
-                  onClick={handleDismiss}
-                >
-                  <CloseIcon />
-                </CookieDismiss> */}
               </CookieActions>
             </Row>
           </Container>
