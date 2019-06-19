@@ -54,12 +54,6 @@ exports[`<CookieNotice /> renders and matches snapshot 1`] = `
           >
             Got it
           </cookieNotice__CookieAgree>
-          <cookieNotice__CookieDismiss
-            aria-label="I do not agree and close"
-            onClick={[Function]}
-          >
-            <CloseIcon />
-          </cookieNotice__CookieDismiss>
         </cookieNotice__CookieActions>
       </Row>
     </grid__Container>
