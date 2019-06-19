@@ -225,7 +225,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "As a business",
                       "links": Array [
                         Object {
-                          "title": "Become a partner",
+                          "title": "Partner with us",
                           "url": "/support-us/partners",
                         },
                         Object {
