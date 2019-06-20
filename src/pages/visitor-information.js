@@ -44,27 +44,29 @@ const VisitorInformationPage = ({
           culpa qui officia deserunt.
         </p>
       </PageIntro>
-      <GreyWrapper as="section">
-        <Container>
-          <Row>
-            <Column width={1}>
-              <SectionTitle>2019 Partners</SectionTitle>
-            </Column>
-          </Row>
-        </Container>
-        <FilteredPagedCardContainer
-          filterType="checkbox"
-          categories={communityPartnerCategories}
-          showAllCategoryTitle="Everything"
-          cardContent={partners.map(({ node: partner }) => ({
-            id: partner.venueName,
-            category: partner.category,
-            partner,
-          }))}
-          CardComponent={CommunityPartnerCard}
-          showMoreButtonText="Show more partners"
-        />
-      </GreyWrapper>
+      {partners && (
+        <GreyWrapper as="section">
+          <Container>
+            <Row>
+              <Column width={1}>
+                <SectionTitle>2019 Partners</SectionTitle>
+              </Column>
+            </Row>
+          </Container>
+          <FilteredPagedCardContainer
+            filterType="checkbox"
+            categories={communityPartnerCategories}
+            showAllCategoryTitle="Everything"
+            cardContent={partners.map(({ node: partner }) => ({
+              id: partner.venueName,
+              category: partner.category,
+              partner,
+            }))}
+            CardComponent={CommunityPartnerCard}
+            showMoreButtonText="Show more partners"
+          />
+        </GreyWrapper>
+      )}
     </div>
   )
 }
