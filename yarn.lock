@@ -6047,7 +6047,7 @@ gatsby-source-contentful@^2.0.75:
     lodash "^4.17.10"
     qs "^6.4.0"
 
-gatsby-source-filesystem@^2.0.39, gatsby-source-filesystem@^2.1.0:
+gatsby-source-filesystem@^2.0.43, gatsby-source-filesystem@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.0.tgz#221dcd711f093fae700bb78d5d5c3854d051f36b"
   integrity sha512-XBtu9eY7xtQB7PnGtEJ3k2C7yRjYuwvP25fcdq22zWxxWgvXdA70bjO/o23X6G1ZO3r6rO8b6RZKyHBiUfIVlw==
