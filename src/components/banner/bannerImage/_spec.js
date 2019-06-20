@@ -6,6 +6,11 @@ import BannerSubtitle from '../bannerSubtitle'
 import BannerImage from '.'
 import 'jest-styled-components'
 
+jest.mock('gatsby-image/withIEPolyfill', () => {
+  const Img = require('gatsby-image')
+  return Img
+})
+
 describe('<BannerImage />', () => {
   it('renders the component <BannerImage />', () => {
     const wrapper = shallow(<BannerImage />)

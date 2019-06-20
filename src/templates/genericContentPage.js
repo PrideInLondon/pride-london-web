@@ -68,6 +68,7 @@ export default class GenericContentPage extends Component {
           imageSrc={bannerImage && responsiveBannerUrl(bannerImage.file.url)}
           color={bannerColor || theme.colors.beachBlue}
           imageFullWidth
+          fixed={bannerImage}
         />
         <PageWrapper>
           <Container>
@@ -97,6 +98,15 @@ export const query = graphql`
         id
         file {
           url
+        }
+        desktop: fixed(width: 1600) {
+          ...GatsbyContentfulFixed_withWebp
+        }
+        tablet: fixed(width: 800) {
+          ...GatsbyContentfulFixed_withWebp
+        }
+        mobile: fixed(width: 400) {
+          ...GatsbyContentfulFixed_withWebp
         }
       }
       bannerColor
