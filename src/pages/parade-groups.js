@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 // import PropTypes from 'prop-types'
 // import styled from 'styled-components'
 import { graphql } from 'gatsby'
 // import BannerImage from '../components/banner/bannerImage'
 // import background from '../theme/assets/images/banners/parade-groups/bg@2x.jpg'
+import Intercom from '../components/intercom'
 import NotFoundPage from './404'
 // import ParadeGroupsContainer from '../features/paradeGroups/containers/paradeGroupsContainer'
 // import { media } from '../theme/media'
 // import { paradeGroupCategories } from '../constants'
 
-const ParadeGroups = () => <NotFoundPage />
+const ParadeGroups = () => (
+  <Fragment>
+    <NotFoundPage />
+    <Intercom />
+  </Fragment>
+)
 
 // const Container = styled.div`
 //   position: relative;
