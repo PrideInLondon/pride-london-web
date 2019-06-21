@@ -67,7 +67,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "Campaigns",
                       "links": Array [
                         Object {
-                          "title": "Jubilee",
+                          "title": "#PrideJubilee",
                           "url": "/about-us/campaigns/jubilee",
                         },
                       ],
@@ -107,7 +107,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       ],
                     },
                     Object {
-                      "heading": "Lineup",
+                      "heading": "Line up",
                       "links": Array [
                         Object {
                           "title": "Cabaret Stage",
