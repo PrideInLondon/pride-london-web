@@ -27,38 +27,13 @@ const ParadeMapContent = styled.div`
   `}
 `
 
-const Title = styled.h1`
-  display: inline-block;
-  background-color: ${theme.colors.indigo};
-  padding: 0 7px;
-  font-size: 36px;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.21;
-  letter-spacing: normal;
-  color: ${theme.colors.white};
-  ${media.tablet`
-    font-size: 46px;
-  `}
-  ${media.desktop`
-    font-size: 56px;
-  `}
-`
+const Title = styled.h1``
 
 const Subtitle = styled.p`
+  font-family: Roboto;
   margin-top: 18px;
-  margin-bottom: 30px;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: ${theme.colors.indigo};
   ${media.tablet`
-    font-size: 22px;
     margin-top: 10px;
-  `}
-  ${media.desktop`
-    font-size: 24px;
   `}
 `
 
@@ -76,6 +51,7 @@ const Map = styled.iframe`
 `
 
 const DownloadPDFButton = styled(Button)`
+  margin: 30px 0;
   ${media.tabletMax`
     display: none;
   `}
@@ -90,7 +66,7 @@ const DownloadPDFLinkMobile = styled.a`
   border-bottom: 2px solid ${theme.colors.eucalyptusGreen};
   transition: color 0.15s linear;
   cursor: pointer;
-  margin-top: 30px;
+  margin-bottom: 30px;
   &:hover,
   &:focus {
     color: ${theme.colors.eucalyptusGreen};
@@ -100,22 +76,18 @@ const DownloadPDFLinkMobile = styled.a`
   `}
 `
 
-const BottomSection = styled.div`
-  padding-bottom: 50px;
-  margin-top: auto;
-`
-
 const DownloadAppLabel = styled.p`
   font-family: Roboto;
   color: ${theme.colors.darkGrey};
   font-size: 14px;
   line-height: 1.29;
+  margin-top: 10px;
 `
 
 const AppDownloadButtons = styled.div`
   margin-bottom: 30px;
   ${media.tablet`
-    margin-bottom: 0;
+    margin-bottom: 5px;
   `}
 `
 
@@ -149,59 +121,57 @@ const ParadeMap = () => {
       <ParadeMapContainer mx={0}>
         <Column
           width={[1, 1, 0.5, 0.45, 0.4]}
-          pt={[60, 60, 0]}
+          pt={[40, 40, 0]}
           pb={0}
           pl={[20, 20, 20, 30, 90]}
           pr={20}
         >
           <ParadeMapContent>
-            <div style={{ marginTop: 'auto' }}>
-              <Title>Parade map</Title>
-              <Subtitle>
-                Use it to find the best places to watch the parade and navigate
-                to the different stages & areas.
-              </Subtitle>
-              {mapPdfLink && (
-                <DownloadPDFButton link primary to={mapPdfLink}>
-                  Download map as a PDF
-                </DownloadPDFButton>
-              )}
-            </div>
-            <BottomSection>
-              <DownloadAppLabel>
-                Download our iOS & Android app to carry the map around with you,
-                internet connection is poor on the day.
-              </DownloadAppLabel>
-              <AppDownloadButtons>
-                <AppDownloadButton
-                  href={appStoreUrl}
-                  aria-label="Download from App Store"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    alt="Pride in London on the App Store"
-                    src={appStoreBadge}
-                  />
-                </AppDownloadButton>
-                <AppDownloadButton
-                  href={googlePlayUrl}
-                  aria-label="Download from Google Play"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    alt="Pride in London in the Google Play"
-                    src={googlePlayBadge}
-                  />
-                </AppDownloadButton>
-              </AppDownloadButtons>
-              {mapPdfLink && (
-                <DownloadPDFLinkMobile href={mapPdfLink}>
-                  Download map as a PDF
-                </DownloadPDFLinkMobile>
-              )}
-            </BottomSection>
+            <Title>Parade map</Title>
+            <Subtitle>
+              We've created an interactive map to help you find your way around
+              on Parade day. Use it to find the best place to watch the Parade,
+              find your way to our different stages/areas and find important
+              amenities like water refill stations and toilets.
+            </Subtitle>
+            {mapPdfLink && (
+              <DownloadPDFButton link primary to={mapPdfLink}>
+                Download map as a PDF
+              </DownloadPDFButton>
+            )}
+            <DownloadAppLabel>
+              There's always poor internet connection on the day, so it's a good
+              idea to download our app to carry the map with you offline.
+            </DownloadAppLabel>
+            <AppDownloadButtons>
+              <AppDownloadButton
+                href={appStoreUrl}
+                aria-label="Download from App Store"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Pride in London on the App Store"
+                  src={appStoreBadge}
+                />
+              </AppDownloadButton>
+              <AppDownloadButton
+                href={googlePlayUrl}
+                aria-label="Download from Google Play"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Pride in London in the Google Play"
+                  src={googlePlayBadge}
+                />
+              </AppDownloadButton>
+            </AppDownloadButtons>
+            {mapPdfLink && (
+              <DownloadPDFLinkMobile href={mapPdfLink}>
+                Download map as a PDF
+              </DownloadPDFLinkMobile>
+            )}
           </ParadeMapContent>
         </Column>
         <Column width={[1, 1, 0.5, 0.55, 0.6]} pt={[0]} px={0} pb={0}>

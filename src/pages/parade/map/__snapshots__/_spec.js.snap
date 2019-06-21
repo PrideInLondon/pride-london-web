@@ -19,8 +19,8 @@ exports[`ParadeMap render correctly 1`] = `
       pr={20}
       pt={
         Array [
-          60,
-          60,
+          40,
+          40,
           0,
         ]
       }
@@ -37,49 +37,39 @@ exports[`ParadeMap render correctly 1`] = `
       }
     >
       <map__ParadeMapContent>
-        <div
-          style={
-            Object {
-              "marginTop": "auto",
-            }
-          }
-        >
-          <map__Title>
-            Parade map
-          </map__Title>
-          <map__Subtitle>
-            Use it to find the best places to watch the parade and navigate to the different stages & areas.
-          </map__Subtitle>
-        </div>
-        <map__BottomSection>
-          <map__DownloadAppLabel>
-            Download our iOS & Android app to carry the map around with you, internet connection is poor on the day.
-          </map__DownloadAppLabel>
-          <map__AppDownloadButtons>
-            <map__AppDownloadButton
-              aria-label="Download from App Store"
-              href="https://itunes.apple.com/gb/app/pride-in-london/id1250496471"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img
-                alt="Pride in London on the App Store"
-                src=""
-              />
-            </map__AppDownloadButton>
-            <map__AppDownloadButton
-              aria-label="Download from Google Play"
-              href="https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img
-                alt="Pride in London in the Google Play"
-                src=""
-              />
-            </map__AppDownloadButton>
-          </map__AppDownloadButtons>
-        </map__BottomSection>
+        <map__Title>
+          Parade map
+        </map__Title>
+        <map__Subtitle>
+          We've created an interactive map to help you find your way around on Parade day. Use it to find the best place to watch the Parade, find your way to our different stages/areas and find important amenities like water refill stations and toilets.
+        </map__Subtitle>
+        <map__DownloadAppLabel>
+          There's always poor internet connection on the day, so it's a good idea to download our app to carry the map with you offline.
+        </map__DownloadAppLabel>
+        <map__AppDownloadButtons>
+          <map__AppDownloadButton
+            aria-label="Download from App Store"
+            href="https://itunes.apple.com/gb/app/pride-in-london/id1250496471"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Pride in London on the App Store"
+              src=""
+            />
+          </map__AppDownloadButton>
+          <map__AppDownloadButton
+            aria-label="Download from Google Play"
+            href="https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Pride in London in the Google Play"
+              src=""
+            />
+          </map__AppDownloadButton>
+        </map__AppDownloadButtons>
       </map__ParadeMapContent>
     </Column>
     <Column
