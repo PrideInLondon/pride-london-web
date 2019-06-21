@@ -106,7 +106,7 @@ exports[`ParadeMap render correctly 1`] = `
       <map__Map
         allowFullScreen={true}
         frameBorder="0"
-        src="https://www.google.com/maps/d/embed?mid=1I5M9Oyc1damFcMhsi6yfODAMD6NXeIxi&z=16&ll=51.51004%2C%20-0.13501&hl=en&output=embed&t=m"
+        src="https://www.google.com/maps/d/embed?mid=1I5M9Oyc1damFcMhsi6yfODAMD6NXeIxi&z=16&ll=51.51004%2C%20-0.13501&hl=en&output=embed&t=m&style=feature%3Apoi%7Cvisibility%3Aoff"
       />
     </Column>
   </map__ParadeMapContainer>
