@@ -4,6 +4,7 @@ exports[`<BannerImage /> renders the component <BannerImage /> 1`] = `
 <styles__StyledWrapper
   allowContentUnderflow={false}
   color=""
+  fixed={null}
   imageFullWidth={false}
   imageSrc=""
   large={false}
@@ -16,6 +17,7 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
 <styles__StyledWrapper
   allowContentUnderflow={false}
   color=""
+  fixed={null}
   imageFullWidth={false}
   imageSrc=""
   large={false}
@@ -23,6 +25,7 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
   role="banner"
 >
   <styles__StyledContainer
+    fixed={null}
     imageFullWidth={false}
     imageSrc=""
     mx="auto"
@@ -61,6 +64,7 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
 <styles__StyledWrapper
   allowContentUnderflow={false}
   color=""
+  fixed={null}
   imageFullWidth={false}
   imageSrc=""
   large={false}
@@ -68,6 +72,7 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
   role="banner"
 >
   <styles__StyledContainer
+    fixed={null}
     imageFullWidth={false}
     imageSrc=""
     mx="auto"
