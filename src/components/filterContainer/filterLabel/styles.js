@@ -27,7 +27,7 @@ export const Label = styled.label`
   font-size: 1rem;
   height: 32px;
   justify-content: center;
-  padding: 0 10px;
+  padding: 0 20px;
   margin-right: 10px;
   margin-bottom: 10px;
   white-space: nowrap;
