@@ -42,7 +42,6 @@ const CardBody = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  min-height: 480px;
 
   p,
   ul,
@@ -53,9 +52,14 @@ const CardBody = styled.div`
     line-height: 1.3;
   }
 
+  ${media.mobile`
+    min-height: unset;
+  `};
+
   ${media.tablet`
     padding: 30px;
- `};
+    min-height: 480px;
+  `};
 `
 const CardCategory = styled(Category)`
   margin-bottom: 10px;
@@ -97,7 +101,14 @@ const CardItemTitle = styled.h4`
 
 const Social = styled.div`
   display: flex;
-  margin-top: auto;
+
+  ${media.mobile`
+    margin-top: 20px;
+  `};
+
+  ${media.tablet`
+    margin-top: auto;
+  `};
 `
 
 const SocialLink = styled.a`
