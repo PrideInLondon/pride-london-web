@@ -53,8 +53,6 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
         newFilter === paradeGroupCategories[0] // TODO Reliance on magic array position
           ? paradeGroups
           : paradeGroups.filter(paradeGroup => {
-              console.log(paradeGroup)
-              console.log(newFilter)
               return (
                 paradeGroup.category &&
                 paradeGroup.category.includes(newFilter.api)
