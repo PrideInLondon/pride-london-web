@@ -86,7 +86,7 @@ const query = graphql`
               quality: 90
               cropFocus: FACE
             ) {
-              ...GatsbyContentfulFixed
+              ...GatsbyContentfulFixed_withWebp
             }
           }
         }
