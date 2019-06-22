@@ -26,7 +26,7 @@ Check the [issues](https://github.com/PrideInLondon/pride-london-web/issues) sec
 npm install --global gatsby-cli
 ```
 
-2.  Pull the repo.
+2.  Pull the repository.
 3.  Install nvm from [here](https://github.com/creationix/nvm)
 4.  Make sure you're using the correct version of node `nvm use`
 5.  Ensure you have [yarn](https://yarnpkg.com/en/docs/install) installed. 
