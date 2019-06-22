@@ -600,7 +600,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -610,7 +610,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -629,7 +629,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 gqJkVP"
+                                        className="styles__Label-sc-1wu4f6z-0 cGlsrw"
                                         htmlFor="all"
                                         tabIndex="0"
                                       >
@@ -757,7 +757,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -767,7 +767,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -786,7 +786,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 VUpCb"
+                                        className="styles__Label-sc-1wu4f6z-0 gdJNpr"
                                         htmlFor="foo"
                                         tabIndex="0"
                                       >
@@ -914,7 +914,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -924,7 +924,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -943,7 +943,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 iLlQa"
+                                        className="styles__Label-sc-1wu4f6z-0 gBUgEB"
                                         htmlFor="bar"
                                         tabIndex="0"
                                       >
@@ -3115,7 +3115,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -3125,7 +3125,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -3144,7 +3144,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 gqJkVP"
+                                        className="styles__Label-sc-1wu4f6z-0 cGlsrw"
                                         htmlFor="all"
                                         tabIndex="0"
                                       >
@@ -3272,7 +3272,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -3282,7 +3282,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -3301,7 +3301,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 VUpCb"
+                                        className="styles__Label-sc-1wu4f6z-0 gdJNpr"
                                         htmlFor="foo"
                                         tabIndex="0"
                                       >
@@ -3429,7 +3429,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -3439,7 +3439,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -3458,7 +3458,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 iLlQa"
+                                        className="styles__Label-sc-1wu4f6z-0 gBUgEB"
                                         htmlFor="bar"
                                         tabIndex="0"
                                       >
@@ -4888,7 +4888,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -4898,7 +4898,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -4917,7 +4917,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 gqJkVP"
+                                        className="styles__Label-sc-1wu4f6z-0 cGlsrw"
                                         htmlFor="all"
                                         tabIndex="0"
                                       >
@@ -5045,7 +5045,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -5055,7 +5055,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -5074,7 +5074,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 VUpCb"
+                                        className="styles__Label-sc-1wu4f6z-0 gdJNpr"
                                         htmlFor="foo"
                                         tabIndex="0"
                                       >
@@ -5202,7 +5202,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -5212,7 +5212,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -5231,7 +5231,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 iLlQa"
+                                        className="styles__Label-sc-1wu4f6z-0 gBUgEB"
                                         htmlFor="bar"
                                         tabIndex="0"
                                       >
@@ -6592,7 +6592,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -6602,7 +6602,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -6621,7 +6621,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 gqJkVP"
+                                        className="styles__Label-sc-1wu4f6z-0 cGlsrw"
                                         htmlFor="all"
                                         tabIndex="0"
                                       >
@@ -6749,7 +6749,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -6759,7 +6759,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -6778,7 +6778,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 VUpCb"
+                                        className="styles__Label-sc-1wu4f6z-0 gdJNpr"
                                         htmlFor="foo"
                                         tabIndex="0"
                                       >
@@ -6906,7 +6906,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -6916,7 +6916,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -6935,7 +6935,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 iLlQa"
+                                        className="styles__Label-sc-1wu4f6z-0 gBUgEB"
                                         htmlFor="bar"
                                         tabIndex="0"
                                       >
@@ -9103,7 +9103,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -9113,7 +9113,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -9132,7 +9132,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 gqJkVP"
+                                        className="styles__Label-sc-1wu4f6z-0 cGlsrw"
                                         htmlFor="all"
                                         tabIndex="0"
                                       >
@@ -9260,7 +9260,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -9270,7 +9270,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -9289,7 +9289,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 VUpCb"
+                                        className="styles__Label-sc-1wu4f6z-0 gdJNpr"
                                         htmlFor="foo"
                                         tabIndex="0"
                                       >
@@ -9417,7 +9417,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -9427,7 +9427,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -9446,7 +9446,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 iLlQa"
+                                        className="styles__Label-sc-1wu4f6z-0 gBUgEB"
                                         htmlFor="bar"
                                         tabIndex="0"
                                       >
@@ -10872,7 +10872,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -10882,7 +10882,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -10901,7 +10901,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 gqJkVP"
+                                        className="styles__Label-sc-1wu4f6z-0 cGlsrw"
                                         htmlFor="all"
                                         tabIndex="0"
                                       >
@@ -11029,7 +11029,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -11039,7 +11039,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -11058,7 +11058,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 VUpCb"
+                                        className="styles__Label-sc-1wu4f6z-0 gdJNpr"
                                         htmlFor="foo"
                                         tabIndex="0"
                                       >
@@ -11186,7 +11186,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__Label-sc-1wu4f6z-0",
                                             "isStatic": false,
-                                            "lastClassName": "iLlQa",
+                                            "lastClassName": "gBUgEB",
                                             "rules": Array [
                                               "align-items:center;border:2px solid;background-color:",
                                               [Function],
@@ -11196,7 +11196,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                               [Function],
                                               ";cursor:pointer;display:flex;font-family:",
                                               "Poppins, sans-serif",
-                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+                                              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
                                             ],
                                           },
                                           "displayName": "styles__Label",
@@ -11215,7 +11215,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                       tabIndex="0"
                                     >
                                       <label
-                                        className="styles__Label-sc-1wu4f6z-0 iLlQa"
+                                        className="styles__Label-sc-1wu4f6z-0 gBUgEB"
                                         htmlFor="bar"
                                         tabIndex="0"
                                       >

@@ -23,7 +23,7 @@ exports[`FilterLabel renders when not selected 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "styles__Label-sc-1wu4f6z-0",
             "isStatic": false,
-            "lastClassName": "iCqvVS",
+            "lastClassName": "fekPyo",
             "rules": Array [
               "align-items:center;border:2px solid;background-color:",
               [Function],
@@ -33,7 +33,7 @@ exports[`FilterLabel renders when not selected 1`] = `
               [Function],
               ";cursor:pointer;display:flex;font-family:",
               "Poppins, sans-serif",
-              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
             ],
           },
           "displayName": "styles__Label",
@@ -52,7 +52,7 @@ exports[`FilterLabel renders when not selected 1`] = `
       tabIndex="0"
     >
       <label
-        className="styles__Label-sc-1wu4f6z-0 iCqvVS"
+        className="styles__Label-sc-1wu4f6z-0 fekPyo"
         htmlFor="foo"
         tabIndex="0"
       >
@@ -181,7 +181,7 @@ exports[`FilterLabel renders when selected 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "styles__Label-sc-1wu4f6z-0",
             "isStatic": false,
-            "lastClassName": "dqvWqB",
+            "lastClassName": "jsCQny",
             "rules": Array [
               "align-items:center;border:2px solid;background-color:",
               [Function],
@@ -191,7 +191,7 @@ exports[`FilterLabel renders when selected 1`] = `
               [Function],
               ";cursor:pointer;display:flex;font-family:",
               "Poppins, sans-serif",
-              ";font-size:1rem;height:32px;justify-content:center;padding:0 10px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
+              ";font-size:1rem;height:32px;justify-content:center;padding:0 20px;margin-right:10px;margin-bottom:10px;white-space:nowrap;",
             ],
           },
           "displayName": "styles__Label",
@@ -210,7 +210,7 @@ exports[`FilterLabel renders when selected 1`] = `
       tabIndex="0"
     >
       <label
-        className="styles__Label-sc-1wu4f6z-0 dqvWqB"
+        className="styles__Label-sc-1wu4f6z-0 jsCQny"
         htmlFor="foo"
         tabIndex="0"
       >
