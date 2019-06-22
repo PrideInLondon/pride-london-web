@@ -64,7 +64,6 @@ const CardCategory = styled(Category)`
 
 const CardItem = styled.div`
   display: flex;
-  margin-bottom: 1em;
 `
 const IconWrapper = styled.div`
   margin-right: 15px;
