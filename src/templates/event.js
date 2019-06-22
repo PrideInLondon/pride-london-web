@@ -128,7 +128,6 @@ export default class Event extends Component {
 
     const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
     const metaUrl = siteUrl + pathname
-    console.log(individualEventPicture)
     return (
       <PageWrapper>
         <Helmet
@@ -347,13 +346,28 @@ export const eventPageQuery = graphql`
         }
         title
         description
-        desktop: fixed(width: 1600) {
+        desktop: fixed(
+          width: 1600
+          resizingBehavior: FILL
+          quality: 100
+          cropFocus: FACE
+        ) {
           ...GatsbyContentfulFixed_withWebp
         }
-        tablet: fixed(width: 800) {
+        tablet: fixed(
+          width: 800
+          resizingBehavior: FILL
+          quality: 100
+          cropFocus: FACE
+        ) {
           ...GatsbyContentfulFixed_withWebp
         }
-        mobile: fixed(width: 400) {
+        mobile: fixed(
+          width: 400
+          resizingBehavior: FILL
+          quality: 100
+          cropFocus: FACE
+        ) {
           ...GatsbyContentfulFixed_withWebp
         }
       }
