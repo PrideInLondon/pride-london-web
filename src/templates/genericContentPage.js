@@ -99,13 +99,28 @@ export const query = graphql`
         file {
           url
         }
-        desktop: fixed(width: 1600) {
+        desktop: fixed(
+          width: 1600
+          resizingBehavior: FILL
+          quality: 100
+          cropFocus: FACE
+        ) {
           ...GatsbyContentfulFixed_withWebp
         }
-        tablet: fixed(width: 800) {
+        tablet: fixed(
+          width: 800
+          resizingBehavior: FILL
+          quality: 100
+          cropFocus: FACE
+        ) {
           ...GatsbyContentfulFixed_withWebp
         }
-        mobile: fixed(width: 400) {
+        mobile: fixed(
+          width: 400
+          resizingBehavior: FILL
+          quality: 100
+          cropFocus: FACE
+        ) {
           ...GatsbyContentfulFixed_withWebp
         }
       }
