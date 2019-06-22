@@ -4,6 +4,7 @@ import FilteredPagedCardContainer, {
   calculateInitialSelected,
   calculateSelected,
   calculateShouldShowCard,
+  calculateAvailableCategories,
 } from './'
 
 describe('calculateInitialSelected', () => {
@@ -79,6 +80,37 @@ describe('calculateShouldShowCard', () => {
   )
 })
 
+describe('calculateAvailableCategories', () => {
+  it.each`
+    cardCategories           | expected
+    ${['foo', 'bar', 'baz']} | ${[{ title: 'all' }, { title: 'foo' }, { title: 'bar' }, { title: 'baz' }]}
+    ${['bar', 'baz']}        | ${[{ title: 'all' }, { title: 'bar' }, { title: 'baz' }]}
+    ${[]}                    | ${[]}
+  `(
+    'should return $expected if categories are $categories and card categories are $cardCategories',
+    ({ cardCategories, expected }) => {
+      const categories = [
+        { title: 'all' },
+        { title: 'foo' },
+        { title: 'bar' },
+        { title: 'baz' },
+      ]
+      const cardContent = cardCategories.map(category => ({
+        category: [category],
+      }))
+      const showAllCategoryTitle = 'all'
+
+      const availableCategories = calculateAvailableCategories(
+        categories,
+        showAllCategoryTitle,
+        cardContent
+      )
+
+      expect(availableCategories).toEqual(expected)
+    }
+  )
+})
+
 describe('FilteredPagedCardContainer', () => {
   // eslint-disable-next-line react/prop-types
   const CardComponent = ({ text }) => <div>{text}</div>
@@ -105,6 +137,7 @@ describe('FilteredPagedCardContainer', () => {
         categories={categories}
         cardContent={cardContent}
         CardComponent={CardComponent}
+        showAllCategoryTitle="all"
         {...overrideProps}
       />
     )
@@ -167,7 +200,6 @@ describe('FilteredPagedCardContainer', () => {
       const wrapper = mountComponent({
         filterType,
         pageSize: 1,
-        showAllCategoryTitle: 'all',
       })
 
       wrapper

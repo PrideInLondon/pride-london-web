@@ -187,7 +187,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
   }
   filterType="checkbox"
   pageSize={3}
-  showAllCategoryTitle=""
+  showAllCategoryTitle="all"
   showMoreButtonText="Show more"
 >
   <FilterContainer
@@ -4475,7 +4475,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
   }
   filterType="checkbox"
   pageSize={6}
-  showAllCategoryTitle=""
+  showAllCategoryTitle="all"
   showMoreButtonText="Show more"
 >
   <FilterContainer
@@ -6183,7 +6183,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
   }
   filterType="radio"
   pageSize={3}
-  showAllCategoryTitle=""
+  showAllCategoryTitle="all"
   showMoreButtonText="Show more"
 >
   <FilterContainer
@@ -10463,7 +10463,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
   }
   filterType="radio"
   pageSize={6}
-  showAllCategoryTitle=""
+  showAllCategoryTitle="all"
   showMoreButtonText="Show more"
 >
   <FilterContainer

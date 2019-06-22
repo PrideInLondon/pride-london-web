@@ -64,6 +64,28 @@ export const calculateShouldShowCard = (
   }
 }
 
+export const calculateAvailableCategories = (
+  categories,
+  showAllCategoryTitle,
+  cardContent
+) => {
+  const cardCategories = cardContent.map(content => content.category)
+  const flattenedCardCategories = [].concat.apply([], cardCategories)
+
+  const availableCategories = categories.filter(
+    category =>
+      category.title === showAllCategoryTitle ||
+      flattenedCardCategories.some(
+        cardCategory => cardCategory === category.title
+      )
+  )
+
+  return availableCategories.length === 1 &&
+    availableCategories[0].title === showAllCategoryTitle
+    ? []
+    : availableCategories
+}
+
 const FilteredCardContainer = ({
   filterType,
   categories,
@@ -90,11 +112,17 @@ const FilteredCardContainer = ({
     )
   )
 
+  const availableCategories = calculateAvailableCategories(
+    categories,
+    showAllCategoryTitle,
+    cardContent
+  )
+
   return (
     <>
       <FilterContainer
         filterType={filterType}
-        categories={categories}
+        categories={availableCategories}
         selected={selected}
         handleFilterSelect={filterName => {
           setSelected(
