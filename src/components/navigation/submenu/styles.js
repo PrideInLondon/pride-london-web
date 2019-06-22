@@ -53,7 +53,7 @@ export const PanelInfoWrapper = styled(Column)`
 export const PanelListWrapper = styled(Column)`
   ${media.nav`
     padding-left: 40px;
-    column-count: 2;
+    column-count: 3;
     column-gap: 40px;
     column-width: 250px;
 

@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { media } from '../../../../theme/media'
-import theme from '../../../../theme/theme'
 import constants from '../../../../constants'
 
 export const isLargeBadge = level =>
@@ -12,7 +11,7 @@ export const Badge = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: ${theme.colors.lightGrey};
+  background-color: #f9f9f9;
   margin: 0 10px 10px 0;
   padding: 10px;
   ${media.tablet`

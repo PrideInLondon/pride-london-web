@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import FilterButton from '../../../../components/filterButton'
 import { paradeGroupFilterPropType } from '../../paradeGroupFilterPropType'
-import { ParadeGroupsFiltersWrapper } from './styles'
+import { ParadeGroupsFiltersWrapper, ParadeGroupsFilterLabel } from './styles'
 
 const ParadeGroupsFilterContainer = ({
   handleFilterClick,
@@ -11,6 +11,9 @@ const ParadeGroupsFilterContainer = ({
 }) => {
   return (
     <ParadeGroupsFiltersWrapper>
+      <ParadeGroupsFilterLabel>
+        Filter groups by category
+      </ParadeGroupsFilterLabel>
       {categories.map(filterType => {
         return (
           <FilterButton

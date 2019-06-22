@@ -67,7 +67,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "Campaigns",
                       "links": Array [
                         Object {
-                          "title": "Jubilee",
+                          "title": "#PrideJubilee",
                           "url": "/about-us/campaigns/jubilee",
                         },
                       ],
@@ -107,8 +107,33 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       ],
                     },
                     Object {
+                      "heading": "Line up",
+                      "links": Array [
+                        Object {
+                          "title": "Cabaret Stage",
+                          "url": "/events/1c96cd4e-e29c-5a8e-a530-0d7d1c9f3489/",
+                        },
+                        Object {
+                          "title": "Trafalgar Square",
+                          "url": "/events/e0bc2fe9-1563-5c2c-929b-d440d5f7cfd9/",
+                        },
+                        Object {
+                          "title": "Women's Area",
+                          "url": "/events/c88f24f1-d97c-5a7a-be4f-3158740c31a8/",
+                        },
+                        Object {
+                          "title": "World Area",
+                          "url": "/events/aee4171a-97ba-5a83-8954-b264240d1cee/",
+                        },
+                      ],
+                    },
+                    Object {
                       "heading": "Stalls",
                       "links": Array [
+                        Object {
+                          "title": "This year’s stalls",
+                          "url": "/parade/stalls",
+                        },
                         Object {
                           "title": "Hire a stall",
                           "url": "/parade/stalls/hire-a-stall",
@@ -200,7 +225,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "As a business",
                       "links": Array [
                         Object {
-                          "title": "Become a partner",
+                          "title": "Partner with us",
                           "url": "/support-us/partners",
                         },
                         Object {

@@ -16,6 +16,7 @@ export const RowContainer = styled.div`
 `
 
 export const TitleContainer = styled.h3`
+  color: ${theme.colors.black};
   align-items: center;
   display: flex;
   flex-grow: 1;
