@@ -73,7 +73,7 @@ const Nav = () => {
                         heading: 'Campaigns',
                         links: [
                           {
-                            title: 'Jubilee',
+                            title: '#PrideJubilee',
                             url: '/about-us/campaigns/jubilee',
                           },
                         ],
@@ -112,7 +112,7 @@ const Nav = () => {
                         ],
                       },
                       {
-                        heading: 'Lineup',
+                        heading: 'Line up',
                         links: [
                           {
                             title: 'Cabaret Stage',
