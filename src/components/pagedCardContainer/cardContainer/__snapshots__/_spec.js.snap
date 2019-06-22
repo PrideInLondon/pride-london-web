@@ -2,6 +2,7 @@
 
 exports[`CardContainer renders component CardContainer 1`] = `
 <grid__Container
+  className=""
   mx="auto"
 >
   <Row

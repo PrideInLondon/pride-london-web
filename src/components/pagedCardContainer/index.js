@@ -1,7 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import CardContainer from './cardContainer'
 import ShowMoreButton from './showMoreButton'
+
+const PaddedCardContainer = styled(CardContainer)`
+  ${({ isFullyLoaded }) => `padding-bottom: ${isFullyLoaded ? 60 : 0}px;`}
+`
 
 const PagedCardContainer = ({
   cardContent,
@@ -11,7 +16,11 @@ const PagedCardContainer = ({
   onShowMoreButtonClick,
 }) => (
   <>
-    <CardContainer cardContent={cardContent} CardComponent={CardComponent} />
+    <PaddedCardContainer
+      cardContent={cardContent}
+      CardComponent={CardComponent}
+      isFullyLoaded={!moreCardsToShow}
+    />
     {moreCardsToShow && (
       <ShowMoreButton
         text={showMoreButtonText}

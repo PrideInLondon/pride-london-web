@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Container, FlexColumn, Row } from '../../grid'
 
-const CardContainer = ({ CardComponent, cardContent }) => (
-  <Container>
+const CardContainer = ({ CardComponent, cardContent, className }) => (
+  <Container className={className}>
     <Row>
       {cardContent.map(({ id, ...content }) => (
         <FlexColumn
@@ -28,6 +28,11 @@ CardContainer.propTypes = {
     .isRequired,
   cardContent: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.any }))
     .isRequired,
+  className: PropTypes.string,
+}
+
+CardContainer.defaultProps = {
+  className: '',
 }
 
 export default CardContainer
