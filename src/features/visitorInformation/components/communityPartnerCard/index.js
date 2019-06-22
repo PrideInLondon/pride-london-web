@@ -59,6 +59,7 @@ const CardBody = styled.div`
 `
 const CardCategory = styled(Category)`
   margin-bottom: 10px;
+  margin-right: 5px;
 `
 
 const CardItem = styled.div`
