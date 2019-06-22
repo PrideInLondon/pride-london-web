@@ -9,7 +9,7 @@ import theme from '../../theme/theme'
 import { media } from '../../theme/media'
 import { Container, Row, Column } from '../../components/grid'
 import Button from '../../components/button'
-// import Intercom from '../../components/intercom'
+import Intercom from '../../components/intercom'
 import SponsorHeadline from '../../components/icons/sponsorHeadline'
 import SponsorStar from '../../components/icons/sponsorStar'
 import renderSponsors from '../../features/sponsors/helpers'
@@ -258,7 +258,7 @@ const Sponsors = ({ data }) => {
           </Column>
         </Row>
       </MainContainer>
-      {/* <Intercom /> */}
+      <Intercom />
     </Fragment>
   )
 }
