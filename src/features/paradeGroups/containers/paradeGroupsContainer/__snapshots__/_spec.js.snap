@@ -22,6 +22,7 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
     handleFilterClick={[Function]}
     selectedFilter={
       Object {
+        "api": "MAGIC_VALUE_NOT_USED",
         "hexColour": "#FFD95E",
         "title": "All groups",
       }
@@ -198,24 +199,26 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       letter="a"
     >
       <ParadeGroup
-        facebookUrl={null}
-        instagramUrl={null}
-        key="1"
+        key="A group"
         name="A group"
-        twitterUrl={null}
-        websiteUrl={null}
+        socialEmail={null}
+        socialFacebook={null}
+        socialInstagram={null}
+        socialTwitter={null}
+        socialWebsite={null}
       />
     </LetterGroup>
     <LetterGroup
       letter="b"
     >
       <ParadeGroup
-        facebookUrl={null}
-        instagramUrl={null}
-        key="2"
+        key="B group"
         name="B group"
-        twitterUrl={null}
-        websiteUrl={null}
+        socialEmail={null}
+        socialFacebook={null}
+        socialInstagram={null}
+        socialTwitter={null}
+        socialWebsite={null}
       />
     </LetterGroup>
   </div>
