@@ -35,8 +35,8 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
     for (const paradeGroupLetterSection of paradeGroupLettersSection.current
       .children) {
       if (isInViewport(paradeGroupLetterSection)) {
-        if (paradeGroupLetterSection.id) {
-          _activeLetter = paradeGroupLetterSection.id.substr(-1)
+        if (paradeGroupLetterSection.name) {
+          _activeLetter = paradeGroupLetterSection.name.substr(-1)
           break
         }
       }
@@ -47,16 +47,19 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
   }, [activeLetter])
 
   const handleFilterClick = useCallback(
-    group => {
-      setSelectedFilter(group)
+    newFilter => {
+      setSelectedFilter(newFilter)
       setGroups(
-        group === paradeGroupCategories[0]
+        newFilter === paradeGroupCategories[0] // TODO Reliance on magic array position
           ? paradeGroups
-          : paradeGroups.filter(
-              paradeGroup =>
+          : paradeGroups.filter(paradeGroup => {
+              console.log(paradeGroup)
+              console.log(newFilter)
+              return (
                 paradeGroup.category &&
-                paradeGroup.category.includes(group.title)
-            )
+                paradeGroup.category.includes(newFilter.api)
+              )
+            })
       )
       handleScroll()
     },
@@ -127,21 +130,22 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
                   })
                   .map(
                     ({
-                      id,
                       name,
-                      facebookUrl,
-                      instagramUrl,
-                      twitterUrl,
-                      websiteUrl,
+                      socialEmail,
+                      socialWebsite,
+                      socialTwitter,
+                      socialFacebook,
+                      socialInstagram,
                     }) => {
                       return (
                         <ParadeGroup
-                          key={id}
+                          key={name}
                           name={name}
-                          facebookUrl={facebookUrl}
-                          instagramUrl={instagramUrl}
-                          twitterUrl={twitterUrl}
-                          websiteUrl={websiteUrl}
+                          socialEmail={socialEmail}
+                          socialWebsite={socialWebsite}
+                          socialTwitter={socialTwitter}
+                          socialFacebook={socialFacebook}
+                          socialInstagram={socialInstagram}
                         />
                       )
                     }

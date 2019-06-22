@@ -4,37 +4,98 @@ import Facebook from '../../../../components/icons/facebook'
 import Twitter from '../../../../components/icons/twitter'
 import Instagram from '../../../../components/icons/instagram'
 import Globe from '../../../../components/icons/globe'
+import MailIcon from '../../../../components/icons/mailIcon'
 import theme from '../../../../theme/theme'
 import { RowContainer, TitleContainer, IconContainer } from './styles'
 
+function externalURL(url) {
+  if (!url.startsWith('http')) {
+    return 'https://' + url // Optimism that this website supports HTTPS
+  }
+  return url
+}
+
+function facebookURL(value) {
+  if (value.startsWith('http://')) {
+    value = value.replace('http://', 'https://')
+  }
+  if (
+    !value.startsWith('facebook.com') &&
+    !value.startsWith('www.facebook.com') &&
+    !value.startsWith('https://')
+  ) {
+    value = 'https://facebook.com/' + value
+  }
+  value = externalURL(value)
+  return value
+}
+
+function twitterURL(value) {
+  return 'https://twitter.com/' + value
+}
+
+function instagramURL(value) {
+  return 'https://instagram.com/' + value
+}
+
+function mailTo(email) {
+  return 'mailto:' + email
+}
+
 const ParadeGroup = ({
-  facebookUrl,
-  twitterUrl,
-  websiteUrl,
-  instagramUrl,
   name,
+  socialEmail,
+  socialWebsite,
+  socialTwitter,
+  socialFacebook,
+  socialInstagram,
 }) => {
   return (
     <RowContainer>
       <TitleContainer>{name}</TitleContainer>
       <IconContainer>
-        {websiteUrl && (
-          <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
+        {socialEmail && (
+          <a
+            href={mailTo(socialEmail)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MailIcon width={24} height={24} fill={theme.colors.indigo} />
+          </a>
+        )}
+        {socialWebsite && (
+          <a
+            href={externalURL(socialWebsite)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Globe width={24} height={24} fill={theme.colors.indigo} />
           </a>
         )}
-        {facebookUrl && (
-          <a href={facebookUrl} target="_blank" rel="noopener noreferrer">
+        {socialFacebook && (
+          <a
+            href={facebookURL(socialFacebook)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Facebook width={24} height={24} fill={theme.colors.indigo} />
           </a>
         )}
-        {twitterUrl && (
-          <a href={twitterUrl} target="_blank" rel="noopener noreferrer">
+        {socialTwitter && (
+          <a
+            href={twitterURL(socialTwitter)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Twitter width={24} height={24} fill={theme.colors.indigo} />
           </a>
         )}
-        {instagramUrl && (
-          <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+        {socialInstagram && (
+          <a
+            href={instagramURL(socialInstagram)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Instagram width={24} height={24} fill={theme.colors.indigo} />
           </a>
         )}
@@ -44,18 +105,20 @@ const ParadeGroup = ({
 }
 
 ParadeGroup.propTypes = {
-  facebookUrl: PropTypes.string,
-  instagramUrl: PropTypes.string,
   name: PropTypes.string.isRequired,
-  twitterUrl: PropTypes.string,
-  websiteUrl: PropTypes.string,
+  socialEmail: PropTypes.string,
+  socialWebsite: PropTypes.string,
+  socialTwitter: PropTypes.string,
+  socialFacebook: PropTypes.string,
+  socialInstagram: PropTypes.string,
 }
 
 ParadeGroup.defaultProps = {
-  facebookUrl: null,
-  instagramUrl: null,
-  twitterUrl: null,
-  websiteUrl: null,
+  socialEmail: null,
+  socialWebsite: null,
+  socialTwitter: null,
+  socialFacebook: null,
+  socialInstagram: null,
 }
 
 export default ParadeGroup

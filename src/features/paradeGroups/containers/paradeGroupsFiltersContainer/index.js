@@ -31,6 +31,7 @@ ParadeGroupsFilterContainer.propTypes = {
   handleFilterClick: PropTypes.func.isRequired,
   selectedFilter: PropTypes.shape({
     hexColour: PropTypes.string,
+    api: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,
   categories: PropTypes.arrayOf(paradeGroupFilterPropType).isRequired,
