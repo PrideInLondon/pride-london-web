@@ -20,8 +20,8 @@ function facebookURL(value) {
     value = value.replace('http://', 'https://')
   }
   if (
-    !value.startsWith('facebook.com') &&
-    !value.startsWith('www.facebook.com') &&
+    !value.startsWith('facebook.com/') &&
+    !value.startsWith('www.facebook.com/') &&
     !value.startsWith('https://')
   ) {
     value = 'https://facebook.com/' + value
