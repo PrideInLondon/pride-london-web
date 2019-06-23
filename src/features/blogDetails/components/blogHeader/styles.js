@@ -62,11 +62,14 @@ export const Title = styled.h1`
 export const BlogHeaderContainer = styled.div`
   max-width: 830px;
   margin: 0 auto 60px auto;
-  margin-top: -140px;
   min-height: 140px;
   background-color: ${theme.colors.white};
   position: relative;
   padding-left: 30px;
   padding-top: 30px;
   padding-right: 30px;
+
+  @media (min-width: 830px) {
+    margin-top: -140px;
+  }
 `
