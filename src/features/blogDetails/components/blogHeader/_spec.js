@@ -2,6 +2,11 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import BlogHeader from '.'
 
+jest.mock('gatsby-image/withIEPolyfill', () => {
+  const Img = require('gatsby-image')
+  return Img
+})
+
 describe(BlogHeader.name, () => {
   it('renders with default values', () => {
     const title = 'Title'

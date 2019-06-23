@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
-import Img from 'gatsby-image'
+import Img from 'gatsby-image/withIEPolyfill'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import {
@@ -92,6 +92,8 @@ const HeroImage = styled(Img)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 100% !important;
+  width: 100% !important;
 `
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -266,6 +268,9 @@ export default class Event extends Component {
         />
         <HeroImageAndTitle>
           <HeroImage
+            aria-hidden="true"
+            objectFit="cover"
+            objectPosition="50% 50%"
             fixed={
               !checkBreakpoint(400)
                 ? individualEventPicture.mobile
