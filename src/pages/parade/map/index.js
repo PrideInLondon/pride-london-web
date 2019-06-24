@@ -109,7 +109,7 @@ const AppDownloadButton = styled.a`
 `
 
 const ParadeMap = () => {
-  const paradeMapID = process.env.GATSBY_PARADE_MAP_ID
+  const paradeMapID = '1I5M9Oyc1damFcMhsi6yfODAMD6NXeIxi'
   const googlePlayUrl =
     'https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en'
   const appStoreUrl =
