@@ -257,7 +257,6 @@ const Sponsors = ({ data }) => {
           </Column>
         </Row>
       </MainContainer>
-      <Intercom />
     </Fragment>
   )
 }
