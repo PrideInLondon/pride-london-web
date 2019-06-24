@@ -156,7 +156,7 @@ const BlogDetails = ({
           },
         ]}
       />
-      <PageHeader title={title} headerImage={headerImage} />
+      <PageHeader title={title} headerImage={headerImage} fixed={headerImage} />
       <PageContent
         article={article}
         title={title}
@@ -193,6 +193,30 @@ export const articleDetailsQuery = graphql`
       headerImage {
         file {
           url
+        }
+        desktop: fixed(
+          width: 1600
+          resizingBehavior: FILL
+          quality: 100
+          cropFocus: FACE
+        ) {
+          ...GatsbyContentfulFixed_withWebp
+        }
+        tablet: fixed(
+          width: 800
+          resizingBehavior: FILL
+          quality: 100
+          cropFocus: FACE
+        ) {
+          ...GatsbyContentfulFixed_withWebp
+        }
+        mobile: fixed(
+          width: 400
+          resizingBehavior: FILL
+          quality: 100
+          cropFocus: FACE
+        ) {
+          ...GatsbyContentfulFixed_withWebp
         }
       }
       datePublished
