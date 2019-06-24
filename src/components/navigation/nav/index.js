@@ -102,6 +102,10 @@ const Nav = () => {
                             url: '/parade/accessibility',
                           },
                           {
+                            title: 'Map',
+                            url: '/parade/map',
+                          },
+                          {
                             title: 'Take part',
                             url: '/parade/take-part',
                           },
