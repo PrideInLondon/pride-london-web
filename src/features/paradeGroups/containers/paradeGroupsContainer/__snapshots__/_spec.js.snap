@@ -202,36 +202,36 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       letter="#"
     >
       <ParadeGroup
+        facebookUrl={null}
+        instagramUrl={null}
         key="23 group"
         name="23 group"
-        socialFacebook={null}
-        socialInstagram={null}
-        socialTwitter={null}
-        socialWebsite={null}
+        twitterUrl={null}
+        websiteUrl={null}
       />
     </LetterGroup>
     <LetterGroup
       letter="a"
     >
       <ParadeGroup
+        facebookUrl={null}
+        instagramUrl={null}
         key="A group"
         name="A group"
-        socialFacebook={null}
-        socialInstagram={null}
-        socialTwitter={null}
-        socialWebsite={null}
+        twitterUrl={null}
+        websiteUrl={null}
       />
     </LetterGroup>
     <LetterGroup
       letter="b"
     >
       <ParadeGroup
+        facebookUrl={null}
+        instagramUrl={null}
         key="B group"
         name="B group"
-        socialFacebook={null}
-        socialInstagram={null}
-        socialTwitter={null}
-        socialWebsite={null}
+        twitterUrl={null}
+        websiteUrl={null}
       />
     </LetterGroup>
   </div>

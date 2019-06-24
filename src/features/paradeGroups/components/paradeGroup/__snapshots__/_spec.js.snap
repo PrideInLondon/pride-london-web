@@ -5,51 +5,6 @@ exports[`ParadeGroup given correct props should render as expected 1`] = `
   <styles__TitleContainer>
     My parade group
   </styles__TitleContainer>
-  <styles__IconContainer>
-    <a
-      href="https://www.group.com"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <Globe
-        fill="#2D2F7F"
-        height={24}
-        width={24}
-      />
-    </a>
-    <a
-      href="https://facebook.com/2j2j"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <Facebook
-        fill="#2D2F7F"
-        height={24}
-        width={24}
-      />
-    </a>
-    <a
-      href="https://twitter.com/twitter.co/foo"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <Twitter
-        fill="#2D2F7F"
-        height={24}
-        width={24}
-      />
-    </a>
-    <a
-      href="https://instagram.com/instagram.com/1234"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <Instagram
-        fill="#2D2F7F"
-        height={24}
-        width={24}
-      />
-    </a>
-  </styles__IconContainer>
+  <styles__IconContainer />
 </styles__RowContainer>
 `;
