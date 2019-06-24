@@ -35,7 +35,7 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
     <styles__ScrolledLetters>
       <LetterLink
         isActive={false}
-        isDisabled={true}
+        isDisabled={false}
         key="#"
         letter="#"
       />
@@ -198,6 +198,19 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
     </styles__ScrolledLetters>
   </styles__LetterContainer>
   <div>
+    <LetterGroup
+      letter="#"
+    >
+      <ParadeGroup
+        key="23 group"
+        name="23 group"
+        socialEmail={null}
+        socialFacebook={null}
+        socialInstagram={null}
+        socialTwitter={null}
+        socialWebsite={null}
+      />
+    </LetterGroup>
     <LetterGroup
       letter="a"
     >

@@ -87,9 +87,7 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
   // start with something other than a letter.
   if (
     !availableLetters.includes('#') &&
-    groups.some(group =>
-      lettersArray.some(letter => group.name.startsWith(letter))
-    )
+    groups.some(group => group.name.charCodeAt(0) < 65)
   ) {
     availableLetters.unshift('#')
   }
