@@ -35,8 +35,8 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
     for (const paradeGroupLetterSection of paradeGroupLettersSection.current
       .children) {
       if (isInViewport(paradeGroupLetterSection)) {
-        if (paradeGroupLetterSection.name) {
-          _activeLetter = paradeGroupLetterSection.name.substr(-1)
+        if (paradeGroupLetterSection.id) {
+          _activeLetter = paradeGroupLetterSection.id.substr(-1)
           break
         }
       }
