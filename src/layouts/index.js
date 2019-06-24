@@ -7,7 +7,6 @@ import { Provider } from '../components/appContext'
 import CookieNotice from '../components/cookieNotice'
 import Nav from '../components/navigation/nav'
 import Footer from '../components/footer/footerQuery'
-import Intercom from '../components/intercom'
 import favicon from '../theme/assets/images/favicons/favicon.ico'
 import favicon16 from '../theme/assets/images/favicons/favicon-16x16.png'
 import favicon32 from '../theme/assets/images/favicons/favicon-32x32.png'
@@ -379,7 +378,6 @@ const Layout = ({ children, location: { pathname } }) => (
                 />
                 <CookieNotice />
               </SiteWrapper>
-              <Intercom />
             </Fragment>
           </Provider>
         )
