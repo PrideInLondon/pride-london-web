@@ -7,17 +7,6 @@ exports[`ParadeGroup given correct props should render as expected 1`] = `
   </styles__TitleContainer>
   <styles__IconContainer>
     <a
-      href="mailto:foo@foo.com"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <MailIcon
-        fill="#2D2F7F"
-        height={24}
-        width={24}
-      />
-    </a>
-    <a
       href="https://www.group.com"
       rel="noopener noreferrer"
       target="_blank"

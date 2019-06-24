@@ -76,7 +76,6 @@ export const paradeGroupsQuery = graphql`
         node {
           name
           category
-          socialEmail
           socialWebsite
           socialTwitter
           socialFacebook

@@ -11,7 +11,6 @@ describe(ParadeGroup.name, () => {
         socialFacebook: 'http://facebook.com/2j2j',
         socialTwitter: 'twitter.co/foo',
         socialWebsite: 'www.group.com',
-        socialEmail: 'foo@foo.com',
       }
 
       const wrapper = shallow(<ParadeGroup {...props} />)

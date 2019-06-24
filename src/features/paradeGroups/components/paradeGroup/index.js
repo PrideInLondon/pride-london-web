@@ -4,7 +4,6 @@ import Facebook from '../../../../components/icons/facebook'
 import Twitter from '../../../../components/icons/twitter'
 import Instagram from '../../../../components/icons/instagram'
 import Globe from '../../../../components/icons/globe'
-import MailIcon from '../../../../components/icons/mailIcon'
 import theme from '../../../../theme/theme'
 import { RowContainer, TitleContainer, IconContainer } from './styles'
 
@@ -38,13 +37,8 @@ function instagramURL(value) {
   return 'https://instagram.com/' + value
 }
 
-function mailTo(email) {
-  return 'mailto:' + email
-}
-
 const ParadeGroup = ({
   name,
-  socialEmail,
   socialWebsite,
   socialTwitter,
   socialFacebook,
@@ -54,15 +48,6 @@ const ParadeGroup = ({
     <RowContainer>
       <TitleContainer>{name}</TitleContainer>
       <IconContainer>
-        {socialEmail && (
-          <a
-            href={mailTo(socialEmail)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MailIcon width={24} height={24} fill={theme.colors.indigo} />
-          </a>
-        )}
         {socialWebsite && (
           <a
             href={externalURL(socialWebsite)}
@@ -106,7 +91,6 @@ const ParadeGroup = ({
 
 ParadeGroup.propTypes = {
   name: PropTypes.string.isRequired,
-  socialEmail: PropTypes.string,
   socialWebsite: PropTypes.string,
   socialTwitter: PropTypes.string,
   socialFacebook: PropTypes.string,
@@ -114,7 +98,6 @@ ParadeGroup.propTypes = {
 }
 
 ParadeGroup.defaultProps = {
-  socialEmail: null,
   socialWebsite: null,
   socialTwitter: null,
   socialFacebook: null,

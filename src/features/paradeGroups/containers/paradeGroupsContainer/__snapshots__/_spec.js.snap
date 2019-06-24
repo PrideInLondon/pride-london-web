@@ -204,7 +204,6 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       <ParadeGroup
         key="23 group"
         name="23 group"
-        socialEmail={null}
         socialFacebook={null}
         socialInstagram={null}
         socialTwitter={null}
@@ -217,7 +216,6 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       <ParadeGroup
         key="A group"
         name="A group"
-        socialEmail={null}
         socialFacebook={null}
         socialInstagram={null}
         socialTwitter={null}
@@ -230,7 +228,6 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       <ParadeGroup
         key="B group"
         name="B group"
-        socialEmail={null}
         socialFacebook={null}
         socialInstagram={null}
         socialTwitter={null}
