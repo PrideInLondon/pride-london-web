@@ -76,10 +76,10 @@ export const paradeGroupsQuery = graphql`
         node {
           name
           category
-          socialWebsite
-          socialTwitter
-          socialFacebook
-          socialInstagram
+          websiteUrl
+          twitterUrl
+          facebookUrl
+          instagramUrl
         }
       }
     }

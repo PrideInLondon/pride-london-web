@@ -127,21 +127,19 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
                   .map(
                     ({
                       name,
-                      socialEmail,
-                      socialWebsite,
-                      socialTwitter,
-                      socialFacebook,
-                      socialInstagram,
+                      websiteUrl,
+                      twitterUrl,
+                      facebookUrl,
+                      instagramUrl,
                     }) => {
                       return (
                         <ParadeGroup
                           key={name}
                           name={name}
-                          socialEmail={socialEmail}
-                          socialWebsite={socialWebsite}
-                          socialTwitter={socialTwitter}
-                          socialFacebook={socialFacebook}
-                          socialInstagram={socialInstagram}
+                          websiteUrl={websiteUrl}
+                          twitterUrl={twitterUrl}
+                          facebookUrl={facebookUrl}
+                          instagramUrl={instagramUrl}
                         />
                       )
                     }
