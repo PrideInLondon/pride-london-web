@@ -16,18 +16,20 @@ describe(ParadeGroupsContainer.name, () => {
   const categories = [
     {
       title: 'All groups',
-      hexColour: '#FFD95E',
+      api: 'MAGIC_VALUE_NOT_USED',
+      hexColour: theme.colors.yellow,
     },
     {
       title: 'Arts',
-      hexColour: '#FF5B44',
+      api: 'ARTS',
+      hexColour: theme.colors.tomato,
     },
     {
       title: 'Business',
-      hexColour: '#ED2C6E',
+      api: 'BUSINESS',
+      hexColour: theme.colors.pink,
     },
   ]
-
   it('should render correctly', () => {
     const wrapper = shallow(
       <ParadeGroupsContainer

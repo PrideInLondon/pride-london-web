@@ -67,7 +67,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "Campaigns",
                       "links": Array [
                         Object {
-                          "title": "Jubilee",
+                          "title": "#PrideJubilee",
                           "url": "/about-us/campaigns/jubilee",
                         },
                       ],
@@ -93,6 +93,14 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                           "url": "/parade",
                         },
                         Object {
+                          "title": "Parade groups",
+                          "url": "/parade-groups",
+                        },
+                        Object {
+                          "title": "Map",
+                          "url": "/parade/map",
+                        },
+                        Object {
                           "title": "Accessibility",
                           "url": "/parade/accessibility",
                         },
@@ -107,7 +115,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       ],
                     },
                     Object {
-                      "heading": "Lineup",
+                      "heading": "Line up",
                       "links": Array [
                         Object {
                           "title": "Cabaret Stage",
@@ -225,7 +233,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "As a business",
                       "links": Array [
                         Object {
-                          "title": "Become a partner",
+                          "title": "Partner with us",
                           "url": "/support-us/partners",
                         },
                         Object {
@@ -245,8 +253,8 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
               item={
                 Object {
                   "id": "nav-visitor-info",
-                  "title": "Visitor info",
-                  "url": "/visitor-info",
+                  "title": "Explore London",
+                  "url": "/explore-london",
                 }
               }
               setNavOpen={[Function]}

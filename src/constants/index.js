@@ -73,39 +73,75 @@ const constants = {
   paradeGroupCategories: [
     {
       title: 'All groups',
+      api: 'MAGIC_VALUE_NOT_USED',
       hexColour: theme.colors.yellow,
     },
     {
       title: 'Arts',
+      api: 'ARTS',
       hexColour: theme.colors.tomato,
     },
     {
       title: 'Business',
+      api: 'BUSINESS',
       hexColour: theme.colors.pink,
     },
     {
       title: 'Charity',
+      api: 'CHARITIES',
       hexColour: theme.colors.greyBlue,
     },
     {
       title: 'Community group',
+      api: 'COMMUNITY_GROUP',
       hexColour: theme.colors.bondiBlue,
     },
     {
       title: 'Politics',
+      api: 'POLITICS',
       hexColour: theme.colors.darkPurple,
     },
     {
       title: 'Profession',
+      api: 'PROFESSIONS',
       hexColour: theme.colors.eucalyptusGreen,
     },
     {
       title: 'Sports',
+      api: 'SPORTS',
       hexColour: theme.colors.fuscia,
     },
     {
       title: 'Other',
+      api: 'OTHER',
       hexColour: theme.colors.skyBlue,
+    },
+  ],
+  filterTypes: ['checkbox', 'radio'],
+  communityPartnerCategories: [
+    {
+      title: 'Everything',
+      hexColour: theme.colors.yellow,
+    },
+    {
+      title: 'Drink',
+      hexColour: theme.colors.tomato,
+    },
+    {
+      title: 'Eat',
+      hexColour: theme.colors.pink,
+    },
+    {
+      title: 'Party',
+      hexColour: theme.colors.greyBlue,
+    },
+    {
+      title: 'Shop',
+      hexColour: theme.colors.eucalyptusGreen,
+    },
+    {
+      title: 'Sleep',
+      hexColour: theme.colors.fuscia,
     },
   ],
 }

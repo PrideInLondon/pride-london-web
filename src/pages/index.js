@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import theme from '../theme/theme'
 import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
@@ -150,65 +152,96 @@ const StyledButton = styled(Button)`
   padding: 12px 28px;
 `
 
-const Home = () => (
-  <Fragment>
-    <BannerImage
-      titleText={'Pride in London'}
-      subtitleText={
-        'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community.'
-      }
-      date={'Saturday 6 July'}
-      imageSrc={BannerImg}
-      color={theme.colors.eucalyptusGreen}
-      large
-      allowContentUnderflow
-      videoId="76979871"
-    >
-      <BannerButton wide={false} white primary to="/parade">
-        This year's parade
-      </BannerButton>
-    </BannerImage>
-    <StyledContainer>
-      <StyledRow>
-        <StyledColumn width={1}>
-          <FeaturedEventsContainer>
-            <EventsBackgroundLeft>
-              <img alt="backgroundEventsLeft" src={eventsBgLeft} />
-            </EventsBackgroundLeft>
-            <EventsBackgroundRight>
-              <img alt="backgroundEvents" src={eventsBgRight} />
-            </EventsBackgroundRight>
-            <FeaturedEventsHeader>
-              <FeaturedEventsTitle>
-                <h2>Featured events</h2>
-                <p>View events from across the LGBT+ community.</p>
-              </FeaturedEventsTitle>
-              <StyledButton wide={false} to="/events">
-                View all events
-              </StyledButton>
-            </FeaturedEventsHeader>
-            <FeaturedEventsQuery />
-            <ButtonMobile>
-              <Button
-                isTabletHidden
-                secondary
-                small
-                wide={false}
-                link
-                to="/events/"
-              >
-                View all events
-              </Button>
-            </ButtonMobile>
-          </FeaturedEventsContainer>
-        </StyledColumn>
-      </StyledRow>
-    </StyledContainer>
-    <AnnouncementsContainer />
-    <DonateContainer />
-    <LatestNewsContainer />
-    <VolunteerBoxInfo />
-  </Fragment>
-)
+const Home = ({
+  data: {
+    file: { childImageSharp },
+  },
+}) => {
+  return (
+    <Fragment>
+      <BannerImage
+        titleText={'Pride in London'}
+        subtitleText={
+          'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community.'
+        }
+        date={'Saturday 6 July'}
+        imageSrc={BannerImg}
+        color={theme.colors.eucalyptusGreen}
+        large
+        allowContentUnderflow
+        videoId="343813970"
+        fixed={childImageSharp}
+      >
+        <BannerButton wide={false} white primary to="/parade">
+          This year's parade
+        </BannerButton>
+      </BannerImage>
+      <StyledContainer>
+        <StyledRow>
+          <StyledColumn width={1}>
+            <FeaturedEventsContainer>
+              <EventsBackgroundLeft>
+                <img alt="backgroundEventsLeft" src={eventsBgLeft} />
+              </EventsBackgroundLeft>
+              <EventsBackgroundRight>
+                <img alt="backgroundEvents" src={eventsBgRight} />
+              </EventsBackgroundRight>
+              <FeaturedEventsHeader>
+                <FeaturedEventsTitle>
+                  <h2>Featured events</h2>
+                  <p>View events from across the LGBT+ community.</p>
+                </FeaturedEventsTitle>
+                <StyledButton wide={false} to="/events">
+                  View all events
+                </StyledButton>
+              </FeaturedEventsHeader>
+              <FeaturedEventsQuery />
+              <ButtonMobile>
+                <Button
+                  isTabletHidden
+                  secondary
+                  small
+                  wide={false}
+                  link
+                  to="/events/"
+                >
+                  View all events
+                </Button>
+              </ButtonMobile>
+            </FeaturedEventsContainer>
+          </StyledColumn>
+        </StyledRow>
+      </StyledContainer>
+      <AnnouncementsContainer />
+      <DonateContainer />
+      <LatestNewsContainer />
+      <VolunteerBoxInfo />
+    </Fragment>
+  )
+}
+
+Home.propTypes = {
+  data: PropTypes.object.isRequired,
+}
 
 export default Home
+
+export const HomePageQuery = graphql`
+  query HomePageQuery {
+    file(relativePath: { regex: "/video-poster/" }) {
+      size
+      name
+      childImageSharp {
+        desktop: fixed(width: 1600, quality: 100) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+        tablet: fixed(width: 800, quality: 100) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+        mobile: fixed(width: 400, quality: 100) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+  }
+`

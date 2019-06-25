@@ -59,4 +59,11 @@ export const media = {
       ${css(...args)};
     }
   `,
+
+  // Custom breakpoint for navigation
+  ie11: (...args) => css`
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      ${css(...args)};
+    }
+  `,
 }

@@ -73,7 +73,7 @@ const Nav = () => {
                         heading: 'Campaigns',
                         links: [
                           {
-                            title: 'Jubilee',
+                            title: '#PrideJubilee',
                             url: '/about-us/campaigns/jubilee',
                           },
                         ],
@@ -98,6 +98,14 @@ const Nav = () => {
                             url: '/parade',
                           },
                           {
+                            title: 'Parade groups',
+                            url: '/parade-groups',
+                          },
+                          {
+                            title: 'Map',
+                            url: '/parade/map',
+                          },
+                          {
                             title: 'Accessibility',
                             url: '/parade/accessibility',
                           },
@@ -112,7 +120,7 @@ const Nav = () => {
                         ],
                       },
                       {
-                        heading: 'Lineup',
+                        heading: 'Line up',
                         links: [
                           {
                             title: 'Cabaret Stage',
@@ -232,7 +240,7 @@ const Nav = () => {
                         heading: 'As a business',
                         links: [
                           {
-                            title: 'Become a partner',
+                            title: 'Partner with us',
                             url: '/support-us/partners',
                           },
                           {
@@ -248,8 +256,8 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-visitor-info',
-                    title: 'Visitor info',
-                    url: '/visitor-info',
+                    title: 'Explore London',
+                    url: '/explore-london',
                   }}
                 />
                 <NavItem

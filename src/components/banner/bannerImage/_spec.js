@@ -6,6 +6,11 @@ import BannerSubtitle from '../bannerSubtitle'
 import BannerImage from '.'
 import 'jest-styled-components'
 
+jest.mock('gatsby-image/withIEPolyfill', () => {
+  const Img = require('gatsby-image')
+  return Img
+})
+
 describe('<BannerImage />', () => {
   it('renders the component <BannerImage />', () => {
     const wrapper = shallow(<BannerImage />)
@@ -84,5 +89,16 @@ describe('<BannerImage />', () => {
         .find(BannerSubtitle)
         .props().children
     ).toBe(subtitleText)
+  })
+
+  it('renders an iframe if given a video id prop', () => {
+    const wrapper = mount(
+      <BannerImage
+        titleText={'Here is a title'}
+        subtitleText={'And here is a test subtitle!'}
+        videoId="123abc"
+      />
+    )
+    expect(wrapper.find('iframe')).toHaveLength(1)
   })
 })

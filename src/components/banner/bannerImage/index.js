@@ -5,10 +5,12 @@ import { Column } from '../../grid'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
 import BannerDate from '../bannerDate'
+import { checkBreakpoint } from '../../../utilities'
 import {
   StyledContainer,
   StyledRow,
   StyledWrapper,
+  ResponsiveImg,
   VideoWrapper,
 } from './styles'
 
@@ -24,6 +26,7 @@ const BannerImage = ({
   medium,
   allowContentUnderflow,
   videoId,
+  fixed,
 }) => {
   const wrapper = useRef(null)
   const [height, setHeight] = useState()
@@ -56,9 +59,14 @@ const BannerImage = ({
       imageFullWidth={imageFullWidth}
       role="banner"
       ref={wrapper}
+      fixed={fixed && fixed.desktop && fixed.tablet && fixed.mobile && fixed}
     >
       {titleText && (
-        <StyledContainer imageSrc={imageSrc} imageFullWidth={imageFullWidth}>
+        <StyledContainer
+          imageSrc={imageSrc}
+          imageFullWidth={imageFullWidth}
+          fixed={fixed}
+        >
           <StyledRow medium={medium}>
             <Column width={1} pb={[30, 30, 2]}>
               {date && <BannerDate>{date}</BannerDate>}
@@ -67,8 +75,22 @@ const BannerImage = ({
               {children}
             </Column>
           </StyledRow>
+          {fixed && (
+            <ResponsiveImg
+              aria-hidden="true"
+              objectFit="cover"
+              objectPosition="50% 50%"
+              fixed={
+                !checkBreakpoint(400)
+                  ? fixed.mobile
+                  : !checkBreakpoint(800)
+                  ? fixed.tablet
+                  : fixed.desktop
+              }
+            />
+          )}
           {videoId && (
-            <VideoWrapper height={height} width={width}>
+            <VideoWrapper height={height} width={width} aria-hidden="true">
               <iframe
                 src={`https://player.vimeo.com/video/${videoId}?background=1`}
                 width="640"
@@ -100,6 +122,7 @@ BannerImage.propTypes = {
   ]),
   allowContentUnderflow: PropTypes.bool,
   videoId: PropTypes.string,
+  fixed: PropTypes.object,
 }
 
 BannerImage.defaultProps = {
@@ -116,6 +139,7 @@ BannerImage.defaultProps = {
   date: null,
   allowContentUnderflow: false,
   videoId: null,
+  fixed: null,
 }
 
 export default BannerImage
