@@ -226,6 +226,10 @@ export default class Event extends Component {
               name: 'twitter:url',
               content: metaUrl,
             },
+            {
+              name: 'twitter:card',
+              content: 'summary_large_image',
+            },
           ]}
           link={[
             {
@@ -319,7 +323,11 @@ export default class Event extends Component {
                   <EventSchedule schedule={performances} />
                 </Section>
               )}
-              <EventShareSection location={metaUrl} />
+              <EventShareSection
+                name={name}
+                description={eventDescription}
+                location={metaUrl}
+              />
             </Column>
           </Row>
         </Container>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import EmailIcon from '../../../components/icons/email'
 import TwitterIcon from '../../../components/icons/twitter'
 import FacebookIcon from '../../../components/icons/facebook'
@@ -54,25 +55,59 @@ const ShareLink = styled.a`
   }
 `
 
-const EventShareSection = () => (
+const twitterShareUrl = name => {
+  return `https://twitter.com/home?status=${name}`
+}
+
+const facebookShareUrl = url => {
+  const encodedUrl = encodeURIComponent(url)
+  return `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
+}
+
+const linkedinShareUrl = (name, description, url) => {
+  const encodedUrl = encodeURIComponent(url)
+  const encodedDescription = encodeURIComponent(description)
+  const encodedName = encodeURIComponent(name)
+  return `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedName}&summary=${encodedDescription}&source=prideinlondon.org`
+}
+
+const EventShareSection = ({ name, description, location }) => (
   <ShareList>
     <ShareText>Share</ShareText>
     <ShareLink>
       <EmailIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
-    <ShareLink>
+    <ShareLink
+      href={twitterShareUrl(location)}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <TwitterIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
-    <ShareLink>
+    <ShareLink
+      href={facebookShareUrl(location)}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <FacebookIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
     <ShareLink>
       <MessengerIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
-    <ShareLink>
+    <ShareLink
+      href={linkedinShareUrl(name, description, location)}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <LinkedinIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
   </ShareList>
 )
+
+EventShareSection.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+}
 
 export default EventShareSection
