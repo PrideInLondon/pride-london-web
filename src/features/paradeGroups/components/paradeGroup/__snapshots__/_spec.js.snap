@@ -18,7 +18,18 @@ exports[`ParadeGroup given correct props should render as expected 1`] = `
       />
     </a>
     <a
-      href="facebook.com/2j2j"
+      href="foo@foo.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <MailIcon
+        fill="#2D2F7F"
+        height={24}
+        width={30}
+      />
+    </a>
+    <a
+      href="http://facebook.com/2j2j"
       rel="noopener noreferrer"
       target="_blank"
     >

@@ -47,16 +47,17 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
   }, [activeLetter])
 
   const handleFilterClick = useCallback(
-    group => {
-      setSelectedFilter(group)
+    newFilter => {
+      setSelectedFilter(newFilter)
       setGroups(
-        group === paradeGroupCategories[0]
+        newFilter === paradeGroupCategories[0] // TODO Reliance on magic array position
           ? paradeGroups
-          : paradeGroups.filter(
-              paradeGroup =>
+          : paradeGroups.filter(paradeGroup => {
+              return (
                 paradeGroup.category &&
-                paradeGroup.category.includes(group.title)
-            )
+                paradeGroup.category.includes(newFilter.api)
+              )
+            })
       )
       handleScroll()
     },
@@ -86,9 +87,7 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
   // start with something other than a letter.
   if (
     !availableLetters.includes('#') &&
-    groups.some(group =>
-      lettersArray.some(letter => group.name.startsWith(letter))
-    )
+    groups.some(group => group.name.charCodeAt(0) < 65)
   ) {
     availableLetters.unshift('#')
   }
@@ -127,21 +126,22 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
                   })
                   .map(
                     ({
-                      id,
                       name,
+                      websiteUrl,
+                      twitterUrl,
                       facebookUrl,
                       instagramUrl,
-                      twitterUrl,
-                      websiteUrl,
+                      emailUrl,
                     }) => {
                       return (
                         <ParadeGroup
-                          key={id}
+                          key={name}
                           name={name}
+                          websiteUrl={websiteUrl}
+                          twitterUrl={twitterUrl}
                           facebookUrl={facebookUrl}
                           instagramUrl={instagramUrl}
-                          twitterUrl={twitterUrl}
-                          websiteUrl={websiteUrl}
+                          emailUrl={emailUrl}
                         />
                       )
                     }

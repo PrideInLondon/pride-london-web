@@ -8,9 +8,10 @@ describe(ParadeGroup.name, () => {
       const props = {
         name: 'My parade group',
         instagramUrl: 'instagram.com/1234',
-        facebookUrl: 'facebook.com/2j2j',
+        facebookUrl: 'http://facebook.com/2j2j',
         twitterUrl: 'twitter.co/foo',
         websiteUrl: 'www.group.com',
+        emailUrl: 'foo@foo.com',
       }
 
       const wrapper = shallow(<ParadeGroup {...props} />)
