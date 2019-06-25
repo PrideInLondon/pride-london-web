@@ -75,7 +75,7 @@
     "react-flip-move": "^3.0.3",
     "react-helmet": "^5.2.1",
     "react-intercom": "^1.0.15",
-    "react-markdown": "^4.0.8",
+    "react-markdown": "^4.1.0",
     "react-onclickoutside": "^6.8.0",
     "react-slick": "^0.24.0",
     "react-test-renderer": "^16.8.6",
