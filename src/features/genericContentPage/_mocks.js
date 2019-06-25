@@ -109,3 +109,49 @@ export const notRecognizedNode = {
     },
   },
 }
+
+export const sponsorSectionNode = {
+  data: {
+    target: {
+      fields: {
+        title: { 'en-GB': 'Test Sponsor Section' },
+        sponsors: {
+          'en-GB': [
+            {
+              fields: {
+                sponsorName: {
+                  'en-GB': 'Virtucon',
+                },
+                sponsorUrl: {
+                  'en-GB': 'https://m.popkey.co/666ded/1VRvJ.gif',
+                },
+                sponsorLogo: {
+                  'en-GB': {
+                    fields: {
+                      file: {
+                        'en-GB': {
+                          url:
+                            '//images.ctfassets.net/n2o4hgsv6wcx/2AfZNrit52m4WUm4IKUOOE/21323f2171228d475743a62938778c53/ed2cf58359281c503c8fd2d56992b0a9.png?w=800&h=168&q=90',
+                        },
+                      },
+                    },
+                  },
+                },
+                sponsorLevel: {
+                  'en-GB': 'Headline',
+                },
+              },
+            },
+          ],
+        },
+      },
+      sys: {
+        contentType: {
+          sys: {
+            id: 'sponsorSection',
+          },
+        },
+      },
+    },
+  },
+}

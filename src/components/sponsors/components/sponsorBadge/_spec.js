@@ -10,4 +10,10 @@ describe('<SponsorBadge/>', () => {
     expect(toJSON(wrapper)).toMatchSnapshot()
     expect(wrapper.prop('href')).toBe(mockSponsor.url)
   })
+
+  it('renders the component <SponsorBadge /> and prevent level size', () => {
+    const wrapper = shallow(<SponsorBadge {...mockSponsor} preventLevelSize />)
+    expect(toJSON(wrapper)).toMatchSnapshot()
+    expect(wrapper.prop('href')).toBe(mockSponsor.url)
+  })
 })

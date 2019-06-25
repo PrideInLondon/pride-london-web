@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SponsorBadge/> renders the component <SponsorBadge /> 1`] = `
+<styles__Badge
+  href="https://sponsor1.com"
+  level="Headline"
+  preventLevelSize={false}
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <styles__BadgeImage
+    alt="Sponsor One"
+    level="Headline"
+    preventLevelSize={false}
+    src="/logo1"
+  />
+</styles__Badge>
+`;
+
+exports[`<SponsorBadge/> renders the component <SponsorBadge /> and prevent level size 1`] = `
+<styles__Badge
+  href="https://sponsor1.com"
+  level="Headline"
+  preventLevelSize={true}
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <styles__BadgeImage
+    alt="Sponsor One"
+    level="Headline"
+    preventLevelSize={true}
+    src="/logo1"
+  />
+</styles__Badge>
+`;

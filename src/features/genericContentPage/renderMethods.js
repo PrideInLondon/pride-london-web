@@ -4,6 +4,8 @@ import { BLOCKS } from '@contentful/rich-text-types'
 import styled from 'styled-components'
 import { ReactTypeformEmbed } from 'react-typeform-embed'
 import Button from '../../components/button'
+import renderSponsors from '../../components/sponsors/helpers'
+import SponsorsSubsection from '../../components/sponsors/components/sponsorSubsection'
 import Figure from './components/figure'
 import Video from './components/video'
 
@@ -78,12 +80,35 @@ const renderButton = node => {
 
 const renderVideo = ({ data }) => <Video {...data.target.fields} />
 
+const renderSponsorSection = node => {
+  const {
+    data: {
+      target: { fields },
+    },
+  } = node
+  const title = fields.title['en-GB']
+  let sponsors = fields.sponsors ? fields.sponsors['en-GB'] : []
+  sponsors = sponsors.map(({ fields }) => ({
+    name: fields.sponsorName['en-GB'],
+    logo: fields.sponsorLogo['en-GB'].fields.file['en-GB'].url,
+    level: fields.sponsorLevel['en-GB'],
+    url: fields.sponsorUrl['en-GB'],
+  }))
+  return (
+    <SponsorsSubsection title={title}>
+      {renderSponsors(sponsors, true)}
+    </SponsorsSubsection>
+  )
+}
+
 export const renderEmbeddedEntry = node => {
   switch (node.data.target.sys.contentType.sys.id) {
     case 'video':
       return renderVideo(node)
     case 'button':
       return renderButton(node)
+    case 'sponsorSection':
+      return renderSponsorSection(node)
     default:
       return null
   }
