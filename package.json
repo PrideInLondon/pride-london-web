@@ -108,7 +108,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.3",
-    "eslint-plugin-react-hooks": "^1.6.0",
+    "eslint-plugin-react-hooks": "^1.6.1",
     "husky": "^2.4.1",
     "jest": "^23.6.0",
     "jest-environment-jsdom": "^24.8.0",
