@@ -256,8 +256,8 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-visitor-info',
-                    title: 'Visitor info',
-                    url: '/visitor-info',
+                    title: 'Explore London',
+                    url: '/explore-london',
                   }}
                 />
                 <NavItem

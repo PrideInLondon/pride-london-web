@@ -8,11 +8,12 @@ import constants from '../../constants'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
 import { Container, Row, Column } from '../../components/grid'
-import Button from '../../components/button'
+import Intercom from '../../components/intercom'
 import SponsorHeadline from '../../components/icons/sponsorHeadline'
 import SponsorStar from '../../components/icons/sponsorStar'
 import renderSponsors from '../../features/sponsors/helpers'
 import BannerImg from '../../theme/assets/images/banners/sponsors/bg@2x.jpg'
+import PageIntro from '../../components/pageIntro'
 
 const ppLink =
   'https://assets.ctfassets.net/0ho16wyr4i9n/37Lg8PnUVi1t08XEjPUyuz/7d445d8622f55a85fe394ab861b51407/Partnership_Packages_2019.pptx'
@@ -23,10 +24,6 @@ const ListTitle = styled.h2`
   ${media.tablet`
     margin-bottom: 15px;
   `};
-`
-
-const MainContainer = styled(Container)`
-  margin-top: 30px;
 `
 
 const MainSponsorsContainer = styled.div`
@@ -41,54 +38,6 @@ const SecondarySponsorsContainer = styled.div`
   ${media.tablet`
     max-width: 860px;
   `};
-`
-
-const IntroContainer = styled(Column)`
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-`
-
-const RelativeColumn = styled(Column)`
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-`
-
-const CTAWrapper = styled.div`
-  ${media.desktopMax`
-    background-color: ${theme.colors.indigo}; 
-  `};
-`
-
-const CTABox = styled.div`
-  background-color: ${theme.colors.indigo};
-  padding: 30px 0;
-  color: white;
-  ${media.desktop`
-    position: absolute;
-    width: 33.3333%;
-    right: 0;
-    top: -100px;
-    padding: 40px;
- `};
-`
-
-const SponsorButton = styled(Button)`
-  && {
-    width: 100%;
-    min-width: 0;
-  }
-`
-
-const CTATitle = styled.h3`
-  margin: 0 0 0.5em 0;
-  color: ${theme.colors.white};
-`
-
-const CTABody = styled.p`
-  margin: 0 0 1.875rem;
-  font-size: 0.875rem;
-  line-height: 1.2857;
 `
 
 const selectSponsors = data =>
@@ -118,70 +67,51 @@ const Sponsors = ({ data }) => {
         imageSrc={BannerImg}
         imageFullWidth
       />
-      <CTAWrapper>
-        <Container>
-          <Row>
-            <RelativeColumn width={1}>
-              <CTABox>
-                <CTATitle>Find out more about becoming a Partner</CTATitle>
-                <CTABody>
-                  Whether you're a big brand or a small business, and interested
-                  in supporting Pride in London. We want to hear from you.
-                </CTABody>
-                <SponsorButton
-                  to="mailto:sponsor@prideinlondon.org?subject=I'd%20like%20to%20become%20a%20partner"
-                  primary
-                >
-                  Email us
-                </SponsorButton>
-              </CTABox>
-            </RelativeColumn>
-          </Row>
-        </Container>
-      </CTAWrapper>
-      <MainContainer>
+      <PageIntro
+        cta={{
+          title: 'Find out more about becoming a Partner',
+          body:
+            "Whether you're a big brand or a small business, and interested in supporting Pride in London. We want to hear from you.",
+          link: {
+            to:
+              "mailto:sponsor@prideinlondon.org?subject=I'd%20like%20to%20become%20a%20partner",
+            text: 'Email us',
+          },
+        }}
+      >
+        <p>
+          Without our dedicated and loyal partners, Pride in London simply would
+          not exist. Since the current community group took over the running of
+          Pride in 2012, the office of the Mayor of London and our headline
+          partners have remained committed to keeping Pride on the road. They
+          have proved to be great allies of the LGBTQ+ community and we are
+          eternally grateful for their support. In 2018, Sadiq Khan, Mayor of
+          London extended Pride in London’s contract, committing to support our
+          work for a further 5 years.
+        </p>
+        <p>
+          For many years LGBTQ+ people have faced hiding their true selves from
+          their colleagues. Only since 2000 have people been able to openly
+          serve in the military. Today, while prejudice is still rife in many
+          places, many companies and organisations have embraced their LGBTQ+
+          members of staff. Studies show, that employers who recognise and
+          support diversity are on average more productive and more profitable.
+        </p>
+        <p>
+          Over the years we have seen more and more companies openly support and
+          embrace their LGBTQ+ colleagues, as well as provide a safe, loving and
+          supportive workplace. Being part of Pride is one of the many ways we
+          are seeing workplaces transform for the better. Pride in London are
+          proud to be working with our partners to ensure diversity is embedded
+          in the core of each company we work with.
+        </p>
+        <p>
+          For more information download information on the
+          <a href={ppLink}>2019 Partnership Packages.</a>
+        </p>
+      </PageIntro>
+      <Container>
         <Row>
-          <IntroContainer
-            width={[
-              1, // 100% between 0px screen width and first breakpoint (375px)
-              1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-              1, // 100% between second breakpoint(768px) and third breakpoint (1024px)
-              7 / 12, // 7/12 between third breakpoint(1280px) and fourth breakpoint (1440px)
-            ]}
-          >
-            <p>
-              Without our dedicated and loyal partners, Pride in London simply
-              would not exist. Since the current community group took over the
-              running of Pride in 2012, the office of the Mayor of London and
-              our headline partners have remained committed to keeping Pride on
-              the road. They have proved to be great allies of the LGBTQ+
-              community and we are eternally grateful for their support. In
-              2018, Sadiq Khan, Mayor of London extended Pride in London’s
-              contract, committing to support our work for a further 5 years.
-            </p>
-            <p>
-              For many years LGBTQ+ people have faced hiding their true selves
-              from their colleagues. Only since 2000 have people been able to
-              openly serve in the military. Today, while prejudice is still rife
-              in many places, many companies and organisations have embraced
-              their LGBTQ+ members of staff. Studies show, that employers who
-              recognise and support diversity are on average more productive and
-              more profitable.
-            </p>
-            <p>
-              Over the years we have seen more and more companies openly support
-              and embrace their LGBTQ+ colleagues, as well as provide a safe,
-              loving and supportive workplace. Being part of Pride is one of the
-              many ways we are seeing workplaces transform for the better. Pride
-              in London are proud to be working with our partners to ensure
-              diversity is embedded in the core of each company we work with.
-            </p>
-            <p>
-              For more information download information on the
-              {' ' /*eslint-disable-line */}
-              <a href={ppLink}>2019 Partnership Packages.</a>
-            </p>
-          </IntroContainer>
           <Column>
             <ListTitle>Our main 2019 partners</ListTitle>
             <p>
@@ -256,7 +186,8 @@ const Sponsors = ({ data }) => {
             </SecondarySponsorsContainer>
           </Column>
         </Row>
-      </MainContainer>
+        <Intercom />
+      </Container>
     </Fragment>
   )
 }

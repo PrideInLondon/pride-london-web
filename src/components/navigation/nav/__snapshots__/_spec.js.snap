@@ -253,8 +253,8 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
               item={
                 Object {
                   "id": "nav-visitor-info",
-                  "title": "Visitor info",
-                  "url": "/visitor-info",
+                  "title": "Explore London",
+                  "url": "/explore-london",
                 }
               }
               setNavOpen={[Function]}
