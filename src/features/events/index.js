@@ -6,3 +6,4 @@ export { default as EventInfoCard } from './components/eventInfoCard'
 export {
   default as EventDirectionsSection,
 } from './components/eventDirectionsSection'
+export { default as EventShareSection } from './components/eventShareSection'

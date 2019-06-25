@@ -81,6 +81,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
                 target="_blank"
               >
                 <Linkedin
+                  fill="#2CDA9D"
                   height={20}
                   width={20}
                 />

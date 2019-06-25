@@ -13,6 +13,7 @@ import {
   EventsYouMayLike,
   EventInfoCard,
   EventDirectionsSection,
+  EventShareSection,
 } from '../features/events'
 import { Container, Row, Column } from '../components/grid'
 import { checkBreakpoint } from '../utilities'
@@ -318,6 +319,7 @@ export default class Event extends Component {
                   <EventSchedule schedule={performances} />
                 </Section>
               )}
+              <EventShareSection />
             </Column>
           </Row>
         </Container>
