@@ -131,6 +131,7 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
                       twitterUrl,
                       facebookUrl,
                       instagramUrl,
+                      emailUrl,
                     }) => {
                       return (
                         <ParadeGroup
@@ -140,6 +141,7 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
                           twitterUrl={twitterUrl}
                           facebookUrl={facebookUrl}
                           instagramUrl={instagramUrl}
+                          emailUrl={emailUrl}
                         />
                       )
                     }

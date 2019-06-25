@@ -80,6 +80,7 @@ export const paradeGroupsQuery = graphql`
           twitterUrl
           facebookUrl
           instagramUrl
+          emailUrl
         }
       }
     }

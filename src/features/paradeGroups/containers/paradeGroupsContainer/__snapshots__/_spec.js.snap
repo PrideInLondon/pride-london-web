@@ -202,6 +202,7 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       letter="#"
     >
       <ParadeGroup
+        emailUrl={null}
         facebookUrl={null}
         instagramUrl={null}
         key="23 group"
@@ -214,6 +215,7 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       letter="a"
     >
       <ParadeGroup
+        emailUrl={null}
         facebookUrl={null}
         instagramUrl={null}
         key="A group"
@@ -226,6 +228,7 @@ exports[`ParadeGroupsContainer should render correctly 1`] = `
       letter="b"
     >
       <ParadeGroup
+        emailUrl={null}
         facebookUrl={null}
         instagramUrl={null}
         key="B group"

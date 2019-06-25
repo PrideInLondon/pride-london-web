@@ -4,6 +4,7 @@ import Facebook from '../../../../components/icons/facebook'
 import Twitter from '../../../../components/icons/twitter'
 import Instagram from '../../../../components/icons/instagram'
 import Globe from '../../../../components/icons/globe'
+import MailIcon from '../../../../components/icons/mailIcon'
 import theme from '../../../../theme/theme'
 import { RowContainer, TitleContainer, IconContainer } from './styles'
 
@@ -13,6 +14,7 @@ const ParadeGroup = ({
   twitterUrl,
   facebookUrl,
   instagramUrl,
+  emailUrl,
 }) => {
   return (
     <RowContainer>
@@ -21,6 +23,11 @@ const ParadeGroup = ({
         {websiteUrl && (
           <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
             <Globe width={24} height={24} fill={theme.colors.indigo} />
+          </a>
+        )}
+        {emailUrl && (
+          <a href={emailUrl} target="_blank" rel="noopener noreferrer">
+            <MailIcon width={30} height={24} fill={theme.colors.indigo} />
           </a>
         )}
         {facebookUrl && (
@@ -49,6 +56,7 @@ ParadeGroup.propTypes = {
   twitterUrl: PropTypes.string,
   facebookUrl: PropTypes.string,
   instagramUrl: PropTypes.string,
+  emailUrl: PropTypes.string,
 }
 
 ParadeGroup.defaultProps = {
@@ -57,6 +65,7 @@ ParadeGroup.defaultProps = {
   twitterUrl: null,
   facebookUrl: null,
   instagramUrl: null,
+  emailUrl: null,
 }
 
 export default ParadeGroup
