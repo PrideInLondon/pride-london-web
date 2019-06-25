@@ -98,12 +98,16 @@ const Nav = () => {
                             url: '/parade',
                           },
                           {
-                            title: 'Accessibility',
-                            url: '/parade/accessibility',
+                            title: 'Parade groups',
+                            url: '/parade-groups',
                           },
                           {
                             title: 'Map',
                             url: '/parade/map',
+                          },
+                          {
+                            title: 'Accessibility',
+                            url: '/parade/accessibility',
                           },
                           {
                             title: 'Take part',

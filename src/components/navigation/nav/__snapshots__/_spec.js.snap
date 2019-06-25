@@ -93,12 +93,16 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                           "url": "/parade",
                         },
                         Object {
-                          "title": "Accessibility",
-                          "url": "/parade/accessibility",
+                          "title": "Parade groups",
+                          "url": "/parade-groups",
                         },
                         Object {
                           "title": "Map",
                           "url": "/parade/map",
+                        },
+                        Object {
+                          "title": "Accessibility",
+                          "url": "/parade/accessibility",
                         },
                         Object {
                           "title": "Take part",
