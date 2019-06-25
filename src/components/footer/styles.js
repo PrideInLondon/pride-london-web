@@ -180,6 +180,8 @@ export const SponsorImgWrapper = styled.div`
   `};
 
   a {
+    width: 100%;
+    text-align: center;
     border: none !important;
     text-decoration: none !important;
     color: initial !important;
