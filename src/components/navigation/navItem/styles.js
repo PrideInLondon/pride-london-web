@@ -17,7 +17,7 @@ export const linkStyles = css`
   border: none;
 
   ${media.nav`
-    padding: 35px 25px;
+    padding: 35px 20px;
     line-height: 1.8125rem;
   `};
 `
