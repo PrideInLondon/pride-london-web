@@ -32,7 +32,7 @@ const ShareText = styled.p`
   `}
 `
 
-const ShareButton = styled.a`
+const ShareLink = styled.a`
   width: 20px;
   height: 20px;
   margin-right: 20px;
@@ -57,21 +57,21 @@ const ShareButton = styled.a`
 const EventShareSection = () => (
   <ShareList>
     <ShareText>Share</ShareText>
-    <ShareButton>
+    <ShareLink>
       <EmailIcon width={25} height={25} fill={theme.colors.indigo} />
-    </ShareButton>
-    <ShareButton>
+    </ShareLink>
+    <ShareLink>
       <TwitterIcon width={25} height={25} fill={theme.colors.indigo} />
-    </ShareButton>
-    <ShareButton>
+    </ShareLink>
+    <ShareLink>
       <FacebookIcon width={25} height={25} fill={theme.colors.indigo} />
-    </ShareButton>
-    <ShareButton>
+    </ShareLink>
+    <ShareLink>
       <MessengerIcon width={25} height={25} fill={theme.colors.indigo} />
-    </ShareButton>
-    <ShareButton>
+    </ShareLink>
+    <ShareLink>
       <LinkedinIcon width={25} height={25} fill={theme.colors.indigo} />
-    </ShareButton>
+    </ShareLink>
   </ShareList>
 )
 

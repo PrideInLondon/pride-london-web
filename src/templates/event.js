@@ -319,7 +319,7 @@ export default class Event extends Component {
                   <EventSchedule schedule={performances} />
                 </Section>
               )}
-              <EventShareSection />
+              <EventShareSection location={metaUrl} />
             </Column>
           </Row>
         </Container>
