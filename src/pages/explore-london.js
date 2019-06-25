@@ -1,18 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import { Container, Row, Column, GreyWrapper } from '../components/grid'
+import { GreyWrapper } from '../components/grid'
 import BannerImage from '../components/banner/bannerImage'
 import theme from '../theme/theme'
 import { communityPartnerCategories } from '../constants'
 import PageIntro from '../components/pageIntro'
 import FilteredPagedCardContainer from '../components/filteredPagedCardContainer'
 import CommunityPartnerCard from '../features/visitorInformation/components/communityPartnerCard'
-
-const SectionTitle = styled.h2`
-  text-align: center;
-`
 
 const VisitorInformationPage = ({
   data: {
@@ -22,37 +17,39 @@ const VisitorInformationPage = ({
   return (
     <div>
       <BannerImage
-        titleText="Visitor Information"
-        subtitleText="Find out about this year’s Pride Partners"
+        titleText="Explore London"
+        subtitleText="Find great places to spend time with friends and loved ones around London."
         color={theme.colors.yellow}
       />
       <PageIntro
         cta={{
-          title: 'Become a partner',
+          title: 'Get your venue listed',
           body:
-            'Interested in supporting Pride in London and having your business featured here?',
+            "We'd love to hear from you if you have an LGBT+ or LGBT+ friendly venue and you want to support Pride.",
           link: { to: 'mailto:info@prideinlondon.org', text: 'Get in touch' },
         }}
       >
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt.
+          London is one of the most exciting cities in the world. Whether you're
+          London born and bred or visiting from further afield, check out the
+          following amazing venues who support Pride and the LGBT+ community.
+        </p>
+        <p>
+          Oh and if you're visiting London and need somewhere to store your bags
+          and luggage, we've partnered with{' '}
+          <a
+            href="https://stasher.com/search?search=Regent%20Street&coordinates=51.51562449999999%2C-0.14205270000002201"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Stasher
+          </a>{' '}
+          who have locations all across the city. It's only £6 per day so check
+          them out! Use the code PRIDE for 10% off.
         </p>
       </PageIntro>
       {partners && (
         <GreyWrapper as="section">
-          <Container>
-            <Row>
-              <Column width={1}>
-                <SectionTitle>2019 Partners</SectionTitle>
-              </Column>
-            </Row>
-          </Container>
           <FilteredPagedCardContainer
             filterType="checkbox"
             categories={communityPartnerCategories}
