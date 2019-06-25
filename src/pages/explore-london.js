@@ -30,8 +30,8 @@ const VisitorInformationPage = ({
         }}
       >
         <p>
-          London is one of the most exciting cities in the world. Whether you're
-          London born and bred or visiting from further afield, check out the
+          London is one of the most exciting cities in the world. Whether you
+          live in London or you're visiting from further afield, check out the
           following amazing venues who support Pride and the LGBT+ community.
         </p>
         <p>
