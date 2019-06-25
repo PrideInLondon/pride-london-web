@@ -1,0 +1,1437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PagedCardContainer renders component with default props 1`] = `
+<Fragment>
+  <pagedCardContainer__PaddedCardContainer
+    CardComponent={[Function]}
+    cardContent={Array []}
+    isFullyLoaded={true}
+  />
+</Fragment>
+`;
+
+exports[`PagedCardContainer renders component with specified non-default props 1`] = `
+<PagedCardContainer
+  CardComponent={[Function]}
+  cardContent={
+    Array [
+      Object {
+        "id": "id-foo",
+        "text": "text-foo",
+      },
+      Object {
+        "id": "id-bar",
+        "text": "text-bar",
+      },
+      Object {
+        "id": "id-baz",
+        "text": "text-baz",
+      },
+    ]
+  }
+  moreCardsToShow={true}
+  onShowMoreButtonClick={[MockFunction]}
+  showMoreButtonText="Show More Foo"
+>
+  <pagedCardContainer__PaddedCardContainer
+    CardComponent={[Function]}
+    cardContent={
+      Array [
+        Object {
+          "id": "id-foo",
+          "text": "text-foo",
+        },
+        Object {
+          "id": "id-bar",
+          "text": "text-bar",
+        },
+        Object {
+          "id": "id-baz",
+          "text": "text-baz",
+        },
+      ]
+    }
+    isFullyLoaded={false}
+  >
+    <StyledComponent
+      CardComponent={[Function]}
+      cardContent={
+        Array [
+          Object {
+            "id": "id-foo",
+            "text": "text-foo",
+          },
+          Object {
+            "id": "id-bar",
+            "text": "text-bar",
+          },
+          Object {
+            "id": "id-baz",
+            "text": "text-baz",
+          },
+        ]
+      }
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "pagedCardContainer__PaddedCardContainer-ymz70m-0",
+            "isStatic": false,
+            "lastClassName": "jSDtMq",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "displayName": "pagedCardContainer__PaddedCardContainer",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "pagedCardContainer__PaddedCardContainer-ymz70m-0",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        }
+      }
+      forwardedRef={null}
+      isFullyLoaded={false}
+    >
+      <CardContainer
+        CardComponent={[Function]}
+        cardContent={
+          Array [
+            Object {
+              "id": "id-foo",
+              "text": "text-foo",
+            },
+            Object {
+              "id": "id-bar",
+              "text": "text-bar",
+            },
+            Object {
+              "id": "id-baz",
+              "text": "text-baz",
+            },
+          ]
+        }
+        className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+        isFullyLoaded={false}
+      >
+        <grid__Container
+          className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+          mx="auto"
+        >
+          <StyledComponent
+            className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "_foldedDefaultProps": Object {
+                  "mx": "auto",
+                },
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "grid__Container-l0wsyy-0",
+                  "isStatic": false,
+                  "lastClassName": "eEEIRW",
+                  "rules": Array [
+                    "box-sizing: border-box;",
+                    [Function],
+                    [Function],
+                    [Function],
+                    [Function],
+                    [Function],
+                    [Function],
+                    [Function],
+                    "@media (min-width:",
+                    "375",
+                    "px){",
+                    "
+    min-width: 335px;
+  ",
+                    ";}",
+                    ";",
+                    "@media (min-width:",
+                    "768",
+                    "px){",
+                    "
+    min-width: 668px;
+  ",
+                    ";}",
+                    ";",
+                    "@media (min-width:",
+                    "1024",
+                    "px){",
+                    "
+    min-width: 960px;
+  ",
+                    ";}",
+                    ";",
+                    "@media (min-width:",
+                    "1440",
+                    "px){",
+                    "
+    min-width: 1260px;
+    max-width: ",
+                    "1440",
+                    "px;    
+  ",
+                    ";}",
+                    ";",
+                  ],
+                },
+                "displayName": "grid__Container",
+                "foldedComponentIds": Array [
+                  "sc-bdVaJa",
+                ],
+                "propTypes": Object {
+                  "backgroundColor": [Function],
+                  "bg": [Function],
+                  "color": [Function],
+                  "fontSize": [Function],
+                  "m": [Function],
+                  "margin": [Function],
+                  "marginBottom": [Function],
+                  "marginLeft": [Function],
+                  "marginRight": [Function],
+                  "marginTop": [Function],
+                  "mb": [Function],
+                  "ml": [Function],
+                  "mr": [Function],
+                  "mt": [Function],
+                  "p": [Function],
+                  "padding": [Function],
+                  "paddingBottom": [Function],
+                  "paddingLeft": [Function],
+                  "paddingRight": [Function],
+                  "paddingTop": [Function],
+                  "pb": [Function],
+                  "pl": [Function],
+                  "pr": [Function],
+                  "pt": [Function],
+                  "width": [Function],
+                },
+                "render": [Function],
+                "styledComponentId": "grid__Container-l0wsyy-0",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            mx="auto"
+          >
+            <div
+              className="sc-bdVaJa pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq grid__Container-l0wsyy-0 eEEIRW"
+            >
+              <Row
+                flexWrap={null}
+                ml={null}
+                mr={null}
+                mx={null}
+              >
+                <Flex
+                  flexWrap="wrap"
+                  ml={
+                    Array [
+                      1,
+                      10,
+                      40,
+                      75,
+                    ]
+                  }
+                  mr={
+                    Array [
+                      1,
+                      10,
+                      40,
+                      75,
+                    ]
+                  }
+                  mx={null}
+                >
+                  <StyledComponent
+                    flexWrap="wrap"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bwzfXH",
+                          "isStatic": false,
+                          "lastClassName": "leDAiW",
+                          "rules": Array [
+                            "box-sizing: border-box;",
+                            [Function],
+                            [Function],
+                            [Function],
+                            [Function],
+                            [Function],
+                            [Function],
+                            [Function],
+                            "display: flex;",
+                            [Function],
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                        },
+                        "displayName": "Flex",
+                        "foldedComponentIds": Array [
+                          "sc-bdVaJa",
+                        ],
+                        "propTypes": Object {
+                          "alignItems": [Function],
+                          "flexDirection": [Function],
+                          "flexWrap": [Function],
+                          "justifyContent": [Function],
+                        },
+                        "render": [Function],
+                        "styledComponentId": "sc-bwzfXH",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    ml={
+                      Array [
+                        1,
+                        10,
+                        40,
+                        75,
+                      ]
+                    }
+                    mr={
+                      Array [
+                        1,
+                        10,
+                        40,
+                        75,
+                      ]
+                    }
+                    mx={null}
+                  >
+                    <div
+                      className="sc-bdVaJa sc-bwzfXH guKgGl"
+                    >
+                      <grid__FlexColumn
+                        key="id-foo"
+                        py={
+                          Array [
+                            2,
+                            2,
+                            2,
+                            3,
+                          ]
+                        }
+                        width={
+                          Array [
+                            1,
+                            1,
+                            0.5,
+                            0.3333333333333333,
+                          ]
+                        }
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "grid__FlexColumn-l0wsyy-1",
+                                "isStatic": true,
+                                "lastClassName": "bsrdHZ",
+                                "rules": Array [
+                                  "display:block;",
+                                  "@media (min-width:",
+                                  "768",
+                                  "px){",
+                                  "
+    display: flex;
+  ",
+                                  ";}",
+                                  ";",
+                                ],
+                              },
+                              "displayName": "grid__FlexColumn",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "grid__FlexColumn-l0wsyy-1",
+                              "target": [Function],
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                              Symbol(Symbol.hasInstance): [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          py={
+                            Array [
+                              2,
+                              2,
+                              2,
+                              3,
+                            ]
+                          }
+                          width={
+                            Array [
+                              1,
+                              1,
+                              0.5,
+                              0.3333333333333333,
+                            ]
+                          }
+                        >
+                          <Column
+                            className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                            pb={null}
+                            pl={null}
+                            pr={null}
+                            pt={null}
+                            px={null}
+                            py={
+                              Array [
+                                2,
+                                2,
+                                2,
+                                3,
+                              ]
+                            }
+                            width={
+                              Array [
+                                1,
+                                1,
+                                0.5,
+                                0.3333333333333333,
+                              ]
+                            }
+                          >
+                            <Box
+                              className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                              pb={null}
+                              pl={
+                                Array [
+                                  1,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              pr={
+                                Array [
+                                  1,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              pt={null}
+                              px={null}
+                              py={
+                                Array [
+                                  2,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              width={
+                                Array [
+                                  1,
+                                  1,
+                                  0.5,
+                                  0.3333333333333333,
+                                ]
+                              }
+                            >
+                              <StyledComponent
+                                className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-bdVaJa",
+                                      "isStatic": false,
+                                      "lastClassName": "gzZQhn",
+                                      "rules": Array [
+                                        "box-sizing: border-box;",
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                      ],
+                                    },
+                                    "displayName": "Box",
+                                    "foldedComponentIds": Array [],
+                                    "propTypes": Object {
+                                      "backgroundColor": [Function],
+                                      "bg": [Function],
+                                      "color": [Function],
+                                      "fontSize": [Function],
+                                      "m": [Function],
+                                      "margin": [Function],
+                                      "marginBottom": [Function],
+                                      "marginLeft": [Function],
+                                      "marginRight": [Function],
+                                      "marginTop": [Function],
+                                      "mb": [Function],
+                                      "ml": [Function],
+                                      "mr": [Function],
+                                      "mt": [Function],
+                                      "p": [Function],
+                                      "padding": [Function],
+                                      "paddingBottom": [Function],
+                                      "paddingLeft": [Function],
+                                      "paddingRight": [Function],
+                                      "paddingTop": [Function],
+                                      "pb": [Function],
+                                      "pl": [Function],
+                                      "pr": [Function],
+                                      "pt": [Function],
+                                      "width": [Function],
+                                    },
+                                    "render": [Function],
+                                    "styledComponentId": "sc-bdVaJa",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                                pb={null}
+                                pl={
+                                  Array [
+                                    1,
+                                    2,
+                                    2,
+                                    3,
+                                  ]
+                                }
+                                pr={
+                                  Array [
+                                    1,
+                                    2,
+                                    2,
+                                    3,
+                                  ]
+                                }
+                                pt={null}
+                                px={null}
+                                py={
+                                  Array [
+                                    2,
+                                    2,
+                                    2,
+                                    3,
+                                  ]
+                                }
+                                width={
+                                  Array [
+                                    1,
+                                    1,
+                                    0.5,
+                                    0.3333333333333333,
+                                  ]
+                                }
+                              >
+                                <div
+                                  className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                  width={
+                                    Array [
+                                      1,
+                                      1,
+                                      0.5,
+                                      0.3333333333333333,
+                                    ]
+                                  }
+                                >
+                                  <CardComponent
+                                    text="text-foo"
+                                  >
+                                    <div>
+                                      text-foo
+                                    </div>
+                                  </CardComponent>
+                                </div>
+                              </StyledComponent>
+                            </Box>
+                          </Column>
+                        </StyledComponent>
+                      </grid__FlexColumn>
+                      <grid__FlexColumn
+                        key="id-bar"
+                        py={
+                          Array [
+                            2,
+                            2,
+                            2,
+                            3,
+                          ]
+                        }
+                        width={
+                          Array [
+                            1,
+                            1,
+                            0.5,
+                            0.3333333333333333,
+                          ]
+                        }
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "grid__FlexColumn-l0wsyy-1",
+                                "isStatic": true,
+                                "lastClassName": "bsrdHZ",
+                                "rules": Array [
+                                  "display:block;",
+                                  "@media (min-width:",
+                                  "768",
+                                  "px){",
+                                  "
+    display: flex;
+  ",
+                                  ";}",
+                                  ";",
+                                ],
+                              },
+                              "displayName": "grid__FlexColumn",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "grid__FlexColumn-l0wsyy-1",
+                              "target": [Function],
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                              Symbol(Symbol.hasInstance): [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          py={
+                            Array [
+                              2,
+                              2,
+                              2,
+                              3,
+                            ]
+                          }
+                          width={
+                            Array [
+                              1,
+                              1,
+                              0.5,
+                              0.3333333333333333,
+                            ]
+                          }
+                        >
+                          <Column
+                            className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                            pb={null}
+                            pl={null}
+                            pr={null}
+                            pt={null}
+                            px={null}
+                            py={
+                              Array [
+                                2,
+                                2,
+                                2,
+                                3,
+                              ]
+                            }
+                            width={
+                              Array [
+                                1,
+                                1,
+                                0.5,
+                                0.3333333333333333,
+                              ]
+                            }
+                          >
+                            <Box
+                              className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                              pb={null}
+                              pl={
+                                Array [
+                                  1,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              pr={
+                                Array [
+                                  1,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              pt={null}
+                              px={null}
+                              py={
+                                Array [
+                                  2,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              width={
+                                Array [
+                                  1,
+                                  1,
+                                  0.5,
+                                  0.3333333333333333,
+                                ]
+                              }
+                            >
+                              <StyledComponent
+                                className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-bdVaJa",
+                                      "isStatic": false,
+                                      "lastClassName": "gzZQhn",
+                                      "rules": Array [
+                                        "box-sizing: border-box;",
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                      ],
+                                    },
+                                    "displayName": "Box",
+                                    "foldedComponentIds": Array [],
+                                    "propTypes": Object {
+                                      "backgroundColor": [Function],
+                                      "bg": [Function],
+                                      "color": [Function],
+                                      "fontSize": [Function],
+                                      "m": [Function],
+                                      "margin": [Function],
+                                      "marginBottom": [Function],
+                                      "marginLeft": [Function],
+                                      "marginRight": [Function],
+                                      "marginTop": [Function],
+                                      "mb": [Function],
+                                      "ml": [Function],
+                                      "mr": [Function],
+                                      "mt": [Function],
+                                      "p": [Function],
+                                      "padding": [Function],
+                                      "paddingBottom": [Function],
+                                      "paddingLeft": [Function],
+                                      "paddingRight": [Function],
+                                      "paddingTop": [Function],
+                                      "pb": [Function],
+                                      "pl": [Function],
+                                      "pr": [Function],
+                                      "pt": [Function],
+                                      "width": [Function],
+                                    },
+                                    "render": [Function],
+                                    "styledComponentId": "sc-bdVaJa",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                                pb={null}
+                                pl={
+                                  Array [
+                                    1,
+                                    2,
+                                    2,
+                                    3,
+                                  ]
+                                }
+                                pr={
+                                  Array [
+                                    1,
+                                    2,
+                                    2,
+                                    3,
+                                  ]
+                                }
+                                pt={null}
+                                px={null}
+                                py={
+                                  Array [
+                                    2,
+                                    2,
+                                    2,
+                                    3,
+                                  ]
+                                }
+                                width={
+                                  Array [
+                                    1,
+                                    1,
+                                    0.5,
+                                    0.3333333333333333,
+                                  ]
+                                }
+                              >
+                                <div
+                                  className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                  width={
+                                    Array [
+                                      1,
+                                      1,
+                                      0.5,
+                                      0.3333333333333333,
+                                    ]
+                                  }
+                                >
+                                  <CardComponent
+                                    text="text-bar"
+                                  >
+                                    <div>
+                                      text-bar
+                                    </div>
+                                  </CardComponent>
+                                </div>
+                              </StyledComponent>
+                            </Box>
+                          </Column>
+                        </StyledComponent>
+                      </grid__FlexColumn>
+                      <grid__FlexColumn
+                        key="id-baz"
+                        py={
+                          Array [
+                            2,
+                            2,
+                            2,
+                            3,
+                          ]
+                        }
+                        width={
+                          Array [
+                            1,
+                            1,
+                            0.5,
+                            0.3333333333333333,
+                          ]
+                        }
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "grid__FlexColumn-l0wsyy-1",
+                                "isStatic": true,
+                                "lastClassName": "bsrdHZ",
+                                "rules": Array [
+                                  "display:block;",
+                                  "@media (min-width:",
+                                  "768",
+                                  "px){",
+                                  "
+    display: flex;
+  ",
+                                  ";}",
+                                  ";",
+                                ],
+                              },
+                              "displayName": "grid__FlexColumn",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "grid__FlexColumn-l0wsyy-1",
+                              "target": [Function],
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                              Symbol(Symbol.hasInstance): [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          py={
+                            Array [
+                              2,
+                              2,
+                              2,
+                              3,
+                            ]
+                          }
+                          width={
+                            Array [
+                              1,
+                              1,
+                              0.5,
+                              0.3333333333333333,
+                            ]
+                          }
+                        >
+                          <Column
+                            className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                            pb={null}
+                            pl={null}
+                            pr={null}
+                            pt={null}
+                            px={null}
+                            py={
+                              Array [
+                                2,
+                                2,
+                                2,
+                                3,
+                              ]
+                            }
+                            width={
+                              Array [
+                                1,
+                                1,
+                                0.5,
+                                0.3333333333333333,
+                              ]
+                            }
+                          >
+                            <Box
+                              className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                              pb={null}
+                              pl={
+                                Array [
+                                  1,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              pr={
+                                Array [
+                                  1,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              pt={null}
+                              px={null}
+                              py={
+                                Array [
+                                  2,
+                                  2,
+                                  2,
+                                  3,
+                                ]
+                              }
+                              width={
+                                Array [
+                                  1,
+                                  1,
+                                  0.5,
+                                  0.3333333333333333,
+                                ]
+                              }
+                            >
+                              <StyledComponent
+                                className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-bdVaJa",
+                                      "isStatic": false,
+                                      "lastClassName": "gzZQhn",
+                                      "rules": Array [
+                                        "box-sizing: border-box;",
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                        [Function],
+                                      ],
+                                    },
+                                    "displayName": "Box",
+                                    "foldedComponentIds": Array [],
+                                    "propTypes": Object {
+                                      "backgroundColor": [Function],
+                                      "bg": [Function],
+                                      "color": [Function],
+                                      "fontSize": [Function],
+                                      "m": [Function],
+                                      "margin": [Function],
+                                      "marginBottom": [Function],
+                                      "marginLeft": [Function],
+                                      "marginRight": [Function],
+                                      "marginTop": [Function],
+                                      "mb": [Function],
+                                      "ml": [Function],
+                                      "mr": [Function],
+                                      "mt": [Function],
+                                      "p": [Function],
+                                      "padding": [Function],
+                                      "paddingBottom": [Function],
+                                      "paddingLeft": [Function],
+                                      "paddingRight": [Function],
+                                      "paddingTop": [Function],
+                                      "pb": [Function],
+                                      "pl": [Function],
+                                      "pr": [Function],
+                                      "pt": [Function],
+                                      "width": [Function],
+                                    },
+                                    "render": [Function],
+                                    "styledComponentId": "sc-bdVaJa",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                                pb={null}
+                                pl={
+                                  Array [
+                                    1,
+                                    2,
+                                    2,
+                                    3,
+                                  ]
+                                }
+                                pr={
+                                  Array [
+                                    1,
+                                    2,
+                                    2,
+                                    3,
+                                  ]
+                                }
+                                pt={null}
+                                px={null}
+                                py={
+                                  Array [
+                                    2,
+                                    2,
+                                    2,
+                                    3,
+                                  ]
+                                }
+                                width={
+                                  Array [
+                                    1,
+                                    1,
+                                    0.5,
+                                    0.3333333333333333,
+                                  ]
+                                }
+                              >
+                                <div
+                                  className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                  width={
+                                    Array [
+                                      1,
+                                      1,
+                                      0.5,
+                                      0.3333333333333333,
+                                    ]
+                                  }
+                                >
+                                  <CardComponent
+                                    text="text-baz"
+                                  >
+                                    <div>
+                                      text-baz
+                                    </div>
+                                  </CardComponent>
+                                </div>
+                              </StyledComponent>
+                            </Box>
+                          </Column>
+                        </StyledComponent>
+                      </grid__FlexColumn>
+                    </div>
+                  </StyledComponent>
+                </Flex>
+              </Row>
+            </div>
+          </StyledComponent>
+        </grid__Container>
+      </CardContainer>
+    </StyledComponent>
+  </pagedCardContainer__PaddedCardContainer>
+  <ShowMoreButton
+    onClick={[MockFunction]}
+    text="Show More Foo"
+  >
+    <Row
+      flexWrap={null}
+      ml={null}
+      mr={null}
+      mx={null}
+      pb={
+        Array [
+          30,
+          30,
+          50,
+        ]
+      }
+    >
+      <Flex
+        flexWrap="wrap"
+        ml={
+          Array [
+            1,
+            10,
+            40,
+            75,
+          ]
+        }
+        mr={
+          Array [
+            1,
+            10,
+            40,
+            75,
+          ]
+        }
+        mx={null}
+        pb={
+          Array [
+            30,
+            30,
+            50,
+          ]
+        }
+      >
+        <StyledComponent
+          flexWrap="wrap"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bwzfXH",
+                "isStatic": false,
+                "lastClassName": "leDAiW",
+                "rules": Array [
+                  "box-sizing: border-box;",
+                  [Function],
+                  [Function],
+                  [Function],
+                  [Function],
+                  [Function],
+                  [Function],
+                  [Function],
+                  "display: flex;",
+                  [Function],
+                  [Function],
+                  [Function],
+                  [Function],
+                ],
+              },
+              "displayName": "Flex",
+              "foldedComponentIds": Array [
+                "sc-bdVaJa",
+              ],
+              "propTypes": Object {
+                "alignItems": [Function],
+                "flexDirection": [Function],
+                "flexWrap": [Function],
+                "justifyContent": [Function],
+              },
+              "render": [Function],
+              "styledComponentId": "sc-bwzfXH",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          ml={
+            Array [
+              1,
+              10,
+              40,
+              75,
+            ]
+          }
+          mr={
+            Array [
+              1,
+              10,
+              40,
+              75,
+            ]
+          }
+          mx={null}
+          pb={
+            Array [
+              30,
+              30,
+              50,
+            ]
+          }
+        >
+          <div
+            className="sc-bdVaJa sc-bwzfXH leDAiW"
+          >
+            <Column
+              mx="auto"
+              pb={null}
+              pl={null}
+              pr={null}
+              pt={
+                Array [
+                  30,
+                  30,
+                  50,
+                ]
+              }
+              px={null}
+              py={null}
+            >
+              <Box
+                mx="auto"
+                pb={2}
+                pl={
+                  Array [
+                    1,
+                    2,
+                    2,
+                    3,
+                  ]
+                }
+                pr={
+                  Array [
+                    1,
+                    2,
+                    2,
+                    3,
+                  ]
+                }
+                pt={
+                  Array [
+                    30,
+                    30,
+                    50,
+                  ]
+                }
+                px={null}
+                py={null}
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bdVaJa",
+                        "isStatic": false,
+                        "lastClassName": "gzZQhn",
+                        "rules": Array [
+                          "box-sizing: border-box;",
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                        ],
+                      },
+                      "displayName": "Box",
+                      "foldedComponentIds": Array [],
+                      "propTypes": Object {
+                        "backgroundColor": [Function],
+                        "bg": [Function],
+                        "color": [Function],
+                        "fontSize": [Function],
+                        "m": [Function],
+                        "margin": [Function],
+                        "marginBottom": [Function],
+                        "marginLeft": [Function],
+                        "marginRight": [Function],
+                        "marginTop": [Function],
+                        "mb": [Function],
+                        "ml": [Function],
+                        "mr": [Function],
+                        "mt": [Function],
+                        "p": [Function],
+                        "padding": [Function],
+                        "paddingBottom": [Function],
+                        "paddingLeft": [Function],
+                        "paddingRight": [Function],
+                        "paddingTop": [Function],
+                        "pb": [Function],
+                        "pl": [Function],
+                        "pr": [Function],
+                        "pt": [Function],
+                        "width": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-bdVaJa",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  mx="auto"
+                  pb={2}
+                  pl={
+                    Array [
+                      1,
+                      2,
+                      2,
+                      3,
+                    ]
+                  }
+                  pr={
+                    Array [
+                      1,
+                      2,
+                      2,
+                      3,
+                    ]
+                  }
+                  pt={
+                    Array [
+                      30,
+                      30,
+                      50,
+                    ]
+                  }
+                  px={null}
+                  py={null}
+                >
+                  <div
+                    className="sc-bdVaJa gzZQhn"
+                  >
+                    <Button
+                      className=""
+                      disabled={false}
+                      flexwidth={false}
+                      fullmobile={false}
+                      link={false}
+                      onClick={[MockFunction]}
+                      primary={true}
+                      small={false}
+                      to={null}
+                      type="button"
+                      white={false}
+                      wide={true}
+                    >
+                      <button__StyledButton
+                        className=""
+                        disabled={false}
+                        flexwidth={false}
+                        fullmobile={false}
+                        onClick={[MockFunction]}
+                        primary={true}
+                        small={false}
+                        type="button"
+                        white={false}
+                        wide={true}
+                      >
+                        <StyledComponent
+                          className=""
+                          disabled={false}
+                          flexwidth={false}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "button__StyledButton-sc-1gywmhy-0",
+                                "isStatic": false,
+                                "lastClassName": "lgTyhb",
+                                "rules": Array [
+                                  "box-sizing:border-box;padding:12px 35px;border-radius:4px;border:",
+                                  [Function],
+                                  ";display:inline-block;text-align:center;color:",
+                                  [Function],
+                                  ";background-color:",
+                                  [Function],
+                                  ";font-family:",
+                                  "Poppins, sans-serif",
+                                  ";font-weight:700;font-size:",
+                                  [Function],
+                                  ";line-height:1.388;min-width:",
+                                  [Function],
+                                  ";width:",
+                                  [Function],
+                                  ";cursor:pointer;text-decoration:none;text-align:center;transition:background-color 0.15s linear;&:hover{background-color:",
+                                  [Function],
+                                  ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
+                                  "@media (min-width:",
+                                  "768",
+                                  "px){",
+                                  "
+      width: auto;
+  ",
+                                  ";}",
+                                  ";",
+                                ],
+                              },
+                              "displayName": "button__StyledButton",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "button__StyledButton-sc-1gywmhy-0",
+                              "target": "button",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          fullmobile={false}
+                          onClick={[MockFunction]}
+                          primary={true}
+                          small={false}
+                          type="button"
+                          white={false}
+                          wide={true}
+                        >
+                          <button
+                            className="button__StyledButton-sc-1gywmhy-0 lgTyhb"
+                            disabled={false}
+                            onClick={[MockFunction]}
+                            type="button"
+                          >
+                            Show More Foo
+                          </button>
+                        </StyledComponent>
+                      </button__StyledButton>
+                    </Button>
+                  </div>
+                </StyledComponent>
+              </Box>
+            </Column>
+          </div>
+        </StyledComponent>
+      </Flex>
+    </Row>
+  </ShowMoreButton>
+</PagedCardContainer>
+`;

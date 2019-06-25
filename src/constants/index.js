@@ -108,6 +108,33 @@ const constants = {
       hexColour: theme.colors.skyBlue,
     },
   ],
+  filterTypes: ['checkbox', 'radio'],
+  communityPartnerCategories: [
+    {
+      title: 'Everything',
+      hexColour: theme.colors.yellow,
+    },
+    {
+      title: 'Drink',
+      hexColour: theme.colors.tomato,
+    },
+    {
+      title: 'Eat',
+      hexColour: theme.colors.pink,
+    },
+    {
+      title: 'Party',
+      hexColour: theme.colors.greyBlue,
+    },
+    {
+      title: 'Shop',
+      hexColour: theme.colors.eucalyptusGreen,
+    },
+    {
+      title: 'Sleep',
+      hexColour: theme.colors.fuscia,
+    },
+  ],
 }
 
 module.exports = constants
