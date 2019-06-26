@@ -99,7 +99,7 @@ const Nav = () => {
                           },
                           {
                             title: 'Parade groups',
-                            url: '/parade-groups',
+                            url: '/parade/groups',
                           },
                           {
                             title: 'Map',
