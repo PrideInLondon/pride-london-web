@@ -27,9 +27,12 @@ const ParadeMapContent = styled.div`
   `}
 `
 
-const Title = styled.h1``
+const Title = styled.h1`
+  width: 100%;
+`
 
 const Subtitle = styled.p`
+  width: 100%;
   font-family: Roboto;
   margin-top: 18px;
   ${media.tablet`
@@ -40,7 +43,7 @@ const Subtitle = styled.p`
 const Map = styled.iframe`
   border: none;
   min-height: 400px;
-  height: 100%;
+  height: calc(100vh - 80px);
   width: 100%;
   & > * {
     background-color: red !important;
@@ -48,6 +51,9 @@ const Map = styled.iframe`
   ${media.tabletMax`
     height: 100vh !important;
   `}
+  ${media.nav`
+    height: calc(100vh - 100px);
+  `};
 `
 
 const DownloadPDFButton = styled(Button)`
@@ -77,6 +83,7 @@ const DownloadPDFLinkMobile = styled.a`
 `
 
 const DownloadAppLabel = styled.p`
+  width: 100%;
   font-family: Roboto;
   color: ${theme.colors.darkGrey};
   font-size: 14px;
@@ -109,7 +116,6 @@ const AppDownloadButton = styled.a`
 `
 
 const ParadeMap = () => {
-  const paradeMapID = '1I5M9Oyc1damFcMhsi6yfODAMD6NXeIxi'
   const googlePlayUrl =
     'https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en'
   const appStoreUrl =
@@ -178,7 +184,7 @@ const ParadeMap = () => {
           <Map
             frameBorder="0"
             src={`https://www.google.com/maps/d/embed?${querystring.encode({
-              mid: paradeMapID,
+              mid: process.env.GATSBY_PARADE_MAP_ID,
               z: 16,
               ll: `51.51004, -0.13501`,
               hl: `en`,
