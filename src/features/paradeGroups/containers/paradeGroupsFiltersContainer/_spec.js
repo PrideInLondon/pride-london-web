@@ -9,10 +9,12 @@ describe(ParadeGroupsFilterContainer.name, () => {
     const categories = [
       {
         title: 'All groups',
+        api: 'MAGIC_VALUE_NOT_USED',
         hexColour: '#FFD95E',
       },
       {
         title: 'Arts',
+        api: 'ARTS',
         hexColour: '#FF5B44',
       },
     ]

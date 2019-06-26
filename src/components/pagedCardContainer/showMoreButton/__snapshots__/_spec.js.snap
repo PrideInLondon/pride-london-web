@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowMoreButton renders component 1`] = `
+<Row
+  flexWrap={null}
+  ml={null}
+  mr={null}
+  mx={null}
+  pb={
+    Array [
+      30,
+      30,
+      50,
+    ]
+  }
+>
+  <Column
+    mx="auto"
+    pb={null}
+    pl={null}
+    pr={null}
+    pt={
+      Array [
+        30,
+        30,
+        50,
+      ]
+    }
+    px={null}
+    py={null}
+  >
+    <Button
+      className=""
+      disabled={false}
+      flexwidth={false}
+      fullmobile={false}
+      link={false}
+      onClick={[MockFunction]}
+      primary={true}
+      small={false}
+      to={null}
+      type="button"
+      white={false}
+      wide={true}
+    >
+      Foo
+    </Button>
+  </Column>
+</Row>
+`;

@@ -98,12 +98,16 @@ const Nav = () => {
                             url: '/parade',
                           },
                           {
-                            title: 'Accessibility',
-                            url: '/parade/accessibility',
+                            title: 'Parade groups',
+                            url: '/parade-groups',
                           },
                           {
                             title: 'Map',
                             url: '/parade/map',
+                          },
+                          {
+                            title: 'Accessibility',
+                            url: '/parade/accessibility',
                           },
                           {
                             title: 'Take part',
@@ -252,8 +256,8 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-visitor-info',
-                    title: 'Visitor info',
-                    url: '/visitor-info',
+                    title: 'Explore London',
+                    url: '/explore-london',
                   }}
                 />
                 <NavItem
