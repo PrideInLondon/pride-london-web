@@ -319,15 +319,15 @@ export default class Event extends Component {
               </TitleWrapper>
               <Section>
                 <ReactMarkdown source={eventDescription} />
-                {sponsorSections.map(sponsorSection => (
-                  <SponsorsSubsection
-                    title={sponsorSection.title}
-                    key={sponsorSection.title}
-                  >
-                    {renderSponsors(sponsorSection.sponsors, true)}
-                  </SponsorsSubsection>
-                ))}
               </Section>
+              {sponsorSections.map(sponsorSection => (
+                <SponsorsSubsection
+                  title={sponsorSection.title}
+                  key={sponsorSection.title}
+                >
+                  {renderSponsors(sponsorSection.sponsors, true)}
+                </SponsorsSubsection>
+              ))}
               {accessibilityDetails && (
                 <>
                   <AccessibilityHeading>Accessibility</AccessibilityHeading>
