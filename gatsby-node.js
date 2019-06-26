@@ -11,10 +11,10 @@ exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type ContentfulEvent implements Node {
-      sponsorSections: [ContentfulSponsorSection!] @link(from: "sponsorSections___NODE")
+      sponsorSection: ContentfulSponsorSection @link(from: "sponsorSection___NODE")
     }
     type ContentfulSponsorSection implements Node {
-      title: String!
+      displayName: String!
       sponsors: [ContentfulSponsor!] @link(from: "sponsors___NODE")
     }
   `

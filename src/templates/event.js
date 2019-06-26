@@ -119,7 +119,7 @@ export default class Event extends Component {
           addressLine2,
           city,
           postcode,
-          eventSponsorSections,
+          eventSponsorSection,
         },
         contentfulEvent,
         site: {
@@ -134,18 +134,17 @@ export default class Event extends Component {
     const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
     const metaUrl = siteUrl + pathname
 
-    let sponsorSections = eventSponsorSections || []
-    sponsorSections = sponsorSections.map(sponsorSection => {
-      return {
-        ...sponsorSection,
-        sponsors: sponsorSection.sponsors.map(sponsor => ({
-          name: sponsor.sponsorName,
-          url: sponsor.sponsorUrl,
-          logo: sponsor.sponsorLogo && sponsor.sponsorLogo.sizes.src,
-          level: sponsor.sponsorLevel,
-        })),
-      }
-    })
+    const sponsorSection = eventSponsorSection
+      ? {
+          ...eventSponsorSection,
+          sponsors: eventSponsorSection.sponsors.map(sponsor => ({
+            name: sponsor.sponsorName,
+            url: sponsor.sponsorUrl,
+            logo: sponsor.sponsorLogo && sponsor.sponsorLogo.sizes.src,
+            level: sponsor.sponsorLevel,
+          })),
+        }
+      : []
 
     return (
       <PageWrapper>
@@ -320,14 +319,11 @@ export default class Event extends Component {
               <Section>
                 <ReactMarkdown source={eventDescription} />
               </Section>
-              {sponsorSections.map(sponsorSection => (
-                <SponsorsSubsection
-                  title={sponsorSection.title}
-                  key={sponsorSection.title}
-                >
+              {sponsorSection && (
+                <SponsorsSubsection title={sponsorSection.displayName}>
                   {renderSponsors(sponsorSection.sponsors, true)}
                 </SponsorsSubsection>
-              ))}
+              )}
               {accessibilityDetails && (
                 <>
                   <AccessibilityHeading>Accessibility</AccessibilityHeading>
@@ -413,8 +409,8 @@ export const eventPageQuery = graphql`
       }
       ...eventDirectionsFragment
       ...eventInfoCardQuery
-      eventSponsorSections: sponsorSections {
-        title
+      eventSponsorSection: sponsorSection {
+        displayName
         sponsors {
           sponsorLevel
           sponsorName

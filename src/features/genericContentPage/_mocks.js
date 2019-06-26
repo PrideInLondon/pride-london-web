@@ -114,7 +114,7 @@ export const sponsorSectionNode = {
   data: {
     target: {
       fields: {
-        title: { 'en-GB': 'Test Sponsor Section' },
+        displayName: { 'en-GB': 'Test Sponsor Section' },
         sponsors: {
           'en-GB': [
             {

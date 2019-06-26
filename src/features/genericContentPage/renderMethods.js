@@ -86,7 +86,7 @@ const renderSponsorSection = node => {
       target: { fields },
     },
   } = node
-  const title = fields.title['en-GB']
+  const title = fields.displayName['en-GB']
   let sponsors = fields.sponsors ? fields.sponsors['en-GB'] : []
   sponsors = sponsors.map(({ fields }) => ({
     name: fields.sponsorName['en-GB'],
