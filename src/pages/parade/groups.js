@@ -7,9 +7,6 @@ import background from '../../theme/assets/images/banners/parade-groups/bg@2x.jp
 import ParadeGroupsContainer from '../../features/paradeGroups/containers/paradeGroupsContainer'
 import { media } from '../../theme/media'
 import { paradeGroupCategories } from '../../constants'
-// import NotFoundPage from './404'
-
-// const ParadeGroups = () => <NotFoundPage />
 
 const Container = styled.div`
   position: relative;
