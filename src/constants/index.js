@@ -37,6 +37,7 @@ const constants = {
     supporters: 'Supporters',
     mediaPartners: 'Media Partners',
     digitalPartners: 'Digital Partners',
+    inactive: 'Inactive',
   },
   itemsToLoad: 24,
   dateFormat: 'DD/MM/YYYY',

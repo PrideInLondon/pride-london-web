@@ -16,6 +16,8 @@ import {
 } from '../features/events'
 import { Container, Row, Column } from '../components/grid'
 import { checkBreakpoint } from '../utilities'
+import SponsorsSubsection from '../components/sponsors/components/sponsorSubsection'
+import renderSponsors from '../components/sponsors/helpers'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -117,6 +119,7 @@ export default class Event extends Component {
           addressLine2,
           city,
           postcode,
+          eventSponsorSections,
         },
         contentfulEvent,
         site: {
@@ -130,6 +133,20 @@ export default class Event extends Component {
 
     const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
     const metaUrl = siteUrl + pathname
+
+    let sponsorSections = eventSponsorSections || []
+    sponsorSections = sponsorSections.map(sponsorSection => {
+      return {
+        ...sponsorSection,
+        sponsors: sponsorSection.sponsors.map(sponsor => ({
+          name: sponsor.sponsorName,
+          url: sponsor.sponsorUrl,
+          logo: sponsor.sponsorLogo && sponsor.sponsorLogo.sizes.src,
+          level: sponsor.sponsorLevel,
+        })),
+      }
+    })
+
     return (
       <PageWrapper>
         <Helmet
@@ -302,6 +319,14 @@ export default class Event extends Component {
               </TitleWrapper>
               <Section>
                 <ReactMarkdown source={eventDescription} />
+                {sponsorSections.map(sponsorSection => (
+                  <SponsorsSubsection
+                    title={sponsorSection.title}
+                    key={sponsorSection.title}
+                  >
+                    {renderSponsors(sponsorSection.sponsors, true)}
+                  </SponsorsSubsection>
+                ))}
               </Section>
               {accessibilityDetails && (
                 <>
@@ -388,6 +413,19 @@ export const eventPageQuery = graphql`
       }
       ...eventDirectionsFragment
       ...eventInfoCardQuery
+      eventSponsorSections: sponsorSections {
+        title
+        sponsors {
+          sponsorLevel
+          sponsorName
+          sponsorUrl
+          sponsorLogo {
+            sizes(maxHeight: 168, quality: 90) {
+              src
+            }
+          }
+        }
+      }
     }
   }
 `
