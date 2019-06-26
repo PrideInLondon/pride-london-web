@@ -144,7 +144,7 @@ export default class Event extends Component {
             level: sponsor.sponsorLevel,
           })),
         }
-      : []
+      : null
 
     return (
       <PageWrapper>
