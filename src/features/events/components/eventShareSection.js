@@ -55,13 +55,30 @@ const ShareLink = styled.a`
   }
 `
 
-const twitterShareUrl = name => {
-  return `https://twitter.com/home?status=${name}`
+const mailShareUrl = (name, description, location) => {
+  const subject = encodeURIComponent(name)
+  const body = encodeURIComponent(
+    `${name}\n\n${description}\n\nRead more here: \n${location}`
+  )
+  return `mailto:?subject=${subject}&body=${body}`
+}
+
+const twitterShareUrl = (name, location) => {
+  const encodedStatus = encodeURIComponent(`${name}\n\n${location}`)
+  return `https://twitter.com/home?status=${encodedStatus}`
 }
 
 const facebookShareUrl = url => {
   const encodedUrl = encodeURIComponent(url)
   return `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
+}
+
+const messengerShareUrl = (url, isMobile = false) => {
+  const encodedUrl = encodeURIComponent(url)
+  if (isMobile) {
+    return `fb-messenger://share/?app_id=&link=${encodedUrl}`
+  }
+  return `https://www.facebook.com/dialog/send?app_id=&link=${encodedUrl}&redirect_uri=${encodedUrl}`
 }
 
 const linkedinShareUrl = (name, description, url) => {
@@ -74,11 +91,15 @@ const linkedinShareUrl = (name, description, url) => {
 const EventShareSection = ({ name, description, location }) => (
   <ShareList>
     <ShareText>Share</ShareText>
-    <ShareLink>
+    <ShareLink
+      href={mailShareUrl(name, description, location)}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <EmailIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
     <ShareLink
-      href={twitterShareUrl(location)}
+      href={twitterShareUrl(name, location)}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -91,9 +112,20 @@ const EventShareSection = ({ name, description, location }) => (
     >
       <FacebookIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
-    <ShareLink>
-      <MessengerIcon width={25} height={25} fill={theme.colors.indigo} />
+    <ShareLink
+      href={messengerShareUrl(location)}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <MessengerIcon width={25} height={25} fill={theme.colors.red} />
     </ShareLink>
+    {/* <ShareLink
+      href={messengerShareUrl(location, true)}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <MessengerIcon width={25} height={25} fill={theme.colors.indigo} />
+    </ShareLink> */}
     <ShareLink
       href={linkedinShareUrl(name, description, location)}
       target="_blank"
