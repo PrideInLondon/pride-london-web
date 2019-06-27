@@ -69,6 +69,17 @@ function loadGTM() {
   }
 }
 
+const pushCookieConsentToDataLayer = () => {
+  if (
+    process.env.NODE_ENV !== 'development' &&
+    process.env.GATSBY_GTM_ID &&
+    typeof window !== 'undefined'
+  ) {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({ event: 'cookieConsent' })
+  }
+}
+
 const CookieNotice = () => {
   // Set as rejected so that when gatsby builds for production the server side rendering will generate the html for the cookie notice as closed.
   const [cookie, setCookie] = useState('rejected')
@@ -80,6 +91,7 @@ const CookieNotice = () => {
   useEffect(() => {
     if (cookie === 'accepted') {
       Cookies.set('accept', cookie, { expires: 30 })
+      pushCookieConsentToDataLayer()
     } else {
       Cookies.set('accept', cookie)
     }
@@ -92,7 +104,7 @@ const CookieNotice = () => {
 
   return (
     <>
-      {cookie === 'accepted' && loadGTM()}
+      {loadGTM()}
       {
         <CookieWrapper hide={cookie !== 'unspecified'}>
           <Container>
