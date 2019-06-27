@@ -10,6 +10,7 @@ import {
   typeformButtonNode,
   buttonNullContentNode,
   notRecognizedNode,
+  sponsorSectionNode,
 } from './_mocks'
 import GenericContent from '.'
 
@@ -61,6 +62,11 @@ describe('render methods for Generic Content', () => {
     expect(toJSON(wrapper)).toMatchSnapshot()
     const button = wrapper.find('button')
     button.simulate('click')
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders a sponsor section component if the id is sponsorSection', () => {
+    const wrapper = shallow(renderEmbeddedEntry(sponsorSectionNode))
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 })

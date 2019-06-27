@@ -16,4 +16,14 @@ describe('<SponsorSubsection/>', () => {
     expect(toJSON(wrapper)).toMatchSnapshot()
     expect(wrapper.find('SponsorBadge').length).toBe(mockSponsors.length)
   })
+
+  it('renders the component <SponsorSubsection /> and prevent level sizes', () => {
+    const wrapper = shallow(
+      <SponsorsSubsection title="Bronze sponsors" icon={<SponsorStar />}>
+        {renderSponsors(mockSponsors, true)}
+      </SponsorsSubsection>
+    )
+    expect(toJSON(wrapper)).toMatchSnapshot()
+    expect(wrapper.find('SponsorBadge').length).toBe(mockSponsors.length)
+  })
 })

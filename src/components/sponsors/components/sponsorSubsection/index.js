@@ -6,14 +6,14 @@ const SponsorsSubsection = ({ title, icon, children }) => (
   <Fragment>
     <TitleWrapper>
       {icon}
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
     </TitleWrapper>
     <BadgesContainer>{children}</BadgesContainer>
   </Fragment>
 )
 
 SponsorsSubsection.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   icon: PropTypes.node,
   children: PropTypes.oneOfType([
     PropTypes.node,
@@ -22,6 +22,7 @@ SponsorsSubsection.propTypes = {
 }
 
 SponsorsSubsection.defaultProps = {
+  title: null,
   icon: null,
 }
 

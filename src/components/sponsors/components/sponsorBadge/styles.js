@@ -17,8 +17,8 @@ export const Badge = styled.a`
   ${media.tablet`
     margin: 0 30px 30px 0;
   `};
-  ${({ level }) =>
-    isLargeBadge(level)
+  ${({ level, preventLevelSize }) =>
+    isLargeBadge(level) && !preventLevelSize
       ? css`
           height: 97px;
           width: calc(50% - 10px);
@@ -37,8 +37,8 @@ export const Badge = styled.a`
 `
 
 export const BadgeImage = styled.img`
-  ${({ level }) =>
-    isLargeBadge(level)
+  ${({ level, preventLevelSize }) =>
+    isLargeBadge(level) && !preventLevelSize
       ? css`
           max-height: 80px;
           max-width: 122px;

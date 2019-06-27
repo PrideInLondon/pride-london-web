@@ -468,6 +468,26 @@ exports[`render methods for Generic Content renders a button component if the id
 
 exports[`render methods for Generic Content renders a null if the id is not recognized 1`] = `<span />`;
 
+exports[`render methods for Generic Content renders a sponsor section component if the id is sponsorSection 1`] = `
+<Fragment>
+  <styles__TitleWrapper>
+    <styles__Title>
+      Test Sponsor Section
+    </styles__Title>
+  </styles__TitleWrapper>
+  <styles__BadgesContainer>
+    <SponsorBadge
+      key="Virtucon"
+      level="Headline"
+      logo="//images.ctfassets.net/n2o4hgsv6wcx/2AfZNrit52m4WUm4IKUOOE/21323f2171228d475743a62938778c53/ed2cf58359281c503c8fd2d56992b0a9.png?w=800&h=168&q=90"
+      name="Virtucon"
+      preventLevelSize={true}
+      url="https://m.popkey.co/666ded/1VRvJ.gif"
+    />
+  </styles__BadgesContainer>
+</Fragment>
+`;
+
 exports[`render methods for Generic Content renders a typeform button component if the id is button 1`] = `
 <span>
   <ReactTypeformEmbed
