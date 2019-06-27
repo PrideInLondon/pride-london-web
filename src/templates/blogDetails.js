@@ -39,7 +39,14 @@ const BlogDetails = ({
     return node.nodeType === 'paragraph'
   })
   const firstParagraph = paragraphs[0].content[0].value
-
+  const body = article.json.content
+    .map(paragraph => {
+      const paragraphContent = paragraph.content
+        .map(content => content.value)
+        .join('')
+      return `${paragraphContent}\n`
+    })
+    .join('')
   return (
     <PageWrapper>
       <Helmet
@@ -128,7 +135,7 @@ const BlogDetails = ({
                 '@type': 'WebPage',
                 '@id': metaUrl,
               },
-              headline: 'title',
+              headline: title,
               image: {
                 '@type': 'ImageObject',
                 url: metaImg,
@@ -152,6 +159,7 @@ const BlogDetails = ({
                 },
               },
               description: firstParagraph,
+              articleBody: body,
             }),
           },
         ]}
