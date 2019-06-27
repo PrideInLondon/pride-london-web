@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { IntercomAPI } from 'react-intercom'
 import { Row } from '../grid'
 import Facebook from '../../components/icons/facebook'
 import Twitter from '../../components/icons/twitter'
@@ -30,6 +31,10 @@ import {
   LegalListItem,
   LegalLink,
 } from './styles'
+
+const intercomShow = () => {
+  IntercomAPI('show')
+}
 
 export const Footer = ({
   data,
@@ -187,7 +192,7 @@ export const Footer = ({
           <LegalSection width={1}>
             <LegalList>
               <LegalListItem>
-                <LegalLink to="/privacy">Privacy &amp; cookies</LegalLink>
+                <LegalLink to="/privacy">Privacy</LegalLink>
               </LegalListItem>
               <LegalListItem>
                 <LegalLink to="/media-centre">Media centre</LegalLink>
@@ -195,9 +200,14 @@ export const Footer = ({
               <LegalListItem>
                 <LegalLink
                   as="a"
-                  href="mailto:info@prideinlondon.org"
+                  href="https://help.prideinlondon.org"
                   target="_blank"
                 >
+                  FAQs
+                </LegalLink>
+              </LegalListItem>
+              <LegalListItem>
+                <LegalLink as="a" onClick={intercomShow}>
                   Contact us
                 </LegalLink>
               </LegalListItem>
