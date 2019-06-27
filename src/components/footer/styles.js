@@ -201,16 +201,16 @@ export const SponsorImgWrapper = styled.div`
 export const LegalSection = styled(Column)`
   padding-top: 30px;
   padding-bottom: 30px;
-
+  text-align: center;
   ${media.tablet`
     padding-top: 40px;
     padding-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
+    display: block;
   `};
 `
 export const LegalStrapline = styled.p`
   color: ${theme.colors.darkGrey};
+  margin-top: 5px;
   font-size: 0.875rem;
   margin-bottom: 0;
 
@@ -225,6 +225,7 @@ export const LegalList = styled.ul`
   margin: 0 20px 0 0;
   display: flex;
   align-self: baseline;
+  justify-content: center;
 
   ${media.tabletMax`
     justify-content: center;
@@ -262,4 +263,5 @@ export const LegalLink = styled(Link)`
   font-size: 0.875rem;
   border: none;
   text-decoration: underline;
+  cursor: pointer;
 `
