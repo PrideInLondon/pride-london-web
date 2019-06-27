@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 function loadGTM() {
   if (
     process.env.NODE_ENV !== 'development' &&
-    process.env.GATSBY_GTM_ID &&
+    process.env.GATSBY_GTM_ID != null &&
     typeof window !== 'undefined'
   ) {
     return <Helmet script={[{ type: 'text/javascript', innerHTML: gtm }]} />
@@ -72,7 +72,7 @@ function loadGTM() {
 const pushCookieConsentToDataLayer = () => {
   if (
     process.env.NODE_ENV !== 'development' &&
-    process.env.GATSBY_GTM_ID &&
+    process.env.GATSBY_GTM_ID != null &&
     typeof window !== 'undefined'
   ) {
     window.dataLayer = window.dataLayer || []
