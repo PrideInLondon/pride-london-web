@@ -43,6 +43,13 @@ exports[`ParadeMap render correctly 1`] = `
         <map__Subtitle>
           We've created an interactive map to help you find your way around on Parade day. Use it to find the best place to watch the Parade, find your way to our different stages/areas and find important amenities like water refill stations and toilets.
         </map__Subtitle>
+        <map__DownloadPDFButton
+          link={true}
+          primary={true}
+          to="https://assets.ctfassets.net/0ho16wyr4i9n/73s6Ny4Ota2DFEt4AjbfQm/20ac5456111dbc0d177a7c0688bef835/Pride_in_London_Parade_Map_2019.pdf"
+        >
+          Download map as a PDF
+        </map__DownloadPDFButton>
         <map__DownloadAppLabel>
           There's always poor internet connection on the day, so it's a good idea to download our app to carry the map with you offline.
         </map__DownloadAppLabel>
@@ -70,6 +77,13 @@ exports[`ParadeMap render correctly 1`] = `
             />
           </map__AppDownloadButton>
         </map__AppDownloadButtons>
+        <map__DownloadPDFLinkMobile
+          href="https://assets.ctfassets.net/0ho16wyr4i9n/73s6Ny4Ota2DFEt4AjbfQm/20ac5456111dbc0d177a7c0688bef835/Pride_in_London_Parade_Map_2019.pdf"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Download map as a PDF
+        </map__DownloadPDFLinkMobile>
       </map__ParadeMapContent>
     </Column>
     <Column
