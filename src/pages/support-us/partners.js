@@ -106,7 +106,7 @@ const Sponsors = ({ data }) => {
           in the core of each company we work with.
         </p>
         <p>
-          For more information download information on the
+          For more information download information on the{' '}
           <a href={ppLink}>2019 Partnership Packages.</a>
         </p>
       </PageIntro>
