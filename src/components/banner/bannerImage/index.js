@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useLayoutEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
 import { Column } from '../../grid'
@@ -32,7 +32,7 @@ const BannerImage = ({
   const [height, setHeight] = useState()
   const [width, setWidth] = useState()
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const setDimensions = debounce(function() {
       setWidth(wrapper.current.offsetWidth)
       setHeight(wrapper.current.offsetHeight)

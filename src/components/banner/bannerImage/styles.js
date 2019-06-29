@@ -110,12 +110,10 @@ export const ResponsiveImg = styled(Img)`
   width: 100% !important;
   transform: translate(-50%, -50%);
 
-  ${media.ie11`
-    img {
-      min-height: 100% !important;
-      width: 100% !important;
-    }
-  `};
+  img {
+    min-height: 100%;
+    min-width: 100%;
+  }
 `
 
 export const VideoWrapper = styled.div`
