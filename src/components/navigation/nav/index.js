@@ -98,12 +98,16 @@ const Nav = () => {
                             url: '/parade',
                           },
                           {
-                            title: 'Accessibility',
-                            url: '/parade/accessibility',
+                            title: 'Parade groups',
+                            url: '/parade/groups',
                           },
                           {
                             title: 'Map',
                             url: '/parade/map',
+                          },
+                          {
+                            title: 'Accessibility',
+                            url: '/parade/accessibility',
                           },
                           {
                             title: 'Take part',
@@ -122,6 +126,11 @@ const Nav = () => {
                             title: 'Cabaret Stage',
                             url:
                               '/events/1c96cd4e-e29c-5a8e-a530-0d7d1c9f3489/',
+                          },
+                          {
+                            title: 'Family Area',
+                            url:
+                              '/events/afd94c89-9e31-5c7a-8115-18031934fc95/',
                           },
                           {
                             title: 'Trafalgar Square',
@@ -252,8 +261,8 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-visitor-info',
-                    title: 'Visitor info',
-                    url: '/visitor-info',
+                    title: 'Explore London',
+                    url: '/explore-london',
                   }}
                 />
                 <NavItem

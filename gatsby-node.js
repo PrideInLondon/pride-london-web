@@ -7,6 +7,21 @@ const {
 } = require('./src/features/events/helpers')
 const { dateFormat } = require('./src/constants')
 
+exports.sourceNodes = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type ContentfulEvent implements Node {
+      sponsorSection: ContentfulSponsorSection @link(from: "sponsorSection___NODE")
+    }
+    type ContentfulSponsorSection implements Node {
+      displayName: String!
+      sponsors: [ContentfulSponsor!] @link(from: "sponsors___NODE")
+    }
+  `
+
+  createTypes(typeDefs)
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 

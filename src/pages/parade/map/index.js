@@ -27,9 +27,12 @@ const ParadeMapContent = styled.div`
   `}
 `
 
-const Title = styled.h1``
+const Title = styled.h1`
+  width: 100%;
+`
 
 const Subtitle = styled.p`
+  width: 100%;
   font-family: Roboto;
   margin-top: 18px;
   ${media.tablet`
@@ -40,7 +43,7 @@ const Subtitle = styled.p`
 const Map = styled.iframe`
   border: none;
   min-height: 400px;
-  height: 100%;
+  height: calc(100vh - 80px);
   width: 100%;
   & > * {
     background-color: red !important;
@@ -48,6 +51,9 @@ const Map = styled.iframe`
   ${media.tabletMax`
     height: 100vh !important;
   `}
+  ${media.nav`
+    height: calc(100vh - 100px);
+  `};
 `
 
 const DownloadPDFButton = styled(Button)`
@@ -77,6 +83,7 @@ const DownloadPDFLinkMobile = styled.a`
 `
 
 const DownloadAppLabel = styled.p`
+  width: 100%;
   font-family: Roboto;
   color: ${theme.colors.darkGrey};
   font-size: 14px;
@@ -109,12 +116,12 @@ const AppDownloadButton = styled.a`
 `
 
 const ParadeMap = () => {
-  const paradeMapID = '1I5M9Oyc1damFcMhsi6yfODAMD6NXeIxi'
   const googlePlayUrl =
     'https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en'
   const appStoreUrl =
     'https://itunes.apple.com/gb/app/pride-in-london/id1250496471'
-  const mapPdfLink = null
+  const mapPdfLink =
+    'https://assets.ctfassets.net/0ho16wyr4i9n/73s6Ny4Ota2DFEt4AjbfQm/20ac5456111dbc0d177a7c0688bef835/Pride_in_London_Parade_Map_2019.pdf'
 
   return (
     <Fragment>
@@ -168,7 +175,11 @@ const ParadeMap = () => {
               </AppDownloadButton>
             </AppDownloadButtons>
             {mapPdfLink && (
-              <DownloadPDFLinkMobile href={mapPdfLink}>
+              <DownloadPDFLinkMobile
+                href={mapPdfLink}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 Download map as a PDF
               </DownloadPDFLinkMobile>
             )}
@@ -178,7 +189,7 @@ const ParadeMap = () => {
           <Map
             frameBorder="0"
             src={`https://www.google.com/maps/d/embed?${querystring.encode({
-              mid: paradeMapID,
+              mid: process.env.GATSBY_PARADE_MAP_ID,
               z: 16,
               ll: `51.51004, -0.13501`,
               hl: `en`,

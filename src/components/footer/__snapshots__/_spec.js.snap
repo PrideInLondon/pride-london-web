@@ -321,7 +321,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             <styles__LegalLink
               to="/privacy"
             >
-              Privacy & cookies
+              Privacy
             </styles__LegalLink>
           </styles__LegalListItem>
           <styles__LegalListItem>
@@ -334,8 +334,16 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           <styles__LegalListItem>
             <styles__LegalLink
               as="a"
-              href="mailto:info@prideinlondon.org"
+              href="https://help.prideinlondon.org"
               target="_blank"
+            >
+              FAQs
+            </styles__LegalLink>
+          </styles__LegalListItem>
+          <styles__LegalListItem>
+            <styles__LegalLink
+              as="a"
+              onClick={[Function]}
             >
               Contact us
             </styles__LegalLink>

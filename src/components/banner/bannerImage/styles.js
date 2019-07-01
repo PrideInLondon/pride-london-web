@@ -110,10 +110,28 @@ export const ResponsiveImg = styled(Img)`
   width: 100% !important;
   transform: translate(-50%, -50%);
 
-  ${media.ie11`
-    img {
-      min-height: 100% !important;
-      width: 100% !important;
-    }
-  `};
+  img {
+    min-height: 100%;
+    min-width: 100%;
+  }
+`
+
+export const VideoWrapper = styled.div`
+  padding-top: 56.25%;
+  width: ${({ width, height }) =>
+    height / width > 0.5625 ? `${height * (16 / 9)}px` : '100%'};
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `

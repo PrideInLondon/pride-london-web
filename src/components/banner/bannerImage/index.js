@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useLayoutEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
+import debounce from 'lodash.debounce'
 import { Column } from '../../grid'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
@@ -10,6 +11,7 @@ import {
   StyledRow,
   StyledWrapper,
   ResponsiveImg,
+  VideoWrapper,
 } from './styles'
 
 const BannerImage = ({
@@ -23,8 +25,30 @@ const BannerImage = ({
   large,
   medium,
   allowContentUnderflow,
+  videoId,
   fixed,
 }) => {
+  const wrapper = useRef(null)
+  const [height, setHeight] = useState()
+  const [width, setWidth] = useState()
+
+  useLayoutEffect(() => {
+    const setDimensions = debounce(function() {
+      setWidth(wrapper.current.offsetWidth)
+      setHeight(wrapper.current.offsetHeight)
+    }, 250)
+
+    if (typeof window !== 'undefined' && videoId) {
+      setDimensions()
+      window.addEventListener('resize', setDimensions)
+    }
+    return () => {
+      if (typeof window !== 'undefined' && videoId) {
+        window.removeEventListener('resize', setDimensions)
+      }
+    }
+  }, [videoId])
+
   return (
     <StyledWrapper
       color={color}
@@ -34,6 +58,7 @@ const BannerImage = ({
       imageSrc={imageSrc}
       imageFullWidth={imageFullWidth}
       role="banner"
+      ref={wrapper}
       fixed={fixed && fixed.desktop && fixed.tablet && fixed.mobile && fixed}
     >
       {titleText && (
@@ -64,6 +89,18 @@ const BannerImage = ({
               }
             />
           )}
+          {videoId && (
+            <VideoWrapper height={height} width={width} aria-hidden="true">
+              <iframe
+                src={`https://player.vimeo.com/video/${videoId}?background=1`}
+                width="640"
+                height="360"
+                frameBorder="0"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              ></iframe>
+            </VideoWrapper>
+          )}
         </StyledContainer>
       )}
     </StyledWrapper>
@@ -84,6 +121,7 @@ BannerImage.propTypes = {
     PropTypes.node,
   ]),
   allowContentUnderflow: PropTypes.bool,
+  videoId: PropTypes.string,
   fixed: PropTypes.object,
 }
 
@@ -100,6 +138,7 @@ BannerImage.defaultProps = {
   children: null,
   date: null,
   allowContentUnderflow: false,
+  videoId: null,
   fixed: null,
 }
 

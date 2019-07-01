@@ -131,6 +131,7 @@
 /residents-businesses     /parade/residents-and-businesses-info     301
 /sponsors     /support-us/sponsors     301
 /volunteer     /support-us/volunteer     301
+/visitor-info     /explore-london     301
 /who-we-are     /about-us     301
 /why-we-exist     /about-us/why-we-exist     301
 https://events.prideinlondon.org/*     /events      301
@@ -142,3 +143,4 @@ https://events.prideinlondon.org/*     /events      301
 /line-up/trafalgar-square-stage /events/e0bc2fe9-1563-5c2c-929b-d440d5f7cfd9 301
 /line-up/womens-area /events/c88f24f1-d97c-5a7a-be4f-3158740c31a8 301
 /line-up/world-area /events/aee4171a-97ba-5a83-8954-b264240d1cee 301
+/parade-groups /parade/groups

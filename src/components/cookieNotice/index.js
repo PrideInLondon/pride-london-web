@@ -62,10 +62,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 function loadGTM() {
   if (
     process.env.NODE_ENV !== 'development' &&
-    process.env.GATSBY_GTM_ID &&
+    process.env.GATSBY_GTM_ID != null &&
     typeof window !== 'undefined'
   ) {
     return <Helmet script={[{ type: 'text/javascript', innerHTML: gtm }]} />
+  }
+}
+
+const pushCookieConsentToDataLayer = () => {
+  if (
+    process.env.NODE_ENV !== 'development' &&
+    process.env.GATSBY_GTM_ID != null &&
+    typeof window !== 'undefined'
+  ) {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({ event: 'cookieConsent' })
   }
 }
 
@@ -80,6 +91,7 @@ const CookieNotice = () => {
   useEffect(() => {
     if (cookie === 'accepted') {
       Cookies.set('accept', cookie, { expires: 30 })
+      pushCookieConsentToDataLayer()
     } else {
       Cookies.set('accept', cookie)
     }
@@ -92,7 +104,7 @@ const CookieNotice = () => {
 
   return (
     <>
-      {cookie === 'accepted' && loadGTM()}
+      {loadGTM()}
       {
         <CookieWrapper hide={cookie !== 'unspecified'}>
           <Container>
