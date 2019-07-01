@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "org.prideinlondon.festival",
+        "paths": ["/events/*"]
+      }
+    ]
+  }
+}
