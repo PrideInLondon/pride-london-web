@@ -120,7 +120,8 @@ const ParadeMap = () => {
     'https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en'
   const appStoreUrl =
     'https://itunes.apple.com/gb/app/pride-in-london/id1250496471'
-  const mapPdfLink = null
+  const mapPdfLink =
+    'https://assets.ctfassets.net/0ho16wyr4i9n/73s6Ny4Ota2DFEt4AjbfQm/20ac5456111dbc0d177a7c0688bef835/Pride_in_London_Parade_Map_2019.pdf'
 
   return (
     <Fragment>
@@ -174,7 +175,11 @@ const ParadeMap = () => {
               </AppDownloadButton>
             </AppDownloadButtons>
             {mapPdfLink && (
-              <DownloadPDFLinkMobile href={mapPdfLink}>
+              <DownloadPDFLinkMobile
+                href={mapPdfLink}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 Download map as a PDF
               </DownloadPDFLinkMobile>
             )}
