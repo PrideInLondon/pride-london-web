@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventShareSection render correctly 1`] = `
+<eventShareSection__ShareList>
+  <eventShareSection__ShareText>
+    Share
+  </eventShareSection__ShareText>
+  <eventShareSection__ShareLink
+    href="mailto:?subject=Test%20event%20name&body=Test%20event%20name%0A%0ATest%20event%20description%0A%0ARead%20more%20here%3A%20%0Ahttps%3A%2F%2Ffoo.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Email
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    href="https://twitter.com/home?status=Test%20event%20name%0A%0Ahttps%3A%2F%2Ffoo.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Twitter
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffoo.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Facebook
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    desktopOnly={true}
+    href="https://www.facebook.com/dialog/send?app_id=null&link=https%3A%2F%2Ffoo.com&redirect_uri=https%3A%2F%2Ffoo.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Messenger
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    href="fb-messenger://share/?app_id=null&link=https%3A%2F%2Ffoo.com"
+    mobileOnly={true}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Messenger
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ffoo.com&title=Test%20event%20name&summary=Test%20event%20description&source=prideinlondon.org"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Linkedin
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+</eventShareSection__ShareList>
+`;
+
+exports[`EventShareSection render correctly with FB ID 1`] = `
+<eventShareSection__ShareList>
+  <eventShareSection__ShareText>
+    Share
+  </eventShareSection__ShareText>
+  <eventShareSection__ShareLink
+    href="mailto:?subject=Test%20event%20name&body=Test%20event%20name%0A%0ATest%20event%20description%0A%0ARead%20more%20here%3A%20%0Ahttps%3A%2F%2Ffoo.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Email
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    href="https://twitter.com/home?status=Test%20event%20name%0A%0Ahttps%3A%2F%2Ffoo.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Twitter
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffoo.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Facebook
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    desktopOnly={true}
+    href="https://www.facebook.com/dialog/send?app_id=foo&link=https%3A%2F%2Ffoo.com&redirect_uri=https%3A%2F%2Ffoo.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Messenger
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    href="fb-messenger://share/?app_id=foo&link=https%3A%2F%2Ffoo.com"
+    mobileOnly={true}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Messenger
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+  <eventShareSection__ShareLink
+    href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ffoo.com&title=Test%20event%20name&summary=Test%20event%20description&source=prideinlondon.org"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <Linkedin
+      fill="#2D2F7F"
+      height={25}
+      width={25}
+    />
+  </eventShareSection__ShareLink>
+</eventShareSection__ShareList>
+`;
