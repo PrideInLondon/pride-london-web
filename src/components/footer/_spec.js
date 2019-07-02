@@ -40,4 +40,13 @@ describe('<Footer/>', () => {
       .simulate('click')
     expect(spy).toHaveBeenCalled()
   })
+
+  it('click on Report a website bug and open typeform', () => {
+    const wrapper = mount(<Footer data={mockSponsors} />)
+    expect(toJSON(wrapper)).toMatchSnapshot()
+    wrapper
+      .find('styles__LegalLink[children="Report a website bug"]')
+      .simulate('click')
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
 })
