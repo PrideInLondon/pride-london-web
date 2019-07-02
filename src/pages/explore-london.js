@@ -7,9 +7,9 @@ import theme from '../theme/theme'
 import { communityPartnerCategories } from '../constants'
 import PageIntro from '../components/pageIntro'
 import FilteredPagedCardContainer from '../components/filteredPagedCardContainer'
-import CommunityPartnerCard from '../features/visitorInformation/components/communityPartnerCard'
+import CommunityPartnerCard from '../features/exploreLondon/components/communityPartnerCard'
 
-const VisitorInformationPage = ({
+const ExploreLondon = ({
   data: {
     allContentfulCommunityPartner: { edges: partners },
   },
@@ -68,11 +68,11 @@ const VisitorInformationPage = ({
   )
 }
 
-VisitorInformationPage.propTypes = {
+ExploreLondon.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default VisitorInformationPage
+export default ExploreLondon
 
 export const CommunityPartnersQuery = graphql`
   query CommunityPartnersQuery {
