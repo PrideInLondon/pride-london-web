@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import EmailIcon from '../../../components/icons/email'
 import TwitterIcon from '../../../components/icons/twitter'
 import FacebookIcon from '../../../components/icons/facebook'
-import MessengerIcon from '../../../components/icons/messenger'
+// import MessengerIcon from '../../../components/icons/messenger'
 import LinkedinIcon from '../../../components/icons/linkedin'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
@@ -75,13 +75,13 @@ const facebookShareUrl = url => {
   return `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
 }
 
-const messengerShareUrl = (url, isMobile = false) => {
-  const encodedUrl = encodeURIComponent(url)
-  if (isMobile) {
-    return `fb-messenger://share/?app_id=${process.env.GATSBY_FACEBOOK_APP_ID}&link=${encodedUrl}`
-  }
-  return `https://www.facebook.com/dialog/send?app_id=${process.env.GATSBY_FACEBOOK_APP_ID}&link=${encodedUrl}&redirect_uri=${encodedUrl}`
-}
+// const messengerShareUrl = (url, isMobile = false) => {
+//   const encodedUrl = encodeURIComponent(url)
+//   if (isMobile) {
+//     return `fb-messenger://share/?app_id=${process.env.GATSBY_FACEBOOK_APP_ID}&link=${encodedUrl}`
+//   }
+//   return `https://www.facebook.com/dialog/send?app_id=${process.env.GATSBY_FACEBOOK_APP_ID}&link=${encodedUrl}&redirect_uri=${encodedUrl}`
+// }
 
 const linkedinShareUrl = (name, description, url) => {
   const encodedUrl = encodeURIComponent(url)
@@ -114,7 +114,7 @@ const EventShareSection = ({ name, description, location }) => (
     >
       <FacebookIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
-    {process.env.GATSBY_FACEBOOK_APP_ID && (
+    {/* {process.env.GATSBY_FACEBOOK_APP_ID && (
       <>
         <ShareLink
           desktopOnly
@@ -133,7 +133,7 @@ const EventShareSection = ({ name, description, location }) => (
           <MessengerIcon width={25} height={25} fill={theme.colors.indigo} />
         </ShareLink>
       </>
-    )}
+    )} */}
     <ShareLink
       href={linkedinShareUrl(name, description, location)}
       target="_blank"
