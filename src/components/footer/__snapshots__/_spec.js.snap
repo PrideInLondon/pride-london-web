@@ -2,6 +2,23 @@
 
 exports[`<Footer/> should render and match snapshot 1`] = `
 <styles__FooterWrapper>
+  <ReactTypeformEmbed
+    autoClose={5}
+    autoOpen={false}
+    buttonText="Start"
+    hideFooter={true}
+    hideHeaders={true}
+    mode="drawer_left"
+    onSubmit={[Function]}
+    opacity={100}
+    popup={true}
+    style={
+      Object {
+        "zIndex": -1,
+      }
+    }
+    url="https://prideinlondon.typeform.com/to/DYvC2n"
+  />
   <styles__StyledFooter
     itemScope={true}
     itemType="http://schema.org/WPFooter"
@@ -318,9 +335,11 @@ exports[`<Footer/> should render and match snapshot 1`] = `
         <styles__LegalList>
           <styles__LegalListItem>
             <styles__LegalLink
-              to="/privacy"
+              as="a"
+              href="https://help.prideinlondon.org"
+              target="_blank"
             >
-              Privacy
+              Help
             </styles__LegalLink>
           </styles__LegalListItem>
           <styles__LegalListItem>
@@ -332,11 +351,17 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__LegalListItem>
           <styles__LegalListItem>
             <styles__LegalLink
-              as="a"
-              href="https://help.prideinlondon.org"
-              target="_blank"
+              to="/privacy"
             >
-              FAQs
+              Privacy
+            </styles__LegalLink>
+          </styles__LegalListItem>
+          <styles__LegalListItem>
+            <styles__LegalLink
+              as="a"
+              onClick={[Function]}
+            >
+              Report a website bug
             </styles__LegalLink>
           </styles__LegalListItem>
           <styles__LegalListItem>
