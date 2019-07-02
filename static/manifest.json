@@ -1,0 +1,28 @@
+{
+  "short_name": "Pride in London",
+  "name": "Pride in London",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#343692",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#343692",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "org.prideinlondon.festival"
+    }
+  ]
+}
