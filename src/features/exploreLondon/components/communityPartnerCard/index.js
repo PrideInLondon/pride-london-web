@@ -179,26 +179,26 @@ const CommunityPartnerCard = ({ partner }) => {
               `${addressLine2},`} ${city}, ${postcode}`}</p>
           </div>
         </CardItem>
-        {accessibilityDetails && (
-          <CardItem>
-            <IconWrapper>
-              <AccessibilityIcon dark />
-            </IconWrapper>
-            <div>
-              <CardItemTitle>Accessibility</CardItemTitle>
-              <p>
-                {accessibilityDetails.map(
-                  (detail, index) =>
-                    `${
-                      /^BSL/.test(detail) || index === 0
-                        ? detail
-                        : detail.toLowerCase()
-                    }${index < accessibilityDetails.length - 1 ? ', ' : ''}`
-                )}
-              </p>
-            </div>
-          </CardItem>
-        )}
+        <CardItem>
+          <IconWrapper>
+            <AccessibilityIcon dark />
+          </IconWrapper>
+          <div>
+            <CardItemTitle>Accessibility</CardItemTitle>
+            <p>
+              {accessibilityDetails
+                ? accessibilityDetails.map(
+                    (detail, index) =>
+                      `${
+                        /^BSL/.test(detail) || index === 0
+                          ? detail
+                          : detail.toLowerCase()
+                      }${index < accessibilityDetails.length - 1 ? ', ' : ''}`
+                  )
+                : 'Accessibility is limited. Please contact venue for further info.'}
+            </p>
+          </div>
+        </CardItem>
         {genderNeutralToilets && (
           <CardItem>
             <IconWrapper>
