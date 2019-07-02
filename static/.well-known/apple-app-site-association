@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "org.prideinlondon.festival",
+        "appID": "VZ6G7FCBVU.org.prideinlondon.festival",
         "paths": ["/events/*"]
       }
     ]
