@@ -245,6 +245,12 @@ const Layout = ({ children, location: { pathname } }) => (
                     name: 'msapplication-square310x310logo',
                     content: mstile310,
                   },
+
+                  // Native Apps Prompt
+                  {
+                    name: 'theme-color',
+                    content: '#343692',
+                  },
                 ]}
                 link={[
                   {
@@ -319,6 +325,10 @@ const Layout = ({ children, location: { pathname } }) => (
                     rel: 'apple-touch-icon-precomposed',
                     sizes: '152x152',
                     href: apple152,
+                  },
+                  {
+                    rel: 'manifest',
+                    href: '/manifest.json',
                   },
                 ]}
                 htmlAttributes={{
