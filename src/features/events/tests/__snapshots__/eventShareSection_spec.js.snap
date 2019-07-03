@@ -6,7 +6,7 @@ exports[`EventShareSection render correctly 1`] = `
     Share
   </eventShareSection__ShareText>
   <eventShareSection__ShareLink
-    href="mailto:?subject=Test%20event%20name&body=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A33pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com"
+    href="mailto:?subject=Test%20event%20name&body=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A37pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -17,7 +17,7 @@ exports[`EventShareSection render correctly 1`] = `
     />
   </eventShareSection__ShareLink>
   <eventShareSection__ShareLink
-    href="https://twitter.com/home?status=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A33pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com"
+    href="https://twitter.com/home?status=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A37pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -39,7 +39,7 @@ exports[`EventShareSection render correctly 1`] = `
     />
   </eventShareSection__ShareLink>
   <eventShareSection__ShareLink
-    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Ffoo.com&title=Test%20event%20name&summary=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A33pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com&source=prideinlondon.org"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Ffoo.com&title=Test%20event%20name&summary=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A37pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com&source=prideinlondon.org"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -58,7 +58,7 @@ exports[`EventShareSection render correctly with FB ID 1`] = `
     Share
   </eventShareSection__ShareText>
   <eventShareSection__ShareLink
-    href="mailto:?subject=Test%20event%20name&body=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A33pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com"
+    href="mailto:?subject=Test%20event%20name&body=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A37pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -69,7 +69,7 @@ exports[`EventShareSection render correctly with FB ID 1`] = `
     />
   </eventShareSection__ShareLink>
   <eventShareSection__ShareLink
-    href="https://twitter.com/home?status=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A33pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com"
+    href="https://twitter.com/home?status=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A37pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -91,7 +91,7 @@ exports[`EventShareSection render correctly with FB ID 1`] = `
     />
   </eventShareSection__ShareLink>
   <eventShareSection__ShareLink
-    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Ffoo.com&title=Test%20event%20name&summary=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A33pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com&source=prideinlondon.org"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Ffoo.com&title=Test%20event%20name&summary=I'm%20heading%20to%20Test%20event%20name%20on%20Wed%203%20Jul%20at%202%3A37pm.%20Join%20me!%0A%0AFind%20out%20more%20here%3A%0Ahttps%3A%2F%2Ffoo.com&source=prideinlondon.org"
     rel="noopener noreferrer"
     target="_blank"
   >
