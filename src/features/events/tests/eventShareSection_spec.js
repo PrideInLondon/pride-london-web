@@ -5,7 +5,7 @@ import ShareSection from '../components/eventShareSection'
 describe(ShareSection.name, () => {
   const event = {
     name: 'Test event name',
-    description: 'Test event description',
+    date: '2006-06-02T13:30+01:00',
     location: 'https://foo.com',
   }
 
