@@ -5,9 +5,9 @@ import { Container, Column } from '../../../../components/grid'
 
 export const DownloadAppContainer = styled(Container)`
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   ${media.desktop`
-  margin-bottom: 80px;
+    margin-top: 50px;
     `}
 `
 

@@ -22,7 +22,7 @@ const DownloadAppBox = () => {
   return (
     <Fragment>
       <DownloadAppContainer>
-        <Row>
+        <Row px={[0, 15]}>
           <DownloadAppContentColumn
             width={[1, 1, 1, 0.55]}
             pl={[20, 20, 40, 80]}
