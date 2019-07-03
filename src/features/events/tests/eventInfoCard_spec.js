@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import EventInfoCard from '../components/eventInfoCard'
 
 describe(EventInfoCard.name, () => {
@@ -10,8 +10,8 @@ describe(EventInfoCard.name, () => {
     },
     pageContext: {
       id: 'test-1',
-      startTime: '2006-06-02T13:30+01:00',
-      endTime: '2006-06-03T13:30+01:00',
+      startTime: '2006-06-02T13:30+00:00',
+      endTime: '2006-06-03T13:30+00:00',
     },
   }
 
@@ -22,18 +22,28 @@ describe(EventInfoCard.name, () => {
     },
     pageContext: {
       id: 'test-1',
-      startTime: '2006-06-02T13:30+01:00',
-      endTime: '2006-06-02T13:30+01:00',
+      startTime: '2006-06-02T13:30+00:00',
+      endTime: '2006-06-02T13:30+00:00',
     },
   }
 
   it('renders correctly', () => {
-    const wrapper = shallow(<EventInfoCard {...event} />)
-    expect(wrapper).toMatchSnapshot()
+    const wrapper = mount(<EventInfoCard {...event} />)
+    expect(
+      wrapper
+        .find('eventInfoCard__Title')
+        .first()
+        .text()
+    ).toBe('Friday 2 June 2006 to Saturday 3 June 2006')
   })
 
   it('1 day event renders correctly', () => {
-    const wrapper = shallow(<EventInfoCard {...event2} />)
-    expect(wrapper).toMatchSnapshot()
+    const wrapper = mount(<EventInfoCard {...event2} />)
+    expect(
+      wrapper
+        .find('eventInfoCard__Title')
+        .first()
+        .text()
+    ).toBe('Friday 2 June 2006')
   })
 })
