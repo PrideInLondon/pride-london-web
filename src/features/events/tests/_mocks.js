@@ -3,6 +3,11 @@ export const mockEvents = [
     data: {
       locationName: 'Test',
       eventPriceLow: 20,
+      phone: 'foo',
+      email: 'foo@foo.com',
+      ticketingUrl: 'https://foo.com',
+      accessibilityOptions: ['Test1', 'Test2'],
+      venueDetails: ['Indoors', 'Gender neutral toilets'],
     },
     pageContext: {
       id: 'test-1',
