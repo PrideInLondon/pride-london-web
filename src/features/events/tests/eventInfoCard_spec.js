@@ -1,34 +1,11 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import EventInfoCard from '../components/eventInfoCard'
+import { mockEvents } from './_mocks'
 
 describe(EventInfoCard.name, () => {
-  const event = {
-    data: {
-      locationName: 'Test',
-      eventPriceLow: 20,
-    },
-    pageContext: {
-      id: 'test-1',
-      startTime: '2006-06-02T13:30+00:00',
-      endTime: '2006-06-03T13:30+00:00',
-    },
-  }
-
-  const event2 = {
-    data: {
-      locationName: 'Test',
-      eventPriceLow: 20,
-    },
-    pageContext: {
-      id: 'test-1',
-      startTime: '2006-06-02T13:30+00:00',
-      endTime: '2006-06-02T13:30+00:00',
-    },
-  }
-
   it('renders correctly', () => {
-    const wrapper = mount(<EventInfoCard {...event} />)
+    const wrapper = mount(<EventInfoCard {...mockEvents[0]} />)
     expect(
       wrapper
         .find('eventInfoCard__Title')
@@ -38,7 +15,7 @@ describe(EventInfoCard.name, () => {
   })
 
   it('1 day event renders correctly', () => {
-    const wrapper = mount(<EventInfoCard {...event2} />)
+    const wrapper = mount(<EventInfoCard {...mockEvents[1]} />)
     expect(
       wrapper
         .find('eventInfoCard__Title')
