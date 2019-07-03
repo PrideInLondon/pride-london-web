@@ -5,7 +5,10 @@ import { Container, Column } from '../../../../components/grid'
 
 export const DownloadAppContainer = styled(Container)`
   position: relative;
+  margin-bottom: 60px;
+  ${media.desktop`
   margin-bottom: 80px;
+    `}
 `
 
 export const DownloadAppContentColumn = styled(Column)`
