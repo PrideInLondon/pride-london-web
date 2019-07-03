@@ -24,8 +24,8 @@ const formatDate = event => {
   const startMonth = moment(event.startTime).format('MMM')
   const endMonth = moment(event.endTime).format('MMM')
 
-  const startDay = moment(event.startTime).date()
-  const endDay = moment(event.endTime).date()
+  const startDay = moment(event.startTime).format('ddd D')
+  const endDay = moment(event.endTime).format('ddd D')
 
   const startTime = formatTime(event.startTime)
   const endTime = formatTime(event.endTime)
