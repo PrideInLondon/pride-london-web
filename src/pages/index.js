@@ -15,6 +15,7 @@ import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
 import AnnouncementsContainer from '../features/homepage/containers/announcementsContainer'
 import DonateContainer from '../features/homepage/containers/donateContainer'
+import DownloadAppBox from '../features/homepage/components/downloadAppBox'
 
 const FeaturedEventsContainer = styled.div`
   background-color: #282a80;
@@ -215,6 +216,7 @@ const Home = ({
       <AnnouncementsContainer />
       <DonateContainer />
       <LatestNewsContainer />
+      <DownloadAppBox />
       <VolunteerBoxInfo />
     </Fragment>
   )
