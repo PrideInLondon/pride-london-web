@@ -213,10 +213,10 @@ const Home = ({
           </StyledColumn>
         </StyledRow>
       </StyledContainer>
+      <DownloadAppBox />
       <AnnouncementsContainer />
       <DonateContainer />
       <LatestNewsContainer />
-      <DownloadAppBox />
       <VolunteerBoxInfo />
     </Fragment>
   )
