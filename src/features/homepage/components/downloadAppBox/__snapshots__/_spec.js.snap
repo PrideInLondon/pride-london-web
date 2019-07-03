@@ -10,6 +10,12 @@ exports[`DownloadAppBox download app section snapshot 1`] = `
       ml={null}
       mr={null}
       mx={null}
+      px={
+        Array [
+          0,
+          15,
+        ]
+      }
     >
       <styles__DownloadAppContentColumn
         pb={
