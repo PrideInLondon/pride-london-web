@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 import EmailIcon from '../../../components/icons/email'
 import TwitterIcon from '../../../components/icons/twitter'
 import FacebookIcon from '../../../components/icons/facebook'
@@ -8,6 +9,7 @@ import FacebookIcon from '../../../components/icons/facebook'
 import LinkedinIcon from '../../../components/icons/linkedin'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
+import { formatTime } from '../helpers'
 
 const ShareList = styled.div`
   display: inline-flex;
@@ -57,51 +59,55 @@ const ShareLink = styled.a`
   }
 `
 
-const mailShareUrl = (name, description, location) => {
+const shareText = (name, date, location) => {
+  const startDay = moment(date).format('ddd D MMM')
+  const startTime = formatTime(date)
+  return `I'm heading to ${name} on ${startDay} at ${startTime}. Join me!\n\nFind out more here:\n${location}`
+}
+
+const mailShareUrl = (name, date, location) => {
   const subject = encodeURIComponent(name)
-  const body = encodeURIComponent(
-    `${name}\n\n${description}\n\nRead more here: \n${location}`
-  )
+  const body = encodeURIComponent(shareText(name, date, location))
   return `mailto:?subject=${subject}&body=${body}`
 }
 
-const twitterShareUrl = (name, location) => {
-  const encodedStatus = encodeURIComponent(`${name}\n\n${location}`)
-  return `https://twitter.com/home?status=${encodedStatus}`
+const twitterShareUrl = (name, date, location) => {
+  const body = encodeURIComponent(shareText(name, date, location))
+  return `https://twitter.com/home?status=${body}`
 }
 
-const facebookShareUrl = url => {
-  const encodedUrl = encodeURIComponent(url)
+const facebookShareUrl = location => {
+  const encodedUrl = encodeURIComponent(location)
   return `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
 }
 
-// const messengerShareUrl = (url, isMobile = false) => {
-//   const encodedUrl = encodeURIComponent(url)
+// const messengerShareUrl = (location, isMobile = false) => {
+//   const encodedUrl = encodeURIComponent(location)
 //   if (isMobile) {
 //     return `fb-messenger://share/?app_id=${process.env.GATSBY_FACEBOOK_APP_ID}&link=${encodedUrl}`
 //   }
 //   return `https://www.facebook.com/dialog/send?app_id=${process.env.GATSBY_FACEBOOK_APP_ID}&link=${encodedUrl}&redirect_uri=${encodedUrl}`
 // }
 
-const linkedinShareUrl = (name, description, url) => {
-  const encodedUrl = encodeURIComponent(url)
-  const encodedDescription = encodeURIComponent(description)
+const linkedinShareUrl = (name, date, location) => {
+  const encodedUrl = encodeURIComponent(location)
+  const body = encodeURIComponent(shareText(name, date, location))
   const encodedName = encodeURIComponent(name)
-  return `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedName}&summary=${encodedDescription}&source=prideinlondon.org`
+  return `https://www.linkedin.com/shareArticle?url=${encodedUrl}&title=${encodedName}&summary=${body}&source=prideinlondon.org`
 }
 
-const EventShareSection = ({ name, description, location }) => (
+const EventShareSection = ({ name, location, date }) => (
   <ShareList>
     <ShareText>Share</ShareText>
     <ShareLink
-      href={mailShareUrl(name, description, location)}
+      href={mailShareUrl(name, date, location)}
       target="_blank"
       rel="noopener noreferrer"
     >
       <EmailIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
     <ShareLink
-      href={twitterShareUrl(name, location)}
+      href={twitterShareUrl(name, date, location)}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -118,7 +124,7 @@ const EventShareSection = ({ name, description, location }) => (
       <>
         <ShareLink
           desktopOnly
-          href={messengerShareUrl(location)}
+          href={messengerShareUrl(ocation)}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -135,7 +141,7 @@ const EventShareSection = ({ name, description, location }) => (
       </>
     )} */}
     <ShareLink
-      href={linkedinShareUrl(name, description, location)}
+      href={linkedinShareUrl(name, date, location)}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -146,8 +152,8 @@ const EventShareSection = ({ name, description, location }) => (
 
 EventShareSection.propTypes = {
   name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
 }
 
 export default EventShareSection

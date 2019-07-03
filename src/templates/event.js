@@ -346,8 +346,8 @@ export default class Event extends Component {
               )}
               <EventShareSection
                 name={name}
-                description={eventDescription}
                 location={metaUrl}
+                date={startTime}
               />
             </Column>
           </Row>
