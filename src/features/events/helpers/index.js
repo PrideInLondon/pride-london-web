@@ -34,7 +34,12 @@ const formatDate = event => {
     time: `${startTime} - ${endTime}`,
   }
 
-  if (startDate === endDate) {
+  const sameDay =
+    startDate === endDate ||
+    (moment(event.endTime).format('Hms') === '000' &&
+      moment(event.endTime).diff(startDate, 'days') === 1)
+
+  if (sameDay) {
     dateTime.date = `${startDay} ${startMonth} ${year}`
     return dateTime
   } else if (startMonth === endMonth) {
