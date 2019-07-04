@@ -36,7 +36,7 @@ const LatestNews = ({
 
 LatestNews.propTypes = {
   datePublished: PropTypes.string.isRequired,
-  readTime: PropTypes.string,
+  readTime: PropTypes.number,
   slug: PropTypes.string.isRequired,
   category: PropTypes.shape({
     hexColour: PropTypes.string,
@@ -46,6 +46,8 @@ LatestNews.propTypes = {
     file: PropTypes.shape({
       url: PropTypes.string,
     }),
+    fixed: PropTypes.any,
+    title: PropTypes.string,
   }).isRequired,
   title: PropTypes.string.isRequired,
 }
