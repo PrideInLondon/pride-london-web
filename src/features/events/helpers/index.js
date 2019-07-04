@@ -16,8 +16,6 @@ const formatTime = time => {
 }
 
 const formatDate = event => {
-  const year = moment(event.startTime).year()
-
   const startDate = moment(event.startTime).format('L')
   const endDate = moment(event.endTime).format('L')
 
@@ -40,14 +38,14 @@ const formatDate = event => {
       moment(event.endTime).diff(startDate, 'days') === 1)
 
   if (sameDay) {
-    dateTime.date = `${startDay} ${startMonth} ${year}`
+    dateTime.date = `${startDay} ${startMonth}`
     return dateTime
   } else if (startMonth === endMonth) {
-    dateTime.date = `${startDay} - ${endDay} ${startMonth} ${year}`
+    dateTime.date = `${startDay} - ${endDay} ${startMonth}`
     return dateTime
   }
 
-  dateTime.date = `${startDay} ${startMonth} - ${endDay} ${endMonth} ${year}`
+  dateTime.date = `${startDay} ${startMonth} - ${endDay} ${endMonth}`
   return dateTime
 }
 

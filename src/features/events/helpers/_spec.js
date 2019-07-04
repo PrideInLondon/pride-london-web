@@ -48,14 +48,14 @@ describe('filterPastEvents', () => {
 
   it('format 1-day event date properly', () => {
     const date = formatDate(eventOneDay)
-    const expectedDate = 'Mon 3 Jun 2019'
+    const expectedDate = 'Mon 3 Jun'
 
     expect(date.date).toBe(expectedDate)
   })
 
   it('format multi-days event date properly', () => {
     const date = formatDate(eventTwoDays)
-    const expectedDate = 'Mon 3 - Tue 4 Jun 2019'
+    const expectedDate = 'Mon 3 - Tue 4 Jun'
     expect(date.date).toBe(expectedDate)
   })
 
