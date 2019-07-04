@@ -9,7 +9,7 @@ describe(LatestNews.name, () => {
       hexColour: '#304242',
       title: 'Amazing News!!',
     }
-    const readTime = ''
+    const readTime = 10
     const datePublished = '2019-03-28T20:30+00:00'
     const headerImage = {
       title: 'Latest News Image',
