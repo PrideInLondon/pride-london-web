@@ -100,8 +100,10 @@ const Submenu = props => {
 
 Submenu.propTypes = {
   item: PropTypes.shape({
+    id: PropTypes.string,
     title: PropTypes.string,
     url: PropTypes.string,
+    desc: PropTypes.string,
     submenu: PropTypes.array,
   }).isRequired,
   isOpen: PropTypes.bool.isRequired,

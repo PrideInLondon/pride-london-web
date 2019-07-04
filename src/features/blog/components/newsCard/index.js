@@ -27,7 +27,7 @@ const NewsCard = ({
 NewsCard.propTypes = {
   slug: PropTypes.string.isRequired,
   datePublished: PropTypes.string.isRequired,
-  readTime: PropTypes.string,
+  readTime: PropTypes.number,
   category: PropTypes.shape({
     hexColour: PropTypes.string,
     title: PropTypes.string,

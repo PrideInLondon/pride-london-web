@@ -31,6 +31,9 @@ PageHeader.propTypes = {
     file: PropTypes.shape({
       url: PropTypes.string,
     }),
+    mobile: PropTypes.any,
+    tablet: PropTypes.any,
+    desktop: PropTypes.any,
   }).isRequired,
 }
 

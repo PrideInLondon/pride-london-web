@@ -39,7 +39,7 @@ NewsCards.propTypes = {
     PropTypes.shape({
       slug: PropTypes.string.isRequired,
       title: PropTypes.string,
-      readTime: PropTypes.string,
+      readTime: PropTypes.number,
       datePublished: PropTypes.string,
       category: PropTypes.shape({
         hexColour: PropTypes.string,
