@@ -59,7 +59,9 @@ const ParadeGroups = ({ data: { paradeGroups } }) => {
 }
 
 ParadeGroups.propTypes = {
-  data: PropTypes.shape({}).isRequired,
+  data: PropTypes.shape({
+    paradeGroups: PropTypes.any,
+  }).isRequired,
 }
 
 export default ParadeGroups

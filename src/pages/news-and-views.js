@@ -48,6 +48,7 @@ Blog.propTypes = {
     views: PropTypes.shape({ edges: PropTypes.arrayOf(PropTypes.any) }),
     news: PropTypes.shape({ edges: PropTypes.arrayOf(PropTypes.any) }),
     categories: PropTypes.shape({ edges: PropTypes.arrayOf(PropTypes.any) }),
+    articles: PropTypes.any,
   }).isRequired,
 }
 

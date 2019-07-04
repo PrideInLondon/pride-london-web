@@ -26,6 +26,8 @@ const FeaturedArticle = ({ data }) => {
 }
 
 FeaturedArticle.propTypes = {
-  data: PropTypes.shape({}).isRequired,
+  data: PropTypes.shape({
+    contentfulArticleFeatured: PropTypes.any,
+  }).isRequired,
 }
 export default FeaturedArticle
