@@ -200,6 +200,12 @@ const Layout = ({ children, location: { pathname } }) => (
                     content: '562',
                   },
 
+                  // Facebook Meta Tags
+                  {
+                    property: 'fb:app_id',
+                    content: process.env.GATSBY_FACEBOOK_APP_ID,
+                  },
+
                   // Twitter Meta Tags
                   {
                     name: 'twitter:card',

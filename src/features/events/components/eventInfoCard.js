@@ -85,10 +85,16 @@ const VSpace = styled.div`
 
 // I chose formats based on
 // https://www.gov.uk/service-manual/design/dates
-const dateFormat = 'D MMMM YYYY'
+const dateFormat = 'dddd D MMMM YYYY'
 
 const formatDayRange = (startTime, endTime) => {
-  if (startTime.isSame(endTime, 'day')) {
+  const startDate = moment(startTime).format('L')
+
+  const sameDay =
+    startTime.isSame(endTime, 'day') ||
+    (moment(endTime).format('Hms') === '000' &&
+      moment(endTime).diff(startDate, 'days') === 1)
+  if (sameDay) {
     return startTime.format(dateFormat)
   }
   return `${startTime.format(dateFormat)} to ${endTime.format(dateFormat)}`
