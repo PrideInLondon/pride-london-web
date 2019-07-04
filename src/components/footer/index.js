@@ -33,7 +33,7 @@ import {
 } from './styles'
 
 const intercomShow = () => {
-  IntercomAPI('show')
+  IntercomAPI('showNewMessage')
 }
 
 export const Footer = ({
@@ -46,10 +46,33 @@ export const Footer = ({
   snapchat,
 }) => {
   const { edges } = data.allContentfulSponsor
+  const { ReactTypeformEmbed } = require('react-typeform-embed')
   const iconSize = 20
   const sponsorOrder = ['Headline', 'Gold', 'Silver', 'Bronze']
+  const reportBugFormUrl = 'https://prideinlondon.typeform.com/to/DYvC2n'
+
+  let typeformEmbed = null
+
+  const reportBugFormShow = () => {
+    if (typeformEmbed && typeformEmbed.typeform) {
+      typeformEmbed.typeform.open()
+    }
+  }
   return (
     <FooterWrapper>
+      <ReactTypeformEmbed
+        popup
+        autoOpen={false}
+        url={reportBugFormUrl}
+        style={{ zIndex: -1 }}
+        hideHeaders
+        hideFooter
+        mode="drawer_left"
+        ref={tf => {
+          typeformEmbed = tf
+        }}
+        autoClose={5}
+      />
       <StyledFooter
         role="contentinfo"
         itemScope
@@ -192,18 +215,23 @@ export const Footer = ({
           <LegalSection width={1}>
             <LegalList>
               <LegalListItem>
-                <LegalLink to="/privacy">Privacy</LegalLink>
-              </LegalListItem>
-              <LegalListItem>
-                <LegalLink to="/media-centre">Media centre</LegalLink>
-              </LegalListItem>
-              <LegalListItem>
                 <LegalLink
                   as="a"
                   href="https://help.prideinlondon.org"
                   target="_blank"
                 >
-                  FAQs
+                  Help
+                </LegalLink>
+              </LegalListItem>
+              <LegalListItem>
+                <LegalLink to="/media-centre">Media centre</LegalLink>
+              </LegalListItem>
+              <LegalListItem>
+                <LegalLink to="/privacy">Privacy</LegalLink>
+              </LegalListItem>
+              <LegalListItem>
+                <LegalLink as="a" onClick={reportBugFormShow}>
+                  Report a website bug
                 </LegalLink>
               </LegalListItem>
               <LegalListItem>

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import moment from 'moment'
-import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import { noScroll } from '../utilities'
 import { media } from '../theme/media'
@@ -153,27 +152,12 @@ class Events extends Component {
 
   render() {
     const { showFiltersMobile } = this.state
-    const {
-      data: {
-        site: {
-          siteMetadata: { appleAppId },
-        },
-      },
-    } = this.props
 
     return (
       <Consumer>
         {context => (
           <PageWrapper>
-            <Helmet
-              title="What's on - LGBT+ events happening in and around London"
-              meta={[
-                {
-                  name: 'apple-itunes-app',
-                  content: `app-id=${appleAppId}`,
-                },
-              ]}
-            />
+            <Helmet title="What's on - LGBT+ events happening in and around London" />
             <BannerImage
               titleText="What's on"
               subtitleText="Pride Festival: Jun 8 - Jul 6 2019"
@@ -262,18 +246,4 @@ class Events extends Component {
   }
 }
 
-Events.propTypes = {
-  data: PropTypes.object.isRequired,
-}
-
 export default Events
-
-export const EventsPageQuery = graphql`
-  query EventsPageQuery {
-    site {
-      siteMetadata {
-        appleAppId
-      }
-    }
-  }
-`

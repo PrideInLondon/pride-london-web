@@ -236,11 +236,8 @@ export const LegalList = styled.ul`
 
 export const LegalListItem = styled.li`
   position: relative;
-  &:not(:first-child) {
-    a {
-      padding-left: 20px;
-    }
-  }
+  padding: 0 20px;
+
   &:not(:last-child) {
     &:after {
       content: '|';
@@ -248,10 +245,6 @@ export const LegalListItem = styled.li`
       position: absolute;
       right: 0;
       top: 0;
-    }
-
-    a {
-      padding-right: 20px;
     }
   }
 `
