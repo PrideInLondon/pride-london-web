@@ -73,7 +73,7 @@ const mailShareUrl = (name, date, location) => {
 
 const twitterShareUrl = (name, date, location) => {
   const body = encodeURIComponent(shareText(name, date, location))
-  return `https://twitter.com/home?status=${body}`
+  return `https://twitter.com/intent/tweet?text=${body}`
 }
 
 const facebookShareUrl = location => {
