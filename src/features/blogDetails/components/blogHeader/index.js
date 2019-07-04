@@ -34,7 +34,7 @@ BlogHeader.propTypes = {
     title: PropTypes.string,
     hexColour: PropTypes.string,
   }).isRequired,
-  readTime: PropTypes.string,
+  readTime: PropTypes.number,
 }
 BlogHeader.defaultProps = {
   readTime: null,
