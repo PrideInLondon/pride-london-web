@@ -20,7 +20,7 @@ export const NewsMetrics = ({ datePublished, readTime, className }) => {
 
 NewsMetrics.propTypes = {
   datePublished: PropTypes.string.isRequired,
-  readTime: PropTypes.string,
+  readTime: PropTypes.number,
   className: PropTypes.string,
 }
 

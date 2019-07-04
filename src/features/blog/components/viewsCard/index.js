@@ -15,7 +15,9 @@ const ViewsCard = ({ featuredImage, title, slug }) => {
 ViewsCard.propTypes = {
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  featuredImage: PropTypes.shape({}).isRequired,
+  featuredImage: PropTypes.shape({
+    fixed: PropTypes.any,
+  }).isRequired,
 }
 
 export default ViewsCard
