@@ -13,6 +13,7 @@ import {
   EventsYouMayLike,
   EventInfoCard,
   EventDirectionsSection,
+  EventShareSection,
 } from '../features/events'
 import { Container, Row, Column } from '../components/grid'
 import { checkBreakpoint } from '../utilities'
@@ -241,6 +242,10 @@ export default class Event extends Component {
               name: 'twitter:url',
               content: metaUrl,
             },
+            {
+              name: 'twitter:card',
+              content: 'summary_large_image',
+            },
           ]}
           link={[
             {
@@ -339,6 +344,11 @@ export default class Event extends Component {
                   <EventSchedule schedule={performances} />
                 </Section>
               )}
+              <EventShareSection
+                name={name}
+                location={metaUrl}
+                date={startTime}
+              />
             </Column>
           </Row>
         </Container>
