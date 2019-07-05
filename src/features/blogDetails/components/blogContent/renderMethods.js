@@ -36,9 +36,8 @@ const rendeUrlHyperlink = (node, children) => (
 )
 
 const renderEmbeddedEntry = node => {
-  switch (node.data.target.sys.contentType.sys.id) {
-    case 'carousel':
-      return renderCarousel(node)
+  if (node.data.target.sys.contentType.sys.id === 'carousel') {
+    return renderCarousel(node)
   }
   return null
 }

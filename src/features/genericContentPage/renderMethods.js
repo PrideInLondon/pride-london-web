@@ -88,11 +88,11 @@ const renderSponsorSection = node => {
   } = node
   const title = fields.displayName['en-GB']
   let sponsors = fields.sponsors ? fields.sponsors['en-GB'] : []
-  sponsors = sponsors.map(({ fields }) => ({
-    name: fields.sponsorName['en-GB'],
-    logo: fields.sponsorLogo['en-GB'].fields.file['en-GB'].url,
-    level: fields.sponsorLevel['en-GB'],
-    url: fields.sponsorUrl['en-GB'],
+  sponsors = sponsors.map(sponsor => ({
+    name: sponsor.fields.sponsorName['en-GB'],
+    logo: sponsor.fields.sponsorLogo['en-GB'].fields.file['en-GB'].url,
+    level: sponsor.fields.sponsorLevel['en-GB'],
+    url: sponsor.fields.sponsorUrl['en-GB'],
   }))
   return (
     <SponsorsSubsection title={title}>
