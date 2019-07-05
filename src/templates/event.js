@@ -206,11 +206,11 @@ export default class Event extends Component {
             },
             {
               property: 'og:locality',
-              content: city && city,
+              content: city,
             },
             {
               property: 'og:postal-code',
-              content: postcode && postcode,
+              content: postcode,
             },
             {
               property: 'og:url',
