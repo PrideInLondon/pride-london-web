@@ -147,7 +147,6 @@ class Provider extends Component {
 
   clearFilters = () => {
     this.setState({
-      ...this.state,
       filterOpen: null,
       filters: getInitialFilterState(),
     })

@@ -135,7 +135,7 @@ function filterPastEvents(event) {
   if (event.node && event.node.endTime)
     return moment(event.node.endTime).isSameOrAfter(today)
   // Assume event is date string if not event object
-  return moment(event, 'DD/MM/YYYY').isSameOrAfter(today)
+  return moment(event).isSameOrAfter(today)
 }
 
 function filterByLimit(event, index) {
