@@ -89,11 +89,12 @@ const dateFormat = 'dddd D MMMM YYYY'
 
 const formatDayRange = (startTime, endTime) => {
   const startDate = moment(startTime).format('L')
+  const endDate = moment(endTime).format('L')
 
   const sameDay =
-    startTime.isSame(endTime, 'day') ||
+    startDate === endDate ||
     (moment(endTime).format('Hms') === '000' &&
-      moment(endTime).diff(startDate, 'days') === 1)
+      moment(endTime).diff(startTime, 'days') < 1)
   if (sameDay) {
     return startTime.format(dateFormat)
   }
