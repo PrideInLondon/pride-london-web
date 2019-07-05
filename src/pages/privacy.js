@@ -51,9 +51,8 @@ const ResponsiveTable = styled.table`
           padding: 10px;
           display: block;
 
-          ${props =>
-            props.columns.map((column, index) => {
-              return css`
+          ${props.columns.map((column, index) => {
+            return css`
                   &:nth-of-type(${index + 1}):before {
                   content: '${column}';
                   font-family: ${theme.fonts.title};
@@ -65,7 +64,7 @@ const ResponsiveTable = styled.table`
                   margin: -10px -10px 10px -10px;
                 }
             `
-            })}
+          })}
           }
       `};
     `}
