@@ -118,8 +118,9 @@ class EventDropdownFilter extends Component {
   }
 
   toggleMenu = () => {
-    this.setState({ isOpen: !this.state.isOpen }, () =>
-      this.props.closeSiblingFilters(this.props.filterName, this.state.isOpen)
+    const isOpen = !this.state.isOpen
+    this.setState({ isOpen: isOpen }, () =>
+      this.props.closeSiblingFilters(this.props.filterName, isOpen)
     )
   }
 

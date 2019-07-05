@@ -89,8 +89,9 @@ class DropDown extends React.Component {
   }
 
   toggleDropdown = () => {
+    const isOpen = !this.state.isOpen
     this.setState({
-      isOpen: !this.state.isOpen,
+      isOpen: isOpen,
     })
   }
 
