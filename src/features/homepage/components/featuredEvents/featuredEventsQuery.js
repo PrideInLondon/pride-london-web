@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from 'gatsby'
 import React from 'react'
-import moment from 'moment'
+import { filterPastEvents } from '../../../events/helpers'
 import FeaturedEvents from '.'
 
 const query = graphql`
@@ -36,8 +36,8 @@ const FeaturedEventsQuery = props => (
     query={query}
     render={({ allContentfulEvent: { events } }) => {
       const formattedEvents = events
+        .filter(filterPastEvents)
         .map(event => ({ node: event.node }))
-        .filter(event => moment(event.endTime).isSameOrAfter(moment()))
       return <FeaturedEvents {...props} events={formattedEvents} />
     }}
   />
