@@ -13,13 +13,13 @@ tomorrow.setDate(tomorrow.getDate() + 1)
 
 const futureEvent = {
   node: {
-    startTime: tomorrow,
+    endTime: tomorrow,
   },
 }
 
 const pastEvent = {
   node: {
-    startTime: yesterday,
+    endTime: yesterday,
   },
 }
 
@@ -43,7 +43,7 @@ describe('filterPastEvents', () => {
   })
 
   it('returns true if date is after today and object is date string', () => {
-    expect(filterPastEvents(futureEvent.node.startTime)).toBeTruthy()
+    expect(filterPastEvents(futureEvent.node.endTime)).toBeTruthy()
   })
 
   it('format 1-day event date properly', () => {
