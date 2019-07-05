@@ -183,7 +183,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 }
 
 .c15 {
-  padding: 10px;
+  padding: 10px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -196,26 +196,32 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-basis: 33.3333%;
-  -ms-flex-preferred-size: 33.3333%;
-  flex-basis: 33.3333%;
-  max-width: 122px;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 150px;
 }
 
 .c15 a {
-  width: 100%;
   text-align: center;
   border: none !important;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
   color: initial !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  height: 48%;
+  width: 75%;
 }
 
 .c15 img {
-  max-height: 80px;
+  max-height: 100%;
   max-width: 100%;
-  height: auto;
-  width: auto;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -2149,6 +2155,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       >
                                         <styles__SponsorImgWrapper
                                           key="a1bc90c0-23c7-51e1-8ea2-4bce5224df33"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2157,10 +2164,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2178,7 +2185,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2192,6 +2201,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -2211,6 +2221,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="1e2d4e9d-1684-5657-a7b6-3c6a5e1e96c1"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2219,10 +2230,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2240,7 +2251,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2254,6 +2267,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -2273,6 +2287,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="73cee0dd-94a9-5426-b52b-35ce3214ad4d"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2281,10 +2296,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2302,7 +2317,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2316,6 +2333,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -2335,6 +2353,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="760bcc60-2704-54b5-8555-da4adab9f394"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2343,10 +2362,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2364,7 +2383,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2378,6 +2399,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -2397,6 +2419,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="5f4a1bb1-6c2d-502a-b47f-ea357d8103e8"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2405,10 +2428,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2426,7 +2449,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2440,6 +2465,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -2459,6 +2485,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="d5fde3eb-032f-513e-8852-26e6b02b5d2d"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2467,10 +2494,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2488,7 +2515,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2502,6 +2531,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -2521,6 +2551,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="6bace2aa-7fa9-5969-8e0f-e9170d7f015d"
+                                          level="Gold"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2529,10 +2560,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2550,7 +2581,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2564,6 +2597,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Gold"
                                           >
                                             <div
                                               className="c15"
@@ -2583,6 +2617,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="9f0f29b2-b53a-5b13-b0dd-d048041f8da5"
+                                          level="Gold"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2591,10 +2626,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2612,7 +2647,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2626,6 +2663,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Gold"
                                           >
                                             <div
                                               className="c15"
@@ -2645,6 +2683,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="6f20fdff-3cc4-54dc-9fdd-850de5a7f471"
+                                          level="Gold"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2653,10 +2692,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2674,7 +2713,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2688,6 +2729,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Gold"
                                           >
                                             <div
                                               className="c15"
@@ -2707,6 +2749,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="e7f18314-f613-552f-9f07-031f14840914"
+                                          level="Gold"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -2715,10 +2758,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -2736,7 +2779,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -2750,6 +2795,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Gold"
                                           >
                                             <div
                                               className="c15"
@@ -3933,7 +3979,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 }
 
 .c15 {
-  padding: 10px;
+  padding: 10px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3946,26 +3992,32 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-basis: 33.3333%;
-  -ms-flex-preferred-size: 33.3333%;
-  flex-basis: 33.3333%;
-  max-width: 122px;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 150px;
 }
 
 .c15 a {
-  width: 100%;
   text-align: center;
   border: none !important;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
   color: initial !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  height: 48%;
+  width: 75%;
 }
 
 .c15 img {
-  max-height: 80px;
+  max-height: 100%;
   max-width: 100%;
-  height: auto;
-  width: auto;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -5899,6 +5951,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       >
                                         <styles__SponsorImgWrapper
                                           key="a1bc90c0-23c7-51e1-8ea2-4bce5224df33"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -5907,10 +5960,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -5928,7 +5981,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -5942,6 +5997,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -5961,6 +6017,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="1e2d4e9d-1684-5657-a7b6-3c6a5e1e96c1"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -5969,10 +6026,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -5990,7 +6047,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -6004,6 +6063,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -6023,6 +6083,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="73cee0dd-94a9-5426-b52b-35ce3214ad4d"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -6031,10 +6092,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -6052,7 +6113,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -6066,6 +6129,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -6085,6 +6149,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="760bcc60-2704-54b5-8555-da4adab9f394"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -6093,10 +6158,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -6114,7 +6179,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -6128,6 +6195,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -6147,6 +6215,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="5f4a1bb1-6c2d-502a-b47f-ea357d8103e8"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -6155,10 +6224,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -6176,7 +6245,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -6190,6 +6261,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -6209,6 +6281,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="d5fde3eb-032f-513e-8852-26e6b02b5d2d"
+                                          level="Headline"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -6217,10 +6290,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -6238,7 +6311,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -6252,6 +6327,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Headline"
                                           >
                                             <div
                                               className="c15"
@@ -6271,6 +6347,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="6bace2aa-7fa9-5969-8e0f-e9170d7f015d"
+                                          level="Gold"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -6279,10 +6356,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -6300,7 +6377,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -6314,6 +6393,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Gold"
                                           >
                                             <div
                                               className="c15"
@@ -6333,6 +6413,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="9f0f29b2-b53a-5b13-b0dd-d048041f8da5"
+                                          level="Gold"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -6341,10 +6422,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -6362,7 +6443,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -6376,6 +6459,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Gold"
                                           >
                                             <div
                                               className="c15"
@@ -6395,6 +6479,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="6f20fdff-3cc4-54dc-9fdd-850de5a7f471"
+                                          level="Gold"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -6403,10 +6488,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -6424,7 +6509,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -6438,6 +6525,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Gold"
                                           >
                                             <div
                                               className="c15"
@@ -6457,6 +6545,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </styles__SponsorImgWrapper>
                                         <styles__SponsorImgWrapper
                                           key="e7f18314-f613-552f-9f07-031f14840914"
+                                          level="Gold"
                                         >
                                           <StyledComponent
                                             forwardedComponent={
@@ -6465,10 +6554,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__SponsorImgWrapper-ofz17a-14",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:10px;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:122px;",
+                                                    "padding:10px 0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
@@ -6486,7 +6575,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
     max-width: 12.5%;
   ",
                                                     ";}",
-                                                    ";a{width:100%;text-align:center;border:none !important;text-decoration:none !important;color:initial !important;}img{max-height:80px;max-width:100%;height:auto;width:auto;align-self:center;margin:0 auto;flex-shrink:0;}",
+                                                    ";a{text-align:center;border:none !important;text-decoration:none !important;color:initial !important;display:flex;align-self:center;",
+                                                    [Function],
+                                                    ";}img{max-height:100%;max-width:100%;align-self:center;margin:0 auto;flex-shrink:0;}",
                                                   ],
                                                 },
                                                 "displayName": "styles__SponsorImgWrapper",
@@ -6500,6 +6591,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               }
                                             }
                                             forwardedRef={null}
+                                            level="Gold"
                                           >
                                             <div
                                               className="c15"
@@ -7677,6 +7769,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
         <styles__SponsorsContainer>
           <styles__SponsorImgWrapper
             key="a1bc90c0-23c7-51e1-8ea2-4bce5224df33"
+            level="Headline"
           >
             <a
               href="https://media.giphy.com/media/UvwI1X7XkbXq0/giphy.gif"
@@ -7691,6 +7784,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
             key="1e2d4e9d-1684-5657-a7b6-3c6a5e1e96c1"
+            level="Headline"
           >
             <a
               href="https://m.popkey.co/666ded/1VRvJ.gif"
@@ -7705,6 +7799,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
             key="73cee0dd-94a9-5426-b52b-35ce3214ad4d"
+            level="Headline"
           >
             <a
               href="http://www.abstergo.com/"
@@ -7719,6 +7814,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
             key="760bcc60-2704-54b5-8555-da4adab9f394"
+            level="Headline"
           >
             <a
               href="https://red-badger.com/"
@@ -7733,6 +7829,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
             key="5f4a1bb1-6c2d-502a-b47f-ea357d8103e8"
+            level="Headline"
           >
             <a
               href="https://www.barclays.co.uk/"
@@ -7747,6 +7844,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
             key="d5fde3eb-032f-513e-8852-26e6b02b5d2d"
+            level="Headline"
           >
             <a
               href="https://www.london.gov.uk/about-us/mayor-london"
@@ -7761,6 +7859,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
             key="6bace2aa-7fa9-5969-8e0f-e9170d7f015d"
+            level="Gold"
           >
             <a
               href="http://alienanthology.wikia.com/wiki/Weyland-Yutani"
@@ -7775,6 +7874,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
             key="9f0f29b2-b53a-5b13-b0dd-d048041f8da5"
+            level="Gold"
           >
             <a
               href="http://omniconsumerproductscorporation.com/"
@@ -7789,6 +7889,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
             key="6f20fdff-3cc4-54dc-9fdd-850de5a7f471"
+            level="Gold"
           >
             <a
               href="https://www.tesco.com/"
@@ -7803,6 +7904,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
           </styles__SponsorImgWrapper>
           <styles__SponsorImgWrapper
             key="e7f18314-f613-552f-9f07-031f14840914"
+            level="Gold"
           >
             <a
               href="https://cms.law/en/GBR/"

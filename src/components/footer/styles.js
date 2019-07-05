@@ -1,8 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Link from 'gatsby-link'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
+import constants from '../../constants'
 import { Column } from '../grid'
+
+const isLargeBadge = level =>
+  [constants.sponsorLevels.headline, constants.sponsorLevels.gold].includes(
+    level
+  )
 
 export const FooterWrapper = styled.div`
   background-color: ${theme.colors.white};
@@ -162,12 +168,12 @@ export const SponsorsCTAWrapper = styled.div`
 `
 
 export const SponsorImgWrapper = styled.div`
-  padding: 10px;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 33.3333%;
-  max-width: 122px;
+  flex-basis: 50%;
+  max-width: 150px;
 
   ${media.tablet`
     flex-basis: 16.6667%;
@@ -180,18 +186,27 @@ export const SponsorImgWrapper = styled.div`
   `};
 
   a {
-    width: 100%;
     text-align: center;
     border: none !important;
     text-decoration: none !important;
     color: initial !important;
+    display: flex;
+    align-self: center;
+    ${({ level }) =>
+      isLargeBadge(level)
+        ? css`
+            height: 48%;
+            width: 75%;
+          `
+        : css`
+            height: 48%;
+            width: 80%;
+          `};
   }
 
   img {
-    max-height: 80px;
+    max-height: 100%;
     max-width: 100%;
-    height: auto;
-    width: auto;
     align-self: center;
     margin: 0 auto;
     flex-shrink: 0; /* needed to stop images stretching on IE11 */
