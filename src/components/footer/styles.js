@@ -174,6 +174,7 @@ export const SponsorImgWrapper = styled.div`
   justify-content: center;
   flex-basis: 50%;
   max-width: 150px;
+  min-height: 100px;
 
   ${media.tablet`
     flex-basis: 16.6667%;
@@ -205,6 +206,7 @@ export const SponsorImgWrapper = styled.div`
   }
 
   img {
+    object-fit: contain;
     max-height: 100%;
     max-width: 100%;
     align-self: center;
