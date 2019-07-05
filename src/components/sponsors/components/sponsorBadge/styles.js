@@ -40,20 +40,12 @@ export const BadgeImage = styled.img`
   ${({ level, preventLevelSize }) =>
     isLargeBadge(level) && !preventLevelSize
       ? css`
-          max-height: 80px;
-          max-width: 122px;
-          ${media.tablet`
-            max-height: 84px;
-            max-width: 220px;
-          `};
+          max-height: 48%;
+          max-width: 75%;
         `
       : css`
-          max-height: 78px;
-          max-width: 83px;
-          ${media.tablet`
-            max-height: 52px;
-            max-width: 95px;
-          `};
+          max-height: 48%;
+          max-width: 80%;
         `};
 `
 
