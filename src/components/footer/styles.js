@@ -168,7 +168,7 @@ export const SponsorsCTAWrapper = styled.div`
 `
 
 export const SponsorImgWrapper = styled.div`
-  padding: 10px 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,11 +196,11 @@ export const SponsorImgWrapper = styled.div`
     ${({ level }) =>
       isLargeBadge(level)
         ? css`
-            height: 48%;
+            height: 70%;
             width: 75%;
           `
         : css`
-            height: 48%;
+            height: 70%;
             width: 80%;
           `};
   }
