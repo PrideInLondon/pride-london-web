@@ -100,7 +100,7 @@ exports.createPages = async ({ graphql, actions }) => {
           ...edge.node.recurrenceDates,
         ])
 
-        recurrenceDates.filter(filterPastEvents).forEach(date => {
+        recurrenceDates.forEach(date => {
           const customId = `${edge.node.id}-${date.split('/').join('')}`
           const originalStartTime = moment(edge.node.startTime)
           const startTime = moment(date, dateFormat)
@@ -110,16 +110,17 @@ exports.createPages = async ({ graphql, actions }) => {
           const endTime = moment(startTime)
             .add(getDuration(edge.node.startTime, edge.node.endTime), 'ms')
             .toISOString()
-
-          createPage({
-            path: `/events/${customId}/`,
-            component: eventTemplate,
-            context: {
-              id: edge.node.id,
-              startTime,
-              endTime,
-            },
-          })
+          if (filterPastEvents(endTime)) {
+            createPage({
+              path: `/events/${customId}/`,
+              component: eventTemplate,
+              context: {
+                id: edge.node.id,
+                startTime,
+                endTime,
+              },
+            })
+          }
         })
       }
     })
