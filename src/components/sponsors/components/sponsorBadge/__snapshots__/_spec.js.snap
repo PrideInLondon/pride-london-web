@@ -110,7 +110,7 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> with big size sp
                 "componentStyle": ComponentStyle {
                   "componentId": "styles__BadgeImage-uzqcz1-1",
                   "isStatic": false,
-                  "lastClassName": "crqdQM",
+                  "lastClassName": "eGXHeM",
                   "rules": Array [
                     [Function],
                     ";",
@@ -133,7 +133,7 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> with big size sp
           >
             <img
               alt="Sponsor One"
-              className="styles__BadgeImage-uzqcz1-1 crqdQM"
+              className="styles__BadgeImage-uzqcz1-1 eGXHeM"
               src="/logo1"
             />
           </StyledComponent>
@@ -220,7 +220,7 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> with small size 
                 "componentStyle": ComponentStyle {
                   "componentId": "styles__BadgeImage-uzqcz1-1",
                   "isStatic": false,
-                  "lastClassName": "gsbKBa",
+                  "lastClassName": "kHfqhV",
                   "rules": Array [
                     [Function],
                     ";",
@@ -243,7 +243,7 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> with small size 
           >
             <img
               alt="Sponsor Two"
-              className="styles__BadgeImage-uzqcz1-1 gsbKBa"
+              className="styles__BadgeImage-uzqcz1-1 kHfqhV"
               src="/logo2"
             />
           </StyledComponent>

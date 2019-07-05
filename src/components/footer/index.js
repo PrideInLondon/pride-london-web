@@ -192,7 +192,7 @@ export const Footer = ({
                     },
                   }) =>
                     order === sponsorLevel && (
-                      <SponsorImgWrapper key={id}>
+                      <SponsorImgWrapper key={id} level={sponsorLevel}>
                         <a
                           href={sponsorUrl}
                           target="_blank"
