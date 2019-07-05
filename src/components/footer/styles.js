@@ -172,11 +172,12 @@ export const SponsorImgWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 50%;
+  flex-basis: 33.3333%;
   max-width: 150px;
-  min-height: 100px;
+  min-height: 70px;
 
   ${media.tablet`
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   `};

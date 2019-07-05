@@ -196,11 +196,11 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-basis: 50%;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+  -webkit-flex-basis: 33.3333%;
+  -ms-flex-preferred-size: 33.3333%;
+  flex-basis: 33.3333%;
   max-width: 150px;
-  min-height: 100px;
+  min-height: 70px;
 }
 
 .c15 a {
@@ -394,6 +394,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 
 @media (min-width:768px) {
   .c15 {
+    min-height: 100px;
     -webkit-flex-basis: 16.6667%;
     -ms-flex-preferred-size: 16.6667%;
     flex-basis: 16.6667%;
@@ -2169,11 +2170,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -2235,11 +2237,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -2301,11 +2304,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -2367,11 +2371,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -2433,11 +2438,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -2499,11 +2505,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -2565,11 +2572,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -2631,11 +2639,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -2697,11 +2706,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -2763,11 +2773,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -3994,11 +4005,11 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-basis: 50%;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+  -webkit-flex-basis: 33.3333%;
+  -ms-flex-preferred-size: 33.3333%;
+  flex-basis: 33.3333%;
   max-width: 150px;
-  min-height: 100px;
+  min-height: 70px;
 }
 
 .c15 a {
@@ -4192,6 +4203,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 
 @media (min-width:768px) {
   .c15 {
+    min-height: 100px;
     -webkit-flex-basis: 16.6667%;
     -ms-flex-preferred-size: 16.6667%;
     flex-basis: 16.6667%;
@@ -5967,11 +5979,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -6033,11 +6046,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -6099,11 +6113,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -6165,11 +6180,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -6231,11 +6247,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -6297,11 +6314,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -6363,11 +6381,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -6429,11 +6448,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -6495,11 +6515,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
@@ -6561,11 +6582,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "isStatic": false,
                                                   "lastClassName": "c15",
                                                   "rules": Array [
-                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:50%;max-width:150px;min-height:100px;",
+                                                    "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
                                                     "768",
                                                     "px){",
                                                     "
+    min-height: 100px;
     flex-basis: 16.6667%;
     max-width: 16.6667%;
   ",
