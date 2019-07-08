@@ -6171,10 +6171,10 @@ gatsby-plugin-rollbar@^1.0.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-rollbar/-/gatsby-plugin-rollbar-1.0.0.tgz#90fc3ca1ed08f54cab6824f5e94cc3ec85283cc0"
   integrity sha512-RPF/8CyU1u56NOZOcvrCwYUkj7Beg4jElyYH97e3iipwPxM97hsgzULg8EhiquumpHmRNDH4TCNtw2dRkUfwUQ==
 
-gatsby-plugin-sharp@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.2.2.tgz#cb0702611541a47282059777cd72785f254e876f"
-  integrity sha512-e7+4EWLhcucRHFjtDTJFe04IjvLyh0U6Q+CqqcYmL/veIDTVf7XvGefiKlcFxG8ys6l2d3gd3L4+nR8WzV6lCA==
+gatsby-plugin-sharp@^2.2.2, gatsby-plugin-sharp@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.2.3.tgz#6410a86bc3ac8af9bf347b25b31de29ba90e5785"
+  integrity sha512-wkNKe6hEHD0b1/VgB38wPRy+sFTU5AvCnmgxikEbGyQl4WIZlAeGZjMOvhxu+6/9nSRCLQuA90RU8pLXA4m/TQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -6219,10 +6219,10 @@ gatsby-react-router-scroll@^2.1.1:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.1.6:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.6.tgz#dc4788651a78b27c110ec041280b2fefb6707683"
-  integrity sha512-csdm9/ZQKhPzcAUE9+NsA8aTmrDrls6zNw/+F8EEtx2oDmPkbFUD5618GQpysfuWa7BCJ5g1SsRzgDGJthzFRQ==
+gatsby-source-contentful@^2.1.8:
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.8.tgz#83a0399a9ac1785868cf73b8161935a7994d6dd5"
+  integrity sha512-Ia+bU2gP9QyUFZJQesRemrVMNrkBvqjAGHpP7qXi91CEVZHXI1CI8IVb+dgsfYmiK9ruCZF3S9GqLSc5broUWA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@hapi/joi" "^15.0.0"
@@ -6233,7 +6233,7 @@ gatsby-source-contentful@^2.1.6:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.2.2"
+    gatsby-plugin-sharp "^2.2.3"
     gatsby-source-filesystem "^2.1.2"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
