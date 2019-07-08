@@ -8,7 +8,7 @@ import { FeaturedEventContent } from './styles'
 
 const FeaturedEvents = ({ events }) => (
   <FeaturedEventContent>
-    <Slider {...settings}>
+    <Slider {...settings(events.length)}>
       {events.map(event => (
         <FlexColumn
           width={[
