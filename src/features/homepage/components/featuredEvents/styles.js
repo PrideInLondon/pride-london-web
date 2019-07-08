@@ -10,10 +10,12 @@ export const FeaturedEventContent = styled.div`
 
   .slick-track {
     display: flex;
+    justify-content: center;
 
     .slick-slide {
       display: flex;
       height: auto;
+      max-width: 340px;
 
       & > div {
         height: 100%;

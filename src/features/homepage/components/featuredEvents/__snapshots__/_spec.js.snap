@@ -10,7 +10,7 @@ exports[`Featured Event Content renders with default values 1`] = `
         "componentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
         "isStatic": true,
         "rules": Array [
-          "overflow:hidden;.slick-list{overflow:visible;}.slick-track{display:flex;.slick-slide{display:flex;height:auto;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
+          "overflow:hidden;.slick-list{overflow:visible;}.slick-track{display:flex;justify-content:center;.slick-slide{display:flex;height:auto;max-width:340px;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
           "@media (min-width:",
           "768",
           "px){",
@@ -82,7 +82,7 @@ exports[`FeaturedEvents renders with default values 1`] = `
       ]
     }
     slidesToScroll={1}
-    slidesToShow={3}
+    slidesToShow={2}
     speed={500}
   >
     <grid__FlexColumn
