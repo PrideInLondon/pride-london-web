@@ -38,6 +38,7 @@ const FeaturedEventsQuery = props => (
       const formattedEvents = events
         .filter(filterPastEvents)
         .map(event => ({ node: event.node }))
+        .sort((a, b) => new Date(a.node.startTime) - new Date(b.node.startTime))
       return <FeaturedEvents {...props} events={formattedEvents} />
     }}
   />

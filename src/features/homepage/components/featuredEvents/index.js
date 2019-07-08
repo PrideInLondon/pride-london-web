@@ -5,6 +5,7 @@ import { EventListingCard } from '../../../../features/events'
 import { FlexColumn } from '../../../../components/grid'
 import { settings } from './slickSettings'
 import { FeaturedEventContent } from './styles'
+import './index.css'
 
 const FeaturedEvents = ({ events }) => (
   <FeaturedEventContent>

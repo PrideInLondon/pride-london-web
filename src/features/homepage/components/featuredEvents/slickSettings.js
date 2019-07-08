@@ -1,6 +1,7 @@
 import theme from '../../../../theme/theme'
 
 export const settings = slides => ({
+  className: 'featured-events-slider',
   speed: 500,
   slidesToShow: slides >= 3 ? 3 : slides,
   slidesToScroll: 1,
