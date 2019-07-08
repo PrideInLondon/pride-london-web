@@ -1,8 +1,8 @@
 import theme from '../../../../theme/theme'
 
-export const settings = {
+export const settings = slides => ({
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: slides >= 3 ? 3 : slides,
   slidesToScroll: 1,
   infinite: true,
   arrows: true,
@@ -10,14 +10,14 @@ export const settings = {
     {
       breakpoint: 1279,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: slides >= 2 ? 2 : slides,
         slidesToScroll: 1,
       },
     },
     {
       breakpoint: theme.breakpoints[1] - 1,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: slides >= 2 ? 2 : slides,
         slidesToScroll: 1,
         arrows: false,
         centerMode: true,
@@ -33,4 +33,4 @@ export const settings = {
       },
     },
   ],
-}
+})
