@@ -175,8 +175,9 @@ const CommunityPartnerCard = ({ partner }) => {
             >
               {venueName}
             </CardItemTitle>
-            <p>{`${addressLine1}, ${addressLine2 &&
-              `${addressLine2},`} ${city}, ${postcode}`}</p>
+            <p>{`${addressLine1}, ${
+              addressLine2 ? `${addressLine2},` : ''
+            } ${city}, ${postcode}`}</p>
           </div>
         </CardItem>
         <CardItem>
