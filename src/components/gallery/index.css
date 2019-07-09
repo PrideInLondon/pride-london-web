@@ -1,0 +1,25 @@
+.custom-gallery .image-gallery-thumbnail.active {
+  border-color: #2d2f7f;
+}
+
+.custom-gallery .image-gallery-content .image-gallery-thumbnails-container {
+  text-align: left;
+}
+
+.custom-gallery .image-gallery-fullscreen-button {
+  top: 0;
+  bottom: auto;
+}
+
+.custom-gallery
+  .image-gallery-content
+  .image-gallery-image
+  .image-gallery-description {
+  display: none;
+  font-family: 'Roboto';
+  bottom: 0;
+}
+
+.custom-gallery .image-gallery-content .image-gallery-image {
+  object-fit: cover;
+}

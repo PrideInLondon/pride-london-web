@@ -6,6 +6,7 @@ import { ReactTypeformEmbed } from 'react-typeform-embed'
 import Button from '../../components/button'
 import renderSponsors from '../../components/sponsors/helpers'
 import SponsorsSubsection from '../../components/sponsors/components/sponsorSubsection'
+import Gallery from '../../components/gallery'
 import Figure from './components/figure'
 import Video from './components/video'
 
@@ -101,6 +102,29 @@ const renderSponsorSection = node => {
   )
 }
 
+const renderGallery = ({
+  data: {
+    target: {
+      fields: { photos },
+    },
+  },
+}) => {
+  const images = photos['en-GB'].map(
+    ({ fields: { altTag, description, image, name } }) => {
+      const imageUrl = image['en-GB'].fields.file['en-GB'].url
+      return {
+        name: name['en-GB'],
+        description: description ? description['en-GB'] : null,
+        originalAlt: altTag['en-GB'],
+        thumbnailAlt: altTag['en-GB'],
+        original: `${imageUrl}?w=1920&h=1080&fit=fill`,
+        thumbnail: `${imageUrl}?w=100&h=70&fit=fill`,
+      }
+    }
+  )
+  return <Gallery images={images} />
+}
+
 export const renderEmbeddedEntry = node => {
   switch (node.data.target.sys.contentType.sys.id) {
     case 'video':
@@ -109,6 +133,8 @@ export const renderEmbeddedEntry = node => {
       return renderButton(node)
     case 'sponsorSection':
       return renderSponsorSection(node)
+    case 'gallery':
+      return renderGallery(node)
     default:
       return null
   }
@@ -142,5 +168,9 @@ renderButton.propTypes = {
 }
 
 renderVideo.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+renderGallery.propTypes = {
   data: PropTypes.object.isRequired,
 }
