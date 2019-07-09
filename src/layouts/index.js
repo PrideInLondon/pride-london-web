@@ -61,7 +61,6 @@ const query = graphql`
         youtube
         linkedin
         snapchat
-        appleAppId
       }
     }
 
@@ -123,7 +122,6 @@ const Layout = ({ children, location: { pathname } }) => (
             youtube,
             linkedin,
             snapchat,
-            appleAppId,
           },
         },
       }) => {
@@ -259,12 +257,6 @@ const Layout = ({ children, location: { pathname } }) => (
                     name: 'theme-color',
                     content: '#343692',
                   },
-
-                  // Apple Meta Tags
-                  {
-                    name: 'apple-itunes-app',
-                    content: `app-id=${appleAppId}`,
-                  },
                 ]}
                 link={[
                   {
@@ -339,10 +331,6 @@ const Layout = ({ children, location: { pathname } }) => (
                     rel: 'apple-touch-icon-precomposed',
                     sizes: '152x152',
                     href: apple152,
-                  },
-                  {
-                    rel: 'manifest',
-                    href: '/manifest.json',
                   },
                 ]}
                 htmlAttributes={{
