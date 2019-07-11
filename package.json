@@ -55,7 +55,7 @@
     "gatsby-image": "^2.2.4",
     "gatsby-link": "^2.0.17",
     "gatsby-plugin-layout": "^1.0.15",
-    "gatsby-plugin-offline": "^2.2.0",
+    "gatsby-plugin-offline": "^2.2.2",
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-rollbar": "^1.0.0",
