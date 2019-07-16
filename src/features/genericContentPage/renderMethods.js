@@ -105,24 +105,32 @@ const renderSponsorSection = node => {
 const renderGallery = ({
   data: {
     target: {
-      fields: { photos },
+      fields: { images },
     },
   },
 }) => {
-  const images = photos['en-GB'].map(
-    ({ fields: { altTag, description, image, name } }) => {
+  const photos = images['en-GB'].map(
+    ({ fields: { altText, description, image, name, photographer } }) => {
       const imageUrl = image['en-GB'].fields.file['en-GB'].url
+      const imageAltText = altText ? altText['en-GB'] : ''
+      const imageAuthor = photographer
+        ? {
+            name: photographer['en-GB'].fields.name['en-GB'],
+            url: photographer['en-GB'].fields.url['en-GB'],
+          }
+        : null
       return {
         name: name['en-GB'],
         description: description ? description['en-GB'] : null,
-        originalAlt: altTag['en-GB'],
-        thumbnailAlt: altTag['en-GB'],
+        photographer: imageAuthor,
+        originalAlt: imageAltText,
+        thumbnailAlt: imageAltText,
         original: `${imageUrl}?w=1920&h=1080&fit=fill`,
-        thumbnail: `${imageUrl}?w=100&h=70&fit=fill`,
+        thumbnail: `${imageUrl}?w=100&h=100&fit=fill`,
       }
     }
   )
-  return <Gallery images={images} />
+  return <Gallery images={photos} />
 }
 
 export const renderEmbeddedEntry = node => {

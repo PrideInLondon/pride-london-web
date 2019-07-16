@@ -1,28 +1,60 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
-import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import './index.css'
+import GalleryGrid from './components/GalleryGrid'
+import GallerySlider from './components/GallerySlider'
+import { GalleryContainer } from './styles'
 
 const Gallery = ({ images }) => {
   const [photoIndex, setPhotoIndex] = useState(0)
+  const [thumbanilsVisible, toggleThumbnailsVisibility] = useState(false)
+
+  const onSelectPhoto = useCallback(photoIndex => {
+    setPhotoIndex(photoIndex)
+    toggleThumbnailsVisibility(false)
+  }, [])
+
+  const showThumbnails = useCallback(() => {
+    toggleThumbnailsVisibility(true)
+  }, [])
+
   return (
-    <>
-      <ImageGallery
-        items={images}
-        thumbnailPosition="top"
-        additionalClass="custom-gallery"
-        onSlide={setPhotoIndex}
-        lazyLoad
-        showPlayButton={false}
-      />
-      <p>{images[photoIndex].description}</p>
-    </>
+    <GalleryContainer>
+      {thumbanilsVisible && (
+        <GalleryGrid
+          images={images}
+          activeIndex={photoIndex}
+          onPhotoClick={onSelectPhoto}
+        />
+      )}
+      {!thumbanilsVisible && (
+        <GallerySlider
+          images={images}
+          activeIndex={photoIndex}
+          onSlide={setPhotoIndex}
+          onViewAllButtonClick={showThumbnails}
+        />
+      )}
+    </GalleryContainer>
   )
 }
 
 Gallery.propTypes = {
-  images: PropTypes.array.isRequired,
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      originalAlt: PropTypes.string,
+      original: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      thumbnailAlt: PropTypes.string,
+      thumbnail: PropTypes.string.isRequired,
+      photographer: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      }),
+    })
+  ).isRequired,
 }
 
 export default Gallery

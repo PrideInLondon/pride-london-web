@@ -68,7 +68,7 @@ export default ParadeGroups
 
 export const paradeGroupsQuery = graphql`
   query paradeGroups {
-    paradeGroups: allContentfulParadeGroup2019(
+    paradeGroups: allContentfulParadeGroup(
       sort: { fields: [name], order: ASC }
     ) {
       edges {
@@ -79,7 +79,6 @@ export const paradeGroupsQuery = graphql`
           twitterUrl
           facebookUrl
           instagramUrl
-          emailUrl
         }
       }
     }
