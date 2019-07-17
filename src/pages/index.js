@@ -143,6 +143,10 @@ const StyledColumn = styled(Column)`
   `};
 `
 
+const BannerButton = styled(Button)`
+  margin-top: 1.5rem;
+`
+
 const StyledButton = styled(Button)`
   background-color: transparent;
   padding: 12px 28px;
@@ -167,7 +171,16 @@ const Home = ({
         allowContentUnderflow
         videoId="348603446"
         fixed={childImageSharp}
-      ></BannerImage>
+      >
+        <BannerButton
+          wide={false}
+          white
+          primary
+          to="https://donate.prideinlondon.org/"
+        >
+          Help keep Pride free
+        </BannerButton>
+      </BannerImage>
       <StyledContainer>
         <StyledRow>
           <StyledColumn width={1}>
