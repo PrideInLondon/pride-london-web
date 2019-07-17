@@ -143,10 +143,6 @@ const StyledColumn = styled(Column)`
   `};
 `
 
-const BannerButton = styled(Button)`
-  margin-top: 1.5rem;
-`
-
 const StyledButton = styled(Button)`
   background-color: transparent;
   padding: 12px 28px;
@@ -164,18 +160,14 @@ const Home = ({
         subtitleText={
           'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community.'
         }
-        date={'Saturday 6 July'}
+        date={'2020 date to be announced'}
         imageSrc={BannerImg}
         color={theme.colors.eucalyptusGreen}
         large
         allowContentUnderflow
-        videoId="343813970"
+        videoId="348603446"
         fixed={childImageSharp}
-      >
-        <BannerButton wide={false} white primary to="/parade">
-          This year's parade
-        </BannerButton>
-      </BannerImage>
+      ></BannerImage>
       <StyledContainer>
         <StyledRow>
           <StyledColumn width={1}>
