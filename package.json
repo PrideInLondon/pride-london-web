@@ -80,7 +80,7 @@
     "react-onclickoutside": "^6.8.0",
     "react-slick": "^0.24.0",
     "react-test-renderer": "^16.8.6",
-    "react-typeform-embed": "^0.2.0",
+    "react-typeform-embed": "^0.2.1",
     "shortid": "^2.2.14",
     "slick-carousel": "^1.8.1",
     "string-hash": "^1.1.3",
