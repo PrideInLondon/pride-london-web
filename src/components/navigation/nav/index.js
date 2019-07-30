@@ -120,36 +120,6 @@ const Nav = () => {
                         ],
                       },
                       {
-                        heading: 'Line up',
-                        links: [
-                          {
-                            title: 'Cabaret Stage',
-                            url:
-                              '/events/1c96cd4e-e29c-5a8e-a530-0d7d1c9f3489/',
-                          },
-                          {
-                            title: 'Family Area',
-                            url:
-                              '/events/afd94c89-9e31-5c7a-8115-18031934fc95/',
-                          },
-                          {
-                            title: 'Trafalgar Square',
-                            url:
-                              '/events/e0bc2fe9-1563-5c2c-929b-d440d5f7cfd9/',
-                          },
-                          {
-                            title: "Women's Area",
-                            url:
-                              '/events/c88f24f1-d97c-5a7a-be4f-3158740c31a8/',
-                          },
-                          {
-                            title: 'World Area',
-                            url:
-                              '/events/aee4171a-97ba-5a83-8954-b264240d1cee/',
-                          },
-                        ],
-                      },
-                      {
                         heading: 'Stalls',
                         links: [
                           {
