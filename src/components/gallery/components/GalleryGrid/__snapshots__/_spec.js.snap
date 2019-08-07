@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Gallery/> should render and match snapshot 1`] = `
+<Fragment>
+  <styles__ThumbnailsContainer>
+    <styles__Thumbnail
+      active={true}
+      key="Test image 1"
+      onClick={[Function]}
+    >
+      <img
+        alt="foo"
+        src="foo"
+      />
+    </styles__Thumbnail>
+  </styles__ThumbnailsContainer>
+</Fragment>
+`;

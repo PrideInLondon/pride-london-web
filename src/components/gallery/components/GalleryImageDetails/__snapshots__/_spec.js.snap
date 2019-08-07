@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Gallery/> should render and match snapshot 1`] = `
+<Row
+  flexWrap={null}
+  ml={null}
+  mr={null}
+  mx={0}
+>
+  <Column
+    pb={null}
+    pl={null}
+    pr={null}
+    pt={null}
+    px={0}
+    py={null}
+    width={
+      Array [
+        1,
+        1,
+        0.6,
+      ]
+    }
+  >
+    <styles__GalleryImageDescription>
+      Test decription
+    </styles__GalleryImageDescription>
+  </Column>
+  <Column
+    pb={null}
+    pl={null}
+    pr={null}
+    pt={null}
+    px={0}
+    py={null}
+    width={
+      Array [
+        1,
+        1,
+        0.4,
+      ]
+    }
+  >
+    <styles__PhotoAuthor
+      href="example.com"
+    >
+      By 
+      Test photographer 1
+    </styles__PhotoAuthor>
+  </Column>
+</Row>
+`;
+
+exports[`<Gallery/> should render with default values and match snapshot 1`] = `
+<Row
+  flexWrap={null}
+  ml={null}
+  mr={null}
+  mx={0}
+>
+  <Column
+    pb={null}
+    pl={null}
+    pr={null}
+    pt={null}
+    px={0}
+    py={null}
+    width={
+      Array [
+        1,
+      ]
+    }
+  >
+    <styles__GalleryImageDescription />
+  </Column>
+  <Column
+    pb={null}
+    pl={null}
+    pr={null}
+    pt={null}
+    px={0}
+    py={null}
+    width={
+      Array [
+        0,
+      ]
+    }
+  />
+</Row>
+`;

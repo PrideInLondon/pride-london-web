@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Gallery/> should render and match snapshot 1`] = `
+<styles__GalleryContainer>
+  <Slider
+    arrows={true}
+    beforeChange={[Function]}
+    centerMode={true}
+    centerPadding="15%"
+    className="gallery-slick"
+    infinite={true}
+    responsive={
+      Array [
+        Object {
+          "breakpoint": 767,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "centerPadding": "100px",
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+        Object {
+          "breakpoint": 550,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "centerPadding": "40px",
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+      ]
+    }
+    slidesToScroll={1}
+    slidesToShow={1}
+    speed={450}
+  >
+    <GalleryImage
+      description="Test decription"
+      key="Test image 1-photo"
+      name="Test image 1"
+      original="foo"
+      originalAlt="foo"
+      photoIndex={1}
+      photographer={
+        Object {
+          "name": "Test photographer 1",
+          "url": "example.com",
+        }
+      }
+      thumbnail="foo"
+      thumbnailAlt="foo"
+      totalPhotos={1}
+    />
+  </Slider>
+  <Slider
+    arrows={false}
+    centerMode={true}
+    centerPadding="15%"
+    className="gallery-slick"
+    draggable={false}
+    infinite={true}
+    responsive={
+      Array [
+        Object {
+          "breakpoint": 767,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "centerPadding": "100px",
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+        Object {
+          "breakpoint": 550,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "centerPadding": "40px",
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+      ]
+    }
+    slidesToScroll={1}
+    slidesToShow={1}
+    speed={450}
+  >
+    <GalleryImageDetails
+      description="Test decription"
+      key="Test image 1-description"
+      name="Test image 1"
+      original="foo"
+      originalAlt="foo"
+      photographer={
+        Object {
+          "name": "Test photographer 1",
+          "url": "example.com",
+        }
+      }
+      thumbnail="foo"
+      thumbnailAlt="foo"
+    />
+  </Slider>
+</styles__GalleryContainer>
+`;
