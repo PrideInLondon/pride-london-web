@@ -56,11 +56,11 @@ exports[`render methods for Blog Content renders a gallery component if the id i
     speed={450}
   >
     <GalleryImage
-      description="Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin."
-      key="Test Image 1-photo"
-      name="Test Image 1"
+      description={null}
+      key="Test Image 3-photo"
+      name="Test Image 3"
       original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
-      originalAlt="test-image-1"
+      originalAlt="test-image-3"
       photoIndex={1}
       photographer={
         Object {
@@ -69,42 +69,8 @@ exports[`render methods for Blog Content renders a gallery component if the id i
         }
       }
       thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
-      thumbnailAlt="test-image-1"
-      totalPhotos={3}
-    />
-    <GalleryImage
-      description="Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin. Nulla pulvinar ut massa eu suscipit."
-      key="Test Image 2-photo"
-      name="Test Image 2"
-      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
-      originalAlt="test-image-2"
-      photoIndex={2}
-      photographer={
-        Object {
-          "name": "Test Photographer",
-          "url": "https://www.example.com",
-        }
-      }
-      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
-      thumbnailAlt="test-image-2"
-      totalPhotos={3}
-    />
-    <GalleryImage
-      description={null}
-      key="Test Image 3-photo"
-      name="Test Image 3"
-      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
-      originalAlt="test-image-3"
-      photoIndex={3}
-      photographer={
-        Object {
-          "name": "Test Photographer",
-          "url": "https://www.example.com",
-        }
-      }
-      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
       thumbnailAlt="test-image-3"
-      totalPhotos={3}
+      totalPhotos={1}
     />
   </Slider>
   <Slider
@@ -143,36 +109,6 @@ exports[`render methods for Blog Content renders a gallery component if the id i
     speed={450}
   >
     <GalleryImageDetails
-      description="Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin."
-      key="Test Image 1-description"
-      name="Test Image 1"
-      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
-      originalAlt="test-image-1"
-      photographer={
-        Object {
-          "name": "Test Photographer",
-          "url": "https://www.example.com",
-        }
-      }
-      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
-      thumbnailAlt="test-image-1"
-    />
-    <GalleryImageDetails
-      description="Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin. Nulla pulvinar ut massa eu suscipit."
-      key="Test Image 2-description"
-      name="Test Image 2"
-      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
-      originalAlt="test-image-2"
-      photographer={
-        Object {
-          "name": "Test Photographer",
-          "url": "https://www.example.com",
-        }
-      }
-      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
-      thumbnailAlt="test-image-2"
-    />
-    <GalleryImageDetails
       description={null}
       key="Test Image 3-description"
       name="Test Image 3"
@@ -196,30 +132,6 @@ exports[`render methods for Blog Content renders gallery 1`] = `
   <Gallery
     images={
       Array [
-        Object {
-          "description": "Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin.",
-          "name": "Test Image 1",
-          "original": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill",
-          "originalAlt": "test-image-1",
-          "photographer": Object {
-            "name": "Test Photographer",
-            "url": "https://www.example.com",
-          },
-          "thumbnail": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill",
-          "thumbnailAlt": "test-image-1",
-        },
-        Object {
-          "description": "Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin. Nulla pulvinar ut massa eu suscipit.",
-          "name": "Test Image 2",
-          "original": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill",
-          "originalAlt": "test-image-2",
-          "photographer": Object {
-            "name": "Test Photographer",
-            "url": "https://www.example.com",
-          },
-          "thumbnail": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill",
-          "thumbnailAlt": "test-image-2",
-        },
         Object {
           "description": null,
           "name": "Test Image 3",
