@@ -1,3 +1,285 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BlogContent renders with default values 1`] = `""`;
+
+exports[`render methods for Blog Content renders a gallery component if the id is gallery 1`] = `
+<styles__GalleryContainer>
+  <Slider
+    arrows={true}
+    beforeChange={[Function]}
+    centerMode={true}
+    centerPadding="15%"
+    className="gallery-slick"
+    infinite={true}
+    responsive={
+      Array [
+        Object {
+          "breakpoint": 767,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "centerPadding": "100px",
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+        Object {
+          "breakpoint": 550,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "centerPadding": "40px",
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+      ]
+    }
+    slidesToScroll={1}
+    slidesToShow={1}
+    speed={450}
+  >
+    <GalleryImage
+      description="Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin."
+      key="Test Image 1-photo"
+      name="Test Image 1"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-1"
+      photoIndex={1}
+      photographer={
+        Object {
+          "name": "Test Photographer",
+          "url": "https://www.example.com",
+        }
+      }
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-1"
+      totalPhotos={5}
+    />
+    <GalleryImage
+      description="Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin. Nulla pulvinar ut massa eu suscipit."
+      key="Test Image 2-photo"
+      name="Test Image 2"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-2"
+      photoIndex={2}
+      photographer={
+        Object {
+          "name": "Test Photographer",
+          "url": "https://www.example.com",
+        }
+      }
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-2"
+      totalPhotos={5}
+    />
+    <GalleryImage
+      description={null}
+      key="Test Image 3-photo"
+      name="Test Image 3"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-3"
+      photoIndex={3}
+      photographer={
+        Object {
+          "name": "Test Photographer",
+          "url": "https://www.example.com",
+        }
+      }
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-3"
+      totalPhotos={5}
+    />
+    <GalleryImage
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin. Nulla pulvinar ut massa eu suscipit. Phasellus orci nibh, cursus quis nunc quis, facilisis pretium massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce sed aliquet libero, quis rhoncus lacus. In faucibus sodales nunc. Fusce tellus eros, aliquam vitae turpis maximus, lacinia ultricies nisi. Nullam quis aliquam diam, sed pharetra purus. Nam mattis ultrices tincidunt. Aenean accumsan ornare ante sodales viverra. Aliquam ullamcorper eleifend lobortis."
+      key="Test Image 4-photo"
+      name="Test Image 4"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-4"
+      photoIndex={4}
+      photographer={null}
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-4"
+      totalPhotos={5}
+    />
+    <GalleryImage
+      description={null}
+      key="Test Image 5-photo"
+      name="Test Image 5"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-5"
+      photoIndex={5}
+      photographer={null}
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-5"
+      totalPhotos={5}
+    />
+  </Slider>
+  <Slider
+    arrows={false}
+    centerMode={true}
+    centerPadding="15%"
+    className="gallery-slick"
+    draggable={false}
+    infinite={true}
+    responsive={
+      Array [
+        Object {
+          "breakpoint": 767,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "centerPadding": "100px",
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+        Object {
+          "breakpoint": 550,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "centerPadding": "40px",
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+      ]
+    }
+    slidesToScroll={1}
+    slidesToShow={1}
+    speed={450}
+  >
+    <GalleryImageDetails
+      description="Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin."
+      key="Test Image 1-description"
+      name="Test Image 1"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-1"
+      photographer={
+        Object {
+          "name": "Test Photographer",
+          "url": "https://www.example.com",
+        }
+      }
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-1"
+    />
+    <GalleryImageDetails
+      description="Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin. Nulla pulvinar ut massa eu suscipit."
+      key="Test Image 2-description"
+      name="Test Image 2"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-2"
+      photographer={
+        Object {
+          "name": "Test Photographer",
+          "url": "https://www.example.com",
+        }
+      }
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-2"
+    />
+    <GalleryImageDetails
+      description={null}
+      key="Test Image 3-description"
+      name="Test Image 3"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-3"
+      photographer={
+        Object {
+          "name": "Test Photographer",
+          "url": "https://www.example.com",
+        }
+      }
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-3"
+    />
+    <GalleryImageDetails
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin. Nulla pulvinar ut massa eu suscipit. Phasellus orci nibh, cursus quis nunc quis, facilisis pretium massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce sed aliquet libero, quis rhoncus lacus. In faucibus sodales nunc. Fusce tellus eros, aliquam vitae turpis maximus, lacinia ultricies nisi. Nullam quis aliquam diam, sed pharetra purus. Nam mattis ultrices tincidunt. Aenean accumsan ornare ante sodales viverra. Aliquam ullamcorper eleifend lobortis."
+      key="Test Image 4-description"
+      name="Test Image 4"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-4"
+      photographer={null}
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-4"
+    />
+    <GalleryImageDetails
+      description={null}
+      key="Test Image 5-description"
+      name="Test Image 5"
+      original="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill"
+      originalAlt="test-image-5"
+      photographer={null}
+      thumbnail="//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill"
+      thumbnailAlt="test-image-5"
+    />
+  </Slider>
+</styles__GalleryContainer>
+`;
+
+exports[`render methods for Blog Content renders gallery 1`] = `
+<span>
+  <Gallery
+    images={
+      Array [
+        Object {
+          "description": "Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin.",
+          "name": "Test Image 1",
+          "original": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill",
+          "originalAlt": "test-image-1",
+          "photographer": Object {
+            "name": "Test Photographer",
+            "url": "https://www.example.com",
+          },
+          "thumbnail": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill",
+          "thumbnailAlt": "test-image-1",
+        },
+        Object {
+          "description": "Lorem __ipsum__ dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin. Nulla pulvinar ut massa eu suscipit.",
+          "name": "Test Image 2",
+          "original": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill",
+          "originalAlt": "test-image-2",
+          "photographer": Object {
+            "name": "Test Photographer",
+            "url": "https://www.example.com",
+          },
+          "thumbnail": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill",
+          "thumbnailAlt": "test-image-2",
+        },
+        Object {
+          "description": null,
+          "name": "Test Image 3",
+          "original": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill",
+          "originalAlt": "test-image-3",
+          "photographer": Object {
+            "name": "Test Photographer",
+            "url": "https://www.example.com",
+          },
+          "thumbnail": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill",
+          "thumbnailAlt": "test-image-3",
+        },
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet velit nec congue sollicitudin. Nulla pulvinar ut massa eu suscipit. Phasellus orci nibh, cursus quis nunc quis, facilisis pretium massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce sed aliquet libero, quis rhoncus lacus. In faucibus sodales nunc. Fusce tellus eros, aliquam vitae turpis maximus, lacinia ultricies nisi. Nullam quis aliquam diam, sed pharetra purus. Nam mattis ultrices tincidunt. Aenean accumsan ornare ante sodales viverra. Aliquam ullamcorper eleifend lobortis.",
+          "name": "Test Image 4",
+          "original": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill",
+          "originalAlt": "test-image-4",
+          "photographer": null,
+          "thumbnail": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill",
+          "thumbnailAlt": "test-image-4",
+        },
+        Object {
+          "description": null,
+          "name": "Test Image 5",
+          "original": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=1920&h=1080&fit=fill",
+          "originalAlt": "test-image-5",
+          "photographer": null,
+          "thumbnail": "//images.ctfassets.net/n2o4hgsv6wcx/443UGjr1WmsCsdSE64rbzE/95b2562f742096f5be79e6cbdb5062f2/static1.squarespace.com.jpg?w=200&h=120&fit=fill",
+          "thumbnailAlt": "test-image-5",
+        },
+      ]
+    }
+  />
+</span>
+`;

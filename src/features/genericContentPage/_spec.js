@@ -2,7 +2,12 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import 'jest-styled-components'
-import { renderEmbeddedEntry, renderFigure } from './renderMethods'
+import { galleryGQLData } from '../../utilities/mocks/galleryMocks'
+import {
+  renderEmbeddedEntry,
+  renderFigure,
+  renderGallery,
+} from './renderMethods'
 import {
   buttonNode,
   videoNode,
@@ -67,6 +72,16 @@ describe('render methods for Generic Content', () => {
 
   it('renders a sponsor section component if the id is sponsorSection', () => {
     const wrapper = shallow(renderEmbeddedEntry(sponsorSectionNode))
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders gallery', () => {
+    const wrapper = shallow(<span>{renderGallery(galleryGQLData)}</span>)
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders a gallery component if the id is gallery', () => {
+    const wrapper = shallow(renderEmbeddedEntry(galleryGQLData))
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 })
