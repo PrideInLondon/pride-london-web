@@ -37,7 +37,7 @@ const GalleryImage = ({ original, photoIndex, totalPhotos }) => {
       </ImageCounter>
       <GalleryImg src={original} ref={ref} />
       <FullScreenButton onClick={onFullScreenClick}>
-        <img src={FullScreenIcon} />
+        <img src={FullScreenIcon} alt="full-screen" />
       </FullScreenButton>
     </GalleryImageContainer>
   )

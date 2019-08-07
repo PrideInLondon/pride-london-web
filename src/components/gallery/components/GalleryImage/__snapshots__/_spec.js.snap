@@ -196,6 +196,7 @@ exports[`<Gallery/> it should open full screen 1`] = `
               onClick={[Function]}
             >
               <img
+                alt="full-screen"
                 src=""
               />
             </a>
@@ -223,6 +224,7 @@ exports[`<Gallery/> should render and match snapshot 1`] = `
     onClick={[Function]}
   >
     <img
+      alt="full-screen"
       src=""
     />
   </styles__FullScreenButton>
