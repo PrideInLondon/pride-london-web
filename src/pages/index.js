@@ -15,7 +15,6 @@ import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
 import AnnouncementsContainer from '../features/homepage/containers/announcementsContainer'
 import DonateContainer from '../features/homepage/containers/donateContainer'
-import DownloadAppBox from '../features/homepage/components/downloadAppBox'
 
 const FeaturedEventsContainer = styled.div`
   background-color: #282a80;
@@ -165,16 +164,21 @@ const Home = ({
         subtitleText={
           'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community.'
         }
-        date={'Saturday 6 July'}
+        date={'2020 date to be announced'}
         imageSrc={BannerImg}
         color={theme.colors.eucalyptusGreen}
         large
         allowContentUnderflow
-        videoId="343813970"
+        videoId="348603446"
         fixed={childImageSharp}
       >
-        <BannerButton wide={false} white primary to="/parade">
-          This year's parade
+        <BannerButton
+          wide={false}
+          white
+          primary
+          to="https://donate.prideinlondon.org/"
+        >
+          Help keep Pride free
         </BannerButton>
       </BannerImage>
       <StyledContainer>
@@ -213,7 +217,6 @@ const Home = ({
           </StyledColumn>
         </StyledRow>
       </StyledContainer>
-      <DownloadAppBox />
       <AnnouncementsContainer />
       <DonateContainer />
       <LatestNewsContainer />
