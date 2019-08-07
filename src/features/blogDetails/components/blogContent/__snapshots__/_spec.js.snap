@@ -2,6 +2,22 @@
 
 exports[`BlogContent renders with default values 1`] = `""`;
 
+exports[`render methods for Blog Content renders AssetHyperlink 1`] = `
+<span>
+  <a
+    href="example.com"
+  />
+</span>
+`;
+
+exports[`render methods for Blog Content renders UrlHyperlink 1`] = `
+<span>
+  <a
+    href="example.com"
+  />
+</span>
+`;
+
 exports[`render methods for Blog Content renders a gallery component if the id is gallery 1`] = `
 <styles__GalleryContainer>
   <Slider
@@ -221,3 +237,31 @@ exports[`render methods for Blog Content renders gallery 1`] = `
   />
 </span>
 `;
+
+exports[`render methods for Blog Content renders hr 1`] = `
+<span>
+  <Hr />
+</span>
+`;
+
+exports[`render methods for Blog Content renders image 1`] = `
+<span>
+  <Image
+    file={
+      Object {
+        "en-GB": Object {
+          "url": "example.com",
+        },
+      }
+    }
+  />
+</span>
+`;
+
+exports[`render methods for Blog Content renders quote 1`] = `
+<span>
+  <Quote />
+</span>
+`;
+
+exports[`render methods for Blog Content returns null if id not recognized 1`] = `<span />`;

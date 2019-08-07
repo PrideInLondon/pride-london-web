@@ -6,11 +6,11 @@
   z-index: 1;
 }
 
-.gallery-slick .slick-arrow.slick-prev {
+.gallery-slick .slick-prev {
   left: 13%;
 }
 
-.gallery-slick .slick-arrow.slick-next {
+.gallery-slick .slick-next {
   right: 13%;
 }
 

@@ -23,17 +23,17 @@ const renderList = listType => (_node, children) => (
 
 const renderCarousel = node => <Carousel {...node.data.target.fields} />
 
-const renderQuote = (_node, children) => <Quote>{children}</Quote>
+export const renderQuote = (_node, children) => <Quote>{children}</Quote>
 
-const renderHr = () => <Hr />
+export const renderHr = () => <Hr />
 
-const renderImage = node => <Image {...node.data.target.fields} />
+export const renderImage = node => <Image {...node.data.target.fields} />
 
-const renderAssetHyperlink = (node, children) => (
+export const renderAssetHyperlink = (node, children) => (
   <a href={node.data.target.fields.file['en-GB'].url}>{children}</a>
 )
 
-const rendeUrlHyperlink = (node, children) => (
+export const rendeUrlHyperlink = (node, children) => (
   <a href={node.data.uri}>{children}</a>
 )
 

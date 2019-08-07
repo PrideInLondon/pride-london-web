@@ -2,7 +2,21 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import { galleryGQLData } from '../../../../utilities/mocks/galleryMocks'
-import { renderGallery, renderEmbeddedEntry } from './renderMethods'
+import {
+  renderGallery,
+  renderEmbeddedEntry,
+  renderQuote,
+  renderHr,
+  renderImage,
+  renderAssetHyperlink,
+  rendeUrlHyperlink,
+} from './renderMethods'
+import {
+  notRecognizedComponent,
+  assetHyperlinkNode,
+  urlHyperlinkNode,
+  imageNode,
+} from './_mocks'
 import BlogContent from '.'
 
 describe(BlogContent.name, () => {
@@ -19,8 +33,44 @@ describe('render methods for Blog Content', () => {
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 
+  it('renders quote', () => {
+    const wrapper = shallow(<span>{renderQuote(null, null)}</span>)
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders hr', () => {
+    const wrapper = shallow(<span>{renderHr()}</span>)
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders image', () => {
+    const wrapper = shallow(<span>{renderImage(imageNode)}</span>)
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders AssetHyperlink', () => {
+    const wrapper = shallow(
+      <span>{renderAssetHyperlink(assetHyperlinkNode, null)}</span>
+    )
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders UrlHyperlink', () => {
+    const wrapper = shallow(
+      <span>{rendeUrlHyperlink(urlHyperlinkNode, null)}</span>
+    )
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
   it('renders a gallery component if the id is gallery', () => {
     const wrapper = shallow(renderEmbeddedEntry(galleryGQLData))
+    expect(toJSON(wrapper)).toMatchSnapshot()
+  })
+
+  it('returns null if id not recognized', () => {
+    const wrapper = shallow(
+      <span>{renderEmbeddedEntry(notRecognizedComponent)}</span>
+    )
     expect(toJSON(wrapper)).toMatchSnapshot()
   })
 })
