@@ -45,6 +45,7 @@ exports[`<Gallery/> it should open full screen 1`] = `
 
 <GalleryImage
   original="foo"
+  originalAlt="foo"
   photoIndex={1}
   totalPhotos={2}
 >
@@ -117,9 +118,11 @@ exports[`<Gallery/> it should open full screen 1`] = `
           </StyledComponent>
         </styles__ImageCounter>
         <styles__GalleryImg
+          alt="foo"
           src="foo"
         >
           <StyledComponent
+            alt="foo"
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
@@ -149,6 +152,7 @@ exports[`<Gallery/> it should open full screen 1`] = `
 }
 
 <img
+                  alt="foo"
                   class="c0"
                   src="foo"
                 />,
@@ -157,6 +161,7 @@ exports[`<Gallery/> it should open full screen 1`] = `
             src="foo"
           >
             <img
+              alt="foo"
               className="c2"
               src="foo"
             />
@@ -218,6 +223,7 @@ exports[`<Gallery/> should render and match snapshot 1`] = `
     2
   </styles__ImageCounter>
   <styles__GalleryImg
+    alt="foo"
     src="foo"
   />
   <styles__FullScreenButton

@@ -8,7 +8,7 @@ import {
   ImageCounter,
 } from './styles'
 
-const GalleryImage = ({ original, photoIndex, totalPhotos }) => {
+const GalleryImage = ({ original, originalAlt, photoIndex, totalPhotos }) => {
   const ref = useRef(null)
 
   const onFullScreenClick = useCallback(() => {
@@ -35,7 +35,7 @@ const GalleryImage = ({ original, photoIndex, totalPhotos }) => {
       <ImageCounter>
         <b>{photoIndex}</b> / {totalPhotos}
       </ImageCounter>
-      <GalleryImg src={original} ref={ref} />
+      <GalleryImg src={original} alt={originalAlt} ref={ref} />
       <FullScreenButton onClick={onFullScreenClick}>
         <img src={FullScreenIcon} alt="full-screen" />
       </FullScreenButton>
@@ -47,6 +47,7 @@ GalleryImage.propTypes = {
   photoIndex: PropTypes.number.isRequired,
   totalPhotos: PropTypes.number.isRequired,
   original: PropTypes.string.isRequired,
+  originalAlt: PropTypes.string.isRequired,
 }
 
 export default GalleryImage
