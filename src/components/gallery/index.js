@@ -1,40 +1,62 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useRef } from 'react'
+import Slider from 'react-slick'
 import PropTypes from 'prop-types'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import './index.css'
+import { checkBreakpoint } from '../../utilities'
 import GalleryGrid from './components/GalleryGrid'
-import GallerySlider from './components/GallerySlider'
 import { GalleryContainer } from './styles'
+import GalleryImage from './components/GalleryImage'
+import { settings } from './slickSettings'
+import GalleryImageDetails from './components/GalleryImageDetails'
 
 const Gallery = ({ images }) => {
+  const imagesSlider = useRef()
+  const descriptionsSlider = useRef()
+
   const [photoIndex, setPhotoIndex] = useState(0)
-  const [thumbanilsVisible, toggleThumbnailsVisibility] = useState(false)
 
-  const onSelectPhoto = useCallback(photoIndex => {
-    setPhotoIndex(photoIndex)
-    toggleThumbnailsVisibility(false)
-  }, [])
-
-  const showThumbnails = useCallback(() => {
-    toggleThumbnailsVisibility(true)
+  const onPhotoClick = useCallback(index => {
+    imagesSlider.current && imagesSlider.current.slickGoTo(index)
+    descriptionsSlider.current && descriptionsSlider.current.slickGoTo(index)
   }, [])
 
   return (
     <GalleryContainer>
-      {thumbanilsVisible && (
+      <Slider
+        {...settings}
+        ref={imagesSlider}
+        beforeChange={(oldIndex, newIndex) => {
+          setPhotoIndex(newIndex)
+          descriptionsSlider.current &&
+            descriptionsSlider.current.slickGoTo(newIndex)
+        }}
+      >
+        {images.map((image, index) => (
+          <GalleryImage
+            {...image}
+            key={`${image.name}-photo`}
+            photoIndex={index + 1}
+            totalPhotos={images.length}
+          />
+        ))}
+      </Slider>
+      <Slider
+        {...settings}
+        arrows={false}
+        draggable={false}
+        ref={descriptionsSlider}
+      >
+        {images.map(image => (
+          <GalleryImageDetails {...image} key={`${image.name}-description`} />
+        ))}
+      </Slider>
+      {checkBreakpoint(550) && (
         <GalleryGrid
           images={images}
+          onPhotoClick={onPhotoClick}
           activeIndex={photoIndex}
-          onPhotoClick={onSelectPhoto}
-        />
-      )}
-      {!thumbanilsVisible && (
-        <GallerySlider
-          images={images}
-          activeIndex={photoIndex}
-          onSlide={setPhotoIndex}
-          onViewAllButtonClick={showThumbnails}
-        />
+        ></GalleryGrid>
       )}
     </GalleryContainer>
   )

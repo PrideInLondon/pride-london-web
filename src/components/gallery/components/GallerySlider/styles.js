@@ -3,17 +3,6 @@ import theme from '../../../../theme/theme'
 import { FlexColumn } from '../../../grid'
 import { media } from '../../../../theme/media'
 
-export const GalleryToolbar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-`
-
-export const PhotoTitle = styled.h3`
-  margin-top: 0;
-  margin-bottom: 0;
-`
-
 export const PhotoDescription = styled.p`
   margin-top: 10px;
   font-size: 14px;

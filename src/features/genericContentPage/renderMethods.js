@@ -126,7 +126,7 @@ const renderGallery = ({
         originalAlt: imageAltText,
         thumbnailAlt: imageAltText,
         original: `${imageUrl}?w=1920&h=1080&fit=fill`,
-        thumbnail: `${imageUrl}?w=100&h=100&fit=fill`,
+        thumbnail: `${imageUrl}?w=200&h=120&fit=fill`,
       }
     }
   )

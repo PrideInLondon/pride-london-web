@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ThumbnailsContainer, BackButton, Thumbnail } from './styles'
+import { ThumbnailsContainer, Thumbnail } from './styles'
 
 const GalleryGrid = ({ images, activeIndex, onPhotoClick }) => {
   return (
     <>
-      <BackButton small flexwidth onClick={() => onPhotoClick(activeIndex)}>
-        Back to image
-      </BackButton>
       <ThumbnailsContainer>
-        {images.map((image, index) => (
-          <Thumbnail onClick={() => onPhotoClick(index)} key={image.name}>
+        {[...images].map((image, index) => (
+          <Thumbnail
+            active={index === activeIndex}
+            onClick={() => onPhotoClick(index)}
+            key={image.name}
+          >
             <img src={image.thumbnail} alt={image.thumbnailAlt} />
           </Thumbnail>
         ))}

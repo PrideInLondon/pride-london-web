@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
+import Gallery from '../../../../components/gallery'
 import Image from './Image'
 import Paragraph from './Paragraph'
 import Carousel from './Carousel'
@@ -35,11 +36,50 @@ const rendeUrlHyperlink = (node, children) => (
   <a href={node.data.uri}>{children}</a>
 )
 
+const renderGallery = ({
+  data: {
+    target: {
+      fields: { images },
+    },
+  },
+}) => {
+  const photos = images['en-GB'].map(
+    ({ fields: { altText, description, image, name, photographer } }) => {
+      const imageUrl = image['en-GB'].fields.file['en-GB'].url
+      const imageAltText = altText ? altText['en-GB'] : ''
+      const imageAuthor = photographer
+        ? {
+            name: photographer['en-GB'].fields.name['en-GB'],
+            url: photographer['en-GB'].fields.url['en-GB'],
+          }
+        : null
+      return {
+        name: name['en-GB'],
+        description: description ? description['en-GB'] : null,
+        photographer: imageAuthor,
+        originalAlt: imageAltText,
+        thumbnailAlt: imageAltText,
+        original: `${imageUrl}?w=1920&h=1080&fit=fill`,
+        thumbnail: `${imageUrl}?w=200&h=120&fit=fill`,
+      }
+    }
+  )
+  return <Gallery images={photos} />
+}
+
 const renderEmbeddedEntry = node => {
-  if (node.data.target.sys.contentType.sys.id === 'carousel') {
-    return renderCarousel(node)
+  switch (node.data.target.sys.contentType.sys.id) {
+    case 'carousel':
+      return renderCarousel(node)
+    case 'gallery':
+      return renderGallery(node)
+    default:
+      return null
   }
-  return null
+  // if (node.data.target.sys.contentType.sys.id === 'carousel') {
+  //   return renderCarousel(node)
+  // }
+  // return null
 }
 
 export default {
@@ -66,5 +106,9 @@ export default {
 }
 
 renderImage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+renderGallery.propTypes = {
   data: PropTypes.object.isRequired,
 }
