@@ -119,7 +119,6 @@ const Nav = () => {
                           },
                         ],
                       },
-
                       {
                         heading: 'Line up',
                         links: [
