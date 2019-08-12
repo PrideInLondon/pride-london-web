@@ -115,6 +115,31 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       ],
                     },
                     Object {
+                      "heading": "Line up",
+                      "links": Array [
+                        Object {
+                          "title": "Cabaret Stage",
+                          "url": "/line-up/cabaret-stage",
+                        },
+                        Object {
+                          "title": "Family Stage",
+                          "url": "/line-up/family-stage",
+                        },
+                        Object {
+                          "title": "Trafalgar Square Stage",
+                          "url": "/line-up/trafalgar-square-stage",
+                        },
+                        Object {
+                          "title": "Women's Area",
+                          "url": "/line-up/womens-area",
+                        },
+                        Object {
+                          "title": "World Area",
+                          "url": "/line-up/world-area",
+                        },
+                      ],
+                    },
+                    Object {
                       "heading": "Stalls",
                       "links": Array [
                         Object {
