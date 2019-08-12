@@ -119,6 +119,29 @@ const Nav = () => {
                           },
                         ],
                       },
+
+                      {
+                        heading: 'Line up',
+                        links: [
+                          {
+                            title: 'Cabaret Stage',
+                            url: '/line-up/cabaret-stage',
+                          },
+                          {
+                            title: 'Family Stage',
+                            url: '/line-up/family-stage',
+                          },
+                          {
+                            title: 'Trafalgar Square Stage',
+                            url: '/line-up/trafalgar-square-stage',
+                          },
+                          {
+                            title: "Women's Area",
+                            url: '/line-up/womens-area',
+                          },
+                          { title: 'World Area', url: '/line-up/world-area' },
+                        ],
+                      },
                       {
                         heading: 'Line up',
                         links: [
