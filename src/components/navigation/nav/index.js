@@ -127,8 +127,8 @@ const Nav = () => {
                             url: '/line-up/cabaret-stage',
                           },
                           {
-                            title: 'Family Stage',
-                            url: '/line-up/family-stage',
+                            title: 'Family Area',
+                            url: '/line-up/family-area',
                           },
                           {
                             title: 'Trafalgar Square Stage',

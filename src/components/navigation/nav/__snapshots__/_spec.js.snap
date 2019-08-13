@@ -122,8 +122,8 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                           "url": "/line-up/cabaret-stage",
                         },
                         Object {
-                          "title": "Family Stage",
-                          "url": "/line-up/family-stage",
+                          "title": "Family Area",
+                          "url": "/line-up/family-area",
                         },
                         Object {
                           "title": "Trafalgar Square Stage",
