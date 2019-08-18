@@ -1,3 +1,10 @@
+const breakpoints = [375, 768, 1024, 1440]
+const screens = ['mobile', 'tablet', 'desktop', 'desktopHD']
+const screenSizes = breakpoints.reduce((screenMap, currentScreen, index) => {
+  screenMap[screens[index]] = currentScreen
+  return screenMap
+}, {})
+
 const theme = {
   colors: {
     black: '#000000',
@@ -30,7 +37,8 @@ const theme = {
     body: 'Roboto, sans-serif',
   },
   space: [0, 5, 10, 15, 20],
-  breakpoints: [375, 768, 1024, 1440],
+  breakpoints,
+  screenSizes,
   navBreakpoint: 1360,
 }
 
