@@ -121,7 +121,7 @@ exports[`FilteredPagedCardContainer renders component with filter type "radio" 1
 `;
 
 exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards when the "show more" button is clicked 1`] = `
-<FilteredCardContainer
+<FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
     Array [
@@ -2748,11 +2748,11 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
       </StyledComponent>
     </pagedCardContainer__PaddedCardContainer>
   </PagedCardContainer>
-</FilteredCardContainer>
+</FilteredPagedCardContainer>
 `;
 
 exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to one page displayed on filter change 1`] = `
-<FilteredCardContainer
+<FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
     Array [
@@ -4602,11 +4602,11 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
       </Row>
     </ShowMoreButton>
   </PagedCardContainer>
-</FilteredCardContainer>
+</FilteredPagedCardContainer>
 `;
 
 exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the selected filter category 1`] = `
-<FilteredCardContainer
+<FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
     Array [
@@ -6363,11 +6363,11 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
       </StyledComponent>
     </pagedCardContainer__PaddedCardContainer>
   </PagedCardContainer>
-</FilteredCardContainer>
+</FilteredPagedCardContainer>
 `;
 
 exports[`FilteredPagedCardContainer with "radio" filter type shows more cards when the "show more" button is clicked 1`] = `
-<FilteredCardContainer
+<FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
     Array [
@@ -8990,11 +8990,11 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
       </StyledComponent>
     </pagedCardContainer__PaddedCardContainer>
   </PagedCardContainer>
-</FilteredCardContainer>
+</FilteredPagedCardContainer>
 `;
 
 exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one page displayed on filter change 1`] = `
-<FilteredCardContainer
+<FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
     Array [
@@ -10840,11 +10840,11 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
       </Row>
     </ShowMoreButton>
   </PagedCardContainer>
-</FilteredCardContainer>
+</FilteredPagedCardContainer>
 `;
 
 exports[`FilteredPagedCardContainer with "radio" shows only cards with the selected filter category 1`] = `
-<FilteredCardContainer
+<FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
     Array [
@@ -12597,5 +12597,5 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
       </StyledComponent>
     </pagedCardContainer__PaddedCardContainer>
   </PagedCardContainer>
-</FilteredCardContainer>
+</FilteredPagedCardContainer>
 `;
