@@ -3,23 +3,25 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import { GreyWrapper } from '../components/grid'
 import BannerImage from '../components/banner/bannerImage'
-import theme from '../theme/theme'
+import { screenSizes, colors } from '../theme/theme'
 import { communityPartnerCategories } from '../constants'
 import PageIntro from '../components/pageIntro'
 import FilteredPagedCardContainer from '../components/filteredPagedCardContainer'
 import CommunityPartnerCard from '../features/exploreLondon/components/communityPartnerCard'
+import { useMediaQuery } from '../utilities/hooks'
 
 const ExploreLondon = ({
   data: {
     allContentfulCommunityPartner: { edges: partners },
   },
 }) => {
+  const isDesktop = useMediaQuery(`(min-width: ${screenSizes.desktop}px)`)
   return (
     <div>
       <BannerImage
         titleText="Explore London"
         subtitleText="Find great places to spend time with friends and loved ones around London."
-        color={theme.colors.yellow}
+        color={colors.yellow}
       />
       <PageIntro
         cta={{
@@ -61,6 +63,7 @@ const ExploreLondon = ({
             }))}
             CardComponent={CommunityPartnerCard}
             showMoreButtonText="Show more partners"
+            pageSize={isDesktop ? 12 : 6}
           />
         </GreyWrapper>
       )}
