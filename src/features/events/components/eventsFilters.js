@@ -10,6 +10,7 @@ import iconClose from '../../../theme/assets/images/icon-close.svg'
 import EventDateFilter from '../filters/eventDateFilter'
 import EventFreeFilter from '../filters/eventFreeFilter'
 import EventDropdownFilter from '../filters/eventDropdownFilter'
+import Button from '../../../components/button'
 
 const FilterWrapper = styled(Flex)`
   background-color: ${theme.colors.white};
@@ -191,6 +192,19 @@ const CloseButton = styled.button`
     display: none;
   `};
 `
+
+const SubmitButtonContainer = styled.div`
+  margin: 20px 0 -20px 0;
+  width 100%;
+  padding: 20px;
+  box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.1);
+  height: 90px;
+
+  ${media.tablet`
+    display: none;
+  `};
+`
+
 class EventsFilters extends Component {
   state = {
     clickAnimation: false,
@@ -299,6 +313,16 @@ class EventsFilters extends Component {
             <FlexColumn width={[1, 1, 0.5, 0.3333]}>
               <EventFreeFilter />
             </FlexColumn>
+            <SubmitButtonContainer>
+              <Button
+                primary
+                fullmobile
+                onClick={this.props.toggleFiltersMobile}
+              >
+                Show {context.filteredEvents.length} event
+                {context.filteredEvents.length !== 1 && 's'}
+              </Button>
+            </SubmitButtonContainer>
           </FilterWrapper>
         )}
       </Consumer>

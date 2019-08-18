@@ -32,6 +32,7 @@ const Input = styled.input`
     background-image: url(${checkmark});
     background-repeat: no-repeat;
     background-position: center center;
+    background-color: ${theme.colors.eucalyptusGreen};
 
     & + label {
       font-weight: 700;
