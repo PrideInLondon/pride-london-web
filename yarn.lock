@@ -2467,15 +2467,15 @@ babel-plugin-macros@^2.4.2:
     cosmiconfig "^5.2.0"
     resolve "^1.10.0"
 
-babel-plugin-remove-graphql-queries@^2.6.3:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.0.tgz#dd5b1201cb90f1197e4588761af602f2e180f60a"
-  integrity sha512-mV+OTw3GPGJnS2fOB8jafJQi4H273EJtd73MWTpbwm2HgDENRBbt5m2BOa66XuplaW36qsUdV8zj0f0MNlY9sA==
-
 babel-plugin-remove-graphql-queries@^2.7.2:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.2.tgz#101c8b26567e35c217e817e892135a9a04a5a805"
   integrity sha512-kkIqi2+oZ7YCLbZbrhOGxPA/HuWpfvzRUxbD75SHqwxl9fZVWSLQhOUl72GEpAuEt4MeCEguKpMX100oDN3MQA==
+
+babel-plugin-remove-graphql-queries@^2.7.3:
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.3.tgz#01178cf925a09e67919d4b7180209055bb1920b7"
+  integrity sha512-xuOzXil34XPhkIGE/1EmCyfPlMgX2sXBaNf3n+ico5pM3HNrKc8vHcng9CoK2jnSXEwoX5wASFfKZg1eNNdz1w==
 
 "babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.10.6:
   version "1.10.6"
@@ -6350,10 +6350,10 @@ gatsby-graphiql-explorer@^0.2.3:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-image@^2.2.9:
-  version "2.2.9"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.2.9.tgz#f4b89d9ca939591ab7aa20b43c3c82a2d794aae3"
-  integrity sha512-jmHoEgVDBsSLxWD+W78UgZRHcsKQMN2+i0wR/bbLzILESLirs4s4LeiPmSquj+cqMEtwaZ7CIDEeHSamelY+zQ==
+gatsby-image@^2.2.10:
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.2.10.tgz#0375e273167221e3ccd1ae3b4e3dec52905376df"
+  integrity sha512-wvbxqYWxg7te7ui6RjCgohcVTvcI1b0PBZNor548Flg/0h+oSGnUXVDkz9HO8uS/vWlIbMpXonRxvnZCGu1Y8A==
   dependencies:
     "@babel/runtime" "^7.0.0"
     object-fit-images "^3.2.4"
@@ -6382,17 +6382,17 @@ gatsby-page-utils@^0.0.5:
     micromatch "^3.1.10"
     slash "^1.0.0"
 
-gatsby-plugin-layout@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-layout/-/gatsby-plugin-layout-1.1.3.tgz#4867060dd69e4277b06e82e0876480183356bed1"
-  integrity sha512-7RbuTihfCa/RLvpznR9+ycW3N69KC0gdtXn+Ku0aBVkiGfzoXjjKB0iUFhj3NkKjPaenLRQQARaF8GSak/s3bw==
+gatsby-plugin-layout@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-layout/-/gatsby-plugin-layout-1.1.4.tgz#1c1b65776d5a3d9f2a76b21db4a4f4530ce68c79"
+  integrity sha512-ADjwyO7SH6INLTd/WI35cLuLZHMiDLgDUlGcYI9dpVnVzha41DQJ+8UWcddBaBoaWb8BuJHpnWuBG2iBDhCOvw==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-offline@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.2.6.tgz#2f8020c51dbb02c4496670d5dde46a2989b30856"
-  integrity sha512-0RceQWXt39SYukw5mxUpiv8X1YOWlGzJ2WWRYaNaECB/63fislkclN8dDAP22hLIV2Cr/cHiiwc4xc/lXf65rg==
+gatsby-plugin-offline@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.2.7.tgz#f5cd03fab2505fcf413810ec1d7c31fc7851a982"
+  integrity sha512-AbX4kAEy8j+8P/kBITdzv/8JR1R+Lt5pAE49ICIzwb7tZDQB7fJisOSc1PGihhQTLuy+ppj9XJDgNhh205lETQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
@@ -6549,10 +6549,10 @@ gatsby-telemetry@^1.1.13:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby-transformer-sharp@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.6.tgz#38da2c4a9e3acd7a20411cf9febf97df2db8081e"
-  integrity sha512-yRHEZrVPaP2oeccAPyzBff3xxXExsg8s7jFXsmRAbQVTYtP0PLmSJ3x59t3kbJZqbL4kTZhPrdsqg3KmGoAeTA==
+gatsby-transformer-sharp@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.7.tgz#5768150e45f0665b01abdc17bb39bf57033fb0e3"
+  integrity sha512-PN3DHl2qRnlrV6EjgJqDulGSYZLeXR4km7Xhi4CQjqZ5vgdGFWyYMtKnjzZknMmodMXuenQCBySAKzOEY2vsYw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
