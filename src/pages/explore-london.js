@@ -15,7 +15,10 @@ const ExploreLondon = ({
     allContentfulCommunityPartner: { edges: partners },
   },
 }) => {
-  const isDesktop = useMediaQuery(`(min-width: ${screenSizes.desktop}px)`)
+  const isDesktop = useMediaQuery(
+    `(min-width: ${screenSizes.desktop}px)`,
+    false
+  )
   return (
     <div>
       <BannerImage

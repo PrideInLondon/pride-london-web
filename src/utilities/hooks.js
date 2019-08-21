@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 
-export const useMediaQuery = mediaQuery => {
-  const mediaQueryList = window.matchMedia(mediaQuery)
+export const useMediaQuery = (mediaQuery, ssrFallback) => {
+  const mediaQueryList = window && window.matchMedia(mediaQuery)
+  const matches = mediaQueryList ? mediaQueryList.matches : ssrFallback
 
-  const [isMatch, setIsMatch] = useState(mediaQueryList.matches)
+  const [isMatch, setIsMatch] = useState(matches)
 
   useEffect(() => {
-    const handler = () => setIsMatch(mediaQueryList.matches)
+    const handler = () => setIsMatch(matches)
     mediaQueryList.addListener(handler)
     return () => mediaQueryList.removeListener(handler)
   }, [])
