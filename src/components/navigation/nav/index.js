@@ -160,52 +160,6 @@ const Nav = () => {
                 <NavItem
                   setNavOpen={setOpen}
                   item={{
-                    id: 'nav-events',
-                    title: 'Events',
-                    desc:
-                      'Discover and attend the Pride and LGBT+ events happening all across London.',
-                    url: '/',
-                    submenu: [
-                      {
-                        heading: 'Pride Festival',
-                        links: [
-                          {
-                            title: "This year's festival",
-                            url: '/events/festival',
-                          },
-                          {
-                            title: "What's on",
-                            url: '/events',
-                          },
-                          {
-                            title: 'Host an event',
-                            url: '/events/host-an-event',
-                          },
-                          {
-                            title: 'Download our app',
-                            url: '/app',
-                          },
-                        ],
-                      },
-                      {
-                        heading: "Pride's Got Talent",
-                        links: [
-                          {
-                            title: "About Pride's Got Talent",
-                            url: '/events/prides-got-talent',
-                          },
-                          {
-                            title: 'Audition',
-                            url: '/events/prides-got-talent/audition',
-                          },
-                        ],
-                      },
-                    ],
-                  }}
-                />
-                <NavItem
-                  setNavOpen={setOpen}
-                  item={{
                     id: 'nav-support-us',
                     title: 'Support us',
                     desc:

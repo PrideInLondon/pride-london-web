@@ -3,6 +3,7 @@ import { media } from '../../../../theme/media'
 
 export const BgDonateWrapper = styled.div`
   position: relative;
+  margin: 20px 0;
 
   &:after {
     content: '';

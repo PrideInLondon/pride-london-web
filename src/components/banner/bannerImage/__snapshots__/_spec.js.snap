@@ -10,6 +10,7 @@ exports[`<BannerImage /> renders the component <BannerImage /> 1`] = `
   large={false}
   medium={false}
   role="banner"
+  titlePosition="top"
 />
 `;
 
@@ -23,6 +24,7 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
   large={false}
   medium={false}
   role="banner"
+  titlePosition="top"
 >
   <styles__StyledContainer
     fixed={null}
@@ -70,6 +72,7 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
   large={false}
   medium={false}
   role="banner"
+  titlePosition="top"
 >
   <styles__StyledContainer
     fixed={null}
