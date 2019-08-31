@@ -1,19 +1,13 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import theme from '../theme/theme'
 import BannerImage from '../components/banner/bannerImage'
-import Button from '../components/button'
 import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
 import AnnouncementsContainer from '../features/homepage/containers/announcementsContainer'
 import DonateContainer from '../features/homepage/containers/donateContainer'
-
-const BannerButton = styled(Button)`
-  margin-top: 1.5rem;
-`
 
 export const HomePageQuery = graphql`
   query HomePageQuery {
@@ -42,27 +36,17 @@ const Home = ({
 }) => (
   <Fragment>
     <BannerImage
-      titleText={'Pride in London'}
-      subtitleText={
-        'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community.'
-      }
-      date={'2020 date to be announced'}
+      titleText="Pride in London"
+      subtitleText="The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community."
+      titlePosition="bottom"
+      date="2020 date to be announced"
       imageSrc={BannerImg}
       color={theme.colors.eucalyptusGreen}
       large
       allowContentUnderflow
       videoId="348603446"
       fixed={childImageSharp}
-    >
-      <BannerButton
-        wide={false}
-        white
-        primary
-        to="https://donate.prideinlondon.org/"
-      >
-        Help keep Pride free
-      </BannerButton>
-    </BannerImage>
+    />
     <AnnouncementsContainer />
     <DonateContainer />
     <LatestNewsContainer />
