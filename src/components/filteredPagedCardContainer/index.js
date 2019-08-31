@@ -86,7 +86,7 @@ export const calculateAvailableCategories = (
     : availableCategories
 }
 
-const FilteredCardContainer = ({
+const FilteredPagedCardContainer = ({
   filterType,
   categories,
   showAllCategoryTitle,
@@ -150,7 +150,7 @@ const FilteredCardContainer = ({
   )
 }
 
-FilteredCardContainer.propTypes = {
+FilteredPagedCardContainer.propTypes = {
   filterType: PropTypes.oneOf(filterTypes).isRequired,
   categories: PropTypes.arrayOf(
     PropTypes.shape({ title: PropTypes.string, hexColour: PropTypes.string })
@@ -164,10 +164,10 @@ FilteredCardContainer.propTypes = {
   showMoreButtonText: PropTypes.string,
 }
 
-FilteredCardContainer.defaultProps = {
+FilteredPagedCardContainer.defaultProps = {
   pageSize: 6,
   showAllCategoryTitle: '',
   showMoreButtonText: 'Show more',
 }
 
-export default FilteredCardContainer
+export default FilteredPagedCardContainer
