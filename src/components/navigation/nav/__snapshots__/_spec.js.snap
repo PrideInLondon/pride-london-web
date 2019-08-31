@@ -162,53 +162,6 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
             <NavItem
               item={
                 Object {
-                  "desc": "Discover and attend the Pride and LGBT+ events happening all across London.",
-                  "id": "nav-events",
-                  "submenu": Array [
-                    Object {
-                      "heading": "Pride Festival",
-                      "links": Array [
-                        Object {
-                          "title": "This year's festival",
-                          "url": "/events/festival",
-                        },
-                        Object {
-                          "title": "What's on",
-                          "url": "/events",
-                        },
-                        Object {
-                          "title": "Host an event",
-                          "url": "/events/host-an-event",
-                        },
-                        Object {
-                          "title": "Download our app",
-                          "url": "/app",
-                        },
-                      ],
-                    },
-                    Object {
-                      "heading": "Pride's Got Talent",
-                      "links": Array [
-                        Object {
-                          "title": "About Pride's Got Talent",
-                          "url": "/events/prides-got-talent",
-                        },
-                        Object {
-                          "title": "Audition",
-                          "url": "/events/prides-got-talent/audition",
-                        },
-                      ],
-                    },
-                  ],
-                  "title": "Events",
-                  "url": "/",
-                }
-              }
-              setNavOpen={[Function]}
-            />
-            <NavItem
-              item={
-                Object {
                   "desc": "If you’re passionate about the LGBT+ community please consider supporting Pride by donating, sponsoring or volunteering.",
                   "id": "nav-support-us",
                   "submenu": Array [

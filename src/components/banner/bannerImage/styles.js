@@ -35,6 +35,9 @@ export const StyledRow = styled(Row)`
   `};
 `
 
+const flexTitleDirection = titlePosition =>
+  titlePosition === 'bottom' ? 'end' : 'start'
+
 export const StyledWrapper = styled.div`
   ${({
     color,
@@ -44,6 +47,7 @@ export const StyledWrapper = styled.div`
     imageFullWidth,
     allowContentUnderflow,
     fixed,
+    titlePosition,
   }) => css`
   display: flex;
   min-height: 270px;
@@ -67,7 +71,7 @@ export const StyledWrapper = styled.div`
     css`
       ${media.tablet`
         ${StyledRow} {
-        align-self: flex-start;
+        align-self: flex-${flexTitleDirection(titlePosition)};
         }
     `};
     `}
@@ -77,7 +81,7 @@ export const StyledWrapper = styled.div`
       css`
         ${media.tabletMax`
       ${StyledRow} {
-        align-self: flex-start;
+        align-self: flex-${flexTitleDirection(titlePosition)};
         padding-top: 20px;
       }
     `};
