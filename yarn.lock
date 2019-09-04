@@ -864,24 +864,10 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5":
-  version "7.5.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.0.tgz#49dcbcd637099a55d3a61e590a00d6861393b1b5"
-  integrity sha512-2xsuyZ0R0RBFwjgae5NpXk8FcfH4qovj5cEM5VEeB7KXnKqzaisIu2HSV/mCEISolJJuR4wkViUGYujA8MH9tw==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
-"@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
-"@babel/runtime@^7.5.1":
-  version "7.5.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.2.tgz#98f584f4d03be5d8142c77107ffaedee4d5956f1"
-  integrity sha512-9M29wrrP7//JBGX70+IrDuD1w4iOYhUGpJNMQJVNAXue+cFeFlMTqBECouIziXPUphlgrfjcfiEpGX4t0WGK4g==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -6624,13 +6610,14 @@ gatsby-plugin-layout@^1.1.6:
   dependencies:
     "@babel/runtime" "^7.5.5"
 
-gatsby-plugin-offline@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.0.1.tgz#465360b6d604664c762e7fd51243474c0d011a18"
-  integrity sha512-KHoJ6g73ctZrtEIDFU2HM0nby5YPEUqKBBPzLAl0lSr99MdtAzKUVvfEoy1IKRNfs7SEp5vtmAdcKnb7ZQtXpA==
+gatsby-plugin-offline@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.0.2.tgz#ac0f82fe8f14561afdd966b7d276a43335f04ff5"
+  integrity sha512-ey2R7oa+5qb2J6SIz0tiIRUloxNqW2NMNiYBBkIBiBAqAACi1bsj8Sn1LuzU5V9UNMNgepViW0vV0QjB2tchAQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     cheerio "^1.0.0-rc.3"
+    glob "^7.1.4"
     idb-keyval "^3.2.0"
     lodash "^4.17.15"
     slash "^3.0.0"
@@ -9787,12 +9774,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.1.1, lodash@^4.11.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
-  version "4.17.14"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
-  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
-
-lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.15:
+lodash@^4.1.1, lodash@^4.11.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
