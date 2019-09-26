@@ -95,7 +95,7 @@
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
-    "babel-plugin-remove-graphql-queries": "^2.7.7",
+    "babel-plugin-remove-graphql-queries": "^2.7.10",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "codecov": "^3.2.0",
