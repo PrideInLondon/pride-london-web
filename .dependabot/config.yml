@@ -5,6 +5,11 @@ update_configs:
     directory: "/"
     update_schedule: "live"
     target_branch: "master"
+    default_reviewers:
+    - "SonyaMoisset"
+    default_assignees:
+    - "SonyaMoisset"
+    default_milestone: 9
     default_labels:
     - "Dependencies"
     - "Security"
