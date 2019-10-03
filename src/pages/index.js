@@ -39,7 +39,7 @@ const Home = ({
       titleText="Pride in London"
       subtitleText="The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community."
       titlePosition="bottom"
-      date="2020 date to be announced"
+      date="27 June 2020"
       imageSrc={BannerImg}
       color={theme.colors.eucalyptusGreen}
       large
