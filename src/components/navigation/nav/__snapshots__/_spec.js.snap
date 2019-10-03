@@ -89,7 +89,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "Parade",
                       "links": Array [
                         Object {
-                          "title": "This year's parade",
+                          "title": "Last year's parade",
                           "url": "/parade",
                         },
                         Object {
@@ -143,7 +143,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "Stalls",
                       "links": Array [
                         Object {
-                          "title": "This year’s stalls",
+                          "title": "Last year’s stalls",
                           "url": "/parade/stalls",
                         },
                         Object {
