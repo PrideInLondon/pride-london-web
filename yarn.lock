@@ -723,17 +723,10 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.0":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.0.tgz#4fc1d642a9fd0299754e8b5de62c631cf5568205"
-  integrity sha512-89eSBLJsxNxOERC0Op4vd+0Bqm6wRMqMbFtV3i0/fbaWw/mJ8Q3eBvgX0G4SyrOOLCtbu98HspF8o09MRT+KzQ==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
-"@babel/runtime@^7.6.2":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.2.tgz#c3d6e41b304ef10dcf13777a33e7694ec4a9a6dd"
-  integrity sha512-EXxN64agfUqqIGeEjI5dL5z0Sw0ZwWo1mLTi4mQowCZ42O59b7DRpZAnTC6OqdF28wMBMFKNb/4uFGrVaigSpg==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.0", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
+  integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -6381,21 +6374,12 @@ gatsby-image@^2.2.23:
     object-fit-images "^3.2.4"
     prop-types "^15.7.2"
 
-gatsby-link@^2.2.10:
-  version "2.2.14"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.2.14.tgz#52c2bda60e2704335abab7430b273bd0ca3df7dd"
-  integrity sha512-pwzc5bDXqe+7gUBxL7h9yUnqiKcD+VGOA6BsvrDq3CbU56yHgUzu4dBhhJgQYDYmxeC2DFuntmIuPa0BlGxlGA==
+gatsby-link@^2.2.10, gatsby-link@^2.2.19:
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.2.19.tgz#982b86cd902b5da3d62aa98b5549449d6cd9d4d3"
+  integrity sha512-Xpq358LpWxD7OdYFXJ+PSg0GnYL6ATpF08aOlgkp8w380+ntYWYfMpOKtaiHJR4D4wswO7c/w/AWK01Uup1PKw==
   dependencies:
-    "@babel/runtime" "^7.6.0"
-    "@types/reach__router" "^1.2.5"
-    prop-types "^15.7.2"
-
-gatsby-link@^2.2.17:
-  version "2.2.17"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.2.17.tgz#60a96418d370b46df1ddff8b8ccc32c2e57426ae"
-  integrity sha512-6fLICNl0SRt2hJIU8XhEbYVAg143C0jkI6IzL18YbhY/x8M0nZMqZpSVMfnS+pAPKffon9jBraUFIlEaZlf5Bw==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
+    "@babel/runtime" "^7.6.3"
     "@types/reach__router" "^1.2.5"
     prop-types "^15.7.2"
 
