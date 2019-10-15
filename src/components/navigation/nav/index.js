@@ -171,7 +171,7 @@ const Nav = () => {
                         links: [
                           {
                             title: 'Volunteer',
-                            url: '/support-us/volunteer',
+                            url: 'https://volunteer.prideinlondon.org',
                           },
                           {
                             title: 'Make a donation',

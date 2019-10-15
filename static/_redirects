@@ -130,7 +130,8 @@
 /pubs-bars     /visitor-information/restaurants-and-bars     301
 /residents-businesses     /parade/residents-and-businesses-info     301
 /sponsors     /support-us/sponsors     301
-/volunteer     /support-us/volunteer     301
+/volunteer     https://volunteer.prideinlondon.org     301
+/support-us/volunteer     https://volunteer.prideinlondon.org     301
 /visitor-info     /explore-london     301
 /who-we-are     /about-us     301
 /why-we-exist     /about-us/why-we-exist     301
