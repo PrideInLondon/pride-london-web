@@ -94,7 +94,7 @@ const Nav = () => {
                         heading: 'Parade',
                         links: [
                           {
-                            title: "Last year's parade",
+                            title: '2020 Parade',
                             url: '/parade',
                           },
                           {
