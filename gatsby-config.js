@@ -37,6 +37,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-layout',
+    'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-source-contentful',
       options: {

@@ -43,14 +43,10 @@
       "eslint"
     ]
   },
-  "resolutions": {
-    "babel-core": "7.0.0-bridge.0"
-  },
   "dependencies": {
     "@rebass/grid": "^6.0.0",
     "debounce": "^1.2.0",
     "dotenv": "^8.1.0",
-    "eslint": "^6.4.0",
     "gatsby": "^2.15.1",
     "gatsby-image": "^2.2.2",
     "gatsby-link": "^2.2.19",
@@ -93,7 +89,12 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "@contentful/rich-text-react-renderer": "^13.2.0",
-    "babel-core": "7.0.0-bridge.0",
+    "@types/jest": "^24.0.22",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/styled-components": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
     "babel-eslint": "^10.0.3",
     "babel-plugin-remove-graphql-queries": "^2.7.10",
     "babel-plugin-styled-components": "^1.10.6",
@@ -102,14 +103,17 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-plugin-flowtype": "^4.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "gatsby-plugin-typescript": "^2.1.15",
     "husky": "^3.0.5",
     "jest": "^23.6.0",
     "jest-environment-jsdom": "^24.0.0",
@@ -119,6 +123,8 @@
     "prettier": "^1.18.2",
     "prop-types": "^15.6.2",
     "react": "^16.9.0",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "typescript": "^3.7.2",
+    "typescript-styled-plugin": "^0.15.0"
   }
 }
