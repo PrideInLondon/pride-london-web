@@ -52,7 +52,7 @@
     "dotenv": "^8.1.0",
     "eslint": "^6.4.0",
     "gatsby": "^2.15.1",
-    "gatsby-image": "^2.2.2",
+    "gatsby-image": "^2.2.32",
     "gatsby-link": "^2.2.19",
     "gatsby-plugin-layout": "^1.1.11",
     "gatsby-plugin-offline": "^3.0.13",
