@@ -34,7 +34,7 @@
     "eslint": "^6.4.0",
     "gatsby": "^2.15.1",
     "gatsby-image": "^2.2.2",
-    "gatsby-link": "^2.2.19",
+    "gatsby-link": "^2.2.24",
     "gatsby-plugin-layout": "^1.1.11",
     "gatsby-plugin-offline": "^3.0.13",
     "gatsby-plugin-react-helmet": "^3.1.10",
