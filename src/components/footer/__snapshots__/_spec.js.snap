@@ -23,7 +23,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   flex-wrap: wrap;
 }
 
-.c17 {
+.c15 {
   border-bottom: 2px solid #2CDA9D;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -32,12 +32,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   transition: color 0.15s linear;
 }
 
-.c17 + .cta-link {
+.c15 + .cta-link {
   margin-left: 20px;
 }
 
-.c17:hover,
-.c17:focus {
+.c15:hover,
+.c15:focus {
   color: #2CDA9D;
 }
 
@@ -53,7 +53,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   padding: 0;
 }
 
-.c13 {
+.c11 {
   margin-top: 0;
   text-align: center;
 }
@@ -97,7 +97,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   fill: #2CDA9D;
 }
 
-.c12 {
+.c10 {
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: 1px solid #EFEFEF;
@@ -139,24 +139,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   margin-right: 15px;
 }
 
-.c11 {
-  color: #2D2F7F;
-  font-family: Poppins,sans-serif;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 2px solid #2D2F7F;
-  -webkit-transition: border-color 0.15s linear,color 0.15s linear;
-  transition: border-color 0.15s linear,color 0.15s linear;
-}
-
-.c11:hover,
-.c11:focus {
-  color: #2CDA9D;
-  border-color: #2CDA9D;
-}
-
-.c14 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -170,7 +153,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   justify-content: center;
 }
 
-.c16 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,7 +165,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   padding-top: 20px;
 }
 
-.c15 {
+.c13 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -203,7 +186,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   min-height: 70px;
 }
 
-.c15 a {
+.c13 a {
   text-align: center;
   border: none !important;
   -webkit-text-decoration: none !important;
@@ -220,7 +203,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   width: 75%;
 }
 
-.c15 img {
+.c13 img {
   object-fit: contain;
   max-height: 100%;
   max-width: 100%;
@@ -233,20 +216,20 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   flex-shrink: 0;
 }
 
-.c18 {
+.c16 {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
 }
 
-.c22 {
+.c20 {
   color: #5B5B5B;
   margin-top: 5px;
   font-size: 0.875rem;
   margin-bottom: 0;
 }
 
-.c19 {
+.c17 {
   list-style: none;
   padding: 0;
   margin: 0 20px 0 0;
@@ -263,12 +246,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   justify-content: center;
 }
 
-.c20 {
+.c18 {
   position: relative;
   padding: 0 20px;
 }
 
-.c20:not(:last-child):after {
+.c18:not(:last-child):after {
   content: '|';
   color: #5B5B5B;
   position: absolute;
@@ -276,7 +259,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   top: 0;
 }
 
-.c21 {
+.c19 {
   color: #5B5B5B;
   display: block;
   white-space: nowrap;
@@ -350,7 +333,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 }
 
 @media (min-width:768px) {
-  .c12 {
+  .c10 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -368,32 +351,14 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   }
 }
 
-@media (max-width:767px) {
-  .c10 {
-    text-align: center;
-  }
-}
-
 @media (min-width:768px) {
-  .c11 {
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1023px) {
-  .c11 {
-    font-size: 0.9375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c16 {
+  .c14 {
     padding-top: 40px;
   }
 }
 
 @media (min-width:768px) {
-  .c15 {
+  .c13 {
     min-height: 100px;
     -webkit-flex-basis: 16.6667%;
     -ms-flex-preferred-size: 16.6667%;
@@ -403,7 +368,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 }
 
 @media (min-width:1440px) {
-  .c15 {
+  .c13 {
     -webkit-flex-basis: 12.5%;
     -ms-flex-preferred-size: 12.5%;
     flex-basis: 12.5%;
@@ -412,7 +377,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 }
 
 @media (min-width:768px) {
-  .c18 {
+  .c16 {
     padding-top: 40px;
     padding-bottom: 40px;
     display: block;
@@ -420,13 +385,13 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 }
 
 @media (max-width:767px) {
-  .c22 {
+  .c20 {
     text-align: center;
   }
 }
 
 @media (max-width:767px) {
-  .c19 {
+  .c17 {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -1795,136 +1760,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       </div>
                                     </StyledComponent>
                                   </styles__HashTags>
-                                  <styles__SubscribeWrapper
-                                    width={
-                                      Array [
-                                        1,
-                                        1,
-                                        0.3,
-                                      ]
-                                    }
-                                  >
-                                    <StyledComponent
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "styles__SubscribeWrapper-ofz17a-10",
-                                            "isStatic": true,
-                                            "lastClassName": "c10",
-                                            "rules": Array [
-                                              "@media (max-width:",
-                                              "767",
-                                              "px){",
-                                              "
-    text-align: center;
-  ",
-                                              ";}",
-                                              ";",
-                                            ],
-                                          },
-                                          "displayName": "styles__SubscribeWrapper",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "styles__SubscribeWrapper-ofz17a-10",
-                                          "target": "div",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
-                                      width={
-                                        Array [
-                                          1,
-                                          1,
-                                          0.3,
-                                        ]
-                                      }
-                                    >
-                                      <div
-                                        className="c10"
-                                        width={
-                                          Array [
-                                            1,
-                                            1,
-                                            0.3,
-                                          ]
-                                        }
-                                      >
-                                        <styles__SubscribeLink
-                                          href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
-                                          rel="noopener noreferrer"
-                                          target="_blank"
-                                        >
-                                          <StyledComponent
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SubscribeLink-ofz17a-11",
-                                                  "isStatic": true,
-                                                  "lastClassName": "c11",
-                                                  "rules": Array [
-                                                    "color:",
-                                                    "#2D2F7F",
-                                                    ";font-family:",
-                                                    "Poppins, sans-serif",
-                                                    ";font-weight:700;text-decoration:none;border-bottom:2px solid ",
-                                                    "#2D2F7F",
-                                                    ";transition:border-color 0.15s linear,color 0.15s linear;&:hover,&:focus{color:",
-                                                    "#2CDA9D",
-                                                    ";border-color:",
-                                                    "#2CDA9D",
-                                                    ";}",
-                                                    "@media (min-width:",
-                                                    "768",
-                                                    "px){",
-                                                    "
-    margin-left: auto;
-  ",
-                                                    ";}",
-                                                    ";",
-                                                    "@media (max-width:",
-                                                    "1023",
-                                                    "px){",
-                                                    "
-    font-size: 0.9375rem;
-  ",
-                                                    ";}",
-                                                    ";",
-                                                  ],
-                                                },
-                                                "displayName": "styles__SubscribeLink",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "styles__SubscribeLink-ofz17a-11",
-                                                "target": "a",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
-                                            href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                          >
-                                            <a
-                                              className="c11"
-                                              href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
-                                              rel="noopener noreferrer"
-                                              target="_blank"
-                                            >
-                                              Subscribe for Pride updates
-                                            </a>
-                                          </StyledComponent>
-                                        </styles__SubscribeLink>
-                                      </div>
-                                    </StyledComponent>
-                                  </styles__SubscribeWrapper>
                                 </div>
                               </StyledComponent>
                             </Box>
@@ -1942,7 +1777,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__SponsorsSection-ofz17a-7",
                                 "isStatic": true,
-                                "lastClassName": "c12",
+                                "lastClassName": "c10",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;border-top:1px solid ",
                                   "#EFEFEF",
@@ -1974,7 +1809,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                           width={1}
                         >
                           <Column
-                            className="c12"
+                            className="c10"
                             pb={null}
                             pl={null}
                             pr={null}
@@ -1984,7 +1819,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                             width={1}
                           >
                             <Box
-                              className="c12"
+                              className="c10"
                               pb={2}
                               pl={
                                 Array [
@@ -2008,7 +1843,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               width={1}
                             >
                               <StyledComponent
-                                className="c12"
+                                className="c10"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -2089,7 +1924,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c12 c4"
+                                  className="c10 c4"
                                   width={1}
                                 >
                                   <styles__SponsorsHeading>
@@ -2101,7 +1936,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__SponsorsHeading-ofz17a-2",
                                             "isStatic": true,
-                                            "lastClassName": "c13",
+                                            "lastClassName": "c11",
                                             "rules": Array [
                                               "margin-top:0;text-align:center;",
                                             ],
@@ -2119,7 +1954,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       forwardedRef={null}
                                     >
                                       <h3
-                                        className="c13"
+                                        className="c11"
                                       >
                                         Our amazing partners
                                       </h3>
@@ -2132,9 +1967,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "styles__SponsorsContainer-ofz17a-12",
+                                            "componentId": "styles__SponsorsContainer-ofz17a-10",
                                             "isStatic": true,
-                                            "lastClassName": "c14",
+                                            "lastClassName": "c12",
                                             "rules": Array [
                                               "display:flex;flex-wrap:wrap;justify-content:center;",
                                             ],
@@ -2142,7 +1977,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "displayName": "styles__SponsorsContainer",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "styles__SponsorsContainer-ofz17a-12",
+                                          "styledComponentId": "styles__SponsorsContainer-ofz17a-10",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2152,7 +1987,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="c14"
+                                        className="c12"
                                       >
                                         <styles__SponsorImgWrapper
                                           key="a1bc90c0-23c7-51e1-8ea2-4bce5224df33"
@@ -2164,9 +1999,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2195,7 +2030,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2206,7 +2041,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://media.giphy.com/media/UvwI1X7XkbXq0/giphy.gif"
@@ -2231,9 +2066,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2262,7 +2097,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2273,7 +2108,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://m.popkey.co/666ded/1VRvJ.gif"
@@ -2298,9 +2133,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2329,7 +2164,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2340,7 +2175,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="http://www.abstergo.com/"
@@ -2365,9 +2200,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2396,7 +2231,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2407,7 +2242,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://red-badger.com/"
@@ -2432,9 +2267,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2463,7 +2298,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2474,7 +2309,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://www.barclays.co.uk/"
@@ -2499,9 +2334,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2530,7 +2365,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2541,7 +2376,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://www.london.gov.uk/about-us/mayor-london"
@@ -2566,9 +2401,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2597,7 +2432,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2608,7 +2443,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Gold"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="http://alienanthology.wikia.com/wiki/Weyland-Yutani"
@@ -2633,9 +2468,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2664,7 +2499,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2675,7 +2510,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Gold"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="http://omniconsumerproductscorporation.com/"
@@ -2700,9 +2535,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2731,7 +2566,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2742,7 +2577,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Gold"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://www.tesco.com/"
@@ -2767,9 +2602,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -2798,7 +2633,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2809,7 +2644,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             level="Gold"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://cms.law/en/GBR/"
@@ -2834,9 +2669,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "styles__SponsorsCTAWrapper-ofz17a-13",
+                                            "componentId": "styles__SponsorsCTAWrapper-ofz17a-11",
                                             "isStatic": true,
-                                            "lastClassName": "c16",
+                                            "lastClassName": "c14",
                                             "rules": Array [
                                               "display:flex;justify-content:center;padding-top:20px;",
                                               "@media (min-width:",
@@ -2852,7 +2687,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "displayName": "styles__SponsorsCTAWrapper",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "styles__SponsorsCTAWrapper-ofz17a-13",
+                                          "styledComponentId": "styles__SponsorsCTAWrapper-ofz17a-11",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2862,7 +2697,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="c16"
+                                        className="c14"
                                       >
                                         <CTALink
                                           to="/support-us/partners"
@@ -2892,7 +2727,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "ctaLink__StyledLink-jwjl82-0",
                                                     "isStatic": true,
-                                                    "lastClassName": "c17",
+                                                    "lastClassName": "c15",
                                                     "rules": Array [
                                                       "border-bottom:2px solid ",
                                                       "#2CDA9D",
@@ -2917,16 +2752,16 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               to="/support-us/partners"
                                             >
                                               <ForwardRef
-                                                className="cta-link c17"
+                                                className="cta-link c15"
                                                 to="/support-us/partners"
                                               >
                                                 <GatsbyLink
-                                                  className="cta-link c17"
+                                                  className="cta-link c15"
                                                   innerRef={null}
                                                   to="/support-us/partners"
                                                 >
                                                   <ForwardRef
-                                                    className="cta-link c17"
+                                                    className="cta-link c15"
                                                     getProps={[Function]}
                                                     innerRef={[Function]}
                                                     onClick={[Function]}
@@ -2962,7 +2797,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         }
                                                       >
                                                         <a
-                                                          className="cta-link c17"
+                                                          className="cta-link c15"
                                                           href="/support-us/partners"
                                                           onClick={[Function]}
                                                           onMouseEnter={[Function]}
@@ -3000,7 +2835,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "ctaLink__StyledLink-jwjl82-0",
                                                     "isStatic": true,
-                                                    "lastClassName": "c17",
+                                                    "lastClassName": "c15",
                                                     "rules": Array [
                                                       "border-bottom:2px solid ",
                                                       "#2CDA9D",
@@ -3026,7 +2861,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               target="_blank"
                                             >
                                               <a
-                                                className="cta-link c17"
+                                                className="cta-link c15"
                                                 href="mailto:sponsor@prideinlondon.org"
                                                 target="_blank"
                                               >
@@ -3054,9 +2889,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "styles__LegalSection-ofz17a-15",
+                                "componentId": "styles__LegalSection-ofz17a-13",
                                 "isStatic": true,
-                                "lastClassName": "c18",
+                                "lastClassName": "c16",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;text-align:center;",
                                   "@media (min-width:",
@@ -3074,7 +2909,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "displayName": "styles__LegalSection",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "styles__LegalSection-ofz17a-15",
+                              "styledComponentId": "styles__LegalSection-ofz17a-13",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -3085,7 +2920,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                           width={1}
                         >
                           <Column
-                            className="c18"
+                            className="c16"
                             pb={null}
                             pl={null}
                             pr={null}
@@ -3095,7 +2930,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                             width={1}
                           >
                             <Box
-                              className="c18"
+                              className="c16"
                               pb={2}
                               pl={
                                 Array [
@@ -3119,7 +2954,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               width={1}
                             >
                               <StyledComponent
-                                className="c18"
+                                className="c16"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -3200,7 +3035,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c18 c4"
+                                  className="c16 c4"
                                   width={1}
                                 >
                                   <styles__LegalList>
@@ -3210,9 +3045,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "styles__LegalList-ofz17a-17",
+                                            "componentId": "styles__LegalList-ofz17a-15",
                                             "isStatic": true,
-                                            "lastClassName": "c19",
+                                            "lastClassName": "c17",
                                             "rules": Array [
                                               "list-style:none;padding:0;margin:0 20px 0 0;display:flex;align-self:baseline;justify-content:center;",
                                               "@media (max-width:",
@@ -3230,7 +3065,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "displayName": "styles__LegalList",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "styles__LegalList-ofz17a-17",
+                                          "styledComponentId": "styles__LegalList-ofz17a-15",
                                           "target": "ul",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -3240,7 +3075,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       forwardedRef={null}
                                     >
                                       <ul
-                                        className="c19"
+                                        className="c17"
                                       >
                                         <styles__LegalListItem>
                                           <StyledComponent
@@ -3249,9 +3084,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -3261,7 +3096,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -3271,7 +3106,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 as="a"
@@ -3285,9 +3120,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -3297,7 +3132,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -3312,7 +3147,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   target="_blank"
                                                 >
                                                   <a
-                                                    className="c21"
+                                                    className="c19"
                                                     href="https://help.prideinlondon.org"
                                                     target="_blank"
                                                   >
@@ -3330,9 +3165,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -3342,7 +3177,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -3352,7 +3187,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 to="/media-centre"
@@ -3363,9 +3198,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -3375,7 +3210,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -3389,16 +3224,16 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   to="/media-centre"
                                                 >
                                                   <ForwardRef
-                                                    className="c21"
+                                                    className="c19"
                                                     to="/media-centre"
                                                   >
                                                     <GatsbyLink
-                                                      className="c21"
+                                                      className="c19"
                                                       innerRef={null}
                                                       to="/media-centre"
                                                     >
                                                       <ForwardRef
-                                                        className="c21"
+                                                        className="c19"
                                                         getProps={[Function]}
                                                         innerRef={[Function]}
                                                         onClick={[Function]}
@@ -3434,7 +3269,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                             }
                                                           >
                                                             <a
-                                                              className="c21"
+                                                              className="c19"
                                                               href="/media-centre"
                                                               onClick={[Function]}
                                                               onMouseEnter={[Function]}
@@ -3458,9 +3293,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -3470,7 +3305,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -3480,7 +3315,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 to="/privacy"
@@ -3491,9 +3326,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -3503,7 +3338,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -3517,16 +3352,16 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   to="/privacy"
                                                 >
                                                   <ForwardRef
-                                                    className="c21"
+                                                    className="c19"
                                                     to="/privacy"
                                                   >
                                                     <GatsbyLink
-                                                      className="c21"
+                                                      className="c19"
                                                       innerRef={null}
                                                       to="/privacy"
                                                     >
                                                       <ForwardRef
-                                                        className="c21"
+                                                        className="c19"
                                                         getProps={[Function]}
                                                         innerRef={[Function]}
                                                         onClick={[Function]}
@@ -3562,7 +3397,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                             }
                                                           >
                                                             <a
-                                                              className="c21"
+                                                              className="c19"
                                                               href="/privacy"
                                                               onClick={[Function]}
                                                               onMouseEnter={[Function]}
@@ -3586,9 +3421,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -3598,7 +3433,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -3608,7 +3443,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 as="a"
@@ -3621,9 +3456,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -3633,7 +3468,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -3647,7 +3482,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="c21"
+                                                    className="c19"
                                                     onClick={[Function]}
                                                   >
                                                     Report a website bug
@@ -3664,9 +3499,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -3676,7 +3511,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -3686,7 +3521,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 as="a"
@@ -3699,9 +3534,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -3711,7 +3546,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -3725,7 +3560,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="c21"
+                                                    className="c19"
                                                     onClick={[Function]}
                                                   >
                                                     Contact us
@@ -3745,9 +3580,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "styles__LegalStrapline-ofz17a-16",
+                                            "componentId": "styles__LegalStrapline-ofz17a-14",
                                             "isStatic": true,
-                                            "lastClassName": "c22",
+                                            "lastClassName": "c20",
                                             "rules": Array [
                                               "color:",
                                               "#5B5B5B",
@@ -3765,7 +3600,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "displayName": "styles__LegalStrapline",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "styles__LegalStrapline-ofz17a-16",
+                                          "styledComponentId": "styles__LegalStrapline-ofz17a-14",
                                           "target": "p",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -3775,7 +3610,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       forwardedRef={null}
                                     >
                                       <p
-                                        className="c22"
+                                        className="c20"
                                       >
                                         London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN - Registered in England and Wales as a Community Interest Company (
                                         <a
@@ -3831,7 +3666,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   flex-wrap: wrap;
 }
 
-.c17 {
+.c15 {
   border-bottom: 2px solid #2CDA9D;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3840,12 +3675,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   transition: color 0.15s linear;
 }
 
-.c17 + .cta-link {
+.c15 + .cta-link {
   margin-left: 20px;
 }
 
-.c17:hover,
-.c17:focus {
+.c15:hover,
+.c15:focus {
   color: #2CDA9D;
 }
 
@@ -3861,7 +3696,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   padding: 0;
 }
 
-.c13 {
+.c11 {
   margin-top: 0;
   text-align: center;
 }
@@ -3905,7 +3740,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   fill: #2CDA9D;
 }
 
-.c12 {
+.c10 {
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: 1px solid #EFEFEF;
@@ -3947,24 +3782,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   margin-right: 15px;
 }
 
-.c11 {
-  color: #2D2F7F;
-  font-family: Poppins,sans-serif;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 2px solid #2D2F7F;
-  -webkit-transition: border-color 0.15s linear,color 0.15s linear;
-  transition: border-color 0.15s linear,color 0.15s linear;
-}
-
-.c11:hover,
-.c11:focus {
-  color: #2CDA9D;
-  border-color: #2CDA9D;
-}
-
-.c14 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3978,7 +3796,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   justify-content: center;
 }
 
-.c16 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3990,7 +3808,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   padding-top: 20px;
 }
 
-.c15 {
+.c13 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4011,7 +3829,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   min-height: 70px;
 }
 
-.c15 a {
+.c13 a {
   text-align: center;
   border: none !important;
   -webkit-text-decoration: none !important;
@@ -4028,7 +3846,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   width: 75%;
 }
 
-.c15 img {
+.c13 img {
   object-fit: contain;
   max-height: 100%;
   max-width: 100%;
@@ -4041,20 +3859,20 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   flex-shrink: 0;
 }
 
-.c18 {
+.c16 {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
 }
 
-.c22 {
+.c20 {
   color: #5B5B5B;
   margin-top: 5px;
   font-size: 0.875rem;
   margin-bottom: 0;
 }
 
-.c19 {
+.c17 {
   list-style: none;
   padding: 0;
   margin: 0 20px 0 0;
@@ -4071,12 +3889,12 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   justify-content: center;
 }
 
-.c20 {
+.c18 {
   position: relative;
   padding: 0 20px;
 }
 
-.c20:not(:last-child):after {
+.c18:not(:last-child):after {
   content: '|';
   color: #5B5B5B;
   position: absolute;
@@ -4084,7 +3902,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   top: 0;
 }
 
-.c21 {
+.c19 {
   color: #5B5B5B;
   display: block;
   white-space: nowrap;
@@ -4158,7 +3976,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 }
 
 @media (min-width:768px) {
-  .c12 {
+  .c10 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -4176,32 +3994,14 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   }
 }
 
-@media (max-width:767px) {
-  .c10 {
-    text-align: center;
-  }
-}
-
 @media (min-width:768px) {
-  .c11 {
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1023px) {
-  .c11 {
-    font-size: 0.9375rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c16 {
+  .c14 {
     padding-top: 40px;
   }
 }
 
 @media (min-width:768px) {
-  .c15 {
+  .c13 {
     min-height: 100px;
     -webkit-flex-basis: 16.6667%;
     -ms-flex-preferred-size: 16.6667%;
@@ -4211,7 +4011,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 }
 
 @media (min-width:1440px) {
-  .c15 {
+  .c13 {
     -webkit-flex-basis: 12.5%;
     -ms-flex-preferred-size: 12.5%;
     flex-basis: 12.5%;
@@ -4220,7 +4020,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 }
 
 @media (min-width:768px) {
-  .c18 {
+  .c16 {
     padding-top: 40px;
     padding-bottom: 40px;
     display: block;
@@ -4228,13 +4028,13 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 }
 
 @media (max-width:767px) {
-  .c22 {
+  .c20 {
     text-align: center;
   }
 }
 
 @media (max-width:767px) {
-  .c19 {
+  .c17 {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -5603,136 +5403,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       </div>
                                     </StyledComponent>
                                   </styles__HashTags>
-                                  <styles__SubscribeWrapper
-                                    width={
-                                      Array [
-                                        1,
-                                        1,
-                                        0.3,
-                                      ]
-                                    }
-                                  >
-                                    <StyledComponent
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "styles__SubscribeWrapper-ofz17a-10",
-                                            "isStatic": true,
-                                            "lastClassName": "c10",
-                                            "rules": Array [
-                                              "@media (max-width:",
-                                              "767",
-                                              "px){",
-                                              "
-    text-align: center;
-  ",
-                                              ";}",
-                                              ";",
-                                            ],
-                                          },
-                                          "displayName": "styles__SubscribeWrapper",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "styles__SubscribeWrapper-ofz17a-10",
-                                          "target": "div",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
-                                      width={
-                                        Array [
-                                          1,
-                                          1,
-                                          0.3,
-                                        ]
-                                      }
-                                    >
-                                      <div
-                                        className="c10"
-                                        width={
-                                          Array [
-                                            1,
-                                            1,
-                                            0.3,
-                                          ]
-                                        }
-                                      >
-                                        <styles__SubscribeLink
-                                          href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
-                                          rel="noopener noreferrer"
-                                          target="_blank"
-                                        >
-                                          <StyledComponent
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SubscribeLink-ofz17a-11",
-                                                  "isStatic": true,
-                                                  "lastClassName": "c11",
-                                                  "rules": Array [
-                                                    "color:",
-                                                    "#2D2F7F",
-                                                    ";font-family:",
-                                                    "Poppins, sans-serif",
-                                                    ";font-weight:700;text-decoration:none;border-bottom:2px solid ",
-                                                    "#2D2F7F",
-                                                    ";transition:border-color 0.15s linear,color 0.15s linear;&:hover,&:focus{color:",
-                                                    "#2CDA9D",
-                                                    ";border-color:",
-                                                    "#2CDA9D",
-                                                    ";}",
-                                                    "@media (min-width:",
-                                                    "768",
-                                                    "px){",
-                                                    "
-    margin-left: auto;
-  ",
-                                                    ";}",
-                                                    ";",
-                                                    "@media (max-width:",
-                                                    "1023",
-                                                    "px){",
-                                                    "
-    font-size: 0.9375rem;
-  ",
-                                                    ";}",
-                                                    ";",
-                                                  ],
-                                                },
-                                                "displayName": "styles__SubscribeLink",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "styles__SubscribeLink-ofz17a-11",
-                                                "target": "a",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
-                                            href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                          >
-                                            <a
-                                              className="c11"
-                                              href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
-                                              rel="noopener noreferrer"
-                                              target="_blank"
-                                            >
-                                              Subscribe for Pride updates
-                                            </a>
-                                          </StyledComponent>
-                                        </styles__SubscribeLink>
-                                      </div>
-                                    </StyledComponent>
-                                  </styles__SubscribeWrapper>
                                 </div>
                               </StyledComponent>
                             </Box>
@@ -5750,7 +5420,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__SponsorsSection-ofz17a-7",
                                 "isStatic": true,
-                                "lastClassName": "c12",
+                                "lastClassName": "c10",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;border-top:1px solid ",
                                   "#EFEFEF",
@@ -5782,7 +5452,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                           width={1}
                         >
                           <Column
-                            className="c12"
+                            className="c10"
                             pb={null}
                             pl={null}
                             pr={null}
@@ -5792,7 +5462,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                             width={1}
                           >
                             <Box
-                              className="c12"
+                              className="c10"
                               pb={2}
                               pl={
                                 Array [
@@ -5816,7 +5486,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               width={1}
                             >
                               <StyledComponent
-                                className="c12"
+                                className="c10"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -5897,7 +5567,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c12 c4"
+                                  className="c10 c4"
                                   width={1}
                                 >
                                   <styles__SponsorsHeading>
@@ -5909,7 +5579,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__SponsorsHeading-ofz17a-2",
                                             "isStatic": true,
-                                            "lastClassName": "c13",
+                                            "lastClassName": "c11",
                                             "rules": Array [
                                               "margin-top:0;text-align:center;",
                                             ],
@@ -5927,7 +5597,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       forwardedRef={null}
                                     >
                                       <h3
-                                        className="c13"
+                                        className="c11"
                                       >
                                         Our amazing partners
                                       </h3>
@@ -5940,9 +5610,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "styles__SponsorsContainer-ofz17a-12",
+                                            "componentId": "styles__SponsorsContainer-ofz17a-10",
                                             "isStatic": true,
-                                            "lastClassName": "c14",
+                                            "lastClassName": "c12",
                                             "rules": Array [
                                               "display:flex;flex-wrap:wrap;justify-content:center;",
                                             ],
@@ -5950,7 +5620,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "displayName": "styles__SponsorsContainer",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "styles__SponsorsContainer-ofz17a-12",
+                                          "styledComponentId": "styles__SponsorsContainer-ofz17a-10",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -5960,7 +5630,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="c14"
+                                        className="c12"
                                       >
                                         <styles__SponsorImgWrapper
                                           key="a1bc90c0-23c7-51e1-8ea2-4bce5224df33"
@@ -5972,9 +5642,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6003,7 +5673,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6014,7 +5684,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://media.giphy.com/media/UvwI1X7XkbXq0/giphy.gif"
@@ -6039,9 +5709,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6070,7 +5740,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6081,7 +5751,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://m.popkey.co/666ded/1VRvJ.gif"
@@ -6106,9 +5776,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6137,7 +5807,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6148,7 +5818,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="http://www.abstergo.com/"
@@ -6173,9 +5843,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6204,7 +5874,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6215,7 +5885,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://red-badger.com/"
@@ -6240,9 +5910,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6271,7 +5941,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6282,7 +5952,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://www.barclays.co.uk/"
@@ -6307,9 +5977,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6338,7 +6008,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6349,7 +6019,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Headline"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://www.london.gov.uk/about-us/mayor-london"
@@ -6374,9 +6044,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6405,7 +6075,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6416,7 +6086,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Gold"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="http://alienanthology.wikia.com/wiki/Weyland-Yutani"
@@ -6441,9 +6111,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6472,7 +6142,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6483,7 +6153,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Gold"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="http://omniconsumerproductscorporation.com/"
@@ -6508,9 +6178,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6539,7 +6209,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6550,7 +6220,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Gold"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://www.tesco.com/"
@@ -6575,9 +6245,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                  "componentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c13",
                                                   "rules": Array [
                                                     "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                                     "@media (min-width:",
@@ -6606,7 +6276,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__SponsorImgWrapper",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-14",
+                                                "styledComponentId": "styles__SponsorImgWrapper-ofz17a-12",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -6617,7 +6287,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             level="Gold"
                                           >
                                             <div
-                                              className="c15"
+                                              className="c13"
                                             >
                                               <a
                                                 href="https://cms.law/en/GBR/"
@@ -6642,9 +6312,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "styles__SponsorsCTAWrapper-ofz17a-13",
+                                            "componentId": "styles__SponsorsCTAWrapper-ofz17a-11",
                                             "isStatic": true,
-                                            "lastClassName": "c16",
+                                            "lastClassName": "c14",
                                             "rules": Array [
                                               "display:flex;justify-content:center;padding-top:20px;",
                                               "@media (min-width:",
@@ -6660,7 +6330,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "displayName": "styles__SponsorsCTAWrapper",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "styles__SponsorsCTAWrapper-ofz17a-13",
+                                          "styledComponentId": "styles__SponsorsCTAWrapper-ofz17a-11",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -6670,7 +6340,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="c16"
+                                        className="c14"
                                       >
                                         <CTALink
                                           to="/support-us/partners"
@@ -6700,7 +6370,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "ctaLink__StyledLink-jwjl82-0",
                                                     "isStatic": true,
-                                                    "lastClassName": "c17",
+                                                    "lastClassName": "c15",
                                                     "rules": Array [
                                                       "border-bottom:2px solid ",
                                                       "#2CDA9D",
@@ -6725,16 +6395,16 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               to="/support-us/partners"
                                             >
                                               <ForwardRef
-                                                className="cta-link c17"
+                                                className="cta-link c15"
                                                 to="/support-us/partners"
                                               >
                                                 <GatsbyLink
-                                                  className="cta-link c17"
+                                                  className="cta-link c15"
                                                   innerRef={null}
                                                   to="/support-us/partners"
                                                 >
                                                   <ForwardRef
-                                                    className="cta-link c17"
+                                                    className="cta-link c15"
                                                     getProps={[Function]}
                                                     innerRef={[Function]}
                                                     onClick={[Function]}
@@ -6770,7 +6440,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         }
                                                       >
                                                         <a
-                                                          className="cta-link c17"
+                                                          className="cta-link c15"
                                                           href="/support-us/partners"
                                                           onClick={[Function]}
                                                           onMouseEnter={[Function]}
@@ -6808,7 +6478,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "ctaLink__StyledLink-jwjl82-0",
                                                     "isStatic": true,
-                                                    "lastClassName": "c17",
+                                                    "lastClassName": "c15",
                                                     "rules": Array [
                                                       "border-bottom:2px solid ",
                                                       "#2CDA9D",
@@ -6834,7 +6504,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               target="_blank"
                                             >
                                               <a
-                                                className="cta-link c17"
+                                                className="cta-link c15"
                                                 href="mailto:sponsor@prideinlondon.org"
                                                 target="_blank"
                                               >
@@ -6862,9 +6532,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "styles__LegalSection-ofz17a-15",
+                                "componentId": "styles__LegalSection-ofz17a-13",
                                 "isStatic": true,
-                                "lastClassName": "c18",
+                                "lastClassName": "c16",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;text-align:center;",
                                   "@media (min-width:",
@@ -6882,7 +6552,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "displayName": "styles__LegalSection",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "styles__LegalSection-ofz17a-15",
+                              "styledComponentId": "styles__LegalSection-ofz17a-13",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -6893,7 +6563,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                           width={1}
                         >
                           <Column
-                            className="c18"
+                            className="c16"
                             pb={null}
                             pl={null}
                             pr={null}
@@ -6903,7 +6573,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                             width={1}
                           >
                             <Box
-                              className="c18"
+                              className="c16"
                               pb={2}
                               pl={
                                 Array [
@@ -6927,7 +6597,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               width={1}
                             >
                               <StyledComponent
-                                className="c18"
+                                className="c16"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -7008,7 +6678,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c18 c4"
+                                  className="c16 c4"
                                   width={1}
                                 >
                                   <styles__LegalList>
@@ -7018,9 +6688,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "styles__LegalList-ofz17a-17",
+                                            "componentId": "styles__LegalList-ofz17a-15",
                                             "isStatic": true,
-                                            "lastClassName": "c19",
+                                            "lastClassName": "c17",
                                             "rules": Array [
                                               "list-style:none;padding:0;margin:0 20px 0 0;display:flex;align-self:baseline;justify-content:center;",
                                               "@media (max-width:",
@@ -7038,7 +6708,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "displayName": "styles__LegalList",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "styles__LegalList-ofz17a-17",
+                                          "styledComponentId": "styles__LegalList-ofz17a-15",
                                           "target": "ul",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -7048,7 +6718,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       forwardedRef={null}
                                     >
                                       <ul
-                                        className="c19"
+                                        className="c17"
                                       >
                                         <styles__LegalListItem>
                                           <StyledComponent
@@ -7057,9 +6727,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -7069,7 +6739,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -7079,7 +6749,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 as="a"
@@ -7093,9 +6763,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -7105,7 +6775,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -7120,7 +6790,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   target="_blank"
                                                 >
                                                   <a
-                                                    className="c21"
+                                                    className="c19"
                                                     href="https://help.prideinlondon.org"
                                                     target="_blank"
                                                   >
@@ -7138,9 +6808,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -7150,7 +6820,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -7160,7 +6830,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 to="/media-centre"
@@ -7171,9 +6841,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -7183,7 +6853,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -7197,16 +6867,16 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   to="/media-centre"
                                                 >
                                                   <ForwardRef
-                                                    className="c21"
+                                                    className="c19"
                                                     to="/media-centre"
                                                   >
                                                     <GatsbyLink
-                                                      className="c21"
+                                                      className="c19"
                                                       innerRef={null}
                                                       to="/media-centre"
                                                     >
                                                       <ForwardRef
-                                                        className="c21"
+                                                        className="c19"
                                                         getProps={[Function]}
                                                         innerRef={[Function]}
                                                         onClick={[Function]}
@@ -7242,7 +6912,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                             }
                                                           >
                                                             <a
-                                                              className="c21"
+                                                              className="c19"
                                                               href="/media-centre"
                                                               onClick={[Function]}
                                                               onMouseEnter={[Function]}
@@ -7266,9 +6936,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -7278,7 +6948,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -7288,7 +6958,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 to="/privacy"
@@ -7299,9 +6969,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -7311,7 +6981,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -7325,16 +6995,16 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   to="/privacy"
                                                 >
                                                   <ForwardRef
-                                                    className="c21"
+                                                    className="c19"
                                                     to="/privacy"
                                                   >
                                                     <GatsbyLink
-                                                      className="c21"
+                                                      className="c19"
                                                       innerRef={null}
                                                       to="/privacy"
                                                     >
                                                       <ForwardRef
-                                                        className="c21"
+                                                        className="c19"
                                                         getProps={[Function]}
                                                         innerRef={[Function]}
                                                         onClick={[Function]}
@@ -7370,7 +7040,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                             }
                                                           >
                                                             <a
-                                                              className="c21"
+                                                              className="c19"
                                                               href="/privacy"
                                                               onClick={[Function]}
                                                               onMouseEnter={[Function]}
@@ -7394,9 +7064,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -7406,7 +7076,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -7416,7 +7086,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 as="a"
@@ -7429,9 +7099,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -7441,7 +7111,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -7455,7 +7125,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="c21"
+                                                    className="c19"
                                                     onClick={[Function]}
                                                   >
                                                     Report a website bug
@@ -7472,9 +7142,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "styles__LegalListItem-ofz17a-18",
+                                                  "componentId": "styles__LegalListItem-ofz17a-16",
                                                   "isStatic": true,
-                                                  "lastClassName": "c20",
+                                                  "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
                                                     "#5B5B5B",
@@ -7484,7 +7154,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "displayName": "styles__LegalListItem",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "styles__LegalListItem-ofz17a-18",
+                                                "styledComponentId": "styles__LegalListItem-ofz17a-16",
                                                 "target": "li",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -7494,7 +7164,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             forwardedRef={null}
                                           >
                                             <li
-                                              className="c20"
+                                              className="c18"
                                             >
                                               <styles__LegalLink
                                                 as="a"
@@ -7507,9 +7177,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "styles__LegalLink-ofz17a-19",
+                                                        "componentId": "styles__LegalLink-ofz17a-17",
                                                         "isStatic": true,
-                                                        "lastClassName": "c21",
+                                                        "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
                                                           "#5B5B5B",
@@ -7519,7 +7189,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "displayName": "styles__LegalLink",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "styles__LegalLink-ofz17a-19",
+                                                      "styledComponentId": "styles__LegalLink-ofz17a-17",
                                                       "target": Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "render": [Function],
@@ -7533,7 +7203,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   onClick={[Function]}
                                                 >
                                                   <a
-                                                    className="c21"
+                                                    className="c19"
                                                     onClick={[Function]}
                                                   >
                                                     Contact us
@@ -7553,9 +7223,9 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "styles__LegalStrapline-ofz17a-16",
+                                            "componentId": "styles__LegalStrapline-ofz17a-14",
                                             "isStatic": true,
-                                            "lastClassName": "c22",
+                                            "lastClassName": "c20",
                                             "rules": Array [
                                               "color:",
                                               "#5B5B5B",
@@ -7573,7 +7243,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "displayName": "styles__LegalStrapline",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "styles__LegalStrapline-ofz17a-16",
+                                          "styledComponentId": "styles__LegalStrapline-ofz17a-14",
                                           "target": "p",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -7583,7 +7253,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       forwardedRef={null}
                                     >
                                       <p
-                                        className="c22"
+                                        className="c20"
                                       >
                                         London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN - Registered in England and Wales as a Community Interest Company (
                                         <a
@@ -7766,23 +7436,6 @@ exports[`<Footer/> should render and match snapshot 1`] = `
             #pridejubilee
           </styles__HashTag>
         </styles__HashTags>
-        <styles__SubscribeWrapper
-          width={
-            Array [
-              1,
-              1,
-              0.3,
-            ]
-          }
-        >
-          <styles__SubscribeLink
-            href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Subscribe for Pride updates
-          </styles__SubscribeLink>
-        </styles__SubscribeWrapper>
       </styles__SocialSection>
       <styles__SponsorsSection
         width={1}
