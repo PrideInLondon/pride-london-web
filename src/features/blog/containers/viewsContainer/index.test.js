@@ -1,7 +1,7 @@
 import React from 'react'
 import toJSON from 'enzyme-to-json'
 import { shallow, mount } from 'enzyme'
-import { views } from './_mocks'
+import { views } from './__mocks__'
 import ViewsContainer from '.'
 
 describe('ViewsContainer', () => {

@@ -14,25 +14,6 @@
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch"
   },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|jpg|png|svg)$": "<rootDir>/empty-module.js"
-    },
-    "testMatch": [
-      "**/?(*_)(spec|test).js"
-    ],
-    "setupFiles": [
-      "./src/configuration/jest.config.js"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "globals": {
-      "__PATH_PREFIX__": ""
-    }
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged "

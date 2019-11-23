@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import 'jest-styled-components'
 import NavItem from '../navItem'
-import { mockData } from './_mocks'
+import { mockData } from './__mocks__'
 
 describe('Desktop version <NavItem/>', () => {
   beforeAll(() => {

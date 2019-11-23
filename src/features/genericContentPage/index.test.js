@@ -11,7 +11,7 @@ import {
   buttonNullContentNode,
   notRecognizedNode,
   sponsorSectionNode,
-} from './_mocks'
+} from './__mocks__'
 import GenericContent from '.'
 
 describe('<GenericContent/>', () => {
