@@ -4,7 +4,7 @@ import toJSON from 'enzyme-to-json'
 import SponsorsSubsection from '../sponsorSubsection'
 import SponsorStar from '../../../../components/icons/sponsorStar'
 import renderSponsors from '../../helpers'
-import { mockSponsors } from './_mocks'
+import { mockSponsors } from './__mocks__'
 
 describe('<SponsorSubsection/>', () => {
   it('renders the component <SponsorSubsection />', () => {

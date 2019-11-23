@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import { FeaturedEventContent } from './styles'
-import { mockEvents } from './_mocks'
+import { mockEvents } from './__mocks__'
 import FeaturedEvents from '.'
 import 'jest-styled-components'
 

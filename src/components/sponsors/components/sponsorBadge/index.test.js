@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import SponsorBadge from '../sponsorBadge'
-import { mockSponsor, mockSponsor2, mockSponsorWithoutLogo } from './_mocks'
+import { mockSponsor, mockSponsor2, mockSponsorWithoutLogo } from './__mocks__'
 
 describe('<SponsorBadge/>', () => {
   it('renders the component <SponsorBadge />', () => {
