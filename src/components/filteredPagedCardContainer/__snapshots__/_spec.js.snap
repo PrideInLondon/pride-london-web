@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilteredPagedCardContainer renders component with filter type "checkbox" 1`] = `
+exports[`FilteredPagedCardContainer renders component with filter type checkbox 1`] = `
 <Fragment>
   <FilterContainer
     categories={
@@ -62,7 +62,7 @@ exports[`FilteredPagedCardContainer renders component with filter type "checkbox
 </Fragment>
 `;
 
-exports[`FilteredPagedCardContainer renders component with filter type "radio" 1`] = `
+exports[`FilteredPagedCardContainer renders component with filter type radio 1`] = `
 <Fragment>
   <FilterContainer
     categories={
@@ -120,7 +120,7 @@ exports[`FilteredPagedCardContainer renders component with filter type "radio" 1
 </Fragment>
 `;
 
-exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards when the "show more" button is clicked 1`] = `
+exports[`FilteredPagedCardContainer with checkbox filter type shows more cards when the "show more" button is clicked 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -1212,7 +1212,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -1510,7 +1509,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -1765,7 +1763,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -2020,7 +2017,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -2275,7 +2271,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -2530,7 +2525,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -2751,7 +2745,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to one page displayed on filter change 1`] = `
+exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one page displayed on filter change 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -3759,7 +3753,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -4029,7 +4022,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -4605,7 +4597,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the selected filter category 1`] = `
+exports[`FilteredPagedCardContainer with checkbox shows only cards with the selected filter category 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -5613,7 +5605,6 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -5890,7 +5881,6 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -6145,7 +6135,6 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -6366,7 +6355,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "radio" filter type shows more cards when the "show more" button is clicked 1`] = `
+exports[`FilteredPagedCardContainer with radio filter type shows more cards when the "show more" button is clicked 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -7454,7 +7443,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -7752,7 +7740,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -8007,7 +7994,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -8262,7 +8248,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -8517,7 +8502,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -8772,7 +8756,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -8993,7 +8976,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one page displayed on filter change 1`] = `
+exports[`FilteredPagedCardContainer with radio filter type snaps back to one page displayed on filter change 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -9997,7 +9980,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -10267,7 +10249,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -10843,7 +10824,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "radio" shows only cards with the selected filter category 1`] = `
+exports[`FilteredPagedCardContainer with radio shows only cards with the selected filter category 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -11847,7 +11828,6 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -12124,7 +12104,6 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -12379,7 +12358,6 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}

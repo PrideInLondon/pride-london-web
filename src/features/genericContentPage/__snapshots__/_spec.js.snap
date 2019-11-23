@@ -103,7 +103,6 @@ exports[`render methods for Generic Content click on typeform button 1`] = `
           "toString": [Function],
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
         }
       }
       forwardedRef={null}
@@ -312,7 +311,6 @@ exports[`render methods for Generic Content click on typeform button 2`] = `
           "toString": [Function],
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
         }
       }
       forwardedRef={null}
@@ -455,7 +453,6 @@ exports[`render methods for Generic Content renders a button component if the id
       "toString": [Function],
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
-      Symbol(Symbol.hasInstance): [Function],
     }
   }
   forwardedRef={null}

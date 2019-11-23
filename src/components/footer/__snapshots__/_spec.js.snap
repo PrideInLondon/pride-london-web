@@ -814,7 +814,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
-                              Symbol(Symbol.hasInstance): [Function],
                             }
                           }
                           forwardedRef={null}
@@ -1969,7 +1968,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
-                              Symbol(Symbol.hasInstance): [Function],
                             }
                           }
                           forwardedRef={null}
@@ -2892,7 +2890,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "ctaLink__StyledLink-sc-6xlb33-0",
+                                                    "componentId": "ctaLink__StyledLink-jwjl82-0",
                                                     "isStatic": true,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
@@ -2908,7 +2906,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "displayName": "ctaLink__StyledLink",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "ctaLink__StyledLink-sc-6xlb33-0",
+                                                  "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
                                                   "target": "a",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -2987,18 +2985,20 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           <ctaLink__StyledLink
                                             as="a"
                                             className="cta-link"
+                                            contact={true}
                                             href="mailto:sponsor@prideinlondon.org"
                                             target="_blank"
                                           >
                                             <StyledComponent
                                               as="a"
                                               className="cta-link"
+                                              contact={true}
                                               forwardedComponent={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "ctaLink__StyledLink-sc-6xlb33-0",
+                                                    "componentId": "ctaLink__StyledLink-jwjl82-0",
                                                     "isStatic": true,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
@@ -3014,7 +3014,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "displayName": "ctaLink__StyledLink",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "ctaLink__StyledLink-sc-6xlb33-0",
+                                                  "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
                                                   "target": "a",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -3079,7 +3079,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
-                              Symbol(Symbol.hasInstance): [Function],
                             }
                           }
                           forwardedRef={null}
@@ -4623,7 +4622,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
-                              Symbol(Symbol.hasInstance): [Function],
                             }
                           }
                           forwardedRef={null}
@@ -5778,7 +5776,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
-                              Symbol(Symbol.hasInstance): [Function],
                             }
                           }
                           forwardedRef={null}
@@ -6701,7 +6698,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "ctaLink__StyledLink-sc-6xlb33-0",
+                                                    "componentId": "ctaLink__StyledLink-jwjl82-0",
                                                     "isStatic": true,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
@@ -6717,7 +6714,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "displayName": "ctaLink__StyledLink",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "ctaLink__StyledLink-sc-6xlb33-0",
+                                                  "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
                                                   "target": "a",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -6796,18 +6793,20 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           <ctaLink__StyledLink
                                             as="a"
                                             className="cta-link"
+                                            contact={true}
                                             href="mailto:sponsor@prideinlondon.org"
                                             target="_blank"
                                           >
                                             <StyledComponent
                                               as="a"
                                               className="cta-link"
+                                              contact={true}
                                               forwardedComponent={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "ctaLink__StyledLink-sc-6xlb33-0",
+                                                    "componentId": "ctaLink__StyledLink-jwjl82-0",
                                                     "isStatic": true,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
@@ -6823,7 +6822,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "displayName": "ctaLink__StyledLink",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "ctaLink__StyledLink-sc-6xlb33-0",
+                                                  "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
                                                   "target": "a",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -6888,7 +6887,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
-                              Symbol(Symbol.hasInstance): [Function],
                             }
                           }
                           forwardedRef={null}
