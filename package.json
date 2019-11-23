@@ -9,8 +9,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "lint": "eslint 'src/**/*.js'",
-    "lint-fix": "eslint --fix 'src/**/*.js'",
+    "lint": "eslint 'src/**/*.[jt]s?(x)'",
+    "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch",
     "precommit": "lint-staged"

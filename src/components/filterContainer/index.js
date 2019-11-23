@@ -11,6 +11,8 @@ export const calculateIsSelected = (filterType, filterName, selected) => {
       return selected.includes(filterName)
     case 'radio':
       return filterName === selected
+    default:
+      return
   }
 }
 

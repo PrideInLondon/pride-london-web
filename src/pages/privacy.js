@@ -882,7 +882,11 @@ const PrivacyPolicyPage = () => (
             <br />
             PO Box 71920, London NW2 9QN
             <br />
-            <a href="mailto:info@prideinlondon.org" target="_blank">
+            <a
+              href="mailto:info@prideinlondon.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               info@prideinlondon.org
             </a>
           </address>
@@ -893,7 +897,11 @@ const PrivacyPolicyPage = () => (
             <br />
             PO Box 71920, London NW2 9QN
             <br />
-            <a href="mailto:matthewk@pridenlondon.org" target="_blank">
+            <a
+              href="mailto:matthewk@pridenlondon.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               matthewk@pridenlondon.org
             </a>
           </address>

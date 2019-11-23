@@ -22,6 +22,8 @@ const filterGroupByFirstLetter = (groupName, letter) => {
 }
 
 const isInViewport = (e, { top: t, height: h } = e.getBoundingClientRect()) =>
+  // innerHeight appears to be a global set on the window.
+  // eslint-disable-next-line no-restricted-globals
   t <= innerHeight && t - lettersContainerHeight + h >= 0
 
 const ParadeGroupsContainer = ({ paradeGroups, categories }) => {

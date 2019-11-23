@@ -100,6 +100,7 @@ const BannerImage = ({
                 frameBorder="0"
                 allow="autoplay; fullscreen"
                 allowFullScreen
+                title="Background video of Pride Parade"
               ></iframe>
             </VideoWrapper>
           )}

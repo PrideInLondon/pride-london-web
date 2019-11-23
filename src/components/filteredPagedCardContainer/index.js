@@ -10,6 +10,8 @@ export const calculateInitialSelected = (filterType, showAllCategoryTitle) => {
       return showAllCategoryTitle ? [showAllCategoryTitle] : []
     case 'radio':
       return showAllCategoryTitle
+    default:
+      return
   }
 }
 
@@ -42,6 +44,8 @@ export const calculateSelected = (
     }
     case 'radio':
       return filterNameSelected
+    default:
+      return
   }
 }
 
@@ -61,6 +65,8 @@ export const calculateShouldShowCard = (
       return selected === showAllCategoryTitle
         ? true
         : category.includes(selected)
+    default:
+      return
   }
 }
 
