@@ -1,22 +1,22 @@
 import Link from 'gatsby-link'
 
-export function checkBreakpoint(breakpoint: number) {
+export function checkBreakpoint(breakpoint: number): boolean | void {
   if (typeof window !== `undefined`) {
     return window.matchMedia(`(min-width: ${breakpoint}px)`).matches
   }
 }
 
-export function externalUrl(url: string) {
+export function externalUrl(url: string): boolean {
   const external = /^(http|https|ftp)/
   return external.test(url)
 }
 
-export function contactUrl(url: string) {
+export function contactUrl(url: string): boolean {
   const contact = /^(mailto:|tel:)/
   return contact.test(url)
 }
 
-export function handleSlug(slug: string) {
+export function handleSlug(slug: string): string {
   const hasLeadingSlash = /^[/]/
   if (hasLeadingSlash.test(slug)) return slug
   return `/${slug}`
