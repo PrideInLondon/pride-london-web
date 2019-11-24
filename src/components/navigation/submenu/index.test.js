@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import 'jest-styled-components'
 import Submenu from '../submenu'
-import { mockData } from './_mocks'
+import { mockData } from './__mocks__'
 
 describe('<Submenu />', () => {
   const mockFunc = jest.fn()

@@ -1,15 +1,16 @@
 module.exports = {
   roots: ['<rootDir>/src'],
-  testMatch: ['**/?(*(_|.))+(spec|test).[jt]s?(x)'],
+  testMatch: ['<rootDir>/src/**/*.test.[jt]s?(x)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
     '\\.(css|jpg|png|svg)$': '<rootDir>/empty-module.js',
   },
+  setupFiles: ['<rootDir>/config/jest.setup.js'],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  coverageDirectory: './coverage/',
+  collectCoverage: true,
   globals: {
     __PATH_PREFIX__: '',
   },
-  coverageDirectory: './coverage/',
-  collectCoverage: true,
-  setupFiles: ['./src/configuration/jest.setup.js'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
+  modulePathIgnorePatterns: ['<rootDir>/.*/__mocks__'],
 }

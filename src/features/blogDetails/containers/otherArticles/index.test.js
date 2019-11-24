@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import otherArticlesMock from './_mocks'
+import otherArticlesMock from './__mocks__'
 import OtherArticles from '.'
 
 describe(OtherArticles.name, () => {

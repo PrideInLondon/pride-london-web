@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import SponsorBadge from '../components/sponsorBadge'
-import { mockSponsors } from './_mocks'
+import { mockSponsors } from './__mocks__'
 import renderSponsors from '.'
 
 describe('<SponsorBadge/>', () => {

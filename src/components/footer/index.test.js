@@ -4,7 +4,7 @@ import toJSON from 'enzyme-to-json'
 import * as Intercom from 'react-intercom'
 import 'jest-styled-components'
 import Footer from '../footer'
-import { mockSponsors } from './_mocks'
+import { mockSponsors } from './__mocks__'
 
 describe('<Footer/>', () => {
   beforeAll(() => {
