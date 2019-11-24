@@ -323,7 +323,7 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> without logo 1`]
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "styles__NamePlaceholder-uzqcz1-2",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "kxElvH",
                   "rules": Array [
                     "color:#9b9b9b;display:inline-block;margin:0;padding:15px;text-align:center;",

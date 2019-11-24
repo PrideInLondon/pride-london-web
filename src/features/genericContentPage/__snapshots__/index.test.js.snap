@@ -89,7 +89,7 @@ exports[`render methods for Generic Content click on typeform button 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "renderMethods__StyledButton-sc-1003i2d-0",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "margin-bottom:1.25em;",
@@ -195,7 +195,7 @@ exports[`render methods for Generic Content click on typeform button 1`] = `
             wide={true}
           >
             <button
-              className="c0 c1"
+              className="c1 c0"
               disabled={false}
               onClick={[Function]}
               type="button"
@@ -297,7 +297,7 @@ exports[`render methods for Generic Content click on typeform button 2`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "renderMethods__StyledButton-sc-1003i2d-0",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "margin-bottom:1.25em;",
@@ -403,7 +403,7 @@ exports[`render methods for Generic Content click on typeform button 2`] = `
             wide={true}
           >
             <button
-              className="c0 c1"
+              className="c1 c0"
               disabled={false}
               onClick={[Function]}
               type="button"
@@ -440,7 +440,7 @@ exports[`render methods for Generic Content renders a button component if the id
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "renderMethods__StyledButton-sc-1003i2d-0",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "margin-bottom:1.25em;",
         ],
@@ -519,6 +519,7 @@ exports[`render methods for Generic Content renders a video component if the id 
     allowFullScreen={true}
     frameBorder="0"
     src="https://www.youtube.com/embed/7ge36or-nz4"
+    title="Youtube video"
   />
 </styles__VideoContainer>
 `;

@@ -223,7 +223,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
             mx="auto"
           >
             <div
-              className="sc-bdVaJa pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq grid__Container-l0wsyy-0 eEEIRW"
+              className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
             >
               <Row
                 flexWrap={null}
@@ -343,7 +343,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "grid__FlexColumn-l0wsyy-1",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "bsrdHZ",
                                 "rules": Array [
                                   "display:block;",
@@ -543,7 +543,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                                 }
                               >
                                 <div
-                                  className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                  className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                   width={
                                     Array [
                                       1,
@@ -592,7 +592,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "grid__FlexColumn-l0wsyy-1",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "bsrdHZ",
                                 "rules": Array [
                                   "display:block;",
@@ -792,7 +792,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                                 }
                               >
                                 <div
-                                  className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                  className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                   width={
                                     Array [
                                       1,
@@ -841,7 +841,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "grid__FlexColumn-l0wsyy-1",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "bsrdHZ",
                                 "rules": Array [
                                   "display:block;",
@@ -1041,7 +1041,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                                 }
                               >
                                 <div
-                                  className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                  className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                   width={
                                     Array [
                                       1,

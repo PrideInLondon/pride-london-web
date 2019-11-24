@@ -8,7 +8,7 @@ exports[`Featured Event Content renders with default values 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "overflow:hidden;.slick-list{overflow:visible;}.slick-track{display:flex;.slick-slide{display:flex;height:auto;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
           "@media (min-width:",

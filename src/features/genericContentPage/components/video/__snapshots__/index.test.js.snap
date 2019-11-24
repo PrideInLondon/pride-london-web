@@ -6,6 +6,7 @@ exports[`<Video/> renders with default values 1`] = `
     allowFullScreen={true}
     frameBorder="0"
     src="https://www.youtube.com/embed/video id"
+    title="Youtube video"
   />
 </styles__VideoContainer>
 `;

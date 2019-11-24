@@ -557,7 +557,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "styles__FooterWrapper-ofz17a-0",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "background-color:",
@@ -624,7 +624,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "styles__StyledFooter-ofz17a-1",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "background-color:",
@@ -755,7 +755,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__SocialSection-ofz17a-3",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;justify-content:space-between;",
@@ -900,7 +900,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c3 c4"
+                                  className="c4 c3"
                                   width={1}
                                 >
                                   <div>
@@ -912,7 +912,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__SocialList-ofz17a-4",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c5",
                                               "rules": Array [
                                                 "list-style:none;padding:0;margin:0;display:flex;",
@@ -949,7 +949,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -984,7 +984,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -1048,7 +1048,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -1083,7 +1083,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -1147,7 +1147,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -1182,7 +1182,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -1252,7 +1252,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -1287,7 +1287,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -1350,7 +1350,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -1385,7 +1385,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -1449,7 +1449,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -1484,7 +1484,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -1559,7 +1559,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__HashTags-ofz17a-8",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c8",
                                             "rules": Array [
                                               "display:flex;flex-wrap:wrap;justify-content:center;padding:20px 0;",
@@ -1622,7 +1622,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__HashTag-ofz17a-9",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c9",
                                                   "rules": Array [
                                                     "font-family:",
@@ -1671,7 +1671,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__HashTag-ofz17a-9",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c9",
                                                   "rules": Array [
                                                     "font-family:",
@@ -1720,7 +1720,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__HashTag-ofz17a-9",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c9",
                                                   "rules": Array [
                                                     "font-family:",
@@ -1776,7 +1776,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__SponsorsSection-ofz17a-7",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c10",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;border-top:1px solid ",
@@ -1924,7 +1924,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c10 c4"
+                                  className="c4 c10"
                                   width={1}
                                 >
                                   <styles__SponsorsHeading>
@@ -1935,7 +1935,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__SponsorsHeading-ofz17a-2",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c11",
                                             "rules": Array [
                                               "margin-top:0;text-align:center;",
@@ -1968,7 +1968,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__SponsorsContainer-ofz17a-10",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c12",
                                             "rules": Array [
                                               "display:flex;flex-wrap:wrap;justify-content:center;",
@@ -2670,7 +2670,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__SponsorsCTAWrapper-ofz17a-11",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c14",
                                             "rules": Array [
                                               "display:flex;justify-content:center;padding-top:20px;",
@@ -2726,7 +2726,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "ctaLink__StyledLink-jwjl82-0",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
                                                       "border-bottom:2px solid ",
@@ -2752,16 +2752,16 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               to="/support-us/partners"
                                             >
                                               <ForwardRef
-                                                className="cta-link c15"
+                                                className="c15 cta-link"
                                                 to="/support-us/partners"
                                               >
                                                 <GatsbyLink
-                                                  className="cta-link c15"
+                                                  className="c15 cta-link"
                                                   innerRef={null}
                                                   to="/support-us/partners"
                                                 >
                                                   <ForwardRef
-                                                    className="cta-link c15"
+                                                    className="c15 cta-link"
                                                     getProps={[Function]}
                                                     innerRef={[Function]}
                                                     onClick={[Function]}
@@ -2797,7 +2797,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         }
                                                       >
                                                         <a
-                                                          className="cta-link c15"
+                                                          className="c15 cta-link"
                                                           href="/support-us/partners"
                                                           onClick={[Function]}
                                                           onMouseEnter={[Function]}
@@ -2834,7 +2834,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "ctaLink__StyledLink-jwjl82-0",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
                                                       "border-bottom:2px solid ",
@@ -2861,7 +2861,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               target="_blank"
                                             >
                                               <a
-                                                className="cta-link c15"
+                                                className="c15 cta-link"
                                                 href="mailto:sponsor@prideinlondon.org"
                                                 target="_blank"
                                               >
@@ -2890,7 +2890,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__LegalSection-ofz17a-13",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c16",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;text-align:center;",
@@ -3035,7 +3035,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c16 c4"
+                                  className="c4 c16"
                                   width={1}
                                 >
                                   <styles__LegalList>
@@ -3046,7 +3046,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__LegalList-ofz17a-15",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c17",
                                             "rules": Array [
                                               "list-style:none;padding:0;margin:0 20px 0 0;display:flex;align-self:baseline;justify-content:center;",
@@ -3085,7 +3085,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -3121,7 +3121,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -3166,7 +3166,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -3199,7 +3199,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -3294,7 +3294,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -3327,7 +3327,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -3422,7 +3422,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -3457,7 +3457,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -3500,7 +3500,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -3535,7 +3535,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -3581,7 +3581,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__LegalStrapline-ofz17a-14",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c20",
                                             "rules": Array [
                                               "color:",
@@ -4200,7 +4200,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "styles__FooterWrapper-ofz17a-0",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "background-color:",
@@ -4267,7 +4267,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "styles__StyledFooter-ofz17a-1",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "background-color:",
@@ -4398,7 +4398,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__SocialSection-ofz17a-3",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;justify-content:space-between;",
@@ -4543,7 +4543,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c3 c4"
+                                  className="c4 c3"
                                   width={1}
                                 >
                                   <div>
@@ -4555,7 +4555,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__SocialList-ofz17a-4",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c5",
                                               "rules": Array [
                                                 "list-style:none;padding:0;margin:0;display:flex;",
@@ -4592,7 +4592,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -4627,7 +4627,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -4691,7 +4691,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -4726,7 +4726,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -4790,7 +4790,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -4825,7 +4825,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -4895,7 +4895,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -4930,7 +4930,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -4993,7 +4993,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -5028,7 +5028,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -5092,7 +5092,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "styles__SocialItem-ofz17a-5",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c6",
                                                     "rules": Array [
                                                       "&:not(:last-child){margin-right:15px;}",
@@ -5127,7 +5127,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "styles__SocialLink-ofz17a-6",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
                                                             "display:block;border:none;svg{path{fill:",
@@ -5202,7 +5202,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__HashTags-ofz17a-8",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c8",
                                             "rules": Array [
                                               "display:flex;flex-wrap:wrap;justify-content:center;padding:20px 0;",
@@ -5265,7 +5265,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__HashTag-ofz17a-9",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c9",
                                                   "rules": Array [
                                                     "font-family:",
@@ -5314,7 +5314,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__HashTag-ofz17a-9",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c9",
                                                   "rules": Array [
                                                     "font-family:",
@@ -5363,7 +5363,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__HashTag-ofz17a-9",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c9",
                                                   "rules": Array [
                                                     "font-family:",
@@ -5419,7 +5419,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__SponsorsSection-ofz17a-7",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c10",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;border-top:1px solid ",
@@ -5567,7 +5567,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c10 c4"
+                                  className="c4 c10"
                                   width={1}
                                 >
                                   <styles__SponsorsHeading>
@@ -5578,7 +5578,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__SponsorsHeading-ofz17a-2",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c11",
                                             "rules": Array [
                                               "margin-top:0;text-align:center;",
@@ -5611,7 +5611,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__SponsorsContainer-ofz17a-10",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c12",
                                             "rules": Array [
                                               "display:flex;flex-wrap:wrap;justify-content:center;",
@@ -6313,7 +6313,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__SponsorsCTAWrapper-ofz17a-11",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c14",
                                             "rules": Array [
                                               "display:flex;justify-content:center;padding-top:20px;",
@@ -6369,7 +6369,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "ctaLink__StyledLink-jwjl82-0",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
                                                       "border-bottom:2px solid ",
@@ -6395,16 +6395,16 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               to="/support-us/partners"
                                             >
                                               <ForwardRef
-                                                className="cta-link c15"
+                                                className="c15 cta-link"
                                                 to="/support-us/partners"
                                               >
                                                 <GatsbyLink
-                                                  className="cta-link c15"
+                                                  className="c15 cta-link"
                                                   innerRef={null}
                                                   to="/support-us/partners"
                                                 >
                                                   <ForwardRef
-                                                    className="cta-link c15"
+                                                    className="c15 cta-link"
                                                     getProps={[Function]}
                                                     innerRef={[Function]}
                                                     onClick={[Function]}
@@ -6440,7 +6440,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         }
                                                       >
                                                         <a
-                                                          className="cta-link c15"
+                                                          className="c15 cta-link"
                                                           href="/support-us/partners"
                                                           onClick={[Function]}
                                                           onMouseEnter={[Function]}
@@ -6477,7 +6477,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "ctaLink__StyledLink-jwjl82-0",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
                                                       "border-bottom:2px solid ",
@@ -6504,7 +6504,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               target="_blank"
                                             >
                                               <a
-                                                className="cta-link c15"
+                                                className="c15 cta-link"
                                                 href="mailto:sponsor@prideinlondon.org"
                                                 target="_blank"
                                               >
@@ -6533,7 +6533,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__LegalSection-ofz17a-13",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c16",
                                 "rules": Array [
                                   "padding-top:30px;padding-bottom:30px;text-align:center;",
@@ -6678,7 +6678,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                 width={1}
                               >
                                 <div
-                                  className="c16 c4"
+                                  className="c4 c16"
                                   width={1}
                                 >
                                   <styles__LegalList>
@@ -6689,7 +6689,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__LegalList-ofz17a-15",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c17",
                                             "rules": Array [
                                               "list-style:none;padding:0;margin:0 20px 0 0;display:flex;align-self:baseline;justify-content:center;",
@@ -6728,7 +6728,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -6764,7 +6764,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -6809,7 +6809,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -6842,7 +6842,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -6937,7 +6937,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -6970,7 +6970,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -7065,7 +7065,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -7100,7 +7100,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -7143,7 +7143,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__LegalListItem-ofz17a-16",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c18",
                                                   "rules": Array [
                                                     "position:relative;padding:0 20px;&:not(:last-child){&:after{content:'|';color:",
@@ -7178,7 +7178,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "styles__LegalLink-ofz17a-17",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c19",
                                                         "rules": Array [
                                                           "color:",
@@ -7224,7 +7224,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "styles__LegalStrapline-ofz17a-14",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c20",
                                             "rules": Array [
                                               "color:",
