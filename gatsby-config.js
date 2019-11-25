@@ -15,9 +15,9 @@ module.exports = {
     siteUrl,
     name: 'Pride in London',
     legalName: 'London LGBT+ Community Pride CIC',
-    title: 'Pride in London',
+    title: 'Pride in London | 27th June 2020',
     description:
-      "This June and July, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances on July 6th 2019.",
+      "Pride in London. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
     appleAppId: '1250496471',
     phone: '+448443445428',
     email: 'info@prideinlondon.org',
