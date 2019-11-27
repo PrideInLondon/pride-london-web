@@ -8,6 +8,7 @@ const Video = ({ videoId }) => (
       allowFullScreen
       frameBorder="0"
       src={`https://www.youtube.com/embed/${videoId['en-GB']}`}
+      title="Youtube video"
     />
   </VideoContainer>
 )

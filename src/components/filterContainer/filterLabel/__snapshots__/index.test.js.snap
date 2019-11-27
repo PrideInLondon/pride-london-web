@@ -64,7 +64,7 @@ exports[`FilterLabel renders when not selected 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "cywyfl",
                   "rules": Array [],
                 },
@@ -222,7 +222,7 @@ exports[`FilterLabel renders when selected 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "cywyfl",
                   "rules": Array [],
                 },

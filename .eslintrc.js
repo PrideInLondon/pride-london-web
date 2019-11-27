@@ -1,5 +1,6 @@
 module.exports = {
-  "plugins": ["prettier", "react", "import", "react-hooks"],
+  "extends": ["prettier", "react-app", "plugin:import/typescript"],
+  "plugins": ["prettier", "react", "react-hooks", "@typescript-eslint"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
@@ -62,5 +63,34 @@ module.exports = {
     "semi": "off",
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
-  }
+  },
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      rules: {
+        "react/prop-types": "off",
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            args: 'none',
+            ignoreRestSiblings: true,
+          },
+        ],
+      },
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        ecmaFeatures: { jsx: true },
+        warnOnUnsupportedTypeScriptVersion: true,
+      },
+    },
+  ],
+  settings: {
+    'import/resolver': {
+      node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 }

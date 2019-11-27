@@ -20,6 +20,8 @@ function reducer(state, action) {
       return {
         isOpen: !state.isOpen,
       }
+    default:
+      return
   }
 }
 

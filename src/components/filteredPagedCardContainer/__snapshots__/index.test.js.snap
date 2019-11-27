@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilteredPagedCardContainer renders component with filter type "checkbox" 1`] = `
+exports[`FilteredPagedCardContainer renders component with filter type checkbox 1`] = `
 <Fragment>
   <FilterContainer
     categories={
@@ -62,7 +62,7 @@ exports[`FilteredPagedCardContainer renders component with filter type "checkbox
 </Fragment>
 `;
 
-exports[`FilteredPagedCardContainer renders component with filter type "radio" 1`] = `
+exports[`FilteredPagedCardContainer renders component with filter type radio 1`] = `
 <Fragment>
   <FilterContainer
     categories={
@@ -120,7 +120,7 @@ exports[`FilteredPagedCardContainer renders component with filter type "radio" 1
 </Fragment>
 `;
 
-exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards when the "show more" button is clicked 1`] = `
+exports[`FilteredPagedCardContainer with checkbox filter type shows more cards when the "show more" button is clicked 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -555,7 +555,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
                                     "componentId": "styles__FilterContainerWrapper-kd1mao-0",
-                                    "isStatic": true,
+                                    "isStatic": false,
                                     "lastClassName": "kWUFNq",
                                     "rules": Array [
                                       "display:flex;flex-wrap:wrap;justify-content:center;",
@@ -641,7 +641,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -798,7 +798,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -955,7 +955,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -1212,7 +1212,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -1368,7 +1367,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
               mx="auto"
             >
               <div
-                className="sc-bdVaJa pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm grid__Container-l0wsyy-0 eEEIRW"
+                className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
               >
                 <Row
                   flexWrap={null}
@@ -1488,7 +1487,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -1510,7 +1509,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -1689,7 +1687,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -1743,7 +1741,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -1765,7 +1763,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -1944,7 +1941,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -1998,7 +1995,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -2020,7 +2017,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -2199,7 +2195,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -2253,7 +2249,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -2275,7 +2271,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -2454,7 +2449,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -2508,7 +2503,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -2530,7 +2525,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -2709,7 +2703,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -2751,7 +2745,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type shows more cards
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to one page displayed on filter change 1`] = `
+exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one page displayed on filter change 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -3186,7 +3180,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
                                     "componentId": "styles__FilterContainerWrapper-kd1mao-0",
-                                    "isStatic": true,
+                                    "isStatic": false,
                                     "lastClassName": "kWUFNq",
                                     "rules": Array [
                                       "display:flex;flex-wrap:wrap;justify-content:center;",
@@ -3272,7 +3266,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -3429,7 +3423,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -3586,7 +3580,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -3759,7 +3753,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -3887,7 +3880,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
               mx="auto"
             >
               <div
-                className="sc-bdVaJa pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq grid__Container-l0wsyy-0 eEEIRW"
+                className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
               >
                 <Row
                   flexWrap={null}
@@ -4007,7 +4000,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -4029,7 +4022,6 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -4208,7 +4200,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -4605,7 +4597,7 @@ exports[`FilteredPagedCardContainer with "checkbox" filter type snaps back to on
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the selected filter category 1`] = `
+exports[`FilteredPagedCardContainer with checkbox shows only cards with the selected filter category 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -5019,7 +5011,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
                                     "componentId": "styles__FilterContainerWrapper-kd1mao-0",
-                                    "isStatic": true,
+                                    "isStatic": false,
                                     "lastClassName": "kWUFNq",
                                     "rules": Array [
                                       "display:flex;flex-wrap:wrap;justify-content:center;",
@@ -5105,7 +5097,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -5262,7 +5254,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -5419,7 +5411,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -5613,7 +5605,6 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -5748,7 +5739,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
               mx="auto"
             >
               <div
-                className="sc-bdVaJa pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm grid__Container-l0wsyy-0 eEEIRW"
+                className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
               >
                 <Row
                   flexWrap={null}
@@ -5868,7 +5859,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -5890,7 +5881,6 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -6069,7 +6059,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -6123,7 +6113,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -6145,7 +6135,6 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -6324,7 +6313,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -6366,7 +6355,7 @@ exports[`FilteredPagedCardContainer with "checkbox" shows only cards with the se
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "radio" filter type shows more cards when the "show more" button is clicked 1`] = `
+exports[`FilteredPagedCardContainer with radio filter type shows more cards when the "show more" button is clicked 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -6797,7 +6786,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
                                     "componentId": "styles__FilterContainerWrapper-kd1mao-0",
-                                    "isStatic": true,
+                                    "isStatic": false,
                                     "lastClassName": "kWUFNq",
                                     "rules": Array [
                                       "display:flex;flex-wrap:wrap;justify-content:center;",
@@ -6883,7 +6872,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -7040,7 +7029,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -7197,7 +7186,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -7454,7 +7443,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -7610,7 +7598,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
               mx="auto"
             >
               <div
-                className="sc-bdVaJa pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm grid__Container-l0wsyy-0 eEEIRW"
+                className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
               >
                 <Row
                   flexWrap={null}
@@ -7730,7 +7718,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -7752,7 +7740,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -7931,7 +7918,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -7985,7 +7972,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -8007,7 +7994,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -8186,7 +8172,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -8240,7 +8226,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -8262,7 +8248,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -8441,7 +8426,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -8495,7 +8480,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -8517,7 +8502,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -8696,7 +8680,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -8750,7 +8734,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -8772,7 +8756,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -8951,7 +8934,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -8993,7 +8976,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type shows more cards wh
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one page displayed on filter change 1`] = `
+exports[`FilteredPagedCardContainer with radio filter type snaps back to one page displayed on filter change 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -9424,7 +9407,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
                                     "componentId": "styles__FilterContainerWrapper-kd1mao-0",
-                                    "isStatic": true,
+                                    "isStatic": false,
                                     "lastClassName": "kWUFNq",
                                     "rules": Array [
                                       "display:flex;flex-wrap:wrap;justify-content:center;",
@@ -9510,7 +9493,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -9667,7 +9650,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -9824,7 +9807,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -9997,7 +9980,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -10125,7 +10107,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
               mx="auto"
             >
               <div
-                className="sc-bdVaJa pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq grid__Container-l0wsyy-0 eEEIRW"
+                className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
               >
                 <Row
                   flexWrap={null}
@@ -10245,7 +10227,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -10267,7 +10249,6 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -10446,7 +10427,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -10843,7 +10824,7 @@ exports[`FilteredPagedCardContainer with "radio" filter type snaps back to one p
 </FilteredPagedCardContainer>
 `;
 
-exports[`FilteredPagedCardContainer with "radio" shows only cards with the selected filter category 1`] = `
+exports[`FilteredPagedCardContainer with radio shows only cards with the selected filter category 1`] = `
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -11253,7 +11234,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
                                     "componentId": "styles__FilterContainerWrapper-kd1mao-0",
-                                    "isStatic": true,
+                                    "isStatic": false,
                                     "lastClassName": "kWUFNq",
                                     "rules": Array [
                                       "display:flex;flex-wrap:wrap;justify-content:center;",
@@ -11339,7 +11320,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -11496,7 +11477,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -11653,7 +11634,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "styles__Text-sc-1wu4f6z-1",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "cywyfl",
                                                   "rules": Array [],
                                                 },
@@ -11847,7 +11828,6 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
@@ -11982,7 +11962,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
               mx="auto"
             >
               <div
-                className="sc-bdVaJa pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm grid__Container-l0wsyy-0 eEEIRW"
+                className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
               >
                 <Row
                   flexWrap={null}
@@ -12102,7 +12082,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -12124,7 +12104,6 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -12303,7 +12282,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,
@@ -12357,7 +12336,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "grid__FlexColumn-l0wsyy-1",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "bsrdHZ",
                                   "rules": Array [
                                     "display:block;",
@@ -12379,7 +12358,6 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -12558,7 +12536,7 @@ exports[`FilteredPagedCardContainer with "radio" shows only cards with the selec
                                   }
                                 >
                                   <div
-                                    className="grid__FlexColumn-l0wsyy-1 bsrdHZ sc-bdVaJa koArko"
+                                    className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
                                     width={
                                       Array [
                                         1,

@@ -1,8 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
+
+import Link from 'gatsby-link'
+
 import theme from '../../theme/theme'
 import { handleUrl } from '../../utilities'
+
+interface CTALinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  to: string
+}
 
 const StyledLink = styled.a`
   border-bottom: 2px solid ${theme.colors.eucalyptusGreen};
@@ -17,17 +23,14 @@ const StyledLink = styled.a`
   &:focus {
     color: ${theme.colors.eucalyptusGreen};
   }
-`
+` as React.FC<
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & { as: 'a' | typeof Link }
+>
 
-const CTALink = ({ to, children }) => (
-  <StyledLink {...handleUrl(to)} className="cta-link">
+const CTALink: React.FC<CTALinkProps> = ({ to, children, ...props }) => (
+  <StyledLink {...handleUrl(to)} className="cta-link" {...props}>
     {children}&nbsp;&rsaquo;
   </StyledLink>
 )
-
-CTALink.propTypes = {
-  to: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-}
 
 export default CTALink
