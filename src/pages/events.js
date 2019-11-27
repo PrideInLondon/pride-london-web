@@ -157,10 +157,10 @@ class Events extends Component {
       <Consumer>
         {context => (
           <PageWrapper>
-            <Helmet title="What's on - LGBT+ events happening in and around London" />
+            <Helmet title="Coming Out - The new way to find the best queer events for the queer community from Pride in London." />
             <BannerImage
-              titleText="What's on"
-              subtitleText="Pride Festival: Jun 8 - Jul 6 2019"
+              titleText="Coming Out"
+              subtitleText="The new way to find the best queer events for the queer community from Pride in London."
               imageSrc={BannerImg}
               color={theme.colors.lightGrey}
               imageFullWidth
