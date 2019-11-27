@@ -54,7 +54,7 @@
     "querystring": "^0.2.0",
     "react-accessible-accordion": "^2.4.5",
     "react-dates": "16.7.0",
-    "react-flip-move": "^3.0.3",
+    "react-flip-move": "^3.0.4",
     "react-helmet": "^5.2.1",
     "react-intercom": "^1.0.15",
     "react-markdown": "^4.2.2",
