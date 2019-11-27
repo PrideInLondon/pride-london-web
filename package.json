@@ -52,7 +52,7 @@
     "no-scroll": "^2.1.1",
     "polished": "^3.4.0",
     "querystring": "^0.2.0",
-    "react-accessible-accordion": "^2.4.5",
+    "react-accessible-accordion": "^3.0.1",
     "react-dates": "16.7.0",
     "react-flip-move": "^3.0.3",
     "react-helmet": "^5.2.1",
