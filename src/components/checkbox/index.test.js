@@ -26,7 +26,7 @@ describe('Checkbox', () => {
 
   let wrapper
 
-  describe('Unit tests', () => {
+  describe('testing rendering', () => {
     beforeAll(() => {
       wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
     })
@@ -36,7 +36,8 @@ describe('Checkbox', () => {
         expect(wrapper).toMatchSnapshot()
       })
     })
-    describe('Inputs', () => {
+
+    describe('Props', () => {
       it('has id from props', () => {
         expect(wrapper.find('[type="checkbox"]').props().id).toBe(id)
       })
@@ -59,7 +60,7 @@ describe('Checkbox', () => {
     })
   })
 
-  describe('Intergration tests', () => {
+  describe('Testing functionality', () => {
     const event = { target: { checked: true } }
 
     it('toggles its checked state when changed', () => {

@@ -60,7 +60,7 @@ const Checkbox = ({ checked, handleChange, id, value, name, label }) => {
     setCheckedState(checked)
   }, [checked])
 
-  const toggleCheckbox = e => {
+  const toggleCheckboxHandler = e => {
     setCheckedState(e.target.checked)
 
     if (handleChange) {
@@ -75,7 +75,7 @@ const Checkbox = ({ checked, handleChange, id, value, name, label }) => {
         id={id}
         value={value}
         name={name}
-        onChange={toggleCheckbox}
+        onChange={toggleCheckboxHandler}
         checked={checkedState}
       />
       <Label htmlFor={id}>{label}</Label>
