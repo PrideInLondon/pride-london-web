@@ -24,6 +24,7 @@
     "!(*.test|*.stories).{ts,tsx}": "yarn tsc --skipLibCheck --strict --esModuleInterop --lib \"esnext, dom, dom.iterable\" --jsx preserve --typeRoots \"./@types, ./node_modules/@types\" --noEmit",
     "src/**/*.{js,json,ts,tsx}": [
       "eslint --fix",
+      "jest --findRelatedTests",
       "git add"
     ]
   },
