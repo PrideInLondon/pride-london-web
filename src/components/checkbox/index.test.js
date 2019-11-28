@@ -25,39 +25,41 @@ describe('Checkbox', () => {
   }
 
   let wrapper
-  beforeEach(() => {
-    wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
+
+  describe('Unit tests', () => {
+    beforeAll(() => {
+      wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
+    })
+
+    describe('Snapshot', () => {
+      it('renders', () => {
+        expect(wrapper).toMatchSnapshot()
+      })
+    })
+    describe('Inputs', () => {
+      it('has id from props', () => {
+        expect(wrapper.find('[type="checkbox"]').props().id).toBe(id)
+      })
+
+      it('has name from props', () => {
+        expect(wrapper.find('[type="checkbox"]').props().name).toBe(name)
+      })
+
+      it('has value from props', () => {
+        expect(wrapper.find('[type="checkbox"]').props().value).toBe(value)
+      })
+
+      it('has htmlFor from props', () => {
+        expect(wrapper.find('[htmlFor="test"]')).toHaveLength(1)
+      })
+
+      it('has text from props ', () => {
+        expect(wrapper.find('[htmlFor="test"]').text()).toBe(label)
+      })
+    })
   })
 
-  it('renders', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  describe('input', () => {
-    it('has id from props', () => {
-      expect(wrapper.find('[type="checkbox"]').props().id).toBe(id)
-    })
-
-    it('has name from props', () => {
-      expect(wrapper.find('[type="checkbox"]').props().name).toBe(name)
-    })
-
-    it('has value from props', () => {
-      expect(wrapper.find('[type="checkbox"]').props().value).toBe(value)
-    })
-  })
-
-  describe('label', () => {
-    it('has htmlFor from props', () => {
-      expect(wrapper.find('[htmlFor="test"]')).toHaveLength(1)
-    })
-
-    it('has text from props ', () => {
-      expect(wrapper.find('[htmlFor="test"]').text()).toBe(label)
-    })
-  })
-
-  describe('events', () => {
+  describe('Intergration tests', () => {
     const event = { target: { checked: true } }
 
     it('toggles its checked state when changed', () => {
@@ -68,6 +70,7 @@ describe('Checkbox', () => {
     })
 
     it('fires the handleChange prop with an event when changed', () => {
+      wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
       wrapper.find('#test').simulate('change', event)
       expect(handleChange).toHaveBeenCalledWith(event)
     })
