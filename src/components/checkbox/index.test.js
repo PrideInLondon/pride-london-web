@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import theme from '../../theme/theme'
 import Checkbox from './'
 import 'jest-styled-components'
@@ -57,10 +57,11 @@ describe('Checkbox', () => {
   describe('events', () => {
     const event = { target: { checked: true } }
 
-    xit('toggles its checked state when changed', () => {
-      expect(wrapper.state().checked).toBeFalsy()
-      wrapper.find('#test').simulate('change', event)
-      expect(wrapper.state().checked).toBeTruthy()
+    it('toggles its checked state when changed', () => {
+      wrapper = mount(<Checkbox {...props} />, { context: { theme } })
+      wrapper.find('checkbox__Input').simulate('change', event)
+      const { checked } = wrapper.find('checkbox__Input').props()
+      expect(checked).toEqual(true)
     })
 
     it('fires the handleChange prop with an event when changed', () => {
