@@ -212,8 +212,9 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
             <NavItem
               item={
                 Object {
+                  "description": "Explore London. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
                   "id": "nav-visitor-info",
-                  "title": "Explore London",
+                  "title": "Explore London | Pride in London",
                   "url": "/explore-london",
                 }
               }
