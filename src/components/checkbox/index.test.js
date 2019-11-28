@@ -24,7 +24,10 @@ describe('Checkbox', () => {
     checked,
   }
 
-  const wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
+  let wrapper
+  beforeEach(() => {
+    wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
+  })
 
   it('renders', () => {
     expect(wrapper).toMatchSnapshot()
