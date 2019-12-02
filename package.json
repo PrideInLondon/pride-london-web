@@ -25,6 +25,7 @@
     "src/**/*.{js,json,ts,tsx}": [
       "eslint --fix",
       "stylelint",
+      "jest --findRelatedTests",
       "git add"
     ]
   },
