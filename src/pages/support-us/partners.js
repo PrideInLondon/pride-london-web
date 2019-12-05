@@ -16,7 +16,7 @@ import BannerImg from '../../theme/assets/images/banners/sponsors/bg@2x.jpg'
 import PageIntro from '../../components/pageIntro'
 
 const ppLink =
-  'https://assets.ctfassets.net/0ho16wyr4i9n/37Lg8PnUVi1t08XEjPUyuz/7d445d8622f55a85fe394ab861b51407/Partnership_Packages_2019.pptx'
+  'https://assets.ctfassets.net/0ho16wyr4i9n/2qiM6XcxpwmT2YY9g2hka/361aba69bffe4592f898f15faf61beff/Pride_in_London_2020_Partnerships.pdf'
 
 const ListTitle = styled.h2`
   margin-top: 0;
@@ -107,7 +107,7 @@ const Sponsors = ({ data }) => {
         </p>
         <p>
           For more information download information on the{' '}
-          <a href={ppLink}>2019 Partnership Packages.</a>
+          <a href={ppLink}>2020 Partnership Packages.</a>
         </p>
       </PageIntro>
       <Container>
