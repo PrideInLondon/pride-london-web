@@ -34,7 +34,7 @@
     "@rebass/grid": "^6.0.0",
     "debounce": "^1.2.0",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.18.5",
+    "gatsby": "^2.18.7",
     "gatsby-image": "^2.2.34",
     "gatsby-link": "^2.2.25",
     "gatsby-plugin-layout": "^1.1.16",
