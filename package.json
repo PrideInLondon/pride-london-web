@@ -111,6 +111,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.9.0",
     "react-dom": "^16.12.0",
+    "short-hash": "^1.0.0",
+    "slugify": "^1.3.6",
     "stylelint": "^12.0.0",
     "stylelint-a11y": "^1.2.2",
     "stylelint-config-prettier": "^6.0.0",

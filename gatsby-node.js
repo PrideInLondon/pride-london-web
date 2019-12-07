@@ -1,5 +1,7 @@
 const path = require('path')
 const moment = require('moment')
+const slugify = require('slugify')
+const shortHash = require('short-hash')
 const {
   sanitizeDates,
   getDuration,
@@ -85,7 +87,9 @@ exports.createPages = async ({ graphql, actions }) => {
             // as a template component. The `context` is
             // optional but is often necessary so the template
             // can query data specific to each page.
-            path: `/events/${edge.node.id}/`,
+            path: `/events/${slugify(edge.node.name, {
+              lower: true,
+            })}-${shortHash(edge.node.id)}/`,
             component: eventTemplate,
             context: {
               id: edge.node.id,
@@ -112,7 +116,9 @@ exports.createPages = async ({ graphql, actions }) => {
             .toISOString()
           if (filterPastEvents(endTime)) {
             createPage({
-              path: `/events/${customId}/`,
+              path: `/events/${slugify(edge.node.name, {
+                lower: true,
+              })}-${shortHash(customId)}/`,
               component: eventTemplate,
               context: {
                 id: edge.node.id,
@@ -141,7 +147,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === 'build-html') {
-    actions.setWebpackConfig({ 
+    actions.setWebpackConfig({
       module: {
         rules: [
           {
@@ -149,7 +155,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             use: loaders.null(),
           },
         ],
-      }
+      },
     })
   }
 }
