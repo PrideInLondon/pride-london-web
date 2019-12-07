@@ -68,7 +68,8 @@
     "slick-carousel": "^1.8.1",
     "string-hash": "^1.1.3",
     "styled-components": "^4.4.1",
-    "tinycolor2": "^1.4.1"
+    "tinycolor2": "^1.4.1",
+    "uuid-encoder": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

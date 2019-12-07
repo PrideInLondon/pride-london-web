@@ -1,5 +1,8 @@
 const moment = require('moment')
+const UuidEncoder = require('uuid-encoder')
 const { dateFormat } = require('../../../constants')
+
+const encoder = new UuidEncoder('base62')
 
 const formatPrice = (eventPriceLow, eventPriceHigh) => {
   if (eventPriceLow === 0 && (eventPriceHigh === 0 || eventPriceHigh == null)) {
@@ -165,6 +168,22 @@ function getDuration(start, end) {
   return moment(end).diff(moment(start))
 }
 
+const generateNameForEventSlug = name =>
+  name
+    .replace(/[.,/#!$%^&*;:{}=_`~()]/g, '') // remove punctuation
+    .split(' ')
+    .filter(key => key && key !== '-')
+    .join('-')
+    .toLowerCase()
+
+const generateEventSlug = ({ id, name }) =>
+  `${generateNameForEventSlug(name)}-${encoder.encode(id)}`
+
+const extractEventIdFromSlug = slug => {
+  const [encodedId] = slug.split('-').slice(-1)
+  return encoder.decode(encodedId)
+}
+
 module.exports = {
   formatDate,
   formatTime,
@@ -178,4 +197,7 @@ module.exports = {
   filterByLimit,
   sanitizeDates,
   getDuration,
+  generateNameForEventSlug,
+  generateEventSlug,
+  extractEventIdFromSlug,
 }
