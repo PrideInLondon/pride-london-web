@@ -3,24 +3,24 @@
 exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 .c4 {
   box-sizing: border-box;
+  width: 100%;
+  padding-right: 4px;
+  padding-left: 4px;
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 4px;
-  padding-right: 4px;
-  width: 100%;
 }
 
 .c2 {
   box-sizing: border-box;
-  margin-left: 4px;
   margin-right: 4px;
+  margin-left: 4px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .c15 {
@@ -272,43 +272,43 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 
 @media screen and (min-width:40em) {
   .c4 {
-    padding-left: 8px;
     padding-right: 8px;
+    padding-left: 8px;
   }
 }
 
 @media screen and (min-width:52em) {
   .c4 {
-    padding-left: 8px;
     padding-right: 8px;
+    padding-left: 8px;
   }
 }
 
 @media screen and (min-width:64em) {
   .c4 {
-    padding-left: 16px;
     padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
 @media screen and (min-width:40em) {
   .c2 {
-    margin-left: 10px;
     margin-right: 10px;
+    margin-left: 10px;
   }
 }
 
 @media screen and (min-width:52em) {
   .c2 {
-    margin-left: 40px;
     margin-right: 40px;
+    margin-left: 40px;
   }
 }
 
 @media screen and (min-width:64em) {
   .c2 {
-    margin-left: 75px;
     margin-right: 75px;
+    margin-left: 75px;
   }
 }
 
@@ -686,37 +686,87 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-bwzfXH",
+                          "componentId": "src__Flex-sc-1sbtrzs-1",
                           "isStatic": false,
                           "lastClassName": "c2",
                           "rules": Array [
                             "box-sizing: border-box;",
                             [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
                             "display: flex;",
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
                           ],
                         },
                         "displayName": "Flex",
                         "foldedComponentIds": Array [
-                          "sc-bdVaJa",
+                          "src__Box-sc-1sbtrzs-0",
                         ],
                         "propTypes": Object {
+                          "alignContent": [Function],
                           "alignItems": [Function],
+                          "alignSelf": [Function],
+                          "backgroundColor": [Function],
+                          "bg": [Function],
+                          "color": [Function],
+                          "display": [Function],
+                          "flex": [Function],
+                          "flexBasis": [Function],
                           "flexDirection": [Function],
+                          "flexGrow": [Function],
+                          "flexShrink": [Function],
                           "flexWrap": [Function],
+                          "fontFamily": [Function],
+                          "fontSize": [Function],
+                          "fontStyle": [Function],
+                          "fontWeight": [Function],
+                          "height": [Function],
                           "justifyContent": [Function],
+                          "justifyItems": [Function],
+                          "justifySelf": [Function],
+                          "letterSpacing": [Function],
+                          "lineHeight": [Function],
+                          "m": [Function],
+                          "margin": [Function],
+                          "marginBottom": [Function],
+                          "marginLeft": [Function],
+                          "marginRight": [Function],
+                          "marginTop": [Function],
+                          "marginX": [Function],
+                          "marginY": [Function],
+                          "maxHeight": [Function],
+                          "maxWidth": [Function],
+                          "mb": [Function],
+                          "minHeight": [Function],
+                          "minWidth": [Function],
+                          "ml": [Function],
+                          "mr": [Function],
+                          "mt": [Function],
+                          "mx": [Function],
+                          "my": [Function],
+                          "opacity": [Function],
+                          "order": [Function],
+                          "overflow": [Function],
+                          "overflowX": [Function],
+                          "overflowY": [Function],
+                          "p": [Function],
+                          "padding": [Function],
+                          "paddingBottom": [Function],
+                          "paddingLeft": [Function],
+                          "paddingRight": [Function],
+                          "paddingTop": [Function],
+                          "paddingX": [Function],
+                          "paddingY": [Function],
+                          "pb": [Function],
+                          "pl": [Function],
+                          "pr": [Function],
+                          "pt": [Function],
+                          "px": [Function],
+                          "py": [Function],
+                          "size": [Function],
+                          "textAlign": [Function],
+                          "verticalAlign": [Function],
+                          "width": [Function],
                         },
                         "render": [Function],
-                        "styledComponentId": "sc-bwzfXH",
+                        "styledComponentId": "src__Flex-sc-1sbtrzs-1",
                         "target": "div",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -825,51 +875,84 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bdVaJa",
+                                      "componentId": "src__Box-sc-1sbtrzs-0",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "box-sizing: border-box;",
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
                                         [Function],
                                       ],
                                     },
                                     "displayName": "Box",
                                     "foldedComponentIds": Array [],
                                     "propTypes": Object {
+                                      "alignContent": [Function],
+                                      "alignItems": [Function],
+                                      "alignSelf": [Function],
                                       "backgroundColor": [Function],
                                       "bg": [Function],
                                       "color": [Function],
+                                      "display": [Function],
+                                      "flex": [Function],
+                                      "flexBasis": [Function],
+                                      "flexDirection": [Function],
+                                      "flexGrow": [Function],
+                                      "flexShrink": [Function],
+                                      "flexWrap": [Function],
+                                      "fontFamily": [Function],
                                       "fontSize": [Function],
+                                      "fontStyle": [Function],
+                                      "fontWeight": [Function],
+                                      "height": [Function],
+                                      "justifyContent": [Function],
+                                      "justifyItems": [Function],
+                                      "justifySelf": [Function],
+                                      "letterSpacing": [Function],
+                                      "lineHeight": [Function],
                                       "m": [Function],
                                       "margin": [Function],
                                       "marginBottom": [Function],
                                       "marginLeft": [Function],
                                       "marginRight": [Function],
                                       "marginTop": [Function],
+                                      "marginX": [Function],
+                                      "marginY": [Function],
+                                      "maxHeight": [Function],
+                                      "maxWidth": [Function],
                                       "mb": [Function],
+                                      "minHeight": [Function],
+                                      "minWidth": [Function],
                                       "ml": [Function],
                                       "mr": [Function],
                                       "mt": [Function],
+                                      "mx": [Function],
+                                      "my": [Function],
+                                      "opacity": [Function],
+                                      "order": [Function],
+                                      "overflow": [Function],
+                                      "overflowX": [Function],
+                                      "overflowY": [Function],
                                       "p": [Function],
                                       "padding": [Function],
                                       "paddingBottom": [Function],
                                       "paddingLeft": [Function],
                                       "paddingRight": [Function],
                                       "paddingTop": [Function],
+                                      "paddingX": [Function],
+                                      "paddingY": [Function],
                                       "pb": [Function],
                                       "pl": [Function],
                                       "pr": [Function],
                                       "pt": [Function],
+                                      "px": [Function],
+                                      "py": [Function],
+                                      "size": [Function],
+                                      "textAlign": [Function],
+                                      "verticalAlign": [Function],
                                       "width": [Function],
                                     },
                                     "render": [Function],
-                                    "styledComponentId": "sc-bdVaJa",
+                                    "styledComponentId": "src__Box-sc-1sbtrzs-0",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -1849,51 +1932,84 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bdVaJa",
+                                      "componentId": "src__Box-sc-1sbtrzs-0",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "box-sizing: border-box;",
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
                                         [Function],
                                       ],
                                     },
                                     "displayName": "Box",
                                     "foldedComponentIds": Array [],
                                     "propTypes": Object {
+                                      "alignContent": [Function],
+                                      "alignItems": [Function],
+                                      "alignSelf": [Function],
                                       "backgroundColor": [Function],
                                       "bg": [Function],
                                       "color": [Function],
+                                      "display": [Function],
+                                      "flex": [Function],
+                                      "flexBasis": [Function],
+                                      "flexDirection": [Function],
+                                      "flexGrow": [Function],
+                                      "flexShrink": [Function],
+                                      "flexWrap": [Function],
+                                      "fontFamily": [Function],
                                       "fontSize": [Function],
+                                      "fontStyle": [Function],
+                                      "fontWeight": [Function],
+                                      "height": [Function],
+                                      "justifyContent": [Function],
+                                      "justifyItems": [Function],
+                                      "justifySelf": [Function],
+                                      "letterSpacing": [Function],
+                                      "lineHeight": [Function],
                                       "m": [Function],
                                       "margin": [Function],
                                       "marginBottom": [Function],
                                       "marginLeft": [Function],
                                       "marginRight": [Function],
                                       "marginTop": [Function],
+                                      "marginX": [Function],
+                                      "marginY": [Function],
+                                      "maxHeight": [Function],
+                                      "maxWidth": [Function],
                                       "mb": [Function],
+                                      "minHeight": [Function],
+                                      "minWidth": [Function],
                                       "ml": [Function],
                                       "mr": [Function],
                                       "mt": [Function],
+                                      "mx": [Function],
+                                      "my": [Function],
+                                      "opacity": [Function],
+                                      "order": [Function],
+                                      "overflow": [Function],
+                                      "overflowX": [Function],
+                                      "overflowY": [Function],
                                       "p": [Function],
                                       "padding": [Function],
                                       "paddingBottom": [Function],
                                       "paddingLeft": [Function],
                                       "paddingRight": [Function],
                                       "paddingTop": [Function],
+                                      "paddingX": [Function],
+                                      "paddingY": [Function],
                                       "pb": [Function],
                                       "pl": [Function],
                                       "pr": [Function],
                                       "pt": [Function],
+                                      "px": [Function],
+                                      "py": [Function],
+                                      "size": [Function],
+                                      "textAlign": [Function],
+                                      "verticalAlign": [Function],
                                       "width": [Function],
                                     },
                                     "render": [Function],
-                                    "styledComponentId": "sc-bdVaJa",
+                                    "styledComponentId": "src__Box-sc-1sbtrzs-0",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -2702,7 +2818,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         <CTALink
                                           to="/support-us/partners"
                                         >
-                                          <ctaLink__StyledLink
+                                          <CTALink__StyledLink
                                             as={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -2725,7 +2841,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "ctaLink__StyledLink-jwjl82-0",
+                                                    "componentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                                     "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
@@ -2738,10 +2854,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       ";}",
                                                     ],
                                                   },
-                                                  "displayName": "ctaLink__StyledLink",
+                                                  "displayName": "CTALink__StyledLink",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
+                                                  "styledComponentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                                   "target": "a",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -2811,13 +2927,13 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 </GatsbyLink>
                                               </ForwardRef>
                                             </StyledComponent>
-                                          </ctaLink__StyledLink>
+                                          </CTALink__StyledLink>
                                         </CTALink>
                                         <CTALink
                                           contact={true}
                                           to="mailto:sponsor@prideinlondon.org"
                                         >
-                                          <ctaLink__StyledLink
+                                          <CTALink__StyledLink
                                             as="a"
                                             className="cta-link"
                                             contact={true}
@@ -2833,7 +2949,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "ctaLink__StyledLink-jwjl82-0",
+                                                    "componentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                                     "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
@@ -2846,10 +2962,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       ";}",
                                                     ],
                                                   },
-                                                  "displayName": "ctaLink__StyledLink",
+                                                  "displayName": "CTALink__StyledLink",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
+                                                  "styledComponentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                                   "target": "a",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -2869,7 +2985,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                  ›
                                               </a>
                                             </StyledComponent>
-                                          </ctaLink__StyledLink>
+                                          </CTALink__StyledLink>
                                         </CTALink>
                                       </div>
                                     </StyledComponent>
@@ -2960,51 +3076,84 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bdVaJa",
+                                      "componentId": "src__Box-sc-1sbtrzs-0",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "box-sizing: border-box;",
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
                                         [Function],
                                       ],
                                     },
                                     "displayName": "Box",
                                     "foldedComponentIds": Array [],
                                     "propTypes": Object {
+                                      "alignContent": [Function],
+                                      "alignItems": [Function],
+                                      "alignSelf": [Function],
                                       "backgroundColor": [Function],
                                       "bg": [Function],
                                       "color": [Function],
+                                      "display": [Function],
+                                      "flex": [Function],
+                                      "flexBasis": [Function],
+                                      "flexDirection": [Function],
+                                      "flexGrow": [Function],
+                                      "flexShrink": [Function],
+                                      "flexWrap": [Function],
+                                      "fontFamily": [Function],
                                       "fontSize": [Function],
+                                      "fontStyle": [Function],
+                                      "fontWeight": [Function],
+                                      "height": [Function],
+                                      "justifyContent": [Function],
+                                      "justifyItems": [Function],
+                                      "justifySelf": [Function],
+                                      "letterSpacing": [Function],
+                                      "lineHeight": [Function],
                                       "m": [Function],
                                       "margin": [Function],
                                       "marginBottom": [Function],
                                       "marginLeft": [Function],
                                       "marginRight": [Function],
                                       "marginTop": [Function],
+                                      "marginX": [Function],
+                                      "marginY": [Function],
+                                      "maxHeight": [Function],
+                                      "maxWidth": [Function],
                                       "mb": [Function],
+                                      "minHeight": [Function],
+                                      "minWidth": [Function],
                                       "ml": [Function],
                                       "mr": [Function],
                                       "mt": [Function],
+                                      "mx": [Function],
+                                      "my": [Function],
+                                      "opacity": [Function],
+                                      "order": [Function],
+                                      "overflow": [Function],
+                                      "overflowX": [Function],
+                                      "overflowY": [Function],
                                       "p": [Function],
                                       "padding": [Function],
                                       "paddingBottom": [Function],
                                       "paddingLeft": [Function],
                                       "paddingRight": [Function],
                                       "paddingTop": [Function],
+                                      "paddingX": [Function],
+                                      "paddingY": [Function],
                                       "pb": [Function],
                                       "pl": [Function],
                                       "pr": [Function],
                                       "pt": [Function],
+                                      "px": [Function],
+                                      "py": [Function],
+                                      "size": [Function],
+                                      "textAlign": [Function],
+                                      "verticalAlign": [Function],
                                       "width": [Function],
                                     },
                                     "render": [Function],
-                                    "styledComponentId": "sc-bdVaJa",
+                                    "styledComponentId": "src__Box-sc-1sbtrzs-0",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -3646,24 +3795,24 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 .c4 {
   box-sizing: border-box;
+  width: 100%;
+  padding-right: 4px;
+  padding-left: 4px;
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 4px;
-  padding-right: 4px;
-  width: 100%;
 }
 
 .c2 {
   box-sizing: border-box;
-  margin-left: 4px;
   margin-right: 4px;
+  margin-left: 4px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .c15 {
@@ -3915,43 +4064,43 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 
 @media screen and (min-width:40em) {
   .c4 {
-    padding-left: 8px;
     padding-right: 8px;
+    padding-left: 8px;
   }
 }
 
 @media screen and (min-width:52em) {
   .c4 {
-    padding-left: 8px;
     padding-right: 8px;
+    padding-left: 8px;
   }
 }
 
 @media screen and (min-width:64em) {
   .c4 {
-    padding-left: 16px;
     padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
 @media screen and (min-width:40em) {
   .c2 {
-    margin-left: 10px;
     margin-right: 10px;
+    margin-left: 10px;
   }
 }
 
 @media screen and (min-width:52em) {
   .c2 {
-    margin-left: 40px;
     margin-right: 40px;
+    margin-left: 40px;
   }
 }
 
 @media screen and (min-width:64em) {
   .c2 {
-    margin-left: 75px;
     margin-right: 75px;
+    margin-left: 75px;
   }
 }
 
@@ -4329,37 +4478,87 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-bwzfXH",
+                          "componentId": "src__Flex-sc-1sbtrzs-1",
                           "isStatic": false,
                           "lastClassName": "c2",
                           "rules": Array [
                             "box-sizing: border-box;",
                             [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
                             "display: flex;",
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
                           ],
                         },
                         "displayName": "Flex",
                         "foldedComponentIds": Array [
-                          "sc-bdVaJa",
+                          "src__Box-sc-1sbtrzs-0",
                         ],
                         "propTypes": Object {
+                          "alignContent": [Function],
                           "alignItems": [Function],
+                          "alignSelf": [Function],
+                          "backgroundColor": [Function],
+                          "bg": [Function],
+                          "color": [Function],
+                          "display": [Function],
+                          "flex": [Function],
+                          "flexBasis": [Function],
                           "flexDirection": [Function],
+                          "flexGrow": [Function],
+                          "flexShrink": [Function],
                           "flexWrap": [Function],
+                          "fontFamily": [Function],
+                          "fontSize": [Function],
+                          "fontStyle": [Function],
+                          "fontWeight": [Function],
+                          "height": [Function],
                           "justifyContent": [Function],
+                          "justifyItems": [Function],
+                          "justifySelf": [Function],
+                          "letterSpacing": [Function],
+                          "lineHeight": [Function],
+                          "m": [Function],
+                          "margin": [Function],
+                          "marginBottom": [Function],
+                          "marginLeft": [Function],
+                          "marginRight": [Function],
+                          "marginTop": [Function],
+                          "marginX": [Function],
+                          "marginY": [Function],
+                          "maxHeight": [Function],
+                          "maxWidth": [Function],
+                          "mb": [Function],
+                          "minHeight": [Function],
+                          "minWidth": [Function],
+                          "ml": [Function],
+                          "mr": [Function],
+                          "mt": [Function],
+                          "mx": [Function],
+                          "my": [Function],
+                          "opacity": [Function],
+                          "order": [Function],
+                          "overflow": [Function],
+                          "overflowX": [Function],
+                          "overflowY": [Function],
+                          "p": [Function],
+                          "padding": [Function],
+                          "paddingBottom": [Function],
+                          "paddingLeft": [Function],
+                          "paddingRight": [Function],
+                          "paddingTop": [Function],
+                          "paddingX": [Function],
+                          "paddingY": [Function],
+                          "pb": [Function],
+                          "pl": [Function],
+                          "pr": [Function],
+                          "pt": [Function],
+                          "px": [Function],
+                          "py": [Function],
+                          "size": [Function],
+                          "textAlign": [Function],
+                          "verticalAlign": [Function],
+                          "width": [Function],
                         },
                         "render": [Function],
-                        "styledComponentId": "sc-bwzfXH",
+                        "styledComponentId": "src__Flex-sc-1sbtrzs-1",
                         "target": "div",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -4468,51 +4667,84 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bdVaJa",
+                                      "componentId": "src__Box-sc-1sbtrzs-0",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "box-sizing: border-box;",
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
                                         [Function],
                                       ],
                                     },
                                     "displayName": "Box",
                                     "foldedComponentIds": Array [],
                                     "propTypes": Object {
+                                      "alignContent": [Function],
+                                      "alignItems": [Function],
+                                      "alignSelf": [Function],
                                       "backgroundColor": [Function],
                                       "bg": [Function],
                                       "color": [Function],
+                                      "display": [Function],
+                                      "flex": [Function],
+                                      "flexBasis": [Function],
+                                      "flexDirection": [Function],
+                                      "flexGrow": [Function],
+                                      "flexShrink": [Function],
+                                      "flexWrap": [Function],
+                                      "fontFamily": [Function],
                                       "fontSize": [Function],
+                                      "fontStyle": [Function],
+                                      "fontWeight": [Function],
+                                      "height": [Function],
+                                      "justifyContent": [Function],
+                                      "justifyItems": [Function],
+                                      "justifySelf": [Function],
+                                      "letterSpacing": [Function],
+                                      "lineHeight": [Function],
                                       "m": [Function],
                                       "margin": [Function],
                                       "marginBottom": [Function],
                                       "marginLeft": [Function],
                                       "marginRight": [Function],
                                       "marginTop": [Function],
+                                      "marginX": [Function],
+                                      "marginY": [Function],
+                                      "maxHeight": [Function],
+                                      "maxWidth": [Function],
                                       "mb": [Function],
+                                      "minHeight": [Function],
+                                      "minWidth": [Function],
                                       "ml": [Function],
                                       "mr": [Function],
                                       "mt": [Function],
+                                      "mx": [Function],
+                                      "my": [Function],
+                                      "opacity": [Function],
+                                      "order": [Function],
+                                      "overflow": [Function],
+                                      "overflowX": [Function],
+                                      "overflowY": [Function],
                                       "p": [Function],
                                       "padding": [Function],
                                       "paddingBottom": [Function],
                                       "paddingLeft": [Function],
                                       "paddingRight": [Function],
                                       "paddingTop": [Function],
+                                      "paddingX": [Function],
+                                      "paddingY": [Function],
                                       "pb": [Function],
                                       "pl": [Function],
                                       "pr": [Function],
                                       "pt": [Function],
+                                      "px": [Function],
+                                      "py": [Function],
+                                      "size": [Function],
+                                      "textAlign": [Function],
+                                      "verticalAlign": [Function],
                                       "width": [Function],
                                     },
                                     "render": [Function],
-                                    "styledComponentId": "sc-bdVaJa",
+                                    "styledComponentId": "src__Box-sc-1sbtrzs-0",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -5492,51 +5724,84 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bdVaJa",
+                                      "componentId": "src__Box-sc-1sbtrzs-0",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "box-sizing: border-box;",
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
                                         [Function],
                                       ],
                                     },
                                     "displayName": "Box",
                                     "foldedComponentIds": Array [],
                                     "propTypes": Object {
+                                      "alignContent": [Function],
+                                      "alignItems": [Function],
+                                      "alignSelf": [Function],
                                       "backgroundColor": [Function],
                                       "bg": [Function],
                                       "color": [Function],
+                                      "display": [Function],
+                                      "flex": [Function],
+                                      "flexBasis": [Function],
+                                      "flexDirection": [Function],
+                                      "flexGrow": [Function],
+                                      "flexShrink": [Function],
+                                      "flexWrap": [Function],
+                                      "fontFamily": [Function],
                                       "fontSize": [Function],
+                                      "fontStyle": [Function],
+                                      "fontWeight": [Function],
+                                      "height": [Function],
+                                      "justifyContent": [Function],
+                                      "justifyItems": [Function],
+                                      "justifySelf": [Function],
+                                      "letterSpacing": [Function],
+                                      "lineHeight": [Function],
                                       "m": [Function],
                                       "margin": [Function],
                                       "marginBottom": [Function],
                                       "marginLeft": [Function],
                                       "marginRight": [Function],
                                       "marginTop": [Function],
+                                      "marginX": [Function],
+                                      "marginY": [Function],
+                                      "maxHeight": [Function],
+                                      "maxWidth": [Function],
                                       "mb": [Function],
+                                      "minHeight": [Function],
+                                      "minWidth": [Function],
                                       "ml": [Function],
                                       "mr": [Function],
                                       "mt": [Function],
+                                      "mx": [Function],
+                                      "my": [Function],
+                                      "opacity": [Function],
+                                      "order": [Function],
+                                      "overflow": [Function],
+                                      "overflowX": [Function],
+                                      "overflowY": [Function],
                                       "p": [Function],
                                       "padding": [Function],
                                       "paddingBottom": [Function],
                                       "paddingLeft": [Function],
                                       "paddingRight": [Function],
                                       "paddingTop": [Function],
+                                      "paddingX": [Function],
+                                      "paddingY": [Function],
                                       "pb": [Function],
                                       "pl": [Function],
                                       "pr": [Function],
                                       "pt": [Function],
+                                      "px": [Function],
+                                      "py": [Function],
+                                      "size": [Function],
+                                      "textAlign": [Function],
+                                      "verticalAlign": [Function],
                                       "width": [Function],
                                     },
                                     "render": [Function],
-                                    "styledComponentId": "sc-bdVaJa",
+                                    "styledComponentId": "src__Box-sc-1sbtrzs-0",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -6345,7 +6610,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         <CTALink
                                           to="/support-us/partners"
                                         >
-                                          <ctaLink__StyledLink
+                                          <CTALink__StyledLink
                                             as={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
@@ -6368,7 +6633,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "ctaLink__StyledLink-jwjl82-0",
+                                                    "componentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                                     "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
@@ -6381,10 +6646,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       ";}",
                                                     ],
                                                   },
-                                                  "displayName": "ctaLink__StyledLink",
+                                                  "displayName": "CTALink__StyledLink",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
+                                                  "styledComponentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                                   "target": "a",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -6454,13 +6719,13 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 </GatsbyLink>
                                               </ForwardRef>
                                             </StyledComponent>
-                                          </ctaLink__StyledLink>
+                                          </CTALink__StyledLink>
                                         </CTALink>
                                         <CTALink
                                           contact={true}
                                           to="mailto:sponsor@prideinlondon.org"
                                         >
-                                          <ctaLink__StyledLink
+                                          <CTALink__StyledLink
                                             as="a"
                                             className="cta-link"
                                             contact={true}
@@ -6476,7 +6741,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "ctaLink__StyledLink-jwjl82-0",
+                                                    "componentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                                     "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
@@ -6489,10 +6754,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       ";}",
                                                     ],
                                                   },
-                                                  "displayName": "ctaLink__StyledLink",
+                                                  "displayName": "CTALink__StyledLink",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
+                                                  "styledComponentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                                   "target": "a",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -6512,7 +6777,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                  ›
                                               </a>
                                             </StyledComponent>
-                                          </ctaLink__StyledLink>
+                                          </CTALink__StyledLink>
                                         </CTALink>
                                       </div>
                                     </StyledComponent>
@@ -6603,51 +6868,84 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bdVaJa",
+                                      "componentId": "src__Box-sc-1sbtrzs-0",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "box-sizing: border-box;",
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
                                         [Function],
                                       ],
                                     },
                                     "displayName": "Box",
                                     "foldedComponentIds": Array [],
                                     "propTypes": Object {
+                                      "alignContent": [Function],
+                                      "alignItems": [Function],
+                                      "alignSelf": [Function],
                                       "backgroundColor": [Function],
                                       "bg": [Function],
                                       "color": [Function],
+                                      "display": [Function],
+                                      "flex": [Function],
+                                      "flexBasis": [Function],
+                                      "flexDirection": [Function],
+                                      "flexGrow": [Function],
+                                      "flexShrink": [Function],
+                                      "flexWrap": [Function],
+                                      "fontFamily": [Function],
                                       "fontSize": [Function],
+                                      "fontStyle": [Function],
+                                      "fontWeight": [Function],
+                                      "height": [Function],
+                                      "justifyContent": [Function],
+                                      "justifyItems": [Function],
+                                      "justifySelf": [Function],
+                                      "letterSpacing": [Function],
+                                      "lineHeight": [Function],
                                       "m": [Function],
                                       "margin": [Function],
                                       "marginBottom": [Function],
                                       "marginLeft": [Function],
                                       "marginRight": [Function],
                                       "marginTop": [Function],
+                                      "marginX": [Function],
+                                      "marginY": [Function],
+                                      "maxHeight": [Function],
+                                      "maxWidth": [Function],
                                       "mb": [Function],
+                                      "minHeight": [Function],
+                                      "minWidth": [Function],
                                       "ml": [Function],
                                       "mr": [Function],
                                       "mt": [Function],
+                                      "mx": [Function],
+                                      "my": [Function],
+                                      "opacity": [Function],
+                                      "order": [Function],
+                                      "overflow": [Function],
+                                      "overflowX": [Function],
+                                      "overflowY": [Function],
                                       "p": [Function],
                                       "padding": [Function],
                                       "paddingBottom": [Function],
                                       "paddingLeft": [Function],
                                       "paddingRight": [Function],
                                       "paddingTop": [Function],
+                                      "paddingX": [Function],
+                                      "paddingY": [Function],
                                       "pb": [Function],
                                       "pl": [Function],
                                       "pr": [Function],
                                       "pt": [Function],
+                                      "px": [Function],
+                                      "py": [Function],
+                                      "size": [Function],
+                                      "textAlign": [Function],
+                                      "verticalAlign": [Function],
                                       "width": [Function],
                                     },
                                     "render": [Function],
-                                    "styledComponentId": "sc-bdVaJa",
+                                    "styledComponentId": "src__Box-sc-1sbtrzs-0",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
