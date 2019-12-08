@@ -4,6 +4,7 @@ const {
   sanitizeDates,
   getDuration,
   filterPastEvents,
+  generateEventSlug,
 } = require('./src/features/events/helpers')
 const { dateFormat } = require('./src/constants')
 
@@ -85,7 +86,7 @@ exports.createPages = async ({ graphql, actions }) => {
             // as a template component. The `context` is
             // optional but is often necessary so the template
             // can query data specific to each page.
-            path: `/events/${edge.node.id}/`,
+            path: generateEventSlug({ ...edge.node }),
             component: eventTemplate,
             context: {
               id: edge.node.id,
@@ -101,7 +102,6 @@ exports.createPages = async ({ graphql, actions }) => {
         ])
 
         recurrenceDates.forEach(date => {
-          const customId = `${edge.node.id}-${date.split('/').join('')}`
           const originalStartTime = moment(edge.node.startTime)
           const startTime = moment(date, dateFormat)
             .hours(originalStartTime.hours())
@@ -112,7 +112,10 @@ exports.createPages = async ({ graphql, actions }) => {
             .toISOString()
           if (filterPastEvents(endTime)) {
             createPage({
-              path: `/events/${customId}/`,
+              path: generateEventSlug({
+                ...edge.node,
+                occurrence: startTime,
+              }),
               component: eventTemplate,
               context: {
                 id: edge.node.id,
@@ -141,7 +144,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === 'build-html') {
-    actions.setWebpackConfig({ 
+    actions.setWebpackConfig({
       module: {
         rules: [
           {
@@ -149,7 +152,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             use: loaders.null(),
           },
         ],
-      }
+      },
     })
   }
 }

@@ -73,7 +73,6 @@ class Provider extends Component {
             copy.node.endTime = moment(copy.node.startTime)
               .add(duration, 'milliseconds')
               .format()
-            copy.node.id = `${event.node.id}-${date.split('/').join('')}`
 
             allEventOccurences.push(copy)
           })
