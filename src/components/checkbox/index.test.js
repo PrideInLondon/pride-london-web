@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import theme from '../../theme/theme'
 import Checkbox from './'
 import 'jest-styled-components'
@@ -24,46 +24,54 @@ describe('Checkbox', () => {
     checked,
   }
 
-  const wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
+  let wrapper
 
-  it('renders', () => {
-    expect(wrapper).toMatchSnapshot()
+  describe('testing rendering', () => {
+    beforeAll(() => {
+      wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
+    })
+
+    describe('Snapshot', () => {
+      it('renders', () => {
+        expect(wrapper).toMatchSnapshot()
+      })
+    })
+
+    describe('Props', () => {
+      it('has id from props', () => {
+        expect(wrapper.find('[type="checkbox"]').props().id).toBe(id)
+      })
+
+      it('has name from props', () => {
+        expect(wrapper.find('[type="checkbox"]').props().name).toBe(name)
+      })
+
+      it('has value from props', () => {
+        expect(wrapper.find('[type="checkbox"]').props().value).toBe(value)
+      })
+
+      it('has htmlFor from props', () => {
+        expect(wrapper.find('[htmlFor="test"]')).toHaveLength(1)
+      })
+
+      it('has text from props ', () => {
+        expect(wrapper.find('[htmlFor="test"]').text()).toBe(label)
+      })
+    })
   })
 
-  describe('input', () => {
-    it('has id from props', () => {
-      expect(wrapper.find('[type="checkbox"]').props().id).toBe(id)
-    })
-
-    it('has name from props', () => {
-      expect(wrapper.find('[type="checkbox"]').props().name).toBe(name)
-    })
-
-    it('has value from props', () => {
-      expect(wrapper.find('[type="checkbox"]').props().value).toBe(value)
-    })
-  })
-
-  describe('label', () => {
-    it('has htmlFor from props', () => {
-      expect(wrapper.find('[htmlFor="test"]')).toHaveLength(1)
-    })
-
-    it('has text from props ', () => {
-      expect(wrapper.find('[htmlFor="test"]').text()).toBe(label)
-    })
-  })
-
-  describe('events', () => {
+  describe('Testing functionality', () => {
     const event = { target: { checked: true } }
 
-    xit('toggles its checked state when changed', () => {
-      expect(wrapper.state().checked).toBeFalsy()
-      wrapper.find('#test').simulate('change', event)
-      expect(wrapper.state().checked).toBeTruthy()
+    it('toggles its checked state when changed', () => {
+      wrapper = mount(<Checkbox {...props} />, { context: { theme } })
+      wrapper.find('checkbox__Input').simulate('change', event)
+      const { checked } = wrapper.find('checkbox__Input').props()
+      expect(checked).toEqual(true)
     })
 
     it('fires the handleChange prop with an event when changed', () => {
+      wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
       wrapper.find('#test').simulate('change', event)
       expect(handleChange).toHaveBeenCalledWith(event)
     })
