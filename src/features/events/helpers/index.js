@@ -170,13 +170,12 @@ function getDuration(start, end) {
 }
 
 const generateEventSlug = ({ id, name, occurrence }) =>
-  `/event/${slugify(name, { lower: true })}-${encoder.encode(id)}${
-    occurrence ? `?occurrence=${occurrence.split('/').join('')}` : ''
-  }/`
+  `/event/${slugify(name, { lower: true })}${
+    occurrence ? `-${occurrence.split('/').join('')}` : ''
+  }-${encoder.encode(id)}/`
 
 const extractEventIdFromSlug = slug => {
-  const [slugWithoutQuery] = slug.split('?')
-  const [encodedId] = slugWithoutQuery.split('-').slice(-1)
+  const [encodedId] = slug.split('-').slice(-1)
   return encoder.decode(encodedId.replace('/', ''))
 }
 
