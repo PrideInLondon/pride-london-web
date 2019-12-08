@@ -23,12 +23,6 @@ const Nav = () => {
       noScroll.off()
     }
   })
-
-  const generateTitle = prefix => `${prefix} | Pride in London`
-  const generateMetaDescription = prefix => {
-    return `${prefix}. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances`
-  }
-
   return (
     <HeaderWrapper>
       <Header>
@@ -71,27 +65,16 @@ const Nav = () => {
                       {
                         heading: 'Pride',
                         links: [
-                          {
-                            title: generateTitle('Our story'),
-                            url: '/about-us',
-                            description: generateMetaDescription('Our story'),
-                          },
-                          {
-                            title: generateTitle('Our impact'),
-                            url: '/about-us/impact',
-                            description: generateMetaDescription('Our impact'),
-                          },
+                          { title: 'Our story', url: '/about-us' },
+                          { title: 'Our impact', url: '/about-us/impact' },
                         ],
                       },
                       {
                         heading: 'Campaigns',
                         links: [
                           {
-                            title: generateTitle('#PrideJubilee'),
+                            title: '#PrideJubilee',
                             url: '/about-us/campaigns/jubilee',
-                            description: generateMetaDescription(
-                              '#PrideJubilee'
-                            ),
                           },
                         ],
                       },
@@ -224,9 +207,8 @@ const Nav = () => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-visitor-info',
-                    title: generateTitle('Explore London'),
+                    title: 'Explore London',
                     url: '/explore-london',
-                    description: generateMetaDescription('Explore London'),
                   }}
                 />
                 <NavItem

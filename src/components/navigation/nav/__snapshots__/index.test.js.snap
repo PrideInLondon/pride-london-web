@@ -54,13 +54,11 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "Pride",
                       "links": Array [
                         Object {
-                          "description": "Our story. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
-                          "title": "Our story | Pride in London",
+                          "title": "Our story",
                           "url": "/about-us",
                         },
                         Object {
-                          "description": "Our impact. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
-                          "title": "Our impact | Pride in London",
+                          "title": "Our impact",
                           "url": "/about-us/impact",
                         },
                       ],
@@ -69,8 +67,7 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                       "heading": "Campaigns",
                       "links": Array [
                         Object {
-                          "description": "#PrideJubilee. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
-                          "title": "#PrideJubilee | Pride in London",
+                          "title": "#PrideJubilee",
                           "url": "/about-us/campaigns/jubilee",
                         },
                       ],
@@ -212,9 +209,8 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
             <NavItem
               item={
                 Object {
-                  "description": "Explore London. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
                   "id": "nav-visitor-info",
-                  "title": "Explore London | Pride in London",
+                  "title": "Explore London",
                   "url": "/explore-london",
                 }
               }

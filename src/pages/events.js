@@ -157,16 +157,7 @@ class Events extends Component {
       <Consumer>
         {context => (
           <PageWrapper>
-            <Helmet
-              title="What's on - LGBT+ events happening in and around London | Pride in London"
-              meta={[
-                {
-                  name: 'description',
-                  content:
-                    "What's on - LGBT+ events happening in and around London. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
-                },
-              ]}
-            />
+            <Helmet title="What's on - LGBT+ events happening in and around London" />
             <BannerImage
               titleText="What's on"
               subtitleText="Pride Festival: Jun 8 - Jul 6 2019"
