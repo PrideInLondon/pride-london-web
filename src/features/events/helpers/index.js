@@ -169,11 +169,14 @@ function getDuration(start, end) {
   return moment(end).diff(moment(start))
 }
 
-const generateEventSlug = ({ id, name }) =>
-  `/event/${slugify(name, { lower: true })}-${encoder.encode(id)}/`
+const generateEventSlug = ({ id, name, occurrence }) =>
+  `/event/${slugify(name, { lower: true })}-${encoder.encode(id)}${
+    occurrence ? `?occurrence=${occurrence.split('/').join('')}` : ''
+  }/`
 
 const extractEventIdFromSlug = slug => {
-  const [encodedId] = slug.split('-').slice(-1)
+  const [slugWithoutQuery] = slug.split('?')
+  const [encodedId] = slugWithoutQuery.split('-').slice(-1)
   return encoder.decode(encodedId.replace('/', ''))
 }
 
