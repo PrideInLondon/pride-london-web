@@ -1,4 +1,5 @@
 const moment = require('moment')
+const slugify = require('slugify')
 const UuidEncoder = require('uuid-encoder')
 const { dateFormat } = require('../../../constants')
 
@@ -168,16 +169,8 @@ function getDuration(start, end) {
   return moment(end).diff(moment(start))
 }
 
-const generateNameForEventSlug = name =>
-  name
-    .replace(/[.,/#!$%^&*;:{}=_`~()]/g, '') // remove punctuation
-    .split(' ')
-    .filter(key => key && key !== '-')
-    .join('-')
-    .toLowerCase()
-
 const generateEventSlug = ({ id, name }) =>
-  `${generateNameForEventSlug(name)}-${encoder.encode(id)}`
+  `${slugify(name, { lower: true })}-${encoder.encode(id)}`
 
 const extractEventIdFromSlug = slug => {
   const [encodedId] = slug.split('-').slice(-1)
@@ -197,7 +190,6 @@ module.exports = {
   filterByLimit,
   sanitizeDates,
   getDuration,
-  generateNameForEventSlug,
   generateEventSlug,
   extractEventIdFromSlug,
 }
