@@ -94,6 +94,10 @@ const query = graphql`
     }
   }
 `
+const generateTitle = prefix => `${prefix} | Pride in London`
+const generateMetaDescription = prefix => {
+  return `${prefix}. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances`
+}
 
 const Layout = ({ children, location: { pathname } }) => (
   <ThemeProvider theme={theme}>
@@ -131,11 +135,11 @@ const Layout = ({ children, location: { pathname } }) => (
           <Provider events={events}>
             <Fragment>
               <Helmet
-                title={title}
+                title={generateTitle(title)}
                 meta={[
                   {
                     name: 'description',
-                    content: description,
+                    content: generateMetaDescription(title),
                   },
 
                   // Schema meta tags for http://schema.org/WebPage

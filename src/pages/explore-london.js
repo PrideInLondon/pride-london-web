@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import { GreyWrapper } from '../components/grid'
 import BannerImage from '../components/banner/bannerImage'
 import { colors } from '../theme/colors'
@@ -15,6 +16,16 @@ const ExploreLondon = ({
   },
 }) => (
   <div>
+    <Helmet
+      title="Explore London| Pride in London"
+      meta={[
+        {
+          name: 'description',
+          content:
+            "Explore London. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
+        },
+      ]}
+    />
     <BannerImage
       titleText="Explore London"
       subtitleText="Find great places to spend time with friends and loved ones around London."
