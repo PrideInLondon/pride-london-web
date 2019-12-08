@@ -170,11 +170,11 @@ function getDuration(start, end) {
 }
 
 const generateEventSlug = ({ id, name }) =>
-  `${slugify(name, { lower: true })}-${encoder.encode(id)}`
+  `/event/${slugify(name, { lower: true })}-${encoder.encode(id)}/`
 
 const extractEventIdFromSlug = slug => {
   const [encodedId] = slug.split('-').slice(-1)
-  return encoder.decode(encodedId)
+  return encoder.decode(encodedId.replace('/', ''))
 }
 
 module.exports = {
