@@ -57,7 +57,16 @@ const GenericContentPage = ({
   },
 }) => (
   <>
-    <Helmet title={title} />
+    <Helmet
+      title={`${title} | Pride in London`}
+      meta={[
+        {
+          name: 'description',
+          content: `${title}. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances`,
+        },
+      ]}
+    />{' '}
+    />
     <BannerImage
       titleText={title}
       subtitleText={subtitle}
