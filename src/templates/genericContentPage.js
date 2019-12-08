@@ -45,6 +45,11 @@ const responsiveBannerUrl = url => {
   return `${url}?w=${width}`
 }
 
+const generateTitle = prefix => `${prefix} | Pride in London`
+const generateMetaDescription = prefix => {
+  return `${prefix}. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances`
+}
+
 const GenericContentPage = ({
   data: {
     contentfulGenericContentPage: {
@@ -58,14 +63,14 @@ const GenericContentPage = ({
 }) => (
   <>
     <Helmet
-      title={`${title} | Pride in London`}
+      title={generateTitle(title)}
       meta={[
         {
           name: 'description',
-          content: `${title}. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances`,
+          content: generateMetaDescription(title),
         },
       ]}
-    />{' '}
+    />
     />
     <BannerImage
       titleText={title}
