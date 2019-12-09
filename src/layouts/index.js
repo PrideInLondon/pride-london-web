@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
+import HelmetComponet from '../components/helmetComponent'
 import { Provider } from '../components/appContext'
 import CookieNotice from '../components/cookieNotice'
 import Nav from '../components/navigation/nav'
@@ -94,10 +95,6 @@ const query = graphql`
     }
   }
 `
-const generateTitle = prefix => `${prefix} | Pride in London`
-const generateMetaDescription = prefix => {
-  return `${prefix}. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances`
-}
 
 const Layout = ({ children, location: { pathname } }) => (
   <ThemeProvider theme={theme}>
@@ -134,14 +131,9 @@ const Layout = ({ children, location: { pathname } }) => (
         return (
           <Provider events={events}>
             <Fragment>
+              <HelmetComponet title={title} />
               <Helmet
-                title={generateTitle(title)}
                 meta={[
-                  {
-                    name: 'description',
-                    content: generateMetaDescription(title),
-                  },
-
                   // Schema meta tags for http://schema.org/WebPage
                   {
                     itemprop: 'name',

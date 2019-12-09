@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import HelmetComponent from '../components/helmetComponent'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { Column, Row, Container } from '../components/grid'
@@ -45,11 +45,6 @@ const responsiveBannerUrl = url => {
   return `${url}?w=${width}`
 }
 
-const generateTitle = prefix => `${prefix} | Pride in London`
-const generateMetaDescription = prefix => {
-  return `${prefix}. In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances`
-}
-
 const GenericContentPage = ({
   data: {
     contentfulGenericContentPage: {
@@ -62,16 +57,7 @@ const GenericContentPage = ({
   },
 }) => (
   <>
-    <Helmet
-      title={generateTitle(title)}
-      meta={[
-        {
-          name: 'description',
-          content: generateMetaDescription(title),
-        },
-      ]}
-    />
-    />
+    <HelmetComponent title={title} />
     <BannerImage
       titleText={title}
       subtitleText={subtitle}
