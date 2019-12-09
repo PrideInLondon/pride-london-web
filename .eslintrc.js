@@ -25,6 +25,7 @@ module.exports = {
     "import/extensions": "error",
     "import/first": "error",
     "import/order": "error",
+    "import/no-deprecated": "error",
     "import/no-duplicates": "error",
     "import/no-extraneous-dependencies": "off",
     "import/no-named-as-default": "off",

@@ -66,9 +66,11 @@
     "react-typeform-embed": "^0.2.1",
     "shortid": "^2.2.15",
     "slick-carousel": "^1.8.1",
+    "slugify": "^1.3.6",
     "string-hash": "^1.1.3",
     "styled-components": "^4.4.1",
-    "tinycolor2": "^1.4.1"
+    "tinycolor2": "^1.4.1",
+    "uuid-encoder": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

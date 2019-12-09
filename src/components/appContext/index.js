@@ -49,8 +49,8 @@ class Provider extends Component {
     if (nextProps.events !== prevState.events) {
       // Generate all recurrences of events
       const allEventOccurences = []
-      // Map over events
-      nextProps.events.map(event => {
+      // iterate over events
+      nextProps.events.forEach(event => {
         if (!event.node.recurrenceDates) {
           allEventOccurences.push(event)
         } else {
@@ -73,7 +73,6 @@ class Provider extends Component {
             copy.node.endTime = moment(copy.node.startTime)
               .add(duration, 'milliseconds')
               .format()
-            copy.node.id = `${event.node.id}-${date.split('/').join('')}`
 
             allEventOccurences.push(copy)
           })
