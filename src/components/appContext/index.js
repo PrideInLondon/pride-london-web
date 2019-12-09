@@ -49,8 +49,8 @@ class Provider extends Component {
     if (nextProps.events !== prevState.events) {
       // Generate all recurrences of events
       const allEventOccurences = []
-      // Map over events
-      nextProps.events.map(event => {
+      // iterate over events
+      nextProps.events.forEach(event => {
         if (!event.node.recurrenceDates) {
           allEventOccurences.push(event)
         } else {
