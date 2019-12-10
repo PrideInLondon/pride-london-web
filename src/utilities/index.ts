@@ -27,20 +27,29 @@ export interface RelativeLink {
   as: typeof Link
 }
 
-export interface ExternalLink {
+export interface ExternalLink
+  extends Omit<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    'href' | 'target' | 'rel'
+  > {
   href: string
   as: 'a'
   target: string
   rel: string
 }
 
-export interface ContactLink {
+export interface ContactLink
+  extends Omit<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    'href' | 'target'
+  > {
   href: string
   target: string
   as: 'a'
 }
 
-export interface DefaultLink {
+export interface DefaultLink
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
   href: string
   as: 'a'
 }
