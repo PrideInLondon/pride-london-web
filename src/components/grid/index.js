@@ -139,7 +139,7 @@ const keyFrame = keyframes`
 `
 // styled componets V4 requeries css helper func for keyframes
 const keyFrameHelper = css`
-  animation: ${keyFrame} 360ms;
+  animation: ${keyFrame} 360ms ease;
 `
 
 // stylelint issue req this format otherwise it errors - CssSyntaxError
