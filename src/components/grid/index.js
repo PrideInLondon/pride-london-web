@@ -1,7 +1,6 @@
 import React from 'react'
 import { Flex, Box } from '@rebass/grid'
-import styled from 'styled-components'
-import FlipMove from 'react-flip-move'
+import styled, { keyframes, css } from 'styled-components'
 import PropTypes from 'prop-types'
 
 import theme from '../../theme/theme'
@@ -25,6 +24,7 @@ const Container = styled(Box)`
     max-width: ${theme.breakpoints[3]}px;    
   `};
 `
+
 Container.defaultProps = {
   mx: 'auto',
 }
@@ -127,22 +127,47 @@ Column.defaultProps = {
   pb: null,
 }
 
-const FlexColumn = styled(Column)`
-  display: block;
+const keyFrame = keyframes`
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: '';
+    opacity: '';
+  }
+`
+// styled componets V4 requeries css helper func for keyframes
+const keyFrameHelper = css`
+  animation: ${keyFrame} 360ms;
+`
 
-  ${media.tablet`
+// stylelint issue req this format otherwise it errors - CssSyntaxError
+const FlexColumn = ({ animation, children, ...props }) => {
+  const FlexInternal = styled(Column)`
+    display: block;
+    ${animation ? keyFrameHelper : ''}
+
+    ${media.tablet`
     display: flex;
   `};
-`
+  `
 
-const StyledFlipMove = styled(FlipMove)`
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: 100%;
-`
+  return <FlexInternal {...props}>{children}</FlexInternal>
+}
+
+FlexColumn.defaultProps = {
+  animation: false,
+  children: null,
+}
+
+FlexColumn.propTypes = {
+  animation: PropTypes.bool,
+  children: PropTypes.any,
+}
 
 const GreyWrapper = styled.div`
   background-color: ${theme.colors.lightGrey};
 `
 
-export { Container, Row, Column, FlexColumn, StyledFlipMove, GreyWrapper }
+export { Container, Row, Column, FlexColumn, GreyWrapper }

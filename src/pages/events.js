@@ -10,13 +10,7 @@ import { EventListingCard } from '../features/events'
 // import EventsFilters from '../features/events/components/eventsFilters'
 import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
-import {
-  Container,
-  Row,
-  Column,
-  StyledFlipMove,
-  FlexColumn,
-} from '../components/grid'
+import { Container, Row, Column, FlexColumn } from '../components/grid'
 import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
 import { dateFormat } from '../constants'
@@ -67,6 +61,11 @@ const DateGroupHeading = styled.h2`
     display: none;
   `};
 `
+const ListingCardWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+`
 
 // const FilterIcon = styled.img`
 //   margin: 0 6px -2px 0;
@@ -110,6 +109,7 @@ class GroupedEventsCards extends Component {
         ]}
         key={event.node.id}
         py={[2, 2, 2, 3]}
+        animation={true}
       >
         {header && <DateGroupHeading>{header}</DateGroupHeading>}
         <EventListingCard event={event.node} />
@@ -197,7 +197,7 @@ class Events extends Component {
             </ContainerAddFilters> */}
             <Container>
               <Row>
-                <StyledFlipMove>
+                <ListingCardWrapper>
                   {context.filteredEvents
                     .filter(filterByLimit, context.state.eventsToShow)
                     .sort((event1, event2) => {
@@ -214,7 +214,8 @@ class Events extends Component {
                         key={event.node.id}
                       />
                     ))}
-                </StyledFlipMove>
+                </ListingCardWrapper>
+
                 <ColumnPagination width={1}>
                   {this.renderEventCount(
                     context.filteredEvents.length,

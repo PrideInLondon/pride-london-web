@@ -10,7 +10,8 @@ exports[`NewsCards renders with default values 1`] = `
     mr={null}
     mx={null}
   >
-    <grid__FlexColumn
+    <FlexColumn
+      animation={false}
       key="id"
       py={
         Array [
@@ -43,7 +44,7 @@ exports[`NewsCards renders with default values 1`] = `
         slug="news/article"
         title="title"
       />
-    </grid__FlexColumn>
+    </FlexColumn>
   </Row>
 </grid__Container>
 `;
