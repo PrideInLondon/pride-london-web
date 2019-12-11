@@ -1,4 +1,5 @@
 export { default as EventListingCard } from './components/eventListingCard'
+export { default as GroupedEventsCards } from './components/groupedEventsCard'
 export { default as EventTagList } from './components/eventTagList'
 export { default as EventSchedule } from './components/eventSchedule'
 export { default as EventsYouMayLike } from './components/eventsYouMayLike'

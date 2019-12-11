@@ -1,20 +1,17 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import moment from 'moment'
 import Helmet from 'react-helmet'
 import { noScroll } from '../utilities'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
-import { EventListingCard } from '../features/events'
-// import EventsFilters from '../features/events/components/eventsFilters'
+import { GroupedEventsCards } from '../features/events'
+//import EventsFilters from '../features/events/components/eventsFilters'
 import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
-import { Container, Row, Column, FlexColumn } from '../components/grid'
+import { Container, Row, Column } from '../components/grid'
 import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
-import { dateFormat } from '../constants'
-// import filterIcon from '../theme/assets/images/icon-filters.svg'
+//import filterIcon from '../theme/assets/images/icon-filters.svg'
 import BannerImg from '../theme/assets/images/banners/events/bg@2x.jpg'
 
 // const ColumnTextCenter = styled(Column)`
@@ -54,13 +51,6 @@ const EventCount = styled.p`
   color: ${theme.colors.darkGrey};
 `
 
-const DateGroupHeading = styled.h2`
-  margin: 1rem 0;
-
-  ${media.tablet`
-    display: none;
-  `};
-`
 const ListingCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -74,50 +64,6 @@ const ListingCardWrapper = styled.div`
 const PageWrapper = styled.div`
   background-color: ${theme.colors.lightGrey};
 `
-/* eslint-disable */
-class GroupedEventsCards extends Component {
-  static propTypes = {
-    events: PropTypes.array.isRequired,
-    index: PropTypes.number.isRequired,
-    event: PropTypes.object.isRequired,
-  }
-  render() {
-    const { event, index, events } = this.props
-
-    let header
-    const longDayOfMonth = 'dddd D MMM'
-
-    if (index === 0) {
-      header = moment(event.node.startTime).format(longDayOfMonth)
-    } else {
-      const startDate = moment(event.node.startTime).format(dateFormat)
-      const prevStartDate = moment(events[index - 1].node.startTime).format(
-        dateFormat
-      )
-
-      if (startDate !== prevStartDate) {
-        header = moment(event.node.startTime).format(longDayOfMonth)
-      }
-    }
-    return (
-      <FlexColumn
-        width={[
-          1, // 100% between 0px screen width and first breakpoint (375px)
-          1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-          1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
-          1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
-        ]}
-        key={event.node.id}
-        py={[2, 2, 2, 3]}
-        animation={true}
-      >
-        {header && <DateGroupHeading>{header}</DateGroupHeading>}
-        <EventListingCard event={event.node} />
-      </FlexColumn>
-    )
-  }
-}
-/* eslint-enable */
 
 /* eslint-disable react/no-multi-comp */
 class Events extends Component {
@@ -212,6 +158,7 @@ class Events extends Component {
                         index={index}
                         event={event}
                         key={event.node.id}
+                        toLoad={context.state.eventsToShow}
                       />
                     ))}
                 </ListingCardWrapper>
@@ -224,9 +171,9 @@ class Events extends Component {
                   {context.state.eventsToShow <
                     context.filteredEvents.length && (
                     <Button
-                      onClick={() =>
+                      onClick={() => {
                         context.actions.showMore(context.filteredEvents.length)
-                      }
+                      }}
                       primary
                       disabled={
                         context.state.eventsToShow >=
