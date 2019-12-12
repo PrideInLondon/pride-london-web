@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
-import { formatDate } from '../helpers'
+import { formatDate, generateEventSlug } from '../helpers'
 
 // We have to skip displayColumn prop here to not render it in the DOM
 // eslint-disable-next-line no-unused-vars
@@ -127,7 +127,13 @@ export const EventListingCard = props => {
   const { event, displaycolumn } = props
   const { date, time } = formatDate(event)
   return (
-    <Card to={`/events/${event.id}`} displaycolumn={displaycolumn}>
+    <Card
+      to={generateEventSlug({
+        ...event,
+        occurrence: event.recurrenceDates && event.startTime,
+      })}
+      displaycolumn={displaycolumn}
+    >
       <CardImageOverflow displaycolumn={displaycolumn}>
         <CardImageWrapper className="card-img-wrapper">
           <CardImage

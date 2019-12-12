@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox renders 1`] = `
+exports[`Checkbox testing rendering Snapshot renders 1`] = `
 <checkbox__Wrapper>
   <checkbox__Input
     checked={false}
