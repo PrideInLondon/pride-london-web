@@ -4,6 +4,7 @@ import { GroupedEventsCards } from '../index'
 import { mockNodes, testEvent } from './__mocks__'
 import 'jest-styled-components'
 
+// will change in EVE-7
 describe('The GroupedEventsCards component', () => {
   let wrapper
 
