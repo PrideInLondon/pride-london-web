@@ -162,6 +162,16 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
             <NavItem
               item={
                 Object {
+                  "id": "nav-events",
+                  "title": "Events",
+                  "url": "/events",
+                }
+              }
+              setNavOpen={[Function]}
+            />
+            <NavItem
+              item={
+                Object {
                   "desc": "If you’re passionate about the LGBT+ community please consider supporting Pride by donating, sponsoring or volunteering.",
                   "id": "nav-support-us",
                   "submenu": Array [
