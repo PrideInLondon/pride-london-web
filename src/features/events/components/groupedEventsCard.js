@@ -20,6 +20,7 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
   const longDayOfMonth = 'dddd D MMM'
   let animate
 
+  // logic to check if the eventCard is not on the original page load or on previuos load
   if (index >= toLoad - itemsToLoad && toLoad !== itemsToLoad) {
     animate = true
   }
