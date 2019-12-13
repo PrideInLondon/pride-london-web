@@ -9,7 +9,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "lint": "eslint 'src/**/*.[jt]s?(x)'",
+    "lint": "eslint 'src/**/*.[jt]s?(x)' && remark . --frail",
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch",
@@ -27,7 +27,8 @@
       "stylelint",
       "jest --findRelatedTests",
       "git add"
-    ]
+    ],
+    "*.md": "remark . --frail"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.7.4",
@@ -113,6 +114,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.9.0",
     "react-dom": "^16.12.0",
+    "remark-cli": "^7.0.1",
+    "remark-preset-lint-recommended": "^3.0.3",
     "stylelint": "^12.0.0",
     "stylelint-a11y": "^1.2.2",
     "stylelint-config-prettier": "^6.0.0",
