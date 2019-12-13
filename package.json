@@ -9,7 +9,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "lint": "eslint 'src/**/*.[jt]s?(x)'",
+    "lint": "eslint 'src/**/*.[jt]s?(x)' && remark . --frail",
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch",
@@ -27,7 +27,8 @@
       "stylelint",
       "jest --findRelatedTests",
       "git add"
-    ]
+    ],
+    "*.md": "remark . --frail"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.7.4",
