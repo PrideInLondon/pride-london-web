@@ -160,6 +160,14 @@ const Nav = () => {
                 <NavItem
                   setNavOpen={setOpen}
                   item={{
+                    id: 'nav-events',
+                    title: 'Events',
+                    url: '/events',
+                  }}
+                />
+                <NavItem
+                  setNavOpen={setOpen}
+                  item={{
                     id: 'nav-support-us',
                     title: 'Support us',
                     desc:

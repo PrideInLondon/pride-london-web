@@ -7,7 +7,7 @@ import { noScroll } from '../utilities'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { EventListingCard } from '../features/events'
-import EventsFilters from '../features/events/components/eventsFilters'
+// import EventsFilters from '../features/events/components/eventsFilters'
 import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
 import {
@@ -20,21 +20,21 @@ import {
 import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
 import { dateFormat } from '../constants'
-import filterIcon from '../theme/assets/images/icon-filters.svg'
+// import filterIcon from '../theme/assets/images/icon-filters.svg'
 import BannerImg from '../theme/assets/images/banners/events/bg@2x.jpg'
 
-const ColumnTextCenter = styled(Column)`
-  text-align: center;
-`
-const ContainerAddFilters = styled(Container)`
-  padding: 20px 0;
-  margin-bottom: 20px;
-  background-color: ${theme.colors.white};
+// const ColumnTextCenter = styled(Column)`
+//   text-align: center;
+// `
+// const ContainerAddFilters = styled(Container)`
+//   padding: 20px 0;
+//   margin-bottom: 20px;
+//   background-color: ${theme.colors.white};
 
-  ${media.tablet`
-    display: none;
-  `};
-`
+//   ${media.tablet`
+//     display: none;
+//   `};
+// `
 
 const ColumnPagination = styled(Column)`
   text-align: center;
@@ -46,13 +46,13 @@ const ColumnPagination = styled(Column)`
   `};
 `
 
-const OffsetContainer = styled(Container)`
-  ${media.tablet`
-    margin-top: -50px;
-    position: relative;
-    z-index: 1;
-  `};
-`
+// const OffsetContainer = styled(Container)`
+//   ${media.tablet`
+//     margin-top: -50px;
+//     position: relative;
+//     z-index: 1;
+//   `};
+// `
 
 const EventCount = styled.p`
   font-size: 0.875rem;
@@ -68,9 +68,9 @@ const DateGroupHeading = styled.h2`
   `};
 `
 
-const FilterIcon = styled.img`
-  margin: 0 6px -2px 0;
-`
+// const FilterIcon = styled.img`
+//   margin: 0 6px -2px 0;
+// `
 
 const PageWrapper = styled.div`
   background-color: ${theme.colors.lightGrey};
@@ -151,21 +151,21 @@ class Events extends Component {
   }
 
   render() {
-    const { showFiltersMobile } = this.state
+    // const { showFiltersMobile } = this.state
 
     return (
       <Consumer>
         {context => (
           <PageWrapper>
-            <Helmet title="What's on - LGBT+ events happening in and around London" />
+            <Helmet title="Coming Out - The new way to find the best queer events for the queer community from Pride in London." />
             <BannerImage
-              titleText="What's on"
-              subtitleText="Pride Festival: Jun 8 - Jul 6 2019"
+              titleText="Coming Out"
+              subtitleText="The new way to find the best queer events for the queer community from Pride in London."
               imageSrc={BannerImg}
               color={theme.colors.lightGrey}
               imageFullWidth
             />
-            <OffsetContainer>
+            {/* <OffsetContainer>
               <EventsFilters
                 showFiltersMobile={showFiltersMobile}
                 toggleFiltersMobile={this.toggleFiltersMobile}
@@ -194,7 +194,7 @@ class Events extends Component {
                   </Button>
                 </ColumnTextCenter>
               </Row>
-            </ContainerAddFilters>
+            </ContainerAddFilters> */}
             <Container>
               <Row>
                 <StyledFlipMove>
