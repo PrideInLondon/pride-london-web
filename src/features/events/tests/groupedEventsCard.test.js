@@ -22,4 +22,42 @@ describe('The GroupedEventsCards component', () => {
   it('Snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
+
+  describe('Render', () => {
+    it('passing event.node correctly', () => {
+      expect(
+        wrapper
+          .find('EventListingCard')
+          .first()
+          .prop('event')
+      ).toBe(testEvent.node)
+    })
+
+    it('testing animation logic', () => {
+      expect(
+        wrapper
+          .find('FlexColumn')
+          .first()
+          .prop('animation')
+      ).toBe(false)
+    })
+    it('testing animation logic', () => {
+      const extendedMockNodes = new Array(25)
+      wrapper = shallow(
+        <GroupedEventsCards
+          event={testEvent}
+          index={27}
+          events={[...extendedMockNodes, ...mockNodes]}
+          toLoad={27}
+        />
+      )
+
+      expect(
+        wrapper
+          .find('FlexColumn')
+          .first()
+          .prop('animation')
+      ).toBe(true)
+    })
+  })
 })
