@@ -6,10 +6,11 @@ import Img from 'gatsby-image'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
 import { formatDate, generateEventSlug } from '../helpers'
+import CalendarIcon from '../../../theme/assets/images/calendar-icon'
 
 // We have to skip displayColumn prop here to not render it in the DOM
 // eslint-disable-next-line no-unused-vars
-const Card = styled(({ displaycolumn, ...rest }) => <Link {...rest} />)`
+const Card = styled(({ displaycolumn, ...rest }) => <div {...rest} />)`
   border-bottom-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -18,7 +19,6 @@ const Card = styled(({ displaycolumn, ...rest }) => <Link {...rest} />)`
   color: ${theme.colors.black};
   overflow: hidden;
   display: ${props => (props.displaycolumn ? 'block' : 'flex')};
-  position: relative;
   width: 100%;
   min-height: 130px;
   background-color: ${theme.colors.white};
@@ -69,19 +69,17 @@ const CardImage = styled(Img)`
   min-width: 100%;
 `
 
-const CardBody = styled.div`
-  padding: 15px;
+const CardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
   background-color: ${theme.colors.white};
-  flex-grow: 1;
-
-  ${media.tablet`
-    padding: 30px;
-  `};
 `
 
 const CardDate = styled.span`
-  display: block;
-  color: ${theme.colors.darkGrey};
+  display: flex;
+  flex-wrap: wrap;
+  color: ${theme.colors.darkCyan};
   font-size: 0.875rem;
   line-height: 1.43;
   margin-bottom: 0.65rem;
@@ -89,24 +87,27 @@ const CardDate = styled.span`
   font-weight: 600;
 `
 
-const CardBullet = styled.span`
-  display: inline;
+const CardFooter = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: auto;
 `
 
-const CardDateSpan = styled.span`
-  display: inline;
+const Details = styled(Link)`
+  color: ${theme.colors.indigo};
+  text-decoration: none;
+  border-bottom: 2px solid ${theme.colors.darkCyan};
 `
 
-const CardPrice = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: ${theme.colors.indigo};
-  color: ${theme.colors.white};
-  font-family: ${theme.fonts.title};
+const Price = styled.div`
+  align-self: flex-end;
+  color: ${theme.colors.darkCyan};
+  font-family: Poppins;
   font-weight: 600;
-  padding: 5px 10px;
   font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: -0.16px;
 `
 
 const CardHeading = styled.h3`
@@ -123,17 +124,36 @@ const CardHeading = styled.h3`
   `};
 `
 
+const Location = styled.p`
+  color: ${theme.colors.darkIndigo};
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-top: 15px;
+`
+
+const PaddedCalendarIcon = styled(CalendarIcon)`
+  margin-right: 8.5px;
+  height: 1rem;
+  align-self: center;
+`
+
+const When = ({ date, time }) => (
+  <CardDate>
+    <PaddedCalendarIcon color={theme.colors.darkCyan} />
+    {date} • {time}
+  </CardDate>
+)
+
+When.propTypes = {
+  date: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+}
+
 export const EventListingCard = props => {
   const { event, displaycolumn } = props
   const { date, time } = formatDate(event)
   return (
-    <Card
-      to={generateEventSlug({
-        ...event,
-        occurrence: event.recurrenceDates && event.startTime,
-      })}
-      displaycolumn={displaycolumn}
-    >
+    <Card displaycolumn={displaycolumn}>
       <CardImageOverflow displaycolumn={displaycolumn}>
         <CardImageWrapper className="card-img-wrapper">
           <CardImage
@@ -142,17 +162,26 @@ export const EventListingCard = props => {
           />
         </CardImageWrapper>
       </CardImageOverflow>
-
-      <CardBody>
-        <CardDate>
-          <CardDateSpan>{date}</CardDateSpan>
-          <CardBullet> • </CardBullet> <CardDateSpan>{time}</CardDateSpan>
-        </CardDate>
+      <CardContent>
+        <When {...{ date, time }} />
         <CardHeading>{event.name}</CardHeading>
-      </CardBody>
-      <CardPrice>
-        {event.eventPriceLow === 0 ? 'Free' : `from £${event.eventPriceLow}`}
-      </CardPrice>
+        <Location>Brasseire Zedel, Piccadilly Circus</Location>
+        <CardFooter>
+          <Details
+            to={generateEventSlug({
+              ...event,
+              occurrence: event.recurrenceDates && event.startTime,
+            })}
+          >
+            Event details
+          </Details>
+          <Price>
+            {event.eventPriceLow === 0
+              ? 'Free entry'
+              : `From £${event.eventPriceLow}`}
+          </Price>
+        </CardFooter>
+      </CardContent>
     </Card>
   )
 }

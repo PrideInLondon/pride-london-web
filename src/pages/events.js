@@ -114,7 +114,7 @@ class GroupedEventsCards extends Component {
           1, // 100% between 0px screen width and first breakpoint (375px)
           1, // 100% between first breakpoint(375px) and second breakpoint (768px)
           1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
-          1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
+          1 / 4, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
         ]}
         key={event.node.id}
         py={[2, 2, 2, 3]}
@@ -176,7 +176,7 @@ export const Events = ({
                       events={events}
                       index={index}
                       event={event}
-                      key={event.node.id}
+                      key={event.node.id + event.node.startTime}
                     />
                   ))}
               </StyledFlipMove>
@@ -206,10 +206,6 @@ export const Events = ({
       )}
     </Consumer>
   )
-}
-
-Events.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export default Events
