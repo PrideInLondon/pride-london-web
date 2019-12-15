@@ -149,8 +149,7 @@ When.propTypes = {
   time: PropTypes.string.isRequired,
 }
 
-export const EventListingCard = props => {
-  const { event, displaycolumn } = props
+export const EventListingCard = ({ event, displaycolumn }) => {
   const { date, time } = formatDate(event)
   return (
     <Card displaycolumn={displaycolumn}>
@@ -165,7 +164,9 @@ export const EventListingCard = props => {
       <CardContent>
         <When {...{ date, time }} />
         <CardHeading>{event.name}</CardHeading>
-        <Location>Brasseire Zedel, Piccadilly Circus</Location>
+        <Location>
+          {event.locationName}, {event.addressLine1}
+        </Location>
         <CardFooter>
           <Details
             to={generateEventSlug({
