@@ -1,21 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FilterContainer renders checkbox filter container 1`] = `
-<grid__Container
+<Gridstyles__Container
   mx="auto"
 >
-  <Row
-    flexWrap={null}
-    ml={null}
-    mr={null}
-    mx={null}
+  <Gridstyles__Row
+    display="flex"
   >
-    <Column
-      pb={null}
-      pl={null}
-      pr={null}
-      pt={null}
-      px={null}
+    <Gridstyles__Column
       py={
         Array [
           20,
@@ -54,27 +46,19 @@ exports[`FilterContainer renders checkbox filter container 1`] = `
           key="baz"
         />
       </styles__FilterContainerWrapper>
-    </Column>
-  </Row>
-</grid__Container>
+    </Gridstyles__Column>
+  </Gridstyles__Row>
+</Gridstyles__Container>
 `;
 
 exports[`FilterContainer renders radio filter container 1`] = `
-<grid__Container
+<Gridstyles__Container
   mx="auto"
 >
-  <Row
-    flexWrap={null}
-    ml={null}
-    mr={null}
-    mx={null}
+  <Gridstyles__Row
+    display="flex"
   >
-    <Column
-      pb={null}
-      pl={null}
-      pr={null}
-      pt={null}
-      px={null}
+    <Gridstyles__Column
       py={
         Array [
           20,
@@ -113,7 +97,7 @@ exports[`FilterContainer renders radio filter container 1`] = `
           key="baz"
         />
       </styles__FilterContainerWrapper>
-    </Column>
-  </Row>
-</grid__Container>
+    </Gridstyles__Column>
+  </Gridstyles__Row>
+</Gridstyles__Container>
 `;

@@ -5,6 +5,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import theme from '../../../../../theme/theme'
+import { sm, md, lg, xl } from '../../../../../theme/breakpoints'
 import ChevronRight from '../../../../../components/chevronRight'
 import Arrow from './Arrow'
 
@@ -34,25 +35,25 @@ const carouselSettings = {
   ),
   responsive: [
     {
-      breakpoint: theme.breakpoints[0],
+      breakpoint: sm,
       settings: {
         centerPadding: '10px',
       },
     },
     {
-      breakpoint: theme.breakpoints[1],
+      breakpoint: md,
       settings: {
         centerPadding: '30px',
       },
     },
     {
-      breakpoint: theme.breakpoints[2],
+      breakpoint: lg,
       settings: {
         centerPadding: '100px',
       },
     },
     {
-      breakpoint: theme.breakpoints[3],
+      breakpoint: xl,
       settings: {
         centerPadding: '300px',
       },
@@ -72,8 +73,6 @@ export const StyledSlider = styled(Slider)`
   }
   .slick-current {
     padding: 0px;
-  }
-  .slick-list {
   }
 `
 const Carousel = ({ carouselItems }) => (

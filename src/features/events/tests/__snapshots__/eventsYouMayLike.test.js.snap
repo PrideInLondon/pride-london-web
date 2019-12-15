@@ -5,7 +5,9 @@ exports[`The Events You May Like component should matchsnapshot 1`] = `
   <eventsYouMayLike__StyledContainer
     mx="auto"
   >
-    <eventsYouMayLike__HeadingRow>
+    <eventsYouMayLike__HeadingRow
+      display="flex"
+    >
       <eventsYouMayLike__Heading>
         You may also like
       </eventsYouMayLike__Heading>
@@ -20,11 +22,8 @@ exports[`The Events You May Like component should matchsnapshot 1`] = `
         <ChevronRight />
       </eventsYouMayLike__ViewAll>
     </eventsYouMayLike__HeadingRow>
-    <Row
-      flexWrap={null}
-      ml={null}
-      mr={null}
-      mx={null}
+    <Gridstyles__Row
+      display="flex"
     >
       <eventsYouMayLike__FlexColumn
         key="123"
@@ -52,7 +51,7 @@ exports[`The Events You May Like component should matchsnapshot 1`] = `
           }
         />
       </eventsYouMayLike__FlexColumn>
-    </Row>
+    </Gridstyles__Row>
   </eventsYouMayLike__StyledContainer>
 </eventsYouMayLike__GreyWrapper>
 `;

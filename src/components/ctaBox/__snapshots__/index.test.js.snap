@@ -2,14 +2,11 @@
 
 exports[`<CTABox/> renders with default values 1`] = `
 <styles__CTAWrapper>
-  <grid__Container
+  <Gridstyles__Container
     mx="auto"
   >
-    <Row
-      flexWrap={null}
-      ml={null}
-      mr={null}
-      mx={null}
+    <Gridstyles__Row
+      display="flex"
     >
       <styles__RelativeColumn
         width={1}
@@ -29,7 +26,7 @@ exports[`<CTABox/> renders with default values 1`] = `
           </styles__CTAButton>
         </styles__CTAPanel>
       </styles__RelativeColumn>
-    </Row>
-  </grid__Container>
+    </Gridstyles__Row>
+  </Gridstyles__Container>
 </styles__CTAWrapper>
 `;

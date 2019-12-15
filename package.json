@@ -21,7 +21,7 @@
     }
   },
   "lint-staged": {
-    "!(*.test|*.stories).{ts,tsx}": "yarn tsc --skipLibCheck --strict --esModuleInterop --lib \"esnext, dom, dom.iterable\" --jsx preserve --typeRoots \"./@types, ./node_modules/@types\" --noEmit",
+    "!(*.test|*.stories).{ts,tsx}": "yarn tsc --skipLibCheck --allowJs --strict --esModuleInterop --lib \"esnext, dom, dom.iterable\" --jsx preserve --typeRoots \"./@types, ./node_modules/@types\" --noEmit",
     "src/**/*.{js,json,ts,tsx}": [
       "eslint --fix",
       "stylelint",
@@ -70,6 +70,7 @@
     "slugify": "^1.3.6",
     "string-hash": "^1.1.3",
     "styled-components": "^4.4.1",
+    "styled-system": "^5.1.4",
     "tinycolor2": "^1.4.1",
     "uuid-encoder": "^1.2.0"
   },
@@ -83,6 +84,7 @@
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.0",
+    "@types/styled-system": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
     "babel-eslint": "^10.0.3",
@@ -103,6 +105,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "esm": "^3.2.25",
     "gatsby-plugin-typescript": "^2.1.15",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
@@ -123,6 +126,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-prettier": "^1.1.1",
     "stylelint-processor-styled-components": "^1.9.0",
+    "ts-node": "^8.5.4",
     "typescript": "^3.7.2",
     "typescript-styled-plugin": "^0.15.0"
   }

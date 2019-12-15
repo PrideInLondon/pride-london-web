@@ -6,7 +6,7 @@ import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
 import { Container, Row, Column } from '../components/grid'
 import background from '../theme/assets/images/banners/blog/bg.svg'
-import { articleCategories } from '../constants'
+import constants from '../constants'
 
 const mapEntries = news => {
   if (!news.edges || !Array.isArray(news.edges)) return []
@@ -16,7 +16,9 @@ const mapEntries = news => {
 const Blog = ({ data: { articles, views } }) => {
   const mappedArticles = mapEntries(articles).map(art => ({
     ...art,
-    category: articleCategories.find(cat => cat.title == art.category),
+    category: constants.articleCategories.find(
+      cat => cat.title == art.category
+    ),
   }))
   const mappedViews = mapEntries(views)
   return (
@@ -38,7 +40,10 @@ const Blog = ({ data: { articles, views } }) => {
           </Column>
         </Row>
       </Container>
-      <NewsContainer articles={mappedArticles} categories={articleCategories} />
+      <NewsContainer
+        articles={mappedArticles}
+        categories={constants.articleCategories}
+      />
     </Fragment>
   )
 }

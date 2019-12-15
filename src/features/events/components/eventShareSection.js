@@ -23,7 +23,7 @@ const ShareList = styled.div`
 const ShareText = styled.p`
   font-size: 14px;
   font-family: Poppins;
-  font-size: 600;
+  font-weight: 600;
   line-height: 1.29;
   display: inline-block;
   margin-right: 20px;

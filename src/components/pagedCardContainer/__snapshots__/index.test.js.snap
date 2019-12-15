@@ -117,7 +117,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
         className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
         isFullyLoaded={false}
       >
-        <grid__Container
+        <Gridstyles__Container
           className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
           mx="auto"
         >
@@ -131,88 +131,31 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                 },
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "grid__Container-l0wsyy-0",
+                  "componentId": "Gridstyles__Container-jfdl1j-2",
                   "isStatic": false,
-                  "lastClassName": "eEEIRW",
+                  "lastClassName": "byHCwx",
                   "rules": Array [
-                    "box-sizing: border-box;",
-                    [Function],
-                    [Function],
-                    [Function],
-                    [Function],
-                    [Function],
-                    [Function],
-                    [Function],
-                    "@media (min-width:",
-                    "375",
-                    "px){",
-                    "
-    min-width: 335px;
-  ",
-                    ";}",
-                    ";",
-                    "@media (min-width:",
-                    "768",
-                    "px){",
-                    "
-    min-width: 668px;
-  ",
-                    ";}",
-                    ";",
-                    "@media (min-width:",
-                    "1024",
-                    "px){",
-                    "
-    min-width: 960px;
-  ",
-                    ";}",
-                    ";",
-                    "@media (min-width:",
+                    "@media screen and (min-width: 375px)",
+                    "{min-width:335px;}",
+                    "@media screen and (min-width: 768px)",
+                    "{min-width:668px;}",
+                    "@media screen and (min-width: 1024px)",
+                    "{min-width:960px;}",
+                    "@media screen and (min-width: 1440px)",
+                    "{min-width:1260px;max-width:",
                     "1440",
-                    "px){",
-                    "
-    min-width: 1260px;
-    max-width: ",
-                    "1440",
-                    "px;    
-  ",
-                    ";}",
-                    ";",
+                    "px;}",
+                    [Function],
+                    " ",
+                    [Function],
+                    " ",
+                    [Function],
                   ],
                 },
-                "displayName": "grid__Container",
-                "foldedComponentIds": Array [
-                  "sc-bdVaJa",
-                ],
-                "propTypes": Object {
-                  "backgroundColor": [Function],
-                  "bg": [Function],
-                  "color": [Function],
-                  "fontSize": [Function],
-                  "m": [Function],
-                  "margin": [Function],
-                  "marginBottom": [Function],
-                  "marginLeft": [Function],
-                  "marginRight": [Function],
-                  "marginTop": [Function],
-                  "mb": [Function],
-                  "ml": [Function],
-                  "mr": [Function],
-                  "mt": [Function],
-                  "p": [Function],
-                  "padding": [Function],
-                  "paddingBottom": [Function],
-                  "paddingLeft": [Function],
-                  "paddingRight": [Function],
-                  "paddingTop": [Function],
-                  "pb": [Function],
-                  "pl": [Function],
-                  "pr": [Function],
-                  "pt": [Function],
-                  "width": [Function],
-                },
+                "displayName": "Gridstyles__Container",
+                "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "grid__Container-l0wsyy-0",
+                "styledComponentId": "Gridstyles__Container-jfdl1j-2",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -223,102 +166,114 @@ exports[`PagedCardContainer renders component with specified non-default props 1
             mx="auto"
           >
             <div
-              className="sc-bdVaJa grid__Container-l0wsyy-0 eEEIRW pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+              className="Gridstyles__Container-jfdl1j-2 byHCwx pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
             >
-              <Row
-                flexWrap={null}
-                ml={null}
-                mr={null}
-                mx={null}
+              <Gridstyles__Row
+                display="flex"
               >
-                <Flex
-                  flexWrap="wrap"
-                  ml={
-                    Array [
-                      1,
-                      10,
-                      40,
-                      75,
-                    ]
-                  }
-                  mr={
-                    Array [
-                      1,
-                      10,
-                      40,
-                      75,
-                    ]
-                  }
-                  mx={null}
-                >
-                  <StyledComponent
-                    flexWrap="wrap"
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "sc-bwzfXH",
-                          "isStatic": false,
-                          "lastClassName": "leDAiW",
-                          "rules": Array [
-                            "box-sizing: border-box;",
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                            "display: flex;",
-                            [Function],
-                            [Function],
-                            [Function],
-                            [Function],
-                          ],
-                        },
-                        "displayName": "Flex",
-                        "foldedComponentIds": Array [
-                          "sc-bdVaJa",
+                <StyledComponent
+                  display="flex"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "_foldedDefaultProps": Object {
+                        "display": "flex",
+                      },
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "Gridstyles__Row-jfdl1j-1",
+                        "isStatic": false,
+                        "lastClassName": "kDyYbe",
+                        "rules": Array [
+                          "@media screen and (min-width: 375px)",
+                          "{margin-left:5px;margin-right:5px;}",
+                          "@media screen and (min-width: 768px)",
+                          "{margin-left:10px;margin-right:10px;}",
+                          "@media screen and (min-width: 1024px)",
+                          "{margin-left:40px;margin-right:40px;}",
+                          "@media screen and (min-width: 1440px)",
+                          "{margin-left:40px;margin-right:40px;}&&{",
+                          [Function],
+                          "}",
+                          [Function],
+                          " ",
+                          [Function],
                         ],
-                        "propTypes": Object {
-                          "alignItems": [Function],
-                          "flexDirection": [Function],
-                          "flexWrap": [Function],
-                          "justifyContent": [Function],
-                        },
-                        "render": [Function],
-                        "styledComponentId": "sc-bwzfXH",
-                        "target": "div",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
+                      },
+                      "displayName": "Gridstyles__Row",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "Gridstyles__Row-jfdl1j-1",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
                     }
-                    forwardedRef={null}
-                    ml={
-                      Array [
-                        1,
-                        10,
-                        40,
-                        75,
-                      ]
-                    }
-                    mr={
-                      Array [
-                        1,
-                        10,
-                        40,
-                        75,
-                      ]
-                    }
-                    mx={null}
+                  }
+                  forwardedRef={null}
+                >
+                  <div
+                    className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                    display="flex"
                   >
-                    <div
-                      className="sc-bdVaJa sc-bwzfXH guKgGl"
+                    <Gridstyles__FlexColumn
+                      key="id-foo"
+                      py={
+                        Array [
+                          2,
+                          2,
+                          2,
+                          3,
+                        ]
+                      }
+                      width={
+                        Array [
+                          1,
+                          1,
+                          0.5,
+                          0.3333333333333333,
+                        ]
+                      }
                     >
-                      <grid__FlexColumn
-                        key="id-foo"
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "isStatic": false,
+                              "lastClassName": "gKSkgB",
+                              "rules": Array [
+                                "@media screen and (min-width: 375px)",
+                                "{padding:10px 5px;}",
+                                "@media screen and (min-width: 768px)",
+                                "{padding:10px;}",
+                                "@media screen and (min-width: 1440px)",
+                                "{padding:10px 15px;}&&{",
+                                [Function],
+                                "}",
+                                [Function],
+                                " ",
+                                [Function],
+                                "display:block;",
+                                "@media screen and (min-width: 768px)",
+                                "{display:flex;}",
+                              ],
+                            },
+                            "displayName": "Gridstyles__FlexColumn",
+                            "foldedComponentIds": Array [
+                              "Gridstyles__Column-jfdl1j-0",
+                            ],
+                            "render": [Function],
+                            "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                         py={
                           Array [
                             2,
@@ -336,46 +291,8 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                           ]
                         }
                       >
-                        <StyledComponent
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "grid__FlexColumn-l0wsyy-1",
-                                "isStatic": false,
-                                "lastClassName": "bsrdHZ",
-                                "rules": Array [
-                                  "display:block;",
-                                  "@media (min-width:",
-                                  "768",
-                                  "px){",
-                                  "
-    display: flex;
-  ",
-                                  ";}",
-                                  ";",
-                                ],
-                              },
-                              "displayName": "grid__FlexColumn",
-                              "foldedComponentIds": Array [],
-                              "render": [Function],
-                              "styledComponentId": "grid__FlexColumn-l0wsyy-1",
-                              "target": [Function],
-                              "toString": [Function],
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                          py={
-                            Array [
-                              2,
-                              2,
-                              2,
-                              3,
-                            ]
-                          }
+                        <div
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
                           width={
                             Array [
                               1,
@@ -385,189 +302,74 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             ]
                           }
                         >
-                          <Column
-                            className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                            pb={null}
-                            pl={null}
-                            pr={null}
-                            pt={null}
-                            px={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
-                            width={
-                              Array [
-                                1,
-                                1,
-                                0.5,
-                                0.3333333333333333,
-                              ]
-                            }
+                          <CardComponent
+                            text="text-foo"
                           >
-                            <Box
-                              className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                              pb={null}
-                              pl={
-                                Array [
-                                  1,
-                                  2,
-                                  2,
-                                  3,
-                                ]
-                              }
-                              pr={
-                                Array [
-                                  1,
-                                  2,
-                                  2,
-                                  3,
-                                ]
-                              }
-                              pt={null}
-                              px={null}
-                              py={
-                                Array [
-                                  2,
-                                  2,
-                                  2,
-                                  3,
-                                ]
-                              }
-                              width={
-                                Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
-                                ]
-                              }
-                            >
-                              <StyledComponent
-                                className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bdVaJa",
-                                      "isStatic": false,
-                                      "lastClassName": "gzZQhn",
-                                      "rules": Array [
-                                        "box-sizing: border-box;",
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                      ],
-                                    },
-                                    "displayName": "Box",
-                                    "foldedComponentIds": Array [],
-                                    "propTypes": Object {
-                                      "backgroundColor": [Function],
-                                      "bg": [Function],
-                                      "color": [Function],
-                                      "fontSize": [Function],
-                                      "m": [Function],
-                                      "margin": [Function],
-                                      "marginBottom": [Function],
-                                      "marginLeft": [Function],
-                                      "marginRight": [Function],
-                                      "marginTop": [Function],
-                                      "mb": [Function],
-                                      "ml": [Function],
-                                      "mr": [Function],
-                                      "mt": [Function],
-                                      "p": [Function],
-                                      "padding": [Function],
-                                      "paddingBottom": [Function],
-                                      "paddingLeft": [Function],
-                                      "paddingRight": [Function],
-                                      "paddingTop": [Function],
-                                      "pb": [Function],
-                                      "pl": [Function],
-                                      "pr": [Function],
-                                      "pt": [Function],
-                                      "width": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-bdVaJa",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                pb={null}
-                                pl={
-                                  Array [
-                                    1,
-                                    2,
-                                    2,
-                                    3,
-                                  ]
-                                }
-                                pr={
-                                  Array [
-                                    1,
-                                    2,
-                                    2,
-                                    3,
-                                  ]
-                                }
-                                pt={null}
-                                px={null}
-                                py={
-                                  Array [
-                                    2,
-                                    2,
-                                    2,
-                                    3,
-                                  ]
-                                }
-                                width={
-                                  Array [
-                                    1,
-                                    1,
-                                    0.5,
-                                    0.3333333333333333,
-                                  ]
-                                }
-                              >
-                                <div
-                                  className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                                  width={
-                                    Array [
-                                      1,
-                                      1,
-                                      0.5,
-                                      0.3333333333333333,
-                                    ]
-                                  }
-                                >
-                                  <CardComponent
-                                    text="text-foo"
-                                  >
-                                    <div>
-                                      text-foo
-                                    </div>
-                                  </CardComponent>
-                                </div>
-                              </StyledComponent>
-                            </Box>
-                          </Column>
-                        </StyledComponent>
-                      </grid__FlexColumn>
-                      <grid__FlexColumn
-                        key="id-bar"
+                            <div>
+                              text-foo
+                            </div>
+                          </CardComponent>
+                        </div>
+                      </StyledComponent>
+                    </Gridstyles__FlexColumn>
+                    <Gridstyles__FlexColumn
+                      key="id-bar"
+                      py={
+                        Array [
+                          2,
+                          2,
+                          2,
+                          3,
+                        ]
+                      }
+                      width={
+                        Array [
+                          1,
+                          1,
+                          0.5,
+                          0.3333333333333333,
+                        ]
+                      }
+                    >
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "isStatic": false,
+                              "lastClassName": "gKSkgB",
+                              "rules": Array [
+                                "@media screen and (min-width: 375px)",
+                                "{padding:10px 5px;}",
+                                "@media screen and (min-width: 768px)",
+                                "{padding:10px;}",
+                                "@media screen and (min-width: 1440px)",
+                                "{padding:10px 15px;}&&{",
+                                [Function],
+                                "}",
+                                [Function],
+                                " ",
+                                [Function],
+                                "display:block;",
+                                "@media screen and (min-width: 768px)",
+                                "{display:flex;}",
+                              ],
+                            },
+                            "displayName": "Gridstyles__FlexColumn",
+                            "foldedComponentIds": Array [
+                              "Gridstyles__Column-jfdl1j-0",
+                            ],
+                            "render": [Function],
+                            "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                         py={
                           Array [
                             2,
@@ -585,46 +387,8 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                           ]
                         }
                       >
-                        <StyledComponent
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "grid__FlexColumn-l0wsyy-1",
-                                "isStatic": false,
-                                "lastClassName": "bsrdHZ",
-                                "rules": Array [
-                                  "display:block;",
-                                  "@media (min-width:",
-                                  "768",
-                                  "px){",
-                                  "
-    display: flex;
-  ",
-                                  ";}",
-                                  ";",
-                                ],
-                              },
-                              "displayName": "grid__FlexColumn",
-                              "foldedComponentIds": Array [],
-                              "render": [Function],
-                              "styledComponentId": "grid__FlexColumn-l0wsyy-1",
-                              "target": [Function],
-                              "toString": [Function],
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                          py={
-                            Array [
-                              2,
-                              2,
-                              2,
-                              3,
-                            ]
-                          }
+                        <div
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
                           width={
                             Array [
                               1,
@@ -634,189 +398,74 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             ]
                           }
                         >
-                          <Column
-                            className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                            pb={null}
-                            pl={null}
-                            pr={null}
-                            pt={null}
-                            px={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
-                            width={
-                              Array [
-                                1,
-                                1,
-                                0.5,
-                                0.3333333333333333,
-                              ]
-                            }
+                          <CardComponent
+                            text="text-bar"
                           >
-                            <Box
-                              className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                              pb={null}
-                              pl={
-                                Array [
-                                  1,
-                                  2,
-                                  2,
-                                  3,
-                                ]
-                              }
-                              pr={
-                                Array [
-                                  1,
-                                  2,
-                                  2,
-                                  3,
-                                ]
-                              }
-                              pt={null}
-                              px={null}
-                              py={
-                                Array [
-                                  2,
-                                  2,
-                                  2,
-                                  3,
-                                ]
-                              }
-                              width={
-                                Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
-                                ]
-                              }
-                            >
-                              <StyledComponent
-                                className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bdVaJa",
-                                      "isStatic": false,
-                                      "lastClassName": "gzZQhn",
-                                      "rules": Array [
-                                        "box-sizing: border-box;",
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                      ],
-                                    },
-                                    "displayName": "Box",
-                                    "foldedComponentIds": Array [],
-                                    "propTypes": Object {
-                                      "backgroundColor": [Function],
-                                      "bg": [Function],
-                                      "color": [Function],
-                                      "fontSize": [Function],
-                                      "m": [Function],
-                                      "margin": [Function],
-                                      "marginBottom": [Function],
-                                      "marginLeft": [Function],
-                                      "marginRight": [Function],
-                                      "marginTop": [Function],
-                                      "mb": [Function],
-                                      "ml": [Function],
-                                      "mr": [Function],
-                                      "mt": [Function],
-                                      "p": [Function],
-                                      "padding": [Function],
-                                      "paddingBottom": [Function],
-                                      "paddingLeft": [Function],
-                                      "paddingRight": [Function],
-                                      "paddingTop": [Function],
-                                      "pb": [Function],
-                                      "pl": [Function],
-                                      "pr": [Function],
-                                      "pt": [Function],
-                                      "width": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-bdVaJa",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                pb={null}
-                                pl={
-                                  Array [
-                                    1,
-                                    2,
-                                    2,
-                                    3,
-                                  ]
-                                }
-                                pr={
-                                  Array [
-                                    1,
-                                    2,
-                                    2,
-                                    3,
-                                  ]
-                                }
-                                pt={null}
-                                px={null}
-                                py={
-                                  Array [
-                                    2,
-                                    2,
-                                    2,
-                                    3,
-                                  ]
-                                }
-                                width={
-                                  Array [
-                                    1,
-                                    1,
-                                    0.5,
-                                    0.3333333333333333,
-                                  ]
-                                }
-                              >
-                                <div
-                                  className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                                  width={
-                                    Array [
-                                      1,
-                                      1,
-                                      0.5,
-                                      0.3333333333333333,
-                                    ]
-                                  }
-                                >
-                                  <CardComponent
-                                    text="text-bar"
-                                  >
-                                    <div>
-                                      text-bar
-                                    </div>
-                                  </CardComponent>
-                                </div>
-                              </StyledComponent>
-                            </Box>
-                          </Column>
-                        </StyledComponent>
-                      </grid__FlexColumn>
-                      <grid__FlexColumn
-                        key="id-baz"
+                            <div>
+                              text-bar
+                            </div>
+                          </CardComponent>
+                        </div>
+                      </StyledComponent>
+                    </Gridstyles__FlexColumn>
+                    <Gridstyles__FlexColumn
+                      key="id-baz"
+                      py={
+                        Array [
+                          2,
+                          2,
+                          2,
+                          3,
+                        ]
+                      }
+                      width={
+                        Array [
+                          1,
+                          1,
+                          0.5,
+                          0.3333333333333333,
+                        ]
+                      }
+                    >
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "isStatic": false,
+                              "lastClassName": "gKSkgB",
+                              "rules": Array [
+                                "@media screen and (min-width: 375px)",
+                                "{padding:10px 5px;}",
+                                "@media screen and (min-width: 768px)",
+                                "{padding:10px;}",
+                                "@media screen and (min-width: 1440px)",
+                                "{padding:10px 15px;}&&{",
+                                [Function],
+                                "}",
+                                [Function],
+                                " ",
+                                [Function],
+                                "display:block;",
+                                "@media screen and (min-width: 768px)",
+                                "{display:flex;}",
+                              ],
+                            },
+                            "displayName": "Gridstyles__FlexColumn",
+                            "foldedComponentIds": Array [
+                              "Gridstyles__Column-jfdl1j-0",
+                            ],
+                            "render": [Function],
+                            "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                         py={
                           Array [
                             2,
@@ -834,46 +483,8 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                           ]
                         }
                       >
-                        <StyledComponent
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "grid__FlexColumn-l0wsyy-1",
-                                "isStatic": false,
-                                "lastClassName": "bsrdHZ",
-                                "rules": Array [
-                                  "display:block;",
-                                  "@media (min-width:",
-                                  "768",
-                                  "px){",
-                                  "
-    display: flex;
-  ",
-                                  ";}",
-                                  ";",
-                                ],
-                              },
-                              "displayName": "grid__FlexColumn",
-                              "foldedComponentIds": Array [],
-                              "render": [Function],
-                              "styledComponentId": "grid__FlexColumn-l0wsyy-1",
-                              "target": [Function],
-                              "toString": [Function],
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                          py={
-                            Array [
-                              2,
-                              2,
-                              2,
-                              3,
-                            ]
-                          }
+                        <div
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
                           width={
                             Array [
                               1,
@@ -883,194 +494,22 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             ]
                           }
                         >
-                          <Column
-                            className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                            pb={null}
-                            pl={null}
-                            pr={null}
-                            pt={null}
-                            px={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
-                            width={
-                              Array [
-                                1,
-                                1,
-                                0.5,
-                                0.3333333333333333,
-                              ]
-                            }
+                          <CardComponent
+                            text="text-baz"
                           >
-                            <Box
-                              className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                              pb={null}
-                              pl={
-                                Array [
-                                  1,
-                                  2,
-                                  2,
-                                  3,
-                                ]
-                              }
-                              pr={
-                                Array [
-                                  1,
-                                  2,
-                                  2,
-                                  3,
-                                ]
-                              }
-                              pt={null}
-                              px={null}
-                              py={
-                                Array [
-                                  2,
-                                  2,
-                                  2,
-                                  3,
-                                ]
-                              }
-                              width={
-                                Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
-                                ]
-                              }
-                            >
-                              <StyledComponent
-                                className="grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bdVaJa",
-                                      "isStatic": false,
-                                      "lastClassName": "gzZQhn",
-                                      "rules": Array [
-                                        "box-sizing: border-box;",
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                      ],
-                                    },
-                                    "displayName": "Box",
-                                    "foldedComponentIds": Array [],
-                                    "propTypes": Object {
-                                      "backgroundColor": [Function],
-                                      "bg": [Function],
-                                      "color": [Function],
-                                      "fontSize": [Function],
-                                      "m": [Function],
-                                      "margin": [Function],
-                                      "marginBottom": [Function],
-                                      "marginLeft": [Function],
-                                      "marginRight": [Function],
-                                      "marginTop": [Function],
-                                      "mb": [Function],
-                                      "ml": [Function],
-                                      "mr": [Function],
-                                      "mt": [Function],
-                                      "p": [Function],
-                                      "padding": [Function],
-                                      "paddingBottom": [Function],
-                                      "paddingLeft": [Function],
-                                      "paddingRight": [Function],
-                                      "paddingTop": [Function],
-                                      "pb": [Function],
-                                      "pl": [Function],
-                                      "pr": [Function],
-                                      "pt": [Function],
-                                      "width": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-bdVaJa",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                pb={null}
-                                pl={
-                                  Array [
-                                    1,
-                                    2,
-                                    2,
-                                    3,
-                                  ]
-                                }
-                                pr={
-                                  Array [
-                                    1,
-                                    2,
-                                    2,
-                                    3,
-                                  ]
-                                }
-                                pt={null}
-                                px={null}
-                                py={
-                                  Array [
-                                    2,
-                                    2,
-                                    2,
-                                    3,
-                                  ]
-                                }
-                                width={
-                                  Array [
-                                    1,
-                                    1,
-                                    0.5,
-                                    0.3333333333333333,
-                                  ]
-                                }
-                              >
-                                <div
-                                  className="sc-bdVaJa koArko grid__FlexColumn-l0wsyy-1 bsrdHZ"
-                                  width={
-                                    Array [
-                                      1,
-                                      1,
-                                      0.5,
-                                      0.3333333333333333,
-                                    ]
-                                  }
-                                >
-                                  <CardComponent
-                                    text="text-baz"
-                                  >
-                                    <div>
-                                      text-baz
-                                    </div>
-                                  </CardComponent>
-                                </div>
-                              </StyledComponent>
-                            </Box>
-                          </Column>
-                        </StyledComponent>
-                      </grid__FlexColumn>
-                    </div>
-                  </StyledComponent>
-                </Flex>
-              </Row>
+                            <div>
+                              text-baz
+                            </div>
+                          </CardComponent>
+                        </div>
+                      </StyledComponent>
+                    </Gridstyles__FlexColumn>
+                  </div>
+                </StyledComponent>
+              </Gridstyles__Row>
             </div>
           </StyledComponent>
-        </grid__Container>
+        </Gridstyles__Container>
       </CardContainer>
     </StyledComponent>
   </pagedCardContainer__PaddedCardContainer>
@@ -1078,11 +517,8 @@ exports[`PagedCardContainer renders component with specified non-default props 1
     onClick={[MockFunction]}
     text="Show More Foo"
   >
-    <Row
-      flexWrap={null}
-      ml={null}
-      mr={null}
-      mx={null}
+    <Gridstyles__Row
+      display="flex"
       pb={
         Array [
           30,
@@ -1091,25 +527,46 @@ exports[`PagedCardContainer renders component with specified non-default props 1
         ]
       }
     >
-      <Flex
-        flexWrap="wrap"
-        ml={
-          Array [
-            1,
-            10,
-            40,
-            75,
-          ]
+      <StyledComponent
+        display="flex"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "_foldedDefaultProps": Object {
+              "display": "flex",
+            },
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "Gridstyles__Row-jfdl1j-1",
+              "isStatic": false,
+              "lastClassName": "kDyYbe",
+              "rules": Array [
+                "@media screen and (min-width: 375px)",
+                "{margin-left:5px;margin-right:5px;}",
+                "@media screen and (min-width: 768px)",
+                "{margin-left:10px;margin-right:10px;}",
+                "@media screen and (min-width: 1024px)",
+                "{margin-left:40px;margin-right:40px;}",
+                "@media screen and (min-width: 1440px)",
+                "{margin-left:40px;margin-right:40px;}&&{",
+                [Function],
+                "}",
+                [Function],
+                " ",
+                [Function],
+              ],
+            },
+            "displayName": "Gridstyles__Row",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "Gridstyles__Row-jfdl1j-1",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
         }
-        mr={
-          Array [
-            1,
-            10,
-            40,
-            75,
-          ]
-        }
-        mx={null}
+        forwardedRef={null}
         pb={
           Array [
             30,
@@ -1118,84 +575,55 @@ exports[`PagedCardContainer renders component with specified non-default props 1
           ]
         }
       >
-        <StyledComponent
-          flexWrap="wrap"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
-                "isStatic": false,
-                "lastClassName": "leDAiW",
-                "rules": Array [
-                  "box-sizing: border-box;",
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  "display: flex;",
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                ],
-              },
-              "displayName": "Flex",
-              "foldedComponentIds": Array [
-                "sc-bdVaJa",
-              ],
-              "propTypes": Object {
-                "alignItems": [Function],
-                "flexDirection": [Function],
-                "flexWrap": [Function],
-                "justifyContent": [Function],
-              },
-              "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
-              "target": "div",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          ml={
-            Array [
-              1,
-              10,
-              40,
-              75,
-            ]
-          }
-          mr={
-            Array [
-              1,
-              10,
-              40,
-              75,
-            ]
-          }
-          mx={null}
-          pb={
-            Array [
-              30,
-              30,
-              50,
-            ]
-          }
+        <div
+          className="Gridstyles__Row-jfdl1j-1 kDyYbe"
+          display="flex"
         >
-          <div
-            className="sc-bdVaJa sc-bwzfXH leDAiW"
+          <Gridstyles__Column
+            mx="auto"
+            pt={
+              Array [
+                30,
+                30,
+                50,
+              ]
+            }
           >
-            <Column
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "Gridstyles__Column-jfdl1j-0",
+                    "isStatic": false,
+                    "lastClassName": "eBedPr",
+                    "rules": Array [
+                      "@media screen and (min-width: 375px)",
+                      "{padding:10px 5px;}",
+                      "@media screen and (min-width: 768px)",
+                      "{padding:10px;}",
+                      "@media screen and (min-width: 1440px)",
+                      "{padding:10px 15px;}&&{",
+                      [Function],
+                      "}",
+                      [Function],
+                      " ",
+                      [Function],
+                    ],
+                  },
+                  "displayName": "Gridstyles__Column",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "Gridstyles__Column-jfdl1j-0",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
               mx="auto"
-              pb={null}
-              pl={null}
-              pr={null}
               pt={
                 Array [
                   30,
@@ -1203,231 +631,112 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                   50,
                 ]
               }
-              px={null}
-              py={null}
             >
-              <Box
-                mx="auto"
-                pb={2}
-                pl={
-                  Array [
-                    1,
-                    2,
-                    2,
-                    3,
-                  ]
-                }
-                pr={
-                  Array [
-                    1,
-                    2,
-                    2,
-                    3,
-                  ]
-                }
-                pt={
-                  Array [
-                    30,
-                    30,
-                    50,
-                  ]
-                }
-                px={null}
-                py={null}
+              <div
+                className="Gridstyles__Column-jfdl1j-0 eBedPr"
               >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
-                        "isStatic": false,
-                        "lastClassName": "gzZQhn",
-                        "rules": Array [
-                          "box-sizing: border-box;",
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Box",
-                      "foldedComponentIds": Array [],
-                      "propTypes": Object {
-                        "backgroundColor": [Function],
-                        "bg": [Function],
-                        "color": [Function],
-                        "fontSize": [Function],
-                        "m": [Function],
-                        "margin": [Function],
-                        "marginBottom": [Function],
-                        "marginLeft": [Function],
-                        "marginRight": [Function],
-                        "marginTop": [Function],
-                        "mb": [Function],
-                        "ml": [Function],
-                        "mr": [Function],
-                        "mt": [Function],
-                        "p": [Function],
-                        "padding": [Function],
-                        "paddingBottom": [Function],
-                        "paddingLeft": [Function],
-                        "paddingRight": [Function],
-                        "paddingTop": [Function],
-                        "pb": [Function],
-                        "pl": [Function],
-                        "pr": [Function],
-                        "pt": [Function],
-                        "width": [Function],
-                      },
-                      "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  mx="auto"
-                  pb={2}
-                  pl={
-                    Array [
-                      1,
-                      2,
-                      2,
-                      3,
-                    ]
-                  }
-                  pr={
-                    Array [
-                      1,
-                      2,
-                      2,
-                      3,
-                    ]
-                  }
-                  pt={
-                    Array [
-                      30,
-                      30,
-                      50,
-                    ]
-                  }
-                  px={null}
-                  py={null}
+                <Button
+                  className=""
+                  disabled={false}
+                  flexwidth={false}
+                  fullmobile={false}
+                  link={false}
+                  onClick={[MockFunction]}
+                  primary={true}
+                  small={false}
+                  to={null}
+                  type="button"
+                  white={false}
+                  wide={true}
                 >
-                  <div
-                    className="sc-bdVaJa gzZQhn"
+                  <button__StyledButton
+                    className=""
+                    disabled={false}
+                    flexwidth={false}
+                    fullmobile={false}
+                    onClick={[MockFunction]}
+                    primary={true}
+                    small={false}
+                    type="button"
+                    white={false}
+                    wide={true}
                   >
-                    <Button
+                    <StyledComponent
                       className=""
                       disabled={false}
                       flexwidth={false}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "button__StyledButton-sc-1gywmhy-0",
+                            "isStatic": false,
+                            "lastClassName": "hidOvC",
+                            "rules": Array [
+                              "box-sizing:border-box;padding:12px 35px;border-radius:4px;border:",
+                              [Function],
+                              ";display:inline-block;text-align:center;color:",
+                              [Function],
+                              ";background-color:",
+                              [Function],
+                              ";font-family:",
+                              "Poppins, sans-serif",
+                              ";font-weight:700;font-size:",
+                              [Function],
+                              ";line-height:1.388;min-width:",
+                              [Function],
+                              ";width:",
+                              [Function],
+                              ";cursor:pointer;text-decoration:none;text-align:center;transition:background-color 0.15s linear;&:hover{background-color:",
+                              [Function],
+                              ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
+                              "@media (min-width:",
+                              "768",
+                              "){",
+                              "
+      width: auto;
+  ",
+                              ";}",
+                              ";",
+                            ],
+                          },
+                          "displayName": "button__StyledButton",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "button__StyledButton-sc-1gywmhy-0",
+                          "target": "button",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
                       fullmobile={false}
-                      link={false}
                       onClick={[MockFunction]}
                       primary={true}
                       small={false}
-                      to={null}
                       type="button"
                       white={false}
                       wide={true}
                     >
-                      <button__StyledButton
-                        className=""
+                      <button
+                        className="button__StyledButton-sc-1gywmhy-0 hidOvC"
                         disabled={false}
-                        flexwidth={false}
-                        fullmobile={false}
                         onClick={[MockFunction]}
-                        primary={true}
-                        small={false}
                         type="button"
-                        white={false}
-                        wide={true}
                       >
-                        <StyledComponent
-                          className=""
-                          disabled={false}
-                          flexwidth={false}
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "button__StyledButton-sc-1gywmhy-0",
-                                "isStatic": false,
-                                "lastClassName": "lgTyhb",
-                                "rules": Array [
-                                  "box-sizing:border-box;padding:12px 35px;border-radius:4px;border:",
-                                  [Function],
-                                  ";display:inline-block;text-align:center;color:",
-                                  [Function],
-                                  ";background-color:",
-                                  [Function],
-                                  ";font-family:",
-                                  "Poppins, sans-serif",
-                                  ";font-weight:700;font-size:",
-                                  [Function],
-                                  ";line-height:1.388;min-width:",
-                                  [Function],
-                                  ";width:",
-                                  [Function],
-                                  ";cursor:pointer;text-decoration:none;text-align:center;transition:background-color 0.15s linear;&:hover{background-color:",
-                                  [Function],
-                                  ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
-                                  "@media (min-width:",
-                                  "768",
-                                  "px){",
-                                  "
-      width: auto;
-  ",
-                                  ";}",
-                                  ";",
-                                ],
-                              },
-                              "displayName": "button__StyledButton",
-                              "foldedComponentIds": Array [],
-                              "render": [Function],
-                              "styledComponentId": "button__StyledButton-sc-1gywmhy-0",
-                              "target": "button",
-                              "toString": [Function],
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                          fullmobile={false}
-                          onClick={[MockFunction]}
-                          primary={true}
-                          small={false}
-                          type="button"
-                          white={false}
-                          wide={true}
-                        >
-                          <button
-                            className="button__StyledButton-sc-1gywmhy-0 lgTyhb"
-                            disabled={false}
-                            onClick={[MockFunction]}
-                            type="button"
-                          >
-                            Show More Foo
-                          </button>
-                        </StyledComponent>
-                      </button__StyledButton>
-                    </Button>
-                  </div>
-                </StyledComponent>
-              </Box>
-            </Column>
-          </div>
-        </StyledComponent>
-      </Flex>
-    </Row>
+                        Show More Foo
+                      </button>
+                    </StyledComponent>
+                  </button__StyledButton>
+                </Button>
+              </div>
+            </StyledComponent>
+          </Gridstyles__Column>
+        </div>
+      </StyledComponent>
+    </Gridstyles__Row>
   </ShowMoreButton>
 </PagedCardContainer>
 `;

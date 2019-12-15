@@ -57,12 +57,12 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> with big size sp
           "componentStyle": ComponentStyle {
             "componentId": "styles__Badge-uzqcz1-0",
             "isStatic": false,
-            "lastClassName": "czTwOV",
+            "lastClassName": "fBNwOL",
             "rules": Array [
               "border:none;display:inline-flex;align-items:center;justify-content:center;background-color:#f9f9f9;margin:0 10px 10px 0;padding:10px;",
               "@media (min-width:",
               "768",
-              "px){",
+              "){",
               "
     margin: 0 30px 30px 0;
   ",
@@ -90,7 +90,7 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> with big size sp
       target="_blank"
     >
       <a
-        className="styles__Badge-uzqcz1-0 czTwOV"
+        className="styles__Badge-uzqcz1-0 fBNwOL"
         href="https://sponsor1.com"
         rel="noopener noreferrer"
         target="_blank"
@@ -167,12 +167,12 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> with small size 
           "componentStyle": ComponentStyle {
             "componentId": "styles__Badge-uzqcz1-0",
             "isStatic": false,
-            "lastClassName": "cZhemG",
+            "lastClassName": "dgkqWC",
             "rules": Array [
               "border:none;display:inline-flex;align-items:center;justify-content:center;background-color:#f9f9f9;margin:0 10px 10px 0;padding:10px;",
               "@media (min-width:",
               "768",
-              "px){",
+              "){",
               "
     margin: 0 30px 30px 0;
   ",
@@ -200,7 +200,7 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> with small size 
       target="_blank"
     >
       <a
-        className="styles__Badge-uzqcz1-0 cZhemG"
+        className="styles__Badge-uzqcz1-0 dgkqWC"
         href="https://sponsor2.com"
         rel="noopener noreferrer"
         target="_blank"
@@ -277,12 +277,12 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> without logo 1`]
           "componentStyle": ComponentStyle {
             "componentId": "styles__Badge-uzqcz1-0",
             "isStatic": false,
-            "lastClassName": "cZhemG",
+            "lastClassName": "dgkqWC",
             "rules": Array [
               "border:none;display:inline-flex;align-items:center;justify-content:center;background-color:#f9f9f9;margin:0 10px 10px 0;padding:10px;",
               "@media (min-width:",
               "768",
-              "px){",
+              "){",
               "
     margin: 0 30px 30px 0;
   ",
@@ -310,7 +310,7 @@ exports[`<SponsorBadge/> renders the component <SponsorBadge /> without logo 1`]
       target="_blank"
     >
       <a
-        className="styles__Badge-uzqcz1-0 cZhemG"
+        className="styles__Badge-uzqcz1-0 dgkqWC"
         href="https://sponsor3.com"
         rel="noopener noreferrer"
         target="_blank"

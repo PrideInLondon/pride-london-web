@@ -13,7 +13,7 @@ exports[`Featured Event Content renders with default values 1`] = `
           "overflow:hidden;.slick-list{overflow:visible;}.slick-track{display:flex;.slick-slide{display:flex;height:auto;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
           "@media (min-width:",
           "768",
-          "px){",
+          "){",
           "
     .slick-list {
       overflow: hidden;
@@ -23,7 +23,7 @@ exports[`Featured Event Content renders with default values 1`] = `
           ";",
           "@media (max-width:",
           "767",
-          "px){",
+          "){",
           "
     .slick-list {
       padding-left: 10px !important;
@@ -86,7 +86,7 @@ exports[`FeaturedEvents renders with default values 1`] = `
     slidesToShow={2}
     speed={500}
   >
-    <grid__FlexColumn
+    <Gridstyles__FlexColumn
       key="123abcPride Quiz"
       width={
         Array [
@@ -119,8 +119,8 @@ exports[`FeaturedEvents renders with default values 1`] = `
           }
         }
       />
-    </grid__FlexColumn>
-    <grid__FlexColumn
+    </Gridstyles__FlexColumn>
+    <Gridstyles__FlexColumn
       key="123abcdPride Quiz 2"
       width={
         Array [
@@ -153,7 +153,7 @@ exports[`FeaturedEvents renders with default values 1`] = `
           }
         }
       />
-    </grid__FlexColumn>
+    </Gridstyles__FlexColumn>
   </Slider>
 </styles__FeaturedEventContent>
 `;

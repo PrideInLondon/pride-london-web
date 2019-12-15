@@ -3,9 +3,10 @@
 exports[`ParadeMap render correctly 1`] = `
 <Fragment>
   <map__ParadeMapContainer
+    display="flex"
     mx={0}
   >
-    <Column
+    <Gridstyles__Column
       pb={0}
       pl={
         Array [
@@ -24,8 +25,6 @@ exports[`ParadeMap render correctly 1`] = `
           0,
         ]
       }
-      px={null}
-      py={null}
       width={
         Array [
           1,
@@ -85,18 +84,15 @@ exports[`ParadeMap render correctly 1`] = `
           Download map as a PDF
         </map__DownloadPDFLinkMobile>
       </map__ParadeMapContent>
-    </Column>
-    <Column
+    </Gridstyles__Column>
+    <Gridstyles__Column
       pb={0}
-      pl={null}
-      pr={null}
       pt={
         Array [
           0,
         ]
       }
       px={0}
-      py={null}
       width={
         Array [
           1,
@@ -112,7 +108,7 @@ exports[`ParadeMap render correctly 1`] = `
         frameBorder="0"
         src="https://www.google.com/maps/d/embed?mid=null&z=16&ll=51.51004%2C%20-0.13501&hl=en&output=embed&t=m&style=feature%3Apoi%7Cvisibility%3Aoff"
       />
-    </Column>
+    </Gridstyles__Column>
   </map__ParadeMapContainer>
 </Fragment>
 `;

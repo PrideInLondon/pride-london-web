@@ -5,22 +5,13 @@ exports[`<CookieNotice /> renders and matches snapshot 1`] = `
   <cookieNotice__CookieWrapper
     hide={true}
   >
-    <grid__Container
+    <Gridstyles__Container
       mx="auto"
     >
-      <Row
-        flexWrap={null}
-        ml={null}
-        mr={null}
-        mx={null}
+      <Gridstyles__Row
+        display="flex"
       >
-        <Column
-          pb={null}
-          pl={null}
-          pr={null}
-          pt={null}
-          px={null}
-          py={null}
+        <Gridstyles__Column
           width={
             Array [
               1,
@@ -38,7 +29,7 @@ exports[`<CookieNotice /> renders and matches snapshot 1`] = `
               Learn more
             </cookieNotice__CookieLink>
           </cookieNotice__CookieText>
-        </Column>
+        </Gridstyles__Column>
         <cookieNotice__CookieActions
           width={
             Array [
@@ -55,8 +46,8 @@ exports[`<CookieNotice /> renders and matches snapshot 1`] = `
             Got it
           </cookieNotice__CookieAgree>
         </cookieNotice__CookieActions>
-      </Row>
-    </grid__Container>
+      </Gridstyles__Row>
+    </Gridstyles__Container>
   </cookieNotice__CookieWrapper>
 </Fragment>
 `;

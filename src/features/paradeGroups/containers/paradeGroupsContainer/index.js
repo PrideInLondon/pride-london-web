@@ -11,7 +11,7 @@ import LetterGroup from '../../components/letterGroup'
 import ParadeGroup from '../../components/paradeGroup'
 import ParadeGroupsFilterContainer from '../paradeGroupsFiltersContainer'
 import { paradeGroupFilterPropType } from '../../paradeGroupFilterPropType'
-import { paradeGroupCategories } from '../../../../constants'
+import constants from '../../../../constants'
 import { LetterContainer, ScrolledLetters } from './styles'
 
 const lettersArray = '#abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
@@ -27,7 +27,9 @@ const isInViewport = (e, { top: t, height: h } = e.getBoundingClientRect()) =>
   t <= innerHeight && t - lettersContainerHeight + h >= 0
 
 const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
-  const [selectedFilter, setSelectedFilter] = useState(paradeGroupCategories[0])
+  const [selectedFilter, setSelectedFilter] = useState(
+    constants.paradeGroupCategories[0]
+  )
   const [groups, setGroups] = useState(paradeGroups)
   const [activeLetter, setActiveLetter] = useState(null)
   const paradeGroupLettersSection = useRef(null)
@@ -52,7 +54,7 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
     newFilter => {
       setSelectedFilter(newFilter)
       setGroups(
-        newFilter === paradeGroupCategories[0] // TODO Reliance on magic array position
+        newFilter === constants.paradeGroupCategories[0] // TODO Reliance on magic array position
           ? paradeGroups
           : paradeGroups.filter(paradeGroup => {
               return (

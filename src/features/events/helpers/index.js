@@ -1,7 +1,7 @@
 const moment = require('moment')
 const slugify = require('slugify')
 const UuidEncoder = require('uuid-encoder')
-const { dateFormat } = require('../../../constants')
+const constants = require('../../../constants')
 
 const encoder = new UuidEncoder('base62')
 
@@ -157,7 +157,7 @@ function sanitizeDates(dates) {
     }/${year.length === 2 ? `20${year}` : year}`
 
     // Create array of valid dates
-    if (moment(formattedDate, dateFormat).isValid()) {
+    if (moment(formattedDate, constants.dateFormat).isValid()) {
       formattedDates.push(formattedDate)
     }
   })

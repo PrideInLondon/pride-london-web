@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import moment from 'moment'
 import Helmet from 'react-helmet'
-import { noScroll } from '../utilities'
+// import { noScroll } from '../utilities'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { EventListingCard } from '../features/events'
@@ -19,9 +19,45 @@ import {
 } from '../components/grid'
 import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
-import { dateFormat } from '../constants'
+import constants from '../constants'
 // import filterIcon from '../theme/assets/images/icon-filters.svg'
 import BannerImg from '../theme/assets/images/banners/events/bg@2x.jpg'
+import { EventsPageBanner } from '../features/events/components/eventsPageBanner'
+
+export const EventsPageQuery = graphql`
+  query eventsPageQuery {
+    file(relativePath: { regex: "/banners/events/bg@3x/" }) {
+      size
+      name
+      childImageSharp {
+        desktop: fixed(
+          width: 920
+          height: 500
+          quality: 100
+          cropFocus: CENTER
+        ) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+        tablet: fixed(
+          width: 768
+          height: 417
+          quality: 100
+          cropFocus: CENTER
+        ) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+        mobile: fixed(
+          width: 480
+          height: 260
+          quality: 100
+          cropFocus: CENTER
+        ) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+  }
+`
 
 // const ColumnTextCenter = styled(Column)`
 //   text-align: center;
@@ -84,16 +120,15 @@ class GroupedEventsCards extends Component {
   }
   render() {
     const { event, index, events } = this.props
-
     let header
     const longDayOfMonth = 'dddd D MMM'
 
     if (index === 0) {
       header = moment(event.node.startTime).format(longDayOfMonth)
     } else {
-      const startDate = moment(event.node.startTime).format(dateFormat)
+      const startDate = moment(event.node.startTime).format(constants.dateFormat)
       const prevStartDate = moment(events[index - 1].node.startTime).format(
-        dateFormat
+        constants.dateFormat
       )
 
       if (startDate !== prevStartDate) {
@@ -120,22 +155,25 @@ class GroupedEventsCards extends Component {
 /* eslint-enable */
 
 /* eslint-disable react/no-multi-comp */
-class Events extends Component {
-  state = {
-    showFiltersMobile: false,
-  }
 
-  toggleFiltersMobile = () => {
-    this.setState(
-      prevState => ({
-        ...prevState,
-        showFiltersMobile: !prevState.showFiltersMobile,
-      }),
-      () => noScroll.toggle()
-    )
-  }
+export const Events = ({
+  data: {
+    file: { childImageSharp },
+  },
+}) => {
+  // const [state, setState] = useState({ showFiltersMobile: false })
 
-  renderEventCount = (filteredCount, eventsToShow) => {
+  // const toggleFiltersMobile = () => {
+  //   this.setState(
+  //     prevState => ({
+  //       ...prevState,
+  //       showFiltersMobile: !prevState.showFiltersMobile,
+  //     }),
+  //     () => noScroll.toggle()
+  //   )
+  // }
+
+  const renderEventCount = (filteredCount, eventsToShow) => {
     let text
 
     if (filteredCount) {
@@ -150,22 +188,25 @@ class Events extends Component {
     return <EventCount>{text}</EventCount>
   }
 
-  render() {
-    // const { showFiltersMobile } = this.state
-
-    return (
-      <Consumer>
-        {context => (
-          <PageWrapper>
-            <Helmet title="Coming Out - The new way to find the best queer events for the queer community from Pride in London." />
-            <BannerImage
-              titleText="Coming Out"
-              subtitleText="The new way to find the best queer events for the queer community from Pride in London."
-              imageSrc={BannerImg}
-              color={theme.colors.lightGrey}
-              imageFullWidth
-            />
-            {/* <OffsetContainer>
+  return (
+    <Consumer>
+      {context => (
+        <PageWrapper>
+          <Helmet title="Coming Out - The new way to find the best queer events for the queer community from Pride in London." />
+          <BannerImage
+            titleText="Coming Out"
+            subtitleText="The new way to find the best queer events for the queer community from Pride in London."
+            imageSrc={BannerImg}
+            color={theme.colors.lightGrey}
+            imageFullWidth
+          />
+          <EventsPageBanner
+            title="Coming Out"
+            subtitle=" The new way to find the best queer events for the queer community from Pride in London."
+            backgroundColor="bondiBlue"
+            image={childImageSharp}
+          />
+          {/* <OffsetContainer>
               <EventsFilters
                 showFiltersMobile={showFiltersMobile}
                 toggleFiltersMobile={this.toggleFiltersMobile}
@@ -195,55 +236,57 @@ class Events extends Component {
                 </ColumnTextCenter>
               </Row>
             </ContainerAddFilters> */}
-            <Container>
-              <Row>
-                <StyledFlipMove>
-                  {context.filteredEvents
-                    .filter(filterByLimit, context.state.eventsToShow)
-                    .sort((event1, event2) => {
-                      return (
-                        new Date(event1.node.startTime) -
-                        new Date(event2.node.startTime)
-                      )
-                    })
-                    .map((event, index, events) => (
-                      <GroupedEventsCards
-                        events={events}
-                        index={index}
-                        event={event}
-                        key={event.node.id}
-                      />
-                    ))}
-                </StyledFlipMove>
-                <ColumnPagination width={1}>
-                  {this.renderEventCount(
-                    context.filteredEvents.length,
-                    context.state.eventsToShow
-                  )}
-                  {context.state.eventsToShow <
-                    context.filteredEvents.length && (
-                    <Button
-                      onClick={() =>
-                        context.actions.showMore(context.filteredEvents.length)
-                      }
-                      primary
-                      disabled={
-                        context.state.eventsToShow >=
-                        context.filteredEvents.length
-                      }
-                      fullmobile
-                    >
-                      Show more events
-                    </Button>
-                  )}
-                </ColumnPagination>
-              </Row>
-            </Container>
-          </PageWrapper>
-        )}
-      </Consumer>
-    )
-  }
+          <Container>
+            <Row>
+              <StyledFlipMove>
+                {context.filteredEvents
+                  .filter(filterByLimit, context.state.eventsToShow)
+                  .sort((event1, event2) => {
+                    return (
+                      new Date(event1.node.startTime) -
+                      new Date(event2.node.startTime)
+                    )
+                  })
+                  .map((event, index, events) => (
+                    <GroupedEventsCards
+                      events={events}
+                      index={index}
+                      event={event}
+                      key={event.node.id}
+                    />
+                  ))}
+              </StyledFlipMove>
+              <ColumnPagination width={1}>
+                {renderEventCount(
+                  context.filteredEvents.length,
+                  context.state.eventsToShow
+                )}
+                {context.state.eventsToShow < context.filteredEvents.length && (
+                  <Button
+                    onClick={() =>
+                      context.actions.showMore(context.filteredEvents.length)
+                    }
+                    primary
+                    disabled={
+                      context.state.eventsToShow >=
+                      context.filteredEvents.length
+                    }
+                    fullmobile
+                  >
+                    Show more events
+                  </Button>
+                )}
+              </ColumnPagination>
+            </Row>
+          </Container>
+        </PageWrapper>
+      )}
+    </Consumer>
+  )
+}
+
+Events.propTypes = {
+  data: PropTypes.object.isRequired,
 }
 
 export default Events

@@ -1,11 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ShowMoreButton renders component 1`] = `
-<Row
-  flexWrap={null}
-  ml={null}
-  mr={null}
-  mx={null}
+<Gridstyles__Row
+  display="flex"
   pb={
     Array [
       30,
@@ -14,11 +11,8 @@ exports[`ShowMoreButton renders component 1`] = `
     ]
   }
 >
-  <Column
+  <Gridstyles__Column
     mx="auto"
-    pb={null}
-    pl={null}
-    pr={null}
     pt={
       Array [
         30,
@@ -26,8 +20,6 @@ exports[`ShowMoreButton renders component 1`] = `
         50,
       ]
     }
-    px={null}
-    py={null}
   >
     <Button
       className=""
@@ -45,6 +37,6 @@ exports[`ShowMoreButton renders component 1`] = `
     >
       Foo
     </Button>
-  </Column>
-</Row>
+  </Gridstyles__Column>
+</Gridstyles__Row>
 `;

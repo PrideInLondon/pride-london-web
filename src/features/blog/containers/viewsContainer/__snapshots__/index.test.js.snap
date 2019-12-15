@@ -2,22 +2,13 @@
 
 exports[`ViewsContainer should render with default values 1`] = `
 <section>
-  <grid__Container
+  <Gridstyles__Container
     mx="auto"
   >
-    <Row
-      flexWrap={null}
-      ml={null}
-      mr={null}
-      mx={null}
+    <Gridstyles__Row
+      display="flex"
     >
-      <Column
-        pb={null}
-        pl={null}
-        pr={null}
-        pt={null}
-        px={null}
-        py={null}
+      <Gridstyles__Column
         width={1}
       >
         <styles__CardContainer>
@@ -108,8 +99,8 @@ exports[`ViewsContainer should render with default values 1`] = `
             />
           </Slider>
         </styles__CardContainer>
-      </Column>
-    </Row>
-  </grid__Container>
+      </Gridstyles__Column>
+    </Gridstyles__Row>
+  </Gridstyles__Container>
 </section>
 `;

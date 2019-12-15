@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { filterTypes } from '../../../constants'
+import constants from '../../../constants'
 import { Label, Text, Input } from './styles'
 
 const FilterLabel = ({
@@ -32,7 +32,7 @@ const FilterLabel = ({
 FilterLabel.propTypes = {
   filterName: PropTypes.string.isRequired,
   filterColour: PropTypes.string.isRequired,
-  filterType: PropTypes.oneOf(filterTypes).isRequired,
+  filterType: PropTypes.oneOf(constants.filterTypes).isRequired,
   isSelected: PropTypes.bool.isRequired,
   handleSelect: PropTypes.func.isRequired,
 }

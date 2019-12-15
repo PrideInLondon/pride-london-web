@@ -1,16 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsCards renders with default values 1`] = `
-<grid__Container
+<Gridstyles__Container
   mx="auto"
 >
-  <Row
-    flexWrap={null}
-    ml={null}
-    mr={null}
-    mx={null}
+  <Gridstyles__Row
+    display="flex"
   >
-    <grid__FlexColumn
+    <Gridstyles__FlexColumn
       key="id"
       py={
         Array [
@@ -43,7 +40,7 @@ exports[`NewsCards renders with default values 1`] = `
         slug="news/article"
         title="title"
       />
-    </grid__FlexColumn>
-  </Row>
-</grid__Container>
+    </Gridstyles__FlexColumn>
+  </Gridstyles__Row>
+</Gridstyles__Container>
 `;
