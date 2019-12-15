@@ -26,6 +26,7 @@
     "noUnusedParameters": true,
     "typeRoots": ["./@types", "./node_modules/@types"]
   },
+  "files": ["./@types/index.d.ts"],
   "include": ["./src"],
   "exclude": [
     "**/node_modules/*",

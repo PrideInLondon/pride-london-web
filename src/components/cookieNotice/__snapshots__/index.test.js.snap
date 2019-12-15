@@ -10,6 +10,7 @@ exports[`<CookieNotice /> renders and matches snapshot 1`] = `
     >
       <Gridstyles__Row
         display="flex"
+        flexWrap="wrap"
       >
         <Gridstyles__Column
           width={

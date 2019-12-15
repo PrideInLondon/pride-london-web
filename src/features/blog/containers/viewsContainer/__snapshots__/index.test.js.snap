@@ -7,6 +7,7 @@ exports[`ViewsContainer should render with default values 1`] = `
   >
     <Gridstyles__Row
       display="flex"
+      flexWrap="wrap"
     >
       <Gridstyles__Column
         width={1}

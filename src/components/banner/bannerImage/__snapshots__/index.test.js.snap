@@ -34,6 +34,7 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
   >
     <styles__StyledRow
       display="flex"
+      flexWrap="wrap"
       medium={false}
     >
       <Gridstyles__Column
@@ -78,6 +79,7 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
   >
     <styles__StyledRow
       display="flex"
+      flexWrap="wrap"
       medium={false}
     >
       <Gridstyles__Column

@@ -3,6 +3,7 @@
 exports[`ShowMoreButton renders component 1`] = `
 <Gridstyles__Row
   display="flex"
+  flexWrap="wrap"
   pb={
     Array [
       30,

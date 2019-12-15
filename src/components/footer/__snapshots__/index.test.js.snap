@@ -2,6 +2,11 @@
 
 exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 .c2 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,6 +49,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 }
 
 .c3 {
+  padding: 10px 5px;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -84,6 +90,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 }
 
 .c9 {
+  padding: 10px 5px;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -204,6 +211,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 }
 
 .c15 {
+  padding: 10px 5px;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -260,51 +268,38 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 
 @media screen and (min-width:375px) {
   .c2 {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c2 {
     margin-left: 10px;
     margin-right: 10px;
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:768px) {
   .c2 {
     margin-left: 40px;
     margin-right: 40px;
   }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1024px) {
   .c2 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 75px;
+    margin-right: 75px;
   }
 }
 
 @media screen and (min-width:375px) {
   .c3 {
-    padding: 10px 5px;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c3 {
     padding: 10px;
   }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1024px) {
   .c3 {
     padding: 10px 15px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c3 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -315,7 +310,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   }
 }
 
-@media (max-width:767) {
+@media (max-width:767px) {
   .c4 {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -326,48 +321,42 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 
 @media screen and (min-width:375px) {
   .c9 {
-    padding: 10px 5px;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c9 {
     padding: 10px;
   }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1024px) {
   .c9 {
     padding: 10px 15px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c9 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c7 {
     padding: 0 20px;
   }
 }
 
-@media (max-width:1023) {
+@media (max-width:1023px) {
   .c7 {
     font-size: 0.9375rem;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c13 {
     padding-top: 40px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c12 {
     min-height: 100px;
     -webkit-flex-basis: 16.6667%;
@@ -377,7 +366,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   }
 }
 
-@media (min-width:1440) {
+@media (min-width:1440px) {
   .c12 {
     -webkit-flex-basis: 12.5%;
     -ms-flex-preferred-size: 12.5%;
@@ -388,23 +377,17 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 
 @media screen and (min-width:375px) {
   .c15 {
-    padding: 10px 5px;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c15 {
     padding: 10px;
   }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1024px) {
   .c15 {
     padding: 10px 15px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c15 {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -412,13 +395,13 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
   }
 }
 
-@media (max-width:767) {
+@media (max-width:767px) {
   .c19 {
     text-align: center;
   }
 }
 
-@media (max-width:767) {
+@media (max-width:767px) {
   .c16 {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -683,14 +666,17 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
             >
               <Gridstyles__Row
                 display="flex"
+                flexWrap="wrap"
               >
                 <StyledComponent
                   display="flex"
+                  flexWrap="wrap"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "_foldedDefaultProps": Object {
                         "display": "flex",
+                        "flexWrap": "wrap",
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
@@ -698,16 +684,17 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
+                          "margin-left:5px;margin-right:5px;",
                           "@media screen and (min-width: 375px)",
-                          "{margin-left:5px;margin-right:5px;}",
-                          "@media screen and (min-width: 768px)",
                           "{margin-left:10px;margin-right:10px;}",
-                          "@media screen and (min-width: 1024px)",
+                          "@media screen and (min-width: 768px)",
                           "{margin-left:40px;margin-right:40px;}",
-                          "@media screen and (min-width: 1440px)",
-                          "{margin-left:40px;margin-right:40px;}&&{",
+                          "@media screen and (min-width: 1024px)",
+                          "{margin-left:75px;margin-right:75px;}&&{",
                           [Function],
                           "}",
+                          [Function],
+                          " ",
                           [Function],
                           " ",
                           [Function],
@@ -742,21 +729,22 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "isStatic": false,
                               "lastClassName": "c3",
                               "rules": Array [
+                                "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
-                                "{padding:10px 5px;}",
-                                "@media screen and (min-width: 768px)",
                                 "{padding:10px;}",
-                                "@media screen and (min-width: 1440px)",
+                                "@media screen and (min-width: 1024px)",
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
                                 [Function],
                                 " ",
                                 [Function],
+                                " ",
+                                [Function],
                                 "padding-top:30px;padding-bottom:30px;justify-content:space-between;",
                                 "@media (min-width:",
                                 "768",
-                                "){",
+                                "px){",
                                 "
     display: flex;
     padding-top: 60px;
@@ -800,7 +788,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         "list-style:none;padding:0;margin:0;display:flex;",
                                         "@media (max-width:",
                                         "767",
-                                        "){",
+                                        "px){",
                                         "
     justify-content: center;
   ",
@@ -1447,7 +1435,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       "display:flex;flex-wrap:wrap;justify-content:center;padding:20px 0;",
                                       "@media (min-width:",
                                       "768",
-                                      "){",
+                                      "px){",
                                       "
     padding: 0 20px;
   ",
@@ -1455,7 +1443,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       ";",
                                       "@media (max-width:",
                                       "1023",
-                                      "){",
+                                      "px){",
                                       "
     font-size: 0.9375rem;
   ",
@@ -1658,14 +1646,15 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "isStatic": false,
                               "lastClassName": "c9",
                               "rules": Array [
+                                "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
-                                "{padding:10px 5px;}",
-                                "@media screen and (min-width: 768px)",
                                 "{padding:10px;}",
-                                "@media screen and (min-width: 1440px)",
+                                "@media screen and (min-width: 1024px)",
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
+                                [Function],
+                                " ",
                                 [Function],
                                 " ",
                                 [Function],
@@ -1676,7 +1665,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                 ";",
                                 "@media (min-width:",
                                 "768",
-                                "){",
+                                "px){",
                                 "
     padding-top: 40px;
     padding-bottom: 40px;
@@ -1783,7 +1772,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -1793,7 +1782,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -1850,7 +1839,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -1860,7 +1849,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -1917,7 +1906,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -1927,7 +1916,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -1984,7 +1973,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -1994,7 +1983,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -2051,7 +2040,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -2061,7 +2050,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -2118,7 +2107,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -2128,7 +2117,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -2185,7 +2174,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -2195,7 +2184,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -2252,7 +2241,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -2262,7 +2251,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -2319,7 +2308,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -2329,7 +2318,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -2386,7 +2375,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -2396,7 +2385,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -2453,7 +2442,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       "display:flex;justify-content:center;padding-top:20px;",
                                       "@media (min-width:",
                                       "768",
-                                      "){",
+                                      "px){",
                                       "
     padding-top: 40px;
   ",
@@ -2667,21 +2656,22 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                               "isStatic": false,
                               "lastClassName": "c15",
                               "rules": Array [
+                                "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
-                                "{padding:10px 5px;}",
-                                "@media screen and (min-width: 768px)",
                                 "{padding:10px;}",
-                                "@media screen and (min-width: 1440px)",
+                                "@media screen and (min-width: 1024px)",
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
                                 [Function],
                                 " ",
                                 [Function],
+                                " ",
+                                [Function],
                                 "padding-top:30px;padding-bottom:30px;text-align:center;",
                                 "@media (min-width:",
                                 "768",
-                                "){",
+                                "px){",
                                 "
     padding-top: 40px;
     padding-bottom: 40px;
@@ -2724,7 +2714,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       "list-style:none;padding:0;margin:0 20px 0 0;display:flex;align-self:baseline;justify-content:center;",
                                       "@media (max-width:",
                                       "767",
-                                      "){",
+                                      "px){",
                                       "
     justify-content: center;
     margin: 0 0 20px 0;
@@ -3261,7 +3251,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                       ";margin-top:5px;font-size:0.875rem;margin-bottom:0;",
                                       "@media (max-width:",
                                       "767",
-                                      "){",
+                                      "px){",
                                       "
     text-align: center;
   ",
@@ -3313,6 +3303,11 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
 
 exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 .c2 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3355,6 +3350,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 }
 
 .c3 {
+  padding: 10px 5px;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -3395,6 +3391,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 }
 
 .c9 {
+  padding: 10px 5px;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -3515,6 +3512,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 }
 
 .c15 {
+  padding: 10px 5px;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -3571,51 +3569,38 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 
 @media screen and (min-width:375px) {
   .c2 {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c2 {
     margin-left: 10px;
     margin-right: 10px;
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:768px) {
   .c2 {
     margin-left: 40px;
     margin-right: 40px;
   }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1024px) {
   .c2 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 75px;
+    margin-right: 75px;
   }
 }
 
 @media screen and (min-width:375px) {
   .c3 {
-    padding: 10px 5px;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c3 {
     padding: 10px;
   }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1024px) {
   .c3 {
     padding: 10px 15px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c3 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3626,7 +3611,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   }
 }
 
-@media (max-width:767) {
+@media (max-width:767px) {
   .c4 {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -3637,48 +3622,42 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 
 @media screen and (min-width:375px) {
   .c9 {
-    padding: 10px 5px;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c9 {
     padding: 10px;
   }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1024px) {
   .c9 {
     padding: 10px 15px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c9 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c7 {
     padding: 0 20px;
   }
 }
 
-@media (max-width:1023) {
+@media (max-width:1023px) {
   .c7 {
     font-size: 0.9375rem;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c13 {
     padding-top: 40px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c12 {
     min-height: 100px;
     -webkit-flex-basis: 16.6667%;
@@ -3688,7 +3667,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   }
 }
 
-@media (min-width:1440) {
+@media (min-width:1440px) {
   .c12 {
     -webkit-flex-basis: 12.5%;
     -ms-flex-preferred-size: 12.5%;
@@ -3699,23 +3678,17 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
 
 @media screen and (min-width:375px) {
   .c15 {
-    padding: 10px 5px;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c15 {
     padding: 10px;
   }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1024px) {
   .c15 {
     padding: 10px 15px;
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c15 {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -3723,13 +3696,13 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
   }
 }
 
-@media (max-width:767) {
+@media (max-width:767px) {
   .c19 {
     text-align: center;
   }
 }
 
-@media (max-width:767) {
+@media (max-width:767px) {
   .c16 {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -3994,14 +3967,17 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
             >
               <Gridstyles__Row
                 display="flex"
+                flexWrap="wrap"
               >
                 <StyledComponent
                   display="flex"
+                  flexWrap="wrap"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "_foldedDefaultProps": Object {
                         "display": "flex",
+                        "flexWrap": "wrap",
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
@@ -4009,16 +3985,17 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
+                          "margin-left:5px;margin-right:5px;",
                           "@media screen and (min-width: 375px)",
-                          "{margin-left:5px;margin-right:5px;}",
-                          "@media screen and (min-width: 768px)",
                           "{margin-left:10px;margin-right:10px;}",
-                          "@media screen and (min-width: 1024px)",
+                          "@media screen and (min-width: 768px)",
                           "{margin-left:40px;margin-right:40px;}",
-                          "@media screen and (min-width: 1440px)",
-                          "{margin-left:40px;margin-right:40px;}&&{",
+                          "@media screen and (min-width: 1024px)",
+                          "{margin-left:75px;margin-right:75px;}&&{",
                           [Function],
                           "}",
+                          [Function],
+                          " ",
                           [Function],
                           " ",
                           [Function],
@@ -4053,21 +4030,22 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "isStatic": false,
                               "lastClassName": "c3",
                               "rules": Array [
+                                "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
-                                "{padding:10px 5px;}",
-                                "@media screen and (min-width: 768px)",
                                 "{padding:10px;}",
-                                "@media screen and (min-width: 1440px)",
+                                "@media screen and (min-width: 1024px)",
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
                                 [Function],
                                 " ",
                                 [Function],
+                                " ",
+                                [Function],
                                 "padding-top:30px;padding-bottom:30px;justify-content:space-between;",
                                 "@media (min-width:",
                                 "768",
-                                "){",
+                                "px){",
                                 "
     display: flex;
     padding-top: 60px;
@@ -4111,7 +4089,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         "list-style:none;padding:0;margin:0;display:flex;",
                                         "@media (max-width:",
                                         "767",
-                                        "){",
+                                        "px){",
                                         "
     justify-content: center;
   ",
@@ -4758,7 +4736,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       "display:flex;flex-wrap:wrap;justify-content:center;padding:20px 0;",
                                       "@media (min-width:",
                                       "768",
-                                      "){",
+                                      "px){",
                                       "
     padding: 0 20px;
   ",
@@ -4766,7 +4744,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       ";",
                                       "@media (max-width:",
                                       "1023",
-                                      "){",
+                                      "px){",
                                       "
     font-size: 0.9375rem;
   ",
@@ -4969,14 +4947,15 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "isStatic": false,
                               "lastClassName": "c9",
                               "rules": Array [
+                                "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
-                                "{padding:10px 5px;}",
-                                "@media screen and (min-width: 768px)",
                                 "{padding:10px;}",
-                                "@media screen and (min-width: 1440px)",
+                                "@media screen and (min-width: 1024px)",
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
+                                [Function],
+                                " ",
                                 [Function],
                                 " ",
                                 [Function],
@@ -4987,7 +4966,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                 ";",
                                 "@media (min-width:",
                                 "768",
-                                "){",
+                                "px){",
                                 "
     padding-top: 40px;
     padding-bottom: 40px;
@@ -5094,7 +5073,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5104,7 +5083,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5161,7 +5140,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5171,7 +5150,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5228,7 +5207,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5238,7 +5217,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5295,7 +5274,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5305,7 +5284,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5362,7 +5341,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5372,7 +5351,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5429,7 +5408,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5439,7 +5418,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5496,7 +5475,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5506,7 +5485,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5563,7 +5542,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5573,7 +5552,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5630,7 +5609,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5640,7 +5619,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5697,7 +5676,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             "padding:0;display:flex;align-items:center;justify-content:center;flex-basis:33.3333%;max-width:150px;min-height:70px;",
                                             "@media (min-width:",
                                             "768",
-                                            "){",
+                                            "px){",
                                             "
     min-height: 100px;
     flex-basis: 16.6667%;
@@ -5707,7 +5686,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                             ";",
                                             "@media (min-width:",
                                             "1440",
-                                            "){",
+                                            "px){",
                                             "
     flex-basis: 12.5%;
     max-width: 12.5%;
@@ -5764,7 +5743,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       "display:flex;justify-content:center;padding-top:20px;",
                                       "@media (min-width:",
                                       "768",
-                                      "){",
+                                      "px){",
                                       "
     padding-top: 40px;
   ",
@@ -5978,21 +5957,22 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                               "isStatic": false,
                               "lastClassName": "c15",
                               "rules": Array [
+                                "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
-                                "{padding:10px 5px;}",
-                                "@media screen and (min-width: 768px)",
                                 "{padding:10px;}",
-                                "@media screen and (min-width: 1440px)",
+                                "@media screen and (min-width: 1024px)",
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
                                 [Function],
                                 " ",
                                 [Function],
+                                " ",
+                                [Function],
                                 "padding-top:30px;padding-bottom:30px;text-align:center;",
                                 "@media (min-width:",
                                 "768",
-                                "){",
+                                "px){",
                                 "
     padding-top: 40px;
     padding-bottom: 40px;
@@ -6035,7 +6015,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       "list-style:none;padding:0;margin:0 20px 0 0;display:flex;align-self:baseline;justify-content:center;",
                                       "@media (max-width:",
                                       "767",
-                                      "){",
+                                      "px){",
                                       "
     justify-content: center;
     margin: 0 0 20px 0;
@@ -6572,7 +6552,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                       ";margin-top:5px;font-size:0.875rem;margin-bottom:0;",
                                       "@media (max-width:",
                                       "767",
-                                      "){",
+                                      "px){",
                                       "
     text-align: center;
   ",
@@ -6648,6 +6628,7 @@ exports[`<Footer/> should render and match snapshot 1`] = `
   >
     <Gridstyles__Row
       display="flex"
+      flexWrap="wrap"
     >
       <styles__SocialSection
         width={1}

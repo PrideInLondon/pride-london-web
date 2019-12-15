@@ -23,6 +23,7 @@ exports[`DonateSection volunteer snapshot 1`] = `
   <styles__LayerContent>
     <Gridstyles__Row
       display="flex"
+      flexWrap="wrap"
     >
       <styles__HeadDonate>
         Make a single donation
@@ -30,6 +31,7 @@ exports[`DonateSection volunteer snapshot 1`] = `
     </Gridstyles__Row>
     <Gridstyles__Row
       display="flex"
+      flexWrap="wrap"
     >
       <DonateButtonsGroup />
     </Gridstyles__Row>

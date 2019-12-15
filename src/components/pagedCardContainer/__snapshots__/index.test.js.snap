@@ -170,31 +170,35 @@ exports[`PagedCardContainer renders component with specified non-default props 1
             >
               <Gridstyles__Row
                 display="flex"
+                flexWrap="wrap"
               >
                 <StyledComponent
                   display="flex"
+                  flexWrap="wrap"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "_foldedDefaultProps": Object {
                         "display": "flex",
+                        "flexWrap": "wrap",
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "Gridstyles__Row-jfdl1j-1",
                         "isStatic": false,
-                        "lastClassName": "kDyYbe",
+                        "lastClassName": "eCAEmt",
                         "rules": Array [
+                          "margin-left:5px;margin-right:5px;",
                           "@media screen and (min-width: 375px)",
-                          "{margin-left:5px;margin-right:5px;}",
-                          "@media screen and (min-width: 768px)",
                           "{margin-left:10px;margin-right:10px;}",
-                          "@media screen and (min-width: 1024px)",
+                          "@media screen and (min-width: 768px)",
                           "{margin-left:40px;margin-right:40px;}",
-                          "@media screen and (min-width: 1440px)",
-                          "{margin-left:40px;margin-right:40px;}&&{",
+                          "@media screen and (min-width: 1024px)",
+                          "{margin-left:75px;margin-right:75px;}&&{",
                           [Function],
                           "}",
+                          [Function],
+                          " ",
                           [Function],
                           " ",
                           [Function],
@@ -213,7 +217,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                   forwardedRef={null}
                 >
                   <div
-                    className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                    className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                     display="flex"
                   >
                     <Gridstyles__FlexColumn
@@ -243,16 +247,17 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             "componentStyle": ComponentStyle {
                               "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                               "isStatic": false,
-                              "lastClassName": "gKSkgB",
+                              "lastClassName": "eOzTZQ",
                               "rules": Array [
+                                "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
-                                "{padding:10px 5px;}",
-                                "@media screen and (min-width: 768px)",
                                 "{padding:10px;}",
-                                "@media screen and (min-width: 1440px)",
+                                "@media screen and (min-width: 1024px)",
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
+                                [Function],
+                                " ",
                                 [Function],
                                 " ",
                                 [Function],
@@ -292,7 +297,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         }
                       >
                         <div
-                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                           width={
                             Array [
                               1,
@@ -339,16 +344,17 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             "componentStyle": ComponentStyle {
                               "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                               "isStatic": false,
-                              "lastClassName": "gKSkgB",
+                              "lastClassName": "eOzTZQ",
                               "rules": Array [
+                                "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
-                                "{padding:10px 5px;}",
-                                "@media screen and (min-width: 768px)",
                                 "{padding:10px;}",
-                                "@media screen and (min-width: 1440px)",
+                                "@media screen and (min-width: 1024px)",
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
+                                [Function],
+                                " ",
                                 [Function],
                                 " ",
                                 [Function],
@@ -388,7 +394,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         }
                       >
                         <div
-                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                           width={
                             Array [
                               1,
@@ -435,16 +441,17 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             "componentStyle": ComponentStyle {
                               "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                               "isStatic": false,
-                              "lastClassName": "gKSkgB",
+                              "lastClassName": "eOzTZQ",
                               "rules": Array [
+                                "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
-                                "{padding:10px 5px;}",
-                                "@media screen and (min-width: 768px)",
                                 "{padding:10px;}",
-                                "@media screen and (min-width: 1440px)",
+                                "@media screen and (min-width: 1024px)",
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
+                                [Function],
+                                " ",
                                 [Function],
                                 " ",
                                 [Function],
@@ -484,7 +491,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         }
                       >
                         <div
-                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                           width={
                             Array [
                               1,
@@ -519,6 +526,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
   >
     <Gridstyles__Row
       display="flex"
+      flexWrap="wrap"
       pb={
         Array [
           30,
@@ -529,28 +537,31 @@ exports[`PagedCardContainer renders component with specified non-default props 1
     >
       <StyledComponent
         display="flex"
+        flexWrap="wrap"
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
             "_foldedDefaultProps": Object {
               "display": "flex",
+              "flexWrap": "wrap",
             },
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "Gridstyles__Row-jfdl1j-1",
               "isStatic": false,
-              "lastClassName": "kDyYbe",
+              "lastClassName": "eCAEmt",
               "rules": Array [
+                "margin-left:5px;margin-right:5px;",
                 "@media screen and (min-width: 375px)",
-                "{margin-left:5px;margin-right:5px;}",
-                "@media screen and (min-width: 768px)",
                 "{margin-left:10px;margin-right:10px;}",
-                "@media screen and (min-width: 1024px)",
+                "@media screen and (min-width: 768px)",
                 "{margin-left:40px;margin-right:40px;}",
-                "@media screen and (min-width: 1440px)",
-                "{margin-left:40px;margin-right:40px;}&&{",
+                "@media screen and (min-width: 1024px)",
+                "{margin-left:75px;margin-right:75px;}&&{",
                 [Function],
                 "}",
+                [Function],
+                " ",
                 [Function],
                 " ",
                 [Function],
@@ -576,7 +587,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
         }
       >
         <div
-          className="Gridstyles__Row-jfdl1j-1 kDyYbe"
+          className="Gridstyles__Row-jfdl1j-1 eCAEmt"
           display="flex"
         >
           <Gridstyles__Column
@@ -597,16 +608,17 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Column-jfdl1j-0",
                     "isStatic": false,
-                    "lastClassName": "eBedPr",
+                    "lastClassName": "gngNXp",
                     "rules": Array [
+                      "padding:10px 5px;",
                       "@media screen and (min-width: 375px)",
-                      "{padding:10px 5px;}",
-                      "@media screen and (min-width: 768px)",
                       "{padding:10px;}",
-                      "@media screen and (min-width: 1440px)",
+                      "@media screen and (min-width: 1024px)",
                       "{padding:10px 15px;}&&{",
                       [Function],
                       "}",
+                      [Function],
+                      " ",
                       [Function],
                       " ",
                       [Function],
@@ -633,7 +645,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
               }
             >
               <div
-                className="Gridstyles__Column-jfdl1j-0 eBedPr"
+                className="Gridstyles__Column-jfdl1j-0 gngNXp"
               >
                 <Button
                   className=""
@@ -672,7 +684,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                           "componentStyle": ComponentStyle {
                             "componentId": "button__StyledButton-sc-1gywmhy-0",
                             "isStatic": false,
-                            "lastClassName": "hidOvC",
+                            "lastClassName": "lgTyhb",
                             "rules": Array [
                               "box-sizing:border-box;padding:12px 35px;border-radius:4px;border:",
                               [Function],
@@ -693,7 +705,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                               ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
                               "@media (min-width:",
                               "768",
-                              "){",
+                              "px){",
                               "
       width: auto;
   ",
@@ -721,7 +733,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                       wide={true}
                     >
                       <button
-                        className="button__StyledButton-sc-1gywmhy-0 hidOvC"
+                        className="button__StyledButton-sc-1gywmhy-0 lgTyhb"
                         disabled={false}
                         onClick={[MockFunction]}
                         type="button"

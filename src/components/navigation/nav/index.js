@@ -27,6 +27,7 @@ const Nav = () => {
     <HeaderWrapper>
       <Header>
         <FlexRow
+          flexWrap="nowrap"
           mx={[
             0, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
             0, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)

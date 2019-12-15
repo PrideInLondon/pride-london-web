@@ -7,6 +7,7 @@ exports[`CardContainer renders component CardContainer 1`] = `
 >
   <Gridstyles__Row
     display="flex"
+    flexWrap="wrap"
   >
     <Gridstyles__FlexColumn
       key="id-foo"

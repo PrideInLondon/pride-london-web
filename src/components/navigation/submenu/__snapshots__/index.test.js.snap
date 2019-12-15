@@ -16,6 +16,7 @@ exports[`<Submenu /> renders the component <Submenu /> when opened 1`] = `
   >
     <styles__PanelRow
       display="flex"
+      flexWrap="wrap"
     >
       <styles__PanelInfoWrapper
         width={

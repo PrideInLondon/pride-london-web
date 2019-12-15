@@ -266,31 +266,35 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
         >
           <Gridstyles__Row
             display="flex"
+            flexWrap="wrap"
           >
             <StyledComponent
               display="flex"
+              flexWrap="wrap"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "_foldedDefaultProps": Object {
                     "display": "flex",
+                    "flexWrap": "wrap",
                   },
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "FbvhA",
+                    "lastClassName": "ihaaWG",
                     "rules": Array [
+                      "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
-                      "{margin-left:5px;margin-right:5px;}",
-                      "@media screen and (min-width: 768px)",
                       "{margin-left:10px;margin-right:10px;}",
-                      "@media screen and (min-width: 1024px)",
+                      "@media screen and (min-width: 768px)",
                       "{margin-left:40px;margin-right:40px;}",
-                      "@media screen and (min-width: 1440px)",
-                      "{margin-left:40px;margin-right:40px;}&&{",
+                      "@media screen and (min-width: 1024px)",
+                      "{margin-left:75px;margin-right:75px;}&&{",
                       [Function],
                       "}",
+                      [Function],
+                      " ",
                       [Function],
                       " ",
                       [Function],
@@ -309,7 +313,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -330,16 +334,17 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "cSjLeO",
+                          "lastClassName": "gsnRWY",
                           "rules": Array [
+                            "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
-                            "{padding:10px 5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{padding:10px;}",
-                            "@media screen and (min-width: 1440px)",
+                            "@media screen and (min-width: 1024px)",
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -366,7 +371,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 cSjLeO"
+                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -1134,31 +1139,35 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
               >
                 <Gridstyles__Row
                   display="flex"
+                  flexWrap="wrap"
                 >
                   <StyledComponent
                     display="flex"
+                    flexWrap="wrap"
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "_foldedDefaultProps": Object {
                           "display": "flex",
+                          "flexWrap": "wrap",
                         },
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "FbvhA",
+                          "lastClassName": "ihaaWG",
                           "rules": Array [
+                            "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
-                            "{margin-left:5px;margin-right:5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{margin-left:10px;margin-right:10px;}",
-                            "@media screen and (min-width: 1024px)",
+                            "@media screen and (min-width: 768px)",
                             "{margin-left:40px;margin-right:40px;}",
-                            "@media screen and (min-width: 1440px)",
-                            "{margin-left:40px;margin-right:40px;}&&{",
+                            "@media screen and (min-width: 1024px)",
+                            "{margin-left:75px;margin-right:75px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -1177,7 +1186,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -1207,16 +1216,17 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -1256,7 +1266,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -1308,16 +1318,17 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -1357,7 +1368,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -1409,16 +1420,17 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -1458,7 +1470,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -1510,16 +1522,17 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -1559,7 +1572,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -1611,16 +1624,17 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -1660,7 +1674,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -1844,31 +1858,35 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
         >
           <Gridstyles__Row
             display="flex"
+            flexWrap="wrap"
           >
             <StyledComponent
               display="flex"
+              flexWrap="wrap"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "_foldedDefaultProps": Object {
                     "display": "flex",
+                    "flexWrap": "wrap",
                   },
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "kDyYbe",
+                    "lastClassName": "eCAEmt",
                     "rules": Array [
+                      "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
-                      "{margin-left:5px;margin-right:5px;}",
-                      "@media screen and (min-width: 768px)",
                       "{margin-left:10px;margin-right:10px;}",
-                      "@media screen and (min-width: 1024px)",
+                      "@media screen and (min-width: 768px)",
                       "{margin-left:40px;margin-right:40px;}",
-                      "@media screen and (min-width: 1440px)",
-                      "{margin-left:40px;margin-right:40px;}&&{",
+                      "@media screen and (min-width: 1024px)",
+                      "{margin-left:75px;margin-right:75px;}&&{",
                       [Function],
                       "}",
+                      [Function],
+                      " ",
                       [Function],
                       " ",
                       [Function],
@@ -1887,7 +1905,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -1908,16 +1926,17 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "eBedPr",
+                          "lastClassName": "gngNXp",
                           "rules": Array [
+                            "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
-                            "{padding:10px 5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{padding:10px;}",
-                            "@media screen and (min-width: 1440px)",
+                            "@media screen and (min-width: 1024px)",
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -1944,7 +1963,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 cSjLeO"
+                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -2600,31 +2619,35 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
               >
                 <Gridstyles__Row
                   display="flex"
+                  flexWrap="wrap"
                 >
                   <StyledComponent
                     display="flex"
+                    flexWrap="wrap"
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "_foldedDefaultProps": Object {
                           "display": "flex",
+                          "flexWrap": "wrap",
                         },
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "kDyYbe",
+                          "lastClassName": "eCAEmt",
                           "rules": Array [
+                            "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
-                            "{margin-left:5px;margin-right:5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{margin-left:10px;margin-right:10px;}",
-                            "@media screen and (min-width: 1024px)",
+                            "@media screen and (min-width: 768px)",
                             "{margin-left:40px;margin-right:40px;}",
-                            "@media screen and (min-width: 1440px)",
-                            "{margin-left:40px;margin-right:40px;}&&{",
+                            "@media screen and (min-width: 1024px)",
+                            "{margin-left:75px;margin-right:75px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -2643,7 +2666,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -2673,16 +2696,17 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -2722,7 +2746,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -2762,6 +2786,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
     >
       <Gridstyles__Row
         display="flex"
+        flexWrap="wrap"
         pb={
           Array [
             30,
@@ -2772,28 +2797,31 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
       >
         <StyledComponent
           display="flex"
+          flexWrap="wrap"
           forwardedComponent={
             Object {
               "$$typeof": Symbol(react.forward_ref),
               "_foldedDefaultProps": Object {
                 "display": "flex",
+                "flexWrap": "wrap",
               },
               "attrs": Array [],
               "componentStyle": ComponentStyle {
                 "componentId": "Gridstyles__Row-jfdl1j-1",
                 "isStatic": false,
-                "lastClassName": "kDyYbe",
+                "lastClassName": "eCAEmt",
                 "rules": Array [
+                  "margin-left:5px;margin-right:5px;",
                   "@media screen and (min-width: 375px)",
-                  "{margin-left:5px;margin-right:5px;}",
-                  "@media screen and (min-width: 768px)",
                   "{margin-left:10px;margin-right:10px;}",
-                  "@media screen and (min-width: 1024px)",
+                  "@media screen and (min-width: 768px)",
                   "{margin-left:40px;margin-right:40px;}",
-                  "@media screen and (min-width: 1440px)",
-                  "{margin-left:40px;margin-right:40px;}&&{",
+                  "@media screen and (min-width: 1024px)",
+                  "{margin-left:75px;margin-right:75px;}&&{",
                   [Function],
                   "}",
+                  [Function],
+                  " ",
                   [Function],
                   " ",
                   [Function],
@@ -2819,7 +2847,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
           }
         >
           <div
-            className="Gridstyles__Row-jfdl1j-1 kDyYbe"
+            className="Gridstyles__Row-jfdl1j-1 eCAEmt"
             display="flex"
           >
             <Gridstyles__Column
@@ -2840,16 +2868,17 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                     "componentStyle": ComponentStyle {
                       "componentId": "Gridstyles__Column-jfdl1j-0",
                       "isStatic": false,
-                      "lastClassName": "eBedPr",
+                      "lastClassName": "gngNXp",
                       "rules": Array [
+                        "padding:10px 5px;",
                         "@media screen and (min-width: 375px)",
-                        "{padding:10px 5px;}",
-                        "@media screen and (min-width: 768px)",
                         "{padding:10px;}",
-                        "@media screen and (min-width: 1440px)",
+                        "@media screen and (min-width: 1024px)",
                         "{padding:10px 15px;}&&{",
                         [Function],
                         "}",
+                        [Function],
+                        " ",
                         [Function],
                         " ",
                         [Function],
@@ -2876,7 +2905,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                 }
               >
                 <div
-                  className="Gridstyles__Column-jfdl1j-0 eBedPr"
+                  className="Gridstyles__Column-jfdl1j-0 gngNXp"
                 >
                   <Button
                     className=""
@@ -2915,7 +2944,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                             "componentStyle": ComponentStyle {
                               "componentId": "button__StyledButton-sc-1gywmhy-0",
                               "isStatic": false,
-                              "lastClassName": "hidOvC",
+                              "lastClassName": "lgTyhb",
                               "rules": Array [
                                 "box-sizing:border-box;padding:12px 35px;border-radius:4px;border:",
                                 [Function],
@@ -2936,7 +2965,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                 ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
                                 "@media (min-width:",
                                 "768",
-                                "){",
+                                "px){",
                                 "
       width: auto;
   ",
@@ -2964,7 +2993,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                         wide={true}
                       >
                         <button
-                          className="button__StyledButton-sc-1gywmhy-0 hidOvC"
+                          className="button__StyledButton-sc-1gywmhy-0 lgTyhb"
                           disabled={false}
                           onClick={[Function]}
                           type="button"
@@ -3110,31 +3139,35 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
         >
           <Gridstyles__Row
             display="flex"
+            flexWrap="wrap"
           >
             <StyledComponent
               display="flex"
+              flexWrap="wrap"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "_foldedDefaultProps": Object {
                     "display": "flex",
+                    "flexWrap": "wrap",
                   },
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "FbvhA",
+                    "lastClassName": "ihaaWG",
                     "rules": Array [
+                      "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
-                      "{margin-left:5px;margin-right:5px;}",
-                      "@media screen and (min-width: 768px)",
                       "{margin-left:10px;margin-right:10px;}",
-                      "@media screen and (min-width: 1024px)",
+                      "@media screen and (min-width: 768px)",
                       "{margin-left:40px;margin-right:40px;}",
-                      "@media screen and (min-width: 1440px)",
-                      "{margin-left:40px;margin-right:40px;}&&{",
+                      "@media screen and (min-width: 1024px)",
+                      "{margin-left:75px;margin-right:75px;}&&{",
                       [Function],
                       "}",
+                      [Function],
+                      " ",
                       [Function],
                       " ",
                       [Function],
@@ -3153,7 +3186,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -3174,16 +3207,17 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "cSjLeO",
+                          "lastClassName": "gsnRWY",
                           "rules": Array [
+                            "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
-                            "{padding:10px 5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{padding:10px;}",
-                            "@media screen and (min-width: 1440px)",
+                            "@media screen and (min-width: 1024px)",
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -3210,7 +3244,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 cSjLeO"
+                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -3894,31 +3928,35 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
               >
                 <Gridstyles__Row
                   display="flex"
+                  flexWrap="wrap"
                 >
                   <StyledComponent
                     display="flex"
+                    flexWrap="wrap"
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "_foldedDefaultProps": Object {
                           "display": "flex",
+                          "flexWrap": "wrap",
                         },
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "FbvhA",
+                          "lastClassName": "ihaaWG",
                           "rules": Array [
+                            "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
-                            "{margin-left:5px;margin-right:5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{margin-left:10px;margin-right:10px;}",
-                            "@media screen and (min-width: 1024px)",
+                            "@media screen and (min-width: 768px)",
                             "{margin-left:40px;margin-right:40px;}",
-                            "@media screen and (min-width: 1440px)",
-                            "{margin-left:40px;margin-right:40px;}&&{",
+                            "@media screen and (min-width: 1024px)",
+                            "{margin-left:75px;margin-right:75px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -3937,7 +3975,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -3967,16 +4005,17 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -4016,7 +4055,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -4068,16 +4107,17 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -4117,7 +4157,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -4297,31 +4337,35 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
         >
           <Gridstyles__Row
             display="flex"
+            flexWrap="wrap"
           >
             <StyledComponent
               display="flex"
+              flexWrap="wrap"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "_foldedDefaultProps": Object {
                     "display": "flex",
+                    "flexWrap": "wrap",
                   },
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "FbvhA",
+                    "lastClassName": "ihaaWG",
                     "rules": Array [
+                      "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
-                      "{margin-left:5px;margin-right:5px;}",
-                      "@media screen and (min-width: 768px)",
                       "{margin-left:10px;margin-right:10px;}",
-                      "@media screen and (min-width: 1024px)",
+                      "@media screen and (min-width: 768px)",
                       "{margin-left:40px;margin-right:40px;}",
-                      "@media screen and (min-width: 1440px)",
-                      "{margin-left:40px;margin-right:40px;}&&{",
+                      "@media screen and (min-width: 1024px)",
+                      "{margin-left:75px;margin-right:75px;}&&{",
                       [Function],
                       "}",
+                      [Function],
+                      " ",
                       [Function],
                       " ",
                       [Function],
@@ -4340,7 +4384,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -4361,16 +4405,17 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "cSjLeO",
+                          "lastClassName": "gsnRWY",
                           "rules": Array [
+                            "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
-                            "{padding:10px 5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{padding:10px;}",
-                            "@media screen and (min-width: 1440px)",
+                            "@media screen and (min-width: 1024px)",
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -4397,7 +4442,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 cSjLeO"
+                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -5165,31 +5210,35 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
               >
                 <Gridstyles__Row
                   display="flex"
+                  flexWrap="wrap"
                 >
                   <StyledComponent
                     display="flex"
+                    flexWrap="wrap"
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "_foldedDefaultProps": Object {
                           "display": "flex",
+                          "flexWrap": "wrap",
                         },
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "FbvhA",
+                          "lastClassName": "ihaaWG",
                           "rules": Array [
+                            "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
-                            "{margin-left:5px;margin-right:5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{margin-left:10px;margin-right:10px;}",
-                            "@media screen and (min-width: 1024px)",
+                            "@media screen and (min-width: 768px)",
                             "{margin-left:40px;margin-right:40px;}",
-                            "@media screen and (min-width: 1440px)",
-                            "{margin-left:40px;margin-right:40px;}&&{",
+                            "@media screen and (min-width: 1024px)",
+                            "{margin-left:75px;margin-right:75px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -5208,7 +5257,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -5238,16 +5287,17 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -5287,7 +5337,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -5339,16 +5389,17 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -5388,7 +5439,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -5440,16 +5491,17 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -5489,7 +5541,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -5541,16 +5593,17 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -5590,7 +5643,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -5642,16 +5695,17 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -5691,7 +5745,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -5871,31 +5925,35 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
         >
           <Gridstyles__Row
             display="flex"
+            flexWrap="wrap"
           >
             <StyledComponent
               display="flex"
+              flexWrap="wrap"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "_foldedDefaultProps": Object {
                     "display": "flex",
+                    "flexWrap": "wrap",
                   },
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "kDyYbe",
+                    "lastClassName": "eCAEmt",
                     "rules": Array [
+                      "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
-                      "{margin-left:5px;margin-right:5px;}",
-                      "@media screen and (min-width: 768px)",
                       "{margin-left:10px;margin-right:10px;}",
-                      "@media screen and (min-width: 1024px)",
+                      "@media screen and (min-width: 768px)",
                       "{margin-left:40px;margin-right:40px;}",
-                      "@media screen and (min-width: 1440px)",
-                      "{margin-left:40px;margin-right:40px;}&&{",
+                      "@media screen and (min-width: 1024px)",
+                      "{margin-left:75px;margin-right:75px;}&&{",
                       [Function],
                       "}",
+                      [Function],
+                      " ",
                       [Function],
                       " ",
                       [Function],
@@ -5914,7 +5972,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -5935,16 +5993,17 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "eBedPr",
+                          "lastClassName": "gngNXp",
                           "rules": Array [
+                            "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
-                            "{padding:10px 5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{padding:10px;}",
-                            "@media screen and (min-width: 1440px)",
+                            "@media screen and (min-width: 1024px)",
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -5971,7 +6030,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 cSjLeO"
+                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -6627,31 +6686,35 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
               >
                 <Gridstyles__Row
                   display="flex"
+                  flexWrap="wrap"
                 >
                   <StyledComponent
                     display="flex"
+                    flexWrap="wrap"
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "_foldedDefaultProps": Object {
                           "display": "flex",
+                          "flexWrap": "wrap",
                         },
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "kDyYbe",
+                          "lastClassName": "eCAEmt",
                           "rules": Array [
+                            "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
-                            "{margin-left:5px;margin-right:5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{margin-left:10px;margin-right:10px;}",
-                            "@media screen and (min-width: 1024px)",
+                            "@media screen and (min-width: 768px)",
                             "{margin-left:40px;margin-right:40px;}",
-                            "@media screen and (min-width: 1440px)",
-                            "{margin-left:40px;margin-right:40px;}&&{",
+                            "@media screen and (min-width: 1024px)",
+                            "{margin-left:75px;margin-right:75px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -6670,7 +6733,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -6700,16 +6763,17 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -6749,7 +6813,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -6789,6 +6853,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
     >
       <Gridstyles__Row
         display="flex"
+        flexWrap="wrap"
         pb={
           Array [
             30,
@@ -6799,28 +6864,31 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
       >
         <StyledComponent
           display="flex"
+          flexWrap="wrap"
           forwardedComponent={
             Object {
               "$$typeof": Symbol(react.forward_ref),
               "_foldedDefaultProps": Object {
                 "display": "flex",
+                "flexWrap": "wrap",
               },
               "attrs": Array [],
               "componentStyle": ComponentStyle {
                 "componentId": "Gridstyles__Row-jfdl1j-1",
                 "isStatic": false,
-                "lastClassName": "kDyYbe",
+                "lastClassName": "eCAEmt",
                 "rules": Array [
+                  "margin-left:5px;margin-right:5px;",
                   "@media screen and (min-width: 375px)",
-                  "{margin-left:5px;margin-right:5px;}",
-                  "@media screen and (min-width: 768px)",
                   "{margin-left:10px;margin-right:10px;}",
-                  "@media screen and (min-width: 1024px)",
+                  "@media screen and (min-width: 768px)",
                   "{margin-left:40px;margin-right:40px;}",
-                  "@media screen and (min-width: 1440px)",
-                  "{margin-left:40px;margin-right:40px;}&&{",
+                  "@media screen and (min-width: 1024px)",
+                  "{margin-left:75px;margin-right:75px;}&&{",
                   [Function],
                   "}",
+                  [Function],
+                  " ",
                   [Function],
                   " ",
                   [Function],
@@ -6846,7 +6914,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
           }
         >
           <div
-            className="Gridstyles__Row-jfdl1j-1 kDyYbe"
+            className="Gridstyles__Row-jfdl1j-1 eCAEmt"
             display="flex"
           >
             <Gridstyles__Column
@@ -6867,16 +6935,17 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                     "componentStyle": ComponentStyle {
                       "componentId": "Gridstyles__Column-jfdl1j-0",
                       "isStatic": false,
-                      "lastClassName": "eBedPr",
+                      "lastClassName": "gngNXp",
                       "rules": Array [
+                        "padding:10px 5px;",
                         "@media screen and (min-width: 375px)",
-                        "{padding:10px 5px;}",
-                        "@media screen and (min-width: 768px)",
                         "{padding:10px;}",
-                        "@media screen and (min-width: 1440px)",
+                        "@media screen and (min-width: 1024px)",
                         "{padding:10px 15px;}&&{",
                         [Function],
                         "}",
+                        [Function],
+                        " ",
                         [Function],
                         " ",
                         [Function],
@@ -6903,7 +6972,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                 }
               >
                 <div
-                  className="Gridstyles__Column-jfdl1j-0 eBedPr"
+                  className="Gridstyles__Column-jfdl1j-0 gngNXp"
                 >
                   <Button
                     className=""
@@ -6942,7 +7011,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                             "componentStyle": ComponentStyle {
                               "componentId": "button__StyledButton-sc-1gywmhy-0",
                               "isStatic": false,
-                              "lastClassName": "hidOvC",
+                              "lastClassName": "lgTyhb",
                               "rules": Array [
                                 "box-sizing:border-box;padding:12px 35px;border-radius:4px;border:",
                                 [Function],
@@ -6963,7 +7032,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                 ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
                                 "@media (min-width:",
                                 "768",
-                                "){",
+                                "px){",
                                 "
       width: auto;
   ",
@@ -6991,7 +7060,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                         wide={true}
                       >
                         <button
-                          className="button__StyledButton-sc-1gywmhy-0 hidOvC"
+                          className="button__StyledButton-sc-1gywmhy-0 lgTyhb"
                           disabled={false}
                           onClick={[Function]}
                           type="button"
@@ -7133,31 +7202,35 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
         >
           <Gridstyles__Row
             display="flex"
+            flexWrap="wrap"
           >
             <StyledComponent
               display="flex"
+              flexWrap="wrap"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "_foldedDefaultProps": Object {
                     "display": "flex",
+                    "flexWrap": "wrap",
                   },
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "FbvhA",
+                    "lastClassName": "ihaaWG",
                     "rules": Array [
+                      "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
-                      "{margin-left:5px;margin-right:5px;}",
-                      "@media screen and (min-width: 768px)",
                       "{margin-left:10px;margin-right:10px;}",
-                      "@media screen and (min-width: 1024px)",
+                      "@media screen and (min-width: 768px)",
                       "{margin-left:40px;margin-right:40px;}",
-                      "@media screen and (min-width: 1440px)",
-                      "{margin-left:40px;margin-right:40px;}&&{",
+                      "@media screen and (min-width: 1024px)",
+                      "{margin-left:75px;margin-right:75px;}&&{",
                       [Function],
                       "}",
+                      [Function],
+                      " ",
                       [Function],
                       " ",
                       [Function],
@@ -7176,7 +7249,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -7197,16 +7270,17 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "cSjLeO",
+                          "lastClassName": "gsnRWY",
                           "rules": Array [
+                            "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
-                            "{padding:10px 5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{padding:10px;}",
-                            "@media screen and (min-width: 1440px)",
+                            "@media screen and (min-width: 1024px)",
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -7233,7 +7307,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 cSjLeO"
+                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -7917,31 +7991,35 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
               >
                 <Gridstyles__Row
                   display="flex"
+                  flexWrap="wrap"
                 >
                   <StyledComponent
                     display="flex"
+                    flexWrap="wrap"
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "_foldedDefaultProps": Object {
                           "display": "flex",
+                          "flexWrap": "wrap",
                         },
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "FbvhA",
+                          "lastClassName": "ihaaWG",
                           "rules": Array [
+                            "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
-                            "{margin-left:5px;margin-right:5px;}",
-                            "@media screen and (min-width: 768px)",
                             "{margin-left:10px;margin-right:10px;}",
-                            "@media screen and (min-width: 1024px)",
+                            "@media screen and (min-width: 768px)",
                             "{margin-left:40px;margin-right:40px;}",
-                            "@media screen and (min-width: 1440px)",
-                            "{margin-left:40px;margin-right:40px;}&&{",
+                            "@media screen and (min-width: 1024px)",
+                            "{margin-left:75px;margin-right:75px;}&&{",
                             [Function],
                             "}",
+                            [Function],
+                            " ",
                             [Function],
                             " ",
                             [Function],
@@ -7960,7 +8038,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 FbvhA"
+                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -7990,16 +8068,17 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -8039,7 +8118,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,
@@ -8091,16 +8170,17 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "gKSkgB",
+                                "lastClassName": "eOzTZQ",
                                 "rules": Array [
+                                  "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
-                                  "{padding:10px 5px;}",
-                                  "@media screen and (min-width: 768px)",
                                   "{padding:10px;}",
-                                  "@media screen and (min-width: 1440px)",
+                                  "@media screen and (min-width: 1024px)",
                                   "{padding:10px 15px;}&&{",
                                   [Function],
                                   "}",
+                                  [Function],
+                                  " ",
                                   [Function],
                                   " ",
                                   [Function],
@@ -8140,7 +8220,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 gKSkgB"
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
                             width={
                               Array [
                                 1,

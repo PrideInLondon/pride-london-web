@@ -4,6 +4,7 @@ exports[`ParadeMap render correctly 1`] = `
 <Fragment>
   <map__ParadeMapContainer
     display="flex"
+    flexWrap="wrap"
     mx={0}
   >
     <Gridstyles__Column

@@ -4,6 +4,7 @@ exports[`OtherArticles renders with default values 1`] = `
 <styles__Container>
   <Gridstyles__Row
     display="flex"
+    flexWrap="wrap"
   >
     <Gridstyles__FlexColumn
       width={
@@ -20,6 +21,7 @@ exports[`OtherArticles renders with default values 1`] = `
   </Gridstyles__Row>
   <Gridstyles__Row
     display="flex"
+    flexWrap="wrap"
   />
 </styles__Container>
 `;

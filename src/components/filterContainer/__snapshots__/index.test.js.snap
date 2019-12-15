@@ -6,6 +6,7 @@ exports[`FilterContainer renders checkbox filter container 1`] = `
 >
   <Gridstyles__Row
     display="flex"
+    flexWrap="wrap"
   >
     <Gridstyles__Column
       py={
@@ -57,6 +58,7 @@ exports[`FilterContainer renders radio filter container 1`] = `
 >
   <Gridstyles__Row
     display="flex"
+    flexWrap="wrap"
   >
     <Gridstyles__Column
       py={

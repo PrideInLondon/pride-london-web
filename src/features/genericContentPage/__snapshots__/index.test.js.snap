@@ -39,7 +39,7 @@ exports[`render methods for Generic Content click on typeform button 1`] = `
   margin-bottom: 1.25em;
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c1 {
     width: auto;
   }
@@ -167,7 +167,7 @@ exports[`render methods for Generic Content click on typeform button 1`] = `
                     ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
                     "@media (min-width:",
                     "768",
-                    "){",
+                    "px){",
                     "
       width: auto;
   ",
@@ -247,7 +247,7 @@ exports[`render methods for Generic Content click on typeform button 2`] = `
   margin-bottom: 1.25em;
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   .c1 {
     width: auto;
   }
@@ -375,7 +375,7 @@ exports[`render methods for Generic Content click on typeform button 2`] = `
                     ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
                     "@media (min-width:",
                     "768",
-                    "){",
+                    "px){",
                     "
       width: auto;
   ",

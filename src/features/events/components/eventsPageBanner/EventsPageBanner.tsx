@@ -1,25 +1,14 @@
 import React from 'react'
-import { BackgroundColorProps } from 'styled-system'
-import { FixedObject } from 'gatsby-image'
-import { Row, Column, Container } from '../../../../components/grid'
+import { Row, Column } from '../../../../components/grid'
 import { checkBreakpoint } from '../../../../utilities/'
 import {
   StyledBanner,
   Title,
   Subtitle,
   ResponsiveImg,
+  ImgWrapper,
 } from './EventsPageBanner.styles'
-
-interface BannerImage {
-  desktop: FixedObject
-  tablet: FixedObject
-  mobile: FixedObject
-}
-interface EventsPageBannerProps extends BackgroundColorProps {
-  title: string
-  subtitle: string
-  image: BannerImage
-}
+import { EventsPageBannerProps } from './EventsPageBanner.types'
 
 export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
   title,
@@ -27,15 +16,24 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
   backgroundColor,
   image,
 }) => {
+  console.log(image)
   return (
     <StyledBanner role="banner" backgroundColor={backgroundColor}>
-      <Container>
-        <Row alignItems="center">
-          <Column width={[1, 0.33]}>
-            <Title backgroundColor={backgroundColor}>{title}</Title>
-            <Subtitle>{subtitle}</Subtitle>
-          </Column>
-          <Column width={[1, 0.66]} py="0">
+      <Row
+        alignItems="center"
+        flexDirection={'row-reverse'}
+        justifyContent={'space-between'}
+        mr={0}
+        flexWrap={{ default: 'wrap', md: 'nowrap' }}
+      >
+        <Column
+          pr={0}
+          py="0"
+          maxWidth="920px"
+          width={{ default: 1, md: 0.6666 }}
+          mb={{ default: '-20px', md: 0 }}
+        >
+          <ImgWrapper>
             <ResponsiveImg
               fixed={
                 !checkBreakpoint(480)
@@ -45,9 +43,20 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
                   : image.desktop
               }
             />
-          </Column>
-        </Row>
-      </Container>
+          </ImgWrapper>
+        </Column>
+        <Column
+          width={{ default: 1, md: 0.3333 }}
+          ml={{ xl: '80px' }}
+          zIndex={1}
+          pb={{ default: '30px', sm: '40px', lg: '60px' }}
+        >
+          <div>
+            <Title backgroundColor={backgroundColor}>{title}</Title>
+            <Subtitle>{subtitle}</Subtitle>
+          </div>
+        </Column>
+      </Row>
     </StyledBanner>
   )
 }

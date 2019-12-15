@@ -18,6 +18,7 @@ exports[`<PageIntro/> renders with default values 1`] = `
   >
     <Gridstyles__Row
       display="flex"
+      flexWrap="wrap"
       mb={
         Array [
           "30px",

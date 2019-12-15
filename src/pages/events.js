@@ -8,7 +8,6 @@ import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { EventListingCard } from '../features/events'
 // import EventsFilters from '../features/events/components/eventsFilters'
-import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
 import {
   Container,
@@ -21,7 +20,6 @@ import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
 import constants from '../constants'
 // import filterIcon from '../theme/assets/images/icon-filters.svg'
-import BannerImg from '../theme/assets/images/banners/events/bg@2x.jpg'
 import { EventsPageBanner } from '../features/events/components/eventsPageBanner'
 
 export const EventsPageQuery = graphql`
@@ -193,17 +191,10 @@ export const Events = ({
       {context => (
         <PageWrapper>
           <Helmet title="Coming Out - The new way to find the best queer events for the queer community from Pride in London." />
-          <BannerImage
-            titleText="Coming Out"
-            subtitleText="The new way to find the best queer events for the queer community from Pride in London."
-            imageSrc={BannerImg}
-            color={theme.colors.lightGrey}
-            imageFullWidth
-          />
           <EventsPageBanner
             title="Coming Out"
             subtitle=" The new way to find the best queer events for the queer community from Pride in London."
-            backgroundColor="bondiBlue"
+            backgroundColor={theme.colors.bondiBlue}
             image={childImageSharp}
           />
           {/* <OffsetContainer>

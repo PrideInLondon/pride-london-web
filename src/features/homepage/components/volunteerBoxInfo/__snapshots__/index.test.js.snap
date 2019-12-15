@@ -8,6 +8,7 @@ exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
   >
     <Gridstyles__Row
       display="flex"
+      flexWrap="wrap"
     >
       <Gridstyles__Column>
         <styles__ContentVolunteer>

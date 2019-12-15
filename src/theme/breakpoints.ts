@@ -4,18 +4,18 @@ export const lg = 1024
 export const xl = 1440
 
 export interface Breakpoints {
-  sm: number
-  md: number
-  lg: number
-  xl: number
+  sm: string
+  md: string
+  lg: string
+  xl: string
 }
 
-export const breakpoints: number[] & Breakpoints = Object.assign(
-  [sm, md, lg, xl],
+export const breakpoints: string[] & Breakpoints = Object.assign(
+  [`${sm}px`, `${md}px`, `${lg}px`, `${xl}px`],
   {
-    sm,
-    md,
-    lg,
-    xl,
+    sm: `${sm}px`,
+    md: `${md}px`,
+    lg: `${lg}px`,
+    xl: `${xl}px`,
   }
 )
