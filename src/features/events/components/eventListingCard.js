@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
-import { formatDate, generateEventSlug } from '../helpers'
+import { generateEventSlug } from '../helpers'
+import { generateDisplayDate } from '../helpers/eventCard'
 import CalendarIcon from '../../../theme/assets/images/calendar-icon'
 
 // We have to skip displayColumn prop here to not render it in the DOM
@@ -137,20 +138,34 @@ const PaddedCalendarIcon = styled(CalendarIcon)`
   align-self: center;
 `
 
-const When = ({ date, time }) => (
+const When = ({ startTime, endTime, recurrenceDates }) => (
   <CardDate>
     <PaddedCalendarIcon color={theme.colors.darkCyan} />
-    {date} • {time}
+    {generateDisplayDate({
+      start: new Date(startTime),
+      end: new Date(endTime),
+      occurrences:
+        recurrenceDates &&
+        recurrenceDates.map(occurrence => {
+          // occurrence is DD/MM/YYYY
+          const [date, month, year] = occurrence.split('/')
+          return new Date(year, month, date)
+        }),
+    })}
   </CardDate>
 )
 
 When.propTypes = {
-  date: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
+  startTime: PropTypes.string.isRequired,
+  endTime: PropTypes.string.isRequired,
+  recurrenceDates: PropTypes.arrayOf(PropTypes.string),
+}
+
+When.defaultProps = {
+  recurrenceDates: [],
 }
 
 export const EventListingCard = ({ event, displaycolumn }) => {
-  const { date, time } = formatDate(event)
   return (
     <Card displaycolumn={displaycolumn}>
       <CardImageOverflow displaycolumn={displaycolumn}>
@@ -162,7 +177,7 @@ export const EventListingCard = ({ event, displaycolumn }) => {
         </CardImageWrapper>
       </CardImageOverflow>
       <CardContent>
-        <When {...{ date, time }} />
+        <When {...event} />
         <CardHeading>{event.name}</CardHeading>
         <Location>
           {event.locationName}, {event.addressLine1}
