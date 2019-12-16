@@ -23,11 +23,9 @@
     "target": "es5",
     "resolveJsonModule": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "typeRoots": ["./@types", "./node_modules/@types"]
+    "noUnusedParameters": true
   },
-  "files": ["./@types/index.d.ts"],
-  "include": ["./src"],
+  "include": ["./src", "./@types"],
   "exclude": [
     "**/node_modules/*",
     "**/*.test.ts",

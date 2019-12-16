@@ -73,6 +73,10 @@ export const Title = styled.h1<TitleProps>`
     }
 
     ${mediaQueries.lg} {
+      font-size: 5rem;
+    }
+
+    ${mediaQueries.lg} {
       font-size: 6.25rem;
     }
   `}
