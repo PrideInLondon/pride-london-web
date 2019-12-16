@@ -13,12 +13,7 @@
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch",
-    "precommit": "lint-staged"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && tsc"
-    }
+    "precommit": "lint-staged && tsc"
   },
   "lint-staged": {
     "src/**/*.{js,json,ts,tsx}": [
