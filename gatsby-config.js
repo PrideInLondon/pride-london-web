@@ -42,7 +42,14 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: `${process.env.SPACE_ID}`,
-        accessToken: `${process.env.ACCESS_TOKEN}`,
+        accessToken: `${
+          process.env.PREVIEW_CONTENT === 'true'
+            ? process.env.PREVIEW_ACCESS_TOKEN
+            : process.env.ACCESS_TOKEN
+        }`,
+        ...(process.env.PREVIEW_CONTENT === 'true' && {
+          host: 'preview.contentful.com',
+        }),
       },
     },
     {

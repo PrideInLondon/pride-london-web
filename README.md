@@ -1,14 +1,14 @@
 # Pride in London
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/94c5776f-6b68-460b-9d6f-400504d691a4/deploy-status)](https://app.netlify.com/sites/prideinlondon-production/deploys)   
-[![CircleCI](https://circleci.com/gh/PrideInLondon/pride-london-web.svg?style=svg)](https://circleci.com/gh/PrideInLondon/pride-london-web)   
+[![Netlify Status](https://api.netlify.com/api/v1/badges/94c5776f-6b68-460b-9d6f-400504d691a4/deploy-status)](https://app.netlify.com/sites/prideinlondon-production/deploys)  
+[![CircleCI](https://circleci.com/gh/PrideInLondon/pride-london-web.svg?style=svg)](https://circleci.com/gh/PrideInLondon/pride-london-web)  
 [![CodeFactor](https://www.codefactor.io/repository/github/prideinlondon/pride-london-web/badge)](https://www.codefactor.io/repository/github/prideinlondon/pride-london-web)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f0c3e56f477040a288ecbe6b8d00b437)](https://www.codacy.com/app/PrideInLondon/pride-london-web?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PrideInLondon/pride-london-web&amp;utm_campaign=Badge_Grade)
-[![DeepScan grade](https://deepscan.io/api/teams/3576/projects/5314/branches/40859/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3576&pid=5314&bid=40859)   
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/context:javascript) [![Total alerts](https://img.shields.io/lgtm/alerts/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/alerts/)   
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f0c3e56f477040a288ecbe6b8d00b437)](https://www.codacy.com/app/PrideInLondon/pride-london-web?utm_source=github.com&utm_medium=referral&utm_content=PrideInLondon/pride-london-web&utm_campaign=Badge_Grade)
+[![DeepScan grade](https://deepscan.io/api/teams/3576/projects/5314/branches/40859/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3576&pid=5314&bid=40859)  
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/context:javascript) [![Total alerts](https://img.shields.io/lgtm/alerts/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/alerts/)  
 [![codecov](https://codecov.io/gh/PrideInLondon/pride-london-web/branch/master/graph/badge.svg)](https://codecov.io/gh/PrideInLondon/pride-london-web)  
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=PrideInLondon_pride-london-web&metric=alert_status)](https://sonarcloud.io/dashboard?id=PrideInLondon_pride-london-web)    
-[![Known Vulnerabilities](https://snyk.io/test/github/PrideInLondon/pride-london-web/badge.svg?targetFile=package.json)](https://snyk.io/test/github/PrideInLondon/pride-london-web)  
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=PrideInLondon_pride-london-web&metric=alert_status)](https://sonarcloud.io/dashboard?id=PrideInLondon_pride-london-web)  
+[![Known Vulnerabilities](https://snyk.io/test/github/PrideInLondon/pride-london-web/badge.svg?targetFile=package.json)](https://snyk.io/test/github/PrideInLondon/pride-london-web)
 
 This project is a community effort to release a brand new web platform to supplant and improve upon the product currently available at prideinlondon.org.
 
@@ -20,28 +20,42 @@ Check the [issues](https://github.com/PrideInLondon/pride-london-web/issues) sec
 
 ## Install
 
-1.  Make sure that you have the Gatsby CLI program installed:
+1. Make sure that you have the Gatsby CLI program installed:
 
 ```sh
 npm install --global gatsby-cli
 ```
 
-2.  Pull the repository.
-3.  Install nvm from [here](https://github.com/creationix/nvm)
-4.  Make sure you're using the correct version of node `nvm use`
-5.  Ensure you have [yarn](https://yarnpkg.com/en/docs/install) installed. 
+2. Pull the repository.
+3. Install nvm from [here](https://github.com/creationix/nvm)
+4. Make sure you're using the correct version of node `nvm use`
+5. Ensure you have [yarn](https://yarnpkg.com/en/docs/install) installed.
 
-## ENVIRONMENT VARIABLES
+## Environment Variables
 
-1.  Create a `.env.development` file in the root of the project.
-2.  In the file, add the contentful space ID for space Pride Web Test after the equal sign, for example `SPACE_ID=123456`
-3.  Do the same for the access token by defining the`ACCESS_TOKEN`
+1. Copy the [`.env.example`](./.env.example) file (from the root of the project) to a new file (also at the root of the project) called `.env.development`
+
+```bash
+cp .env.example .env.development
+```
+
+2. Replace the values on the right of the `=` signs to be the API details from Contentful's Pride `web` space
+
+### Preview draft content
+
+If you wish to view draft content (i.e. unpublished content) from Contentful on your development setup, you can update the `PREVIEW_CONTENT` boolean to be `true` in your [`.env.development`](./.env.development) file. This can simply be changed back to `false` in order to pull production content again.
+
+If your app is not reading the content from the correct environment, try the following steps:
+
+- ensure you have closed all running app instances between config changes
+- delete your local Contentful cache via the command `gatsby clean`
 
 ## Running 🏃
 
 ```sh
 gatsby develop
 ```
+
 Make sure you have the correct Contentful configuration or the project won't run.
 
 ## Tests
@@ -59,6 +73,7 @@ yarn test:watch
 ```
 
 ## Layout
+
 Grid layout will be done via [Grid-Styled](http://jxnblk.com/grid-styled/). Breakpoints and spacing configuration can be found in `src/theme/theme.js`. See `src/grid/grid.js` to see how the Container, Column and Row components are made. Example of usage can be found on the events page on `src/pages/events.js`. Please see [Official Documentation](https://github.com/jxnblk/grid-styled) on how to set widths for your columns and set alignment.
 
 ## Styling
