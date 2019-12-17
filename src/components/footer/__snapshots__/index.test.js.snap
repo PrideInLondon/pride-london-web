@@ -2468,7 +2468,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                 <CTALink
                                   to="/support-us/partners"
                                 >
-                                  <ctaLink__StyledLink
+                                  <CTALink__StyledLink
                                     as={
                                       Object {
                                         "$$typeof": Symbol(react.forward_ref),
@@ -2491,7 +2491,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "ctaLink__StyledLink-jwjl82-0",
+                                            "componentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                             "isStatic": false,
                                             "lastClassName": "c14",
                                             "rules": Array [
@@ -2504,10 +2504,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               ";}",
                                             ],
                                           },
-                                          "displayName": "ctaLink__StyledLink",
+                                          "displayName": "CTALink__StyledLink",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
+                                          "styledComponentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                           "target": "a",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2577,13 +2577,13 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                         </GatsbyLink>
                                       </ForwardRef>
                                     </StyledComponent>
-                                  </ctaLink__StyledLink>
+                                  </CTALink__StyledLink>
                                 </CTALink>
                                 <CTALink
                                   contact={true}
                                   to="mailto:sponsor@prideinlondon.org"
                                 >
-                                  <ctaLink__StyledLink
+                                  <CTALink__StyledLink
                                     as="a"
                                     className="cta-link"
                                     contact={true}
@@ -2599,7 +2599,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "ctaLink__StyledLink-jwjl82-0",
+                                            "componentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                             "isStatic": false,
                                             "lastClassName": "c14",
                                             "rules": Array [
@@ -2612,10 +2612,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               ";}",
                                             ],
                                           },
-                                          "displayName": "ctaLink__StyledLink",
+                                          "displayName": "CTALink__StyledLink",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
+                                          "styledComponentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                           "target": "a",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2635,7 +2635,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                          ›
                                       </a>
                                     </StyledComponent>
-                                  </ctaLink__StyledLink>
+                                  </CTALink__StyledLink>
                                 </CTALink>
                               </div>
                             </StyledComponent>
@@ -5769,7 +5769,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                 <CTALink
                                   to="/support-us/partners"
                                 >
-                                  <ctaLink__StyledLink
+                                  <CTALink__StyledLink
                                     as={
                                       Object {
                                         "$$typeof": Symbol(react.forward_ref),
@@ -5792,7 +5792,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "ctaLink__StyledLink-jwjl82-0",
+                                            "componentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                             "isStatic": false,
                                             "lastClassName": "c14",
                                             "rules": Array [
@@ -5805,10 +5805,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               ";}",
                                             ],
                                           },
-                                          "displayName": "ctaLink__StyledLink",
+                                          "displayName": "CTALink__StyledLink",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
+                                          "styledComponentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                           "target": "a",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -5878,13 +5878,13 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                         </GatsbyLink>
                                       </ForwardRef>
                                     </StyledComponent>
-                                  </ctaLink__StyledLink>
+                                  </CTALink__StyledLink>
                                 </CTALink>
                                 <CTALink
                                   contact={true}
                                   to="mailto:sponsor@prideinlondon.org"
                                 >
-                                  <ctaLink__StyledLink
+                                  <CTALink__StyledLink
                                     as="a"
                                     className="cta-link"
                                     contact={true}
@@ -5900,7 +5900,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "ctaLink__StyledLink-jwjl82-0",
+                                            "componentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                             "isStatic": false,
                                             "lastClassName": "c14",
                                             "rules": Array [
@@ -5913,10 +5913,10 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               ";}",
                                             ],
                                           },
-                                          "displayName": "ctaLink__StyledLink",
+                                          "displayName": "CTALink__StyledLink",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "ctaLink__StyledLink-jwjl82-0",
+                                          "styledComponentId": "CTALink__StyledLink-sc-1vtiiob-0",
                                           "target": "a",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -5936,7 +5936,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                          ›
                                       </a>
                                     </StyledComponent>
-                                  </ctaLink__StyledLink>
+                                  </CTALink__StyledLink>
                                 </CTALink>
                               </div>
                             </StyledComponent>

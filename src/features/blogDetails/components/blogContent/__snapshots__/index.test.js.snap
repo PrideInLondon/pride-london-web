@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogContent renders with default values 1`] = `""`;
+exports[`BlogContent renders with default values 1`] = `
+<Paragraph
+  key="0"
+>
+  Hello world!
+</Paragraph>
+`;
