@@ -1150,14 +1150,14 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@7.7.4", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4":
+"@babel/runtime@7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
   integrity sha512-r24eVUUr0QqNZa+qrImUk8fn5SPhHq+IfYvIoIMg0do3GdK9sMdiLKP3GYVVaxpPKORgm8KRKaNTEhAjgIpLMw==
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.7.6":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6":
   version "7.7.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.6.tgz#d18c511121aff1b4f2cd1d452f1bac9601dd830f"
   integrity sha512-BWAJxpNVa0QlE5gZdWjSxXtemZyZ9RmrmVozxt3NUXeZhVIJ5ANyqmMc0JDrivBZyxUuQvFxlvH4OWWOogGfUw==
@@ -4398,15 +4398,10 @@ blob@0.0.5:
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
   integrity sha512-gaqbzQPqOoamawKg0LGVd7SzLgXS+JH61oWprSLH+P+abTczqJbhTR8CmJ2u9/bUYNmHTGJx/UEmn6doAvvuig==
 
-bluebird@^3.3.5, bluebird@^3.7.2:
+bluebird@^3.3.5, bluebird@^3.5.5, bluebird@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
-
-bluebird@^3.5.5:
-  version "3.5.5"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.5.tgz#a8d0afd73251effbbd5fe384a77d73003c17a71f"
-  integrity sha512-5am6HnnfN+urzt4yfg7IgTbotDjIT/u8AJpEt0sIU9FtXfVeezXAPKswrG+xKUCOYAINpSdgZVDU6QFh+cuH3w==
 
 bmp-js@^0.1.0:
   version "0.1.0"
@@ -8531,10 +8526,10 @@ gatsby-plugin-rollbar@^1.0.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-rollbar/-/gatsby-plugin-rollbar-1.0.0.tgz#90fc3ca1ed08f54cab6824f5e94cc3ec85283cc0"
   integrity sha512-RPF/8CyU1u56NOZOcvrCwYUkj7Beg4jElyYH97e3iipwPxM97hsgzULg8EhiquumpHmRNDH4TCNtw2dRkUfwUQ==
 
-gatsby-plugin-sharp@^2.3.7:
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.3.7.tgz#31e767804fa70b07c9ddb554249dd2d24c42cba8"
-  integrity sha512-dXPjalm+V94oTo6PktOuJPgoTM+iP+WGPtlvif7+5gL/GxplnQ+M2piOM+ttKF2b/BdnN0Rkfq3ZWeaXwow9KQ==
+gatsby-plugin-sharp@^2.3.7, gatsby-plugin-sharp@^2.3.9:
+  version "2.3.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.3.9.tgz#8c0febc808bf271be0556e0e2ab608b741056326"
+  integrity sha512-+SG6ZfoeMRC5AVDw1QpVrdHmOvuyJjTA+bcwvavDKbZoMsiDG5QdTDGgJogr0Ak9VBwOj0V3Y3cMpMoNtvEg6g==
   dependencies:
     "@babel/runtime" "^7.7.6"
     async "^2.6.3"
@@ -8595,10 +8590,10 @@ gatsby-react-router-scroll@^2.1.19:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.1.69:
-  version "2.1.69"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.69.tgz#9f1a418a6af39e6a7b2bb999688f2625f729e003"
-  integrity sha512-XLMbWp3xGAvXSMJKGV5rGid1JTc3KARIvc87hiFWGOh7R6lk9k51reOQa6rcyo/wcf1v4Weyfo7kjVJJJB51cw==
+gatsby-source-contentful@^2.1.71:
+  version "2.1.71"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.71.tgz#8beb99e2c281f1a1dbf2ac844c93c51a14e4647d"
+  integrity sha512-Hti+0+YKWPg0Ks9/X8XvS9o5N8tpdcBzQ+wdct1Ugu1a+lTp5oaDLMu0r/KlfaCzshEL6k/p9O2yzSWmZiaQWw==
   dependencies:
     "@babel/runtime" "^7.7.6"
     "@hapi/joi" "^15.1.1"
@@ -8609,7 +8604,7 @@ gatsby-source-contentful@^2.1.69:
     contentful "^6.1.3"
     deep-map "^1.5.0"
     fs-extra "^8.1.0"
-    gatsby-plugin-sharp "^2.3.7"
+    gatsby-plugin-sharp "^2.3.9"
     gatsby-source-filesystem "^2.1.42"
     is-online "^8.2.1"
     json-stringify-safe "^5.0.1"
