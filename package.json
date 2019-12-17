@@ -13,7 +13,8 @@
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "husky": {
     "hooks": {
@@ -21,7 +22,7 @@
     }
   },
   "lint-staged": {
-    "!(*.test|*.stories).{ts,tsx}": "yarn tsc --skipLibCheck --strict --esModuleInterop --lib \"esnext, dom, dom.iterable\" --jsx preserve --typeRoots \"./@types, ./node_modules/@types\" --noEmit",
+    "!(*.test|*.stories).{ts,tsx}": "yarn tsc --allowJs --skipLibCheck --strict --esModuleInterop --lib \"esnext, dom, dom.iterable\" --jsx preserve --typeRoots \"./@types, ./node_modules/@types\" --noEmit",
     "src/**/*.{js,json,ts,tsx}": [
       "eslint --fix",
       "stylelint",
@@ -33,6 +34,7 @@
   "dependencies": {
     "@babel/preset-typescript": "^7.7.4",
     "@rebass/grid": "^6.0.0",
+    "@types/storybook__addon-info": "^5.2.1",
     "debounce": "^1.2.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.18.11",
@@ -79,16 +81,25 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "@contentful/rich-text-react-renderer": "^13.2.0",
+    "@storybook/addon-a11y": "^5.2.8",
+    "@storybook/addon-info": "^5.2.8",
+    "@storybook/addon-knobs": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/preset-typescript": "^1.1.0",
+    "@storybook/react": "^5.2.8",
+    "@storybook/source-loader": "^5.2.8",
     "@types/jest": "^24.0.22",
-    "@types/react": "^16.9.11",
+    "@types/react": "^16.9.14",
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.0",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
     "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
     "babel-plugin-remove-graphql-queries": "^2.7.10",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-react-app": "^9.1.0",
     "codecov": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -113,6 +124,7 @@
     "prettier": "^1.18.2",
     "prop-types": "^15.6.2",
     "react": "^16.9.0",
+    "react-docgen-typescript-loader": "^3.6.0",
     "react-dom": "^16.12.0",
     "remark-cli": "^7.0.1",
     "remark-preset-lint-recommended": "^3.0.3",
@@ -123,6 +135,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-prettier": "^1.1.1",
     "stylelint-processor-styled-components": "^1.9.0",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
     "typescript-styled-plugin": "^0.15.0"
   }

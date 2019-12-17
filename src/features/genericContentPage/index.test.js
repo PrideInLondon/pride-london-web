@@ -16,7 +16,24 @@ import GenericContent from '.'
 
 describe('<GenericContent/>', () => {
   it('renders with default values', () => {
-    const content = {}
+    const content = {
+      nodeType: 'document',
+      data: {},
+      content: [
+        {
+          nodeType: 'paragraph',
+          data: {},
+          content: [
+            {
+              nodeType: 'text',
+              value: 'Hello world!',
+              marks: [],
+              data: {},
+            },
+          ],
+        },
+      ],
+    }
     const wrapper = shallow(<GenericContent content={content} />)
     expect(toJSON(wrapper)).toMatchSnapshot()
   })

@@ -29,9 +29,8 @@ import logo from '../theme/assets/images/logo-pride.svg'
 import theme from '../theme/theme'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import './index.css'
-import './fonts.css'
 import metaImg from '../theme/assets/images/pride-logo-social.png'
+import { GlobalStyle } from './index.styles'
 
 const SiteWrapper = styled.div`
   max-width: 1600px;
@@ -98,6 +97,7 @@ const query = graphql`
 
 const Layout = ({ children, location: { pathname } }) => (
   <ThemeProvider theme={theme}>
+    <GlobalStyle />
     <StaticQuery
       query={query}
       render={({
