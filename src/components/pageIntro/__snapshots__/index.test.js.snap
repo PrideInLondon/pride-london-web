@@ -16,17 +16,15 @@ exports[`<PageIntro/> renders with default values 1`] = `
     as="section"
     mx="auto"
   >
-    <Row
-      flexWrap={null}
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
       mb={
         Array [
           "30px",
           "60px",
         ]
       }
-      ml={null}
-      mr={null}
-      mx={null}
     >
       <styles__IntroContainer
         width={
@@ -42,7 +40,7 @@ exports[`<PageIntro/> renders with default values 1`] = `
           Lorem ipsum dolor sit amet
         </p>
       </styles__IntroContainer>
-    </Row>
+    </Gridstyles__Row>
   </styles__MainContainer>
 </Fragment>
 `;

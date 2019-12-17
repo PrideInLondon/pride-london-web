@@ -11,7 +11,8 @@ import {
   getDuration,
   sanitizeDates,
 } from '../../features/events/helpers/index'
-import { itemsToLoad, dateFormat } from '../../constants'
+import constants from '../../constants'
+// { itemsToLoad, dateFormat }
 
 const AppContext = React.createContext()
 const { Consumer } = AppContext
@@ -33,7 +34,7 @@ function getInitialFilterState() {
 const initialState = {
   events: [],
   filterOpen: null,
-  eventsToShow: itemsToLoad,
+  eventsToShow: constants.itemsToLoad,
   filters: getInitialFilterState(),
 }
 
@@ -55,7 +56,7 @@ class Provider extends Component {
           allEventOccurences.push(event)
         } else {
           const recurrenceDates = sanitizeDates([
-            moment(event.node.startTime).format(dateFormat),
+            moment(event.node.startTime).format(constants.dateFormat),
             ...event.node.recurrenceDates,
           ])
           const time = moment(event.node.startTime).format('HH:mm')
@@ -196,7 +197,9 @@ class Provider extends Component {
 
   showMore = filteredCount => {
     if (this.state.eventsToShow < filteredCount) {
-      this.setState({ eventsToShow: this.state.eventsToShow + itemsToLoad })
+      this.setState({
+        eventsToShow: this.state.eventsToShow + constants.itemsToLoad,
+      })
     }
   }
 

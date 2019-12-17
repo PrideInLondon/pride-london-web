@@ -2,13 +2,11 @@
 
 exports[`OtherArticles renders with default values 1`] = `
 <styles__Container>
-  <Row
-    flexWrap={null}
-    ml={null}
-    mr={null}
-    mx={null}
+  <Gridstyles__Row
+    display="flex"
+    flexWrap="wrap"
   >
-    <grid__FlexColumn
+    <Gridstyles__FlexColumn
       width={
         Array [
           1,
@@ -19,13 +17,11 @@ exports[`OtherArticles renders with default values 1`] = `
       }
     >
       <OtherArticlesHeader />
-    </grid__FlexColumn>
-  </Row>
-  <Row
-    flexWrap={null}
-    ml={null}
-    mr={null}
-    mx={null}
+    </Gridstyles__FlexColumn>
+  </Gridstyles__Row>
+  <Gridstyles__Row
+    display="flex"
+    flexWrap="wrap"
   />
 </styles__Container>
 `;

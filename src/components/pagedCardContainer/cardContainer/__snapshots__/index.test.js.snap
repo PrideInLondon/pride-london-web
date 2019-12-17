@@ -1,17 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardContainer renders component CardContainer 1`] = `
-<grid__Container
+<Gridstyles__Container
   className=""
   mx="auto"
 >
-  <Row
-    flexWrap={null}
-    ml={null}
-    mr={null}
-    mx={null}
+  <Gridstyles__Row
+    display="flex"
+    flexWrap="wrap"
   >
-    <grid__FlexColumn
+    <Gridstyles__FlexColumn
       key="id-foo"
       py={
         Array [
@@ -33,8 +31,8 @@ exports[`CardContainer renders component CardContainer 1`] = `
       <CardComponent
         text="text-foo"
       />
-    </grid__FlexColumn>
-    <grid__FlexColumn
+    </Gridstyles__FlexColumn>
+    <Gridstyles__FlexColumn
       key="id-bar"
       py={
         Array [
@@ -56,8 +54,8 @@ exports[`CardContainer renders component CardContainer 1`] = `
       <CardComponent
         text="text-bar"
       />
-    </grid__FlexColumn>
-    <grid__FlexColumn
+    </Gridstyles__FlexColumn>
+    <Gridstyles__FlexColumn
       key="id-baz"
       py={
         Array [
@@ -79,7 +77,7 @@ exports[`CardContainer renders component CardContainer 1`] = `
       <CardComponent
         text="text-baz"
       />
-    </grid__FlexColumn>
-  </Row>
-</grid__Container>
+    </Gridstyles__FlexColumn>
+  </Gridstyles__Row>
+</Gridstyles__Container>
 `;

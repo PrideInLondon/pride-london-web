@@ -13,16 +13,10 @@
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged && tsc",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "!(*.test|*.stories).{ts,tsx}": "yarn tsc --allowJs --skipLibCheck --strict --esModuleInterop --lib \"esnext, dom, dom.iterable\" --jsx preserve --typeRoots \"./@types, ./node_modules/@types\" --noEmit",
     "src/**/*.{js,json,ts,tsx}": [
       "eslint --fix",
       "stylelint",
@@ -72,6 +66,7 @@
     "slugify": "^1.3.6",
     "string-hash": "^1.1.3",
     "styled-components": "^4.4.1",
+    "styled-system": "^5.1.4",
     "tinycolor2": "^1.4.1",
     "uuid-encoder": "^1.2.0"
   },
@@ -80,6 +75,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.7.4",
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "@storybook/addon-a11y": "^5.2.8",
     "@storybook/addon-info": "^5.2.8",
@@ -92,6 +88,7 @@
     "@types/react": "^16.9.14",
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.0",
+    "@types/styled-system": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
     "babel-eslint": "^10.0.3",

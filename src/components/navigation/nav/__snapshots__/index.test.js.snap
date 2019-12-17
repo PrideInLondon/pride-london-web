@@ -4,6 +4,8 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
 <styles__HeaderWrapper>
   <styles__Header>
     <styles__FlexRow
+      display="flex"
+      flexWrap="nowrap"
       mx={
         Array [
           0,

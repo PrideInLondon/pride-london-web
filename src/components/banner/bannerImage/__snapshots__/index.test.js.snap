@@ -33,9 +33,11 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
     mx="auto"
   >
     <styles__StyledRow
+      display="flex"
+      flexWrap="wrap"
       medium={false}
     >
-      <Column
+      <Gridstyles__Column
         pb={
           Array [
             30,
@@ -43,11 +45,6 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
             2,
           ]
         }
-        pl={null}
-        pr={null}
-        pt={null}
-        px={null}
-        py={null}
         width={1}
       >
         <StyledBannerTitle>
@@ -56,7 +53,7 @@ exports[`<BannerImage /> renders the subtitleText from props to the component Ba
         <StyledBannerSubtitle>
           And here is a test subtitle!
         </StyledBannerSubtitle>
-      </Column>
+      </Gridstyles__Column>
     </styles__StyledRow>
   </styles__StyledContainer>
 </styles__StyledWrapper>
@@ -81,9 +78,11 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
     mx="auto"
   >
     <styles__StyledRow
+      display="flex"
+      flexWrap="wrap"
       medium={false}
     >
-      <Column
+      <Gridstyles__Column
         pb={
           Array [
             30,
@@ -91,17 +90,12 @@ exports[`<BannerImage /> renders the titleText from props to the component Banne
             2,
           ]
         }
-        pl={null}
-        pr={null}
-        pt={null}
-        px={null}
-        py={null}
         width={1}
       >
         <StyledBannerTitle>
           Here is a test title!
         </StyledBannerTitle>
-      </Column>
+      </Gridstyles__Column>
     </styles__StyledRow>
   </styles__StyledContainer>
 </styles__StyledWrapper>

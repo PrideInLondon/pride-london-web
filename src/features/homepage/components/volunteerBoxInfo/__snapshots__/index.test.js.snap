@@ -3,23 +3,14 @@
 exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
 <Fragment>
   <styles__BackgroundVolunteer />
-  <grid__Container
+  <Gridstyles__Container
     mx="auto"
   >
-    <Row
-      flexWrap={null}
-      ml={null}
-      mr={null}
-      mx={null}
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
     >
-      <Column
-        pb={null}
-        pl={null}
-        pr={null}
-        pt={null}
-        px={null}
-        py={null}
-      >
+      <Gridstyles__Column>
         <styles__ContentVolunteer>
           <h2>
             Volunteer
@@ -44,8 +35,8 @@ exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
             Help keep Pride going
           </Button>
         </styles__ContentVolunteer>
-      </Column>
-    </Row>
-  </grid__Container>
+      </Gridstyles__Column>
+    </Gridstyles__Row>
+  </Gridstyles__Container>
 </Fragment>
 `;
