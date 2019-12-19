@@ -31,9 +31,6 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
       header = moment(event.node.startTime).format(longDayOfMonth)
     }
   }
-  // logic to check if the eventCard is not on the original page load or on a previuos load
-  const animate =
-    index >= toLoad - itemsToLoad && toLoad !== itemsToLoad ? true : false
 
   return (
     <FlexColumn
@@ -45,7 +42,9 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
       ]}
       key={event.node.id}
       py={[2, 2, 2, 3]}
-      animation={animate}
+      animation={
+        index >= toLoad - itemsToLoad && toLoad !== itemsToLoad ? true : false
+      }
     >
       {header && <DateGroupHeading>{header}</DateGroupHeading>}
       <EventListingCard event={event.node} />
