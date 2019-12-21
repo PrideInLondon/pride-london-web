@@ -144,13 +144,6 @@ const When = ({ startTime, endTime, recurrenceDates }) => (
     {generateDisplayDate({
       start: new Date(startTime),
       end: new Date(endTime),
-      occurrences:
-        recurrenceDates &&
-        recurrenceDates.map(occurrence => {
-          // occurrence is DD/MM/YYYY
-          const [date, month, year] = occurrence.split('/')
-          return new Date(year, month, date)
-        }),
     })}
   </CardDate>
 )

@@ -4,13 +4,9 @@ describe('generateDisplayDate', () => {
   let firstOfJune
 
   beforeAll(() => {
-    // set up to be the next occurring 1st of June 09:00
+    // set up to be 1st of June 2019 @ 09:00
     firstOfJune = new Date()
-    firstOfJune.setFullYear(
-      firstOfJune.getFullYear() + (firstOfJune.getMonth() >= 5 ? 1 : 0),
-      5,
-      1
-    )
+    firstOfJune.setFullYear(2019, 5, 1)
     firstOfJune.setHours(9, 0, 0)
   })
 
@@ -40,49 +36,17 @@ describe('generateDisplayDate', () => {
     expect(actual).toEqual('Tomorrow • 18:00 - 20:00')
   })
 
-  it('when for a single event, should display the date it occurs', () => {
+  it('should display the day and date it occurs when event occurs 2 or more days from now', () => {
     const start = new Date(firstOfJune)
-    start.setMonth(firstOfJune.getMonth() + 1) // set to July
+    start.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    start.setHours(19, 30, 0)
 
-    const actual = generateDisplayDate({ start, now: firstOfJune })
+    const end = new Date(firstOfJune)
+    end.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    end.setHours(21, 0, 0)
 
-    expect(actual).toEqual('Jul 01')
-  })
+    const actual = generateDisplayDate({ start, end, now: firstOfJune })
 
-  it('when for a recurring event, should display the date range it occurs', () => {
-    // creates occurrences for 1st to 3rd July
-    const occurrences = [0, 1, 2].map(index => {
-      const occurrence = new Date(firstOfJune)
-      occurrence.setMonth(
-        firstOfJune.getMonth() + 1,
-        firstOfJune.getDate() + index
-      )
-      return occurrence
-    })
-
-    const actual = generateDisplayDate({
-      start: occurrences[0],
-      occurrences,
-      now: firstOfJune,
-    })
-
-    expect(actual).toEqual('Jul 01 - Jul 03')
-  })
-
-  it('when for a recurring event that has already begun, should display an "until end date"', () => {
-    // creates occurrences for 31st May to 2nd June
-    const occurrences = [-1, 0, 1].map(index => {
-      const occurrence = new Date(firstOfJune)
-      occurrence.setDate(firstOfJune.getDate() + index)
-      return occurrence
-    })
-
-    const actual = generateDisplayDate({
-      start: occurrences[1],
-      occurrences,
-      now: firstOfJune,
-    })
-
-    expect(actual).toEqual('Until Jun 02')
+    expect(actual).toEqual('Mon, 01 Jul • 19:30 - 21:00')
   })
 })
