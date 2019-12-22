@@ -27,6 +27,7 @@ storiesOf('Card', module)
                 src: umbrellaJpg,
                 srcSet: umbrellaJpg,
               }}
+              alt="A rainbow umbrella"
             />
             <CardContent>
               <CardTitle>This is the title</CardTitle>

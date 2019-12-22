@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Image from 'gatsby-image'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
+import { sm, md, lg } from '../../theme/breakpoints'
 import {
   CardProps,
   CardImageProps,
@@ -15,7 +16,7 @@ export const Card: React.FC<CardProps> = styled.div`
   height: 100%;
   border-radius: 4px;
   overflow: hidden;
-  background-color: ${props => props.color};
+  background-color: ${({ color }) => color};
 `
 
 Card.defaultProps = {
@@ -66,6 +67,7 @@ export const CardContent: React.FC<CardContentProps> = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  min-height: ${lg / 2}px;
 
   p,
   ul,
@@ -78,11 +80,12 @@ export const CardContent: React.FC<CardContentProps> = styled.div`
 
   ${media.mobile`
     min-height: unset;
+    min-height: ${sm / 2}px;
   `};
 
   ${media.tablet`
     padding: 30px;
-    min-height: 480px;
+    min-height: ${md / 2}px;
   `};
 `
 

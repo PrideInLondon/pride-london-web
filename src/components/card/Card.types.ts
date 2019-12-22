@@ -8,7 +8,14 @@ export interface CardProps {
 }
 
 export interface CardImageProps {
+  /**
+   * Fixed details from Gatsby Image
+   */
   image: FixedObject
+  /**
+   * Alt description for image
+   */
+  alt: string
 }
 
 export interface CardContentProps {}
