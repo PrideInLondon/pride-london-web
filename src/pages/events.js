@@ -209,4 +209,8 @@ export const Events = ({
   )
 }
 
+Events.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
 export default Events
