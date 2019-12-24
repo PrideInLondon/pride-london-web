@@ -18,6 +18,13 @@ export const Card: React.FC<CardProps> = styled.div`
   border-radius: 5px;
   overflow: hidden;
   background-color: ${({ color }) => color};
+
+  &:hover,
+  &:focus {
+    #card-img-wrapper {
+      transform: scale(1.08);
+    }
+  }
 `
 
 Card.defaultProps = {
@@ -50,16 +57,11 @@ const CardImageWrapper = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-
-  &:hover,
-  &:focus {
-    transform: scale(1.08);
-  }
 `
 
 export const CardImage: React.FC<CardImageProps> = ({ image, ...props }) => (
   <CardImageOverflow>
-    <CardImageWrapper>
+    <CardImageWrapper id="card-img-wrapper">
       <StyledCardImage fixed={image} {...props} />
     </CardImageWrapper>
   </CardImageOverflow>
