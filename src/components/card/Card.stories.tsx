@@ -29,7 +29,7 @@ storiesOf('Card', module)
               }}
               alt="A rainbow umbrella"
             />
-            <CardContent>
+            <CardContent height={{ desktop: '130px' }}>
               <CardTitle>This is the title</CardTitle>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

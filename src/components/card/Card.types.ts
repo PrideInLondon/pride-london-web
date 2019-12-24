@@ -18,7 +18,19 @@ export interface CardImageProps {
   alt: string
 }
 
-export interface CardContentProps {}
+export interface CardContentProps {
+  /**
+   * Height as CSS value for the content area. This is required to allow the
+   * Footer to stick to bottom via flex.
+   *
+   * Default is half the current width breakpoint.
+   */
+  height?: {
+    desktop?: string
+    tablet?: string
+    mobile?: string
+  }
+}
 
 export interface CardTitleProps {}
 

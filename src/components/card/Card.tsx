@@ -14,7 +14,8 @@ import {
 
 export const Card: React.FC<CardProps> = styled.div`
   height: 100%;
-  border-radius: 4px;
+  width: 100%;
+  border-radius: 5px;
   overflow: hidden;
   background-color: ${({ color }) => color};
 `
@@ -49,6 +50,11 @@ const CardImageWrapper = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.08);
+  }
 `
 
 export const CardImage: React.FC<CardImageProps> = ({ image, ...props }) => (
@@ -67,7 +73,7 @@ export const CardContent: React.FC<CardContentProps> = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  min-height: ${lg / 2}px;
+  height: ${({ height: { desktop } }) => desktop};
 
   p,
   ul,
@@ -79,15 +85,22 @@ export const CardContent: React.FC<CardContentProps> = styled.div`
   }
 
   ${media.mobile`
-    min-height: unset;
-    min-height: ${sm / 2}px;
+    height: ${({ height: { mobile } }) => mobile};
   `};
 
   ${media.tablet`
     padding: 30px;
-    min-height: ${md / 2}px;
+    height: ${({ height: { tablet } }) => tablet};
   `};
 `
+
+CardContent.defaultProps = {
+  height: {
+    desktop: `${lg / 2}px`,
+    tablet: `${md / 2}px`,
+    mobile: `${sm / 2}px`,
+  },
+}
 
 export const CardFooter: React.FC<CardFooterProps> = styled.div`
   display: flex;
