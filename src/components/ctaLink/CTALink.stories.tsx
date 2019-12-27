@@ -7,14 +7,8 @@ import { CTALink } from './CTALink'
 storiesOf('CTALink', module)
   .addDecorator(withInfo)
   .addDecorator(withKnobs)
-  .add(
-    'with URL',
-    () => (
-      <CTALink to={text('Link URL', '/')}>
-        {text('Link Text', 'This is a CTA Link')}
-      </CTALink>
-    ),
-    {
-      info: { inline: true },
-    }
-  )
+  .add('with URL', () => (
+    <CTALink to={text('Link URL', '/')}>
+      {text('Link Text', 'This is a CTA Link')}
+    </CTALink>
+  ))
