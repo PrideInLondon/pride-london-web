@@ -32,7 +32,6 @@ const StyledButton = styled.button`
   width: ${props => (props.fullmobile ? '100%' : 'auto')};
   cursor: pointer;
   text-decoration: none;
-  text-align: center;
   transition: background-color 0.15s linear;
 
   &:hover {
