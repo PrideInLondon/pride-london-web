@@ -1,4 +1,4 @@
-import theme from '../../../../theme/theme'
+import { md } from '../../../../theme/breakpoints'
 
 export const settings = {
   speed: 500,
@@ -8,7 +8,7 @@ export const settings = {
   arrows: true,
   responsive: [
     {
-      breakpoint: theme.breakpoints[1] - 1,
+      breakpoint: md - 1,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,

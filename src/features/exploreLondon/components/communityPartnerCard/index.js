@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import ReactMarkdown from 'react-markdown'
 import Category from '../../../../components/newsCategory'
-import { communityPartnerCategories } from '../../../../constants'
+import constants from '../../../../constants'
 import theme from '../../../../theme/theme'
 import { media } from '../../../../theme/media'
 import {
@@ -155,7 +155,7 @@ const CommunityPartnerCard = ({ partner }) => {
         <CardCategories>
           {categories.map(category => (
             <CardCategory
-              category={communityPartnerCategories.find(
+              category={constants.communityPartnerCategories.find(
                 obj => obj.title === category
               )}
               key={category}

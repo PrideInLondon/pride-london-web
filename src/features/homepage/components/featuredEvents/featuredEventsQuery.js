@@ -2,7 +2,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import React from 'react'
 import moment from 'moment'
 import { getDuration, filterPastEvents } from '../../../events/helpers'
-import { dateFormat } from '../../../../constants'
+import constants from '../../../../constants'
 import FeaturedEvents from '.'
 
 const query = graphql`
@@ -69,7 +69,7 @@ const FeaturedEventsQuery = props => (
           const customId =
             recurrenceDates.length > 0
               ? `${event.node.id}-${moment(startTime)
-                  .format(dateFormat)
+                  .format(constants.dateFormat)
                   .split('/')
                   .join('')}`
               : event.node.id

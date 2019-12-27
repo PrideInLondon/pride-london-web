@@ -5,11 +5,9 @@ exports[`DownloadAppBox download app section snapshot 1`] = `
   <styles__DownloadAppContainer
     mx="auto"
   >
-    <Row
-      flexWrap={null}
-      ml={null}
-      mr={null}
-      mx={null}
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
       px={
         Array [
           0,
@@ -104,7 +102,7 @@ exports[`DownloadAppBox download app section snapshot 1`] = `
           />
         </styles__MockupImgBackground>
       </styles__MockupColumn>
-    </Row>
+    </Gridstyles__Row>
   </styles__DownloadAppContainer>
 </Fragment>
 `;

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import moment from 'moment'
 import { FlexColumn } from '../../../components/grid'
 import { media } from '../../../theme/media'
-import { dateFormat, itemsToLoad } from '../../../constants'
+import constants from '../../../constants'
 import EventListingCard from './eventListingCard'
 
 const DateGroupHeading = styled.h2`
@@ -22,16 +22,15 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
   if (index === 0) {
     header = moment(event.node.startTime).format(longDayOfMonth)
   } else {
-    const startDate = moment(event.node.startTime).format(dateFormat)
+    const startDate = moment(event.node.startTime).format(constants.dateFormat)
     const prevStartDate = moment(events[index - 1].node.startTime).format(
-      dateFormat
+      constants.dateFormat
     )
 
     if (startDate !== prevStartDate) {
       header = moment(event.node.startTime).format(longDayOfMonth)
     }
   }
-
   return (
     <FlexColumn
       width={[
@@ -43,7 +42,10 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
       key={event.node.id}
       py={[2, 2, 2, 3]}
       animation={
-        index >= toLoad - itemsToLoad && toLoad !== itemsToLoad ? true : false
+        index >= toLoad - constants.itemsToLoad &&
+        toLoad !== constants.itemsToLoad
+          ? true
+          : false
       }
     >
       {header && <DateGroupHeading>{header}</DateGroupHeading>}

@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Row, FlexColumn } from '../../../../components/grid'
 import LatestNewsHeader from '../../components/latestNews/latestNewsHeader'
 import LatestNews from '../../components/latestNews'
-import { articleCategories } from '../../../../constants'
+import constants from '../../../../constants'
 import CTALink from '../../../../components/ctaLink'
 import { Wrapper, SecondaryNews, NewsCard, CTALinkOnlyMobile } from './styles'
 
@@ -63,7 +63,7 @@ const LatestNewsContainer = () => (
               <LatestNews
                 {...{
                   ...newsArr[0].node,
-                  category: articleCategories.find(
+                  category: constants.articleCategories.find(
                     cat => cat.title == newsArr[0].node.category
                   ),
                 }}
@@ -83,7 +83,7 @@ const LatestNewsContainer = () => (
                     key={singleNews.id}
                     {...{
                       ...singleNews,
-                      category: articleCategories.find(
+                      category: constants.articleCategories.find(
                         cat => cat.title == singleNews.category
                       ),
                     }}

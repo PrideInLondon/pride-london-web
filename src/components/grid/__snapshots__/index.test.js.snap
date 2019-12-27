@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The FlexColumn component Snapshot 1`] = `
-<grid__FlexInternal>
+<Gridstyles__FlexInternal>
    
   <p>
     Testing
   </p>
-</grid__FlexInternal>
+</Gridstyles__FlexInternal>
 `;

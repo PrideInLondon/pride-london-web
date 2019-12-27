@@ -3,8 +3,8 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import { GreyWrapper } from '../components/grid'
 import BannerImage from '../components/banner/bannerImage'
-import { colors } from '../theme/theme'
-import { communityPartnerCategories } from '../constants'
+import { colors } from '../theme/colors'
+import constants from '../constants'
 import PageIntro from '../components/pageIntro'
 import FilteredPagedCardContainer from '../components/filteredPagedCardContainer'
 import CommunityPartnerCard from '../features/exploreLondon/components/communityPartnerCard'
@@ -51,7 +51,7 @@ const ExploreLondon = ({
       <GreyWrapper as="section">
         <FilteredPagedCardContainer
           filterType="checkbox"
-          categories={communityPartnerCategories}
+          categories={constants.communityPartnerCategories}
           showAllCategoryTitle="Everything"
           cardContent={partners.map(({ node: partner }) => ({
             id: partner.venueName,

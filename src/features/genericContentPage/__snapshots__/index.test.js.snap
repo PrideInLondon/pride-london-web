@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GenericContent/> renders with default values 1`] = `""`;
+exports[`<GenericContent/> renders with default values 1`] = `
+<p
+  key="0"
+>
+  Hello world!
+</p>
+`;
 
 exports[`render methods for Generic Content click on typeform button 1`] = `
 .c1 {

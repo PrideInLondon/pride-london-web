@@ -21,24 +21,20 @@ exports[`DonateSection volunteer snapshot 1`] = `
     </picture>
   </styles__BackgroundRight>
   <styles__LayerContent>
-    <Row
-      flexWrap={null}
-      ml={null}
-      mr={null}
-      mx={null}
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
     >
       <styles__HeadDonate>
         Make a single donation
       </styles__HeadDonate>
-    </Row>
-    <Row
-      flexWrap={null}
-      ml={null}
-      mr={null}
-      mx={null}
+    </Gridstyles__Row>
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
     >
       <DonateButtonsGroup />
-    </Row>
+    </Gridstyles__Row>
   </styles__LayerContent>
 </styles__DonateSectionsWrapper>
 `;

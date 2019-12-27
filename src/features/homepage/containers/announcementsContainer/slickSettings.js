@@ -1,4 +1,4 @@
-import theme from '../../../../theme/theme'
+import { md, lg, xl } from '../../../../theme/breakpoints'
 
 export const settings = {
   speed: 500,
@@ -10,7 +10,7 @@ export const settings = {
   centerPadding: '100px',
   responsive: [
     {
-      breakpoint: theme.breakpoints[3] - 1,
+      breakpoint: xl - 1,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -18,7 +18,7 @@ export const settings = {
       },
     },
     {
-      breakpoint: theme.breakpoints[2] - 1,
+      breakpoint: lg - 1,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -26,7 +26,7 @@ export const settings = {
       },
     },
     {
-      breakpoint: theme.breakpoints[1] - 1,
+      breakpoint: md - 1,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,

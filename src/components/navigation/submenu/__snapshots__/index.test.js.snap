@@ -11,10 +11,13 @@ exports[`<Submenu /> renders the component <Submenu /> when opened 1`] = `
   isOpen={true}
   onTransitionEnd={[Function]}
 >
-  <grid__Container
+  <Gridstyles__Container
     mx="auto"
   >
-    <styles__PanelRow>
+    <styles__PanelRow
+      display="flex"
+      flexWrap="wrap"
+    >
       <styles__PanelInfoWrapper
         width={
           Array [
@@ -130,6 +133,6 @@ exports[`<Submenu /> renders the component <Submenu /> when opened 1`] = `
         </styles__PanelListSection>
       </styles__PanelListWrapper>
     </styles__PanelRow>
-  </grid__Container>
+  </Gridstyles__Container>
 </styles__Panel>
 `;

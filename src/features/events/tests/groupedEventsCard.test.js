@@ -4,12 +4,9 @@ import { GroupedEventsCards } from '../index'
 import { mockNodes, testEvent } from './__mocks__'
 import 'jest-styled-components'
 
-// will change in EVE-7
 describe('The GroupedEventsCards component', () => {
-  let wrapper
-
-  beforeAll(() => {
-    wrapper = shallow(
+  describe('Render', () => {
+    const wrapper = shallow(
       <GroupedEventsCards
         event={testEvent}
         index={1}
@@ -17,33 +14,34 @@ describe('The GroupedEventsCards component', () => {
         toLoad={24}
       />
     )
-  })
 
-  it('Snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  describe('Render', () => {
-    it('passing event.node correctly', () => {
-      expect(
-        wrapper
-          .find('EventListingCard')
-          .first()
-          .prop('event')
-      ).toBe(testEvent.node)
+    it('Snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
     })
 
-    it('testing animation logic', () => {
-      expect(
-        wrapper
-          .find('FlexColumn')
-          .first()
-          .prop('animation')
-      ).toBe(false)
+    describe('Props', () => {
+      it('passing event.node correctly', () => {
+        expect(
+          wrapper
+            .find('EventListingCard')
+            .first()
+            .prop('event')
+        ).toBe(testEvent.node)
+      })
+
+      it('testing animation logic', () => {
+        expect(
+          wrapper
+            .find('FlexColumn')
+            .first()
+            .prop('animation')
+        ).toBe(false)
+      })
     })
-    it('testing animation logic', () => {
+
+    describe('Animation Logic', () => {
       const extendedMockNodes = new Array(25)
-      wrapper = shallow(
+      const wrapper = shallow(
         <GroupedEventsCards
           event={testEvent}
           index={27}
@@ -52,12 +50,15 @@ describe('The GroupedEventsCards component', () => {
         />
       )
 
-      expect(
-        wrapper
-          .find('FlexColumn')
-          .first()
-          .prop('animation')
-      ).toBe(true)
+      it('testing animation logic', () => {
+        console.log(wrapper.debug())
+        expect(
+          wrapper
+            .find('FlexColumn')
+            .first()
+            .prop('animation')
+        ).toBe(true)
+      })
     })
   })
 })

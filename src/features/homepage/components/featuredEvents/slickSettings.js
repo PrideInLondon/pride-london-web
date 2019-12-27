@@ -1,4 +1,4 @@
-import theme from '../../../../theme/theme'
+import { md } from '../../../../theme/breakpoints'
 
 export const settings = slides => ({
   className: 'featured-events-slider',
@@ -16,7 +16,7 @@ export const settings = slides => ({
       },
     },
     {
-      breakpoint: theme.breakpoints[1] - 1,
+      breakpoint: md - 1,
       settings: {
         slidesToShow: slides >= 2 ? 2 : slides,
         slidesToScroll: 1,

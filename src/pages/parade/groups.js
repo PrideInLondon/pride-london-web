@@ -6,7 +6,7 @@ import BannerImage from '../../components/banner/bannerImage'
 import background from '../../theme/assets/images/banners/parade-groups/bg@2x.jpg'
 import ParadeGroupsContainer from '../../features/paradeGroups/containers/paradeGroupsContainer'
 import { media } from '../../theme/media'
-import { paradeGroupCategories } from '../../constants'
+import constants from '../../constants'
 
 const Container = styled.div`
   position: relative;
@@ -55,7 +55,7 @@ const ParadeGroups = ({ data: { paradeGroups } }) => {
         </TextContainer>
         <ParadeGroupsContainer
           paradeGroups={mappedParadeGroups}
-          categories={paradeGroupCategories}
+          categories={constants.paradeGroupCategories}
         />
       </Container>
     </>

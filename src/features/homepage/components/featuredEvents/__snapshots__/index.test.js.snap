@@ -87,7 +87,6 @@ exports[`FeaturedEvents renders with default values 1`] = `
     speed={500}
   >
     <FlexColumn
-      animation={false}
       key="123abcPride Quiz"
       width={
         Array [
@@ -122,7 +121,6 @@ exports[`FeaturedEvents renders with default values 1`] = `
       />
     </FlexColumn>
     <FlexColumn
-      animation={false}
       key="123abcdPride Quiz 2"
       width={
         Array [

@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import PageHeader from '../features/blogDetails/containers/pageHeader'
 import PageContent from '../features/blogDetails/containers/pageContent'
 import PageFooter from '../features/blogDetails/containers/pageFooter'
-import { articleCategories } from '../constants'
+import constants from '../constants'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -169,12 +169,14 @@ const BlogDetails = ({
         article={article}
         title={title}
         datePublished={datePublished}
-        category={articleCategories.find(cat => cat.title == category)}
+        category={constants.articleCategories.find(
+          cat => cat.title == category
+        )}
         author={author}
       />
       <PageFooter
         otherArticles={otherArticles}
-        categories={articleCategories}
+        categories={constants.articleCategories}
       />
     </PageWrapper>
   )

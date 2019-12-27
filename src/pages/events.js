@@ -1,18 +1,53 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
-import { noScroll } from '../utilities'
+// import { noScroll } from '../utilities'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { GroupedEventsCards } from '../features/events'
 //import EventsFilters from '../features/events/components/eventsFilters'
-import BannerImage from '../components/banner/bannerImage'
 import Button from '../components/button'
 import { Container, Row, Column } from '../components/grid'
 import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
-//import filterIcon from '../theme/assets/images/icon-filters.svg'
-import BannerImg from '../theme/assets/images/banners/events/bg@2x.jpg'
+// import filterIcon from '../theme/assets/images/icon-filters.svg'
+import { EventsPageBanner } from '../features/events/components/eventsPageBanner'
+
+export const EventsPageQuery = graphql`
+  query eventsPageQuery {
+    file(relativePath: { regex: "/banners/events/bg@3x/" }) {
+      size
+      name
+      childImageSharp {
+        desktop: fixed(
+          width: 920
+          height: 500
+          quality: 100
+          cropFocus: CENTER
+        ) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+        tablet: fixed(
+          width: 768
+          height: 417
+          quality: 100
+          cropFocus: CENTER
+        ) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+        mobile: fixed(
+          width: 480
+          height: 260
+          quality: 100
+          cropFocus: CENTER
+        ) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+  }
+`
 
 // const ColumnTextCenter = styled(Column)`
 //   text-align: center;
@@ -66,22 +101,25 @@ const PageWrapper = styled.div`
 `
 
 /* eslint-disable react/no-multi-comp */
-class Events extends Component {
-  state = {
-    showFiltersMobile: false,
-  }
 
-  toggleFiltersMobile = () => {
-    this.setState(
-      prevState => ({
-        ...prevState,
-        showFiltersMobile: !prevState.showFiltersMobile,
-      }),
-      () => noScroll.toggle()
-    )
-  }
+export const Events = ({
+  data: {
+    file: { childImageSharp },
+  },
+}) => {
+  // const [state, setState] = useState({ showFiltersMobile: false })
 
-  renderEventCount = (filteredCount, eventsToShow) => {
+  // const toggleFiltersMobile = () => {
+  //   this.setState(
+  //     prevState => ({
+  //       ...prevState,
+  //       showFiltersMobile: !prevState.showFiltersMobile,
+  //     }),
+  //     () => noScroll.toggle()
+  //   )
+  // }
+
+  const renderEventCount = (filteredCount, eventsToShow) => {
     let text
 
     if (filteredCount) {
@@ -96,22 +134,18 @@ class Events extends Component {
     return <EventCount>{text}</EventCount>
   }
 
-  render() {
-    // const { showFiltersMobile } = this.state
-
-    return (
-      <Consumer>
-        {context => (
-          <PageWrapper>
-            <Helmet title="Coming Out - The new way to find the best queer events for the queer community from Pride in London." />
-            <BannerImage
-              titleText="Coming Out"
-              subtitleText="The new way to find the best queer events for the queer community from Pride in London."
-              imageSrc={BannerImg}
-              color={theme.colors.lightGrey}
-              imageFullWidth
-            />
-            {/* <OffsetContainer>
+  return (
+    <Consumer>
+      {context => (
+        <PageWrapper>
+          <Helmet title="Coming Out - The new way to find the best queer events for the queer community from Pride in London." />
+          <EventsPageBanner
+            title="Coming Out"
+            subtitle=" The new way to find the best queer events for the queer community from Pride in London."
+            backgroundColor={theme.colors.bondiBlue}
+            image={childImageSharp}
+          />
+          {/* <OffsetContainer>
               <EventsFilters
                 showFiltersMobile={showFiltersMobile}
                 toggleFiltersMobile={this.toggleFiltersMobile}
@@ -141,57 +175,58 @@ class Events extends Component {
                 </ColumnTextCenter>
               </Row>
             </ContainerAddFilters> */}
-            <Container>
-              <Row>
-                <ListingCardWrapper>
-                  {context.filteredEvents
-                    .filter(filterByLimit, context.state.eventsToShow)
-                    .sort((event1, event2) => {
-                      return (
-                        new Date(event1.node.startTime) -
-                        new Date(event2.node.startTime)
-                      )
-                    })
-                    .map((event, index, events) => (
-                      <GroupedEventsCards
-                        events={events}
-                        index={index}
-                        event={event}
-                        key={event.node.id}
-                        toLoad={context.state.eventsToShow}
-                      />
-                    ))}
-                </ListingCardWrapper>
+          <Container>
+            <Row>
+              <ListingCardWrapper>
+                {context.filteredEvents
+                  .filter(filterByLimit, context.state.eventsToShow)
+                  .sort((event1, event2) => {
+                    return (
+                      new Date(event1.node.startTime) -
+                      new Date(event2.node.startTime)
+                    )
+                  })
+                  .map((event, index, events) => (
+                    <GroupedEventsCards
+                      events={events}
+                      index={index}
+                      event={event}
+                      key={event.node.id}
+                      toLoad={context.state.eventsToShow}
+                    />
+                  ))}
+              </ListingCardWrapper>
 
-                <ColumnPagination width={1}>
-                  {this.renderEventCount(
-                    context.filteredEvents.length,
-                    context.state.eventsToShow
-                  )}
-                  {context.state.eventsToShow <
-                    context.filteredEvents.length && (
-                    <Button
-                      onClick={() => {
-                        context.actions.showMore(context.filteredEvents.length)
-                      }}
-                      primary
-                      disabled={
-                        context.state.eventsToShow >=
-                        context.filteredEvents.length
-                      }
-                      fullmobile
-                    >
-                      Show more events
-                    </Button>
-                  )}
-                </ColumnPagination>
-              </Row>
-            </Container>
-          </PageWrapper>
-        )}
-      </Consumer>
-    )
-  }
+              <ColumnPagination width={1}>
+                {renderEventCount(
+                  context.filteredEvents.length,
+                  context.state.eventsToShow
+                )}
+                {context.state.eventsToShow < context.filteredEvents.length && (
+                  <Button
+                    onClick={() => {
+                      context.actions.showMore(context.filteredEvents.length)
+                    }}
+                    primary
+                    disabled={
+                      context.state.eventsToShow >=
+                      context.filteredEvents.length
+                    }
+                    fullmobile
+                  >
+                    Show more events
+                  </Button>
+                )}
+              </ColumnPagination>
+            </Row>
+          </Container>
+        </PageWrapper>
+      )}
+    </Consumer>
+  )
 }
 
+Events.propTypes = {
+  data: PropTypes.object.isRequired,
+}
 export default Events

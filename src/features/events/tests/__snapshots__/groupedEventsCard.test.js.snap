@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The GroupedEventsCards component Snapshot 1`] = `
+exports[`The GroupedEventsCards component Render Snapshot 1`] = `
 <FlexColumn
   animation={false}
   key="123"

@@ -1,18 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardContainer renders component CardContainer 1`] = `
-<grid__Container
+<Gridstyles__Container
   className=""
   mx="auto"
 >
-  <Row
-    flexWrap={null}
-    ml={null}
-    mr={null}
-    mx={null}
+  <Gridstyles__Row
+    display="flex"
+    flexWrap="wrap"
   >
     <FlexColumn
-      animation={false}
       key="id-foo"
       py={
         Array [
@@ -36,7 +33,6 @@ exports[`CardContainer renders component CardContainer 1`] = `
       />
     </FlexColumn>
     <FlexColumn
-      animation={false}
       key="id-bar"
       py={
         Array [
@@ -60,7 +56,6 @@ exports[`CardContainer renders component CardContainer 1`] = `
       />
     </FlexColumn>
     <FlexColumn
-      animation={false}
       key="id-baz"
       py={
         Array [
@@ -83,6 +78,6 @@ exports[`CardContainer renders component CardContainer 1`] = `
         text="text-baz"
       />
     </FlexColumn>
-  </Row>
-</grid__Container>
+  </Gridstyles__Row>
+</Gridstyles__Container>
 `;

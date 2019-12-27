@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CTALink/> should render and match snapshot 1`] = `
-<ctaLink__StyledLink
+<CTALink__StyledLink
   as={
     Object {
       "$$typeof": Symbol(react.forward_ref),
@@ -13,5 +13,5 @@ exports[`<CTALink/> should render and match snapshot 1`] = `
 >
   View all
    ›
-</ctaLink__StyledLink>
+</CTALink__StyledLink>
 `;

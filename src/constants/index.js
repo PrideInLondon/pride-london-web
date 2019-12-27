@@ -1,4 +1,4 @@
-const theme = require('../theme/theme')
+import { colors } from '../theme/colors'
 
 const constants = {
   accessibilityOptions: [
@@ -44,107 +44,107 @@ const constants = {
   articleCategories: [
     {
       title: 'All Articles',
-      hexColour: theme.colors.yellow,
+      hexColour: colors.yellow,
     },
     {
       title: 'Events',
-      hexColour: theme.colors.tomato,
+      hexColour: colors.tomato,
     },
     {
       title: 'Fundraising',
-      hexColour: theme.colors.pink,
+      hexColour: colors.pink,
     },
     {
       title: 'General',
-      hexColour: theme.colors.greyBlue,
+      hexColour: colors.greyBlue,
     },
     {
       title: 'Partnerships',
-      hexColour: theme.colors.bondiBlue,
+      hexColour: colors.bondiBlue,
     },
     {
       title: 'Research',
-      hexColour: theme.colors.eucalyptusGreen,
+      hexColour: colors.eucalyptusGreen,
     },
     {
       title: 'Views',
-      hexColour: theme.colors.lemonGreen,
+      hexColour: colors.lemonGreen,
     },
   ],
   paradeGroupCategories: [
     {
       title: 'All groups',
       api: 'MAGIC_VALUE_NOT_USED',
-      hexColour: theme.colors.yellow,
+      hexColour: colors.yellow,
     },
     {
       title: 'Arts',
       api: 'ARTS',
-      hexColour: theme.colors.tomato,
+      hexColour: colors.tomato,
     },
     {
       title: 'Business',
       api: 'BUSINESS',
-      hexColour: theme.colors.pink,
+      hexColour: colors.pink,
     },
     {
       title: 'Charity',
       api: 'CHARITIES',
-      hexColour: theme.colors.greyBlue,
+      hexColour: colors.greyBlue,
     },
     {
       title: 'Community group',
       api: 'COMMUNITY_GROUP',
-      hexColour: theme.colors.bondiBlue,
+      hexColour: colors.bondiBlue,
     },
     {
       title: 'Politics',
       api: 'POLITICS',
-      hexColour: theme.colors.darkPurple,
+      hexColour: colors.darkPurple,
     },
     {
       title: 'Profession',
       api: 'PROFESSIONS',
-      hexColour: theme.colors.eucalyptusGreen,
+      hexColour: colors.eucalyptusGreen,
     },
     {
       title: 'Sports',
       api: 'SPORTS',
-      hexColour: theme.colors.fuscia,
+      hexColour: colors.fuscia,
     },
     {
       title: 'Other',
       api: 'OTHER',
-      hexColour: theme.colors.skyBlue,
+      hexColour: colors.skyBlue,
     },
   ],
   filterTypes: ['checkbox', 'radio'],
   communityPartnerCategories: [
     {
       title: 'Everything',
-      hexColour: theme.colors.yellow,
+      hexColour: colors.yellow,
     },
     {
       title: 'Drink',
-      hexColour: theme.colors.tomato,
+      hexColour: colors.tomato,
     },
     {
       title: 'Eat',
-      hexColour: theme.colors.pink,
+      hexColour: colors.pink,
     },
     {
       title: 'Party',
-      hexColour: theme.colors.greyBlue,
+      hexColour: colors.greyBlue,
     },
     {
       title: 'Shop',
-      hexColour: theme.colors.eucalyptusGreen,
+      hexColour: colors.eucalyptusGreen,
     },
     {
       title: 'Sleep',
-      hexColour: theme.colors.fuscia,
+      hexColour: colors.fuscia,
     },
   ],
 }
 
-module.exports = constants
+export default constants

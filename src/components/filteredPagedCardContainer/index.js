@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { filterTypes } from '../../constants'
+import constants from '../../constants'
 import FilterContainer, { calculateIsSelected } from '../filterContainer'
 import PagedCardContainer from '../pagedCardContainer'
 
@@ -157,7 +157,7 @@ const FilteredPagedCardContainer = ({
 }
 
 FilteredPagedCardContainer.propTypes = {
-  filterType: PropTypes.oneOf(filterTypes).isRequired,
+  filterType: PropTypes.oneOf(constants.filterTypes).isRequired,
   categories: PropTypes.arrayOf(
     PropTypes.shape({ title: PropTypes.string, hexColour: PropTypes.string })
   ).isRequired,
