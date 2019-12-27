@@ -112,7 +112,7 @@ const keyFrameHelper = css`
 `
 type FlexColumnProps = {
   animation: boolean
-  children: any
+  children: object
 }
 export const FlexColumn = ({
   animation,
