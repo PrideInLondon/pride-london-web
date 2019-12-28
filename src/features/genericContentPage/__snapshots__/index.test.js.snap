@@ -27,7 +27,6 @@ exports[`render methods for Generic Content click on typeform button 1`] = `
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: center;
   -webkit-transition: background-color 0.15s linear;
   transition: background-color 0.15s linear;
 }
@@ -168,7 +167,7 @@ exports[`render methods for Generic Content click on typeform button 1`] = `
                     [Function],
                     ";width:",
                     [Function],
-                    ";cursor:pointer;text-decoration:none;text-align:center;transition:background-color 0.15s linear;&:hover{background-color:",
+                    ";cursor:pointer;text-decoration:none;transition:background-color 0.15s linear;&:hover{background-color:",
                     [Function],
                     ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
                     "@media (min-width:",
@@ -235,7 +234,6 @@ exports[`render methods for Generic Content click on typeform button 2`] = `
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: center;
   -webkit-transition: background-color 0.15s linear;
   transition: background-color 0.15s linear;
 }
@@ -376,7 +374,7 @@ exports[`render methods for Generic Content click on typeform button 2`] = `
                     [Function],
                     ";width:",
                     [Function],
-                    ";cursor:pointer;text-decoration:none;text-align:center;transition:background-color 0.15s linear;&:hover{background-color:",
+                    ";cursor:pointer;text-decoration:none;transition:background-color 0.15s linear;&:hover{background-color:",
                     [Function],
                     ";}&:disabled{opacity:0.5;cursor:not-allowed;}",
                     "@media (min-width:",

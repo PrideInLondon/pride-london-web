@@ -1,8 +1,9 @@
 import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { withInfo } from '@storybook/addon-info'
+import { action } from '@storybook/addon-actions'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import theme from '../src/theme/theme'
 import { GlobalStyle } from '../src/layouts/index.styles'
 
