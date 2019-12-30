@@ -124,7 +124,9 @@ class GroupedEventsCards extends Component {
     if (index === 0) {
       header = moment(event.node.startTime).format(longDayOfMonth)
     } else {
-      const startDate = moment(event.node.startTime).format(constants.dateFormat)
+      const startDate = moment(event.node.startTime).format(
+        constants.dateFormat
+      )
       const prevStartDate = moment(events[index - 1].node.startTime).format(
         constants.dateFormat
       )
