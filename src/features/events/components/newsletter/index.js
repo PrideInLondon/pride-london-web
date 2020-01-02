@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Button from '../../../../components/button'
 import Input from '../../../../components/input'
@@ -68,35 +68,26 @@ const SubmitButton = styled(Button)`
 const url =
   '//prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382&MERGE0='
 
-class NewsletterForm extends Component {
-  state = { value: '' }
-
-  handleChange = value => this.setState({ value })
-
-  render() {
-    return (
-      <Fragment>
-        <Heading>Don't miss our all year round events</Heading>
-        <Form
-          action={`${url}${this.state.value}`}
-          method="post"
-          target="_blank"
-        >
-          <StyledInput
-            id="email"
-            type="email"
-            handleChange={this.handleChange}
-            value={this.state.value}
-            label="E-mail address"
-            required
-          />
-          <SubmitButton type="submit" primary fullmobile>
-            Join now
-          </SubmitButton>
-        </Form>
-      </Fragment>
-    )
-  }
+const NewsletterForm = () => {
+  const [emailValue, setEmailValue] = useState('')
+  return (
+    <>
+      <Heading>Don't miss our all year round events</Heading>
+      <Form action={`${url}${emailValue}`} method="post" target="_blank">
+        <StyledInput
+          id="email"
+          type="email"
+          handleChange={value => setEmailValue(value)}
+          value={emailValue}
+          label="E-mail address"
+          required
+        />
+        <SubmitButton type="submit" primary fullmobile>
+          Join now
+        </SubmitButton>
+      </Form>
+    </>
+  )
 }
 
 export default NewsletterForm
