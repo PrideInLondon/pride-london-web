@@ -70,6 +70,9 @@ const url =
 
 const NewsletterForm = () => {
   const [emailValue, setEmailValue] = useState('')
+
+  const handleChange = value => setEmailValue(value)
+
   return (
     <>
       <Heading>Don't miss our all year round events</Heading>
@@ -77,7 +80,7 @@ const NewsletterForm = () => {
         <StyledInput
           id="email"
           type="email"
-          handleChange={value => setEmailValue(value)}
+          handleChange={handleChange}
           value={emailValue}
           label="E-mail address"
           required
