@@ -56,7 +56,6 @@ storiesOf('Button', module)
       info: {
         text:
           'By default the Button component will render an html <button />. You can select one of the styles by passing a `variant` prop. The <Wrapper /> in the story source is to provide a contrasting background for the white variant only.',
-        components: { Wrapper: Wrapper },
       },
     }
   )
