@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewsletterForm/> matches snapshot 1`] = `
+<Fragment>
+  <newsletter__Heading>
+    Don't miss our all year round events
+  </newsletter__Heading>
+  <newsletter__Form
+    onSubmit={[Function]}
+  >
+    <newsletter__StyledInput
+      handleChange={[Function]}
+      id="email"
+      label="E-mail address"
+      required={true}
+      type="email"
+      value=""
+    />
+    <newsletter__SubmitButton
+      fullmobile={true}
+      primary={true}
+      type="submit"
+    >
+      Join now
+    </newsletter__SubmitButton>
+  </newsletter__Form>
+</Fragment>
+`;
