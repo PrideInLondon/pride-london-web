@@ -229,12 +229,7 @@ const Nav = () => {
                   }}
                 />
                 <NavItem>
-                  <DonateButton
-                    link
-                    primary
-                    fullmobile
-                    to="https://donate.prideinlondon.org/"
-                  >
+                  <DonateButton to="https://donate.prideinlondon.org/">
                     Donate
                   </DonateButton>
                 </NavItem>

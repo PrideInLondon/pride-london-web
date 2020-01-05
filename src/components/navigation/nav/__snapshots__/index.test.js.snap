@@ -243,9 +243,6 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
               setNavOpen={[Function]}
             >
               <styles__DonateButton
-                fullmobile={true}
-                link={true}
-                primary={true}
                 to="https://donate.prideinlondon.org/"
               >
                 Donate

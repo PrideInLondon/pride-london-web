@@ -41,6 +41,7 @@ addDecorator(withInfo)
 addParameters({
   info: {
     inline: true,
+    maxPropObjectKeys: 10,
   },
 })
 addDecorator(story => (

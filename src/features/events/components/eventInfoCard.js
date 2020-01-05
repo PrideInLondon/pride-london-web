@@ -114,7 +114,8 @@ const formatAddress = (addressLine1, addressLine2, city, postcode) =>
 const Link = styled.a`
   color: white;
   text-decoration: underline;
-  :hover {
+  :hover,
+  :focus {
     text-decoration: none;
   }
 `
@@ -193,11 +194,7 @@ export default function EventInfoCard({
         />
       )}
       {(phone || email) && ticketingUrl && <VSpace />}
-      {ticketingUrl && (
-        <Button primary to={ticketingUrl}>
-          Get tickets
-        </Button>
-      )}
+      {ticketingUrl && <Button to={ticketingUrl}>Get tickets</Button>}
     </Wrapper>
   )
 }

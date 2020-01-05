@@ -1,18 +1,20 @@
 import { ReactElement, FunctionComponent } from 'react'
-import { ResponsiveValue, SpaceProps } from 'styled-system'
+import { ResponsiveValue, SpaceProps, LayoutProps } from 'styled-system'
 
-interface Props extends SpaceProps {
-  variant?: ResponsiveValue<'primary' | 'secondary' | 'outline'>
+export interface ButtonBaseProps extends SpaceProps, LayoutProps {
+  variant?: ResponsiveValue<
+    'primary' | 'secondary' | 'outline' | 'outline-white'
+  >
 }
 
 export interface ButtonProps
-  extends Props,
+  extends ButtonBaseProps,
     React.ButtonHTMLAttributes<HTMLButtonElement> {
   to?: undefined
 }
 
 export interface ButtonAsAnchorProps
-  extends Props,
+  extends ButtonBaseProps,
     Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'type'> {
   to?: string
 }

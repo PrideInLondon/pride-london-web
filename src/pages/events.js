@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import moment from 'moment'
@@ -257,12 +258,11 @@ export const Events = ({
                     onClick={() =>
                       context.actions.showMore(context.filteredEvents.length)
                     }
-                    primary
                     disabled={
                       context.state.eventsToShow >=
                       context.filteredEvents.length
                     }
-                    fullmobile
+                    width={{ default: '100%', md: 'auto' }}
                   >
                     Show more events
                   </Button>

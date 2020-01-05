@@ -23,18 +23,8 @@ exports[`ShowMoreButton renders component 1`] = `
     }
   >
     <Button
-      className=""
-      disabled={false}
-      flexwidth={false}
-      fullmobile={false}
-      link={false}
       onClick={[MockFunction]}
-      primary={true}
-      small={false}
-      to={null}
-      type="button"
-      white={false}
-      wide={true}
+      variant="primary"
     >
       Foo
     </Button>

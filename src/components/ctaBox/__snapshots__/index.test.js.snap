@@ -19,12 +19,12 @@ exports[`<CTABox/> renders with default values 1`] = `
           <styles__CTABody>
             Lorem Ipsum
           </styles__CTABody>
-          <styles__CTAButton
-            primary={true}
+          <Button
             to="/"
+            variant="primary"
           >
             Button text
-          </styles__CTAButton>
+          </Button>
         </styles__CTAPanel>
       </styles__RelativeColumn>
     </Gridstyles__Row>

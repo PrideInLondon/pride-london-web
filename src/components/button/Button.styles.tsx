@@ -36,24 +36,26 @@ export const StyledButton = styled(
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.15s linear;
+  transition: background-color 0.15s linear, border 0.15s linear;
 
   ${variant({
     variants: {
       primary: {
-        border: 'none',
+        border: `2px solid ${colors.eucalyptusGreen}`,
         backgroundColor: colors.eucalyptusGreen,
         color: colors.indigo,
         '&:hover,&:focus': {
           backgroundColor: lighten(0.1, colors.eucalyptusGreen),
+          borderColor: lighten(0.1, colors.eucalyptusGreen),
         },
       },
       secondary: {
-        border: 'none',
+        border: `2px solid ${colors.indigo}`,
         backgroundColor: colors.indigo,
         color: colors.white,
         '&:hover,&:focus': {
           backgroundColor: darken(0.1, colors.indigo),
+          borderColor: darken(0.1, colors.indigo),
         },
       },
       outline: {
@@ -62,7 +64,16 @@ export const StyledButton = styled(
         color: colors.indigo,
         transition: 'box-shadow 0.15s linear',
         '&:hover,&:focus': {
-          boxShadow: `inset 0px 0px 0px 2px ${colors.indigo}`,
+          boxShadow: `inset 0px 0px 0px 2px currentColor`,
+        },
+      },
+      'outline-white': {
+        border: `2px solid currentColor`,
+        backgroundColor: 'transparent',
+        color: colors.white,
+        transition: 'box-shadow 0.15s linear',
+        '&:hover,&:focus': {
+          boxShadow: `inset 0px 0px 0px 2px currentColor`,
         },
       },
     },
