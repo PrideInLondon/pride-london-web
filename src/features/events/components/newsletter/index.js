@@ -71,12 +71,18 @@ const url =
 const NewsletterForm = () => {
   const [emailValue, setEmailValue] = useState('')
 
-  const handleChange = value => setEmailValue(value)
+  const handleChange = value => {
+    setEmailValue(value)
+  }
+  const handleSubmit = e => {
+    e.preventDefault()
+    fetch(`https:${url}${emailValue}`, { method: 'POST' })
+  }
 
   return (
     <>
       <Heading>Don't miss our all year round events</Heading>
-      <Form action={`${url}${emailValue}`} method="post" target="_blank">
+      <Form onSubmit={handleSubmit}>
         <StyledInput
           id="email"
           type="email"
