@@ -16,7 +16,6 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
   backgroundColor,
   image,
 }) => {
-  console.log(image)
   return (
     <StyledBanner role="banner" backgroundColor={backgroundColor}>
       <Row
