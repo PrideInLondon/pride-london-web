@@ -24,6 +24,5 @@ export interface ButtonSignature
     FunctionComponent,
     'propTypes' | 'contextTypes' | 'defaultProps' | 'displayName'
   > {
-  (props: ButtonProps): ReactElement
-  (props: Omit<ButtonAsAnchorProps, 'href'>): ReactElement
+  (props: ButtonProps | Omit<ButtonAsAnchorProps, 'href'>): ReactElement
 }
