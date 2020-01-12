@@ -30,9 +30,10 @@ describe('The GroupedEventsCards component', () => {
       })
 
       it('testing animation logic', () => {
+        console.log(wrapper.debug())
         expect(
           wrapper
-            .find('FlexColumn')
+            .find('Gridstyles__AnimatedFlexColumn')
             .first()
             .prop('animation')
         ).toBe(false)
@@ -54,7 +55,7 @@ describe('The GroupedEventsCards component', () => {
         console.log(wrapper.debug())
         expect(
           wrapper
-            .find('FlexColumn')
+            .find('Gridstyles__AnimatedFlexColumn')
             .first()
             .prop('animation')
         ).toBe(true)

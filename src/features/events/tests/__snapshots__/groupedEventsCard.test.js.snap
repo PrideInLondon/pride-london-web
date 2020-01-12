@@ -1,9 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The GroupedEventsCards component Render Snapshot 1`] = `
-<FlexColumn
+<Gridstyles__AnimatedFlexColumn
   animation={false}
+  display={
+    Object {
+      "default": "block",
+      "md": "flex",
+    }
+  }
   key="123"
+  padding={
+    Object {
+      "default": "10px 5px",
+      "lg": "10px 15px",
+      "sm": "10px",
+    }
+  }
   py={
     Array [
       2,
@@ -55,5 +68,5 @@ exports[`The GroupedEventsCards component Render Snapshot 1`] = `
       }
     }
   />
-</FlexColumn>
+</Gridstyles__AnimatedFlexColumn>
 `;

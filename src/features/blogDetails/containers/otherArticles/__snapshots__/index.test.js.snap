@@ -6,7 +6,7 @@ exports[`OtherArticles renders with default values 1`] = `
     display="flex"
     flexWrap="wrap"
   >
-    <FlexColumn
+    <Gridstyles__FlexColumn
       width={
         Array [
           1,
@@ -17,7 +17,7 @@ exports[`OtherArticles renders with default values 1`] = `
       }
     >
       <OtherArticlesHeader />
-    </FlexColumn>
+    </Gridstyles__FlexColumn>
   </Gridstyles__Row>
   <Gridstyles__Row
     display="flex"

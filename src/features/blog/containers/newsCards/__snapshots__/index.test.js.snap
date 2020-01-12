@@ -8,7 +8,7 @@ exports[`NewsCards renders with default values 1`] = `
     display="flex"
     flexWrap="wrap"
   >
-    <FlexColumn
+    <Gridstyles__FlexColumn
       key="id"
       py={
         Array [
@@ -41,7 +41,7 @@ exports[`NewsCards renders with default values 1`] = `
         slug="news/article"
         title="title"
       />
-    </FlexColumn>
+    </Gridstyles__FlexColumn>
   </Gridstyles__Row>
 </Gridstyles__Container>
 `;

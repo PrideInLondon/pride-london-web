@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import moment from 'moment'
-import { FlexColumn } from '../../../components/grid'
+import { AnimatedFlexColumn } from '../../../components/grid'
 import { media } from '../../../theme/media'
 import constants from '../../../constants'
 import EventListingCard from './eventListingCard'
@@ -32,7 +32,7 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
     }
   }
   return (
-    <FlexColumn
+    <AnimatedFlexColumn
       width={[
         1, // 100% between 0px screen width and first breakpoint (375px)
         1, // 100% between first breakpoint(375px) and second breakpoint (768px)
@@ -50,7 +50,7 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
     >
       {header && <DateGroupHeading>{header}</DateGroupHeading>}
       <EventListingCard event={event.node} />
-    </FlexColumn>
+    </AnimatedFlexColumn>
   )
 }
 

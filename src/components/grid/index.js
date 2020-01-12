@@ -1,3 +1,10 @@
-import { Row, Column, Container, FlexColumn, GreyWrapper } from './Grid.styles'
+import {
+  Row,
+  Column,
+  Container,
+  FlexColumn,
+  GreyWrapper,
+  AnimatedFlexColumn,
+} from './Grid.styles'
 
-export { Container, Row, Column, FlexColumn, GreyWrapper }
+export { Container, Row, Column, FlexColumn, GreyWrapper, AnimatedFlexColumn }

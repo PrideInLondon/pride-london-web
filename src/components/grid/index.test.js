@@ -1,12 +1,12 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { FlexColumn } from './index'
+import { AnimatedFlexColumn } from './index'
 
 describe('The FlexColumn component', () => {
   const wrapper = shallow(
-    <FlexColumn animation={false}>
+    <AnimatedFlexColumn animation={false}>
       <p>Testing</p>
-    </FlexColumn>
+    </AnimatedFlexColumn>
   )
 
   it('Snapshot', () => {

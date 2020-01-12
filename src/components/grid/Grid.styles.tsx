@@ -1,6 +1,6 @@
-import React from 'react'
 import styled, { keyframes, css } from 'styled-components'
 import {
+  compose,
   space,
   SpaceProps,
   flexbox,
@@ -22,7 +22,7 @@ interface GridProps
 // eslint-disable-next-line no-unexpected-multiline
 export const Column = styled.div<GridProps>`
   padding: 10px 5px;
-  
+
   ${mediaQueries.sm} {
     padding: 10px;
   }
@@ -34,9 +34,7 @@ export const Column = styled.div<GridProps>`
   && {
     ${space}
   }
-  ${position}
-  ${flexbox}
-  ${layout}
+  ${compose(position, flexbox, layout)}
 `
 // eslint-disable-next-line no-unexpected-multiline
 export const Row = styled.div<GridProps>`
@@ -96,6 +94,13 @@ Container.defaultProps = {
   mx: 'auto',
 }
 
+export const FlexColumn = styled(Column)`
+  display: block;
+  ${mediaQueries.md} {
+    display: flex;
+  }
+`
+
 const keyFrame = keyframes`
   0% {
     transform: scale(0);
@@ -110,23 +115,23 @@ const keyFrame = keyframes`
 const keyFrameHelper = css`
   animation: ${keyFrame} 360ms ease;
 `
-type FlexColumnProps = {
-  animation: boolean
-  children: object
+interface AnimatedFlexColumnProps
+  extends SpaceProps,
+    LayoutProps,
+    FlexboxProps {
+  animation?: boolean
 }
-export const FlexColumn = ({
-  animation,
-  children,
-  ...props
-}: FlexColumnProps) => {
-  const FlexInternal = styled(Column)`
-    display: block;
-    ${animation ? keyFrameHelper : ''}
-    ${mediaQueries.md} {
-      display: flex;
-    }
+
+export const AnimatedFlexColumn = styled.div<AnimatedFlexColumnProps>(
+  ({ animation }) => css`
+    ${animation && keyFrameHelper}
+    ${compose(flexbox, layout, space)}
   `
-  return <FlexInternal {...props}>{children}</FlexInternal>
+)
+
+AnimatedFlexColumn.defaultProps = {
+  padding: { default: '10px 5px', sm: '10px', lg: '10px 15px' },
+  display: { default: 'block', md: 'flex' },
 }
 
 export const GreyWrapper = styled.div`

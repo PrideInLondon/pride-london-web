@@ -334,7 +334,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "gsnRWY",
+                          "lastClassName": "jnwtYj",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -343,10 +343,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
-                            [Function],
-                            " ",
-                            [Function],
-                            " ",
                             [Function],
                           ],
                         },
@@ -371,7 +367,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
+                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -1189,7 +1185,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                       className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
-                      <FlexColumn
+                      <Gridstyles__FlexColumn
                         key="id-foo0"
                         py={
                           Array [
@@ -1208,7 +1204,42 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -1226,55 +1257,8 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -1284,34 +1268,22 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo0"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo0"
-                              >
-                                <div>
-                                  text-foo0
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo0
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo2"
                         py={
                           Array [
@@ -1330,7 +1302,42 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -1348,55 +1355,8 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -1406,34 +1366,22 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo2"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo2"
-                              >
-                                <div>
-                                  text-foo2
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo2
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo3"
                         py={
                           Array [
@@ -1452,7 +1400,42 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -1470,55 +1453,8 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -1528,34 +1464,22 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo3"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo3"
-                              >
-                                <div>
-                                  text-foo3
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo3
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo4"
                         py={
                           Array [
@@ -1574,7 +1498,42 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -1592,55 +1551,8 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -1650,34 +1562,22 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo4"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo4"
-                              >
-                                <div>
-                                  text-foo4
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo4
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo5"
                         py={
                           Array [
@@ -1696,7 +1596,42 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -1714,55 +1649,8 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -1772,33 +1660,21 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo5"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo5"
-                              >
-                                <div>
-                                  text-foo5
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
+                              <div>
+                                text-foo5
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
                     </div>
                   </StyledComponent>
                 </Gridstyles__Row>
@@ -2026,7 +1902,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "gngNXp",
+                          "lastClassName": "kdyIPc",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -2035,10 +1911,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
-                            [Function],
-                            " ",
-                            [Function],
-                            " ",
                             [Function],
                           ],
                         },
@@ -2063,7 +1935,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
+                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -2769,7 +2641,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                       className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
-                      <FlexColumn
+                      <Gridstyles__FlexColumn
                         key="id-foo0"
                         py={
                           Array [
@@ -2788,7 +2660,42 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -2806,55 +2713,8 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -2864,33 +2724,21 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo0"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo0"
-                              >
-                                <div>
-                                  text-foo0
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
+                              <div>
+                                text-foo0
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
                     </div>
                   </StyledComponent>
                 </Gridstyles__Row>
@@ -2988,7 +2836,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                     "componentStyle": ComponentStyle {
                       "componentId": "Gridstyles__Column-jfdl1j-0",
                       "isStatic": false,
-                      "lastClassName": "gngNXp",
+                      "lastClassName": "kdyIPc",
                       "rules": Array [
                         "padding:10px 5px;",
                         "@media screen and (min-width: 375px)",
@@ -2997,10 +2845,6 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                         "{padding:10px 15px;}&&{",
                         [Function],
                         "}",
-                        [Function],
-                        " ",
-                        [Function],
-                        " ",
                         [Function],
                       ],
                     },
@@ -3025,7 +2869,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                 }
               >
                 <div
-                  className="Gridstyles__Column-jfdl1j-0 gngNXp"
+                  className="Gridstyles__Column-jfdl1j-0 kdyIPc"
                 >
                   <Button
                     className=""
@@ -3327,7 +3171,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "gsnRWY",
+                          "lastClassName": "jnwtYj",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -3336,10 +3180,6 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
-                            [Function],
-                            " ",
-                            [Function],
-                            " ",
                             [Function],
                           ],
                         },
@@ -3364,7 +3204,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
+                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -4098,7 +3938,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                       className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
-                      <FlexColumn
+                      <Gridstyles__FlexColumn
                         key="id-foo0"
                         py={
                           Array [
@@ -4117,7 +3957,42 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -4135,55 +4010,8 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -4193,34 +4021,22 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo0"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo0"
-                              >
-                                <div>
-                                  text-foo0
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo0
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo2"
                         py={
                           Array [
@@ -4239,7 +4055,42 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -4257,55 +4108,8 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -4315,33 +4119,21 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo2"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo2"
-                              >
-                                <div>
-                                  text-foo2
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
+                              <div>
+                                text-foo2
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
                     </div>
                   </StyledComponent>
                 </Gridstyles__Row>
@@ -4565,7 +4357,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "gsnRWY",
+                          "lastClassName": "jnwtYj",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -4574,10 +4366,6 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
-                            [Function],
-                            " ",
-                            [Function],
-                            " ",
                             [Function],
                           ],
                         },
@@ -4602,7 +4390,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
+                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -5420,7 +5208,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                       className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
-                      <FlexColumn
+                      <Gridstyles__FlexColumn
                         key="id-foo0"
                         py={
                           Array [
@@ -5439,7 +5227,42 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -5457,55 +5280,8 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -5515,34 +5291,22 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo0"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo0"
-                              >
-                                <div>
-                                  text-foo0
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo0
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo2"
                         py={
                           Array [
@@ -5561,7 +5325,42 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -5579,55 +5378,8 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -5637,34 +5389,22 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo2"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo2"
-                              >
-                                <div>
-                                  text-foo2
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo2
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo3"
                         py={
                           Array [
@@ -5683,7 +5423,42 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -5701,55 +5476,8 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -5759,34 +5487,22 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo3"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo3"
-                              >
-                                <div>
-                                  text-foo3
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo3
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo4"
                         py={
                           Array [
@@ -5805,7 +5521,42 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -5823,55 +5574,8 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -5881,34 +5585,22 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo4"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo4"
-                              >
-                                <div>
-                                  text-foo4
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo4
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo5"
                         py={
                           Array [
@@ -5927,7 +5619,42 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -5945,55 +5672,8 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -6003,33 +5683,21 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo5"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo5"
-                              >
-                                <div>
-                                  text-foo5
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
+                              <div>
+                                text-foo5
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
                     </div>
                   </StyledComponent>
                 </Gridstyles__Row>
@@ -6253,7 +5921,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "gngNXp",
+                          "lastClassName": "kdyIPc",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -6262,10 +5930,6 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
-                            [Function],
-                            " ",
-                            [Function],
-                            " ",
                             [Function],
                           ],
                         },
@@ -6290,7 +5954,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
+                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -6996,7 +6660,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                       className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
-                      <FlexColumn
+                      <Gridstyles__FlexColumn
                         key="id-foo0"
                         py={
                           Array [
@@ -7015,7 +6679,42 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -7033,55 +6732,8 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -7091,33 +6743,21 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo0"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo0"
-                              >
-                                <div>
-                                  text-foo0
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
+                              <div>
+                                text-foo0
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
                     </div>
                   </StyledComponent>
                 </Gridstyles__Row>
@@ -7215,7 +6855,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                     "componentStyle": ComponentStyle {
                       "componentId": "Gridstyles__Column-jfdl1j-0",
                       "isStatic": false,
-                      "lastClassName": "gngNXp",
+                      "lastClassName": "kdyIPc",
                       "rules": Array [
                         "padding:10px 5px;",
                         "@media screen and (min-width: 375px)",
@@ -7224,10 +6864,6 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                         "{padding:10px 15px;}&&{",
                         [Function],
                         "}",
-                        [Function],
-                        " ",
-                        [Function],
-                        " ",
                         [Function],
                       ],
                     },
@@ -7252,7 +6888,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                 }
               >
                 <div
-                  className="Gridstyles__Column-jfdl1j-0 gngNXp"
+                  className="Gridstyles__Column-jfdl1j-0 kdyIPc"
                 >
                   <Button
                     className=""
@@ -7550,7 +7186,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "gsnRWY",
+                          "lastClassName": "jnwtYj",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -7559,10 +7195,6 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                             "{padding:10px 15px;}&&{",
                             [Function],
                             "}",
-                            [Function],
-                            " ",
-                            [Function],
-                            " ",
                             [Function],
                           ],
                         },
@@ -7587,7 +7219,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 gsnRWY"
+                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -8321,7 +7953,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                       className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                       display="flex"
                     >
-                      <FlexColumn
+                      <Gridstyles__FlexColumn
                         key="id-foo0"
                         py={
                           Array [
@@ -8340,7 +7972,42 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -8358,55 +8025,8 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -8416,34 +8036,22 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo0"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo0"
-                              >
-                                <div>
-                                  text-foo0
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
-                      <FlexColumn
+                              <div>
+                                text-foo0
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
+                      <Gridstyles__FlexColumn
                         key="id-foo2"
                         py={
                           Array [
@@ -8462,7 +8070,42 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                           ]
                         }
                       >
-                        <Gridstyles__FlexInternal
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                                "isStatic": false,
+                                "lastClassName": "dwSNFv",
+                                "rules": Array [
+                                  "padding:10px 5px;",
+                                  "@media screen and (min-width: 375px)",
+                                  "{padding:10px;}",
+                                  "@media screen and (min-width: 1024px)",
+                                  "{padding:10px 15px;}&&{",
+                                  [Function],
+                                  "}",
+                                  [Function],
+                                  "display:block;",
+                                  "@media screen and (min-width: 768px)",
+                                  "{display:flex;}",
+                                ],
+                              },
+                              "displayName": "Gridstyles__FlexColumn",
+                              "foldedComponentIds": Array [
+                                "Gridstyles__Column-jfdl1j-0",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                           py={
                             Array [
                               2,
@@ -8480,55 +8123,8 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                             ]
                           }
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                  "isStatic": false,
-                                  "lastClassName": "hwFZov",
-                                  "rules": Array [
-                                    "padding:10px 5px;",
-                                    "@media screen and (min-width: 375px)",
-                                    "{padding:10px;}",
-                                    "@media screen and (min-width: 1024px)",
-                                    "{padding:10px 15px;}&&{",
-                                    [Function],
-                                    "}",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    " ",
-                                    [Function],
-                                    "display:block;",
-                                    " ",
-                                    "@media screen and (min-width: 768px)",
-                                    "{display:flex;}",
-                                  ],
-                                },
-                                "displayName": "Gridstyles__FlexInternal",
-                                "foldedComponentIds": Array [
-                                  "Gridstyles__Column-jfdl1j-0",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            py={
-                              Array [
-                                2,
-                                2,
-                                2,
-                                3,
-                              ]
-                            }
+                          <div
+                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                             width={
                               Array [
                                 1,
@@ -8538,33 +8134,21 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                               ]
                             }
                           >
-                            <div
-                              className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                              width={
+                            <CardComponent
+                              category={
                                 Array [
-                                  1,
-                                  1,
-                                  0.5,
-                                  0.3333333333333333,
+                                  "foo",
                                 ]
                               }
+                              text="text-foo2"
                             >
-                              <CardComponent
-                                category={
-                                  Array [
-                                    "foo",
-                                  ]
-                                }
-                                text="text-foo2"
-                              >
-                                <div>
-                                  text-foo2
-                                </div>
-                              </CardComponent>
-                            </div>
-                          </StyledComponent>
-                        </Gridstyles__FlexInternal>
-                      </FlexColumn>
+                              <div>
+                                text-foo2
+                              </div>
+                            </CardComponent>
+                          </div>
+                        </StyledComponent>
+                      </Gridstyles__FlexColumn>
                     </div>
                   </StyledComponent>
                 </Gridstyles__Row>

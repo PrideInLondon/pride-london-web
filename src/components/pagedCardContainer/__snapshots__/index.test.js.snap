@@ -220,7 +220,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                     className="Gridstyles__Row-jfdl1j-1 ihaaWG"
                     display="flex"
                   >
-                    <FlexColumn
+                    <Gridstyles__FlexColumn
                       key="id-foo"
                       py={
                         Array [
@@ -239,7 +239,42 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         ]
                       }
                     >
-                      <Gridstyles__FlexInternal
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "isStatic": false,
+                              "lastClassName": "dwSNFv",
+                              "rules": Array [
+                                "padding:10px 5px;",
+                                "@media screen and (min-width: 375px)",
+                                "{padding:10px;}",
+                                "@media screen and (min-width: 1024px)",
+                                "{padding:10px 15px;}&&{",
+                                [Function],
+                                "}",
+                                [Function],
+                                "display:block;",
+                                "@media screen and (min-width: 768px)",
+                                "{display:flex;}",
+                              ],
+                            },
+                            "displayName": "Gridstyles__FlexColumn",
+                            "foldedComponentIds": Array [
+                              "Gridstyles__Column-jfdl1j-0",
+                            ],
+                            "render": [Function],
+                            "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                         py={
                           Array [
                             2,
@@ -257,55 +292,8 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                           ]
                         }
                       >
-                        <StyledComponent
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "isStatic": false,
-                                "lastClassName": "hwFZov",
-                                "rules": Array [
-                                  "padding:10px 5px;",
-                                  "@media screen and (min-width: 375px)",
-                                  "{padding:10px;}",
-                                  "@media screen and (min-width: 1024px)",
-                                  "{padding:10px 15px;}&&{",
-                                  [Function],
-                                  "}",
-                                  [Function],
-                                  " ",
-                                  [Function],
-                                  " ",
-                                  [Function],
-                                  "display:block;",
-                                  " ",
-                                  "@media screen and (min-width: 768px)",
-                                  "{display:flex;}",
-                                ],
-                              },
-                              "displayName": "Gridstyles__FlexInternal",
-                              "foldedComponentIds": Array [
-                                "Gridstyles__Column-jfdl1j-0",
-                              ],
-                              "render": [Function],
-                              "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                              "target": "div",
-                              "toString": [Function],
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                          py={
-                            Array [
-                              2,
-                              2,
-                              2,
-                              3,
-                            ]
-                          }
+                        <div
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                           width={
                             Array [
                               1,
@@ -315,29 +303,17 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             ]
                           }
                         >
-                          <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                            width={
-                              Array [
-                                1,
-                                1,
-                                0.5,
-                                0.3333333333333333,
-                              ]
-                            }
+                          <CardComponent
+                            text="text-foo"
                           >
-                            <CardComponent
-                              text="text-foo"
-                            >
-                              <div>
-                                text-foo
-                              </div>
-                            </CardComponent>
-                          </div>
-                        </StyledComponent>
-                      </Gridstyles__FlexInternal>
-                    </FlexColumn>
-                    <FlexColumn
+                            <div>
+                              text-foo
+                            </div>
+                          </CardComponent>
+                        </div>
+                      </StyledComponent>
+                    </Gridstyles__FlexColumn>
+                    <Gridstyles__FlexColumn
                       key="id-bar"
                       py={
                         Array [
@@ -356,7 +332,42 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         ]
                       }
                     >
-                      <Gridstyles__FlexInternal
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "isStatic": false,
+                              "lastClassName": "dwSNFv",
+                              "rules": Array [
+                                "padding:10px 5px;",
+                                "@media screen and (min-width: 375px)",
+                                "{padding:10px;}",
+                                "@media screen and (min-width: 1024px)",
+                                "{padding:10px 15px;}&&{",
+                                [Function],
+                                "}",
+                                [Function],
+                                "display:block;",
+                                "@media screen and (min-width: 768px)",
+                                "{display:flex;}",
+                              ],
+                            },
+                            "displayName": "Gridstyles__FlexColumn",
+                            "foldedComponentIds": Array [
+                              "Gridstyles__Column-jfdl1j-0",
+                            ],
+                            "render": [Function],
+                            "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                         py={
                           Array [
                             2,
@@ -374,55 +385,8 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                           ]
                         }
                       >
-                        <StyledComponent
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "isStatic": false,
-                                "lastClassName": "hwFZov",
-                                "rules": Array [
-                                  "padding:10px 5px;",
-                                  "@media screen and (min-width: 375px)",
-                                  "{padding:10px;}",
-                                  "@media screen and (min-width: 1024px)",
-                                  "{padding:10px 15px;}&&{",
-                                  [Function],
-                                  "}",
-                                  [Function],
-                                  " ",
-                                  [Function],
-                                  " ",
-                                  [Function],
-                                  "display:block;",
-                                  " ",
-                                  "@media screen and (min-width: 768px)",
-                                  "{display:flex;}",
-                                ],
-                              },
-                              "displayName": "Gridstyles__FlexInternal",
-                              "foldedComponentIds": Array [
-                                "Gridstyles__Column-jfdl1j-0",
-                              ],
-                              "render": [Function],
-                              "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                              "target": "div",
-                              "toString": [Function],
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                          py={
-                            Array [
-                              2,
-                              2,
-                              2,
-                              3,
-                            ]
-                          }
+                        <div
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                           width={
                             Array [
                               1,
@@ -432,29 +396,17 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             ]
                           }
                         >
-                          <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                            width={
-                              Array [
-                                1,
-                                1,
-                                0.5,
-                                0.3333333333333333,
-                              ]
-                            }
+                          <CardComponent
+                            text="text-bar"
                           >
-                            <CardComponent
-                              text="text-bar"
-                            >
-                              <div>
-                                text-bar
-                              </div>
-                            </CardComponent>
-                          </div>
-                        </StyledComponent>
-                      </Gridstyles__FlexInternal>
-                    </FlexColumn>
-                    <FlexColumn
+                            <div>
+                              text-bar
+                            </div>
+                          </CardComponent>
+                        </div>
+                      </StyledComponent>
+                    </Gridstyles__FlexColumn>
+                    <Gridstyles__FlexColumn
                       key="id-baz"
                       py={
                         Array [
@@ -473,7 +425,42 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         ]
                       }
                     >
-                      <Gridstyles__FlexInternal
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                              "isStatic": false,
+                              "lastClassName": "dwSNFv",
+                              "rules": Array [
+                                "padding:10px 5px;",
+                                "@media screen and (min-width: 375px)",
+                                "{padding:10px;}",
+                                "@media screen and (min-width: 1024px)",
+                                "{padding:10px 15px;}&&{",
+                                [Function],
+                                "}",
+                                [Function],
+                                "display:block;",
+                                "@media screen and (min-width: 768px)",
+                                "{display:flex;}",
+                              ],
+                            },
+                            "displayName": "Gridstyles__FlexColumn",
+                            "foldedComponentIds": Array [
+                              "Gridstyles__Column-jfdl1j-0",
+                            ],
+                            "render": [Function],
+                            "styledComponentId": "Gridstyles__FlexColumn-jfdl1j-3",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                         py={
                           Array [
                             2,
@@ -491,55 +478,8 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                           ]
                         }
                       >
-                        <StyledComponent
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                                "isStatic": false,
-                                "lastClassName": "hwFZov",
-                                "rules": Array [
-                                  "padding:10px 5px;",
-                                  "@media screen and (min-width: 375px)",
-                                  "{padding:10px;}",
-                                  "@media screen and (min-width: 1024px)",
-                                  "{padding:10px 15px;}&&{",
-                                  [Function],
-                                  "}",
-                                  [Function],
-                                  " ",
-                                  [Function],
-                                  " ",
-                                  [Function],
-                                  "display:block;",
-                                  " ",
-                                  "@media screen and (min-width: 768px)",
-                                  "{display:flex;}",
-                                ],
-                              },
-                              "displayName": "Gridstyles__FlexInternal",
-                              "foldedComponentIds": Array [
-                                "Gridstyles__Column-jfdl1j-0",
-                              ],
-                              "render": [Function],
-                              "styledComponentId": "Gridstyles__FlexInternal-jfdl1j-3",
-                              "target": "div",
-                              "toString": [Function],
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                          py={
-                            Array [
-                              2,
-                              2,
-                              2,
-                              3,
-                            ]
-                          }
+                        <div
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                           width={
                             Array [
                               1,
@@ -549,28 +489,16 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             ]
                           }
                         >
-                          <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexInternal-jfdl1j-3 hwFZov"
-                            width={
-                              Array [
-                                1,
-                                1,
-                                0.5,
-                                0.3333333333333333,
-                              ]
-                            }
+                          <CardComponent
+                            text="text-baz"
                           >
-                            <CardComponent
-                              text="text-baz"
-                            >
-                              <div>
-                                text-baz
-                              </div>
-                            </CardComponent>
-                          </div>
-                        </StyledComponent>
-                      </Gridstyles__FlexInternal>
-                    </FlexColumn>
+                            <div>
+                              text-baz
+                            </div>
+                          </CardComponent>
+                        </div>
+                      </StyledComponent>
+                    </Gridstyles__FlexColumn>
                   </div>
                 </StyledComponent>
               </Gridstyles__Row>
@@ -668,7 +596,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Column-jfdl1j-0",
                     "isStatic": false,
-                    "lastClassName": "gngNXp",
+                    "lastClassName": "kdyIPc",
                     "rules": Array [
                       "padding:10px 5px;",
                       "@media screen and (min-width: 375px)",
@@ -677,10 +605,6 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                       "{padding:10px 15px;}&&{",
                       [Function],
                       "}",
-                      [Function],
-                      " ",
-                      [Function],
-                      " ",
                       [Function],
                     ],
                   },
@@ -705,7 +629,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
               }
             >
               <div
-                className="Gridstyles__Column-jfdl1j-0 gngNXp"
+                className="Gridstyles__Column-jfdl1j-0 kdyIPc"
               >
                 <Button
                   className=""
