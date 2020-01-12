@@ -23,7 +23,6 @@ const Nav = () => {
       noScroll.off()
     }
   })
-
   return (
     <HeaderWrapper>
       <Header>
@@ -67,14 +66,8 @@ const Nav = () => {
                       {
                         heading: 'Pride',
                         links: [
-                          {
-                            title: 'Our story',
-                            url: '/about-us',
-                          },
-                          {
-                            title: 'Our impact',
-                            url: '/about-us/impact',
-                          },
+                          { title: 'Our story', url: '/about-us' },
+                          { title: 'Our impact', url: '/about-us/impact' },
                         ],
                       },
                       {
