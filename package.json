@@ -13,12 +13,12 @@
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch",
-    "precommit": "lint-staged && tsc",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 9001 -c storybook"
   },
   "lint-staged": {
     "src/**/*.{js,json,ts,tsx}": [
-      "eslint --fix",
+      "eslint --fix --plugin tsc --rule 'tsc/config: [2, {configFile: \"tsconfig.json\"}]'",
       "stylelint",
       "jest --findRelatedTests",
       "git add"
@@ -77,13 +77,11 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.7.4",
     "@contentful/rich-text-react-renderer": "^13.2.0",
-    "@storybook/addon-a11y": "^5.2.8",
-    "@storybook/addon-info": "^5.2.8",
-    "@storybook/addon-knobs": "^5.2.8",
-    "@storybook/addons": "^5.2.8",
-    "@storybook/preset-typescript": "^1.1.0",
-    "@storybook/react": "^5.2.8",
-    "@storybook/source-loader": "^5.2.8",
+    "@storybook/addon-a11y": "~5.2.8",
+    "@storybook/addon-actions": "~5.2.8",
+    "@storybook/addon-info": "~5.1.11",
+    "@storybook/addon-knobs": "~5.2.8",
+    "@storybook/react": "~5.2.8",
     "@types/jest": "^24.0.22",
     "@types/react": "^16.9.14",
     "@types/react-dom": "^16.9.4",
@@ -111,6 +109,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-tsc": "^1.2.0",
     "gatsby-plugin-typescript": "^2.1.15",
     "husky": "^3.1.0",
     "jest": "^24.9.0",

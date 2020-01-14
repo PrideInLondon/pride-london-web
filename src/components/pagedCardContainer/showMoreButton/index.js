@@ -6,9 +6,7 @@ import Button from '../../button'
 const ShowMoreButton = ({ text, onClick }) => (
   <Row pb={[30, 30, 50]}>
     <Column mx="auto" pt={[30, 30, 50]}>
-      <Button onClick={onClick} primary>
-        {text}
-      </Button>
+      <Button onClick={onClick}>{text}</Button>
     </Column>
   </Row>
 )

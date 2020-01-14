@@ -59,16 +59,16 @@ export type LinkProps = DefaultLink | ExternalLink | ContactLink | RelativeLink
 // Function to determine what properties to determine if gatsy Link or regular <a> tag should be used, and the relevant attributes.
 export function handleUrl(url: string): LinkProps {
   switch (true) {
-    case url && !externalUrl(url) && !contactUrl(url):
+    case !externalUrl(url) && !contactUrl(url):
       return { to: handleSlug(url), as: Link }
-    case url && externalUrl(url):
+    case externalUrl(url):
       return {
         href: url,
         rel: 'noopener noreferrer',
         target: '_blank',
         as: 'a',
       }
-    case url && contactUrl(url):
+    case contactUrl(url):
       return { href: url, target: '_blank', as: 'a' }
     default:
       return { href: url, as: 'a' }
@@ -85,4 +85,34 @@ export const noScroll = {
   toggle() {
     document.querySelector('html')!.classList.toggle('no-scroll')
   },
+}
+
+export interface IndexSignature {
+  [key: string]: any
+}
+
+/**
+ * Pick out matching keys of object
+ *
+ * @param obj - object of properties
+ * @param keys - array of keys to pick out of the object
+ * @returns {object} - an object of matching keys only
+ */
+export function pick(obj: IndexSignature, keys: string[]): IndexSignature {
+  return keys
+    .map(k => (k in obj ? { [k]: obj[k] } : {}))
+    .reduce((res, o) => Object.assign(res, o), {})
+}
+
+/**
+ * Filters matching keys out of object
+ *
+ * @param obj - object of properties
+ * @param keys - array of keys to pick out of the object
+ * @returns {object} - an object without matching keys
+ */
+export function reject(obj: IndexSignature, keys: string[]): IndexSignature {
+  const vkeys = Object.keys(obj).filter(k => !keys.includes(k))
+
+  return pick(obj, vkeys)
 }

@@ -71,9 +71,7 @@ class NewsContainer extends Component {
           {end < total.length && (
             <Row pb={[30, 30, 50]}>
               <Column mx="auto" pt={[30, 30, 50]}>
-                <Button onClick={this.showMoreCards} primary>
-                  Show more articles
-                </Button>
+                <Button onClick={this.showMoreCards}>Show more articles</Button>
               </Column>
             </Row>
           )}
