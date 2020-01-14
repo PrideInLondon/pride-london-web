@@ -149,7 +149,9 @@ const animation = props => {
     return css`
       animation: ${spin} 0.3s ease-in-out;
     `
-  return css`animation: unset;`
+  return css`
+    animation: unset;
+  `
 }
 /* eslint-enable */
 

@@ -86,38 +86,3 @@ export const StyledButton = styled(
 
   ${compose(space, layout)}
 `
-
-// export const OldStyledButton = styled.button`
-//   border: ${props =>
-//     props.primary ? 'none' : `2px solid ${theme.colors.white}`};
-//   color: ${props => (props.primary ? theme.colors.indigo : theme.colors.white)};
-//   background-color: ${props =>
-//     props.white
-//       ? theme.colors.white
-//       : props.primary
-//       ? theme.colors.eucalyptusGreen
-//       : theme.colors.indigo};
-//   font-size: ${props => (props.small ? '0.875rem' : '1.125rem')};
-//   min-width: ${props => {
-//     return props.wide ? (!props.flexwidth ? '250px' : 'unset') : '180px'
-//   }};
-//   width: ${props => (props.fullmobile ? '100%' : 'auto')};
-
-//   &:hover {
-//     background-color: ${props =>
-//       props.white
-//         ? darken(0.1, theme.colors.white)
-//         : props.primary
-//         ? darken(0.1, theme.colors.eucalyptusGreen)
-//         : darken(0.1, theme.colors.indigo)};
-//   }
-
-//   &:disabled {
-//     opacity: 0.5;
-//     cursor: not-allowed;
-//   }
-
-//   ${media.tablet`
-//       width: auto;
-//   `};
-// `

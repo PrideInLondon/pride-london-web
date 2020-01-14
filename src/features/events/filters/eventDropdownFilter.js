@@ -101,13 +101,6 @@ class EventDropdownFilter extends Component {
     isOpen: false,
   }
 
-  //   static getDerivedStateFromProps(nextProps) {
-  //     if (nextProps.filterOpen !== nextProps.filterName) {
-  //       return { isOpen: false }
-  //     }
-  //     return { isOpen: true }
-  //   }
-
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.isOpen !== nextState.isOpen
   }

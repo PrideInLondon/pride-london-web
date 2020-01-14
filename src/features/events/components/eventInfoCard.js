@@ -83,8 +83,6 @@ const VSpace = styled.div`
   margin-top: 15px;
 `
 
-// I chose formats based on
-// https://www.gov.uk/service-manual/design/dates
 const dateFormat = 'dddd D MMMM YYYY'
 
 const formatDayRange = (startTime, endTime) => {
