@@ -12,7 +12,6 @@ import {
   sanitizeDates,
 } from '../../features/events/helpers/index'
 import constants from '../../constants'
-// { itemsToLoad, dateFormat }
 
 const AppContext = React.createContext()
 const { Consumer } = AppContext
@@ -48,9 +47,8 @@ class Provider extends Component {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.events !== prevState.events) {
-      // Generate all recurrences of events
       const allEventOccurences = []
-      // iterate over events
+
       nextProps.events.forEach(event => {
         if (!event.node.recurrenceDates) {
           allEventOccurences.push(event)
@@ -63,10 +61,8 @@ class Provider extends Component {
           const duration = getDuration(event.node.startTime, event.node.endTime)
 
           recurrenceDates.forEach(date => {
-            // Deep clone event
             const copy = JSON.parse(JSON.stringify(event))
 
-            // Modify start time and end time
             copy.node.startTime = moment(
               `${date} ${time}`,
               'DD/MM/YYYY hh:mm'

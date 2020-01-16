@@ -33,10 +33,6 @@ export const FilterLabel = styled.label`
   margin-right: 10px;
   margin-bottom: 10px;
   white-space: nowrap;
-
-  &:focus {
-    outline: none;
-  }
 `
 
 export const FilterText = styled.span``

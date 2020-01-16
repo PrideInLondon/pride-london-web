@@ -147,9 +147,11 @@ const spin = keyframes`
 const animation = props => {
   if (props.clickAnimation)
     return css`
-      ${spin} 0.3s ease-in-out
+      animation: ${spin} 0.3s ease-in-out;
     `
-  return css`unset`
+  return css`
+    animation: unset;
+  `
 }
 /* eslint-enable */
 
@@ -162,7 +164,7 @@ const IconClear = styled.i`
   position: absolute;
   left: 0;
   top: 2px;
-  animation: ${animation};
+  ${animation}
 
   &:before {
     content: '';
@@ -195,7 +197,7 @@ const CloseButton = styled.button`
 
 const SubmitButtonContainer = styled.div`
   margin: 20px 0 -20px 0;
-  width 100%;
+  width: 100%;
   padding: 20px;
   box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.1);
   height: 90px;
@@ -315,8 +317,7 @@ class EventsFilters extends Component {
             </FlexColumn>
             <SubmitButtonContainer>
               <Button
-                primary
-                fullmobile
+                width={{ default: '100%', md: 'auto' }}
                 onClick={this.props.toggleFiltersMobile}
               >
                 Show {context.filteredEvents.length} event

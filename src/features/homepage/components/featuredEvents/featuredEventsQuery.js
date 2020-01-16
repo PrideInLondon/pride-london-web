@@ -46,7 +46,7 @@ const FeaturedEventsQuery = props => (
 
           const recurrenceDates = eventRecurrenceDates
             .map(date => {
-              const startTime = moment(date, dateFormat)
+              const startTime = moment(date, constants.dateFormat)
                 .hours(originalStartTime.hours())
                 .minutes(originalStartTime.minutes())
                 .toISOString()

@@ -1,17 +1,15 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
-// import { noScroll } from '../utilities'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { GroupedEventsCards } from '../features/events'
-//import EventsFilters from '../features/events/components/eventsFilters'
 import Button from '../components/button'
 import { Container, Row, Column } from '../components/grid'
 import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
-// import filterIcon from '../theme/assets/images/icon-filters.svg'
 import { EventsPageBanner } from '../features/events/components/eventsPageBanner'
 
 export const EventsPageQuery = graphql`
@@ -49,19 +47,6 @@ export const EventsPageQuery = graphql`
   }
 `
 
-// const ColumnTextCenter = styled(Column)`
-//   text-align: center;
-// `
-// const ContainerAddFilters = styled(Container)`
-//   padding: 20px 0;
-//   margin-bottom: 20px;
-//   background-color: ${theme.colors.white};
-
-//   ${media.tablet`
-//     display: none;
-//   `};
-// `
-
 const ColumnPagination = styled(Column)`
   text-align: center;
   padding-bottom: 20px;
@@ -71,14 +56,6 @@ const ColumnPagination = styled(Column)`
     padding-bottom: 60px;
   `};
 `
-
-// const OffsetContainer = styled(Container)`
-//   ${media.tablet`
-//     margin-top: -50px;
-//     position: relative;
-//     z-index: 1;
-//   `};
-// `
 
 const EventCount = styled.p`
   font-size: 0.875rem;
@@ -92,33 +69,15 @@ const ListingCardWrapper = styled.div`
   flex-basis: 100%;
 `
 
-// const FilterIcon = styled.img`
-//   margin: 0 6px -2px 0;
-// `
-
 const PageWrapper = styled.div`
   background-color: ${theme.colors.lightGrey};
 `
-
-/* eslint-disable react/no-multi-comp */
 
 export const Events = ({
   data: {
     file: { childImageSharp },
   },
 }) => {
-  // const [state, setState] = useState({ showFiltersMobile: false })
-
-  // const toggleFiltersMobile = () => {
-  //   this.setState(
-  //     prevState => ({
-  //       ...prevState,
-  //       showFiltersMobile: !prevState.showFiltersMobile,
-  //     }),
-  //     () => noScroll.toggle()
-  //   )
-  // }
-
   const renderEventCount = (filteredCount, eventsToShow) => {
     let text
 
@@ -145,36 +104,6 @@ export const Events = ({
             backgroundColor={theme.colors.bondiBlue}
             image={childImageSharp}
           />
-          {/* <OffsetContainer>
-              <EventsFilters
-                showFiltersMobile={showFiltersMobile}
-                toggleFiltersMobile={this.toggleFiltersMobile}
-              />
-            </OffsetContainer>
-            <ContainerAddFilters>
-              <Row>
-                <ColumnTextCenter width={1}>
-                  <Button
-                    aria-controls="filters"
-                    aria-expanded={showFiltersMobile}
-                    onClick={this.toggleFiltersMobile}
-                    primary
-                    fullmobile
-                  >
-                    <FilterIcon
-                      src={filterIcon}
-                      width="22"
-                      height="18"
-                      alt="Filters Icon"
-                      role="presentation"
-                    />
-                    {context.filteredEvents.length < context.state.events.length
-                      ? 'Edit Filters'
-                      : 'Add Filters'}
-                  </Button>
-                </ColumnTextCenter>
-              </Row>
-            </ContainerAddFilters> */}
           <Container>
             <Row>
               <ListingCardWrapper>
@@ -207,12 +136,11 @@ export const Events = ({
                     onClick={() => {
                       context.actions.showMore(context.filteredEvents.length)
                     }}
-                    primary
                     disabled={
                       context.state.eventsToShow >=
                       context.filteredEvents.length
                     }
-                    fullmobile
+                    width={{ default: '100%', md: 'auto' }}
                   >
                     Show more events
                   </Button>

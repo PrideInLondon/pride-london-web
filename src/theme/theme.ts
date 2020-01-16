@@ -1,13 +1,11 @@
 import { breakpoints } from './breakpoints'
 import { mediaQueries } from './mediaQueries'
 import { colors } from './colors'
+import { fonts } from './fonts'
 
 const theme = {
   colors,
-  fonts: {
-    title: 'Poppins, sans-serif',
-    body: 'Roboto, sans-serif',
-  },
+  fonts,
   space: [0, 5, 10, 15, 20],
   breakpoints,
   mediaQueries,
