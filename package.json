@@ -44,7 +44,7 @@
     "gatsby-plugin-styled-components": "^3.1.17",
     "gatsby-source-contentful": "^2.1.75",
     "gatsby-source-filesystem": "^2.1.45",
-    "gatsby-transformer-sharp": "^2.3.11",
+    "gatsby-transformer-sharp": "^2.3.13",
     "js-cookie": "^2.2.1",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.23.0",
