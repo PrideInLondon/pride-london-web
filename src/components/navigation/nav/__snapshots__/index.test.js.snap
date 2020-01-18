@@ -95,6 +95,10 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                           "url": "/parade",
                         },
                         Object {
+                          "title": "Take part in the Parade",
+                          "url": "/parade/take-part",
+                        },
+                        Object {
                           "title": "Parade groups",
                           "url": "/parade/groups",
                         },
@@ -105,10 +109,6 @@ exports[`<Nav/> renders the component <Nav /> 1`] = `
                         Object {
                           "title": "Accessibility",
                           "url": "/parade/accessibility",
-                        },
-                        Object {
-                          "title": "Take part",
-                          "url": "/parade/take-part",
                         },
                         Object {
                           "title": "Residents and businesses info",
