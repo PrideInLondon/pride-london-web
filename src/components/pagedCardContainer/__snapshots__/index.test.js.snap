@@ -247,7 +247,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             "componentStyle": ComponentStyle {
                               "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                               "isStatic": false,
-                              "lastClassName": "eOzTZQ",
+                              "lastClassName": "dwSNFv",
                               "rules": Array [
                                 "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
@@ -256,10 +256,6 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
-                                [Function],
-                                " ",
-                                [Function],
-                                " ",
                                 [Function],
                                 "display:block;",
                                 "@media screen and (min-width: 768px)",
@@ -297,7 +293,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         }
                       >
                         <div
-                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                           width={
                             Array [
                               1,
@@ -344,7 +340,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             "componentStyle": ComponentStyle {
                               "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                               "isStatic": false,
-                              "lastClassName": "eOzTZQ",
+                              "lastClassName": "dwSNFv",
                               "rules": Array [
                                 "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
@@ -353,10 +349,6 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
-                                [Function],
-                                " ",
-                                [Function],
-                                " ",
                                 [Function],
                                 "display:block;",
                                 "@media screen and (min-width: 768px)",
@@ -394,7 +386,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         }
                       >
                         <div
-                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                           width={
                             Array [
                               1,
@@ -441,7 +433,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             "componentStyle": ComponentStyle {
                               "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                               "isStatic": false,
-                              "lastClassName": "eOzTZQ",
+                              "lastClassName": "dwSNFv",
                               "rules": Array [
                                 "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
@@ -450,10 +442,6 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                                 "{padding:10px 15px;}&&{",
                                 [Function],
                                 "}",
-                                [Function],
-                                " ",
-                                [Function],
-                                " ",
                                 [Function],
                                 "display:block;",
                                 "@media screen and (min-width: 768px)",
@@ -491,7 +479,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         }
                       >
                         <div
-                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 eOzTZQ"
+                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
                           width={
                             Array [
                               1,
@@ -608,7 +596,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Column-jfdl1j-0",
                     "isStatic": false,
-                    "lastClassName": "gngNXp",
+                    "lastClassName": "kdyIPc",
                     "rules": Array [
                       "padding:10px 5px;",
                       "@media screen and (min-width: 375px)",
@@ -617,10 +605,6 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                       "{padding:10px 15px;}&&{",
                       [Function],
                       "}",
-                      [Function],
-                      " ",
-                      [Function],
-                      " ",
                       [Function],
                     ],
                   },
@@ -645,7 +629,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
               }
             >
               <div
-                className="Gridstyles__Column-jfdl1j-0 gngNXp"
+                className="Gridstyles__Column-jfdl1j-0 kdyIPc"
               >
                 <Button
                   onClick={[MockFunction]}

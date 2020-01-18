@@ -3,8 +3,8 @@ import {
   Column,
   Container,
   FlexColumn,
-  StyledFlipMove,
   GreyWrapper,
+  AnimatedFlexColumn,
 } from './Grid.styles'
 
-export { Container, Row, Column, FlexColumn, StyledFlipMove, GreyWrapper }
+export { Container, Row, Column, FlexColumn, GreyWrapper, AnimatedFlexColumn }
