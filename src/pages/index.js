@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import theme from '../theme/theme'
 import BannerImage from '../components/banner/bannerImage'
+import ParadeApplications from '../features/homepage/components/paradeApplications'
 import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
@@ -48,6 +49,7 @@ const Home = ({
       fixed={childImageSharp}
     />
     <DonateContainer />
+    <ParadeApplications />
     <VolunteerBoxInfo />
     <AnnouncementsContainer />
     <LatestNewsContainer />
