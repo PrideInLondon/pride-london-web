@@ -74,7 +74,7 @@ const NewsletterForm = () => {
   const handleChange = value => {
     setEmailValue(value)
   }
-  const handleSubmit = e => {
+  const handleSubmit = event => {
     e.preventDefault()
     fetch(`https:${url}${emailValue}`, { method: 'POST' })
   }
@@ -99,4 +99,10 @@ const NewsletterForm = () => {
   )
 }
 
+/**
+ * @deprecated
+ * This needs tests and updating following Jira ticket WEBNEW-35
+ * We are migrating from MailChimp to DotDigital and awaiting further specifications.
+ * Point of contact: Em McDonald
+ */
 export default NewsletterForm
