@@ -17,6 +17,7 @@ const Wrapper = styled.div`
 
   .submit {
     background-position: 38% 47% !important;
+    background-size: 20px !important;
   }
 
   ${media.desktop`
@@ -44,10 +45,6 @@ const Wrapper = styled.div`
     }
   }
 
-  .submit {
-    background-size: 20px !important;
-  }
-
   small {
     font-size: 14px;
   }
@@ -60,8 +57,6 @@ const StyledSpan = styled.span`
 const StyledTextarea = styled.textarea`
   font-size: 14px;
   font-weight: 500;
-  height: auto;
-  padding-left: 10px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   outline: none;
@@ -107,7 +102,6 @@ const StyledLabel = styled.label`
 const StyledInput = styled.input`
   font-size: 14px;
   font-weight: 500;
-  padding-left: 10px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   outline: none;
@@ -246,16 +240,12 @@ class ContactForm extends React.Component {
           />
           <StyledLabel htmlFor="question">Question</StyledLabel>
         </StyledSpan>
-        <Button
-          isSent={isSent}
-          className="submit"
-          onClick={this.changeButtonText}
-          primary
-        >
+        <Button className="submit" onClick={this.changeButtonText}>
           <img
             src={check}
-            alt=""
+            alt="checkmark"
             style={{ display: isSent ? 'inline' : 'none' }}
+            aria-hidden="true"
           />
           {this.state.buttonText}
         </Button>

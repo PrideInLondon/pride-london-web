@@ -68,7 +68,7 @@ describe(ParadeGroupsContainer.name, () => {
     bSection.simulate('scroll')
     setTimeout(() => {
       expect(bLetter).toHaveStyleRule('color', theme.colors.indigo)
-      unmount(instance)
+      instance.unmount()
     })
   })
 })

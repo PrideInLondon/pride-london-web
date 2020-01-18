@@ -43,28 +43,6 @@ const StyledInput = styled(Input)`
   `};
 `
 
-const SubmitButton = styled(Button)`
-  ${media.tablet`
-    && {
-      min-width: 0;
-      width: 185px;
-    }
-  `};
-  ${media.desktop`
-    && {
-      min-width: 0;
-      width: 120px;
-    }
-  `};
-
-  ${media.desktopHD`
-    && {
-      min-width: 0;
-      width: 185px;
-    }
-  `};
-`
-
 const url =
   '//prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382&MERGE0='
 
@@ -75,7 +53,7 @@ const NewsletterForm = () => {
     setEmailValue(value)
   }
   const handleSubmit = event => {
-    e.preventDefault()
+    event.preventDefault()
     fetch(`https:${url}${emailValue}`, { method: 'POST' })
   }
 
@@ -91,9 +69,12 @@ const NewsletterForm = () => {
           label="E-mail address"
           required
         />
-        <SubmitButton type="submit" primary fullmobile>
+        <Button
+          type="submit"
+          width={{ default: '100%', md: '185px', lg: '120px', xl: '185px' }}
+        >
           Join now
-        </SubmitButton>
+        </Button>
       </Form>
     </>
   )

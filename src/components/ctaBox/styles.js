@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
-import Button from '../button'
 import { Column } from '../grid'
 
 export const CTAWrapper = styled.div`
@@ -21,13 +20,6 @@ export const CTAPanel = styled.div`
     top: -100px;
     padding: 40px;
  `};
-`
-
-export const CTAButton = styled(Button)`
-  && {
-    width: 100%;
-    min-width: 0;
-  }
 `
 
 export const CTATitle = styled.h3`

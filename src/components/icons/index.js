@@ -1,4 +1,3 @@
-//
 export { default as AccessibilityIcon } from './accessibilityIcon'
 export { default as DateIcon } from './dateIcon'
 export { default as GenderIcon } from './genderIcon'

@@ -19,18 +19,8 @@ exports[`VolunteerBoxInfo volunteer snapshot 1`] = `
             Pride in London is run almost entirely by volunteers. We could use people like you to help us organise the best event that we can.
           </p>
           <Button
-            className=""
-            disabled={false}
-            flexwidth={false}
-            fullmobile={false}
-            link={false}
-            onClick={null}
-            primary={true}
-            small={false}
-            to="https://volunteer.prideinlondon.org "
-            type="button"
-            white={false}
-            wide={false}
+            to="https://volunteer.prideinlondon.org"
+            variant="primary"
           >
             Help keep Pride going
           </Button>
