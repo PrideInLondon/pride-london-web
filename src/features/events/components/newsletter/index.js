@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Button from '../../../../components/button'
 import Input from '../../../../components/input'
@@ -46,38 +46,44 @@ const StyledInput = styled(Input)`
 const url =
   '//prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382&MERGE0='
 
-class NewsletterForm extends Component {
-  state = { value: '' }
+const NewsletterForm = () => {
+  const [emailValue, setEmailValue] = useState('')
 
-  handleChange = value => this.setState({ value })
-
-  render() {
-    return (
-      <Fragment>
-        <Heading>Don't miss our all year round events</Heading>
-        <Form
-          action={`${url}${this.state.value}`}
-          method="post"
-          target="_blank"
-        >
-          <StyledInput
-            id="email"
-            type="email"
-            handleChange={this.handleChange}
-            value={this.state.value}
-            label="E-mail address"
-            required
-          />
-          <Button
-            type="submit"
-            width={{ default: '100%', md: '185px', lg: '120px', xl: '185px' }}
-          >
-            Join now
-          </Button>
-        </Form>
-      </Fragment>
-    )
+  const handleChange = value => {
+    setEmailValue(value)
   }
+  const handleSubmit = event => {
+    event.preventDefault()
+    fetch(`https:${url}${emailValue}`, { method: 'POST' })
+  }
+
+  return (
+    <>
+      <Heading>Don't miss our all year round events</Heading>
+      <Form onSubmit={handleSubmit}>
+        <StyledInput
+          id="email"
+          type="email"
+          handleChange={handleChange}
+          value={emailValue}
+          label="E-mail address"
+          required
+        />
+        <Button
+          type="submit"
+          width={{ default: '100%', md: '185px', lg: '120px', xl: '185px' }}
+        >
+          Join now
+        </Button>
+      </Form>
+    </>
+  )
 }
 
+/**
+ * @deprecated
+ * This needs tests and updating following Jira ticket WEBNEW-35
+ * We are migrating from MailChimp to DotDigital and awaiting further specifications.
+ * Point of contact: Em McDonald
+ */
 export default NewsletterForm
