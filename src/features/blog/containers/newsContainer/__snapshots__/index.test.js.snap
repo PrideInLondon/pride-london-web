@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsContainer should render correctly 1`] = `
+<section>
+  <Gridstyles__Container
+    mx="auto"
+  >
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
+    >
+      <Gridstyles__Column
+        width={1}
+      >
+        <Title
+          className={null}
+          isCentered={false}
+          isLight={false}
+        >
+          News
+        </Title>
+      </Gridstyles__Column>
+    </Gridstyles__Row>
+  </Gridstyles__Container>
+  <Gridstyles__GreyWrapper>
+    <FeaturedArticleContainer />
+    <FilterContainer
+      categories={
+        Array [
+          Object {
+            "hexColour": "#FFD95E",
+            "title": "All Articles",
+          },
+          Object {
+            "hexColour": "#2CDA9D",
+            "title": "Research",
+          },
+        ]
+      }
+      handleFilterClick={[Function]}
+      selectedFilter={
+        Object {
+          "hexColour": "#FFD95E",
+          "title": "All Articles",
+        }
+      }
+    />
+    <NewsCards
+      articles={
+        Array [
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "Research",
+            },
+            "datePublished": "2019-12-19",
+            "id": "0-Research",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "Research",
+            },
+            "datePublished": "2019-12-19",
+            "id": "1-Research",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "0-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "1-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "2-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "3-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "4-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "5-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "6-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+        ]
+      }
+    />
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
+      pb={
+        Array [
+          30,
+          30,
+          50,
+        ]
+      }
+    >
+      <Gridstyles__Column
+        mx="auto"
+        pt={
+          Array [
+            30,
+            30,
+            50,
+          ]
+        }
+      >
+        <Button
+          onClick={[Function]}
+          variant="primary"
+        >
+          Show more articles
+        </Button>
+      </Gridstyles__Column>
+    </Gridstyles__Row>
+  </Gridstyles__GreyWrapper>
+</section>
+`;
