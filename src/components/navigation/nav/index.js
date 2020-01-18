@@ -99,6 +99,10 @@ const Nav = () => {
                             url: '/parade',
                           },
                           {
+                            title: 'Take part in the Parade',
+                            url: '/parade/take-part',
+                          },
+                          {
                             title: 'Parade groups',
                             url: '/parade/groups',
                           },
@@ -109,10 +113,6 @@ const Nav = () => {
                           {
                             title: 'Accessibility',
                             url: '/parade/accessibility',
-                          },
-                          {
-                            title: 'Take part',
-                            url: '/parade/take-part',
                           },
                           {
                             title: 'Residents and businesses info',
