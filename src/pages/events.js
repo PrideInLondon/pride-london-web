@@ -1,23 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import moment from 'moment'
 import Helmet from 'react-helmet'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
-import { EventListingCard } from '../features/events'
+import { GroupedEventsCards } from '../features/events'
 import Button from '../components/button'
-import {
-  Container,
-  Row,
-  Column,
-  StyledFlipMove,
-  FlexColumn,
-} from '../components/grid'
+import { Container, Row, Column } from '../components/grid'
 import { Consumer } from '../components/appContext'
 import { filterByLimit } from '../features/events/helpers'
-import constants from '../constants'
 import { EventsPageBanner } from '../features/events/components/eventsPageBanner'
 
 export const EventsPageQuery = graphql`
@@ -71,63 +63,15 @@ const EventCount = styled.p`
   color: ${theme.colors.darkGrey};
 `
 
-const DateGroupHeading = styled.h2`
-  margin: 1rem 0;
-
-  ${media.tablet`
-    display: none;
-  `};
+const ListingCardWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
 `
 
 const PageWrapper = styled.div`
   background-color: ${theme.colors.lightGrey};
 `
-/* eslint-disable */
-class GroupedEventsCards extends Component {
-  static propTypes = {
-    events: PropTypes.array.isRequired,
-    index: PropTypes.number.isRequired,
-    event: PropTypes.object.isRequired,
-  }
-  render() {
-    const { event, index, events } = this.props
-    let header
-    const longDayOfMonth = 'dddd D MMM'
-
-    if (index === 0) {
-      header = moment(event.node.startTime).format(longDayOfMonth)
-    } else {
-      const startDate = moment(event.node.startTime).format(
-        constants.dateFormat
-      )
-      const prevStartDate = moment(events[index - 1].node.startTime).format(
-        constants.dateFormat
-      )
-
-      if (startDate !== prevStartDate) {
-        header = moment(event.node.startTime).format(longDayOfMonth)
-      }
-    }
-    return (
-      <FlexColumn
-        width={[
-          1, // 100% between 0px screen width and first breakpoint (375px)
-          1, // 100% between first breakpoint(375px) and second breakpoint (768px)
-          1 / 2, // 50% between second breakpoint(768px) and third breakpoint (1024px)
-          1 / 3, // 33% between third breakpoint(1280px) and fourth breakpoint (1440px)
-        ]}
-        key={event.node.id}
-        py={[2, 2, 2, 3]}
-      >
-        {header && <DateGroupHeading>{header}</DateGroupHeading>}
-        <EventListingCard event={event.node} />
-      </FlexColumn>
-    )
-  }
-}
-/* eslint-enable */
-
-/* eslint-disable react/no-multi-comp */
 
 export const Events = ({
   data: {
@@ -162,7 +106,7 @@ export const Events = ({
           />
           <Container>
             <Row>
-              <StyledFlipMove>
+              <ListingCardWrapper>
                 {context.filteredEvents
                   .filter(filterByLimit, context.state.eventsToShow)
                   .sort((event1, event2) => {
@@ -177,9 +121,11 @@ export const Events = ({
                       index={index}
                       event={event}
                       key={event.node.id}
+                      toLoad={context.state.eventsToShow}
                     />
                   ))}
-              </StyledFlipMove>
+              </ListingCardWrapper>
+
               <ColumnPagination width={1}>
                 {renderEventCount(
                   context.filteredEvents.length,
@@ -187,9 +133,9 @@ export const Events = ({
                 )}
                 {context.state.eventsToShow < context.filteredEvents.length && (
                   <Button
-                    onClick={() =>
+                    onClick={() => {
                       context.actions.showMore(context.filteredEvents.length)
-                    }
+                    }}
                     disabled={
                       context.state.eventsToShow >=
                       context.filteredEvents.length
@@ -211,5 +157,4 @@ export const Events = ({
 Events.propTypes = {
   data: PropTypes.object.isRequired,
 }
-
 export default Events
