@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Title from '../../components/title'
 import FiltersContainer from '../filtersContainer'
@@ -10,75 +10,68 @@ import {
   Row,
   GreyWrapper,
 } from '../../../../components/grid'
-// import { ShowMoreButton } from './styles'
 import Button from '../../../../components/button'
 
 const initialPaginationState = {
   end: 9,
   step: 9,
 }
-class NewsContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      selectedFilter: props.categories.find(
-        ({ title }) => title === 'All Articles'
-      ),
-      ...initialPaginationState,
-      total: props.articles,
-    }
-  }
+const NewsContainer = ({ articles, categories }) => {
+  const [selectedFilter, setSelectedFilter] = useState(
+    categories.find(({ title }) => title === 'All Articles')
+  )
+  const [initialPagination, setInitialPagination] = useState(
+    initialPaginationState
+  )
+  const [totalArticles, setTotalArticles] = useState(articles)
 
-  handleFilterClick = label => {
-    this.setState((_state, props) => ({
-      selectedFilter: label,
-      ...initialPaginationState,
-      total: props.articles.filter(
+  const handleFilterClick = label => {
+    setSelectedFilter(label)
+    setInitialPagination(initialPaginationState)
+    setTotalArticles(
+      articles.filter(
         article =>
           label.title === 'All Articles' ||
           label.title === article.category.title
-      ),
-    }))
-  }
-
-  showMoreCards = () => {
-    this.setState(state => ({
-      end: (state.end += state.step),
-    }))
-  }
-
-  render() {
-    const { selectedFilter, end, total } = this.state
-    const { categories } = this.props
-    return (
-      <section>
-        <Container>
-          <Row>
-            <Column width={1}>
-              <Title>News</Title>
-            </Column>
-          </Row>
-        </Container>
-        <GreyWrapper>
-          <FeaturedArticleContainer />
-          <FiltersContainer
-            selectedFilter={selectedFilter}
-            handleFilterClick={this.handleFilterClick}
-            categories={categories}
-          />
-
-          <NewsCards articles={total.slice(0, end)} />
-          {end < total.length && (
-            <Row pb={[30, 30, 50]}>
-              <Column mx="auto" pt={[30, 30, 50]}>
-                <Button onClick={this.showMoreCards}>Show more articles</Button>
-              </Column>
-            </Row>
-          )}
-        </GreyWrapper>
-      </section>
+      )
     )
   }
+
+  const showMoreCards = () => {
+    setInitialPagination({
+      end: (initialPagination.end += initialPagination.step),
+      step: initialPagination.step,
+    })
+  }
+
+  return (
+    <section>
+      <Container>
+        <Row>
+          <Column width={1}>
+            <Title>News</Title>
+          </Column>
+        </Row>
+      </Container>
+      <GreyWrapper>
+        <FeaturedArticleContainer />
+        <FiltersContainer
+          selectedFilter={selectedFilter}
+          handleFilterClick={handleFilterClick}
+          categories={categories}
+        />
+
+        <NewsCards articles={totalArticles.slice(0, initialPagination.end)} />
+        {initialPagination.end < totalArticles.length && (
+          <Row pb={[30, 30, 50]}>
+            <Column mx="auto" pt={[30, 30, 50]}>
+              <Button onClick={showMoreCards}>Show more articles</Button>
+            </Column>
+          </Row>
+        )}
+      </GreyWrapper>
+    </section>
+  )
 }
 
 NewsContainer.propTypes = {
