@@ -16,8 +16,4 @@ export interface CardImageProps {
   alt: string
 }
 
-export interface CardContentProps extends SpaceProps, LayoutProps {}
-
-export interface CardTitleProps {}
-
-export interface CardFooterProps {}
+export type CardContentProps = SpaceProps & LayoutProps

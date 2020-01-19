@@ -5,13 +5,7 @@ import Image from 'gatsby-image'
 import { colors } from '../../theme/colors'
 import { mediaQueries } from '../../theme/mediaQueries'
 
-import {
-  CardProps,
-  CardImageProps,
-  CardTitleProps,
-  CardContentProps,
-  CardFooterProps,
-} from './Card.types'
+import { CardProps, CardImageProps, CardContentProps } from './Card.types'
 
 const StyledCardImage = styled(Image)`
   position: absolute;
@@ -49,7 +43,7 @@ export const CardImage: React.FC<CardImageProps> = ({ image, ...props }) => (
   </CardImageOverflow>
 )
 
-export const CardTitle = styled.h3<CardTitleProps>`
+export const CardTitle = styled.h3`
   margin: 0 0 0.5em 0;
   font-size: 1.25rem;
 
@@ -88,7 +82,7 @@ export const CardContent = styled.div<CardContentProps>`
   ${compose(space, layout)}
 `
 
-export const CardFooter = styled.div<CardFooterProps>`
+export const CardFooter = styled.div`
   display: flex;
   margin-top: auto;
 `

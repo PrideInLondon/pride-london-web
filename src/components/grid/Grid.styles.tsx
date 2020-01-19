@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 import {
+  compose,
   space,
   SpaceProps,
   flexbox,
@@ -9,7 +10,6 @@ import {
   position,
   PositionProps,
 } from 'styled-system'
-import FlipMove from 'react-flip-move'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { xl } from '../../theme/breakpoints'
 import { colors } from '../../theme/colors'
@@ -22,7 +22,7 @@ interface GridProps
 // eslint-disable-next-line no-unexpected-multiline
 export const Column = styled.div<GridProps>`
   padding: 10px 5px;
-  
+
   ${mediaQueries.sm} {
     padding: 10px;
   }
@@ -34,9 +34,7 @@ export const Column = styled.div<GridProps>`
   && {
     ${space}
   }
-  ${position}
-  ${flexbox}
-  ${layout}
+  ${compose(position, flexbox, layout)}
 `
 // eslint-disable-next-line no-unexpected-multiline
 export const Row = styled.div<GridProps>`
@@ -103,11 +101,38 @@ export const FlexColumn = styled(Column)`
   }
 `
 
-export const StyledFlipMove = styled(FlipMove)`
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: 100%;
+const keyFrame = keyframes`
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: '';
+    opacity: '';
+  }
 `
+// styled componets V4 requeries css helper func for keyframes
+const keyFrameHelper = css`
+  animation: ${keyFrame} 360ms ease;
+`
+interface AnimatedFlexColumnProps
+  extends SpaceProps,
+    LayoutProps,
+    FlexboxProps {
+  animation?: boolean
+}
+
+export const AnimatedFlexColumn = styled.div<AnimatedFlexColumnProps>(
+  ({ animation }) => css`
+    ${animation && keyFrameHelper}
+    ${compose(flexbox, layout, space)}
+  `
+)
+
+AnimatedFlexColumn.defaultProps = {
+  padding: { default: '10px 5px', sm: '10px', lg: '10px 15px' },
+  display: { default: 'block', md: 'flex' },
+}
 
 export const GreyWrapper = styled.div`
   background-color: ${colors.lightGrey};
