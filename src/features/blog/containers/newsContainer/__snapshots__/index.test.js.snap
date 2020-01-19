@@ -23,7 +23,7 @@ exports[`NewsContainer should render correctly 1`] = `
     </Gridstyles__Row>
   </Gridstyles__Container>
   <Gridstyles__GreyWrapper>
-    <FeaturedArticleContainer />
+    <Component />
     <FilterContainer
       categories={
         Array [

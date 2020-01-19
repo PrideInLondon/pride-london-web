@@ -4,6 +4,8 @@ import FilterButton from '../../../../components/filterButton'
 import NewsCard from '../../components/newsCard'
 import NewsContainer from '.'
 
+jest.mock('../featuredArticleContainer', () => () => 'FeaturedArticleContainer')
+
 const makeTestArticles = (quantity, category) => {
   const array = []
   for (let i = 0; i < quantity; i++) {
@@ -29,15 +31,6 @@ const testCategories = [
 ]
 
 describe(NewsContainer.name, () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-  })
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-  })
-
   it('should render correctly', () => {
     const wrapper = shallow(
       <NewsContainer articles={testArticles} categories={testCategories} />
@@ -51,10 +44,7 @@ describe(NewsContainer.name, () => {
     )
     const researchCategoryFilterButton = instance.find(FilterButton).last()
     researchCategoryFilterButton.simulate('click')
-    setTimeout(() => {
-      expect(instance.find(NewsCard).length).toBe(2)
-      instance.unmount()
-    })
+    expect(instance.find(NewsCard).length).toBe(2)
   })
 
   it('should show more articles when show more button is clicked', () => {
@@ -64,8 +54,6 @@ describe(NewsContainer.name, () => {
     expect(instance.find(NewsCard).length).toBe(9)
     const showMoreButton = instance.find('button').last()
     showMoreButton.simulate('click')
-    setTimeout(() => {
-      expect(instance.find(NewsCard).length).toBe(11)
-    })
+    expect(instance.find(NewsCard).length).toBe(11)
   })
 })
