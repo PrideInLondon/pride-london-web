@@ -16,7 +16,7 @@ const BackgroundImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-width: 920px;
+  width: 100%;
   height: 615px;
   border-radius: 7px;
 `
@@ -27,11 +27,9 @@ const TextContainer = styled.div`
   background-color: ${colors.white};
   text-align: left;
   border-radius: 7px;
-  width: 496px;
-  padding: 48px;
-  margin-top: 48px;
-  margin-bottom: 48px;
-  margin-left: -128px;
+  width: 50%;
+  padding: 32px;
+  margin: 48px 48px 48px -128px;
 `
 
 const StyledDescription = styled.p`
@@ -43,7 +41,7 @@ const StyledDescription = styled.p`
 
 const StyledButton = styled(Button)`
   margin-bottom: 30px;
-  margin-right: 48px;
+  margin-right: 64px;
 `
 
 const StyledLink = styled(Link)`
