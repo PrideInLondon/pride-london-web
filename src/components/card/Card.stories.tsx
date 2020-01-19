@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
 import { withKnobs } from '@storybook/addon-knobs'
 import { Card, CardImage, CardContent, CardTitle, CardFooter } from './Card'
 import umbrellaJpg from './umbrella.jpg'
@@ -12,7 +11,6 @@ const CardWrapper = styled.div`
 `
 
 storiesOf('Card', module)
-  .addDecorator(withInfo)
   .addDecorator(withKnobs)
   .add(
     'with image',

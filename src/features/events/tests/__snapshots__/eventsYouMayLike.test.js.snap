@@ -39,7 +39,6 @@ exports[`The Events You May Like component should matchsnapshot 1`] = `
         }
       >
         <EventListingCard
-          displaycolumn={false}
           event={
             Object {
               "eventsListPicture": Object {

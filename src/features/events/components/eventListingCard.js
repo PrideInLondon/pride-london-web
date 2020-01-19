@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import theme from '../../../theme/theme'
+import { colors } from '../../../theme/colors'
+import { fonts } from '../../../theme/fonts'
+import { mediaQueries } from '../../../theme/mediaQueries'
 import {
   Card,
   CardImage,
@@ -17,12 +19,15 @@ import CalendarIcon from '../../../theme/assets/images/calendar-icon'
 const CardDate = styled.span`
   display: flex;
   flex-wrap: wrap;
-  color: ${theme.colors.darkCyan};
-  font-size: 0.875rem;
+  color: ${colors.darkCyan};
+  font-size: 0.75rem;
   line-height: 1.43;
   margin-bottom: 0.65rem;
-  font-family: ${theme.fonts.title};
+  font-family: ${fonts.title};
   font-weight: 600;
+  ${mediaQueries.md} {
+    font-size: 0.875rem;
+  }
 `
 
 const StyledCardFooter = styled(CardFooter)`
@@ -31,26 +36,42 @@ const StyledCardFooter = styled(CardFooter)`
 `
 
 const Details = styled(Link)`
-  color: ${theme.colors.indigo};
+  color: ${colors.indigo};
   text-decoration: none;
-  border-bottom: 2px solid ${theme.colors.darkCyan};
+  font-size: 1rem;
+  padding-bottom: 2px;
+  background-image: linear-gradient(
+    180deg,
+    transparent calc(100% - 2px),
+    ${colors.darkCyan} 2px
+  );
+  background-size: 100% 100%;
+  ${mediaQueries.md} {
+    font-size: 1.125rem;
+  }
 `
 
 const Price = styled.div`
   align-self: flex-end;
-  color: ${theme.colors.darkCyan};
+  color: ${colors.darkCyan};
   font-family: Poppins;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.25;
   letter-spacing: -0.16px;
+
+  ${mediaQueries.md} {
+    font-size: 1rem;
+  }
 `
 
 const Location = styled.p`
-  color: ${theme.colors.darkIndigo};
-  font-size: 0.875rem;
+  color: ${colors.darkIndigo};
+  font-size: 0.75rem;
   font-weight: 300;
-  margin-top: 15px;
+  ${mediaQueries.md} {
+    font-size: 0.875rem;
+  }
 `
 
 const PaddedCalendarIcon = styled(CalendarIcon)`
@@ -61,7 +82,7 @@ const PaddedCalendarIcon = styled(CalendarIcon)`
 
 const When = ({ startTime, endTime, recurrenceDates }) => (
   <CardDate>
-    <PaddedCalendarIcon color={theme.colors.darkCyan} />
+    <PaddedCalendarIcon color={colors.darkCyan} />
     {generateDisplayDate({
       start: new Date(startTime),
       end: new Date(endTime),
@@ -79,28 +100,30 @@ When.defaultProps = {
   recurrenceDates: [],
 }
 
-export const EventListingCard = ({ event }) => {
+export const EventListingCard = ({ event, variant }) => {
   return (
-    <Card>
+    <Card variant={variant}>
       <CardImage
         image={event.eventsListPicture.fixed}
         alt={event.eventsListPicture.title}
       />
-      <CardContent height={{ desktop: '300px' }}>
+      <CardContent>
         <When {...event} />
         <CardTitle>{event.name}</CardTitle>
         <Location>
           {event.locationName}, {event.addressLine1}
         </Location>
         <StyledCardFooter>
-          <Details
-            to={generateEventSlug({
-              ...event,
-              occurrence: event.recurrenceDates && event.startTime,
-            })}
-          >
-            Event details
-          </Details>
+          <div>
+            <Details
+              to={generateEventSlug({
+                ...event,
+                occurrence: event.recurrenceDates && event.startTime,
+              })}
+            >
+              Event details
+            </Details>
+          </div>
           <Price>
             {event.eventPriceLow === 0
               ? 'Free entry'
@@ -114,6 +137,16 @@ export const EventListingCard = ({ event }) => {
 
 EventListingCard.propTypes = {
   event: PropTypes.object.isRequired,
+  variant: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({
+      default: PropTypes.string,
+      sm: PropTypes.string,
+      md: PropTypes.string,
+      lg: PropTypes.string,
+      xl: PropTypes.string,
+    }),
+  ]).isRequired,
 }
 
 export default EventListingCard

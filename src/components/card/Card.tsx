@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { space, layout, compose, variant } from 'styled-system'
 import Image from 'gatsby-image'
-import theme from '../../theme/theme'
-import { media } from '../../theme/media'
-import { sm, md, lg } from '../../theme/breakpoints'
+import { colors } from '../../theme/colors'
+import { mediaQueries } from '../../theme/mediaQueries'
+
 import {
   CardProps,
   CardImageProps,
@@ -11,25 +12,6 @@ import {
   CardContentProps,
   CardFooterProps,
 } from './Card.types'
-
-export const Card: React.FC<CardProps> = styled.div`
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: ${({ color }) => color};
-
-  &:hover,
-  &:focus {
-    #card-img-wrapper {
-      transform: scale(1.08);
-    }
-  }
-`
-
-Card.defaultProps = {
-  color: theme.colors.white,
-}
 
 const StyledCardImage = styled(Image)`
   position: absolute;
@@ -61,57 +43,95 @@ const CardImageWrapper = styled.div`
 
 export const CardImage: React.FC<CardImageProps> = ({ image, ...props }) => (
   <CardImageOverflow>
-    <CardImageWrapper id="card-img-wrapper">
+    <CardImageWrapper>
       <StyledCardImage fixed={image} {...props} />
     </CardImageWrapper>
   </CardImageOverflow>
 )
 
-export const CardTitle: React.FC<CardTitleProps> = styled.h3`
+export const CardTitle = styled.h3<CardTitleProps>`
   margin: 0 0 0.5em 0;
-`
+  font-size: 1.25rem;
 
-export const CardContent: React.FC<CardContentProps> = styled.div`
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  height: ${({ height: { desktop } }) => desktop};
-
-  p,
-  ul,
-  ol,
-  strong {
-    font-size: 0.875rem;
-    color: ${theme.colors.darkGrey};
-    line-height: 1.3;
+  ${mediaQueries.md} {
+    font-size: 1.5rem;
   }
 
-  ${media.mobile`
-    height: ${({ height: { mobile } }) => mobile};
-  `};
-
-  ${media.tablet`
-    padding: 30px;
-    height: ${({ height: { tablet } }) => tablet};
-  `};
+  ${mediaQueries.mdMax} {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* Multi-line ellipsis, only works in webkit browsers */
+    @supports (-webkit-line-clamp: 2) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      /* stylelint-disable */
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      /* stylelint-enable */
+    }
+  }
 `
 
-CardContent.defaultProps = {
-  height: {
-    desktop: `${lg / 2}px`,
-    tablet: `${md / 2}px`,
-    mobile: `${sm / 2}px`,
-  },
-}
-
-export const CardFooter: React.FC<CardFooterProps> = styled.div`
+export const CardContent = styled.div<CardContentProps>`
+  background-color: ${colors.white};
+  color: ${colors.darkGrey};
   display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  padding: 20px;
 
-  ${media.mobile`
-    margin-top: 20px;
-  `};
-
-  ${media.tablet`
-    margin-top: auto;
-  `};
+  ${compose(space, layout)}
 `
+
+export const CardFooter = styled.div<CardFooterProps>`
+  display: flex;
+  margin-top: auto;
+`
+export const Card = styled.div<CardProps>`
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    ${CardImageWrapper} {
+      transform: scale(1.08);
+    }
+  }
+
+  ${variant({
+    variants: {
+      column: {
+        flexDirection: 'column',
+        borderRadius: '5px',
+        [CardImageOverflow]: {
+          flexBasis: '40%',
+        },
+        [CardContent]: {
+          flexBasis: '60%',
+          margin: 0,
+        },
+      },
+      row: {
+        flexDirection: 'row',
+        borderRadius: 0,
+        [CardImageOverflow]: {
+          flexBasis: '50%',
+        },
+        [CardContent]: {
+          flexBasis: 'calc(50% + 60px)',
+          margin: '25px 0 25px -60px',
+          zIndex: '1',
+        },
+      },
+    },
+  })}
+`
+Card.defaultProps = {
+  variant: 'column',
+}

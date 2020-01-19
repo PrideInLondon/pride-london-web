@@ -4,8 +4,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import moment from 'moment'
 import Helmet from 'react-helmet'
+import { color } from 'styled-system'
 import { media } from '../theme/media'
-import theme from '../theme/theme'
+import { colors } from '../theme/colors'
 import { EventListingCard } from '../features/events'
 import Button from '../components/button'
 import {
@@ -68,20 +69,23 @@ const ColumnPagination = styled(Column)`
 const EventCount = styled.p`
   font-size: 0.875rem;
   line-height: 1.214;
-  color: ${theme.colors.darkGrey};
+  color: ${colors.white};
 `
 
 const DateGroupHeading = styled.h2`
   margin: 1rem 0;
-
+  color: ${colors.white};
   ${media.tablet`
     display: none;
   `};
 `
 
 const PageWrapper = styled.div`
-  background-color: ${theme.colors.lightGrey};
+  ${color}
 `
+PageWrapper.defaultProps = {
+  backgroundColor: colors.lightGrey,
+}
 /* eslint-disable */
 class GroupedEventsCards extends Component {
   static propTypes = {
@@ -121,7 +125,7 @@ class GroupedEventsCards extends Component {
         py={[2, 2, 2, 3]}
       >
         {header && <DateGroupHeading>{header}</DateGroupHeading>}
-        <EventListingCard event={event.node} />
+        <EventListingCard event={event.node} variant={{default: 'row', md: 'column'}} />
       </FlexColumn>
     )
   }
@@ -153,15 +157,15 @@ export const Events = ({
   return (
     <Consumer>
       {context => (
-        <PageWrapper>
+        <PageWrapper backgroundColor={colors.indigo}>
           <Helmet title="Coming Out - The new way to find the best queer events for the queer community from Pride in London." />
           <EventsPageBanner
             title="Coming Out"
             subtitle=" The new way to find the best queer events for the queer community from Pride in London."
-            backgroundColor={theme.colors.bondiBlue}
+            backgroundColor={colors.darkCyan}
             image={childImageSharp}
           />
-          <Container>
+          <Container marginTop={{ default: 0, md: '60px' }}>
             <Row>
               <StyledFlipMove>
                 {context.filteredEvents
@@ -196,6 +200,7 @@ export const Events = ({
                       context.filteredEvents.length
                     }
                     width={{ default: '100%', md: 'auto' }}
+                    variant="outline-white"
                   >
                     Show more events
                   </Button>
