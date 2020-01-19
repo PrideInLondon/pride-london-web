@@ -48,8 +48,8 @@ const Home = ({
       videoId="348603446"
       fixed={childImageSharp}
     />
-    <DonateContainer />
     <ParadeApplications />
+    <DonateContainer />
     <VolunteerBoxInfo />
     <AnnouncementsContainer />
     <LatestNewsContainer />
