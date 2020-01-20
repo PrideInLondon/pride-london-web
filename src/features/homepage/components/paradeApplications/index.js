@@ -50,6 +50,18 @@ const TextContainer = styled.div`
   }
 `
 
+const StyledHeader = styled.h2`
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 4rem;
+  letter-spacing: normal;
+
+  ${mediaQueries.md} {
+    font-size: 3.5rem;
+  }
+`
+
 const StyledDescription = styled.p`
   margin-top: 15px;
   margin-bottom: 40px;
@@ -79,7 +91,7 @@ const ParadeApplications = () => (
   <Container>
     <BackgroundImage />
     <TextContainer>
-      <h1>Parade 2020 applications are open!</h1>
+      <StyledHeader>Parade 2020 applications are open!</StyledHeader>
       <StyledDescription>
         Apply for your group’s spot in this year’s Pride in London Parade
       </StyledDescription>
