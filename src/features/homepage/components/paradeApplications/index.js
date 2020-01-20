@@ -95,10 +95,17 @@ const ParadeApplications = () => (
       <StyledDescription>
         Apply for your group’s spot in this year’s Pride in London Parade
       </StyledDescription>
-      <StyledButton to="https://apply.prideinlondon.org/" target="_self">
+      <StyledButton
+        to="https://apply.prideinlondon.org/"
+        target="_self"
+        id="parade-apps-apply"
+      >
         Start your Parade application
       </StyledButton>
-      <StyledLink to="https://prideinlondon.org/parade/take-part/">
+      <StyledLink
+        to="https://prideinlondon.org/parade/take-part/"
+        id="parade-apps-find-out-more"
+      >
         Find out more about applying
       </StyledLink>
     </TextContainer>
