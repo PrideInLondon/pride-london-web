@@ -1,25 +1,25 @@
-const moment = require('moment')
-const slugify = require('slugify')
-const UuidEncoder = require('uuid-encoder')
-const constants = require('../../../constants')
+import moment from 'moment'
+import slugify from 'slugify'
+import UuidEncoder from 'uuid-encoder'
+import constants from '../../../constants'
 
 const encoder = new UuidEncoder('base62')
 
-const formatPrice = (eventPriceLow, eventPriceHigh) => {
+export const formatPrice = (eventPriceLow, eventPriceHigh) => {
   if (eventPriceLow === 0 && (eventPriceHigh === 0 || eventPriceHigh == null)) {
     return 'Free'
   }
   return `From £${eventPriceLow.toFixed(2).replace('.00', '')}`
 }
 
-const formatTime = time => {
+export const formatTime = time => {
   if (moment(time).format('mm') === '00') {
     return moment(time).format('ha')
   }
   return moment(time).format('h:mma')
 }
 
-const formatDate = event => {
+export const formatDate = event => {
   const startDate = moment(event.startTime).format('L')
   const endDate = moment(event.endTime).format('L')
 
@@ -53,7 +53,7 @@ const formatDate = event => {
   return dateTime
 }
 
-function filterByDate(event) {
+export function filterByDate(event) {
   if (!(this.startDate && this.endDate)) return true
   // Set time to 12:00 for pure date comparison
   return moment(event.node.startTime)
@@ -61,12 +61,12 @@ function filterByDate(event) {
     .isBetween(this.startDate, this.endDate, null, '[]')
 }
 
-function filterByFree(event) {
+export function filterByFree(event) {
   if (!this.valueOf()) return true
   return event.node.eventPriceLow === 0
 }
 
-function filterByCategory(event) {
+export function filterByCategory(event) {
   const { key } = this
   if (this.array.length === 0) return true
 
@@ -78,7 +78,7 @@ function filterByCategory(event) {
   })
 }
 
-function filterByArea(event) {
+export function filterByArea(event) {
   if (this.length === 0) return true
 
   if (typeof event.node.postcode === 'string') {
@@ -109,7 +109,7 @@ function filterByArea(event) {
   return false
 }
 
-function filterByTime(event) {
+export function filterByTime(event) {
   if (this.length === 0) return true
   const format = 'HH:mm'
   const startTime = moment(event.node.startTime).format(format)
@@ -134,7 +134,7 @@ function filterByTime(event) {
   return this.indexOf(timeOfDay) !== -1
 }
 
-function filterPastEvents(event) {
+export function filterPastEvents(event) {
   const today = moment()
   if (event.node && event.node.endTime)
     return moment(event.node.endTime).isSameOrAfter(today)
@@ -142,11 +142,11 @@ function filterPastEvents(event) {
   return moment(event).isSameOrAfter(today)
 }
 
-function filterByLimit(event, index) {
+export function filterByLimit(event, index) {
   return index < this
 }
 
-function sanitizeDates(dates) {
+export function sanitizeDates(dates, log = false) {
   const formattedDates = []
   dates.map(date => {
     const [day, month, year] = date.split('/')
@@ -165,33 +165,16 @@ function sanitizeDates(dates) {
   return Array.from(new Set([...formattedDates]))
 }
 
-function getDuration(start, end) {
+export function getDuration(start, end) {
   return moment(end).diff(moment(start))
 }
 
-const generateEventSlug = ({ id, name, occurrence }) =>
+export const generateEventSlug = ({ id, name, occurrence }) =>
   `/event/${slugify(name, { lower: true })}${
     occurrence ? `-${moment(occurrence).format('DDMMYY')}` : ''
   }-${encoder.encode(id)}/`
 
-const extractEventIdFromSlug = slug => {
+export const extractEventIdFromSlug = slug => {
   const [encodedId] = slug.split('-').slice(-1)
   return encoder.decode(encodedId.replace('/', ''))
-}
-
-module.exports = {
-  formatDate,
-  formatTime,
-  formatPrice,
-  filterByDate,
-  filterByFree,
-  filterByCategory,
-  filterByArea,
-  filterByTime,
-  filterPastEvents,
-  filterByLimit,
-  sanitizeDates,
-  getDuration,
-  generateEventSlug,
-  extractEventIdFromSlug,
 }
