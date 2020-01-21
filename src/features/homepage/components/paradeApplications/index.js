@@ -66,26 +66,34 @@ const StyledHeader = styled.h2`
 const StyledDescription = styled.p`
   margin-top: 15px;
   margin-bottom: 40px;
-  font-size: 22px;
+  font-size: 18px;
 
   color: ${colors.black};
 
   ${mediaQueries.md} {
     color: ${colors.indigo};
+    font-size: 22px;
   }
 `
 
 const StyledButton = styled(Button)`
+  width: 90%;
   margin-bottom: 30px;
-  margin-right: 128px;
+  font-size: 15px;
 
   ${mediaQueries.md} {
     margin-right: 64px;
+    font-size: 18px;
   }
 `
 
 const StyledLink = styled(Link)`
   width: max-content;
+  font-size: 16px;
+
+  ${mediaQueries.md} {
+    font-size: 18px;
+  }
 `
 
 const ParadeApplications = () => (
