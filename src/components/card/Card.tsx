@@ -102,7 +102,6 @@ export const Card = styled.div<CardProps>`
     variants: {
       column: {
         flexDirection: 'column',
-        borderRadius: '5px',
         [CardImageOverflow]: {
           flexBasis: '40%',
         },
@@ -113,7 +112,6 @@ export const Card = styled.div<CardProps>`
       },
       row: {
         flexDirection: 'row',
-        borderRadius: 0,
         [CardImageOverflow]: {
           flexBasis: '50%',
         },
