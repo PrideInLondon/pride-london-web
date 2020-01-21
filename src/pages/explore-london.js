@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import HelmetComponent from '../components/helmetComponent'
 import { GreyWrapper } from '../components/grid'
 import BannerImage from '../components/banner/bannerImage'
 import { colors } from '../theme/colors'
@@ -15,6 +16,7 @@ const ExploreLondon = ({
   },
 }) => (
   <div>
+    <HelmetComponent title="Explore London" />
     <BannerImage
       titleText="Explore London"
       subtitleText="Find great places to spend time with friends and loved ones around London."
