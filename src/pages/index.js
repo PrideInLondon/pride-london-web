@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import theme from '../theme/theme'
+import { colors } from '../theme/colors'
+import { mediaQueries } from '../theme/mediaQueries'
 import BannerImage from '../components/banner/bannerImage'
+import ParadeApplications from '../features/homepage/components/paradeApplications'
 import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
 import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
@@ -29,6 +33,16 @@ export const HomePageQuery = graphql`
   }
 `
 
+const Divider = styled.hr`
+  margin: 64px 20px 20px 20px;
+  color: ${colors.mediumGrey};
+  height: 1px;
+
+  ${mediaQueries.md} {
+    display: none;
+  }
+`
+
 const Home = ({
   data: {
     file: { childImageSharp },
@@ -47,6 +61,8 @@ const Home = ({
       videoId="348603446"
       fixed={childImageSharp}
     />
+    <ParadeApplications />
+    <Divider />
     <DonateContainer />
     <VolunteerBoxInfo />
     <AnnouncementsContainer />
