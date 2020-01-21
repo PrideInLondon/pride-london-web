@@ -10,6 +10,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 20px;
+  margin-bottom: 64px;
 
   ${mediaQueries.md} {
     flex-direction: row;
@@ -41,7 +42,8 @@ const TextContainer = styled.div`
   border-radius: 7px;
 
   width: 100%;
-  padding: 32px 0;
+  padding: 0;
+  margin-top: 10px;
 
   ${mediaQueries.md} {
     margin: 32px;
@@ -55,11 +57,12 @@ const StyledHeader = styled.h2`
   margin: 0;
   font-size: 2.25rem;
   font-weight: 800;
-  line-height: 1.21;
+  line-height: 1.17;
   letter-spacing: normal;
 
   ${mediaQueries.md} {
     font-size: 3.5rem;
+    line-height: 1.21;
   }
 `
 
