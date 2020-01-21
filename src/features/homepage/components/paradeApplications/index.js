@@ -44,9 +44,10 @@ const TextContainer = styled.div`
   padding: 32px 0;
 
   ${mediaQueries.md} {
-    margin: 48px 48px 48px -128px;
+    margin: 32px;
+    margin-left: -128px;
     width: 50%;
-    padding: 32px;
+    padding: 58px;
   }
 `
 
@@ -54,7 +55,7 @@ const StyledHeader = styled.h2`
   margin: 0;
   font-size: 2.25rem;
   font-weight: 800;
-  line-height: 4rem;
+  line-height: 1.21;
   letter-spacing: normal;
 
   ${mediaQueries.md} {
