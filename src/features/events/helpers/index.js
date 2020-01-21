@@ -146,21 +146,21 @@ export function filterByLimit(event, index) {
   return index < this
 }
 
-export function sanitizeDates(dates, log = false) {
-  const formattedDates = []
-  dates.map(date => {
+export function sanitizeDates(dates) {
+  const formattedDates = dates.reduce((acc, date) => {
     const [day, month, year] = date.split('/')
 
-    // Format date to be DD/MM/YYYY
-    const formattedDate = `${day.length === 1 ? `0${day}` : day}/${
-      month.length === 1 ? `0${month}` : month
-    }/${year.length === 2 ? `20${year}` : year}`
+    // Create moment date, note month is zero-based in js
+    const momentDate = moment(
+      new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
+    )
 
     // Create array of valid dates
-    if (moment(formattedDate, constants.dateFormat).isValid()) {
-      formattedDates.push(formattedDate)
-    }
-  })
+    return momentDate.isValid()
+      ? [...acc, momentDate.format(constants.dateFormat)]
+      : acc
+  }, [])
+
   // Strip duplicates and return
   return Array.from(new Set([...formattedDates]))
 }
