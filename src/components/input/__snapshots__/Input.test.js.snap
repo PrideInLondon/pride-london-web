@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input/> matches snapshot 1`] = `
+<Inputstyles__Field>
+  <Inputstyles__StyledInput
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    required={false}
+    value=""
+  />
+  <Inputstyles__Label
+    empty={true}
+    focused={false}
+  />
+</Inputstyles__Field>
+`;
