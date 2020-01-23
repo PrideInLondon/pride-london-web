@@ -18,7 +18,7 @@ const CardWrapper = styled.div`
 storiesOf('Card', module).add('with image', () => {
   return (
     <CardWrapper>
-      <Card variant={select('Variant', variants, variants.Column)}>
+      <Card variant={select('Variant', variants, variants.Column)} to="/">
         <CardImage
           image={{
             width: 200,

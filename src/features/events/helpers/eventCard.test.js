@@ -19,7 +19,7 @@ describe('generateDisplayDate', () => {
 
     const actual = generateDisplayDate({ start, end, now: firstOfJune })
 
-    expect(actual).toEqual('Today • 19:00 - 22:00')
+    expect(actual).toEqual('Today\u00A0\u00A0•\u00A0\u00A019:00 - 22:00')
   })
 
   it('should display the date as tomorrow when event occurs tomorrow', () => {
@@ -33,7 +33,7 @@ describe('generateDisplayDate', () => {
 
     const actual = generateDisplayDate({ start, end, now: firstOfJune })
 
-    expect(actual).toEqual('Tomorrow • 18:00 - 20:00')
+    expect(actual).toEqual('Tomorrow\u00A0\u00A0•\u00A0\u00A018:00 - 20:00')
   })
 
   it('should display the day and date it occurs when event occurs 2 or more days from now', () => {
@@ -47,6 +47,6 @@ describe('generateDisplayDate', () => {
 
     const actual = generateDisplayDate({ start, end, now: firstOfJune })
 
-    expect(actual).toEqual('Mon, 01 Jul • 19:30 - 21:00')
+    expect(actual).toEqual('Mon, 01 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00')
   })
 })

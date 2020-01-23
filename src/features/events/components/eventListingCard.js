@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { colors } from '../../../theme/colors'
 import { fonts } from '../../../theme/fonts'
@@ -18,10 +17,9 @@ import CalendarIcon from '../../../theme/assets/images/calendar-icon'
 
 const CardDate = styled.span`
   display: flex;
-  flex-wrap: wrap;
   color: ${colors.darkCyan};
   font-size: 0.75rem;
-  line-height: 1.43;
+  line-height: 1.29;
   margin-bottom: 0.65rem;
   font-family: ${fonts.title};
   font-weight: 600;
@@ -35,7 +33,7 @@ const StyledCardFooter = styled(CardFooter)`
   justify-content: space-between;
 `
 
-const Details = styled(Link)`
+const Details = styled.span`
   color: ${colors.indigo};
   text-decoration: none;
   font-size: 1rem;
@@ -69,6 +67,7 @@ const Location = styled.p`
   color: ${colors.darkIndigo};
   font-size: 0.75rem;
   font-weight: 300;
+  line-height: 1.29;
   ${mediaQueries.md} {
     font-size: 0.875rem;
   }
@@ -77,7 +76,6 @@ const Location = styled.p`
 const PaddedCalendarIcon = styled(CalendarIcon)`
   margin-right: 8.5px;
   height: 1rem;
-  align-self: center;
 `
 
 const When = ({ startTime, endTime, recurrenceDates }) => (
@@ -102,7 +100,13 @@ When.defaultProps = {
 
 export const EventListingCard = ({ event, variant }) => {
   return (
-    <Card variant={variant}>
+    <Card
+      variant={variant}
+      to={generateEventSlug({
+        ...event,
+        occurrence: event.recurrenceDates && event.startTime,
+      })}
+    >
       <CardImage
         image={event.eventsListPicture.fixed}
         alt={event.eventsListPicture.title}
@@ -115,19 +119,16 @@ export const EventListingCard = ({ event, variant }) => {
         </Location>
         <StyledCardFooter>
           <div>
-            <Details
-              to={generateEventSlug({
-                ...event,
-                occurrence: event.recurrenceDates && event.startTime,
-              })}
-            >
-              Event details
-            </Details>
+            <Details>Event details</Details>
           </div>
           <Price>
             {event.eventPriceLow === 0
               ? 'Free entry'
-              : `From £${event.eventPriceLow}`}
+              : `From £${
+                  event.eventPriceLow % 1 === 0
+                    ? event.eventPriceLow
+                    : event.eventPriceLow.toFixed(2)
+                }`}
           </Price>
         </StyledCardFooter>
       </CardContent>
@@ -146,7 +147,11 @@ EventListingCard.propTypes = {
       lg: PropTypes.string,
       xl: PropTypes.string,
     }),
-  ]).isRequired,
+  ]),
+}
+
+EventListingCard.defaultProps = {
+  variant: 'column',
 }
 
 export default EventListingCard

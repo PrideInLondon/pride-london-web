@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import { space, layout, compose, variant } from 'styled-system'
 import Image from 'gatsby-image'
 import { colors } from '../../theme/colors'
@@ -18,12 +19,10 @@ const StyledCardImage = styled(Image)`
 
 const CardImageOverflow = styled.div`
   overflow: hidden;
-  flex-basis: 40%;
-  flex-shrink: 0;
-  height: auto;
   position: relative;
-  padding-top: 0;
-  min-height: 180px;
+  ${mediaQueries.md} {
+    padding-top: 68%;
+  }
 `
 
 const CardImageWrapper = styled.div`
@@ -46,6 +45,7 @@ export const CardImage: React.FC<CardImageProps> = ({ image, ...props }) => (
 export const CardTitle = styled.h3`
   margin: 0 0 0.5em 0;
   font-size: 1.25rem;
+  line-height: 1.25;
 
   ${mediaQueries.md} {
     font-size: 1.5rem;
@@ -86,10 +86,11 @@ export const CardFooter = styled.div`
   display: flex;
   margin-top: auto;
 `
-export const Card = styled.div<CardProps>`
+export const Card = styled(Link)<CardProps>`
   width: 100%;
   display: flex;
   overflow: hidden;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -103,10 +104,12 @@ export const Card = styled.div<CardProps>`
       column: {
         flexDirection: 'column',
         [CardImageOverflow]: {
-          flexBasis: '40%',
+          flexBasis: 'auto',
         },
         [CardContent]: {
-          flexBasis: '60%',
+          minHeight: 0,
+          flexBasis: 'auto',
+          flexGrow: 1,
           margin: 0,
         },
       },
@@ -116,6 +119,7 @@ export const Card = styled.div<CardProps>`
           flexBasis: '50%',
         },
         [CardContent]: {
+          minHeight: '200px',
           flexBasis: 'calc(50% + 60px)',
           margin: '25px 0 25px -60px',
           zIndex: '1',

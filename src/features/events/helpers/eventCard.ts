@@ -31,5 +31,7 @@ export const generateDisplayDate = ({
     eventIsToday || eventIsTomorrow
       ? `${eventIsToday ? 'Today' : 'Tomorrow'}`
       : `${startMoment.format('ddd, DD MMM')}`
-  } • ${startMoment.format('HH:mm')} - ${endMoment.format('HH:mm')}`
+  }\u00A0\u00A0•\u00A0\u00A0${startMoment.format('HH:mm')} - ${endMoment.format(
+    'HH:mm'
+  )}`
 }
