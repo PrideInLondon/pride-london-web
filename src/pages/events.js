@@ -2,9 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { color } from 'styled-system'
 import HelmetComponent from '../components/helmetComponent'
 import { media } from '../theme/media'
-import theme from '../theme/theme'
+import { colors } from '../theme/colors'
 import { GroupedEventsCards } from '../features/events'
 import Button from '../components/button'
 import { Container, Row, Column } from '../components/grid'
@@ -60,7 +61,7 @@ const ColumnPagination = styled(Column)`
 const EventCount = styled.p`
   font-size: 0.875rem;
   line-height: 1.214;
-  color: ${theme.colors.darkGrey};
+  color: ${colors.white};
 `
 
 const ListingCardWrapper = styled.div`
@@ -70,7 +71,7 @@ const ListingCardWrapper = styled.div`
 `
 
 const PageWrapper = styled.div`
-  background-color: ${theme.colors.lightGrey};
+  ${color}
 `
 
 export const Events = ({
@@ -96,7 +97,7 @@ export const Events = ({
   return (
     <Consumer>
       {context => (
-        <PageWrapper>
+        <PageWrapper backgroundColor={colors.indigo}>
           <HelmetComponent
             title="Coming Out"
             description="The new way to find the best queer events for the queer community from Pride in London"
@@ -104,10 +105,10 @@ export const Events = ({
           <EventsPageBanner
             title="Coming Out"
             subtitle=" The new way to find the best queer events for the queer community from Pride in London."
-            backgroundColor={theme.colors.bondiBlue}
+            backgroundColor={colors.darkCyan}
             image={childImageSharp}
           />
-          <Container>
+          <Container marginTop={{ default: 0, md: '60px' }}>
             <Row>
               <ListingCardWrapper>
                 {context.filteredEvents
@@ -123,7 +124,7 @@ export const Events = ({
                       events={events}
                       index={index}
                       event={event}
-                      key={event.node.id}
+                      key={event.node.id + event.node.startTime}
                       toLoad={context.state.eventsToShow}
                     />
                   ))}
@@ -144,6 +145,7 @@ export const Events = ({
                       context.filteredEvents.length
                     }
                     width={{ default: '100%', md: 'auto' }}
+                    variant="outline-white"
                   >
                     Show more events
                   </Button>
