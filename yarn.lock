@@ -5499,6 +5499,11 @@ clone-response@1.0.2, clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
+clsx@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.0.4.tgz#0c0171f6d5cb2fe83848463c15fcc26b4df8c2ec"
+  integrity sha512-1mQ557MIZTrL/140j+JVdRM6e31/OA4vTYxXgqIIZlndyfjHpyawKZia1Im05Vp9BWmImkcNrNtFYQMyFcgJDg==
+
 co@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/co/-/co-3.1.0.tgz#4ea54ea5a08938153185e15210c68d9092bc1b78"
@@ -15300,15 +15305,16 @@ react-hotkeys@2.0.0-pre4:
   dependencies:
     prop-types "^15.6.1"
 
-react-image-gallery@^0.8.18:
-  version "0.8.18"
-  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-0.8.18.tgz#bfc4698cbe22cbaa0b4e000994e7d248b2f098f2"
-  integrity sha512-2uRF4+wTm3oLj+ijJkcTpgH55V+QHKPjItJocNY/MFGIqK+qeNx3mBzxWaPUP8hX6onwGHY/zRos7zIkSQFqsw==
+react-image-gallery@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.5.tgz#b5fa0e603c5fa4466414afb781570cceba9ed36b"
+  integrity sha512-IdvEF2BAfMJbsR9PIeHY11b+6SaDLWIxDcFwPT1BANcgoSubca2x35gIjkGWMG4P9zYbzUH+JRxCKAOkMt3wKQ==
   dependencies:
+    clsx "^1.0.4"
     lodash.debounce "^4.0.8"
+    lodash.isequal "^4.5.0"
     lodash.throttle "^4.1.1"
     prop-types "^15.5.8"
-    react "^16.4.0"
     react-swipeable "^5.2.0"
     resize-observer-polyfill "^1.5.0"
 
@@ -15567,16 +15573,6 @@ react@^16.12.0, react@^16.8.3, react@^16.9.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-
-react@^16.4.0:
-  version "16.8.6"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
-  integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.13.6"
 
 reactcss@^1.2.0:
   version "1.2.3"
