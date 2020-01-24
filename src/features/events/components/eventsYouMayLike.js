@@ -92,7 +92,7 @@ export const EventsYouMayLike = ({ eventId }) => (
             <Row>
               {eventsYouMayLike.map(event => (
                 <FlexColumn
-                  width={[1, 1 / 2, 1 / 2, 1 / 3]}
+                  width={{ default: 1, sm: 0.5, lg: 0.3333 }}
                   key={event.node.id}
                 >
                   <EventListingCard event={event.node} />
