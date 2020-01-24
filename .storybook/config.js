@@ -2,16 +2,13 @@ import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { withInfo } from '@storybook/addon-info'
+import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import theme from '../src/theme/theme'
 import { GlobalStyle } from '../src/layouts/index.styles'
 
 const StorybookGlobalStyle = createGlobalStyle`
-  body {
-   background-color: unset;
- }
- 
  #story-root {
    padding: 0 40px;
  }
@@ -38,6 +35,7 @@ function loadStories() {
 
 addDecorator(withA11y)
 addDecorator(withInfo)
+addDecorator(withKnobs)
 addParameters({
   info: {
     inline: true,
