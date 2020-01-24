@@ -16,19 +16,6 @@ describe('<Input/>', () => {
     expect(onChangeSpy).toHaveBeenCalledTimes(1)
   })
 
-  it('should have correct id, required, type props and display label', () => {
-    const id = 'InputId'
-    const label = 'Input field'
-    const type = 'text'
-    const component = mount(
-      <Input id={id} label={label} type={type} required />
-    )
-    expect(component.find('input').prop('id')).toBe(id)
-    expect(component.find('input').prop('required')).toBe(true)
-    expect(component.find('input').prop('type')).toBe(type)
-    expect(component.find('label').text()).toBe(label)
-  })
-
   it('should change label focused prop on focus and blur of input', () => {
     const id = 'InputId'
     const label = 'Input field'
