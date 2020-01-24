@@ -124,10 +124,6 @@ export const Burger = styled.button`
     background-repeat: no-repeat;
   }
 
-  &:focus {
-    outline: none;
-  }
-
   ${media.nav`
     display: none;
   `};

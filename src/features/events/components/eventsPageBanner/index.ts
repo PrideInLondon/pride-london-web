@@ -1,0 +1,1 @@
+export { EventsPageBanner } from './EventsPageBanner'

@@ -1,4 +1,4 @@
-import theme from '../../theme/theme'
+import { md } from '../../theme/breakpoints'
 
 export const settings = {
   speed: 450,
@@ -11,7 +11,7 @@ export const settings = {
   className: 'gallery-slick',
   responsive: [
     {
-      breakpoint: theme.breakpoints[1] - 1,
+      breakpoint: md - 1,
       settings: {
         slidesToScroll: 1,
         slidesToShow: 1,

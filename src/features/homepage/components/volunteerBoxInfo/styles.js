@@ -11,6 +11,7 @@ export const BackgroundVolunteer = styled.div`
   background-repeat: no-repeat;
   background-position: center center;
   height: 270px;
+  margin-top: 50px;
 
   ${media.tablet`
     background-image: url(${volunteerBg});
@@ -29,7 +30,7 @@ export const ContentVolunteer = styled.div`
   h2 {
     color: #fff;
     margin: 20px;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: bold;
   }
 
@@ -48,10 +49,6 @@ export const ContentVolunteer = styled.div`
     }
     margin-top: -10%;
   `};
-
-  h2 {
-    font-size: 26px;
-  }
 
   ${media.tabletMax`
     background-size: 58% 42%;

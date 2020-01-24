@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BannerImage /> renders the component <BannerImage /> 1`] = `
+<styles__StyledWrapper
+  allowContentUnderflow={false}
+  color=""
+  fixed={null}
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  medium={false}
+  role="banner"
+  titlePosition="top"
+/>
+`;
+
+exports[`<BannerImage /> renders the subtitleText from props to the component BannerSubtitle 1`] = `
+<styles__StyledWrapper
+  allowContentUnderflow={false}
+  color=""
+  fixed={null}
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  medium={false}
+  role="banner"
+  titlePosition="top"
+>
+  <styles__StyledContainer
+    fixed={null}
+    imageFullWidth={false}
+    imageSrc=""
+    mx="auto"
+  >
+    <styles__StyledRow
+      display="flex"
+      flexWrap="wrap"
+      medium={false}
+    >
+      <Gridstyles__Column
+        pb={
+          Array [
+            30,
+            30,
+            2,
+          ]
+        }
+        width={1}
+      >
+        <StyledBannerTitle>
+          Here is a title
+        </StyledBannerTitle>
+        <StyledBannerSubtitle>
+          And here is a test subtitle!
+        </StyledBannerSubtitle>
+      </Gridstyles__Column>
+    </styles__StyledRow>
+  </styles__StyledContainer>
+</styles__StyledWrapper>
+`;
+
+exports[`<BannerImage /> renders the titleText from props to the component BannerTitle 1`] = `
+<styles__StyledWrapper
+  allowContentUnderflow={false}
+  color=""
+  fixed={null}
+  imageFullWidth={false}
+  imageSrc=""
+  large={false}
+  medium={false}
+  role="banner"
+  titlePosition="top"
+>
+  <styles__StyledContainer
+    fixed={null}
+    imageFullWidth={false}
+    imageSrc=""
+    mx="auto"
+  >
+    <styles__StyledRow
+      display="flex"
+      flexWrap="wrap"
+      medium={false}
+    >
+      <Gridstyles__Column
+        pb={
+          Array [
+            30,
+            30,
+            2,
+          ]
+        }
+        width={1}
+      >
+        <StyledBannerTitle>
+          Here is a test title!
+        </StyledBannerTitle>
+      </Gridstyles__Column>
+    </styles__StyledRow>
+  </styles__StyledContainer>
+</styles__StyledWrapper>
+`;

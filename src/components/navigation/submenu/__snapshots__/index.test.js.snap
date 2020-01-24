@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Submenu /> renders the component <Submenu /> when opened 1`] = `
+<styles__Panel
+  containerRef={
+    Object {
+      "current": undefined,
+    }
+  }
+  id="lorem"
+  isOpen={true}
+  onTransitionEnd={[Function]}
+>
+  <Gridstyles__Container
+    mx="auto"
+  >
+    <styles__PanelRow
+      display="flex"
+      flexWrap="wrap"
+    >
+      <styles__PanelInfoWrapper
+        width={
+          Array [
+            1,
+            1,
+            0.3333333333333333,
+            0.25,
+          ]
+        }
+      >
+        <styles__PanelTitle>
+          Lorem
+        </styles__PanelTitle>
+        <p>
+          lorem ipsum
+        </p>
+      </styles__PanelInfoWrapper>
+      <styles__PanelListWrapper
+        isOpen={true}
+      >
+        <styles__PanelListSection
+          key="Jelly-o chupa chups"
+        >
+          <styles__Heading>
+            Jelly-o chupa chups
+          </styles__Heading>
+          <styles__PanelList>
+            <li
+              key="Cupcake ipsum dolor sit"
+            >
+              <styles__PanelLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  }
+                }
+                itemProp="url"
+                onClick={[Function]}
+                to="/"
+              >
+                <span
+                  itemProp="name"
+                >
+                  Cupcake ipsum dolor sit
+                </span>
+              </styles__PanelLink>
+            </li>
+            <li
+              key="Cupcake ipsum sit"
+            >
+              <styles__PanelLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  }
+                }
+                itemProp="url"
+                onClick={[Function]}
+                to="/"
+              >
+                <span
+                  itemProp="name"
+                >
+                  Cupcake ipsum sit
+                </span>
+              </styles__PanelLink>
+            </li>
+            <li
+              key="Cupcake dolor sit"
+            >
+              <styles__PanelLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  }
+                }
+                itemProp="url"
+                onClick={[Function]}
+                to="/"
+              >
+                <span
+                  itemProp="name"
+                >
+                  Cupcake dolor sit
+                </span>
+              </styles__PanelLink>
+            </li>
+            <li
+              key="Cupcake ipsum dolor"
+            >
+              <styles__PanelLink
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  }
+                }
+                itemProp="url"
+                onClick={[Function]}
+                to="/"
+              >
+                <span
+                  itemProp="name"
+                >
+                  Cupcake ipsum dolor
+                </span>
+              </styles__PanelLink>
+            </li>
+          </styles__PanelList>
+        </styles__PanelListSection>
+      </styles__PanelListWrapper>
+    </styles__PanelRow>
+  </Gridstyles__Container>
+</styles__Panel>
+`;

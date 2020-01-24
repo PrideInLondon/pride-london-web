@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageIntro/> renders with default values 1`] = `
+<Fragment>
+  <CTABox
+    body="Lorem Ipsum"
+    link={
+      Object {
+        "text": "Button text",
+        "to": "/",
+      }
+    }
+    title="Title"
+  />
+  <styles__MainContainer
+    as="section"
+    mx="auto"
+  >
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
+      mb={
+        Array [
+          "30px",
+          "60px",
+        ]
+      }
+    >
+      <styles__IntroContainer
+        width={
+          Array [
+            1,
+            1,
+            1,
+            0.5833333333333334,
+          ]
+        }
+      >
+        <p>
+          Lorem ipsum dolor sit amet
+        </p>
+      </styles__IntroContainer>
+    </Gridstyles__Row>
+  </styles__MainContainer>
+</Fragment>
+`;

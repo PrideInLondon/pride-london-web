@@ -56,13 +56,6 @@ const Map = styled.iframe`
   `};
 `
 
-const DownloadPDFButton = styled(Button)`
-  margin: 30px 0;
-  ${media.tabletMax`
-    display: none;
-  `}
-`
-
 const DownloadPDFLinkMobile = styled.a`
   font-family: Roboto;
   font-size: 16px;
@@ -142,9 +135,13 @@ const ParadeMap = () => {
               amenities like water refill stations and toilets.
             </Subtitle>
             {mapPdfLink && (
-              <DownloadPDFButton link primary to={mapPdfLink}>
+              <Button
+                to={mapPdfLink}
+                marginBottom="30px"
+                display={{ default: 'none', md: 'inline-block' }}
+              >
                 Download map as a PDF
-              </DownloadPDFButton>
+              </Button>
             )}
             <DownloadAppLabel>
               There's always poor internet connection on the day, so it's a good

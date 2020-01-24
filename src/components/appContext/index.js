@@ -11,7 +11,7 @@ import {
   getDuration,
   sanitizeDates,
 } from '../../features/events/helpers/index'
-import { itemsToLoad, dateFormat } from '../../constants'
+import constants from '../../constants'
 
 const AppContext = React.createContext()
 const { Consumer } = AppContext
@@ -33,7 +33,7 @@ function getInitialFilterState() {
 const initialState = {
   events: [],
   filterOpen: null,
-  eventsToShow: itemsToLoad,
+  eventsToShow: constants.itemsToLoad,
   filters: getInitialFilterState(),
 }
 
@@ -47,25 +47,22 @@ class Provider extends Component {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.events !== prevState.events) {
-      // Generate all recurrences of events
       const allEventOccurences = []
-      // Map over events
-      nextProps.events.map(event => {
+
+      nextProps.events.forEach(event => {
         if (!event.node.recurrenceDates) {
           allEventOccurences.push(event)
         } else {
           const recurrenceDates = sanitizeDates([
-            moment(event.node.startTime).format(dateFormat),
+            moment(event.node.startTime).format(constants.dateFormat),
             ...event.node.recurrenceDates,
           ])
           const time = moment(event.node.startTime).format('HH:mm')
           const duration = getDuration(event.node.startTime, event.node.endTime)
 
           recurrenceDates.forEach(date => {
-            // Deep clone event
             const copy = JSON.parse(JSON.stringify(event))
 
-            // Modify start time and end time
             copy.node.startTime = moment(
               `${date} ${time}`,
               'DD/MM/YYYY hh:mm'
@@ -73,7 +70,6 @@ class Provider extends Component {
             copy.node.endTime = moment(copy.node.startTime)
               .add(duration, 'milliseconds')
               .format()
-            copy.node.id = `${event.node.id}-${date.split('/').join('')}`
 
             allEventOccurences.push(copy)
           })
@@ -197,7 +193,9 @@ class Provider extends Component {
 
   showMore = filteredCount => {
     if (this.state.eventsToShow < filteredCount) {
-      this.setState({ eventsToShow: this.state.eventsToShow + itemsToLoad })
+      this.setState({
+        eventsToShow: this.state.eventsToShow + constants.itemsToLoad,
+      })
     }
   }
 

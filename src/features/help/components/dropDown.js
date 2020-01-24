@@ -29,22 +29,22 @@ const StyledButton = styled.button`
   border-radius: 4px;
   line-height: 17px;
   height: 58px;
-  apperance: none;
+  appearance: none;
   padding: 20px;
   padding-left: 10px;
   text-indent: 10px;
   text-align: left;
   color: ${theme.colors.white};
   overflow: hidden;
-  appearance: none;
-  background: url(${props =>
-      props.isOpen ? `${chevronUp}` : `${chevronDown}`})
-    no-repeat 94%;
+  background-image: ${props =>
+    props.isOpen ? `url(${chevronUp})` : `url(${chevronDown})`};
+  background-repeat: no-repeat;
+  background-size: 94%;
   ${media.desktop`
     margin-bottom: 0;
-  `};
-
-  &:hover {
+  `}
+  &:hover,
+  &:focus {
     cursor: pointer;
   }
 `
@@ -68,7 +68,8 @@ const ListItem = styled.li`
     margin-bottom: 0;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: rgba(0, 0, 0, 0.2);
     color: ${theme.colors.eucalyptusGreen};
     cursor: pointer;

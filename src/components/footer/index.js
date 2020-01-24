@@ -23,8 +23,6 @@ import {
   SponsorsCTAWrapper,
   SponsorsContainer,
   SponsorImgWrapper,
-  SubscribeWrapper,
-  SubscribeLink,
   LegalSection,
   LegalStrapline,
   LegalList,
@@ -167,15 +165,6 @@ export const Footer = ({
                 #pridejubilee
               </HashTag>
             </HashTags>
-            <SubscribeWrapper width={[1, 1, 0.3]}>
-              <SubscribeLink
-                href="https://prideinlondon.us6.list-manage.com/subscribe?u=8289d9ca2253b74574f849c73&id=a2423c3382"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Subscribe for Pride updates
-              </SubscribeLink>
-            </SubscribeWrapper>
           </SocialSection>
           <SponsorsSection width={1}>
             <SponsorsHeading>Our amazing partners</SponsorsHeading>

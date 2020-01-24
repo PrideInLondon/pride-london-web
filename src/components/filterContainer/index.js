@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Container, Row, Column } from '../../components/grid'
-import { filterTypes } from '../../constants'
+import constants from '../../constants'
 import FilterLabel from './filterLabel'
 import { FilterContainerWrapper } from './styles'
 
@@ -11,6 +11,8 @@ export const calculateIsSelected = (filterType, filterName, selected) => {
       return selected.includes(filterName)
     case 'radio':
       return filterName === selected
+    default:
+      return
   }
 }
 
@@ -44,7 +46,7 @@ const FilterContainer = ({
 )
 
 FilterContainer.propTypes = {
-  filterType: PropTypes.oneOf(filterTypes).isRequired,
+  filterType: PropTypes.oneOf(constants.filterTypes).isRequired,
   categories: PropTypes.arrayOf(
     PropTypes.shape({ title: PropTypes.string, hexColour: PropTypes.string })
   ).isRequired,

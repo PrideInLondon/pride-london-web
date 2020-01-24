@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsCards renders with default values 1`] = `
+<Gridstyles__Container
+  mx="auto"
+>
+  <Gridstyles__Row
+    display="flex"
+    flexWrap="wrap"
+  >
+    <Gridstyles__FlexColumn
+      key="id"
+      py={
+        Array [
+          2,
+          2,
+          2,
+          3,
+        ]
+      }
+      width={
+        Array [
+          1,
+          1,
+          0.5,
+          0.3333333333333333,
+        ]
+      }
+    >
+      <NewsCard
+        category={Object {}}
+        className=""
+        datePublished="2019-03-28T20:30+00:00"
+        readTime={null}
+        renderAs={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        slug="news/article"
+        title="title"
+      />
+    </Gridstyles__FlexColumn>
+  </Gridstyles__Row>
+</Gridstyles__Container>
+`;

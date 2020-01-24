@@ -6,7 +6,7 @@ import BannerImage from '../../components/banner/bannerImage'
 import background from '../../theme/assets/images/banners/parade-groups/bg@2x.jpg'
 import ParadeGroupsContainer from '../../features/paradeGroups/containers/paradeGroupsContainer'
 import { media } from '../../theme/media'
-import { paradeGroupCategories } from '../../constants'
+import constants from '../../constants'
 
 const Container = styled.div`
   position: relative;
@@ -40,18 +40,22 @@ const ParadeGroups = ({ data: { paradeGroups } }) => {
       />
       <Container>
         <TextContainer>
-          Pride in London are proud to welcome more than 30,000 people to the
-          streets of London for this year’s parade. With more than twice the
-          number of people who took part in 2015, it’s set to be our most
-          diverse parade yet with more groups representing trans*, BAME and
-          bisexual communities than last year. We’re also excited to welcome so
-          many different kinds of organisations from so many industries. More
-          than half of parade-goers will represent charities or not-for-profit
-          organisations.
+          The parade celebrates our colourful community, brightening up the
+          streets of London with people from every walk of life. In 2019, we
+          welcomed around 30,000 individuals to march together for love, protest
+          and activism. Formed from over 600 groups - more than half of which
+          represented charities or not-for-profit organisations - we’re proud
+          that last year’s Pride was our most diverse yet, uniting more trans*,
+          BAME and bisexual communities than ever before.
+        </TextContainer>
+        <TextContainer>
+          If you want to be part of the 2020 parade, the window for applications
+          will open in the new year. Further information will be announced in
+          due course.
         </TextContainer>
         <ParadeGroupsContainer
           paradeGroups={mappedParadeGroups}
-          categories={paradeGroupCategories}
+          categories={constants.paradeGroupCategories}
         />
       </Container>
     </>

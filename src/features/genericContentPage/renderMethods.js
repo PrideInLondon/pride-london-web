@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { BLOCKS } from '@contentful/rich-text-types'
-import styled from 'styled-components'
 import { ReactTypeformEmbed } from 'react-typeform-embed'
 import Button from '../../components/button'
 import renderSponsors from '../../components/sponsors/helpers'
@@ -11,16 +10,16 @@ import { parseGQLToGallery } from '../../utilities/galleryParser'
 import Figure from './components/figure'
 import Video from './components/video'
 
-const StyledButton = styled(Button)`
-  margin-bottom: 1.25em;
-`
-
 export const renderFigure = node => <Figure {...node.data.target.fields} />
 
 const renderStyledButton = ({ primary, to, content }) => (
-  <StyledButton primary={primary} to={to}>
+  <Button
+    variant={primary ? 'primary' : 'secondary'}
+    to={to}
+    marginBottom="1.25em"
+  >
     {content}
-  </StyledButton>
+  </Button>
 )
 
 const renderTypeformButton = ({ primary, content, to }) => {
@@ -47,9 +46,9 @@ const renderTypeformButton = ({ primary, content, to }) => {
         }}
         autoClose={5}
       />
-      <StyledButton primary={primary} onClick={openForm}>
+      <Button variant={primary ? 'primary' : 'secondary'} onClick={openForm}>
         {content}
-      </StyledButton>
+      </Button>
     </span>
   )
 }

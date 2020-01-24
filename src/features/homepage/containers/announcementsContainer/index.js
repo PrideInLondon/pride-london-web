@@ -36,6 +36,7 @@ export const query = graphql`
 
 const BgAnnouncement = styled.div`
   position: relative;
+  margin-top: 30px;
 
   &:after {
     content: '';

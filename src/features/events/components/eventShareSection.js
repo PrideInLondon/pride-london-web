@@ -5,7 +5,6 @@ import moment from 'moment'
 import EmailIcon from '../../../components/icons/email'
 import TwitterIcon from '../../../components/icons/twitter'
 import FacebookIcon from '../../../components/icons/facebook'
-// import MessengerIcon from '../../../components/icons/messenger'
 import LinkedinIcon from '../../../components/icons/linkedin'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
@@ -23,7 +22,7 @@ const ShareList = styled.div`
 const ShareText = styled.p`
   font-size: 14px;
   font-family: Poppins;
-  font-size: 600;
+  font-weight: 600;
   line-height: 1.29;
   display: inline-block;
   margin-right: 20px;
@@ -81,14 +80,6 @@ const facebookShareUrl = location => {
   return `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
 }
 
-// const messengerShareUrl = (location, isMobile = false) => {
-//   const encodedUrl = encodeURIComponent(location)
-//   if (isMobile) {
-//     return `fb-messenger://share/?app_id=${process.env.GATSBY_FACEBOOK_APP_ID}&link=${encodedUrl}`
-//   }
-//   return `https://www.facebook.com/dialog/send?app_id=${process.env.GATSBY_FACEBOOK_APP_ID}&link=${encodedUrl}&redirect_uri=${encodedUrl}`
-// }
-
 const linkedinShareUrl = (name, date, location) => {
   const encodedUrl = encodeURIComponent(location)
   const body = encodeURIComponent(shareText(name, date, location))
@@ -120,26 +111,6 @@ const EventShareSection = ({ name, location, date }) => (
     >
       <FacebookIcon width={25} height={25} fill={theme.colors.indigo} />
     </ShareLink>
-    {/* {process.env.GATSBY_FACEBOOK_APP_ID && (
-      <>
-        <ShareLink
-          desktopOnly
-          href={messengerShareUrl(ocation)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <MessengerIcon width={25} height={25} fill={theme.colors.indigo} />
-        </ShareLink>
-        <ShareLink
-          mobileOnly
-          href={messengerShareUrl(location, true)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <MessengerIcon width={25} height={25} fill={theme.colors.indigo} />
-        </ShareLink>
-      </>
-    )} */}
     <ShareLink
       href={linkedinShareUrl(name, date, location)}
       target="_blank"

@@ -1,5 +1,6 @@
 module.exports = {
-  "plugins": ["prettier", "react", "import", "react-hooks"],
+  "extends": ["prettier", "react-app", "plugin:import/typescript"],
+  "plugins": ["prettier", "react", "react-hooks", "@typescript-eslint"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
@@ -24,6 +25,7 @@ module.exports = {
     "import/extensions": "error",
     "import/first": "error",
     "import/order": "error",
+    "import/no-deprecated": "error",
     "import/no-duplicates": "error",
     "import/no-extraneous-dependencies": "off",
     "import/no-named-as-default": "off",
@@ -38,7 +40,7 @@ module.exports = {
     "no-nested-ternary": "off",
     "no-return-assign": "off",
     "no-param-reassign": "off",
-    "no-undef": "off", // throw error on graphql queries
+    "no-undef": "error",
     "no-unused-vars": "error",
     "no-use-before-define": "error",
     "object-curly-newline": "off",
@@ -61,6 +63,35 @@ module.exports = {
     "react/sort-comp": 2,
     "semi": "off",
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
-  }
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+  },
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      rules: {
+        "react/prop-types": "off",
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            args: 'none',
+            ignoreRestSiblings: true,
+          },
+        ],
+      },
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        ecmaFeatures: { jsx: true },
+        warnOnUnsupportedTypeScriptVersion: true,
+      },
+    },
+  ],
+  settings: {
+    'import/resolver': {
+      node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 }

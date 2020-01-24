@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadAppBox download app section snapshot 1`] = `
+<Fragment>
+  <styles__DownloadAppContainer
+    mx="auto"
+  >
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
+      px={
+        Array [
+          0,
+          15,
+        ]
+      }
+    >
+      <styles__DownloadAppContentColumn
+        pb={
+          Array [
+            40,
+            40,
+            60,
+            80,
+          ]
+        }
+        pl={
+          Array [
+            20,
+            20,
+            40,
+            80,
+          ]
+        }
+        pr={20}
+        pt={
+          Array [
+            20,
+            20,
+            40,
+            80,
+          ]
+        }
+        width={
+          Array [
+            1,
+            1,
+            1,
+            0.55,
+          ]
+        }
+      >
+        <styles__DownloadAppSectionTitle>
+          Download our app
+        </styles__DownloadAppSectionTitle>
+        <styles__DownloadAppSectionDescription>
+          We all know there's hardly any signal in Central London during Pride, so make sure to download our iOS & Android app to carry our interactive Parade map, stage line up info and afterparty information around with you on the day
+        </styles__DownloadAppSectionDescription>
+        <styles__AppDownloadButton
+          aria-label="Download from App Store"
+          href="https://itunes.apple.com/gb/app/pride-in-london/id1250496471?mt=8"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Pride in London on the App Store"
+            src=""
+          />
+        </styles__AppDownloadButton>
+        <styles__AppDownloadButton
+          aria-label="Download from Google Play"
+          href="https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en_GB"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Pride in London in the Google Play"
+            src=""
+          />
+        </styles__AppDownloadButton>
+      </styles__DownloadAppContentColumn>
+      <styles__MockupColumn
+        px={0}
+        py={0}
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+        width={
+          Array [
+            1,
+            1,
+            1,
+            0.45,
+          ]
+        }
+      >
+        <styles__MockupImgBackground>
+          <styles__MockupImg
+            src=""
+          />
+        </styles__MockupImgBackground>
+      </styles__MockupColumn>
+    </Gridstyles__Row>
+  </styles__DownloadAppContainer>
+</Fragment>
+`;

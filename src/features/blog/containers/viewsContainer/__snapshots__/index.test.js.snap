@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewsContainer should render with default values 1`] = `
+<section>
+  <Gridstyles__Container
+    mx="auto"
+  >
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
+    >
+      <Gridstyles__Column
+        width={1}
+      >
+        <styles__CardContainer>
+          <styles__ViewsTitle
+            isCentered={true}
+            isLight={true}
+          >
+            Views
+          </styles__ViewsTitle>
+          <Slider
+            arrows={true}
+            infinite={true}
+            responsive={
+              Array [
+                Object {
+                  "breakpoint": 767,
+                  "settings": Object {
+                    "arrows": false,
+                    "centerMode": true,
+                    "centerPadding": "100px",
+                    "slidesToScroll": 1,
+                    "slidesToShow": 1,
+                  },
+                },
+                Object {
+                  "breakpoint": 550,
+                  "settings": Object {
+                    "arrows": false,
+                    "centerMode": true,
+                    "centerPadding": "40px",
+                    "slidesToScroll": 1,
+                    "slidesToShow": 1,
+                  },
+                },
+              ]
+            }
+            slidesToScroll={1}
+            slidesToShow={3}
+            speed={500}
+          >
+            <ViewsCard
+              author={
+                Object {
+                  "displayName": "Test",
+                }
+              }
+              category="Views"
+              datePublished="2019-05-17"
+              featuredImage={
+                Object {
+                  "fixed": Object {
+                    "base64": "abc",
+                    "height": 400,
+                    "src": "src",
+                    "srcSet": "srcset",
+                    "width": 400,
+                  },
+                }
+              }
+              id="1"
+              key="1"
+              slug="somewhere1"
+              title="test"
+            />
+            <ViewsCard
+              author={
+                Object {
+                  "displayName": "Test 2",
+                }
+              }
+              category="Views"
+              datePublished="2019-05-17"
+              featuredImage={
+                Object {
+                  "fixed": Object {
+                    "base64": "abc",
+                    "height": 400,
+                    "src": "src",
+                    "srcSet": "srcset",
+                    "width": 400,
+                  },
+                }
+              }
+              id="2"
+              key="2"
+              slug="somewhere2"
+              title="test"
+            />
+          </Slider>
+        </styles__CardContainer>
+      </Gridstyles__Column>
+    </Gridstyles__Row>
+  </Gridstyles__Container>
+</section>
+`;

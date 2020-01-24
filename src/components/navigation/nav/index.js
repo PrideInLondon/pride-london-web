@@ -27,6 +27,7 @@ const Nav = () => {
     <HeaderWrapper>
       <Header>
         <FlexRow
+          flexWrap="nowrap"
           mx={[
             0, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
             0, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
@@ -94,8 +95,12 @@ const Nav = () => {
                         heading: 'Parade',
                         links: [
                           {
-                            title: "This year's parade",
+                            title: '2020 Parade',
                             url: '/parade',
+                          },
+                          {
+                            title: 'Take part in the Parade',
+                            url: '/parade/take-part',
                           },
                           {
                             title: 'Parade groups',
@@ -110,20 +115,38 @@ const Nav = () => {
                             url: '/parade/accessibility',
                           },
                           {
-                            title: 'Take part',
-                            url: '/parade/take-part',
-                          },
-                          {
                             title: 'Residents and businesses info',
                             url: '/parade/residents-and-businesses-info',
                           },
                         ],
                       },
                       {
+                        heading: 'Line up',
+                        links: [
+                          {
+                            title: 'Cabaret Stage',
+                            url: '/line-up/cabaret-stage',
+                          },
+                          {
+                            title: 'Family Area',
+                            url: '/line-up/family-area',
+                          },
+                          {
+                            title: 'Trafalgar Square Stage',
+                            url: '/line-up/trafalgar-square-stage',
+                          },
+                          {
+                            title: "Women's Area",
+                            url: '/line-up/womens-area',
+                          },
+                          { title: 'World Area', url: '/line-up/world-area' },
+                        ],
+                      },
+                      {
                         heading: 'Stalls',
                         links: [
                           {
-                            title: 'This year’s stalls',
+                            title: 'Last year’s stalls',
                             url: '/parade/stalls',
                           },
                           {
@@ -140,45 +163,7 @@ const Nav = () => {
                   item={{
                     id: 'nav-events',
                     title: 'Events',
-                    desc:
-                      'Discover and attend the Pride and LGBT+ events happening all across London.',
-                    url: '/',
-                    submenu: [
-                      {
-                        heading: 'Pride Festival',
-                        links: [
-                          {
-                            title: "This year's festival",
-                            url: '/events/festival',
-                          },
-                          {
-                            title: "What's on",
-                            url: '/events',
-                          },
-                          {
-                            title: 'Host an event',
-                            url: '/events/host-an-event',
-                          },
-                          {
-                            title: 'Download our app',
-                            url: '/app',
-                          },
-                        ],
-                      },
-                      {
-                        heading: "Pride's Got Talent",
-                        links: [
-                          {
-                            title: "About Pride's Got Talent",
-                            url: '/events/prides-got-talent',
-                          },
-                          {
-                            title: 'Audition',
-                            url: '/events/prides-got-talent/audition',
-                          },
-                        ],
-                      },
-                    ],
+                    url: '/events',
                   }}
                 />
                 <NavItem
@@ -195,7 +180,7 @@ const Nav = () => {
                         links: [
                           {
                             title: 'Volunteer',
-                            url: '/support-us/volunteer',
+                            url: 'https://volunteer.prideinlondon.org',
                           },
                           {
                             title: 'Make a donation',
@@ -244,12 +229,7 @@ const Nav = () => {
                   }}
                 />
                 <NavItem>
-                  <DonateButton
-                    link
-                    primary
-                    fullmobile
-                    to="https://donate.prideinlondon.org/"
-                  >
+                  <DonateButton to="https://donate.prideinlondon.org/">
                     Donate
                   </DonateButton>
                 </NavItem>

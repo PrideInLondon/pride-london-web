@@ -17,6 +17,7 @@ import {
 const BannerImage = ({
   titleText,
   subtitleText,
+  titlePosition,
   date,
   imageSrc,
   imageFullWidth,
@@ -60,6 +61,7 @@ const BannerImage = ({
       role="banner"
       ref={wrapper}
       fixed={fixed && fixed.desktop && fixed.tablet && fixed.mobile && fixed}
+      titlePosition={titlePosition}
     >
       {titleText && (
         <StyledContainer
@@ -98,6 +100,7 @@ const BannerImage = ({
                 frameBorder="0"
                 allow="autoplay; fullscreen"
                 allowFullScreen
+                title="Background video of Pride Parade"
               ></iframe>
             </VideoWrapper>
           )}
@@ -114,6 +117,7 @@ BannerImage.propTypes = {
   imageFullWidth: PropTypes.bool,
   subtitleText: PropTypes.string,
   titleText: PropTypes.string,
+  titlePosition: PropTypes.oneOf(['top', 'bottom']),
   color: PropTypes.string,
   date: PropTypes.string,
   children: PropTypes.oneOfType([
@@ -134,6 +138,7 @@ BannerImage.defaultProps = {
   altText: '',
   subtitleText: '',
   titleText: '',
+  titlePosition: 'top',
   color: '',
   children: null,
   date: null,

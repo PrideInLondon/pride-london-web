@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Featured Event Content renders with default values 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
+        "isStatic": false,
+        "rules": Array [
+          "overflow:hidden;.slick-list{overflow:visible;}.slick-track{display:flex;.slick-slide{display:flex;height:auto;& > div{height:100%;width:100%;& > div{height:100%;& > a{height:100%;}}}}}",
+          "@media (min-width:",
+          "768",
+          "px){",
+          "
+    .slick-list {
+      overflow: hidden;
+    }
+  ",
+          ";}",
+          ";",
+          "@media (max-width:",
+          "767",
+          "px){",
+          "
+    .slick-list {
+      padding-left: 10px !important;
+    }
+  ",
+          ";}",
+          ";.slick-slider{position:static;}.slick-prev{position:absolute;top:50%;left:25px;transform:translate(0,-50%);}.slick-next{position:absolute;top:50%;right:25px;transform:translate(0,-50%);}",
+        ],
+      },
+      "displayName": "styles__FeaturedEventContent",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "styles__FeaturedEventContent-sc-1f4g5jt-0",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`FeaturedEvents renders with default values 1`] = `
+<styles__FeaturedEventContent>
+  <Slider
+    arrows={true}
+    className="featured-events-slider"
+    infinite={true}
+    responsive={
+      Array [
+        Object {
+          "breakpoint": 1279,
+          "settings": Object {
+            "slidesToScroll": 1,
+            "slidesToShow": 2,
+          },
+        },
+        Object {
+          "breakpoint": 767,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "slidesToScroll": 1,
+            "slidesToShow": 2,
+          },
+        },
+        Object {
+          "breakpoint": 480,
+          "settings": Object {
+            "arrows": false,
+            "centerMode": true,
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+      ]
+    }
+    slidesToScroll={1}
+    slidesToShow={2}
+    speed={500}
+  >
+    <Gridstyles__FlexColumn
+      key="123abcPride Quiz"
+      width={
+        Array [
+          1,
+          1,
+          0.5,
+          0.3333333333333333,
+        ]
+      }
+    >
+      <EventListingCard
+        displaycolumn={true}
+        event={
+          Object {
+            "endTime": "2019-06-05T23:00+01:00",
+            "eventPriceLow": 3,
+            "eventsListPicture": Object {
+              "fixed": Object {
+                "base64": "abc",
+                "height": 235,
+                "src": "src",
+                "srcSet": "srcset",
+                "width": 400,
+              },
+              "title": "img alt",
+            },
+            "id": "123abc",
+            "name": "Pride Quiz",
+            "startTime": "2019-06-05T20:00+01:00",
+          }
+        }
+      />
+    </Gridstyles__FlexColumn>
+    <Gridstyles__FlexColumn
+      key="123abcdPride Quiz 2"
+      width={
+        Array [
+          1,
+          1,
+          0.5,
+          0.3333333333333333,
+        ]
+      }
+    >
+      <EventListingCard
+        displaycolumn={true}
+        event={
+          Object {
+            "endTime": "2019-06-05T23:00+01:00",
+            "eventPriceLow": 3,
+            "eventsListPicture": Object {
+              "fixed": Object {
+                "base64": "abc",
+                "height": 235,
+                "src": "src",
+                "srcSet": "srcset",
+                "width": 400,
+              },
+              "title": "img alt",
+            },
+            "id": "123abcd",
+            "name": "Pride Quiz 2",
+            "startTime": "2019-06-05T20:00+01:00",
+          }
+        }
+      />
+    </Gridstyles__FlexColumn>
+  </Slider>
+</styles__FeaturedEventContent>
+`;

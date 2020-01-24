@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import HelmetComponent from '../components/helmetComponent'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { Column, Row, Container } from '../components/grid'
@@ -45,48 +45,44 @@ const responsiveBannerUrl = url => {
   return `${url}?w=${width}`
 }
 
-// eslint-disable-next-line react/prefer-stateless-function
-export default class GenericContentPage extends Component {
-  render() {
-    const {
-      data: {
-        contentfulGenericContentPage: {
-          title,
-          subtitle,
-          bannerImage,
-          bannerColor,
-          content: { json },
-        },
-      },
-    } = this.props
-    return (
-      <>
-        <Helmet title={title} />
-        <BannerImage
-          titleText={title}
-          subtitleText={subtitle}
-          imageSrc={bannerImage && responsiveBannerUrl(bannerImage.file.url)}
-          color={bannerColor || theme.colors.beachBlue}
-          imageFullWidth
-          fixed={bannerImage}
-        />
-        <PageWrapper>
-          <Container>
-            <Row>
-              <Content width={[1, 1, 0.666]}>
-                <GenericContent content={json} />
-              </Content>
-            </Row>
-          </Container>
-        </PageWrapper>
-      </>
-    )
-  }
-}
+const GenericContentPage = ({
+  data: {
+    contentfulGenericContentPage: {
+      title,
+      subtitle,
+      bannerImage,
+      bannerColor,
+      content: { json },
+    },
+  },
+}) => (
+  <>
+    <HelmetComponent title={title} />
+    <BannerImage
+      titleText={title}
+      subtitleText={subtitle}
+      imageSrc={bannerImage && responsiveBannerUrl(bannerImage.file.url)}
+      color={bannerColor || theme.colors.beachBlue}
+      imageFullWidth
+      fixed={bannerImage}
+    />
+    <PageWrapper>
+      <Container>
+        <Row>
+          <Content width={[1, 1, 0.666]}>
+            <GenericContent content={json} />
+          </Content>
+        </Row>
+      </Container>
+    </PageWrapper>
+  </>
+)
 
 GenericContentPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
+
+export default GenericContentPage
 
 export const query = graphql`
   query genericContentPageQuery($id: String!) {

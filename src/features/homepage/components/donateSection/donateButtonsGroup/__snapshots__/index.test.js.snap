@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DonateButtonsGroup DonateButtonsGroup snapshot 1`] = `
+<styles__ButtonsContainer>
+  <styles__ButtonsGroup>
+    <Button
+      to="https://donate.prideinlondon.org/?amount=5"
+      variant="primary"
+    >
+       £5 
+    </Button>
+    <Button
+      to="https://donate.prideinlondon.org/?amount=10"
+      variant="primary"
+    >
+       £10 
+    </Button>
+    <Button
+      to="https://donate.prideinlondon.org/?amount=20"
+      variant="primary"
+    >
+       £20 
+    </Button>
+  </styles__ButtonsGroup>
+  <span>
+     OR 
+  </span>
+  <styles__ButtonSingle>
+    <Button
+      to="https://donate.prideinlondon.org"
+      variant="primary"
+      width={
+        Object {
+          "default": "100%",
+          "md": "auto",
+        }
+      }
+    >
+      Choose your own amount
+    </Button>
+  </styles__ButtonSingle>
+</styles__ButtonsContainer>
+`;

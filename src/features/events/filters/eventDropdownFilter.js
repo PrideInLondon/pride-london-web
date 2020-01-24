@@ -84,11 +84,12 @@ const Badge = styled.span`
   justify-content: center;
   margin-left: 10px;
   border-radius: 50%;
-  color: ${theme.colors.white};
+  color: ${theme.colors.indigo};
   background-color: ${theme.colors.eucalyptusGreen};
   height: 22px;
   width: 22px;
   line-height: 1;
+  font-size: 0.875rem;
 
   ${media.tablet`
     background-color: ${theme.colors.indigo};
@@ -99,13 +100,6 @@ class EventDropdownFilter extends Component {
   state = {
     isOpen: false,
   }
-
-  //   static getDerivedStateFromProps(nextProps) {
-  //     if (nextProps.filterOpen !== nextProps.filterName) {
-  //       return { isOpen: false }
-  //     }
-  //     return { isOpen: true }
-  //   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.isOpen !== nextState.isOpen

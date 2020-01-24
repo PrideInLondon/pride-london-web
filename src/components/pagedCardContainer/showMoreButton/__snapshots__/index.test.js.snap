@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowMoreButton renders component 1`] = `
+<Gridstyles__Row
+  display="flex"
+  flexWrap="wrap"
+  pb={
+    Array [
+      30,
+      30,
+      50,
+    ]
+  }
+>
+  <Gridstyles__Column
+    mx="auto"
+    pt={
+      Array [
+        30,
+        30,
+        50,
+      ]
+    }
+  >
+    <Button
+      onClick={[MockFunction]}
+      variant="primary"
+    >
+      Foo
+    </Button>
+  </Gridstyles__Column>
+</Gridstyles__Row>
+`;

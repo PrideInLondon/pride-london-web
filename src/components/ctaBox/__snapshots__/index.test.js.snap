@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CTABox/> renders with default values 1`] = `
+<styles__CTAWrapper>
+  <Gridstyles__Container
+    mx="auto"
+  >
+    <Gridstyles__Row
+      display="flex"
+      flexWrap="wrap"
+    >
+      <styles__RelativeColumn
+        width={1}
+      >
+        <styles__CTAPanel>
+          <styles__CTATitle>
+            Title
+          </styles__CTATitle>
+          <styles__CTABody>
+            Lorem Ipsum
+          </styles__CTABody>
+          <Button
+            to="/"
+            variant="primary"
+          >
+            Button text
+          </Button>
+        </styles__CTAPanel>
+      </styles__RelativeColumn>
+    </Gridstyles__Row>
+  </Gridstyles__Container>
+</styles__CTAWrapper>
+`;

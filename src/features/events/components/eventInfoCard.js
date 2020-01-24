@@ -83,8 +83,6 @@ const VSpace = styled.div`
   margin-top: 15px;
 `
 
-// I chose formats based on
-// https://www.gov.uk/service-manual/design/dates
 const dateFormat = 'dddd D MMMM YYYY'
 
 const formatDayRange = (startTime, endTime) => {
@@ -114,7 +112,8 @@ const formatAddress = (addressLine1, addressLine2, city, postcode) =>
 const Link = styled.a`
   color: white;
   text-decoration: underline;
-  :hover {
+  :hover,
+  :focus {
     text-decoration: none;
   }
 `
@@ -193,11 +192,7 @@ export default function EventInfoCard({
         />
       )}
       {(phone || email) && ticketingUrl && <VSpace />}
-      {ticketingUrl && (
-        <Button primary to={ticketingUrl}>
-          Get tickets
-        </Button>
-      )}
+      {ticketingUrl && <Button to={ticketingUrl}>Get tickets</Button>}
     </Wrapper>
   )
 }

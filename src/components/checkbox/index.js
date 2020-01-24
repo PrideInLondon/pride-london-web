@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { media } from '../../theme/media'
@@ -32,6 +32,7 @@ const Input = styled.input`
     background-image: url(${checkmark});
     background-repeat: no-repeat;
     background-position: center center;
+    background-color: ${theme.colors.eucalyptusGreen};
 
     & + label {
       font-weight: 700;
@@ -52,46 +53,34 @@ const Label = styled.label`
   `};
 `
 
-class Checkbox extends Component {
-  constructor(props) {
-    super(props)
+const Checkbox = ({ checked, handleChange, id, value, name, label }) => {
+  const [checkedState, setCheckedState] = useState(checked)
 
-    this.state = {
-      checked: this.props.checked,
+  useEffect(() => {
+    setCheckedState(checked)
+  }, [checked])
+
+  const toggleCheckboxHandler = e => {
+    setCheckedState(e.target.checked)
+
+    if (handleChange) {
+      handleChange(e)
     }
   }
 
-  static getDerivedStateFromProps(nextProps) {
-    return { checked: nextProps.checked }
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextState.checked !== this.state.checked
-  }
-
-  toggleCheckbox = e => {
-    this.setState({ checked: e.target.checked })
-
-    if (this.props.handleChange) {
-      this.props.handleChange(e)
-    }
-  }
-
-  render() {
-    return (
-      <Wrapper>
-        <Input
-          type="checkbox"
-          id={this.props.id}
-          value={this.props.value}
-          name={this.props.name}
-          onChange={this.toggleCheckbox}
-          checked={this.state.checked}
-        />
-        <Label htmlFor={this.props.id}>{this.props.label}</Label>
-      </Wrapper>
-    )
-  }
+  return (
+    <Wrapper>
+      <Input
+        type="checkbox"
+        id={id}
+        value={value}
+        name={name}
+        onChange={toggleCheckboxHandler}
+        checked={checkedState}
+      />
+      <Label htmlFor={id}>{label}</Label>
+    </Wrapper>
+  )
 }
 
 Checkbox.propTypes = {
