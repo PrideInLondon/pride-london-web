@@ -1,12 +1,25 @@
 import React from 'react'
+import toJSON from 'enzyme-to-json'
 import { shallow, mount } from 'enzyme'
 
 import Input from './Input'
 
 describe('<Input/>', () => {
   it('matches snapshot', () => {
-    const wrapper = shallow(<Input />)
-    expect(wrapper).toMatchSnapshot()
+    const id = 'InputId'
+    const label = 'Input field'
+    const type = 'text'
+    const required = true
+    const component = shallow(
+      <Input id={id} label={label} type={type} required={required} />
+    )
+    expect(toJSON(component)).toMatchSnapshot()
+    expect(component.find('Inputstyles__StyledInput').prop('id')).toBe(id)
+    expect(component.find('Inputstyles__StyledInput').prop('required')).toBe(
+      required
+    )
+    expect(component.find('Inputstyles__StyledInput').prop('type')).toBe(type)
+    expect(component.find('Inputstyles__Label').text()).toBe(label)
   })
 
   it('should invoke onChange when triggered', () => {

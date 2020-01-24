@@ -3,15 +3,20 @@
 exports[`<Input/> matches snapshot 1`] = `
 <Inputstyles__Field>
   <Inputstyles__StyledInput
+    id="InputId"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
-    required={false}
+    required={true}
+    type="text"
     value=""
   />
   <Inputstyles__Label
     empty={true}
     focused={false}
-  />
+    htmlFor="InputId"
+  >
+    Input field
+  </Inputstyles__Label>
 </Inputstyles__Field>
 `;
