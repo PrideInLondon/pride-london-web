@@ -1,4 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
+
+/**
+ * Roboto 300
+ */
+import Roboto300EOT from '../theme/assets/fonts/roboto/roboto-v20-latin-300.eot'
+import Roboto300WOFF from '../theme/assets/fonts/roboto/roboto-v20-latin-300.woff'
+import Roboto300WOFF2 from '../theme/assets/fonts/roboto/roboto-v20-latin-300.woff2'
+import Roboto300TTF from '../theme/assets/fonts/roboto/roboto-v20-latin-300.ttf'
+import Roboto300SVG from '../theme/assets/fonts/roboto/roboto-v20-latin-300.svg'
 /**
  * Roboto Regular
  */
@@ -87,6 +96,20 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  /* roboto-300 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('${Roboto300EOT}'); /* IE9 Compat Modes */
+    src: local('Roboto'), local('Roboto-Light'),
+        url('${Roboto300EOT}?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('${Roboto300WOFF2}') format('woff2'), /* Super Modern Browsers */
+        url('${Roboto300WOFF}') format('woff'), /* Modern Browsers */
+        url('${Roboto300TTF}') format('truetype'), /* Safari, Android, iOS */
+        url('${Roboto300SVG}#Roboto') format('svg'); /* Legacy iOS */
+  }
+  
   /* roboto-regular - latin */
   @font-face {
     font-family: 'Roboto';
