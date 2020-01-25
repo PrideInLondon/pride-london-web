@@ -1,1 +1,1 @@
-export { default as CheckboxSet } from './CheckboxSet'
+export { default } from './CheckboxSet'
