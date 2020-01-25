@@ -13,7 +13,6 @@
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch",
-    "precommit": "lint-staged && tsc",
     "storybook": "start-storybook -p 9001 -c .storybook -s ./src/components"
   },
   "lint-staged": {
