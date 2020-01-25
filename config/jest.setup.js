@@ -19,3 +19,5 @@ window.requestAnimationFrame =
 
 // React 16 Enzyme adapter
 Enzyme.configure({ adapter: new Adapter() })
+
+jest.mock('react-intercom')
