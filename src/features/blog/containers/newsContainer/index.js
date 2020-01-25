@@ -12,7 +12,7 @@ import {
 } from '../../../../components/grid'
 import Button from '../../../../components/button'
 
-const initialPaginationState = {
+const paginationState = {
   end: 9,
   step: 9,
 }
@@ -20,14 +20,12 @@ const NewsContainer = ({ articles, categories }) => {
   const [selectedFilter, setSelectedFilter] = useState(
     categories.find(({ title }) => title === 'All Articles')
   )
-  const [initialPagination, setInitialPagination] = useState(
-    initialPaginationState
-  )
+  const [pagination, setPagination] = useState(paginationState)
   const [totalArticles, setTotalArticles] = useState(articles)
 
   const handleFilterClick = label => {
     setSelectedFilter(label)
-    setInitialPagination(initialPaginationState)
+    setPagination(paginationState)
     setTotalArticles(
       articles.filter(
         article =>
@@ -38,9 +36,9 @@ const NewsContainer = ({ articles, categories }) => {
   }
 
   const showMoreCards = () => {
-    setInitialPagination({
-      end: (initialPagination.end += initialPagination.step),
-      step: initialPagination.step,
+    setPagination({
+      end: (pagination.end += pagination.step),
+      step: pagination.step,
     })
   }
 
@@ -61,8 +59,8 @@ const NewsContainer = ({ articles, categories }) => {
           categories={categories}
         />
 
-        <NewsCards articles={totalArticles.slice(0, initialPagination.end)} />
-        {initialPagination.end < totalArticles.length && (
+        <NewsCards articles={totalArticles.slice(0, pagination.end)} />
+        {pagination.end < totalArticles.length && (
           <Row pb={[30, 30, 50]}>
             <Column mx="auto" pt={[30, 30, 50]}>
               <Button onClick={showMoreCards}>Show more articles</Button>

@@ -4,7 +4,7 @@ import FilterButton from '../../../../components/filterButton'
 import NewsCard from '../../components/newsCard'
 import NewsContainer from '.'
 
-jest.mock('../featuredArticleContainer', () => () => 'FeaturedArticleContainer')
+jest.mock('../featuredArticleContainer', () => 'FeaturedArticleContainer')
 
 const makeTestArticles = (quantity, category) => {
   const array = []
