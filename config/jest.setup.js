@@ -19,3 +19,8 @@ window.requestAnimationFrame =
 
 // React 16 Enzyme adapter
 Enzyme.configure({ adapter: new Adapter() })
+
+// Gatsby overrides
+global.___loader = {
+  enqueue: jest.fn(),
+}
