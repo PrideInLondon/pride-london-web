@@ -7,7 +7,7 @@ import { darken, lighten } from 'polished'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
 import { Consumer } from '../../../components/appContext'
-import iconCalendar from '../../../theme/assets/images/icon-calendar.svg'
+import CalendarIcon from '../../../theme/assets/images/calendar-icon'
 
 const DatePickerWrapper = styled.div`
   border: none;
@@ -203,7 +203,7 @@ class EventDateFilter extends Component {
                 noBorder
               />
               <Label htmlFor="start_date" aria-label="Select start date">
-                <img src={iconCalendar} alt="Calendar icon" />
+                <CalendarIcon color={theme.colors.indigo} />
               </Label>
             </DatePickerWrapper>
           </div>

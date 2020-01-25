@@ -1,35 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, select, object } from '@storybook/addon-knobs'
+import { text, select, object } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import styled from 'styled-components'
-import { variant } from 'styled-system'
-import { colors } from '../../theme/colors'
 import { Button } from './Button'
-import { ButtonBaseProps } from './Button.types'
-
-const Wrapper = styled.div<ButtonBaseProps>`
-  padding: 50px;
-  text-align: center;
-
-  ${variant({
-    variants: {
-      primary: {
-        backgroundColor: 'transparent',
-      },
-      secondary: {
-        backgroundColor: 'transparent',
-      },
-      outline: {
-        backgroundColor: 'transparent',
-      },
-      'outline-white': {
-        backgroundColor: colors.indigo,
-      },
-    },
-  })}
-`
-Wrapper.displayName = 'Wrapper'
 
 const variants = {
   Primary: 'primary',
@@ -39,23 +12,20 @@ const variants = {
 } as const
 
 storiesOf('Button', module)
-  .addDecorator(withKnobs)
   .add(
     'default',
     () => (
-      <Wrapper variant={select('Variant', variants, variants.Primary)}>
-        <Button
-          onClick={action('click')}
-          variant={select('Variant', variants, variants.Primary)}
-        >
-          {text('Link Text', 'This is a button')}
-        </Button>
-      </Wrapper>
+      <Button
+        onClick={action('click')}
+        variant={select('Variant', variants, variants.Primary)}
+      >
+        {text('Link Text', 'This is a button')}
+      </Button>
     ),
     {
       info: {
         text:
-          'By default the Button component will render an html <button />. You can select one of the styles by passing a `variant` prop. The <Wrapper /> in the story source is to provide a contrasting background for the white variant only.',
+          'By default the Button component will render an html <button />. You can select one of the styles by passing a `variant` prop.',
       },
     }
   )
