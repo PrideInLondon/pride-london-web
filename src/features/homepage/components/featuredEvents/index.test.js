@@ -4,7 +4,6 @@ import toJSON from 'enzyme-to-json'
 import { FeaturedEventContent } from './styles'
 import { mockEvents } from './__mocks__'
 import FeaturedEvents from '.'
-import 'jest-styled-components'
 
 describe(FeaturedEvents.name, () => {
   it('renders with default values', () => {

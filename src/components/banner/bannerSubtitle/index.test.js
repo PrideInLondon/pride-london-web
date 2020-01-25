@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import StyledBannerSubtitle from './'
-import 'jest-styled-components'
 
 describe('<BannerSubtitle />', () => {
   it('renders the component <BannerSubtitle />', () => {
