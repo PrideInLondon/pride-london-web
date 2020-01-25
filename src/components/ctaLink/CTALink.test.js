@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
-import 'jest-styled-components'
+
 import { CTALink } from './CTALink'
 
 const link = {

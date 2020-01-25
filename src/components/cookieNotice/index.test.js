@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import CookieNotice from '.'
-import 'jest-styled-components'
 
 describe('<CookieNotice />', () => {
   beforeAll(() => {

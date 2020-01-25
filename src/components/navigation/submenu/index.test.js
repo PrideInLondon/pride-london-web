@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
-import 'jest-styled-components'
+
 import Submenu from '../submenu'
 import { mockData } from './__mocks__'
 

@@ -2,7 +2,6 @@ import React from 'react'
 import toJSON from 'enzyme-to-json'
 import { shallow } from 'enzyme'
 import BannerDate from './'
-import 'jest-styled-components'
 
 describe('<BannerDate/>', () => {
   it('renders the component <BannerDate />', () => {
