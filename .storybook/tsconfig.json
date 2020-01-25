@@ -25,6 +25,6 @@
     "skipLibCheck": true,
     "noEmit": true
   },
-  "include": ["src/**/*"],
+  "include": ["../src/**/*"],
   "exclude": ["build", "scripts", "node_modules"]
 }
