@@ -15,15 +15,6 @@
     "test:watch": "yarn jest --watch",
     "storybook": "start-storybook -p 9001 -c .storybook -s ./src/components"
   },
-  "lint-staged": {
-    "src/**/*.{js,json,ts,tsx}": [
-      "eslint --fix --plugin tsc --rule 'tsc/config: [2, {configFile: \"tsconfig.json\"}]'",
-      "stylelint",
-      "jest --findRelatedTests",
-      "git add"
-    ],
-    "*.md": "remark . --frail"
-  },
   "dependencies": {
     "@babel/preset-typescript": "^7.7.4",
     "@rebass/grid": "^6.0.0",
