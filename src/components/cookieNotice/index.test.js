@@ -5,15 +5,10 @@ import 'jest-styled-components'
 
 describe('<CookieNotice />', () => {
   beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
     jest.spyOn(React, 'useEffect').mockImplementation(React.useLayoutEffect)
   })
 
   afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
     React.useEffect.mockRestore()
   })
 

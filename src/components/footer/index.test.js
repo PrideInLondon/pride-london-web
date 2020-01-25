@@ -7,17 +7,6 @@ import Footer from '../footer'
 import { mockSponsors } from './__mocks__'
 
 describe('<Footer/>', () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-  })
-
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
-  })
-
   it('should render and match snapshot', () => {
     const wrapper = shallow(<Footer data={mockSponsors} />)
     expect(toJSON(wrapper)).toMatchSnapshot()
