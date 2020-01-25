@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import onClickOutside from 'react-onclickoutside'
@@ -96,67 +96,55 @@ const Badge = styled.span`
   `};
 `
 
-class EventDropdownFilter extends Component {
-  state = {
-    isOpen: false,
+const EventDropdownFilter = ({
+  heading,
+  sort,
+  filterName,
+  filterOpen,
+  closeSiblingFilters,
+}) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => setIsOpen(!isOpen)
+
+  EventDropdownFilter.handleClickOutside = () => {
+    if (filterName === filterOpen) setIsOpen(false)
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state.isOpen !== nextState.isOpen
-  }
+  useEffect(() => {
+    closeSiblingFilters(filterName, isOpen)
+  }, [closeSiblingFilters, filterName, isOpen])
 
-  handleClickOutside = () => {
-    if (this.props.filterName === this.props.filterOpen) {
-      this.setState({ isOpen: false }, () => {
-        this.props.closeSiblingFilters(this.props.filterName, this.state.isOpen)
-      })
-    }
-  }
-
-  toggleMenu = () => {
-    const isOpen = !this.state.isOpen
-    this.setState({ isOpen: isOpen }, () =>
-      this.props.closeSiblingFilters(this.props.filterName, isOpen)
-    )
-  }
-
-  render() {
-    return (
-      <Consumer>
-        {context => (
-          <Wrapper>
-            <FilterButton
-              aria-controls={this.props.filterName}
-              aria-expanded={this.state.isOpen}
-              type="button"
-              id={`button_${this.props.filterName}`}
-              onClick={this.toggleMenu}
-              isOpen={this.state.isOpen}
-              isActive={context.state.filters[this.props.filterName].length > 0}
-            >
-              {this.props.heading}
-              {context.state.filters[this.props.filterName].length > 0 ? (
-                <Badge>
-                  {context.state.filters[this.props.filterName].length}
-                </Badge>
-              ) : null}
-            </FilterButton>
-            <DropDown
-              isOpen={this.state.isOpen}
-              id={this.props.filterName}
-              aria-hidden={!this.state.isOpen}
-              aria-labelledby={`button_${this.props.filterName}`}
-            >
-              <CheckboxSet
-                filterName={this.props.filterName}
-                sort={this.props.sort}
-              />
-            </DropDown>
-          </Wrapper>
-        )}
-      </Consumer>
-    )
-  }
+  return (
+    <Consumer>
+      {context => (
+        <Wrapper>
+          <FilterButton
+            aria-controls={filterName}
+            aria-expanded={isOpen}
+            type="button"
+            id={`button_${filterName}`}
+            onClick={toggleMenu}
+            isOpen={isOpen}
+            isActive={context.state.filters[filterName].length > 0}
+          >
+            {heading}
+            {context.state.filters[filterName].length > 0 ? (
+              <Badge>{context.state.filters[filterName].length}</Badge>
+            ) : null}
+          </FilterButton>
+          <DropDown
+            isOpen={isOpen}
+            id={filterName}
+            aria-hidden={!isOpen}
+            aria-labelledby={`button_${filterName}`}
+          >
+            <CheckboxSet filterName={filterName} sort={sort} />
+          </DropDown>
+        </Wrapper>
+      )}
+    </Consumer>
+  )
 }
 
 EventDropdownFilter.propTypes = {
@@ -172,4 +160,8 @@ EventDropdownFilter.defaultProps = {
   sort: null,
 }
 
-export default onClickOutside(EventDropdownFilter)
+const clickOutsideConfig = {
+  handleClickOutside: () => EventDropdownFilter.handleClickOutside,
+}
+
+export default onClickOutside(EventDropdownFilter, clickOutsideConfig)
