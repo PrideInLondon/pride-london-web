@@ -21,3 +21,8 @@ window.requestAnimationFrame =
 Enzyme.configure({ adapter: new Adapter() })
 
 jest.mock('react-intercom')
+
+// Gatsby overrides
+global.___loader = {
+  enqueue: jest.fn(),
+}
