@@ -13,17 +13,7 @@
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand && codecov",
     "test:watch": "yarn jest --watch",
-    "precommit": "lint-staged && tsc",
     "storybook": "start-storybook -p 9001 -c .storybook -s ./src/components"
-  },
-  "lint-staged": {
-    "src/**/*.{js,json,ts,tsx}": [
-      "eslint --fix --plugin tsc --rule 'tsc/config: [2, {configFile: \"tsconfig.json\"}]'",
-      "stylelint",
-      "jest --findRelatedTests",
-      "git add"
-    ],
-    "*.md": "remark . --frail"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.7.4",
@@ -31,7 +21,7 @@
     "@types/storybook__addon-info": "^5.2.1",
     "debounce": "^1.2.0",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.19.1",
+    "gatsby": "^2.19.5",
     "gatsby-image": "^2.2.39",
     "gatsby-link": "^2.2.28",
     "gatsby-plugin-layout": "^1.1.21",
@@ -42,7 +32,7 @@
     "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-plugin-sitemap": "^2.2.26",
     "gatsby-plugin-styled-components": "^3.1.18",
-    "gatsby-source-contentful": "^2.1.78",
+    "gatsby-source-contentful": "^2.1.79",
     "gatsby-source-filesystem": "^2.1.45",
     "gatsby-transformer-sharp": "^2.3.13",
     "js-cookie": "^2.2.1",
