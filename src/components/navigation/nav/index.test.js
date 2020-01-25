@@ -5,24 +5,6 @@ import 'jest-styled-components'
 import Nav from '.'
 
 describe('<Nav/>', () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-
-    global.window.matchMedia = jest.fn(() => {
-      return {
-        matches: false,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-      }
-    })
-  })
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
-  })
-
   it('renders the component <Nav />', () => {
     const wrapper = shallow(<Nav />)
     expect(toJSON(wrapper)).toMatchSnapshot()

@@ -12,16 +12,6 @@ const link = {
 }
 
 describe('<CTALink/>', () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-  })
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
-  })
-
   it('should render and match snapshot', () => {
     const wrapper = shallow(<CTALink to={link.url}>{link.text}</CTALink>)
     expect(toJSON(wrapper)).toMatchSnapshot()

@@ -7,21 +7,11 @@ import { mockData } from './__mocks__'
 
 describe('Desktop version <NavItem/>', () => {
   beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-
     global.window.matchMedia = jest.fn(() => {
       return {
         matches: true,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
       }
     })
-  })
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
   })
 
   it('renders the desktop version of the component <NavItem />', () => {
@@ -72,21 +62,11 @@ describe('Desktop version <NavItem/>', () => {
 
 describe('Mobile version <NavItem/>', () => {
   beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-
     global.window.matchMedia = jest.fn(() => {
       return {
         matches: false,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
       }
     })
-  })
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
   })
 
   it('renders the mobile version of the component <NavItem />', () => {
