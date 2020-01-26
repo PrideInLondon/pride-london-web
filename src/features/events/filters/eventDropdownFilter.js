@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import useOnClickOutside from 'use-onclickoutside'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
-import { Consumer } from '../../../components/appContext'
+import { AppContext } from '../../../components/appContext'
 import CheckboxSet from '../../../components/checkboxSet'
 import iconDown from '../../../theme/assets/images/icon-chevron-down.svg'
 import iconUp from '../../../theme/assets/images/icon-chevron-up.svg'
@@ -99,7 +99,7 @@ const Badge = styled.span`
 const EventDropdownFilter = React.memo(
   ({ heading, sort, filterName, filterOpen, closeSiblingFilters }) => {
     const [isOpen, setIsOpen] = useState(false)
-    const context = useContext(Consumer)
+    const context = useContext(AppContext)
 
     const ref = useRef(null)
     useOnClickOutside(ref, () => {
