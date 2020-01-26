@@ -39,7 +39,7 @@
     "lodash.debounce": "^4.0.8",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
-    "polished": "^3.4.2",
+    "polished": "^3.4.3",
     "querystring": "^0.2.0",
     "react-accessible-accordion": "^3.0.1",
     "react-dates": "16.7.0",
