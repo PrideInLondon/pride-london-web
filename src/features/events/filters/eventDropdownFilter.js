@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import onClickOutside from 'react-onclickoutside'
+import useOnClickOutside from 'use-onclickoutside'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
 import { Consumer } from '../../../components/appContext'
@@ -105,20 +105,24 @@ const EventDropdownFilter = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const ref = useRef(null)
+  useOnClickOutside(ref, () => {
+    if (filterName === filterOpen) {
+      setIsOpen(!isOpen)
+    }
+  })
+
   const toggleMenu = () => setIsOpen(!isOpen)
-
-  EventDropdownFilter.handleClickOutside = () => {
-    if (filterName === filterOpen) setIsOpen(false)
-  }
-
-  useEffect(() => {
-    closeSiblingFilters(filterName, isOpen)
-  }, [closeSiblingFilters, filterName, isOpen])
+  useEffect(() => closeSiblingFilters(filterName, isOpen), [
+    closeSiblingFilters,
+    filterName,
+    isOpen,
+  ])
 
   return (
     <Consumer>
       {context => (
-        <Wrapper>
+        <Wrapper ref={ref}>
           <FilterButton
             aria-controls={filterName}
             aria-expanded={isOpen}
@@ -160,8 +164,4 @@ EventDropdownFilter.defaultProps = {
   sort: null,
 }
 
-const clickOutsideConfig = {
-  handleClickOutside: () => EventDropdownFilter.handleClickOutside,
-}
-
-export default onClickOutside(EventDropdownFilter, clickOutsideConfig)
+export default EventDropdownFilter
