@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import useOnClickOutside from 'use-onclickoutside'
@@ -119,35 +119,32 @@ const EventDropdownFilter = ({
     isOpen,
   ])
 
+  const context = useContext(Consumer)
   return (
-    <Consumer>
-      {context => (
-        <Wrapper ref={ref}>
-          <FilterButton
-            aria-controls={filterName}
-            aria-expanded={isOpen}
-            type="button"
-            id={`button_${filterName}`}
-            onClick={toggleMenu}
-            isOpen={isOpen}
-            isActive={context.state.filters[filterName].length > 0}
-          >
-            {heading}
-            {context.state.filters[filterName].length > 0 ? (
-              <Badge>{context.state.filters[filterName].length}</Badge>
-            ) : null}
-          </FilterButton>
-          <DropDown
-            isOpen={isOpen}
-            id={filterName}
-            aria-hidden={!isOpen}
-            aria-labelledby={`button_${filterName}`}
-          >
-            <CheckboxSet filterName={filterName} sort={sort} />
-          </DropDown>
-        </Wrapper>
-      )}
-    </Consumer>
+    <Wrapper ref={ref}>
+      <FilterButton
+        aria-controls={filterName}
+        aria-expanded={isOpen}
+        type="button"
+        id={`button_${filterName}`}
+        onClick={toggleMenu}
+        isOpen={isOpen}
+        isActive={context.state.filters[filterName].length > 0}
+      >
+        {heading}
+        {context.state.filters[filterName].length > 0 ? (
+          <Badge>{context.state.filters[filterName].length}</Badge>
+        ) : null}
+      </FilterButton>
+      <DropDown
+        isOpen={isOpen}
+        id={filterName}
+        aria-hidden={!isOpen}
+        aria-labelledby={`button_${filterName}`}
+      >
+        <CheckboxSet filterName={filterName} sort={sort} />
+      </DropDown>
+    </Wrapper>
   )
 }
 
