@@ -114,26 +114,10 @@ export const PanelLink = styled(Link)`
     font-size: 1.25rem;
   `};
 
-  span {
-    position: relative;
-    &:after {
-      content: '';
-      height: 1px;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: transparent;
-      transition: background-color 0.15s linear;
-    }
-  }
-
   &:hover,
   &:focus {
     span {
-      &:after {
-        background-color: ${theme.colors.eucalyptusGreen};
-      }
+      box-shadow: inset 0 -2px 0 -1px ${theme.colors.eucalyptusGreen};
     }
   }
 `
