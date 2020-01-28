@@ -31,10 +31,9 @@ jobs:
           name: Run unit tests
           command: yarn test --coverage
 
-     - run: 
+      - run:
           name: Generate and publish test coverage report
           command: yarn run cov
-
 
 workflows:
   version: 2
