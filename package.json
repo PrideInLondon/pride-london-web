@@ -123,6 +123,16 @@
     "typescript-styled-plugin": "^0.15.0"
   },
   "resolutions": {
-    "react-side-effect": "^2.1.0"
+    "@reach/router": "^1.1.1",
+    "eslint-plugin-flowtype": "^3.0.0",
+    "eslint-plugin-react-hooks": "^1.0.0",
+    "graphql": "^14.1.1",
+    "jquery": "^3.4.1",
+    "react-side-effect": "^2.1.0",
+    "react-test-renderer": "^16.9.0",
+    "react-with-direction": "^1.1.0",
+    "regenerator-runtime": "^0.13.3",
+    "stylelint": "^11.0.0",
+    "webpack": "^4.0.0"
   }
 }
