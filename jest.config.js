@@ -6,6 +6,7 @@ module.exports = {
     '\\.(css|jpg|png|svg)$': '<rootDir>/empty-module.js',
   },
   setupFiles: ['<rootDir>/config/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/config/jest.setup.ts'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   coverageDirectory: './coverage/',
   collectCoverage: true,
