@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { rgba } from 'polished'
 import theme from '../../theme/theme'
+import { LabelProps } from './Input.types'
 
 export const Field = styled.div`
   margin-bottom: 20px;
@@ -29,20 +30,17 @@ export const StyledInput = styled.input`
   }
 `
 
-export const Label = styled.label`
+export const Label = styled.label<LabelProps>`
   position: absolute;
   transition: all 0.15s linear;
-  top: ${props => (!props.focused && props.empty ? '21px' : '10px')};
+  top: ${({ empty, focused }) => (!focused && empty ? '21px' : '10px')};
   left: 20px;
-  color: ${props =>
-    !props.focused && props.empty
-      ? theme.colors.white
-      : theme.colors.eucalyptusGreen};
+  color: ${({ empty, focused }) =>
+    !focused && empty ? theme.colors.white : theme.colors.eucalyptusGreen};
   font-family: ${theme.fonts.body};
   font-weight: 500;
-  font-size: ${props =>
-    !props.focused && props.empty ? '0.875rem' : '0.75rem'};
+  font-size: ${({ empty, focused }) =>
+    !focused && empty ? '0.875rem' : '0.75rem'};
   line-height: 1.21;
-  opacity: ${props =>
-    props.focused ? 1 : !props.focused && props.empty ? 1 : 0};
+  opacity: ${({ empty, focused }) => (focused ? 1 : empty ? 1 : 0)};
 `
