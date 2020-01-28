@@ -30,8 +30,9 @@ jobs:
       - run:
           name: Run unit tests
           command: yarn test --coverage
-      
-      - run: Generate and publish test coverage report
+
+     - run: 
+          name: Generate and publish test coverage report
           command: yarn run cov
 
 
