@@ -26,12 +26,5 @@
     "noUnusedParameters": true
   },
   "include": ["./src", "./@types"],
-  "exclude": [
-    "**/node_modules/*",
-    "**/*.test.ts",
-    "**/*.spec.ts",
-    "**/*._spec.ts",
-    "**/*.test.tsx",
-    "**/*.spec.tsx"
-  ]
+  "exclude": ["**/node_modules/*"]
 }
