@@ -2,8 +2,7 @@
   "src/**/*.{js,json,ts,tsx}": [
     "eslint --fix --plugin tsc --rule 'tsc/config: [2, {configFile: \"tsconfig.json\"}]'",
     "stylelint",
-    "jest --findRelatedTests",
-    "git add"
+    "jest --findRelatedTests"
   ],
   "*.md": "remark . --frail"
 }
