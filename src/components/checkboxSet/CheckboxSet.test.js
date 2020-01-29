@@ -1,7 +1,6 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import 'jest-styled-components'
-import theme from '../../theme/theme'
 import constants from '../../constants'
 import Checkbox from '../checkbox'
 import { Provider } from '../appContext'
@@ -13,13 +12,6 @@ jest.mock('../../theme/assets/images/icon-check.svg', () => 'foo')
 describe('CheckboxSet', () => {
   const filterName = 'eventCategories'
   const options = constants[filterName] || []
-
-  it('renders', () => {
-    const wrapper = shallow(<CheckboxSet filterName="test" />, {
-      context: { theme },
-    })
-    expect(wrapper).toMatchSnapshot()
-  })
 
   it('should render list properly', () => {
     const wrapper = mount(

@@ -6,7 +6,7 @@ import { List, ListItem } from './CheckboxSet.styles'
 import { CheckboxSetProps } from './CheckboxSet.types'
 
 const CheckboxSet = ({ filterName, sort = null }: CheckboxSetProps) => {
-  const appContext = useContext(AppContext)
+  const { state, actions } = useContext(AppContext)
 
   // @ts-ignore - refactoring of constants required
   const options = constants[filterName] || []
@@ -32,14 +32,14 @@ const CheckboxSet = ({ filterName, sort = null }: CheckboxSetProps) => {
         <ListItem key={makeId(option)}>
           <Checkbox
             //  @ts-ignore - refactoring of appContext required
-            checked={appContext.state.filters[filterName].indexOf(option) >= 0}
+            checked={state.filters[filterName].indexOf(option) >= 0}
             label={option}
             value={option}
             id={makeId(option)}
             name={makeId(option)}
             handleChange={e => {
               //  @ts-ignore - refactoring of appContext required
-              return appContext.actions.getCheckboxSetValues(e, filterName)
+              return actions.getCheckboxSetValues(e, filterName)
             }}
           />
         </ListItem>
