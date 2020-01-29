@@ -8885,10 +8885,10 @@ gatsby-react-router-scroll@^2.1.20:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.1.82:
-  version "2.1.82"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.82.tgz#3a44a49ab2166014daa097e31cfd7033dc250c78"
-  integrity sha512-nAQ4e2n/3bnMgd1c5EnWMqVvvQ/R+L4pDwkTCbM6jWXIVSGnSZndH+JjivNfvNAuHRPRht8BNNeetlznTaDstg==
+gatsby-source-contentful@^2.1.83:
+  version "2.1.83"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.83.tgz#2d54fabdf0ba527b8bcf51a5e4e7b13e080671c7"
+  integrity sha512-0WaIF3L5tOSi4YoqQAyf8UDLyFVqAssrbVZLE8MkAV/hBIXDMsIEuyEOckcoZ/VSUXLSa8eMmvS2P7vi7hV0Gw==
   dependencies:
     "@babel/runtime" "^7.7.6"
     "@hapi/joi" "^15.1.1"
