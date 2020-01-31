@@ -1,22 +1,27 @@
-const fs = require('fs')
-const path = require('path')
 const inquirer = require('inquirer')
 const getGitmojis = require('./gitmoji-utils')
+const {
+  getJiraInfoFromBranch,
+  readGitCommitMessage,
+  writeGitCommitMessage,
+} = require('./git-utils')
 
 const JIRA_BOARD_IDS = ['WEBNEW', 'WEBREF']
 
-const generateQuestions = gitmojis => [
+const generateQuestions = ({ gitmojis, jiraInfo: { boardId, ticketId } }) => [
   {
     name: 'boardId',
     type: 'list',
     message: 'What is your Jira board ID?',
     choices: JIRA_BOARD_IDS,
+    default: boardId,
   },
   {
     name: 'ticketId',
     type: 'input',
     message: 'What is your Jira ticket number?',
     validate: input => /^\d+$/.test(input) || 'Please enter a valid number',
+    default: ticketId,
   },
   {
     name: 'gitmoji',
@@ -29,25 +34,12 @@ const generateQuestions = gitmojis => [
   },
 ]
 
-const GIT_MESSAGE_PATH = path.join(
-  __dirname,
-  '../../../',
-  '.git/COMMIT_EDITMSG'
-)
-
-const readGitCommitMessage = () =>
-  fs.readFileSync(GIT_MESSAGE_PATH, 'utf8').trim()
-
-const writeGitCommitMessage = ({ boardId, ticketId, gitmoji, message }) =>
-  fs.writeFileSync(
-    GIT_MESSAGE_PATH,
-    `${boardId}-${ticketId} ${gitmoji} ${message}`
-  )
-
 const prepareCommitMessage = () =>
   getGitmojis().then(gitmojis => {
     inquirer
-      .prompt(generateQuestions(gitmojis))
+      .prompt(
+        generateQuestions({ gitmojis, jiraInfo: getJiraInfoFromBranch() })
+      )
       .then(answers =>
         writeGitCommitMessage({ message: readGitCommitMessage(), ...answers })
       )
