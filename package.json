@@ -7,23 +7,14 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "cov": "codecov",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint 'src/**/*.[jt]s?(x)' && remark . --frail",
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
-    "test": "yarn jest --runInBand && codecov",
+    "test": "yarn jest --runInBand",
     "test:watch": "yarn jest --watch",
-    "precommit": "lint-staged && tsc",
     "storybook": "start-storybook -p 9001 -c .storybook -s ./src/components"
-  },
-  "lint-staged": {
-    "src/**/*.{js,json,ts,tsx}": [
-      "eslint --fix --plugin tsc --rule 'tsc/config: [2, {configFile: \"tsconfig.json\"}]'",
-      "stylelint",
-      "jest --findRelatedTests",
-      "git add"
-    ],
-    "*.md": "remark . --frail"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.7.4",
@@ -31,25 +22,25 @@
     "@types/storybook__addon-info": "^5.2.1",
     "debounce": "^1.2.0",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.19.1",
+    "gatsby": "^2.19.10",
     "gatsby-image": "^2.2.39",
     "gatsby-link": "^2.2.28",
     "gatsby-plugin-layout": "^1.1.21",
-    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-offline": "^3.0.33",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-rollbar": "^1.0.0",
-    "gatsby-plugin-sharp": "^2.4.0",
+    "gatsby-plugin-sharp": "^2.4.4",
     "gatsby-plugin-sitemap": "^2.2.26",
     "gatsby-plugin-styled-components": "^3.1.18",
-    "gatsby-source-contentful": "^2.1.78",
-    "gatsby-source-filesystem": "^2.1.45",
+    "gatsby-source-contentful": "^2.1.84",
+    "gatsby-source-filesystem": "^2.1.47",
     "gatsby-transformer-sharp": "^2.3.13",
     "js-cookie": "^2.2.1",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.23.0",
     "no-scroll": "^2.1.1",
-    "polished": "^3.4.2",
+    "polished": "^3.4.4",
     "querystring": "^0.2.0",
     "react-accessible-accordion": "^3.0.1",
     "react-dates": "16.7.0",
@@ -81,7 +72,10 @@
     "@storybook/addon-info": "~5.1.11",
     "@storybook/addon-knobs": "~5.2.8",
     "@storybook/react": "~5.2.8",
-    "@types/jest": "^24.0.22",
+    "@testing-library/jest-dom": "^5.0.2",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^24.9.1",
     "@types/react": "^16.9.14",
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.0",
@@ -113,7 +107,7 @@
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "jest-environment-jsdom": "^24.0.0",
-    "jest-styled-components": "^6.3.1",
+    "jest-styled-components": "^6.3.4",
     "jest-transform-stub": "^2.0.0",
     "lint-staged": "^9.4.3",
     "prettier": "^1.18.2",
@@ -133,5 +127,8 @@
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
     "typescript-styled-plugin": "^0.15.0"
+  },
+  "resolutions": {
+    "react-side-effect": "^2.1.0"
   }
 }
