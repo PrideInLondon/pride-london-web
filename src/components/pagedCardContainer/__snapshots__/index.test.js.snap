@@ -11,6 +11,257 @@ exports[`PagedCardContainer renders component with default props 1`] = `
 `;
 
 exports[`PagedCardContainer renders component with specified non-default props 1`] = `
+.c5 {
+  padding: 10px 5px;
+}
+
+.c5.c5 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+
+.c2 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4.c4 {
+  padding-bottom: 30px;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c3 {
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+}
+
+.c3.c3 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c6 {
+  padding: 12px 35px;
+  border-radius: 4px;
+  font-family: Poppins,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.388;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background-color 0.15s linear,border 0.15s linear;
+  transition: background-color 0.15s linear,border 0.15s linear;
+  border: 2px solid #2CDA9D;
+  background-color: #2CDA9D;
+  color: #2D2F7F;
+}
+
+.c6:hover,
+.c6:focus {
+  background-color: #57e2b1;
+  border-color: #57e2b1;
+}
+
+.c6:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0 {
+  padding-bottom: 0px;
+}
+
+@media screen and (min-width:375px) {
+  .c5 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c5 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c5.c5 {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c5.c5 {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c2 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c2 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c2 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c4 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c4 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c4 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c4.c4 {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c4.c4 {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c1 {
+    min-width: 335px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    min-width: 668px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c1 {
+    min-width: 960px;
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .c1 {
+    min-width: 1260px;
+    max-width: 1440px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c3 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c3 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c3.c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c3.c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c3.c3 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c3 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c3 {
+    width: 33.33333333333333%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 <PagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -78,7 +329,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
           "componentStyle": ComponentStyle {
             "componentId": "pagedCardContainer__PaddedCardContainer-ymz70m-0",
             "isStatic": false,
-            "lastClassName": "jSDtMq",
+            "lastClassName": "c0",
             "rules": Array [
               [Function],
             ],
@@ -114,15 +365,15 @@ exports[`PagedCardContainer renders component with specified non-default props 1
             },
           ]
         }
-        className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+        className="c0"
         isFullyLoaded={false}
       >
         <Gridstyles__Container
-          className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+          className="c0"
           mx="auto"
         >
           <StyledComponent
-            className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+            className="c0"
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
@@ -133,7 +384,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                 "componentStyle": ComponentStyle {
                   "componentId": "Gridstyles__Container-jfdl1j-2",
                   "isStatic": false,
-                  "lastClassName": "byHCwx",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "@media screen and (min-width: 375px)",
                     "{min-width:335px;}",
@@ -166,7 +417,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
             mx="auto"
           >
             <div
-              className="Gridstyles__Container-jfdl1j-2 byHCwx pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+              className="c1 c0"
             >
               <Gridstyles__Row
                 display="flex"
@@ -186,7 +437,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                       "componentStyle": ComponentStyle {
                         "componentId": "Gridstyles__Row-jfdl1j-1",
                         "isStatic": false,
-                        "lastClassName": "eCAEmt",
+                        "lastClassName": "c4",
                         "rules": Array [
                           "margin-left:5px;margin-right:5px;",
                           "@media screen and (min-width: 375px)",
@@ -217,7 +468,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                   forwardedRef={null}
                 >
                   <div
-                    className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                    className="c2"
                     display="flex"
                   >
                     <Gridstyles__FlexColumn
@@ -247,7 +498,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             "componentStyle": ComponentStyle {
                               "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                               "isStatic": false,
-                              "lastClassName": "dwSNFv",
+                              "lastClassName": "c3",
                               "rules": Array [
                                 "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
@@ -293,7 +544,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         }
                       >
                         <div
-                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                          className="c3"
                           width={
                             Array [
                               1,
@@ -340,7 +591,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             "componentStyle": ComponentStyle {
                               "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                               "isStatic": false,
-                              "lastClassName": "dwSNFv",
+                              "lastClassName": "c3",
                               "rules": Array [
                                 "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
@@ -386,7 +637,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         }
                       >
                         <div
-                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                          className="c3"
                           width={
                             Array [
                               1,
@@ -433,7 +684,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                             "componentStyle": ComponentStyle {
                               "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                               "isStatic": false,
-                              "lastClassName": "dwSNFv",
+                              "lastClassName": "c3",
                               "rules": Array [
                                 "padding:10px 5px;",
                                 "@media screen and (min-width: 375px)",
@@ -479,7 +730,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                         }
                       >
                         <div
-                          className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                          className="c3"
                           width={
                             Array [
                               1,
@@ -537,7 +788,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
             "componentStyle": ComponentStyle {
               "componentId": "Gridstyles__Row-jfdl1j-1",
               "isStatic": false,
-              "lastClassName": "eCAEmt",
+              "lastClassName": "c4",
               "rules": Array [
                 "margin-left:5px;margin-right:5px;",
                 "@media screen and (min-width: 375px)",
@@ -575,7 +826,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
         }
       >
         <div
-          className="Gridstyles__Row-jfdl1j-1 eCAEmt"
+          className="c4"
           display="flex"
         >
           <Gridstyles__Column
@@ -596,7 +847,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Column-jfdl1j-0",
                     "isStatic": false,
-                    "lastClassName": "kdyIPc",
+                    "lastClassName": "c5",
                     "rules": Array [
                       "padding:10px 5px;",
                       "@media screen and (min-width: 375px)",
@@ -629,7 +880,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
               }
             >
               <div
-                className="Gridstyles__Column-jfdl1j-0 kdyIPc"
+                className="c5"
               >
                 <Button
                   onClick={[MockFunction]}
@@ -648,7 +899,7 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                           "componentStyle": ComponentStyle {
                             "componentId": "Buttonstyles__StyledButton-sc-8soki7-0",
                             "isStatic": false,
-                            "lastClassName": "hWJnOq",
+                            "lastClassName": "c6",
                             "rules": Array [
                               "padding:12px 35px;border-radius:4px;font-family:",
                               "Poppins, sans-serif",
@@ -674,13 +925,13 @@ exports[`PagedCardContainer renders component with specified non-default props 1
                       variant="primary"
                     >
                       <Component
-                        className="Buttonstyles__StyledButton-sc-8soki7-0 hWJnOq"
+                        className="c6"
                         onClick={[MockFunction]}
                         renderAs="button"
                         variant="primary"
                       >
                         <button
-                          className="Buttonstyles__StyledButton-sc-8soki7-0 hWJnOq"
+                          className="c6"
                           onClick={[MockFunction]}
                           variant="primary"
                         >

@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom'
+import 'jest-styled-components'
 
 interface CustomNodeJsGlobal extends NodeJS.Global {
   window: Window & { ResizeObserver: any }

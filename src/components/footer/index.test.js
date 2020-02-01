@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import * as Intercom from 'react-intercom'
-import 'jest-styled-components'
 import Footer from '../footer'
 import { mockSponsors } from './__mocks__'
 
