@@ -60,7 +60,9 @@ describe(FilterButton.name, () => {
     wrapper
       .find(FilterLabel)
       .first()
-      .simulate('click')
+      .simulate('click', {
+        preventDefault: () => {},
+      })
     expect(mockClick).toHaveBeenCalled()
   })
 })

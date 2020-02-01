@@ -12,7 +12,10 @@ const FilterButton = ({
 }) => {
   return (
     <FilterLabel
-      onClick={() => handleClick(filterType)}
+      onClick={e => {
+        e.preventDefault()
+        handleClick(filterType)
+      }}
       backgroundColor={filterType.hexColour}
       isOutline={isButton ? isOutline : false}
       isButton={isButton}
