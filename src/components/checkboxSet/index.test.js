@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-
 import theme from '../../theme/theme'
 import constants from '../../constants'
 import Checkbox from '../checkbox'

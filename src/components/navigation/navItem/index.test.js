@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
-
 import NavItem from '../navItem'
 import { mockData } from './__mocks__'
 
