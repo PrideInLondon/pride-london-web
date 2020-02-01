@@ -1,5 +1,5 @@
-const Enzyme = require('enzyme')
-const Adapter = require('enzyme-adapter-react-16')
+import Enzyme from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 
 window.matchMedia =
   window.matchMedia ||
@@ -24,3 +24,5 @@ Enzyme.configure({ adapter: new Adapter() })
 global.___loader = {
   enqueue: jest.fn(),
 }
+
+jest.mock('react-intercom')
