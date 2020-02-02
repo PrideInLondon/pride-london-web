@@ -263,8 +263,6 @@ class EventsFilters extends Component {
               <EventDropdownFilter
                 heading="Category"
                 filterName="eventCategories"
-                filterOpen={context.state.filterOpen}
-                closeSiblingFilters={context.actions.closeSiblingFilters}
                 sort="ASC"
               />
             </FlexColumn>
@@ -272,43 +270,27 @@ class EventsFilters extends Component {
               <EventDateFilter />
             </FlexColumn>
             <FlexColumn width={[1, 1, 0.5, 0.3333]}>
-              <EventDropdownFilter
-                heading="Area of London"
-                filterName="area"
-                filterOpen={context.state.filterOpen}
-                closeSiblingFilters={context.actions.closeSiblingFilters}
-              />
+              <EventDropdownFilter heading="Area of London" filterName="area" />
             </FlexColumn>
             <FlexColumn width={[1, 1, 0.5, 0.3333]}>
               <EventDropdownFilter
                 heading="Time of day"
                 filterName="timeOfDay"
-                filterOpen={context.state.filterOpen}
-                closeSiblingFilters={context.actions.closeSiblingFilters}
               />
             </FlexColumn>
             <FlexColumn width={[1, 1, 0.5, 0.3333]}>
-              <EventDropdownFilter
-                heading="Age group"
-                filterName="audience"
-                filterOpen={context.state.filterOpen}
-                closeSiblingFilters={context.actions.closeSiblingFilters}
-              />
+              <EventDropdownFilter heading="Age group" filterName="audience" />
             </FlexColumn>
             <FlexColumn width={[1, 1, 0.5, 0.3333]}>
               <EventDropdownFilter
                 heading="Venue options"
                 filterName="venueDetails"
-                filterOpen={context.state.filterOpen}
-                closeSiblingFilters={context.actions.closeSiblingFilters}
               />
             </FlexColumn>
             <FlexColumn width={[1, 1, 0.5, 0.3333]}>
               <EventDropdownFilter
                 heading="Accessibility"
                 filterName="accessibilityOptions"
-                filterOpen={context.state.filterOpen}
-                closeSiblingFilters={context.actions.closeSiblingFilters}
                 sort="ASC"
               />
             </FlexColumn>

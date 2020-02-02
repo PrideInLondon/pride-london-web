@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import useOnClickOutside from 'use-onclickoutside'
@@ -96,29 +96,22 @@ const Badge = styled.span`
   `};
 `
 
-const EventDropdownFilter = ({
-  heading,
-  sort,
-  filterName,
-  filterOpen,
-  closeSiblingFilters,
-}) => {
+const EventDropdownFilter = ({ heading, sort, filterName }) => {
+  const { state, actions } = useContext(AppContext)
   const [isOpen, setIsOpen] = useState(false)
-  const { state } = useContext(AppContext)
 
   const ref = useRef(null)
   useOnClickOutside(ref, () => {
-    if (filterName === filterOpen) {
+    if (filterName === state.filterOpen) {
       setIsOpen(!isOpen)
+      actions.closeSiblingFilters(filterName, !isOpen)
     }
   })
 
-  const toggleMenu = () => setIsOpen(!isOpen)
-  useEffect(() => closeSiblingFilters(filterName, isOpen), [
-    closeSiblingFilters,
-    filterName,
-    isOpen,
-  ])
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+    actions.closeSiblingFilters(filterName, !isOpen)
+  }
 
   return (
     <Wrapper ref={ref}>
@@ -151,8 +144,6 @@ const EventDropdownFilter = ({
 EventDropdownFilter.propTypes = {
   heading: PropTypes.string.isRequired,
   filterName: PropTypes.string.isRequired,
-  closeSiblingFilters: PropTypes.func.isRequired,
-  filterOpen: PropTypes.string,
   sort: PropTypes.oneOf(['ASC', 'DESC']),
 }
 
@@ -160,5 +151,4 @@ EventDropdownFilter.defaultProps = {
   filterOpen: null,
   sort: null,
 }
-
 export default EventDropdownFilter
