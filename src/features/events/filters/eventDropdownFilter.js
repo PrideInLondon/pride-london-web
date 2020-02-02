@@ -96,53 +96,57 @@ const Badge = styled.span`
   `};
 `
 
-const EventDropdownFilter = React.memo(
-  ({ heading, sort, filterName, filterOpen, closeSiblingFilters }) => {
-    const [isOpen, setIsOpen] = useState(false)
-    const context = useContext(AppContext)
+const EventDropdownFilter = ({
+  heading,
+  sort,
+  filterName,
+  filterOpen,
+  closeSiblingFilters,
+}) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const { state } = useContext(AppContext)
 
-    const ref = useRef(null)
-    useOnClickOutside(ref, () => {
-      if (filterName === filterOpen) {
-        setIsOpen(!isOpen)
-      }
-    })
+  const ref = useRef(null)
+  useOnClickOutside(ref, () => {
+    if (filterName === filterOpen) {
+      setIsOpen(!isOpen)
+    }
+  })
 
-    const toggleMenu = () => setIsOpen(!isOpen)
-    useEffect(() => closeSiblingFilters(filterName, isOpen), [
-      closeSiblingFilters,
-      filterName,
-      isOpen,
-    ])
+  const toggleMenu = () => setIsOpen(!isOpen)
+  useEffect(() => closeSiblingFilters(filterName, isOpen), [
+    closeSiblingFilters,
+    filterName,
+    isOpen,
+  ])
 
-    return (
-      <Wrapper ref={ref}>
-        <FilterButton
-          aria-controls={filterName}
-          aria-expanded={isOpen}
-          type="button"
-          id={`button_${filterName}`}
-          onClick={toggleMenu}
-          isOpen={isOpen}
-          isActive={context.state.filters[filterName].length > 0}
-        >
-          {heading}
-          {context.state.filters[filterName].length > 0 ? (
-            <Badge>{context.state.filters[filterName].length}</Badge>
-          ) : null}
-        </FilterButton>
-        <DropDown
-          isOpen={isOpen}
-          id={filterName}
-          aria-hidden={!isOpen}
-          aria-labelledby={`button_${filterName}`}
-        >
-          <CheckboxSet filterName={filterName} sort={sort} />
-        </DropDown>
-      </Wrapper>
-    )
-  }
-)
+  return (
+    <Wrapper ref={ref}>
+      <FilterButton
+        aria-controls={filterName}
+        aria-expanded={isOpen}
+        type="button"
+        id={`button_${filterName}`}
+        onClick={toggleMenu}
+        isOpen={isOpen}
+        isActive={state.filters[filterName].length > 0}
+      >
+        {heading}
+        {state.filters[filterName].length > 0 ? (
+          <Badge>{state.filters[filterName].length}</Badge>
+        ) : null}
+      </FilterButton>
+      <DropDown
+        isOpen={isOpen}
+        id={filterName}
+        aria-hidden={!isOpen}
+        aria-labelledby={`button_${filterName}`}
+      >
+        <CheckboxSet filterName={filterName} sort={sort} />
+      </DropDown>
+    </Wrapper>
+  )
+}
 
 EventDropdownFilter.propTypes = {
   heading: PropTypes.string.isRequired,
