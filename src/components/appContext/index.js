@@ -234,4 +234,4 @@ Provider.defaultProps = {
   events: [],
 }
 
-export { Provider, Consumer }
+export { AppContext, Provider, Consumer }
