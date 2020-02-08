@@ -114,7 +114,7 @@ export const PanelLink = styled(Link)`
     font-size: 1.25rem;
   `};
   span {
-    transition: box-shadow 0.15s ease-in-out;
+    transition: box-shadow 0.15s linear;
   }
   &:hover,
   &:focus {
