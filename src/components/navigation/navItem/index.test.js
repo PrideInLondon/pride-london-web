@@ -5,12 +5,18 @@ import NavItem from '../navItem'
 import { mockData } from './__mocks__'
 
 describe('Desktop version <NavItem/>', () => {
+  const globalMatchMediaMock = global.window.matchMedia
+
   beforeAll(() => {
     global.window.matchMedia = jest.fn(() => {
       return {
         matches: true,
       }
     })
+  })
+
+  afterAll(() => {
+    global.window.matchMedia = globalMatchMediaMock
   })
 
   it('renders the desktop version of the component <NavItem />', () => {
@@ -60,14 +66,6 @@ describe('Desktop version <NavItem/>', () => {
 })
 
 describe('Mobile version <NavItem/>', () => {
-  beforeAll(() => {
-    global.window.matchMedia = jest.fn(() => {
-      return {
-        matches: false,
-      }
-    })
-  })
-
   it('renders the mobile version of the component <NavItem />', () => {
     const wrapper = shallow(<NavItem item={mockData} />)
     expect(toJSON(wrapper)).toMatchSnapshot()
