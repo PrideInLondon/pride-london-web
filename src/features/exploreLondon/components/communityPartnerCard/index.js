@@ -171,7 +171,7 @@ const CommunityPartnerCard = ({ partner }) => {
           <div>
             <CardItemTitle
               as="a"
-              href={`https://www.google.com/maps/search/?api=1&query=${lat},${lon}>`}
+              href={`https://www.google.com/maps/search/?api=1&query=${lat},${lon}`}
             >
               {venueName}
             </CardItemTitle>
