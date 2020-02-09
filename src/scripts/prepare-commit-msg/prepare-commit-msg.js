@@ -6,23 +6,7 @@ const {
   writeGitCommitMessage,
 } = require('./git-utils')
 
-const JIRA_BOARD_IDS = ['WEBNEW', 'WEBREF']
-
-const generateQuestions = ({ gitmojis, jiraInfo: { boardId, ticketId } }) => [
-  {
-    name: 'boardId',
-    type: 'list',
-    message: 'What is your Jira board ID?',
-    choices: JIRA_BOARD_IDS,
-    default: boardId,
-  },
-  {
-    name: 'ticketId',
-    type: 'input',
-    message: 'What is your Jira ticket number?',
-    validate: input => /^\d+$/.test(input) || 'Please enter a valid number',
-    default: ticketId,
-  },
+const generateQuestions = ({ gitmojis }) => [
   {
     name: 'gitmoji',
     type: 'list',
@@ -34,19 +18,32 @@ const generateQuestions = ({ gitmojis, jiraInfo: { boardId, ticketId } }) => [
   },
 ]
 
-const prepareCommitMessage = () =>
+const prepareCommitMessage = () => {
+  const jiraInfo = getJiraInfoFromBranch()
+  if (!jiraInfo.boardId || !jiraInfo.ticketId) {
+    console.error(
+      '\nYou must be on a branch with name "JIRABOARD-JIRATICKET/description-of-ticket" to continue (e.g. WEBREF-123/migrating-component-x-to-hooks)\n'
+    )
+    process.exit(1)
+  }
+
+  console.log(`\nTagging commit as ${jiraInfo.boardId}-${jiraInfo.ticketId}\n`)
+
   getGitmojis().then(gitmojis => {
     inquirer
-      .prompt(
-        generateQuestions({ gitmojis, jiraInfo: getJiraInfoFromBranch() })
-      )
+      .prompt(generateQuestions({ gitmojis }))
       .then(answers =>
-        writeGitCommitMessage({ message: readGitCommitMessage(), ...answers })
+        writeGitCommitMessage({
+          message: readGitCommitMessage(),
+          ...jiraInfo,
+          ...answers,
+        })
       )
       .catch(err => {
         console.error(err)
         process.exit(1)
       })
   })
+}
 
 module.exports = prepareCommitMessage
