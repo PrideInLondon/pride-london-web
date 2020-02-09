@@ -49,22 +49,29 @@ export const calculateSelected = (
   }
 }
 
+// Card content with multiple categories will be array,
+// but content with single category eg. News Articles will be an object
+export const convertCardContentCategoryObjectsToArray = category =>
+  Array.isArray(category) ? category : [category.title]
+
 export const calculateShouldShowCard = (
   filterType,
   selected,
-  category,
+  category, // can be array or object
   showAllCategoryTitle
 ) => {
+  const categoryArr = convertCardContentCategoryObjectsToArray(category)
+
   switch (filterType) {
     case 'checkbox': {
       return selected.includes(showAllCategoryTitle)
         ? true
-        : category.some(cat => selected.includes(cat))
+        : categoryArr.some(cat => selected.includes(cat))
     }
     case 'radio':
       return selected === showAllCategoryTitle
         ? true
-        : category.includes(selected)
+        : categoryArr.includes(selected)
     default:
       return
   }
@@ -75,15 +82,15 @@ export const calculateAvailableCategories = (
   showAllCategoryTitle,
   cardContent
 ) => {
-  const cardCategories = cardContent.map(content => content.category)
-  const flattenedCardCategories = [].concat.apply([], cardCategories)
+  const cardCategories = cardContent.map(content =>
+    convertCardContentCategoryObjectsToArray(content.category)
+  )
+  const flattenedUniqueCardCategories = [...new Set(cardCategories.flat())]
 
   const availableCategories = categories.filter(
     category =>
       category.title === showAllCategoryTitle ||
-      flattenedCardCategories.some(
-        cardCategory => cardCategory === category.title
-      )
+      flattenedUniqueCardCategories.includes(category.title)
   )
 
   return availableCategories.length === 1 &&
