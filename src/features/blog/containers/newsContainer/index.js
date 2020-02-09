@@ -1,47 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Title from '../../components/title'
-import FiltersContainer from '../filtersContainer'
-import NewsCards from '../newsCards'
+import NewsCard from '../../../../features/blog/components/newsCard/index'
 import FeaturedArticleContainer from '../featuredArticleContainer'
+import FilteredPagedCardContainer from '../../../../components/filteredPagedCardContainer'
 import {
   Container,
   Column,
   Row,
   GreyWrapper,
 } from '../../../../components/grid'
-import Button from '../../../../components/button'
 
-const paginationState = {
-  end: 9,
-  step: 9,
-}
+export const pageSize = 9
+
 const NewsContainer = ({ articles, categories }) => {
-  const [selectedFilter, setSelectedFilter] = useState(
-    categories.find(({ title }) => title === 'All Articles')
-  )
-  const [pagination, setPagination] = useState(paginationState)
-  const [totalArticles, setTotalArticles] = useState(articles)
-
-  const handleFilterClick = label => {
-    setSelectedFilter(label)
-    setPagination(paginationState)
-    setTotalArticles(
-      articles.filter(
-        article =>
-          label.title === 'All Articles' ||
-          label.title === article.category.title
-      )
-    )
-  }
-
-  const showMoreCards = () => {
-    setPagination({
-      end: (pagination.end += pagination.step),
-      step: pagination.step,
-    })
-  }
-
   return (
     <section>
       <Container>
@@ -53,20 +25,15 @@ const NewsContainer = ({ articles, categories }) => {
       </Container>
       <GreyWrapper>
         <FeaturedArticleContainer />
-        <FiltersContainer
-          selectedFilter={selectedFilter}
-          handleFilterClick={handleFilterClick}
+        <FilteredPagedCardContainer
+          filterType="radio"
           categories={categories}
+          showAllCategoryTitle="All Articles"
+          cardContent={articles}
+          CardComponent={NewsCard}
+          showMoreButtonText="Show more articles"
+          pageSize={pageSize}
         />
-
-        <NewsCards articles={totalArticles.slice(0, pagination.end)} />
-        {pagination.end < totalArticles.length && (
-          <Row pb={[30, 30, 50]}>
-            <Column mx="auto" pt={[30, 30, 50]}>
-              <Button onClick={showMoreCards}>Show more articles</Button>
-            </Column>
-          </Row>
-        )}
       </GreyWrapper>
     </section>
   )
