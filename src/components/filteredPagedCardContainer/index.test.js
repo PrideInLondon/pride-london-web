@@ -1,11 +1,29 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import FilteredPagedCardContainer, {
+  convertCardContentCategoryObjectsToArray,
   calculateInitialSelected,
   calculateSelected,
   calculateShouldShowCard,
   calculateAvailableCategories,
 } from './'
+
+describe('convertCardContentCategoryObjectsToArray', () => {
+  it.each`
+    categoryType | inputCategories        | expected
+    ${'array'}   | ${['Shop']}            | ${['Shop']}
+    ${'array'}   | ${['Sleep', 'Eat']}    | ${['Sleep', 'Eat']}
+    ${'object'}  | ${{ title: 'Events' }} | ${['Events']}
+  `(
+    'when category arg passed is $categoryType - eg. $inputCategories returns $expected',
+    ({ categoryType, inputCategories, expected }) => {
+      const categoryArray = convertCardContentCategoryObjectsToArray(
+        inputCategories
+      )
+      expect(categoryArray).toEqual(expected)
+    }
+  )
+})
 
 describe('calculateInitialSelected', () => {
   it.each`
@@ -58,13 +76,16 @@ describe('calculateSelected', () => {
 
 describe('calculateShouldShowCard', () => {
   it.each`
-    filterType    | selected          | category          | showAllCategoryTitle | expected
-    ${'checkbox'} | ${['foo', 'bar']} | ${['etc', 'foo']} | ${''}                | ${true}
-    ${'checkbox'} | ${['foo', 'bar']} | ${['baz', 'etc']} | ${''}                | ${false}
-    ${'checkbox'} | ${['all']}        | ${['baz']}        | ${'all'}             | ${true}
-    ${'radio'}    | ${'foo'}          | ${['foo', 'etc']} | ${''}                | ${true}
-    ${'radio'}    | ${'foo'}          | ${['bar', 'etc']} | ${''}                | ${false}
-    ${'radio'}    | ${'all'}          | ${['baz']}        | ${'all'}             | ${true}
+    filterType    | selected          | category            | showAllCategoryTitle | expected
+    ${'checkbox'} | ${['foo', 'bar']} | ${['etc', 'foo']}   | ${''}                | ${true}
+    ${'checkbox'} | ${['foo', 'bar']} | ${['baz', 'etc']}   | ${''}                | ${false}
+    ${'checkbox'} | ${['all']}        | ${['baz']}          | ${'all'}             | ${true}
+    ${'radio'}    | ${'foo'}          | ${['foo', 'etc']}   | ${''}                | ${true}
+    ${'radio'}    | ${'foo'}          | ${['bar', 'etc']}   | ${''}                | ${false}
+    ${'radio'}    | ${'all'}          | ${['baz']}          | ${'all'}             | ${true}
+    ${'radio'}    | ${'all'}          | ${{ title: 'baz' }} | ${'all'}             | ${true}
+    ${'radio'}    | ${'baz'}          | ${{ title: 'baz' }} | ${''}                | ${true}
+    ${'radio'}    | ${'foo'}          | ${{ title: 'baz' }} | ${''}                | ${false}
   `(
     'with $filterType filter type should return $expected if category is $category and already selected is $selected',
     ({ filterType, selected, category, showAllCategoryTitle, expected }) => {
