@@ -1,4 +1,5 @@
 const inquirer = require('inquirer')
+const chalk = require('chalk')
 const getGitmojis = require('./gitmoji-utils')
 const {
   getJiraInfoFromBranch,
@@ -22,12 +23,18 @@ const prepareCommitMessage = () => {
   const jiraInfo = getJiraInfoFromBranch()
   if (!jiraInfo.boardId || !jiraInfo.ticketId) {
     console.error(
-      '\nYou must be on a branch with name "JIRABOARD-JIRATICKET/description-of-ticket" to continue (e.g. WEBREF-123/migrating-component-x-to-hooks)\n'
+      chalk.red('\nYou must be on a branch with name ') +
+        chalk.yellow('JIRABOARD-JIRATICKET/description-of-ticket') +
+        chalk.red(' to continue (e.g. ') +
+        chalk.yellow('WEBREF-123/migrating-component-x-to-hooks') +
+        chalk.red(')\n')
     )
     process.exit(1)
   }
 
-  console.log(`\nTagging commit as ${jiraInfo.boardId}-${jiraInfo.ticketId}\n`)
+  console.log(
+    chalk.cyan(`\nTagging commit as ${jiraInfo.boardId}-${jiraInfo.ticketId}\n`)
+  )
 
   getGitmojis().then(gitmojis => {
     inquirer
