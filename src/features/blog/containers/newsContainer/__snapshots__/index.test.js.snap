@@ -24,29 +24,9 @@ exports[`NewsContainer should render correctly 1`] = `
   </Gridstyles__Container>
   <Gridstyles__GreyWrapper>
     <FeaturedArticleContainer />
-    <FilterContainer
-      categories={
-        Array [
-          Object {
-            "hexColour": "#FFD95E",
-            "title": "All Articles",
-          },
-          Object {
-            "hexColour": "#2CDA9D",
-            "title": "Research",
-          },
-        ]
-      }
-      handleFilterClick={[Function]}
-      selectedFilter={
-        Object {
-          "hexColour": "#FFD95E",
-          "title": "All Articles",
-        }
-      }
-    />
-    <NewsCards
-      articles={
+    <FilteredPagedCardContainer
+      CardComponent={[Function]}
+      cardContent={
         Array [
           Object {
             "category": Object {
@@ -147,38 +127,113 @@ exports[`NewsContainer should render correctly 1`] = `
             "slug": "news-and-views/title",
             "title": "Title",
           },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "7-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "8-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "9-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "10-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "11-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "12-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "13-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
+          Object {
+            "category": Object {
+              "hexColour": "#2CDA9D",
+              "title": "General",
+            },
+            "datePublished": "2019-12-19",
+            "id": "14-General",
+            "readTime": null,
+            "slug": "news-and-views/title",
+            "title": "Title",
+          },
         ]
       }
-    />
-    <Gridstyles__Row
-      display="flex"
-      flexWrap="wrap"
-      pb={
+      categories={
         Array [
-          30,
-          30,
-          50,
+          Object {
+            "hexColour": "#FFD95E",
+            "title": "All Articles",
+          },
+          Object {
+            "hexColour": "#2CDA9D",
+            "title": "Research",
+          },
         ]
       }
-    >
-      <Gridstyles__Column
-        mx="auto"
-        pt={
-          Array [
-            30,
-            30,
-            50,
-          ]
-        }
-      >
-        <Button
-          onClick={[Function]}
-          variant="primary"
-        >
-          Show more articles
-        </Button>
-      </Gridstyles__Column>
-    </Gridstyles__Row>
+      filterType="radio"
+      pageSize={9}
+      showAllCategoryTitle="All Articles"
+      showMoreButtonText="Show more articles"
+    />
   </Gridstyles__GreyWrapper>
 </section>
 `;

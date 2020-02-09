@@ -1,8 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import FilterButton from '../../../../components/filterButton'
 import NewsCard from '../../components/newsCard'
-import NewsContainer from '.'
+import NewsContainer, { pageSize } from '.'
 
 jest.mock('../featuredArticleContainer', () => 'FeaturedArticleContainer')
 
@@ -23,7 +22,7 @@ const makeTestArticles = (quantity, category) => {
 
 const testArticles = [
   ...makeTestArticles(2, 'Research'),
-  ...makeTestArticles(9, 'General'),
+  ...makeTestArticles(15, 'General'),
 ]
 const testCategories = [
   { title: 'All Articles', hexColour: '#FFD95E' },
@@ -42,9 +41,14 @@ describe(NewsContainer.name, () => {
     const instance = mount(
       <NewsContainer articles={testArticles} categories={testCategories} />
     )
-    const researchCategoryFilterButton = instance.find(FilterButton).last()
+
+    const researchCategoryFilterButton = instance.find('[type="radio"]').last()
     researchCategoryFilterButton.simulate('click')
     expect(instance.find(NewsCard).length).toBe(2)
+
+    const generalCategoryFilterButton = instance.find('[type="radio"]').first()
+    generalCategoryFilterButton.simulate('click')
+    expect(instance.find(NewsCard).length).toBe(pageSize)
   })
 
   it('should show more articles when show more button is clicked', () => {
@@ -54,6 +58,6 @@ describe(NewsContainer.name, () => {
     expect(instance.find(NewsCard).length).toBe(9)
     const showMoreButton = instance.find('button').last()
     showMoreButton.simulate('click')
-    expect(instance.find(NewsCard).length).toBe(11)
+    expect(instance.find(NewsCard).length).toBe(17)
   })
 })
