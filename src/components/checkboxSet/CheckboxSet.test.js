@@ -1,6 +1,5 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import 'jest-styled-components'
 import constants from '../../constants'
 import Checkbox from '../checkbox'
 import { Provider } from '../appContext'
