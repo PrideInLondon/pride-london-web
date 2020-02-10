@@ -1150,10 +1150,10 @@
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-13.4.0.tgz#a59c311ebd1b801ee00edbc08663c8d78da26171"
   integrity sha512-YPdYqGmWiGAood7ri2BUXfPQKNthkQYV1rmQdaq4UAxWK5NLB5NXckaUYLbohqhHKtrq4tnfzVn+ePWID7Dzbg==
 
-"@contentful/rich-text-types@^14.0.0":
-  version "14.0.0"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-14.0.0.tgz#c2e1d04f64df8a7cbfae6dda07163ff8002b39da"
-  integrity sha512-RGekzvW58pDkFZDgIJqXsxM8pRt61vWjF6sIToMmBgW4T4xBoDRKmlHGsKWUTbUbuj49DiXvVhFYhM6j8E8xRQ==
+"@contentful/rich-text-types@^14.0.1":
+  version "14.0.1"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-14.0.1.tgz#b9751a8f7ce5a2056bd74b6c352b0a0ec683ce39"
+  integrity sha512-pZnXkK41UgOuH8s1o4Y1oOd5ZcmaoBfF3aHkIyW812opFtxiiPFRIwUlC28Bz/i4j/qu8AlPHr7EPN0hiv1LiQ==
 
 "@emmetio/extract-abbreviation@0.1.6":
   version "0.1.6"

@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
-    "@contentful/rich-text-types": "^14.0.0",
+    "@contentful/rich-text-types": "^14.0.1",
     "@rebass/grid": "^6.0.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.19.12",
