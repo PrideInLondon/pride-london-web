@@ -11,5 +11,4 @@ public
 .env.production
 
 # Text editor folders
-/.vscode
 /.idea

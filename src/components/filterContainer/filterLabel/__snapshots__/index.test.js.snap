@@ -107,11 +107,10 @@ exports[`FilterLabel renders when not selected 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "styles__Input-sc-1wu4f6z-2",
                   "isStatic": false,
-                  "lastClassName": "kgGtRH",
+                  "lastClassName": "eKsjNQ",
                   "rules": Array [
                     "border: 0;",
                     "clip: rect(0 0 0 0);",
-                    "clip-path: inset(50%);",
                     "height: 1px;",
                     "margin: -1px;",
                     "overflow: hidden;",
@@ -142,7 +141,7 @@ exports[`FilterLabel renders when not selected 1`] = `
           >
             <input
               aria-label="foo"
-              className="styles__Input-sc-1wu4f6z-2 kgGtRH"
+              className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
               id="foo"
               name="filterLabel"
               onClick={[Function]}
@@ -265,11 +264,10 @@ exports[`FilterLabel renders when selected 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "styles__Input-sc-1wu4f6z-2",
                   "isStatic": false,
-                  "lastClassName": "kgGtRH",
+                  "lastClassName": "eKsjNQ",
                   "rules": Array [
                     "border: 0;",
                     "clip: rect(0 0 0 0);",
-                    "clip-path: inset(50%);",
                     "height: 1px;",
                     "margin: -1px;",
                     "overflow: hidden;",
@@ -300,7 +298,7 @@ exports[`FilterLabel renders when selected 1`] = `
           >
             <input
               aria-label="foo"
-              className="styles__Input-sc-1wu4f6z-2 kgGtRH"
+              className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
               id="foo"
               name="filterLabel"
               onClick={[Function]}
