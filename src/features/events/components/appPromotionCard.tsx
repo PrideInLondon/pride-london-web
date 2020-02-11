@@ -8,8 +8,10 @@ import googlePlayStore from '../../../theme/assets/images/google-play.svg'
 
 const CardWrapper = styled.div`
   padding-left: 20px;
+  margin-bottom: 40px;
   ${mediaQueries.md} {
     padding-left: 30px;
+    margin-bottom: 0;
   }
 `
 
@@ -34,8 +36,10 @@ const CardDescription = styled.p`
   line-height: 26px;
 `
 const LinkWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
   ${mediaQueries.md} {
-    display: flex;
     flex-direction: column;
   }
 `
@@ -43,7 +47,6 @@ const LinkWrapper = styled.div`
 const AppStoreLink = styled.a`
   text-decoration: none;
   margin: 5px 0;
-  margin-right: 20px;
   ${mediaQueries.md} {
     margin-right: 0;
   }
