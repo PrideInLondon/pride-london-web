@@ -170,7 +170,10 @@ export function getDuration(start, end) {
 }
 
 export const generateEventSlug = ({ id, name, occurrence }) =>
-  `/event/${slugify(name, { lower: true })}${
+  `/event/${slugify(name, {
+    lower: true,
+    remove: /[<>:"/\\|?*,'+]/g,
+  })}${
     occurrence ? `-${moment(occurrence).format('DDMMYY')}` : ''
   }-${encoder.encode(id)}/`
 
