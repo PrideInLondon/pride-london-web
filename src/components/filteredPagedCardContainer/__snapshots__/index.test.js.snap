@@ -121,6 +121,291 @@ exports[`FilteredPagedCardContainer renders component with filter type radio 1`]
 `;
 
 exports[`FilteredPagedCardContainer with checkbox filter type shows more cards when the "show more" button is clicked 1`] = `
+.c2 {
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.c2.c2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.c1 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c9 {
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+}
+
+.c9.c9 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #bar;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #all;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: #foo;
+  border-color: #foo;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c5 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width:375px) {
+  .c2 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c2 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c2.c2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c2.c2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c1 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c0 {
+    min-width: 335px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    min-width: 668px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c0 {
+    min-width: 960px;
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .c0 {
+    min-width: 1260px;
+    max-width: 1440px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c9 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c9 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9.c9 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9 {
+    width: 33.33333333333333%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -229,7 +514,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
             "componentStyle": ComponentStyle {
               "componentId": "Gridstyles__Container-jfdl1j-2",
               "isStatic": false,
-              "lastClassName": "byHCwx",
+              "lastClassName": "c0",
               "rules": Array [
                 "@media screen and (min-width: 375px)",
                 "{min-width:335px;}",
@@ -262,7 +547,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
         mx="auto"
       >
         <div
-          className="Gridstyles__Container-jfdl1j-2 byHCwx"
+          className="c0"
         >
           <Gridstyles__Row
             display="flex"
@@ -282,7 +567,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "ihaaWG",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
@@ -313,7 +598,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                className="c1"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -334,7 +619,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "jnwtYj",
+                          "lastClassName": "c2",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -367,7 +652,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
+                      className="c2"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -379,7 +664,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__FilterContainerWrapper-kd1mao-0",
                                 "isStatic": false,
-                                "lastClassName": "kWUFNq",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "display:flex;flex-wrap:wrap;justify-content:center;",
                                 ],
@@ -397,7 +682,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           forwardedRef={null}
                         >
                           <div
-                            className="styles__FilterContainerWrapper-kd1mao-0 kWUFNq"
+                            className="c3"
                           >
                             <FilterLabel
                               filterColour="#all"
@@ -423,7 +708,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -452,7 +737,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 cGlsrw"
+                                    className="c4"
                                     htmlFor="all"
                                     tabIndex="0"
                                   >
@@ -481,7 +766,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           all
                                         </span>
@@ -507,7 +792,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -541,7 +826,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                       >
                                         <input
                                           aria-label="all"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="all"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -579,7 +864,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -608,7 +893,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gdJNpr"
+                                    className="c6"
                                     htmlFor="foo"
                                     tabIndex="0"
                                   >
@@ -637,7 +922,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           foo
                                         </span>
@@ -663,7 +948,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -697,7 +982,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                       >
                                         <input
                                           aria-label="foo"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -735,7 +1020,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -764,7 +1049,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gBUgEB"
+                                    className="c7"
                                     htmlFor="bar"
                                     tabIndex="0"
                                   >
@@ -793,7 +1078,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           bar
                                         </span>
@@ -819,7 +1104,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -853,7 +1138,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                                       >
                                         <input
                                           aria-label="bar"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -1017,7 +1302,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
             "componentStyle": ComponentStyle {
               "componentId": "pagedCardContainer__PaddedCardContainer-ymz70m-0",
               "isStatic": false,
-              "lastClassName": "iMbSNm",
+              "lastClassName": "c8",
               "rules": Array [
                 [Function],
               ],
@@ -1076,15 +1361,15 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
               },
             ]
           }
-          className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+          className="c8"
           isFullyLoaded={true}
         >
           <Gridstyles__Container
-            className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+            className="c8"
             mx="auto"
           >
             <StyledComponent
-              className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+              className="c8"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -1095,7 +1380,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Container-jfdl1j-2",
                     "isStatic": false,
-                    "lastClassName": "byHCwx",
+                    "lastClassName": "c0",
                     "rules": Array [
                       "@media screen and (min-width: 375px)",
                       "{min-width:335px;}",
@@ -1128,7 +1413,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
               mx="auto"
             >
               <div
-                className="Gridstyles__Container-jfdl1j-2 byHCwx pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+                className="c0 c8"
               >
                 <Gridstyles__Row
                   display="flex"
@@ -1148,7 +1433,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "ihaaWG",
+                          "lastClassName": "c1",
                           "rules": Array [
                             "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
@@ -1179,7 +1464,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                      className="c1"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -1209,7 +1494,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -1255,7 +1540,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -1307,7 +1592,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -1353,7 +1638,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -1405,7 +1690,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -1451,7 +1736,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -1503,7 +1788,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -1549,7 +1834,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -1601,7 +1886,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -1647,7 +1932,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -1686,6 +1971,404 @@ exports[`FilteredPagedCardContainer with checkbox filter type shows more cards w
 `;
 
 exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one page displayed on filter change 1`] = `
+.c2 {
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.c2.c2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.c11 {
+  padding: 10px 5px;
+}
+
+.c11.c11 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+
+.c1 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10.c10 {
+  padding-bottom: 30px;
+}
+
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c9 {
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+}
+
+.c9.c9 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #bar;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #all;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: #foo;
+  border-color: #foo;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c5 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c12 {
+  padding: 12px 35px;
+  border-radius: 4px;
+  font-family: Poppins,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.388;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background-color 0.15s linear,border 0.15s linear;
+  transition: background-color 0.15s linear,border 0.15s linear;
+  border: 2px solid #2CDA9D;
+  background-color: #2CDA9D;
+  color: #2D2F7F;
+}
+
+.c12:hover,
+.c12:focus {
+  background-color: #57e2b1;
+  border-color: #57e2b1;
+}
+
+.c12:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c8 {
+  padding-bottom: 0px;
+}
+
+@media screen and (min-width:375px) {
+  .c2 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c2 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c2.c2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c2.c2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c11 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c11 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c11.c11 {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c11.c11 {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c1 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c10 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c10 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c10 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c10.c10 {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c10.c10 {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c0 {
+    min-width: 335px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    min-width: 668px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c0 {
+    min-width: 960px;
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .c0 {
+    min-width: 1260px;
+    max-width: 1440px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c9 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c9 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9.c9 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9 {
+    width: 33.33333333333333%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -1794,7 +2477,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
             "componentStyle": ComponentStyle {
               "componentId": "Gridstyles__Container-jfdl1j-2",
               "isStatic": false,
-              "lastClassName": "byHCwx",
+              "lastClassName": "c0",
               "rules": Array [
                 "@media screen and (min-width: 375px)",
                 "{min-width:335px;}",
@@ -1827,7 +2510,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
         mx="auto"
       >
         <div
-          className="Gridstyles__Container-jfdl1j-2 byHCwx"
+          className="c0"
         >
           <Gridstyles__Row
             display="flex"
@@ -1847,7 +2530,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "eCAEmt",
+                    "lastClassName": "c10",
                     "rules": Array [
                       "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
@@ -1878,7 +2561,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                className="c1"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -1899,7 +2582,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "kdyIPc",
+                          "lastClassName": "c11",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -1932,7 +2615,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
+                      className="c2"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -1944,7 +2627,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__FilterContainerWrapper-kd1mao-0",
                                 "isStatic": false,
-                                "lastClassName": "kWUFNq",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "display:flex;flex-wrap:wrap;justify-content:center;",
                                 ],
@@ -1962,7 +2645,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                           forwardedRef={null}
                         >
                           <div
-                            className="styles__FilterContainerWrapper-kd1mao-0 kWUFNq"
+                            className="c3"
                           >
                             <FilterLabel
                               filterColour="#all"
@@ -1988,7 +2671,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -2017,7 +2700,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 cGlsrw"
+                                    className="c4"
                                     htmlFor="all"
                                     tabIndex="0"
                                   >
@@ -2046,7 +2729,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           all
                                         </span>
@@ -2072,7 +2755,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -2106,7 +2789,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                       >
                                         <input
                                           aria-label="all"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="all"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -2144,7 +2827,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -2173,7 +2856,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gdJNpr"
+                                    className="c6"
                                     htmlFor="foo"
                                     tabIndex="0"
                                   >
@@ -2202,7 +2885,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           foo
                                         </span>
@@ -2228,7 +2911,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -2262,7 +2945,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                       >
                                         <input
                                           aria-label="foo"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -2300,7 +2983,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -2329,7 +3012,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gBUgEB"
+                                    className="c7"
                                     htmlFor="bar"
                                     tabIndex="0"
                                   >
@@ -2358,7 +3041,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           bar
                                         </span>
@@ -2384,7 +3067,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -2418,7 +3101,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                                       >
                                         <input
                                           aria-label="bar"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -2498,7 +3181,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
             "componentStyle": ComponentStyle {
               "componentId": "pagedCardContainer__PaddedCardContainer-ymz70m-0",
               "isStatic": false,
-              "lastClassName": "jSDtMq",
+              "lastClassName": "c8",
               "rules": Array [
                 [Function],
               ],
@@ -2529,15 +3212,15 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
               },
             ]
           }
-          className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+          className="c8"
           isFullyLoaded={false}
         >
           <Gridstyles__Container
-            className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+            className="c8"
             mx="auto"
           >
             <StyledComponent
-              className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+              className="c8"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -2548,7 +3231,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Container-jfdl1j-2",
                     "isStatic": false,
-                    "lastClassName": "byHCwx",
+                    "lastClassName": "c0",
                     "rules": Array [
                       "@media screen and (min-width: 375px)",
                       "{min-width:335px;}",
@@ -2581,7 +3264,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
               mx="auto"
             >
               <div
-                className="Gridstyles__Container-jfdl1j-2 byHCwx pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+                className="c0 c8"
               >
                 <Gridstyles__Row
                   display="flex"
@@ -2601,7 +3284,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "eCAEmt",
+                          "lastClassName": "c10",
                           "rules": Array [
                             "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
@@ -2632,7 +3315,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                      className="c1"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -2662,7 +3345,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -2708,7 +3391,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -2771,7 +3454,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
               "componentStyle": ComponentStyle {
                 "componentId": "Gridstyles__Row-jfdl1j-1",
                 "isStatic": false,
-                "lastClassName": "eCAEmt",
+                "lastClassName": "c10",
                 "rules": Array [
                   "margin-left:5px;margin-right:5px;",
                   "@media screen and (min-width: 375px)",
@@ -2809,7 +3492,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
           }
         >
           <div
-            className="Gridstyles__Row-jfdl1j-1 eCAEmt"
+            className="c10"
             display="flex"
           >
             <Gridstyles__Column
@@ -2830,7 +3513,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                     "componentStyle": ComponentStyle {
                       "componentId": "Gridstyles__Column-jfdl1j-0",
                       "isStatic": false,
-                      "lastClassName": "kdyIPc",
+                      "lastClassName": "c11",
                       "rules": Array [
                         "padding:10px 5px;",
                         "@media screen and (min-width: 375px)",
@@ -2863,7 +3546,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                 }
               >
                 <div
-                  className="Gridstyles__Column-jfdl1j-0 kdyIPc"
+                  className="c11"
                 >
                   <Button
                     onClick={[Function]}
@@ -2882,7 +3565,7 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                             "componentStyle": ComponentStyle {
                               "componentId": "Buttonstyles__StyledButton-sc-8soki7-0",
                               "isStatic": false,
-                              "lastClassName": "hWJnOq",
+                              "lastClassName": "c12",
                               "rules": Array [
                                 "padding:12px 35px;border-radius:4px;font-family:",
                                 "Poppins, sans-serif",
@@ -2908,13 +3591,13 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
                         variant="primary"
                       >
                         <Component
-                          className="Buttonstyles__StyledButton-sc-8soki7-0 hWJnOq"
+                          className="c12"
                           onClick={[Function]}
                           renderAs="button"
                           variant="primary"
                         >
                           <button
-                            className="Buttonstyles__StyledButton-sc-8soki7-0 hWJnOq"
+                            className="c12"
                             onClick={[Function]}
                             variant="primary"
                           >
@@ -2936,6 +3619,291 @@ exports[`FilteredPagedCardContainer with checkbox filter type snaps back to one 
 `;
 
 exports[`FilteredPagedCardContainer with checkbox shows only cards with the selected filter category 1`] = `
+.c2 {
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.c2.c2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.c1 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c9 {
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+}
+
+.c9.c9 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #bar;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #all;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: #foo;
+  border-color: #foo;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c5 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width:375px) {
+  .c2 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c2 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c2.c2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c2.c2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c1 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c0 {
+    min-width: 335px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    min-width: 668px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c0 {
+    min-width: 960px;
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .c0 {
+    min-width: 1260px;
+    max-width: 1440px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c9 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c9 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9.c9 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9 {
+    width: 33.33333333333333%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -3023,7 +3991,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
             "componentStyle": ComponentStyle {
               "componentId": "Gridstyles__Container-jfdl1j-2",
               "isStatic": false,
-              "lastClassName": "byHCwx",
+              "lastClassName": "c0",
               "rules": Array [
                 "@media screen and (min-width: 375px)",
                 "{min-width:335px;}",
@@ -3056,7 +4024,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
         mx="auto"
       >
         <div
-          className="Gridstyles__Container-jfdl1j-2 byHCwx"
+          className="c0"
         >
           <Gridstyles__Row
             display="flex"
@@ -3076,7 +4044,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "ihaaWG",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
@@ -3107,7 +4075,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                className="c1"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -3128,7 +4096,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "jnwtYj",
+                          "lastClassName": "c2",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -3161,7 +4129,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
+                      className="c2"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -3173,7 +4141,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__FilterContainerWrapper-kd1mao-0",
                                 "isStatic": false,
-                                "lastClassName": "kWUFNq",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "display:flex;flex-wrap:wrap;justify-content:center;",
                                 ],
@@ -3191,7 +4159,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                           forwardedRef={null}
                         >
                           <div
-                            className="styles__FilterContainerWrapper-kd1mao-0 kWUFNq"
+                            className="c3"
                           >
                             <FilterLabel
                               filterColour="#all"
@@ -3217,7 +4185,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -3246,7 +4214,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 cGlsrw"
+                                    className="c4"
                                     htmlFor="all"
                                     tabIndex="0"
                                   >
@@ -3275,7 +4243,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           all
                                         </span>
@@ -3301,7 +4269,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -3335,7 +4303,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                       >
                                         <input
                                           aria-label="all"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="all"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -3373,7 +4341,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -3402,7 +4370,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gdJNpr"
+                                    className="c6"
                                     htmlFor="foo"
                                     tabIndex="0"
                                   >
@@ -3431,7 +4399,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           foo
                                         </span>
@@ -3457,7 +4425,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -3491,7 +4459,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                       >
                                         <input
                                           aria-label="foo"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -3529,7 +4497,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -3558,7 +4526,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gBUgEB"
+                                    className="c7"
                                     htmlFor="bar"
                                     tabIndex="0"
                                   >
@@ -3587,7 +4555,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           bar
                                         </span>
@@ -3613,7 +4581,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -3647,7 +4615,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                                       >
                                         <input
                                           aria-label="bar"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -3748,7 +4716,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
             "componentStyle": ComponentStyle {
               "componentId": "pagedCardContainer__PaddedCardContainer-ymz70m-0",
               "isStatic": false,
-              "lastClassName": "iMbSNm",
+              "lastClassName": "c8",
               "rules": Array [
                 [Function],
               ],
@@ -3786,15 +4754,15 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
               },
             ]
           }
-          className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+          className="c8"
           isFullyLoaded={true}
         >
           <Gridstyles__Container
-            className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+            className="c8"
             mx="auto"
           >
             <StyledComponent
-              className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+              className="c8"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -3805,7 +4773,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Container-jfdl1j-2",
                     "isStatic": false,
-                    "lastClassName": "byHCwx",
+                    "lastClassName": "c0",
                     "rules": Array [
                       "@media screen and (min-width: 375px)",
                       "{min-width:335px;}",
@@ -3838,7 +4806,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
               mx="auto"
             >
               <div
-                className="Gridstyles__Container-jfdl1j-2 byHCwx pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+                className="c0 c8"
               >
                 <Gridstyles__Row
                   display="flex"
@@ -3858,7 +4826,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "ihaaWG",
+                          "lastClassName": "c1",
                           "rules": Array [
                             "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
@@ -3889,7 +4857,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                      className="c1"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -3919,7 +4887,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -3965,7 +4933,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -4017,7 +4985,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -4063,7 +5031,7 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -4102,6 +5070,291 @@ exports[`FilteredPagedCardContainer with checkbox shows only cards with the sele
 `;
 
 exports[`FilteredPagedCardContainer with radio filter type shows more cards when the "show more" button is clicked 1`] = `
+.c2 {
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.c2.c2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.c1 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c9 {
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+}
+
+.c9.c9 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #bar;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #all;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: #foo;
+  border-color: #foo;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c5 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width:375px) {
+  .c2 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c2 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c2.c2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c2.c2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c1 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c0 {
+    min-width: 335px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    min-width: 668px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c0 {
+    min-width: 960px;
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .c0 {
+    min-width: 1260px;
+    max-width: 1440px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c9 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c9 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9.c9 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9 {
+    width: 33.33333333333333%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -4206,7 +5459,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
             "componentStyle": ComponentStyle {
               "componentId": "Gridstyles__Container-jfdl1j-2",
               "isStatic": false,
-              "lastClassName": "byHCwx",
+              "lastClassName": "c0",
               "rules": Array [
                 "@media screen and (min-width: 375px)",
                 "{min-width:335px;}",
@@ -4239,7 +5492,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
         mx="auto"
       >
         <div
-          className="Gridstyles__Container-jfdl1j-2 byHCwx"
+          className="c0"
         >
           <Gridstyles__Row
             display="flex"
@@ -4259,7 +5512,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "ihaaWG",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
@@ -4290,7 +5543,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                className="c1"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -4311,7 +5564,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "jnwtYj",
+                          "lastClassName": "c2",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -4344,7 +5597,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
+                      className="c2"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -4356,7 +5609,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__FilterContainerWrapper-kd1mao-0",
                                 "isStatic": false,
-                                "lastClassName": "kWUFNq",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "display:flex;flex-wrap:wrap;justify-content:center;",
                                 ],
@@ -4374,7 +5627,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           forwardedRef={null}
                         >
                           <div
-                            className="styles__FilterContainerWrapper-kd1mao-0 kWUFNq"
+                            className="c3"
                           >
                             <FilterLabel
                               filterColour="#all"
@@ -4400,7 +5653,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -4429,7 +5682,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 cGlsrw"
+                                    className="c4"
                                     htmlFor="all"
                                     tabIndex="0"
                                   >
@@ -4458,7 +5711,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           all
                                         </span>
@@ -4484,7 +5737,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -4518,7 +5771,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                       >
                                         <input
                                           aria-label="all"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="all"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -4556,7 +5809,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -4585,7 +5838,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gdJNpr"
+                                    className="c6"
                                     htmlFor="foo"
                                     tabIndex="0"
                                   >
@@ -4614,7 +5867,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           foo
                                         </span>
@@ -4640,7 +5893,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -4674,7 +5927,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                       >
                                         <input
                                           aria-label="foo"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -4712,7 +5965,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -4741,7 +5994,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gBUgEB"
+                                    className="c7"
                                     htmlFor="bar"
                                     tabIndex="0"
                                   >
@@ -4770,7 +6023,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           bar
                                         </span>
@@ -4796,7 +6049,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -4830,7 +6083,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                                       >
                                         <input
                                           aria-label="bar"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -4994,7 +6247,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
             "componentStyle": ComponentStyle {
               "componentId": "pagedCardContainer__PaddedCardContainer-ymz70m-0",
               "isStatic": false,
-              "lastClassName": "iMbSNm",
+              "lastClassName": "c8",
               "rules": Array [
                 [Function],
               ],
@@ -5053,15 +6306,15 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
               },
             ]
           }
-          className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+          className="c8"
           isFullyLoaded={true}
         >
           <Gridstyles__Container
-            className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+            className="c8"
             mx="auto"
           >
             <StyledComponent
-              className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+              className="c8"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -5072,7 +6325,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Container-jfdl1j-2",
                     "isStatic": false,
-                    "lastClassName": "byHCwx",
+                    "lastClassName": "c0",
                     "rules": Array [
                       "@media screen and (min-width: 375px)",
                       "{min-width:335px;}",
@@ -5105,7 +6358,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
               mx="auto"
             >
               <div
-                className="Gridstyles__Container-jfdl1j-2 byHCwx pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+                className="c0 c8"
               >
                 <Gridstyles__Row
                   display="flex"
@@ -5125,7 +6378,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "ihaaWG",
+                          "lastClassName": "c1",
                           "rules": Array [
                             "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
@@ -5156,7 +6409,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                      className="c1"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -5186,7 +6439,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -5232,7 +6485,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -5284,7 +6537,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -5330,7 +6583,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -5382,7 +6635,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -5428,7 +6681,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -5480,7 +6733,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -5526,7 +6779,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -5578,7 +6831,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -5624,7 +6877,7 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -5663,6 +6916,404 @@ exports[`FilteredPagedCardContainer with radio filter type shows more cards when
 `;
 
 exports[`FilteredPagedCardContainer with radio filter type snaps back to one page displayed on filter change 1`] = `
+.c2 {
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.c2.c2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.c11 {
+  padding: 10px 5px;
+}
+
+.c11.c11 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+
+.c1 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10.c10 {
+  padding-bottom: 30px;
+}
+
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c9 {
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+}
+
+.c9.c9 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #bar;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #all;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: #foo;
+  border-color: #foo;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c5 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c12 {
+  padding: 12px 35px;
+  border-radius: 4px;
+  font-family: Poppins,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.388;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background-color 0.15s linear,border 0.15s linear;
+  transition: background-color 0.15s linear,border 0.15s linear;
+  border: 2px solid #2CDA9D;
+  background-color: #2CDA9D;
+  color: #2D2F7F;
+}
+
+.c12:hover,
+.c12:focus {
+  background-color: #57e2b1;
+  border-color: #57e2b1;
+}
+
+.c12:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c8 {
+  padding-bottom: 0px;
+}
+
+@media screen and (min-width:375px) {
+  .c2 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c2 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c2.c2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c2.c2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c11 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c11 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c11.c11 {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c11.c11 {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c1 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c10 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c10 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c10 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c10.c10 {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c10.c10 {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c0 {
+    min-width: 335px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    min-width: 668px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c0 {
+    min-width: 960px;
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .c0 {
+    min-width: 1260px;
+    max-width: 1440px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c9 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c9 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9.c9 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9 {
+    width: 33.33333333333333%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -5767,7 +7418,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
             "componentStyle": ComponentStyle {
               "componentId": "Gridstyles__Container-jfdl1j-2",
               "isStatic": false,
-              "lastClassName": "byHCwx",
+              "lastClassName": "c0",
               "rules": Array [
                 "@media screen and (min-width: 375px)",
                 "{min-width:335px;}",
@@ -5800,7 +7451,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
         mx="auto"
       >
         <div
-          className="Gridstyles__Container-jfdl1j-2 byHCwx"
+          className="c0"
         >
           <Gridstyles__Row
             display="flex"
@@ -5820,7 +7471,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "eCAEmt",
+                    "lastClassName": "c10",
                     "rules": Array [
                       "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
@@ -5851,7 +7502,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                className="c1"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -5872,7 +7523,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "kdyIPc",
+                          "lastClassName": "c11",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -5905,7 +7556,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
+                      className="c2"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -5917,7 +7568,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__FilterContainerWrapper-kd1mao-0",
                                 "isStatic": false,
-                                "lastClassName": "kWUFNq",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "display:flex;flex-wrap:wrap;justify-content:center;",
                                 ],
@@ -5935,7 +7586,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                           forwardedRef={null}
                         >
                           <div
-                            className="styles__FilterContainerWrapper-kd1mao-0 kWUFNq"
+                            className="c3"
                           >
                             <FilterLabel
                               filterColour="#all"
@@ -5961,7 +7612,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -5990,7 +7641,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 cGlsrw"
+                                    className="c4"
                                     htmlFor="all"
                                     tabIndex="0"
                                   >
@@ -6019,7 +7670,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           all
                                         </span>
@@ -6045,7 +7696,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -6079,7 +7730,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                       >
                                         <input
                                           aria-label="all"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="all"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -6117,7 +7768,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -6146,7 +7797,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gdJNpr"
+                                    className="c6"
                                     htmlFor="foo"
                                     tabIndex="0"
                                   >
@@ -6175,7 +7826,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           foo
                                         </span>
@@ -6201,7 +7852,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -6235,7 +7886,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                       >
                                         <input
                                           aria-label="foo"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -6273,7 +7924,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -6302,7 +7953,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gBUgEB"
+                                    className="c7"
                                     htmlFor="bar"
                                     tabIndex="0"
                                   >
@@ -6331,7 +7982,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           bar
                                         </span>
@@ -6357,7 +8008,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -6391,7 +8042,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                                       >
                                         <input
                                           aria-label="bar"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -6471,7 +8122,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
             "componentStyle": ComponentStyle {
               "componentId": "pagedCardContainer__PaddedCardContainer-ymz70m-0",
               "isStatic": false,
-              "lastClassName": "jSDtMq",
+              "lastClassName": "c8",
               "rules": Array [
                 [Function],
               ],
@@ -6502,15 +8153,15 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
               },
             ]
           }
-          className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+          className="c8"
           isFullyLoaded={false}
         >
           <Gridstyles__Container
-            className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+            className="c8"
             mx="auto"
           >
             <StyledComponent
-              className="pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+              className="c8"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -6521,7 +8172,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Container-jfdl1j-2",
                     "isStatic": false,
-                    "lastClassName": "byHCwx",
+                    "lastClassName": "c0",
                     "rules": Array [
                       "@media screen and (min-width: 375px)",
                       "{min-width:335px;}",
@@ -6554,7 +8205,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
               mx="auto"
             >
               <div
-                className="Gridstyles__Container-jfdl1j-2 byHCwx pagedCardContainer__PaddedCardContainer-ymz70m-0 jSDtMq"
+                className="c0 c8"
               >
                 <Gridstyles__Row
                   display="flex"
@@ -6574,7 +8225,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "eCAEmt",
+                          "lastClassName": "c10",
                           "rules": Array [
                             "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
@@ -6605,7 +8256,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                      className="c1"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -6635,7 +8286,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -6681,7 +8332,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -6744,7 +8395,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
               "componentStyle": ComponentStyle {
                 "componentId": "Gridstyles__Row-jfdl1j-1",
                 "isStatic": false,
-                "lastClassName": "eCAEmt",
+                "lastClassName": "c10",
                 "rules": Array [
                   "margin-left:5px;margin-right:5px;",
                   "@media screen and (min-width: 375px)",
@@ -6782,7 +8433,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
           }
         >
           <div
-            className="Gridstyles__Row-jfdl1j-1 eCAEmt"
+            className="c10"
             display="flex"
           >
             <Gridstyles__Column
@@ -6803,7 +8454,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                     "componentStyle": ComponentStyle {
                       "componentId": "Gridstyles__Column-jfdl1j-0",
                       "isStatic": false,
-                      "lastClassName": "kdyIPc",
+                      "lastClassName": "c11",
                       "rules": Array [
                         "padding:10px 5px;",
                         "@media screen and (min-width: 375px)",
@@ -6836,7 +8487,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                 }
               >
                 <div
-                  className="Gridstyles__Column-jfdl1j-0 kdyIPc"
+                  className="c11"
                 >
                   <Button
                     onClick={[Function]}
@@ -6855,7 +8506,7 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                             "componentStyle": ComponentStyle {
                               "componentId": "Buttonstyles__StyledButton-sc-8soki7-0",
                               "isStatic": false,
-                              "lastClassName": "hWJnOq",
+                              "lastClassName": "c12",
                               "rules": Array [
                                 "padding:12px 35px;border-radius:4px;font-family:",
                                 "Poppins, sans-serif",
@@ -6881,13 +8532,13 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
                         variant="primary"
                       >
                         <Component
-                          className="Buttonstyles__StyledButton-sc-8soki7-0 hWJnOq"
+                          className="c12"
                           onClick={[Function]}
                           renderAs="button"
                           variant="primary"
                         >
                           <button
-                            className="Buttonstyles__StyledButton-sc-8soki7-0 hWJnOq"
+                            className="c12"
                             onClick={[Function]}
                             variant="primary"
                           >
@@ -6909,6 +8560,291 @@ exports[`FilteredPagedCardContainer with radio filter type snaps back to one pag
 `;
 
 exports[`FilteredPagedCardContainer with radio shows only cards with the selected filter category 1`] = `
+.c2 {
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.c2.c2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.c1 {
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c9 {
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+}
+
+.c9.c9 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #bar;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #all;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid;
+  background-color: #foo;
+  border-color: #foo;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.c5 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width:375px) {
+  .c2 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c2 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c2.c2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c2.c2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c1 {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c0 {
+    min-width: 335px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    min-width: 668px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c0 {
+    min-width: 960px;
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .c0 {
+    min-width: 1260px;
+    max-width: 1440px;
+  }
+}
+
+@media screen and (min-width:375px) {
+  .c9 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c9 {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9.c9 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9.c9 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c9 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c9 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c9 {
+    width: 33.33333333333333%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 <FilteredPagedCardContainer
   CardComponent={[Function]}
   cardContent={
@@ -6992,7 +8928,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
             "componentStyle": ComponentStyle {
               "componentId": "Gridstyles__Container-jfdl1j-2",
               "isStatic": false,
-              "lastClassName": "byHCwx",
+              "lastClassName": "c0",
               "rules": Array [
                 "@media screen and (min-width: 375px)",
                 "{min-width:335px;}",
@@ -7025,7 +8961,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
         mx="auto"
       >
         <div
-          className="Gridstyles__Container-jfdl1j-2 byHCwx"
+          className="c0"
         >
           <Gridstyles__Row
             display="flex"
@@ -7045,7 +8981,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Row-jfdl1j-1",
                     "isStatic": false,
-                    "lastClassName": "ihaaWG",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "margin-left:5px;margin-right:5px;",
                       "@media screen and (min-width: 375px)",
@@ -7076,7 +9012,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
               forwardedRef={null}
             >
               <div
-                className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                className="c1"
                 display="flex"
               >
                 <Gridstyles__Column
@@ -7097,7 +9033,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Column-jfdl1j-0",
                           "isStatic": false,
-                          "lastClassName": "jnwtYj",
+                          "lastClassName": "c2",
                           "rules": Array [
                             "padding:10px 5px;",
                             "@media screen and (min-width: 375px)",
@@ -7130,7 +9066,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                     width={1}
                   >
                     <div
-                      className="Gridstyles__Column-jfdl1j-0 jnwtYj"
+                      className="c2"
                       width={1}
                     >
                       <styles__FilterContainerWrapper>
@@ -7142,7 +9078,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                               "componentStyle": ComponentStyle {
                                 "componentId": "styles__FilterContainerWrapper-kd1mao-0",
                                 "isStatic": false,
-                                "lastClassName": "kWUFNq",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "display:flex;flex-wrap:wrap;justify-content:center;",
                                 ],
@@ -7160,7 +9096,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                           forwardedRef={null}
                         >
                           <div
-                            className="styles__FilterContainerWrapper-kd1mao-0 kWUFNq"
+                            className="c3"
                           >
                             <FilterLabel
                               filterColour="#all"
@@ -7186,7 +9122,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -7215,7 +9151,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 cGlsrw"
+                                    className="c4"
                                     htmlFor="all"
                                     tabIndex="0"
                                   >
@@ -7244,7 +9180,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           all
                                         </span>
@@ -7270,7 +9206,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -7304,7 +9240,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                       >
                                         <input
                                           aria-label="all"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="all"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -7342,7 +9278,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -7371,7 +9307,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gdJNpr"
+                                    className="c6"
                                     htmlFor="foo"
                                     tabIndex="0"
                                   >
@@ -7400,7 +9336,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           foo
                                         </span>
@@ -7426,7 +9362,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -7460,7 +9396,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                       >
                                         <input
                                           aria-label="foo"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="foo"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -7498,7 +9434,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                       "componentStyle": ComponentStyle {
                                         "componentId": "styles__Label-sc-1wu4f6z-0",
                                         "isStatic": false,
-                                        "lastClassName": "gBUgEB",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "align-items:center;border:2px solid;background-color:",
                                           [Function],
@@ -7527,7 +9463,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                   tabIndex="0"
                                 >
                                   <label
-                                    className="styles__Label-sc-1wu4f6z-0 gBUgEB"
+                                    className="c7"
                                     htmlFor="bar"
                                     tabIndex="0"
                                   >
@@ -7556,7 +9492,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                         forwardedRef={null}
                                       >
                                         <span
-                                          className="styles__Text-sc-1wu4f6z-1 cywyfl"
+                                          className=""
                                         >
                                           bar
                                         </span>
@@ -7582,7 +9518,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                             "componentStyle": ComponentStyle {
                                               "componentId": "styles__Input-sc-1wu4f6z-2",
                                               "isStatic": false,
-                                              "lastClassName": "eKsjNQ",
+                                              "lastClassName": "c5",
                                               "rules": Array [
                                                 "border: 0;",
                                                 "clip: rect(0 0 0 0);",
@@ -7616,7 +9552,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                                       >
                                         <input
                                           aria-label="bar"
-                                          className="styles__Input-sc-1wu4f6z-2 eKsjNQ"
+                                          className="c5"
                                           id="bar"
                                           name="filterLabel"
                                           onClick={[Function]}
@@ -7717,7 +9653,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
             "componentStyle": ComponentStyle {
               "componentId": "pagedCardContainer__PaddedCardContainer-ymz70m-0",
               "isStatic": false,
-              "lastClassName": "iMbSNm",
+              "lastClassName": "c8",
               "rules": Array [
                 [Function],
               ],
@@ -7755,15 +9691,15 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
               },
             ]
           }
-          className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+          className="c8"
           isFullyLoaded={true}
         >
           <Gridstyles__Container
-            className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+            className="c8"
             mx="auto"
           >
             <StyledComponent
-              className="pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+              className="c8"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -7774,7 +9710,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                   "componentStyle": ComponentStyle {
                     "componentId": "Gridstyles__Container-jfdl1j-2",
                     "isStatic": false,
-                    "lastClassName": "byHCwx",
+                    "lastClassName": "c0",
                     "rules": Array [
                       "@media screen and (min-width: 375px)",
                       "{min-width:335px;}",
@@ -7807,7 +9743,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
               mx="auto"
             >
               <div
-                className="Gridstyles__Container-jfdl1j-2 byHCwx pagedCardContainer__PaddedCardContainer-ymz70m-0 iMbSNm"
+                className="c0 c8"
               >
                 <Gridstyles__Row
                   display="flex"
@@ -7827,7 +9763,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                         "componentStyle": ComponentStyle {
                           "componentId": "Gridstyles__Row-jfdl1j-1",
                           "isStatic": false,
-                          "lastClassName": "ihaaWG",
+                          "lastClassName": "c1",
                           "rules": Array [
                             "margin-left:5px;margin-right:5px;",
                             "@media screen and (min-width: 375px)",
@@ -7858,7 +9794,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                     forwardedRef={null}
                   >
                     <div
-                      className="Gridstyles__Row-jfdl1j-1 ihaaWG"
+                      className="c1"
                       display="flex"
                     >
                       <Gridstyles__FlexColumn
@@ -7888,7 +9824,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -7934,7 +9870,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,
@@ -7986,7 +9922,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                               "componentStyle": ComponentStyle {
                                 "componentId": "Gridstyles__FlexColumn-jfdl1j-3",
                                 "isStatic": false,
-                                "lastClassName": "dwSNFv",
+                                "lastClassName": "c9",
                                 "rules": Array [
                                   "padding:10px 5px;",
                                   "@media screen and (min-width: 375px)",
@@ -8032,7 +9968,7 @@ exports[`FilteredPagedCardContainer with radio shows only cards with the selecte
                           }
                         >
                           <div
-                            className="Gridstyles__Column-jfdl1j-0 Gridstyles__FlexColumn-jfdl1j-3 dwSNFv"
+                            className="c9"
                             width={
                               Array [
                                 1,

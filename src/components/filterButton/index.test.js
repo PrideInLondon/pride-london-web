@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import { FilterLabel } from './styles'
 import FilterButton from '.'
-import 'jest-styled-components'
 
 describe(FilterButton.name, () => {
   const mockClick = jest.fn()

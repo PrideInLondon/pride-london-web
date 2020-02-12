@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import Video from '.'
-import 'jest-styled-components'
 
 const videoData = {
   videoId: {
