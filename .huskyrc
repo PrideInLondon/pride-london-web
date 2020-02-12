@@ -1,5 +1,6 @@
 {
   "hooks": {
-    "pre-commit": "lint-staged && tsc"
+    "pre-commit": "lint-staged && tsc",
+    "prepare-commit-msg": "exec < /dev/tty && node src/scripts/run-script prepare-commit-msg"
   }
 }
