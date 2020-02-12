@@ -4,7 +4,6 @@ import toJSON from 'enzyme-to-json'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
 import BannerImage from '.'
-import 'jest-styled-components'
 
 jest.mock('gatsby-image/withIEPolyfill', () => {
   const Img = require('gatsby-image')
