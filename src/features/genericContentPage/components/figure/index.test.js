@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import Figure from '.'
-import 'jest-styled-components'
 
 describe('<Figure/>', () => {
   const fields = {

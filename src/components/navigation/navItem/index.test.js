@@ -1,27 +1,22 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
-import 'jest-styled-components'
 import NavItem from '../navItem'
 import { mockData } from './__mocks__'
 
 describe('Desktop version <NavItem/>', () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
+  const globalMatchMediaMock = global.window.matchMedia
 
+  beforeAll(() => {
     global.window.matchMedia = jest.fn(() => {
       return {
         matches: true,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
       }
     })
   })
+
   afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
+    global.window.matchMedia = globalMatchMediaMock
   })
 
   it('renders the desktop version of the component <NavItem />', () => {
@@ -71,24 +66,6 @@ describe('Desktop version <NavItem/>', () => {
 })
 
 describe('Mobile version <NavItem/>', () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-
-    global.window.matchMedia = jest.fn(() => {
-      return {
-        matches: false,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-      }
-    })
-  })
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
-  })
-
   it('renders the mobile version of the component <NavItem />', () => {
     const wrapper = shallow(<NavItem item={mockData} />)
     expect(toJSON(wrapper)).toMatchSnapshot()

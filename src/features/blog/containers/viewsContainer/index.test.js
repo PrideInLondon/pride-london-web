@@ -5,14 +5,6 @@ import { views } from './__mocks__'
 import ViewsContainer from '.'
 
 describe('ViewsContainer', () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-  })
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-  })
   it('should render with default values', () => {
     const wrapper = shallow(<ViewsContainer views={views} />)
     expect(toJSON(wrapper)).toMatchSnapshot()
