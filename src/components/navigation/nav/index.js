@@ -68,6 +68,10 @@ const Nav = () => {
                         links: [
                           { title: 'Our story', url: '/about-us' },
                           { title: 'Our impact', url: '/about-us/impact' },
+                          {
+                            title: "Pride's Got Talent",
+                            url: '/events/prides-got-talent/',
+                          },
                         ],
                       },
                       {
