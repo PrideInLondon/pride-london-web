@@ -5,7 +5,6 @@ import { GroupedEventsCards, AppPromotionCard } from '../index'
 import { mockNodes, testEvent } from './__mocks__'
 import 'jest-styled-components'
 
-console.log(title)
 describe('AppPromotionCard', () => {
   const { findByText } = render(<AppPromotionCard />)
 
