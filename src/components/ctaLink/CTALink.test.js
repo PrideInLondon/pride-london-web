@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
-import 'jest-styled-components'
 import { CTALink } from './CTALink'
 
 const link = {
@@ -12,16 +11,6 @@ const link = {
 }
 
 describe('<CTALink/>', () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-  })
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
-  })
-
   it('should render and match snapshot', () => {
     const wrapper = shallow(<CTALink to={link.url}>{link.text}</CTALink>)
     expect(toJSON(wrapper)).toMatchSnapshot()

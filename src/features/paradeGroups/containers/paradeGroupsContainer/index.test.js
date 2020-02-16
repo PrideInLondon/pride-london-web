@@ -4,7 +4,6 @@ import FilterButton from '../../../../components/filterButton'
 import LetterGroup from '../../components/letterGroup'
 import theme from '../../../../theme/theme'
 import ParadeGroupsContainer from '.'
-import 'jest-styled-components'
 
 describe(ParadeGroupsContainer.name, () => {
   const paradeGroups = [

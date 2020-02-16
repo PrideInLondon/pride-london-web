@@ -12,3 +12,6 @@ public
 
 # Text editor folders
 /.idea
+
+# Custom git hook directory
+.commit-msg
