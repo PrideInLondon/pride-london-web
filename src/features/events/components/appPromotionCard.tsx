@@ -70,16 +70,26 @@ const AppPromotionCard: React.FC = () => {
         <AppStoreLink
           href="https://apps.apple.com/gb/app/pride-in-london/id1250496471"
           rel="noopener noreferrer"
+          aria-label="link to the Apple store so you can download the IOS version of the Pride in London app"
           target="_blank"
         >
-          <AppStoreImg src={appleStore} alt="Apple store icon" />
+          <AppStoreImg
+            src={appleStore}
+            alt="Apple store icon"
+            aria-hidden="true"
+          />
         </AppStoreLink>
         <AppStoreLink
           href="https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en_GB"
+          aria-label="link to the Google store so you can download the Android version Pride in London app"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <AppStoreImg src={googlePlayStore} alt="Apple store icon" />
+          <AppStoreImg
+            src={googlePlayStore}
+            alt="Apple store icon"
+            aria-hidden="true"
+          />
         </AppStoreLink>
       </LinkWrapper>
     </CardWrapper>
