@@ -18,6 +18,7 @@ const NewsContainer = ({ articles, categories }) => {
     return {
       ...article,
       category: [article.category.title],
+      // categoryArray: [article.category.title], // Array required for filtering // TODO alternative option
     }
   })
 

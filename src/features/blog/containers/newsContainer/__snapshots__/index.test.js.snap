@@ -29,10 +29,9 @@ exports[`NewsContainer should render correctly 1`] = `
       cardContent={
         Array [
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "Research",
-            },
+            "category": Array [
+              "Research",
+            ],
             "datePublished": "2019-12-19",
             "id": "0-Research",
             "readTime": null,
@@ -40,10 +39,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "Research",
-            },
+            "category": Array [
+              "Research",
+            ],
             "datePublished": "2019-12-19",
             "id": "1-Research",
             "readTime": null,
@@ -51,10 +49,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "0-General",
             "readTime": null,
@@ -62,10 +59,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "1-General",
             "readTime": null,
@@ -73,10 +69,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "2-General",
             "readTime": null,
@@ -84,10 +79,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "3-General",
             "readTime": null,
@@ -95,10 +89,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "4-General",
             "readTime": null,
@@ -106,10 +99,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "5-General",
             "readTime": null,
@@ -117,10 +109,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "6-General",
             "readTime": null,
@@ -128,10 +119,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "7-General",
             "readTime": null,
@@ -139,10 +129,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "8-General",
             "readTime": null,
@@ -150,10 +139,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "9-General",
             "readTime": null,
@@ -161,10 +149,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "10-General",
             "readTime": null,
@@ -172,10 +159,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "11-General",
             "readTime": null,
@@ -183,10 +169,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "12-General",
             "readTime": null,
@@ -194,10 +179,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "13-General",
             "readTime": null,
@@ -205,10 +189,9 @@ exports[`NewsContainer should render correctly 1`] = `
             "title": "Title",
           },
           Object {
-            "category": Object {
-              "hexColour": "#2CDA9D",
-              "title": "General",
-            },
+            "category": Array [
+              "General",
+            ],
             "datePublished": "2019-12-19",
             "id": "14-General",
             "readTime": null,

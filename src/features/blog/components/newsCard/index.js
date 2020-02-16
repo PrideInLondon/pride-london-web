@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import constants from '../../../../constants'
 import NewsCardHeader from '../../../../components/newsCardHeader'
 import { handleSlug } from '../../../../utilities'
 import { Card, CardTitle } from './styles'
@@ -13,16 +14,22 @@ const NewsCard = ({
   readTime,
   className,
   renderAs,
-}) => (
-  <Card className={className} to={handleSlug(slug)} as={renderAs}>
-    <NewsCardHeader
-      category={category}
-      datePublished={datePublished}
-      readTime={readTime}
-    />
-    <CardTitle>{title}</CardTitle>
-  </Card>
-)
+}) => {
+  const categoryObj = Array.isArray(category)
+    ? constants.articleCategories.find(obj => obj.title === category[0])
+    : category
+
+  return (
+    <Card className={className} to={handleSlug(slug)} as={renderAs}>
+      <NewsCardHeader
+        category={categoryObj}
+        datePublished={datePublished}
+        readTime={readTime}
+      />
+      <CardTitle>{title}</CardTitle>
+    </Card>
+  )
+}
 
 NewsCard.propTypes = {
   slug: PropTypes.string.isRequired,
