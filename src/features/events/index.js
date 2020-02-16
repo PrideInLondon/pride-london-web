@@ -1,3 +1,4 @@
+export { default as AppPromotionCard } from './components/appPromotionCard'
 export { default as EventListingCard } from './components/eventListingCard'
 export { default as GroupedEventsCards } from './components/groupedEventsCard'
 export { default as EventTagList } from './components/eventTagList'

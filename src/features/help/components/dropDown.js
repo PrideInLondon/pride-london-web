@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import onClickOutside from 'react-onclickoutside'
+import onClickOutside from 'react-onclickoutside' // lib has bug in hooks implementation - see #PR 1289
 import theme from '../../../theme/theme'
 import { media } from '../../../theme/media'
 import chevronDown from '../../../theme/assets/images/icon-chevron-down-white.svg'

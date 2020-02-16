@@ -21,15 +21,15 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
       alignItems="center"
       flexDirection={'row-reverse'}
       justifyContent={'space-between'}
-      mr={0}
+      mr="0"
       flexWrap={{ default: 'wrap', md: 'nowrap' }}
     >
       <Column
-        pr={0}
+        pr="0"
         py="0"
         maxWidth="920px"
         width={{ default: 1, md: 0.6666 }}
-        mb={{ default: '-20px', md: 0 }}
+        mb={{ default: '-20px', md: '0' }}
       >
         <ImgWrapper>
           <ResponsiveImg

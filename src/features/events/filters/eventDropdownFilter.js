@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import onClickOutside from 'react-onclickoutside'
+import useOnClickOutside from 'use-onclickoutside'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
-import { Consumer } from '../../../components/appContext'
+import { AppContext } from '../../../components/appContext'
 import CheckboxSet from '../../../components/checkboxSet'
 import iconDown from '../../../theme/assets/images/icon-chevron-down.svg'
 import iconUp from '../../../theme/assets/images/icon-chevron-up.svg'
@@ -96,74 +96,54 @@ const Badge = styled.span`
   `};
 `
 
-class EventDropdownFilter extends Component {
-  state = {
-    isOpen: false,
-  }
+const EventDropdownFilter = ({ heading, sort, filterName }) => {
+  const { state, actions } = useContext(AppContext)
+  const [isOpen, setIsOpen] = useState(false)
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state.isOpen !== nextState.isOpen
-  }
-
-  handleClickOutside = () => {
-    if (this.props.filterName === this.props.filterOpen) {
-      this.setState({ isOpen: false }, () => {
-        this.props.closeSiblingFilters(this.props.filterName, this.state.isOpen)
-      })
+  const ref = useRef(null)
+  useOnClickOutside(ref, () => {
+    if (filterName === state.filterOpen) {
+      setIsOpen(!isOpen)
+      actions.closeSiblingFilters(filterName, !isOpen)
     }
+  })
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+    actions.closeSiblingFilters(filterName, !isOpen)
   }
 
-  toggleMenu = () => {
-    const isOpen = !this.state.isOpen
-    this.setState({ isOpen: isOpen }, () =>
-      this.props.closeSiblingFilters(this.props.filterName, isOpen)
-    )
-  }
-
-  render() {
-    return (
-      <Consumer>
-        {context => (
-          <Wrapper>
-            <FilterButton
-              aria-controls={this.props.filterName}
-              aria-expanded={this.state.isOpen}
-              type="button"
-              id={`button_${this.props.filterName}`}
-              onClick={this.toggleMenu}
-              isOpen={this.state.isOpen}
-              isActive={context.state.filters[this.props.filterName].length > 0}
-            >
-              {this.props.heading}
-              {context.state.filters[this.props.filterName].length > 0 ? (
-                <Badge>
-                  {context.state.filters[this.props.filterName].length}
-                </Badge>
-              ) : null}
-            </FilterButton>
-            <DropDown
-              isOpen={this.state.isOpen}
-              id={this.props.filterName}
-              aria-hidden={!this.state.isOpen}
-              aria-labelledby={`button_${this.props.filterName}`}
-            >
-              <CheckboxSet
-                filterName={this.props.filterName}
-                sort={this.props.sort}
-              />
-            </DropDown>
-          </Wrapper>
-        )}
-      </Consumer>
-    )
-  }
+  return (
+    <Wrapper ref={ref}>
+      <FilterButton
+        aria-controls={filterName}
+        aria-expanded={isOpen}
+        type="button"
+        id={`button_${filterName}`}
+        onClick={toggleMenu}
+        isOpen={isOpen}
+        isActive={state.filters[filterName].length > 0}
+      >
+        {heading}
+        {state.filters[filterName].length > 0 ? (
+          <Badge>{state.filters[filterName].length}</Badge>
+        ) : null}
+      </FilterButton>
+      <DropDown
+        isOpen={isOpen}
+        id={filterName}
+        aria-hidden={!isOpen}
+        aria-labelledby={`button_${filterName}`}
+      >
+        <CheckboxSet filterName={filterName} sort={sort} />
+      </DropDown>
+    </Wrapper>
+  )
 }
 
 EventDropdownFilter.propTypes = {
   heading: PropTypes.string.isRequired,
   filterName: PropTypes.string.isRequired,
-  closeSiblingFilters: PropTypes.func.isRequired,
-  filterOpen: PropTypes.string,
   sort: PropTypes.oneOf(['ASC', 'DESC']),
 }
 
@@ -171,5 +151,4 @@ EventDropdownFilter.defaultProps = {
   filterOpen: null,
   sort: null,
 }
-
-export default onClickOutside(EventDropdownFilter)
+export default EventDropdownFilter
