@@ -108,8 +108,8 @@ export const Events = ({
             backgroundColor={colors.darkCyan}
             image={childImageSharp}
           />
-          <Container marginTop={{ default: 0, md: '60px' }}>
-            <Row>
+          <Container marginTop={{ default: 0, md: '60px' }} width="100%">
+            <Row mx={[0, 0, 40, 75]}>
               <ListingCardWrapper>
                 {context.filteredEvents
                   .filter(filterByLimit, context.state.eventsToShow)

@@ -11,6 +11,7 @@ import EventListingCard from './eventListingCard'
 const DateGroupHeading = styled.h2`
   margin: 1rem 0;
   color: ${colors.white};
+  margin-left: 20px;
 
   ${media.tablet`
     display: none;
@@ -37,7 +38,7 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
     <AnimatedFlexColumn
       width={{ default: 1, md: 1 / 3, lg: 1 / 4 }}
       key={event.node.id}
-      py={[2, 2, 2, 3]}
+      padding={{ sm: '10px 0', md: '10px', lg: '10px 15px' }}
       animation={
         index >= toLoad - constants.itemsToLoad &&
         toLoad !== constants.itemsToLoad

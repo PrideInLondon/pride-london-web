@@ -12,18 +12,10 @@ exports[`The GroupedEventsCards component Render Snapshot 1`] = `
   key="123"
   padding={
     Object {
-      "default": "10px 5px",
       "lg": "10px 15px",
-      "sm": "10px",
+      "md": "10px",
+      "sm": "10px 0",
     }
-  }
-  py={
-    Array [
-      2,
-      2,
-      2,
-      3,
-    ]
   }
   width={
     Object {
