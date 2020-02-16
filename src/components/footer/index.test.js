@@ -2,22 +2,10 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import * as Intercom from 'react-intercom'
-import 'jest-styled-components'
 import Footer from '../footer'
 import { mockSponsors } from './__mocks__'
 
 describe('<Footer/>', () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-  })
-
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-    global.window.matchMedia.mockReset()
-  })
-
   it('should render and match snapshot', () => {
     const wrapper = shallow(<Footer data={mockSponsors} />)
     expect(toJSON(wrapper)).toMatchSnapshot()

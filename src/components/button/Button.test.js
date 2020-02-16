@@ -3,14 +3,6 @@ import { shallow, mount } from 'enzyme'
 import Button from './'
 
 describe('<Button/>', () => {
-  beforeAll(() => {
-    global.___loader = {
-      enqueue: jest.fn(),
-    }
-  })
-  afterAll(() => {
-    global.___loader.enqueue.mockReset()
-  })
   it('matches snapshot', () => {
     const wrapper = shallow(<Button />)
     expect(wrapper).toMatchSnapshot()

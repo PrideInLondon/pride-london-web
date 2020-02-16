@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import theme from '../../../theme/theme'
 import BannerTitle from './'
-import 'jest-styled-components'
 
 describe('<BannerTitle />', () => {
   it('renders the component <BannerTitle />', () => {

@@ -3,7 +3,6 @@ import { shallow, mount } from 'enzyme'
 import theme from '../../../../theme/theme'
 import StyledLetterLink from './styles'
 import LetterLink from '.'
-import 'jest-styled-components'
 
 describe(LetterLink.name, () => {
   it('renders with default values', () => {

@@ -79,7 +79,7 @@ describe('generateEventSlug', () => {
     ${'cfaa55ae-9d84-4cac-bb3e-1bb84bd8ba0e'} | ${'foo'}       | ${null}                        | ${'/event/foo-6JrFngCyUZYHYY1Ay5ddWQ/'}
     ${'9c84548d-5a59-4c59-ad6f-3f1d898ba001'} | ${'foo-bar'}   | ${null}                        | ${'/event/foo-bar-4lLHF5FUWwwHcy0A07KGMT/'}
     ${'b2ff5bf6-20e5-491f-9706-8819f679ad7e'} | ${'foo - bar'} | ${null}                        | ${'/event/foo-bar-5RlKgiwNHXaWUkY7jck19y/'}
-    ${'a5a53094-22b6-4d38-b856-bd8fb6e005ff'} | ${'Foo: Bar'}  | ${null}                        | ${'/event/foo:-bar-52ZE0IY5o9ABOqlQ7DtdPT/'}
+    ${'a5a53094-22b6-4d38-b856-bd8fb6e005ff'} | ${'Foo: Bar'}  | ${null}                        | ${'/event/foo-bar-52ZE0IY5o9ABOqlQ7DtdPT/'}
     ${'6d267faa-bffc-4d6c-b9c7-ede073d66d5e'} | ${'foo-bar'}   | ${'2019-12-07T19:00:00+01:00'} | ${'/event/foo-bar-071219-3JxkyCOjnotcjZEY5eqLU6/'}
   `(
     'should generate a URL-friendly slug for event with id $id and name $name',
