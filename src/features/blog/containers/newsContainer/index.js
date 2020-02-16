@@ -14,6 +14,13 @@ import {
 export const pageSize = 9
 
 const NewsContainer = ({ articles, categories }) => {
+  const articlesCardContent = articles.map(article => {
+    return {
+      ...article,
+      category: [article.category.title],
+    }
+  })
+
   return (
     <section>
       <Container>
@@ -29,7 +36,7 @@ const NewsContainer = ({ articles, categories }) => {
           filterType="radio"
           categories={categories}
           showAllCategoryTitle="All Articles"
-          cardContent={articles}
+          cardContent={articlesCardContent}
           CardComponent={NewsCard}
           showMoreButtonText="Show more articles"
           pageSize={pageSize}
