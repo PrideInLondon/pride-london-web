@@ -18,22 +18,22 @@ const DateGroupHeading = styled.h2`
   `};
 `
 
+const generateDateHeader = ({ prevEvent, currEvent }) => {
+  const formatEventStart = event =>
+    moment(event.node.startTime).format(constants.dateFormat)
+
+  const currStartDate = formatEventStart(currEvent)
+  const prevStartDate = prevEvent && formatEventStart(prevEvent)
+
+  if (!prevEvent || currStartDate !== prevStartDate)
+    return moment(currEvent.node.startTime).format('dddd D MMM')
+}
+
 const GroupedEventsCards = ({ event, index, events, toLoad }) => {
-  let header
-  const longDayOfMonth = 'dddd D MMM'
-
-  if (index === 0) {
-    header = moment(event.node.startTime).format(longDayOfMonth)
-  } else {
-    const startDate = moment(event.node.startTime).format(constants.dateFormat)
-    const prevStartDate = moment(events[index - 1].node.startTime).format(
-      constants.dateFormat
-    )
-
-    if (startDate !== prevStartDate) {
-      header = moment(event.node.startTime).format(longDayOfMonth)
-    }
-  }
+  const header = generateDateHeader({
+    prevEvent: events[index - 1],
+    currEvent: event,
+  })
   return (
     <AnimatedFlexColumn
       width={{ default: 1, md: 1 / 3, lg: 1 / 4 }}
