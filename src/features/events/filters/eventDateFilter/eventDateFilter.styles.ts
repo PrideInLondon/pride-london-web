@@ -1,15 +1,12 @@
-import React, { Component } from 'react'
 import 'react-dates/initialize'
-import { DateRangePicker } from 'react-dates'
 import 'react-dates/lib/css/_datepicker.css'
 import styled from 'styled-components'
 import { darken, lighten } from 'polished'
-import { media } from '../../../theme/media'
-import theme from '../../../theme/theme'
-import { Consumer } from '../../../components/appContext'
-import CalendarIcon from '../../../theme/assets/images/calendar-icon'
+import { media } from '../../../../theme/media'
+import theme from '../../../../theme/theme'
+import { DatePickerWrapperProps } from './eventDateFilter.types'
 
-const DatePickerWrapper = styled.div`
+export const DatePickerWrapper = styled.div<DatePickerWrapperProps>`
   border: none;
   border-radius: 4px;
   position: relative;
@@ -23,6 +20,7 @@ const DatePickerWrapper = styled.div`
     background-color: ${darken(0.1, theme.colors.eucalyptusGreen)};
     border: 1px solid #e4e7e7;
 
+    &:focus,
     &:hover {
       background-color: ${darken(0.1, theme.colors.eucalyptusGreen)};
       border: 1px solid #e4e7e7;
@@ -33,6 +31,7 @@ const DatePickerWrapper = styled.div`
     background-color: ${theme.colors.eucalyptusGreen};
     border: 1px solid #e4e7e7;
     &:active,
+    &:focus,
     &:hover {
       background-color: ${lighten(0.1, theme.colors.eucalyptusGreen)};
       border: 1px solid #e4e7e7;
@@ -40,6 +39,7 @@ const DatePickerWrapper = styled.div`
   }
 
   .CalendarDay__hovered_span,
+  .CalendarDay__hovered_span:focus,
   .CalendarDay__hovered_span:hover {
     background-color: ${lighten(0.1, theme.colors.eucalyptusGreen)};
     border: 1px solid #e4e7e7;
@@ -71,7 +71,6 @@ const DatePickerWrapper = styled.div`
   }
 
   .DateInput {
-    width: auto;
     background-color: transparent;
     width: 80px;
     box-sizing: content;
@@ -103,16 +102,22 @@ const DatePickerWrapper = styled.div`
   ${media.tablet`
     display: flex;
     transition:  border-color 0.15s linear, background-color 0.15s linear;
-    border: 2px solid ${props =>
-      props.isFocused
+    border: 2px solid ${({
+      isFocused,
+      datesSelected,
+    }: DatePickerWrapperProps) =>
+      isFocused
         ? theme.colors.eucalyptusGreen
-        : props.datesSelected
+        : datesSelected
         ? theme.colors.eucalyptusGreen
         : theme.colors.lightGrey};
-    background-color: ${props =>
-      props.isFocused
+    background-color: ${({
+      isFocused,
+      datesSelected,
+    }: DatePickerWrapperProps) =>
+      isFocused
         ? theme.colors.white
-        : props.datesSelected
+        : datesSelected
         ? theme.colors.eucalyptusGreen
         : theme.colors.lightGrey};
 
@@ -129,7 +134,7 @@ const DatePickerWrapper = styled.div`
   `};
 `
 
-const Label = styled.label`
+export const Label = styled.label`
   position: absolute;
   top: 50%;
   right: 20px;
@@ -140,7 +145,7 @@ const Label = styled.label`
   }
 `
 
-const DatePickerHeader = styled.div`
+export const DatePickerHeader = styled.div`
   background-color: ${theme.colors.lightGrey};
   font-size: 1rem;
   font-family: ${theme.fonts.title};
@@ -156,60 +161,3 @@ const DatePickerHeader = styled.div`
     display: none;
   `};
 `
-class EventDateFilter extends Component {
-  state = {
-    focusedInput: null,
-  }
-
-  handleFocusChange = (focusedInput, context) => {
-    this.setState({ focusedInput }, () => {
-      context.actions.closeSiblingFilters(focusedInput, true)
-    })
-
-    if (!focusedInput) {
-      if (context.state.filters.startDate) {
-        context.actions.setDate('endDate', 'startDate')
-      } else {
-        context.actions.setDate('startDate', 'endDate')
-      }
-    }
-  }
-
-  render() {
-    return (
-      <Consumer>
-        {context => (
-          <div>
-            <DatePickerHeader>Date</DatePickerHeader>
-            <DatePickerWrapper
-              datesSelected={
-                context.state.filters.startDate && context.state.filters.endDate
-              }
-              isFocused={this.state.focusedInput}
-            >
-              <DateRangePicker
-                startDate={context.state.filters.startDate}
-                startDateId="start_date"
-                endDate={context.state.filters.endDate}
-                endDateId="end_date"
-                onDatesChange={context.actions.getDatepickerValues}
-                focusedInput={this.state.focusedInput}
-                onFocusChange={focusedInput =>
-                  this.handleFocusChange(focusedInput, context)
-                }
-                numberOfMonths={1}
-                displayFormat="DD/MM/YYYY"
-                minimumNights={0}
-                noBorder
-              />
-              <Label htmlFor="start_date" aria-label="Select start date">
-                <CalendarIcon color={theme.colors.indigo} />
-              </Label>
-            </DatePickerWrapper>
-          </div>
-        )}
-      </Consumer>
-    )
-  }
-}
-export default EventDateFilter

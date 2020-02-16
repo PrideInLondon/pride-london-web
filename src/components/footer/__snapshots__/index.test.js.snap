@@ -2518,7 +2518,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                           innerRef={null}
                                           to="/support-us/partners"
                                         >
-                                          <ForwardRef
+                                          <Link
                                             className="c14 cta-link"
                                             getProps={[Function]}
                                             innerRef={[Function]}
@@ -2533,7 +2533,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                     "_onTransitionComplete": [Function],
                                                     "listen": [Function],
                                                     "location": Object {
-                                                      "assign": [Function],
                                                       "hash": "",
                                                       "host": "localhost",
                                                       "hostname": "localhost",
@@ -2543,11 +2542,8 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                       "pathname": "/",
                                                       "port": "",
                                                       "protocol": "http:",
-                                                      "reload": [Function],
-                                                      "replace": [Function],
                                                       "search": "",
                                                       "state": null,
-                                                      "toString": [Function],
                                                     },
                                                     "navigate": [Function],
                                                     "transitioning": false,
@@ -2565,7 +2561,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                 </a>
                                               </LocationProvider>
                                             </Location>
-                                          </ForwardRef>
+                                          </Link>
                                         </GatsbyLink>
                                       </ForwardRef>
                                     </StyledComponent>
@@ -2882,7 +2878,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               innerRef={null}
                                               to="/media-centre"
                                             >
-                                              <ForwardRef
+                                              <Link
                                                 className="c18"
                                                 getProps={[Function]}
                                                 innerRef={[Function]}
@@ -2897,7 +2893,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         "_onTransitionComplete": [Function],
                                                         "listen": [Function],
                                                         "location": Object {
-                                                          "assign": [Function],
                                                           "hash": "",
                                                           "host": "localhost",
                                                           "hostname": "localhost",
@@ -2907,11 +2902,8 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                           "pathname": "/",
                                                           "port": "",
                                                           "protocol": "http:",
-                                                          "reload": [Function],
-                                                          "replace": [Function],
                                                           "search": "",
                                                           "state": null,
-                                                          "toString": [Function],
                                                         },
                                                         "navigate": [Function],
                                                         "transitioning": false,
@@ -2928,7 +2920,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                     </a>
                                                   </LocationProvider>
                                                 </Location>
-                                              </ForwardRef>
+                                              </Link>
                                             </GatsbyLink>
                                           </ForwardRef>
                                         </StyledComponent>
@@ -3010,7 +3002,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                               innerRef={null}
                                               to="/privacy"
                                             >
-                                              <ForwardRef
+                                              <Link
                                                 className="c18"
                                                 getProps={[Function]}
                                                 innerRef={[Function]}
@@ -3025,7 +3017,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                         "_onTransitionComplete": [Function],
                                                         "listen": [Function],
                                                         "location": Object {
-                                                          "assign": [Function],
                                                           "hash": "",
                                                           "host": "localhost",
                                                           "hostname": "localhost",
@@ -3035,11 +3026,8 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                           "pathname": "/",
                                                           "port": "",
                                                           "protocol": "http:",
-                                                          "reload": [Function],
-                                                          "replace": [Function],
                                                           "search": "",
                                                           "state": null,
-                                                          "toString": [Function],
                                                         },
                                                         "navigate": [Function],
                                                         "transitioning": false,
@@ -3056,7 +3044,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 1`] = `
                                                     </a>
                                                   </LocationProvider>
                                                 </Location>
-                                              </ForwardRef>
+                                              </Link>
                                             </GatsbyLink>
                                           </ForwardRef>
                                         </StyledComponent>
@@ -5807,7 +5795,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                           innerRef={null}
                                           to="/support-us/partners"
                                         >
-                                          <ForwardRef
+                                          <Link
                                             className="c14 cta-link"
                                             getProps={[Function]}
                                             innerRef={[Function]}
@@ -5822,7 +5810,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                     "_onTransitionComplete": [Function],
                                                     "listen": [Function],
                                                     "location": Object {
-                                                      "assign": [Function],
                                                       "hash": "",
                                                       "host": "localhost",
                                                       "hostname": "localhost",
@@ -5832,11 +5819,8 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                       "pathname": "/",
                                                       "port": "",
                                                       "protocol": "http:",
-                                                      "reload": [Function],
-                                                      "replace": [Function],
                                                       "search": "",
                                                       "state": null,
-                                                      "toString": [Function],
                                                     },
                                                     "navigate": [Function],
                                                     "transitioning": false,
@@ -5854,7 +5838,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                 </a>
                                               </LocationProvider>
                                             </Location>
-                                          </ForwardRef>
+                                          </Link>
                                         </GatsbyLink>
                                       </ForwardRef>
                                     </StyledComponent>
@@ -6171,7 +6155,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               innerRef={null}
                                               to="/media-centre"
                                             >
-                                              <ForwardRef
+                                              <Link
                                                 className="c18"
                                                 getProps={[Function]}
                                                 innerRef={[Function]}
@@ -6186,7 +6170,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         "_onTransitionComplete": [Function],
                                                         "listen": [Function],
                                                         "location": Object {
-                                                          "assign": [Function],
                                                           "hash": "",
                                                           "host": "localhost",
                                                           "hostname": "localhost",
@@ -6196,11 +6179,8 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                           "pathname": "/",
                                                           "port": "",
                                                           "protocol": "http:",
-                                                          "reload": [Function],
-                                                          "replace": [Function],
                                                           "search": "",
                                                           "state": null,
-                                                          "toString": [Function],
                                                         },
                                                         "navigate": [Function],
                                                         "transitioning": false,
@@ -6217,7 +6197,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                     </a>
                                                   </LocationProvider>
                                                 </Location>
-                                              </ForwardRef>
+                                              </Link>
                                             </GatsbyLink>
                                           </ForwardRef>
                                         </StyledComponent>
@@ -6299,7 +6279,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                               innerRef={null}
                                               to="/privacy"
                                             >
-                                              <ForwardRef
+                                              <Link
                                                 className="c18"
                                                 getProps={[Function]}
                                                 innerRef={[Function]}
@@ -6314,7 +6294,6 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                         "_onTransitionComplete": [Function],
                                                         "listen": [Function],
                                                         "location": Object {
-                                                          "assign": [Function],
                                                           "hash": "",
                                                           "host": "localhost",
                                                           "hostname": "localhost",
@@ -6324,11 +6303,8 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                           "pathname": "/",
                                                           "port": "",
                                                           "protocol": "http:",
-                                                          "reload": [Function],
-                                                          "replace": [Function],
                                                           "search": "",
                                                           "state": null,
-                                                          "toString": [Function],
                                                         },
                                                         "navigate": [Function],
                                                         "transitioning": false,
@@ -6345,7 +6321,7 @@ exports[`<Footer/> click on Report a website bug and open typeform 2`] = `
                                                     </a>
                                                   </LocationProvider>
                                                 </Location>
-                                              </ForwardRef>
+                                              </Link>
                                             </GatsbyLink>
                                           </ForwardRef>
                                         </StyledComponent>
