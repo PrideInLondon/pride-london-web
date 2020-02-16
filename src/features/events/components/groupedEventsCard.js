@@ -7,6 +7,7 @@ import { media } from '../../../theme/media'
 import constants from '../../../constants'
 import { colors } from '../../../theme/colors'
 import EventListingCard from './eventListingCard'
+import AppPromotionCard from './appPromotionCard'
 
 const DateGroupHeading = styled.h2`
   margin: 1rem 0;
@@ -16,6 +17,14 @@ const DateGroupHeading = styled.h2`
     display: none;
   `};
 `
+
+const Wrapper = props => (
+  <AnimatedFlexColumn
+    width={{ default: 1, md: 1 / 3, lg: 1 / 4 }}
+    py={[2, 2, 2, 3]}
+    {...props}
+  />
+)
 
 const GroupedEventsCards = ({ event, index, events, toLoad }) => {
   let header
@@ -34,23 +43,28 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
     }
   }
   return (
-    <AnimatedFlexColumn
-      width={{ default: 1, md: 1 / 3, lg: 1 / 4 }}
-      key={event.node.id}
-      py={[2, 2, 2, 3]}
-      animation={
-        index >= toLoad - constants.itemsToLoad &&
-        toLoad !== constants.itemsToLoad
-          ? true
-          : false
-      }
-    >
-      {header && <DateGroupHeading>{header}</DateGroupHeading>}
-      <EventListingCard
-        event={event.node}
-        variant={{ default: 'row', md: 'column' }}
-      />
-    </AnimatedFlexColumn>
+    <>
+      {index === 3 && (
+        <Wrapper key="appPromotionCard">
+          <AppPromotionCard />
+        </Wrapper>
+      )}
+      <Wrapper
+        key={event.node.id}
+        animation={
+          index >= toLoad - constants.itemsToLoad &&
+          toLoad !== constants.itemsToLoad
+            ? true
+            : false
+        }
+      >
+        {header && <DateGroupHeading>{header}</DateGroupHeading>}
+        <EventListingCard
+          event={event.node}
+          variant={{ default: 'row', md: 'column' }}
+        />
+      </Wrapper>
+    </>
   )
 }
 
