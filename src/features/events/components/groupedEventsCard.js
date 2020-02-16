@@ -26,7 +26,7 @@ const generateDateHeader = ({ prevEvent, currEvent }) => {
   const prevStartDate = prevEvent && formatEventStart(prevEvent)
 
   if (!prevEvent || currStartDate !== prevStartDate)
-    return moment(currEvent.node.startTime).format('dddd D MMM')
+    return moment(currEvent.node.startTime).format('dddd DD MMM')
 }
 
 const GroupedEventsCards = ({ event, index, events, toLoad }) => {
