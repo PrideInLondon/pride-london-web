@@ -74,7 +74,7 @@ const Location = styled.p`
 `
 
 const PaddedCalendarIcon = styled(CalendarIcon)`
-  margin-right: 8.5px;
+  margin-right: 5px;
   height: 1rem;
 `
 
