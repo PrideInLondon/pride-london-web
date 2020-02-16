@@ -57,15 +57,15 @@ const AppStoreImg = styled.img`
   height: 48px;
   object-fit: contain;
 `
+export const title = 'Download our app'
+export const description = `Download our iOS & Android app to carry our interactive Parade map,
+stage line up info and afterparty information around with you on the day`
 
 const AppPromotionCard: React.FC = () => {
   return (
     <CardWrapper>
-      <CardTitle>Download our app</CardTitle>
-      <CardDescription>
-        Download our iOS & Android app to carry our interactive Parade map,
-        stage line up info and afterparty information around with you on the day
-      </CardDescription>
+      <CardTitle>{title}</CardTitle>
+      <CardDescription>{description}</CardDescription>
       <LinkWrapper>
         <AppStoreLink
           href="https://apps.apple.com/gb/app/pride-in-london/id1250496471"
