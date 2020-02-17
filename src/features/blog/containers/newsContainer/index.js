@@ -1,84 +1,49 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Title from '../../components/title'
-import FiltersContainer from '../filtersContainer'
-import NewsCards from '../newsCards'
+import NewsCard from '../../../../features/blog/components/newsCard/index'
 import FeaturedArticleContainer from '../featuredArticleContainer'
+import FilteredPagedCardContainer from '../../../../components/filteredPagedCardContainer'
 import {
   Container,
   Column,
   Row,
   GreyWrapper,
 } from '../../../../components/grid'
-// import { ShowMoreButton } from './styles'
-import Button from '../../../../components/button'
 
-const initialPaginationState = {
-  end: 9,
-  step: 9,
-}
-class NewsContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      selectedFilter: props.categories.find(
-        ({ title }) => title === 'All Articles'
-      ),
-      ...initialPaginationState,
-      total: props.articles,
+export const pageSize = 9
+
+const NewsContainer = ({ articles, categories }) => {
+  const articlesCardContent = articles.map(article => {
+    return {
+      ...article,
+      category: [article.category.title],
     }
-  }
+  })
 
-  handleFilterClick = label => {
-    this.setState((_state, props) => ({
-      selectedFilter: label,
-      ...initialPaginationState,
-      total: props.articles.filter(
-        article =>
-          label.title === 'All Articles' ||
-          label.title === article.category.title
-      ),
-    }))
-  }
-
-  showMoreCards = () => {
-    this.setState(state => ({
-      end: (state.end += state.step),
-    }))
-  }
-
-  render() {
-    const { selectedFilter, end, total } = this.state
-    const { categories } = this.props
-    return (
-      <section>
-        <Container>
-          <Row>
-            <Column width={1}>
-              <Title>News</Title>
-            </Column>
-          </Row>
-        </Container>
-        <GreyWrapper>
-          <FeaturedArticleContainer />
-          <FiltersContainer
-            selectedFilter={selectedFilter}
-            handleFilterClick={this.handleFilterClick}
-            categories={categories}
-          />
-
-          <NewsCards articles={total.slice(0, end)} />
-          {end < total.length && (
-            <Row pb={[30, 30, 50]}>
-              <Column mx="auto" pt={[30, 30, 50]}>
-                <Button onClick={this.showMoreCards}>Show more articles</Button>
-              </Column>
-            </Row>
-          )}
-        </GreyWrapper>
-      </section>
-    )
-  }
+  return (
+    <section>
+      <Container>
+        <Row>
+          <Column width={1}>
+            <Title>News</Title>
+          </Column>
+        </Row>
+      </Container>
+      <GreyWrapper>
+        <FeaturedArticleContainer />
+        <FilteredPagedCardContainer
+          filterType="radio"
+          categories={categories}
+          showAllCategoryTitle="All Articles"
+          cardContent={articlesCardContent}
+          CardComponent={NewsCard}
+          showMoreButtonText="Show more articles"
+          pageSize={pageSize}
+        />
+      </GreyWrapper>
+    </section>
+  )
 }
 
 NewsContainer.propTypes = {
