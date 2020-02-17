@@ -35,10 +35,13 @@ NewsCard.propTypes = {
   slug: PropTypes.string.isRequired,
   datePublished: PropTypes.string.isRequired,
   readTime: PropTypes.number,
-  category: PropTypes.shape({
-    hexColour: PropTypes.string,
-    title: PropTypes.string,
-  }).isRequired,
+  category: PropTypes.oneOfType([
+    PropTypes.shape({
+      hexColour: PropTypes.string,
+      title: PropTypes.string,
+    }),
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired,
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
   renderAs: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),

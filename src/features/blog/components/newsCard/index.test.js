@@ -21,4 +21,20 @@ describe(NewsCard.name, () => {
     )
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('renders if category is an Array', () => {
+    const title = 'Here is some news!'
+    const category = ['Events']
+    const datePublished = '2019-03-28T20:30+00:00'
+    const slug = 'news/slug'
+    const wrapper = shallow(
+      <NewsCard
+        category={category}
+        title={title}
+        datePublished={datePublished}
+        slug={slug}
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
 })
