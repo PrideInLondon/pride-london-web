@@ -7,7 +7,6 @@ module.exports = {
   },
   setupFiles: ['<rootDir>/config/jest.setup.js'],
   setupFilesAfterEnv: ['<rootDir>/config/jest.setup.ts'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
   coverageDirectory: './coverage/',
   globals: {
     __PATH_PREFIX__: '',
