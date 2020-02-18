@@ -1,21 +1,9 @@
 import React from 'react'
-import toJSON from 'enzyme-to-json'
 import { shallow, mount } from 'enzyme'
 
 import Input from './Input'
 
 describe('<Input/>', () => {
-  it('matches snapshot', () => {
-    const id = 'InputId'
-    const label = 'Input field'
-    const type = 'text'
-    const required = true
-    const component = shallow(
-      <Input id={id} label={label} type={type} required={required} />
-    )
-    expect(toJSON(component)).toMatchSnapshot()
-  })
-
   it('should invoke onChange when triggered', () => {
     const onChangeSpy = jest.fn()
     const component = mount(<Input onChange={onChangeSpy} />)

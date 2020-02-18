@@ -1,38 +1,4 @@
-import React from 'react'
-import { shallow } from 'enzyme'
-import FilterContainer, { calculateIsSelected } from '.'
-
-const CATEGORIES = [
-  { title: 'foo', hexColour: '#FFD95E' },
-  { title: 'bar', hexColour: '#FF5B44' },
-  { title: 'baz', hexColour: '#ED2C6E' },
-]
-
-describe('FilterContainer', () => {
-  it('renders checkbox filter container', () => {
-    const wrapper = shallow(
-      <FilterContainer
-        filterType="checkbox"
-        categories={CATEGORIES}
-        selected={['foo', 'baz']}
-        handleFilterSelect={() => {}}
-      />
-    )
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('renders radio filter container', () => {
-    const wrapper = shallow(
-      <FilterContainer
-        filterType="radio"
-        categories={CATEGORIES}
-        selected="bar"
-        handleFilterSelect={() => {}}
-      />
-    )
-    expect(wrapper).toMatchSnapshot()
-  })
-})
+import { calculateIsSelected } from '.'
 
 describe('calculateIsSelected', () => {
   describe('checkbox', () => {

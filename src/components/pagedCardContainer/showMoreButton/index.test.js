@@ -11,10 +11,6 @@ describe('ShowMoreButton', () => {
     wrapper = shallow(<ShowMoreButton text={text} onClick={onClick} />)
   })
 
-  it('renders component', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
-
   it('calls the onClick when clicked', () => {
     expect(onClick).not.toHaveBeenCalled()
 

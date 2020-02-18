@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import FilterButton from '../../../../components/filterButton'
 import LetterGroup from '../../components/letterGroup'
 import theme from '../../../../theme/theme'
@@ -29,15 +29,6 @@ describe(ParadeGroupsContainer.name, () => {
       hexColour: theme.colors.pink,
     },
   ]
-  it('should render correctly', () => {
-    const wrapper = shallow(
-      <ParadeGroupsContainer
-        paradeGroups={paradeGroups}
-        categories={categories}
-      />
-    )
-    expect(wrapper).toMatchSnapshot()
-  })
 
   it('should filter parade groups by category Business', () => {
     const instance = mount(

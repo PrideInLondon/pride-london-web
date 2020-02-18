@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import toJSON from 'enzyme-to-json'
 import NavItem from '../navItem'
 import { mockData } from './__mocks__'
 
@@ -17,11 +16,6 @@ describe('Desktop version <NavItem/>', () => {
 
   afterAll(() => {
     global.window.matchMedia = globalMatchMediaMock
-  })
-
-  it('renders the desktop version of the component <NavItem />', () => {
-    const wrapper = shallow(<NavItem item={mockData} />)
-    expect(toJSON(wrapper)).toMatchSnapshot()
   })
 
   it('has the aria-haspopup attribute', () => {
@@ -66,11 +60,6 @@ describe('Desktop version <NavItem/>', () => {
 })
 
 describe('Mobile version <NavItem/>', () => {
-  it('renders the mobile version of the component <NavItem />', () => {
-    const wrapper = shallow(<NavItem item={mockData} />)
-    expect(toJSON(wrapper)).toMatchSnapshot()
-  })
-
   it('has not the aria-haspopup attribute', () => {
     const wrapper = shallow(<NavItem item={mockData} />)
     expect(

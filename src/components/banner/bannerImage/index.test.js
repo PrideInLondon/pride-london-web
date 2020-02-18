@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import toJSON from 'enzyme-to-json'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
 import BannerImage from '.'
@@ -11,11 +10,6 @@ jest.mock('gatsby-image/withIEPolyfill', () => {
 })
 
 describe('<BannerImage />', () => {
-  it('renders the component <BannerImage />', () => {
-    const wrapper = shallow(<BannerImage />)
-    expect(toJSON(wrapper)).toMatchSnapshot()
-  })
-
   it('renders the component <BannerTitle />', () => {
     const wrapper = shallow(<BannerImage titleText={'Hello world'} />)
     expect(wrapper.find('StyledBannerTitle')).toHaveLength(1)
@@ -67,7 +61,6 @@ describe('<BannerImage />', () => {
   it('renders the titleText from props to the component BannerTitle', () => {
     const titleText = 'Here is a test title!'
     const wrapper = shallow(<BannerImage titleText={titleText} />)
-    expect(toJSON(wrapper)).toMatchSnapshot()
     expect(
       wrapper
         .dive()
@@ -81,7 +74,6 @@ describe('<BannerImage />', () => {
     const wrapper = shallow(
       <BannerImage titleText={'Here is a title'} subtitleText={subtitleText} />
     )
-    expect(toJSON(wrapper)).toMatchSnapshot()
     expect(
       wrapper
         .dive()

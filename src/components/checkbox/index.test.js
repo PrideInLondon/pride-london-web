@@ -30,12 +30,6 @@ describe('Checkbox', () => {
       wrapper = shallow(<Checkbox {...props} />, { context: { theme } })
     })
 
-    describe('Snapshot', () => {
-      it('renders', () => {
-        expect(wrapper).toMatchSnapshot()
-      })
-    })
-
     describe('Props', () => {
       it('has id from props', () => {
         expect(wrapper.find('[type="checkbox"]').props().id).toBe(id)

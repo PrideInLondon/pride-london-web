@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import toJSON from 'enzyme-to-json'
 import SponsorsSubsection from '../sponsorSubsection'
 import SponsorStar from '../../../../components/icons/sponsorStar'
 import renderSponsors from '../../helpers'
@@ -13,7 +12,6 @@ describe('<SponsorSubsection/>', () => {
         {renderSponsors(mockSponsors)}
       </SponsorsSubsection>
     )
-    expect(toJSON(wrapper)).toMatchSnapshot()
     expect(wrapper.find('SponsorBadge').length).toBe(mockSponsors.length)
   })
 
@@ -23,7 +21,6 @@ describe('<SponsorSubsection/>', () => {
         {renderSponsors(mockSponsors, true)}
       </SponsorsSubsection>
     )
-    expect(toJSON(wrapper)).toMatchSnapshot()
     expect(wrapper.find('SponsorBadge').length).toBe(mockSponsors.length)
   })
 })

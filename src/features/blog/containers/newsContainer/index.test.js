@@ -1,9 +1,9 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import NewsCard from '../../components/newsCard'
 import NewsContainer, { pageSize } from '.'
 
-jest.mock('../featuredArticleContainer', () => 'FeaturedArticleContainer')
+jest.mock('../featuredArticleContainer', () => () => <div />)
 
 const makeTestArticles = (quantity, category) => {
   const array = []
@@ -30,13 +30,6 @@ const testCategories = [
 ]
 
 describe(NewsContainer.name, () => {
-  it('should render correctly', () => {
-    const wrapper = shallow(
-      <NewsContainer articles={testArticles} categories={testCategories} />
-    )
-    expect(wrapper).toMatchSnapshot()
-  })
-
   it('should filter articles by filter when category button is clicked', () => {
     const instance = mount(
       <NewsContainer articles={testArticles} categories={testCategories} />
