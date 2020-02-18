@@ -3,7 +3,6 @@ import { render } from '@testing-library/react'
 import { title, description } from '../components/appPromotionCard'
 import { GroupedEventsCards, AppPromotionCard } from '../index'
 import { mockNodes, testEvent } from './__mocks__'
-import 'jest-styled-components'
 
 describe('AppPromotionCard', () => {
   const { findByText } = render(<AppPromotionCard />)

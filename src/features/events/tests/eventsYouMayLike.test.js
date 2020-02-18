@@ -67,12 +67,6 @@ describe('The Events You May Like component', () => {
     eventId: '1234',
   }
 
-  it('should matchsnapshot', () => {
-    const wrapper = shallowWithTheme(<EventsYouMayLike {...mockProps} />)
-
-    expect(wrapper.dive()).toMatchSnapshot()
-  })
-
   it('should render Event Listing Card if a correct event is passed from the state', () => {
     const wrapper = shallowWithTheme(<EventsYouMayLike {...mockProps} />)
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import PagedCardContainer from '.'
 
 // eslint-disable-next-line react/prop-types
@@ -21,14 +21,6 @@ const cardContent = [
 ]
 
 describe('PagedCardContainer', () => {
-  it('renders component with default props', () => {
-    const wrapper = shallow(
-      <PagedCardContainer CardComponent={CardComponent} />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
   it('renders component with specified non-default props', () => {
     const wrapper = mount(
       <PagedCardContainer
@@ -39,8 +31,6 @@ describe('PagedCardContainer', () => {
         onShowMoreButtonClick={jest.fn()}
       />
     )
-
-    expect(wrapper).toMatchSnapshot()
 
     expect(wrapper.find('CardComponent')).toHaveLength(3)
   })

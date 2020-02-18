@@ -14,10 +14,6 @@ describe('The GroupedEventsCards component', () => {
       />
     )
 
-    it('Snapshot', () => {
-      expect(wrapper).toMatchSnapshot()
-    })
-
     describe('Props', () => {
       it('passing event.node correctly', () => {
         expect(

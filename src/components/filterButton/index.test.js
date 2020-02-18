@@ -5,46 +5,10 @@ import FilterButton from '.'
 
 describe(FilterButton.name, () => {
   const mockClick = jest.fn()
-  const iconSrc = 'foo'
   const filterType = {
     hexColour: '#000000',
     title: 'Mock Filter',
   }
-
-  it('renders with default values', () => {
-    const wrapper = shallow(<FilterButton filterType={filterType} />)
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('renders with icon', () => {
-    const wrapper = shallow(
-      <FilterButton filterType={filterType} icon={iconSrc} />
-    )
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('selected filter render correctly', () => {
-    const wrapper = shallow(
-      <FilterButton
-        filterType={filterType}
-        isOutline
-        isButton
-        handleClick={mockClick}
-      />
-    )
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('not-selected filter render correctly', () => {
-    const wrapper = shallow(
-      <FilterButton
-        filterType={filterType}
-        isOutline={false}
-        handleClick={mockClick}
-      />
-    )
-    expect(wrapper).toMatchSnapshot()
-  })
 
   it('should call handleClick when filter is clicked', () => {
     const wrapper = shallow(

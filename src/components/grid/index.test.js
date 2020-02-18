@@ -9,10 +9,6 @@ describe('The FlexColumn component', () => {
     </AnimatedFlexColumn>
   )
 
-  it('Snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
-
   it('render', () => {
     expect(
       wrapper

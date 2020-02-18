@@ -6,10 +6,6 @@ describe('<HelmetComponent/>', () => {
   describe('Shallow Render', () => {
     const wrapper = shallow(<HelmetComponent title="test" />)
 
-    it('Snapshot', () => {
-      expect(wrapper).toMatchSnapshot()
-    })
-
     it('has correct title prop', () => {
       expect(wrapper.props().title).toBe(`test | Pride in London`)
     })

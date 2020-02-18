@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Quote renders with default values 1`] = `
-<styles__StyledQuote>
-  <styles__BlockQuote>
-    some quote
-  </styles__BlockQuote>
-</styles__StyledQuote>
-`;

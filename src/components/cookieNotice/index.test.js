@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import CookieNotice from '.'
 
 describe('<CookieNotice />', () => {
@@ -9,11 +9,6 @@ describe('<CookieNotice />', () => {
 
   afterAll(() => {
     React.useEffect.mockRestore()
-  })
-
-  it('renders and matches snapshot', () => {
-    const wrapper = shallow(<CookieNotice />)
-    expect(wrapper).toMatchSnapshot()
   })
 
   it('cookie consent and push it to dataLayer', () => {

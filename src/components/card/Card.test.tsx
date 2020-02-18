@@ -26,17 +26,17 @@ const MockCard: React.FC<CardProps> = ({ variant }) => (
   </Card>
 )
 
-test('it should render a card which is a link', () => {
+it('should render a card which is a link', () => {
   const { container } = render(<MockCard />)
   expect(container.firstChild?.nodeName).toBe('A')
 })
 
-test('it should render a Gatsby Image', () => {
+it('should render a Gatsby Image', () => {
   const { container } = render(<MockCard />)
   expect(container.querySelector('.gatsby-image-wrapper')).toBeTruthy()
 })
 
-test('it should render a column or row variant when the prop is passed', () => {
+it('should render a column or row variant when the prop is passed', () => {
   const { container, rerender } = render(<MockCard variant="column" />)
   expect(container.firstChild).toHaveStyle('flex-direction: column;')
   rerender(<MockCard variant="row" />)

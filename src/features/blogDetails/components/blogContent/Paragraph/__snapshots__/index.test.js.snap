@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Paragraph renders with default values 1`] = `
-<styles__StyledParagraph>
-  somecontent
-</styles__StyledParagraph>
-`;

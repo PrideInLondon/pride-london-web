@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import FilteredPagedCardContainer, {
   calculateInitialSelected,
   calculateSelected,
@@ -147,25 +147,6 @@ describe('FilteredPagedCardContainer', () => {
     filterType
     ${'checkbox'}
     ${'radio'}
-  `('renders component with filter type $filterType', ({ filterType }) => {
-    const wrapper = shallow(
-      <FilteredPagedCardContainer
-        filterType={filterType}
-        cardContent={cardContent.slice(0, 3)}
-        CardComponent={CardComponent}
-        pageSize={3}
-        showAllCategoryTitle="all"
-        categories={categories}
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it.each`
-    filterType
-    ${'checkbox'}
-    ${'radio'}
   `(
     'with $filterType filter type shows more cards when the "show more" button is clicked',
     ({ filterType }) => {
@@ -186,7 +167,6 @@ describe('FilteredPagedCardContainer', () => {
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(5)
-      expect(wrapper).toMatchSnapshot()
     }
   )
 
@@ -217,7 +197,6 @@ describe('FilteredPagedCardContainer', () => {
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(1)
-      expect(wrapper).toMatchSnapshot()
     }
   )
 
@@ -240,7 +219,6 @@ describe('FilteredPagedCardContainer', () => {
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(2)
-      expect(wrapper).toMatchSnapshot()
     }
   )
 })
