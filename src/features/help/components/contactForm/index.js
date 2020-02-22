@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import 'react-accessible-accordion/dist/fancy-example.css'
 import { media } from '../../../../theme/media'
 import theme from '../../../../theme/theme'
 import Button from '../../../../components/button'
