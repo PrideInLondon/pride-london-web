@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
+import umbrellaJpg from '../../assets/umbrella.jpg'
 import { Card, CardImage, CardContent, CardTitle, CardFooter } from './Card'
-import umbrellaJpg from './umbrella.jpg'
 
 const variants = {
   Column: 'column',
