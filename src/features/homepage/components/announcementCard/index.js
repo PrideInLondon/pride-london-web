@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { handleUrl } from '../../../../utilities'
+import { handleUrl } from '../../../../utils/location-utils'
 import {
   CardImage,
   CardTitle,

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { noScroll } from '../../../utilities'
+import { noScroll } from '../../../utils/style-utils'
 import logo from '../../../theme/assets/images/logo-pride.svg'
 import NavItem from '../navItem'
 import {

@@ -1,11 +1,5 @@
 import Link from 'gatsby-link'
 
-export function checkBreakpoint(breakpoint: number): boolean | void {
-  if (typeof window !== `undefined`) {
-    return window.matchMedia(`(min-width: ${breakpoint}px)`).matches
-  }
-}
-
 export function externalUrl(url: string): boolean {
   const external = /^(http|https|ftp)/
   return external.test(url)
@@ -73,46 +67,4 @@ export function handleUrl(url: string): LinkProps {
     default:
       return { href: url, as: 'a' }
   }
-}
-
-export const noScroll = {
-  on() {
-    document.querySelector('html')!.classList.add('no-scroll')
-  },
-  off() {
-    document.querySelector('html')!.classList.remove('no-scroll')
-  },
-  toggle() {
-    document.querySelector('html')!.classList.toggle('no-scroll')
-  },
-}
-
-export interface IndexSignature {
-  [key: string]: any
-}
-
-/**
- * Pick out matching keys of object
- *
- * @param obj - object of properties
- * @param keys - array of keys to pick out of the object
- * @returns {object} - an object of matching keys only
- */
-export function pick(obj: IndexSignature, keys: string[]): IndexSignature {
-  return keys
-    .map(k => (k in obj ? { [k]: obj[k] } : {}))
-    .reduce((res, o) => Object.assign(res, o), {})
-}
-
-/**
- * Filters matching keys out of object
- *
- * @param obj - object of properties
- * @param keys - array of keys to pick out of the object
- * @returns {object} - an object without matching keys
- */
-export function reject(obj: IndexSignature, keys: string[]): IndexSignature {
-  const vkeys = Object.keys(obj).filter(k => !keys.includes(k))
-
-  return pick(obj, vkeys)
 }

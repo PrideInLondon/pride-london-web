@@ -5,7 +5,7 @@ import { Column } from '../../grid'
 import BannerTitle from '../bannerTitle'
 import BannerSubtitle from '../bannerSubtitle'
 import BannerDate from '../bannerDate'
-import { checkBreakpoint } from '../../../utilities'
+import { checkBreakpoint } from '../../../utils/style-utils'
 import {
   StyledContainer,
   StyledRow,

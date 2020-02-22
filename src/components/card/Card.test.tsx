@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '../../utilities/testing'
+import { render } from '../../utils/testing-utils'
 import { Card, CardImage, CardContent, CardTitle, CardFooter } from './Card'
 import { CardProps } from './Card.types'
 import umbrellaJpg from './umbrella.jpg'

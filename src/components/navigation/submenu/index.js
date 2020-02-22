@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import shortid from 'shortid'
 import theme from '../../../theme/theme'
 import { Container } from '../../grid'
-import { checkBreakpoint, handleUrl } from '../../../utilities'
+import { checkBreakpoint } from '../../../utils/style-utils'
+import { handleUrl } from '../../../utils/location-utils'
 import {
   Panel,
   PanelRow,

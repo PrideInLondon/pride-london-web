@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import theme from '../../../../theme/theme'
 import NewsMetrics from '../../../../components/newsMetrics'
 import NewsCategory from '../../../../components/newsCategory'
-import { handleSlug } from '../../../../utilities'
+import { handleSlug } from '../../../../utils/location-utils'
 import { FeaturedArticleCard, CardHeader, FeaturedArticleTitle } from './styles'
 
 const category = {

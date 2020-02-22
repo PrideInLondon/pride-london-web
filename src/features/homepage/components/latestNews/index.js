@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { handleSlug } from '../../../../utilities'
+import { handleSlug } from '../../../../utils/location-utils'
 import {
   Background,
   LatestNewsCardContainer,

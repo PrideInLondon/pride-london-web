@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { checkBreakpoint } from '../../../../utilities'
+import { checkBreakpoint } from '../../../../utils/style-utils'
 import { Background, BackgroundImage } from './styles'
 
 const PageHeader = ({ title, headerImage }) => (

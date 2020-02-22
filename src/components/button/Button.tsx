@@ -1,5 +1,5 @@
 import React from 'react'
-import { handleUrl } from '../../utilities'
+import { handleUrl } from '../../utils/location-utils'
 import { StyledButton } from './Button.styles'
 import {
   ButtonAsAnchorProps,

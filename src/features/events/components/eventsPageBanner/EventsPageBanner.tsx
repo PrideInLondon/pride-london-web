@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Column } from '../../../../components/grid'
-import { checkBreakpoint } from '../../../../utilities/'
+import { checkBreakpoint } from '../../../../utils/style-utils'
 import {
   StyledBanner,
   Title,

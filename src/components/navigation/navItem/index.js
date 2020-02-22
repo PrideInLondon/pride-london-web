@@ -2,7 +2,7 @@ import React, { useReducer, useRef, useEffect, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Submenu from '../submenu'
 import theme from '../../../theme/theme'
-import { checkBreakpoint } from '../../../utilities'
+import { checkBreakpoint } from '../../../utils/style-utils'
 import ChevronDown from '../../icons/chevronDown'
 import { MenuLink, SubmenuToggle, MenuItem } from './styles'
 

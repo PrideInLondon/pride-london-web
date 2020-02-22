@@ -16,7 +16,7 @@ import {
   EventShareSection,
 } from '../features/events'
 import { Container, Row, Column } from '../components/grid'
-import { checkBreakpoint } from '../utilities'
+import { checkBreakpoint } from '../utils/style-utils'
 import SponsorsSubsection from '../components/sponsors/components/sponsorSubsection'
 import renderSponsors from '../components/sponsors/helpers'
 
