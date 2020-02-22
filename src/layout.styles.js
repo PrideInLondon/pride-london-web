@@ -1,78 +1,79 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+import { colors } from './theme/colors'
 
 /**
  * Roboto 300
  */
-import Roboto300EOT from '../theme/assets/fonts/roboto/roboto-v20-latin-300.eot'
-import Roboto300WOFF from '../theme/assets/fonts/roboto/roboto-v20-latin-300.woff'
-import Roboto300WOFF2 from '../theme/assets/fonts/roboto/roboto-v20-latin-300.woff2'
-import Roboto300TTF from '../theme/assets/fonts/roboto/roboto-v20-latin-300.ttf'
-import Roboto300SVG from '../theme/assets/fonts/roboto/roboto-v20-latin-300.svg'
+import Roboto300EOT from './theme/assets/fonts/roboto/roboto-v20-latin-300.eot'
+import Roboto300WOFF from './theme/assets/fonts/roboto/roboto-v20-latin-300.woff'
+import Roboto300WOFF2 from './theme/assets/fonts/roboto/roboto-v20-latin-300.woff2'
+import Roboto300TTF from './theme/assets/fonts/roboto/roboto-v20-latin-300.ttf'
+import Roboto300SVG from './theme/assets/fonts/roboto/roboto-v20-latin-300.svg'
 /**
  * Roboto Regular
  */
-import RobotoRegularEOT from '../theme/assets/fonts/roboto/roboto-v18-latin-regular.eot'
-import RobotoRegularWOFF from '../theme/assets/fonts/roboto/roboto-v18-latin-regular.woff'
-import RobotoRegularWOFF2 from '../theme/assets/fonts/roboto/roboto-v18-latin-regular.woff2'
-import RobotoRegularTTF from '../theme/assets/fonts/roboto/roboto-v18-latin-regular.ttf'
-import RobotoRegularSVG from '../theme/assets/fonts/roboto/roboto-v18-latin-regular.svg'
+import RobotoRegularEOT from './theme/assets/fonts/roboto/roboto-v18-latin-regular.eot'
+import RobotoRegularWOFF from './theme/assets/fonts/roboto/roboto-v18-latin-regular.woff'
+import RobotoRegularWOFF2 from './theme/assets/fonts/roboto/roboto-v18-latin-regular.woff2'
+import RobotoRegularTTF from './theme/assets/fonts/roboto/roboto-v18-latin-regular.ttf'
+import RobotoRegularSVG from './theme/assets/fonts/roboto/roboto-v18-latin-regular.svg'
 /**
  * Roboto Italic
  */
-import RobotoItalicEOT from '../theme/assets/fonts/roboto/roboto-v18-latin-italic.eot'
-import RobotoItalicWOFF from '../theme/assets/fonts/roboto/roboto-v18-latin-italic.woff'
-import RobotoItalicWOFF2 from '../theme/assets/fonts/roboto/roboto-v18-latin-italic.woff2'
-import RobotoItalicTTF from '../theme/assets/fonts/roboto/roboto-v18-latin-italic.ttf'
-import RobotoItalicSVG from '../theme/assets/fonts/roboto/roboto-v18-latin-italic.svg'
+import RobotoItalicEOT from './theme/assets/fonts/roboto/roboto-v18-latin-italic.eot'
+import RobotoItalicWOFF from './theme/assets/fonts/roboto/roboto-v18-latin-italic.woff'
+import RobotoItalicWOFF2 from './theme/assets/fonts/roboto/roboto-v18-latin-italic.woff2'
+import RobotoItalicTTF from './theme/assets/fonts/roboto/roboto-v18-latin-italic.ttf'
+import RobotoItalicSVG from './theme/assets/fonts/roboto/roboto-v18-latin-italic.svg'
 /**
  * Roboto 500
  */
-import Roboto500EOT from '../theme/assets/fonts/roboto/roboto-v18-latin-500.eot'
-import Roboto500WOFF from '../theme/assets/fonts/roboto/roboto-v18-latin-500.woff'
-import Roboto500WOFF2 from '../theme/assets/fonts/roboto/roboto-v18-latin-500.woff2'
-import Roboto500TTF from '../theme/assets/fonts/roboto/roboto-v18-latin-500.ttf'
-import Roboto500SVG from '../theme/assets/fonts/roboto/roboto-v18-latin-500.svg'
+import Roboto500EOT from './theme/assets/fonts/roboto/roboto-v18-latin-500.eot'
+import Roboto500WOFF from './theme/assets/fonts/roboto/roboto-v18-latin-500.woff'
+import Roboto500WOFF2 from './theme/assets/fonts/roboto/roboto-v18-latin-500.woff2'
+import Roboto500TTF from './theme/assets/fonts/roboto/roboto-v18-latin-500.ttf'
+import Roboto500SVG from './theme/assets/fonts/roboto/roboto-v18-latin-500.svg'
 
 /**
  * Roboto 700
  */
-import Roboto700EOT from '../theme/assets/fonts/roboto/roboto-v18-latin-700.eot'
-import Roboto700WOFF from '../theme/assets/fonts/roboto/roboto-v18-latin-700.woff'
-import Roboto700WOFF2 from '../theme/assets/fonts/roboto/roboto-v18-latin-700.woff2'
-import Roboto700TTF from '../theme/assets/fonts/roboto/roboto-v18-latin-700.ttf'
-import Roboto700SVG from '../theme/assets/fonts/roboto/roboto-v18-latin-700.svg'
+import Roboto700EOT from './theme/assets/fonts/roboto/roboto-v18-latin-700.eot'
+import Roboto700WOFF from './theme/assets/fonts/roboto/roboto-v18-latin-700.woff'
+import Roboto700WOFF2 from './theme/assets/fonts/roboto/roboto-v18-latin-700.woff2'
+import Roboto700TTF from './theme/assets/fonts/roboto/roboto-v18-latin-700.ttf'
+import Roboto700SVG from './theme/assets/fonts/roboto/roboto-v18-latin-700.svg'
 /**
  * Poppins
  */
-import Poppins600EOT from '../theme/assets/fonts/poppins/poppins-v5-latin-600.eot'
-import Poppins600WOFF from '../theme/assets/fonts/poppins/poppins-v5-latin-600.woff'
-import Poppins600WOFF2 from '../theme/assets/fonts/poppins/poppins-v5-latin-600.woff2'
-import Poppins600TTF from '../theme/assets/fonts/poppins/poppins-v5-latin-600.ttf'
-import Poppins600SVG from '../theme/assets/fonts/poppins/poppins-v5-latin-600.svg'
+import Poppins600EOT from './theme/assets/fonts/poppins/poppins-v5-latin-600.eot'
+import Poppins600WOFF from './theme/assets/fonts/poppins/poppins-v5-latin-600.woff'
+import Poppins600WOFF2 from './theme/assets/fonts/poppins/poppins-v5-latin-600.woff2'
+import Poppins600TTF from './theme/assets/fonts/poppins/poppins-v5-latin-600.ttf'
+import Poppins600SVG from './theme/assets/fonts/poppins/poppins-v5-latin-600.svg'
 /**
  * Poppins 600 Italic
  */
-import Poppins600ItalicEOT from '../theme/assets/fonts/poppins/poppins-v5-latin-600italic.eot'
-import Poppins600ItalicWOFF from '../theme/assets/fonts/poppins/poppins-v5-latin-600italic.woff'
-import Poppins600ItalicWOFF2 from '../theme/assets/fonts/poppins/poppins-v5-latin-600italic.woff2'
-import Poppins600ItalicTTF from '../theme/assets/fonts/poppins/poppins-v5-latin-600italic.ttf'
-import Poppins600ItalicSVG from '../theme/assets/fonts/poppins/poppins-v5-latin-600italic.svg'
+import Poppins600ItalicEOT from './theme/assets/fonts/poppins/poppins-v5-latin-600italic.eot'
+import Poppins600ItalicWOFF from './theme/assets/fonts/poppins/poppins-v5-latin-600italic.woff'
+import Poppins600ItalicWOFF2 from './theme/assets/fonts/poppins/poppins-v5-latin-600italic.woff2'
+import Poppins600ItalicTTF from './theme/assets/fonts/poppins/poppins-v5-latin-600italic.ttf'
+import Poppins600ItalicSVG from './theme/assets/fonts/poppins/poppins-v5-latin-600italic.svg'
 /**
  * Poppins 700
  */
-import Poppins700EOT from '../theme/assets/fonts/poppins/poppins-v5-latin-700.eot'
-import Poppins700WOFF from '../theme/assets/fonts/poppins/poppins-v5-latin-700.woff'
-import Poppins700WOFF2 from '../theme/assets/fonts/poppins/poppins-v5-latin-700.woff2'
-import Poppins700TTF from '../theme/assets/fonts/poppins/poppins-v5-latin-700.ttf'
-import Poppins700SVG from '../theme/assets/fonts/poppins/poppins-v5-latin-700.svg'
+import Poppins700EOT from './theme/assets/fonts/poppins/poppins-v5-latin-700.eot'
+import Poppins700WOFF from './theme/assets/fonts/poppins/poppins-v5-latin-700.woff'
+import Poppins700WOFF2 from './theme/assets/fonts/poppins/poppins-v5-latin-700.woff2'
+import Poppins700TTF from './theme/assets/fonts/poppins/poppins-v5-latin-700.ttf'
+import Poppins700SVG from './theme/assets/fonts/poppins/poppins-v5-latin-700.svg'
 /**
  * Poppins 800
  */
-import Poppins800EOT from '../theme/assets/fonts/poppins/poppins-v5-latin-800.eot'
-import Poppins800WOFF from '../theme/assets/fonts/poppins/poppins-v5-latin-800.woff'
-import Poppins800WOFF2 from '../theme/assets/fonts/poppins/poppins-v5-latin-800.woff2'
-import Poppins800TTF from '../theme/assets/fonts/poppins/poppins-v5-latin-800.ttf'
-import Poppins800SVG from '../theme/assets/fonts/poppins/poppins-v5-latin-800.svg'
+import Poppins800EOT from './theme/assets/fonts/poppins/poppins-v5-latin-800.eot'
+import Poppins800WOFF from './theme/assets/fonts/poppins/poppins-v5-latin-800.woff'
+import Poppins800WOFF2 from './theme/assets/fonts/poppins/poppins-v5-latin-800.woff2'
+import Poppins800TTF from './theme/assets/fonts/poppins/poppins-v5-latin-800.ttf'
+import Poppins800SVG from './theme/assets/fonts/poppins/poppins-v5-latin-800.svg'
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -279,7 +280,7 @@ export const GlobalStyle = createGlobalStyle`
   h1,
   h2,
   h3 {
-    color: #2d2f7f;
+    color: ${colors.indigo};
   }
 
   p,
@@ -302,19 +303,19 @@ export const GlobalStyle = createGlobalStyle`
 
   a:not([class]) {
     text-decoration: none;
-    border-bottom: 2px solid #2cda9d;
-    color: #000000;
+    border-bottom: 2px solid ${colors.eucalyptusGreen};
+    color: ${colors.black};
     transition: color 0.15s linear;
   }
 
   a:not([class]):hover,
   a:not([class]):focus {
-    color: #2cda9d;
+    color: ${colors.eucalyptusGreen};
   }
 
   hr {
     border-top: none;
-    border-color: #efefef;
+    border-color: ${colors.lightGrey};
     margin: 20px 0;
   }
 
@@ -334,7 +335,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 60px;
     border-radius: 4px;
     background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgOSAxNCIgd2lkdGg9IjkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTMxLjM3ODY3OTcgMzAtNC45MzkzMzk5LTQuNjEwMDUwNWMtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5LjU4NTc4NjUtLjU0NjczNCAxLjUzNTUzMzktLjU0NjczNCAyLjEyMTMyMDQgMGw2IDUuNmMuNTg1Nzg2NC41NDY3MzQuNTg1Nzg2NCAxLjQzMzE2NSAwIDEuOTc5ODk5bC02IDUuNmMtLjU4NTc4NjUuNTQ2NzM0LTEuNTM1NTMzOS41NDY3MzQtMi4xMjEzMjA0IDAtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5eiIgZmlsbD0iIzJkMmY3ZiIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgMzUgLTIzKSIvPjwvc3ZnPg==');
-    background-color: #fff;
+    background-color: ${colors.white};
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
@@ -346,7 +347,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 60px;
     border-radius: 4px;
     background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgOSAxNCIgd2lkdGg9IjkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTMxLjM3ODY3OTcgMzAtNC45MzkzMzk5LTQuNjEwMDUwNWMtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5LjU4NTc4NjUtLjU0NjczNCAxLjUzNTUzMzktLjU0NjczNCAyLjEyMTMyMDQgMGw2IDUuNmMuNTg1Nzg2NC41NDY3MzQuNTg1Nzg2NCAxLjQzMzE2NSAwIDEuOTc5ODk5bC02IDUuNmMtLjU4NTc4NjUuNTQ2NzM0LTEuNTM1NTMzOS41NDY3MzQtMi4xMjEzMjA0IDAtLjU4NTc4NjQtLjU0NjczNC0uNTg1Nzg2NC0xLjQzMzE2NSAwLTEuOTc5ODk5eiIgZmlsbD0iIzJkMmY3ZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI2IC0yMykiLz48L3N2Zz4=');
-    background-color: #fff;
+    background-color: ${colors.white};
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
@@ -398,4 +399,10 @@ export const GlobalStyle = createGlobalStyle`
       margin: 40px 0;
     }
   }
+`
+
+export const SiteWrapper = styled.div`
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: ${colors.white};
 `

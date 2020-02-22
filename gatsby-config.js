@@ -36,7 +36,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-layout',
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/layout.js'),
+      },
+    },
     'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-source-contentful',
