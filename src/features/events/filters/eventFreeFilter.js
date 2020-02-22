@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
 import { Consumer } from '../../../appContext'
-import Checkbox from '../../../components/checkbox'
+import { Checkbox } from '../../../components/checkbox'
 
 const Wrapper = styled.div`
   background-color: transparent;

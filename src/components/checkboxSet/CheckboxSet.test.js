@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import constants from '../../constants'
-import Checkbox from '../checkbox'
+import { Checkbox } from '../checkbox'
 import { Provider } from '../../appContext'
 import CheckboxSet from './CheckboxSet'
 

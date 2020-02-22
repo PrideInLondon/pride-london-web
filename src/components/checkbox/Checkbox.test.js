@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import theme from '../../theme/theme'
-import Checkbox from './'
+import Checkbox from './Checkbox'
 
 // SVGs need to be mocked as the SVG output causes Babel to throw
 jest.mock('../../theme/assets/images/icon-check.svg', () => 'foo')
@@ -58,8 +58,8 @@ describe('Checkbox', () => {
 
     it('toggles its checked state when changed', () => {
       wrapper = mount(<Checkbox {...props} />, { context: { theme } })
-      wrapper.find('checkbox__Input').simulate('change', event)
-      const { checked } = wrapper.find('checkbox__Input').props()
+      wrapper.find('Checkbox__Input').simulate('change', event)
+      const { checked } = wrapper.find('Checkbox__Input').props()
       expect(checked).toEqual(true)
     })
 
