@@ -1,20 +1,20 @@
 import React, { useState, useLayoutEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
-import { Column } from '../../grid'
-import BannerTitle from '../bannerTitle'
-import BannerSubtitle from '../bannerSubtitle'
-import BannerDate from '../bannerDate'
-import { checkBreakpoint } from '../../../utils/style-utils'
+import { Column } from '../grid'
+import { checkBreakpoint } from '../../utils/style-utils'
+import BannerTitle from './BannerTitle'
+import BannerSubtitle from './BannerSubtitle'
+import BannerDate from './BannerDate'
 import {
   StyledContainer,
   StyledRow,
   StyledWrapper,
   ResponsiveImg,
   VideoWrapper,
-} from './styles'
+} from './Banner.styles'
 
-const BannerImage = ({
+const Banner = ({
   titleText,
   subtitleText,
   titlePosition,
@@ -110,7 +110,7 @@ const BannerImage = ({
   )
 }
 
-BannerImage.propTypes = {
+Banner.propTypes = {
   large: PropTypes.bool,
   medium: PropTypes.bool,
   imageSrc: PropTypes.string,
@@ -129,7 +129,7 @@ BannerImage.propTypes = {
   fixed: PropTypes.object,
 }
 
-BannerImage.defaultProps = {
+Banner.defaultProps = {
   large: false,
   medium: false,
   homepage: false,
@@ -147,4 +147,4 @@ BannerImage.defaultProps = {
   fixed: null,
 }
 
-export default BannerImage
+export default Banner

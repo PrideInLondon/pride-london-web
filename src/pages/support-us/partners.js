@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import BannerImage from '../../components/banner/bannerImage'
+import { Banner } from '../../components/banner'
 import SponsorsSubsection from '../../components/sponsors/components/sponsorSubsection/index'
 import constants from '../../constants'
 import theme from '../../theme/theme'
@@ -60,7 +60,7 @@ const Sponsors = ({ data }) => {
   const sponsors = selectSponsors(data)
   return (
     <Fragment>
-      <BannerImage
+      <Banner
         titleText="Partner with us"
         subtitleText="Find out how your company can help us to keep Pride free for everyone"
         color={theme.colors.yellow}

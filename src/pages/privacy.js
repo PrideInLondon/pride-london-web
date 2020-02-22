@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { hideVisually } from 'polished'
 import { Container, Row, Column } from '../components/grid'
-import BannerImage from '../components/banner/bannerImage'
+import { Banner } from '../components/banner'
 import theme from '../theme/theme'
 import { media } from '../theme/media'
 
@@ -72,7 +72,7 @@ const ResponsiveTable = styled.table`
 
 const PrivacyPolicyPage = () => (
   <>
-    <BannerImage
+    <Banner
       titleText="Privacy and cookies policy"
       color={theme.colors.greyBlue}
     />

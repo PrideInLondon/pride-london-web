@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { BannerDate, BannerDateWrapper } from './styles'
+import { StyledBannerDate, BannerDateWrapper } from './BannerDate.styles'
 
-const StyledBannerDate = ({ children }) => (
+const BannerDate = ({ children }) => (
   <BannerDateWrapper>
-    <BannerDate>{children}</BannerDate>
+    <StyledBannerDate>{children}</StyledBannerDate>
   </BannerDateWrapper>
 )
 
-StyledBannerDate.propTypes = {
+BannerDate.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
 }
 
-export default StyledBannerDate
+export default BannerDate

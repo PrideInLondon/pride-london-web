@@ -6,7 +6,7 @@ import HelmetComponent from '../components/helmetComponent'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { Column, Row, Container } from '../components/grid'
-import BannerImage from '../components/banner/bannerImage'
+import { Banner } from '../components/banner'
 import GenericContent from '../features/genericContentPage'
 
 const PageWrapper = styled.div`
@@ -58,7 +58,7 @@ const GenericContentPage = ({
 }) => (
   <>
     <HelmetComponent title={title} />
-    <BannerImage
+    <Banner
       titleText={title}
       subtitleText={subtitle}
       imageSrc={bannerImage && responsiveBannerUrl(bannerImage.file.url)}

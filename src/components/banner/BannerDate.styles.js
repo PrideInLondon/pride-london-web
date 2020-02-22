@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { media } from '../../../theme/media'
-import theme from '../../../theme/theme'
+import { media } from '../../theme/media'
+import theme from '../../theme/theme'
 
-export const BannerDate = styled.p`
+export const StyledBannerDate = styled.p`
   color: #ffffff;
   font-size: 0.888rem;
   font-family: ${theme.fonts.title};

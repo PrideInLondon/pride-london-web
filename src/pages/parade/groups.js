@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import BannerImage from '../../components/banner/bannerImage'
+import { Banner } from '../../components/banner'
 import background from '../../theme/assets/images/banners/parade-groups/bg@2x.jpg'
 import ParadeGroupsContainer from '../../features/paradeGroups/containers/paradeGroupsContainer'
 import { media } from '../../theme/media'
@@ -31,7 +31,7 @@ const ParadeGroups = ({ data: { paradeGroups } }) => {
   const mappedParadeGroups = mapEntries(paradeGroups)
   return (
     <>
-      <BannerImage
+      <Banner
         titleText="Parade groups"
         subtitleText="Find out more about each group marching in this year’s parade below!"
         altText="Parade groups"

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import BannerImage from '../components/banner/bannerImage'
+import { Banner } from '../components/banner'
 import ViewsContainer from '../features/blog/containers/viewsContainer'
 import NewsContainer from '../features/blog/containers/newsContainer'
 import { Container, Row, Column } from '../components/grid'
@@ -23,7 +23,7 @@ const Blog = ({ data: { articles, views } }) => {
   const mappedViews = mapEntries(views)
   return (
     <Fragment>
-      <BannerImage
+      <Banner
         titleText="News and views"
         subtitleText="Read about what we’re talking about in the London LGBT+ community"
         altText="News and views"

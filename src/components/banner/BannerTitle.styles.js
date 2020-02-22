@@ -1,12 +1,8 @@
 import styled from 'styled-components'
-import { media } from '../../../theme/media'
-import theme from '../../../theme/theme'
+import { media } from '../../theme/media'
+import theme from '../../theme/theme'
 
-export const BannerTitleWrapper = styled.div`
-  margin-left: 10px;
-`
-
-export const BannerTitle = styled.h1`
+export const StyledBannerTitle = styled.h1`
   display: inline;
   box-shadow: 8px 0 0 2px ${theme.colors.white},
     -8px 0 0 2px ${theme.colors.white};
@@ -23,4 +19,8 @@ export const BannerTitle = styled.h1`
     box-shadow: 5px 0 0 5px ${theme.colors.white},
     -5px 0 0 5px ${theme.colors.white};
   `};
+`
+
+export const BannerTitleWrapper = styled.div`
+  margin-left: 10px;
 `

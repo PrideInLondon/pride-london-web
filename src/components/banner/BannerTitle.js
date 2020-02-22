@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { BannerTitleWrapper, BannerTitle } from './styles'
+import { StyledBannerTitle, BannerTitleWrapper } from './BannerTitle.styles'
 
-const StyledBannerTitle = ({ children }) => (
+const BannerTitle = ({ children }) => (
   <BannerTitleWrapper>
-    <BannerTitle>{children}</BannerTitle>
+    <StyledBannerTitle>{children}</StyledBannerTitle>
   </BannerTitleWrapper>
 )
 
-StyledBannerTitle.propTypes = {
+BannerTitle.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
 }
 
-export default StyledBannerTitle
+export default BannerTitle

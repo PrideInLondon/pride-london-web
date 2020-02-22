@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { media } from '../../../theme/media'
-import theme from '../../../theme/theme'
+import { media } from '../../theme/media'
+import theme from '../../theme/theme'
 
-export const BannerSubtitle = styled.h2`
+export const StyledBannerSubtitle = styled.h2`
   color: ${theme.colors.white};
   font-size: 1rem;
   font-weight: 600;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import BannerImage from '../../../../components/banner/bannerImage'
+import { Banner } from '../../../../components/banner'
 import FeaturedArticle from '../../components/featuredArticle'
 import { Container, Row, Column } from '../../../../components/grid'
 
@@ -32,7 +32,7 @@ const FeaturedArticleContainer = () => {
 
         return (
           <>
-            <BannerImage color="blue" imageSrc={src} imageFullWidth />
+            <Banner color="blue" imageSrc={src} imageFullWidth />
             <Container>
               <Row>
                 <Column width={1}>
