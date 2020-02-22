@@ -9,7 +9,7 @@ beforeEach(() => {
   jest.resetModules()
 })
 
-jest.mock('../../../components/appContext', () => {
+jest.mock('../../../appContext', () => {
   const nodeOne = {
     node: {
       id: '123',

@@ -3,7 +3,7 @@ import 'react-dates/initialize'
 import { DateRangePicker } from 'react-dates'
 import 'react-dates/lib/css/_datepicker.css'
 import theme from '../../../../theme/theme'
-import { AppContext } from '../../../../components/appContext'
+import { AppContext } from '../../../../appContext'
 import CalendarIcon from '../../../../theme/assets/images/calendar-icon'
 import {
   DatePickerHeader,

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
-import { Consumer } from '../../../components/appContext'
+import { Consumer } from '../../../appContext'
 import Checkbox from '../../../components/checkbox'
 
 const Wrapper = styled.div`

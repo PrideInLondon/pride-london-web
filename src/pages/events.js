@@ -9,7 +9,7 @@ import { colors } from '../theme/colors'
 import { GroupedEventsCards } from '../features/events'
 import Button from '../components/button'
 import { Container, Row, Column } from '../components/grid'
-import { Consumer } from '../components/appContext'
+import { Consumer } from '../appContext'
 import { filterByLimit } from '../features/events/helpers'
 import { EventsPageBanner } from '../features/events/components/eventsPageBanner'
 

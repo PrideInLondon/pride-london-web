@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { AppContext } from '../appContext'
+import { AppContext } from '../../appContext'
 import Checkbox from '../checkbox'
 import constants from '../../constants'
 import { List, ListItem } from './CheckboxSet.styles'
