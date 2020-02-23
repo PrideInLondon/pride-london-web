@@ -5,7 +5,7 @@ import useOnClickOutside from 'use-onclickoutside'
 import { media } from '../../../theme/media'
 import theme from '../../../theme/theme'
 import { AppContext } from '../../../appContext'
-import CheckboxSet from '../../../components/checkboxSet'
+import { CheckboxSet } from '../../../components/checkboxSet'
 import iconDown from '../../../theme/assets/images/icon-chevron-down.svg'
 import iconUp from '../../../theme/assets/images/icon-chevron-up.svg'
 
