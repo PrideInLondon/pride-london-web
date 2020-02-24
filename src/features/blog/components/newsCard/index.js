@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import constants from '../../../../constants'
-import NewsCardHeader from '../../../../components/newsCardHeader'
+import { NewsCardHeader } from '../../../../components/newsCardHeader'
 import { handleSlug } from '../../../../utils/location-utils'
 import { Card, CardTitle } from './styles'
 

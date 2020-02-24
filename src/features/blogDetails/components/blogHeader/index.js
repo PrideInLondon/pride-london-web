@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SocialList from '../socialList'
-import NewsCardHeader from '../../../../components/newsCardHeader'
+import { NewsCardHeader } from '../../../../components/newsCardHeader'
 import {
   Title,
   SubHeader,
