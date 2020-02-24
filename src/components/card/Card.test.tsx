@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from '../../utils/testing-utils'
+import umbrellaJpg from '../../assets/umbrella.jpg'
 import { Card, CardImage, CardContent, CardTitle, CardFooter } from './Card'
 import { CardProps } from './Card.types'
-import umbrellaJpg from './umbrella.jpg'
 
 const MockCard: React.FC<CardProps> = ({ variant }) => (
   <Card variant={variant} to="/">
