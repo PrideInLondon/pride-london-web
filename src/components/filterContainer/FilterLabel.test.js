@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import FilterLabel from '.'
+import FilterLabel from './FilterLabel'
 
 describe('FilterLabel', () => {
   it('executes handler when filter is clicked', () => {
@@ -14,7 +14,7 @@ describe('FilterLabel', () => {
         handleSelect={handleSelect}
       />
     )
-    wrapper.find('styles__Input').simulate('click')
+    wrapper.find('FilterLabelstyles__Input').simulate('click')
     expect(handleSelect).toHaveBeenCalledTimes(1)
     expect(handleSelect).toHaveBeenCalledWith('foo')
   })

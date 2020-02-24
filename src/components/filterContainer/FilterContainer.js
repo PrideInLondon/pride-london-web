@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Container, Row, Column } from '../../components/grid'
 import constants from '../../constants'
-import FilterLabel from './filterLabel'
-import { FilterContainerWrapper } from './styles'
+import FilterLabel from './FilterLabel'
+import { FilterContainerWrapper } from './FilterContainer.styles'
 
 export const calculateIsSelected = (filterType, filterName, selected) => {
   switch (filterType) {

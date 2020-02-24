@@ -154,7 +154,7 @@ describe('FilteredPagedCardContainer', () => {
 
       wrapper
         .find('FilterLabel#foo')
-        .find('styles__Input')
+        .find('FilterLabelstyles__Input')
         .simulate('click')
       wrapper.update()
 
@@ -192,7 +192,7 @@ describe('FilteredPagedCardContainer', () => {
 
       wrapper
         .find('FilterLabel#foo')
-        .find('styles__Input')
+        .find('FilterLabelstyles__Input')
         .simulate('click')
       wrapper.update()
 
@@ -214,7 +214,7 @@ describe('FilteredPagedCardContainer', () => {
 
       wrapper
         .find('FilterLabel#foo')
-        .find('styles__Input')
+        .find('FilterLabelstyles__Input')
         .simulate('click')
       wrapper.update()
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import tinycolor from 'tinycolor2'
 import { hideVisually } from 'polished'
-import theme from '../../../theme/theme'
+import theme from '../../theme/theme'
 
 export const getMostReadable = color =>
   tinycolor

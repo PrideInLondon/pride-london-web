@@ -1,4 +1,4 @@
-import { calculateIsSelected } from '.'
+import { calculateIsSelected } from './FilterContainer'
 
 describe('calculateIsSelected', () => {
   describe('checkbox', () => {

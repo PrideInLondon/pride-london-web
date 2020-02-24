@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import constants from '../../../constants'
-import { Label, Text, Input } from './styles'
+import constants from '../../constants'
+import { Label, Text, Input } from './FilterLabel.styles'
 
 const FilterLabel = ({
   filterName,
