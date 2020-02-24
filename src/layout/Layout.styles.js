@@ -1,79 +1,79 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import { colors } from './theme/colors'
+import { colors } from '../theme/colors'
 
 /**
  * Roboto 300
  */
-import Roboto300EOT from './fonts/roboto/roboto-v20-latin-300.eot'
-import Roboto300WOFF from './fonts/roboto/roboto-v20-latin-300.woff'
-import Roboto300WOFF2 from './fonts/roboto/roboto-v20-latin-300.woff2'
-import Roboto300TTF from './fonts/roboto/roboto-v20-latin-300.ttf'
-import Roboto300SVG from './fonts/roboto/roboto-v20-latin-300.svg'
+import Roboto300EOT from '../fonts/roboto/roboto-v20-latin-300.eot'
+import Roboto300WOFF from '../fonts/roboto/roboto-v20-latin-300.woff'
+import Roboto300WOFF2 from '../fonts/roboto/roboto-v20-latin-300.woff2'
+import Roboto300TTF from '../fonts/roboto/roboto-v20-latin-300.ttf'
+import Roboto300SVG from '../fonts/roboto/roboto-v20-latin-300.svg'
 /**
  * Roboto Regular
  */
-import RobotoRegularEOT from './fonts/roboto/roboto-v18-latin-regular.eot'
-import RobotoRegularWOFF from './fonts/roboto/roboto-v18-latin-regular.woff'
-import RobotoRegularWOFF2 from './fonts/roboto/roboto-v18-latin-regular.woff2'
-import RobotoRegularTTF from './fonts/roboto/roboto-v18-latin-regular.ttf'
-import RobotoRegularSVG from './fonts/roboto/roboto-v18-latin-regular.svg'
+import RobotoRegularEOT from '../fonts/roboto/roboto-v18-latin-regular.eot'
+import RobotoRegularWOFF from '../fonts/roboto/roboto-v18-latin-regular.woff'
+import RobotoRegularWOFF2 from '../fonts/roboto/roboto-v18-latin-regular.woff2'
+import RobotoRegularTTF from '../fonts/roboto/roboto-v18-latin-regular.ttf'
+import RobotoRegularSVG from '../fonts/roboto/roboto-v18-latin-regular.svg'
 /**
  * Roboto Italic
  */
-import RobotoItalicEOT from './fonts/roboto/roboto-v18-latin-italic.eot'
-import RobotoItalicWOFF from './fonts/roboto/roboto-v18-latin-italic.woff'
-import RobotoItalicWOFF2 from './fonts/roboto/roboto-v18-latin-italic.woff2'
-import RobotoItalicTTF from './fonts/roboto/roboto-v18-latin-italic.ttf'
-import RobotoItalicSVG from './fonts/roboto/roboto-v18-latin-italic.svg'
+import RobotoItalicEOT from '../fonts/roboto/roboto-v18-latin-italic.eot'
+import RobotoItalicWOFF from '../fonts/roboto/roboto-v18-latin-italic.woff'
+import RobotoItalicWOFF2 from '../fonts/roboto/roboto-v18-latin-italic.woff2'
+import RobotoItalicTTF from '../fonts/roboto/roboto-v18-latin-italic.ttf'
+import RobotoItalicSVG from '../fonts/roboto/roboto-v18-latin-italic.svg'
 /**
  * Roboto 500
  */
-import Roboto500EOT from './fonts/roboto/roboto-v18-latin-500.eot'
-import Roboto500WOFF from './fonts/roboto/roboto-v18-latin-500.woff'
-import Roboto500WOFF2 from './fonts/roboto/roboto-v18-latin-500.woff2'
-import Roboto500TTF from './fonts/roboto/roboto-v18-latin-500.ttf'
-import Roboto500SVG from './fonts/roboto/roboto-v18-latin-500.svg'
+import Roboto500EOT from '../fonts/roboto/roboto-v18-latin-500.eot'
+import Roboto500WOFF from '../fonts/roboto/roboto-v18-latin-500.woff'
+import Roboto500WOFF2 from '../fonts/roboto/roboto-v18-latin-500.woff2'
+import Roboto500TTF from '../fonts/roboto/roboto-v18-latin-500.ttf'
+import Roboto500SVG from '../fonts/roboto/roboto-v18-latin-500.svg'
 
 /**
  * Roboto 700
  */
-import Roboto700EOT from './fonts/roboto/roboto-v18-latin-700.eot'
-import Roboto700WOFF from './fonts/roboto/roboto-v18-latin-700.woff'
-import Roboto700WOFF2 from './fonts/roboto/roboto-v18-latin-700.woff2'
-import Roboto700TTF from './fonts/roboto/roboto-v18-latin-700.ttf'
-import Roboto700SVG from './fonts/roboto/roboto-v18-latin-700.svg'
+import Roboto700EOT from '../fonts/roboto/roboto-v18-latin-700.eot'
+import Roboto700WOFF from '../fonts/roboto/roboto-v18-latin-700.woff'
+import Roboto700WOFF2 from '../fonts/roboto/roboto-v18-latin-700.woff2'
+import Roboto700TTF from '../fonts/roboto/roboto-v18-latin-700.ttf'
+import Roboto700SVG from '../fonts/roboto/roboto-v18-latin-700.svg'
 /**
  * Poppins
  */
-import Poppins600EOT from './fonts/poppins/poppins-v5-latin-600.eot'
-import Poppins600WOFF from './fonts/poppins/poppins-v5-latin-600.woff'
-import Poppins600WOFF2 from './fonts/poppins/poppins-v5-latin-600.woff2'
-import Poppins600TTF from './fonts/poppins/poppins-v5-latin-600.ttf'
-import Poppins600SVG from './fonts/poppins/poppins-v5-latin-600.svg'
+import Poppins600EOT from '../fonts/poppins/poppins-v5-latin-600.eot'
+import Poppins600WOFF from '../fonts/poppins/poppins-v5-latin-600.woff'
+import Poppins600WOFF2 from '../fonts/poppins/poppins-v5-latin-600.woff2'
+import Poppins600TTF from '../fonts/poppins/poppins-v5-latin-600.ttf'
+import Poppins600SVG from '../fonts/poppins/poppins-v5-latin-600.svg'
 /**
  * Poppins 600 Italic
  */
-import Poppins600ItalicEOT from './fonts/poppins/poppins-v5-latin-600italic.eot'
-import Poppins600ItalicWOFF from './fonts/poppins/poppins-v5-latin-600italic.woff'
-import Poppins600ItalicWOFF2 from './fonts/poppins/poppins-v5-latin-600italic.woff2'
-import Poppins600ItalicTTF from './fonts/poppins/poppins-v5-latin-600italic.ttf'
-import Poppins600ItalicSVG from './fonts/poppins/poppins-v5-latin-600italic.svg'
+import Poppins600ItalicEOT from '../fonts/poppins/poppins-v5-latin-600italic.eot'
+import Poppins600ItalicWOFF from '../fonts/poppins/poppins-v5-latin-600italic.woff'
+import Poppins600ItalicWOFF2 from '../fonts/poppins/poppins-v5-latin-600italic.woff2'
+import Poppins600ItalicTTF from '../fonts/poppins/poppins-v5-latin-600italic.ttf'
+import Poppins600ItalicSVG from '../fonts/poppins/poppins-v5-latin-600italic.svg'
 /**
  * Poppins 700
  */
-import Poppins700EOT from './fonts/poppins/poppins-v5-latin-700.eot'
-import Poppins700WOFF from './fonts/poppins/poppins-v5-latin-700.woff'
-import Poppins700WOFF2 from './fonts/poppins/poppins-v5-latin-700.woff2'
-import Poppins700TTF from './fonts/poppins/poppins-v5-latin-700.ttf'
-import Poppins700SVG from './fonts/poppins/poppins-v5-latin-700.svg'
+import Poppins700EOT from '../fonts/poppins/poppins-v5-latin-700.eot'
+import Poppins700WOFF from '../fonts/poppins/poppins-v5-latin-700.woff'
+import Poppins700WOFF2 from '../fonts/poppins/poppins-v5-latin-700.woff2'
+import Poppins700TTF from '../fonts/poppins/poppins-v5-latin-700.ttf'
+import Poppins700SVG from '../fonts/poppins/poppins-v5-latin-700.svg'
 /**
  * Poppins 800
  */
-import Poppins800EOT from './fonts/poppins/poppins-v5-latin-800.eot'
-import Poppins800WOFF from './fonts/poppins/poppins-v5-latin-800.woff'
-import Poppins800WOFF2 from './fonts/poppins/poppins-v5-latin-800.woff2'
-import Poppins800TTF from './fonts/poppins/poppins-v5-latin-800.ttf'
-import Poppins800SVG from './fonts/poppins/poppins-v5-latin-800.svg'
+import Poppins800EOT from '../fonts/poppins/poppins-v5-latin-800.eot'
+import Poppins800WOFF from '../fonts/poppins/poppins-v5-latin-800.woff'
+import Poppins800WOFF2 from '../fonts/poppins/poppins-v5-latin-800.woff2'
+import Poppins800TTF from '../fonts/poppins/poppins-v5-latin-800.ttf'
+import Poppins800SVG from '../fonts/poppins/poppins-v5-latin-800.svg'
 
 export const GlobalStyle = createGlobalStyle`
   :root {

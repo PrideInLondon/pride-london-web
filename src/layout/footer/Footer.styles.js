@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
 import constants from '../../constants'
-import { Column } from '../grid'
+import { Column } from '../../components/grid'
 
 const isLargeBadge = level =>
   [constants.sponsorLevels.headline, constants.sponsorLevels.gold].includes(

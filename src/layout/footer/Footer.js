@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IntercomAPI } from 'react-intercom'
-import { Row } from '../grid'
+import { Row } from '../../components/grid'
 import Facebook from '../../components/icons/facebook'
 import Twitter from '../../components/icons/twitter'
 import Instagram from '../../components/icons/instagram'
 import Youtube from '../../components/icons/youtube'
 import Linkedin from '../../components/icons/linkedin'
 import Snapchat from '../../components/icons/snapchat'
-import { CTALink } from '../ctaLink'
+import { CTALink } from '../../components/ctaLink'
 import {
   FooterWrapper,
   StyledFooter,
