@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Title from '../../components/title'
 import NewsCard from '../../../../features/blog/components/newsCard/index'
 import FeaturedArticleContainer from '../featuredArticleContainer'
-import FilteredPagedCardContainer from '../../../../components/filteredPagedCardContainer'
+import { FilteredPagedCardContainer } from '../../../../components/filteredPagedCardContainer'
 import {
   Container,
   Column,

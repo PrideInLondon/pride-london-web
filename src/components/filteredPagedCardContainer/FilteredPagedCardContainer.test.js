@@ -5,7 +5,7 @@ import FilteredPagedCardContainer, {
   calculateSelected,
   calculateShouldShowCard,
   calculateAvailableCategories,
-} from './'
+} from './FilteredPagedCardContainer'
 
 describe('calculateInitialSelected', () => {
   it.each`
