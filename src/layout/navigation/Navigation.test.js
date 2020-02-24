@@ -1,10 +1,10 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import Nav from '.'
+import Navigation from './Navigation'
 
-describe('<Nav/>', () => {
+describe('<Navigation/>', () => {
   it('toggles open / close the menu button', () => {
-    const wrapper = mount(<Nav />)
+    const wrapper = mount(<Navigation />)
     const menuToggle = wrapper.find('button[aria-controls="menu"]')
     const isOpen = wrapper
       .find('button[aria-controls="menu"]')

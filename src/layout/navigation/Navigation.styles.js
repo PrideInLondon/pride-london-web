@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
 import Link from 'gatsby-link'
-import { Row, Column } from '../../grid'
-import { media } from '../../../theme/media'
-import Button from '../../button'
-import burger from '../../../theme/assets/images/icon-menu.svg'
-import iconClose from '../../../theme/assets/images/icon-close.svg'
-import theme from '../../../theme/theme'
+import { Row, Column } from '../../components/grid'
+import { media } from '../../theme/media'
+import Button from '../../components/button'
+import burger from '../../theme/assets/images/icon-menu.svg'
+import iconClose from '../../theme/assets/images/icon-close.svg'
+import theme from '../../theme/theme'
 
 export const HeaderWrapper = styled.div`
   background-color: ${lighten(0.05, theme.colors.indigo)};

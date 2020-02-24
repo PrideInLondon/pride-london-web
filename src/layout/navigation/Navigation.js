@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { noScroll } from '../../../utils/style-utils'
-import logo from '../../../theme/assets/images/logo-pride.svg'
-import NavItem from '../navItem'
+import { noScroll } from '../../utils/style-utils'
+import logo from '../../theme/assets/images/logo-pride.svg'
+import NavItem from './NavItem'
 import {
   HeaderWrapper,
   Header,
@@ -12,9 +12,9 @@ import {
   Menu,
   Burger,
   DonateButton,
-} from './styles'
+} from './Navigation.styles'
 
-const Nav = () => {
+const Navigation = () => {
   const [isOpen, setOpen] = useState(false)
   useEffect(() => {
     if (isOpen) {
@@ -246,4 +246,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default Navigation

@@ -1,10 +1,10 @@
 import React, { useReducer, useRef, useEffect, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import Submenu from '../submenu'
-import theme from '../../../theme/theme'
-import { checkBreakpoint } from '../../../utils/style-utils'
-import ChevronDown from '../../icons/chevronDown'
-import { MenuLink, SubmenuToggle, MenuItem } from './styles'
+import theme from '../../theme/theme'
+import { checkBreakpoint } from '../../utils/style-utils'
+import ChevronDown from '../../components/icons/chevronDown'
+import SubMenu from './SubMenu'
+import { MenuLink, SubMenuToggle, MenuItem } from './NavItem.styles'
 
 function reducer(state, action) {
   switch (action.type) {
@@ -80,7 +80,7 @@ const NavItem = props => {
         children
       ) : submenu ? (
         <Fragment>
-          <SubmenuToggle
+          <SubMenuToggle
             href="#"
             aria-haspopup={checkBreakpoint(theme.navBreakpoint) && 'true'}
             aria-expanded={isOpen}
@@ -92,8 +92,8 @@ const NavItem = props => {
           >
             <span>{title}</span>
             <ChevronDown />
-          </SubmenuToggle>
-          <Submenu
+          </SubMenuToggle>
+          <SubMenu
             item={{ submenu, title, url, desc, id }}
             isOpen={isOpen}
             setNavOpen={setNavOpen}

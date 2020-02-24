@@ -6,7 +6,6 @@ import { ThemeProvider } from 'styled-components'
 import { Helmet } from '../components/helmet'
 import { Provider } from '../appContext'
 import CookieNotice from '../cookieNotice'
-import Nav from '../components/navigation/nav'
 import Intercom from '../components/intercom'
 import favicon from '../theme/assets/images/favicons/favicon.ico'
 import favicon16 from '../theme/assets/images/favicons/favicon-16x16.png'
@@ -28,6 +27,7 @@ import mstile310150 from '../theme/assets/images/favicons/mstile-310x150.png'
 import logo from '../theme/assets/images/logo-pride.svg'
 import theme from '../theme/theme'
 import metaImg from '../theme/assets/images/pride-logo-social.png'
+import { Navigation } from './navigation'
 import { GlobalStyle, SiteWrapper } from './Layout.styles'
 import { Footer } from './footer'
 
@@ -372,7 +372,7 @@ const Layout = ({ children, location: { pathname } }) => (
                 ]}
               />
               <SiteWrapper>
-                <Nav />
+                <Navigation />
                 <main>{children}</main>
                 <Footer
                   facebook={facebook}

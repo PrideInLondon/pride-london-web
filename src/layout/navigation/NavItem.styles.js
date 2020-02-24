@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
 import { Link } from 'gatsby'
-import { media } from '../../../theme/media'
-import theme from '../../../theme/theme'
+import { media } from '../../theme/media'
+import theme from '../../theme/theme'
 
 export const linkStyles = css`
   font-family: ${theme.fonts.title};
@@ -31,7 +31,7 @@ export const MenuLink = styled(Link)`
   `};
 `
 
-export const SubmenuToggle = styled.a`
+export const SubMenuToggle = styled.a`
   ${linkStyles}
   cursor: default;
 
@@ -70,7 +70,7 @@ export const MenuItem = styled.li`
   ${media.nav`
     height: auto;
     padding: 0;
-    ${SubmenuToggle} {
+    ${SubMenuToggle} {
       background-color: ${props =>
         props.isOpen && lighten(0.05, theme.colors.indigo)};
     }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import NavItem from '../navItem'
+import NavItem from './NavItem'
 import { mockData } from './__mocks__'
 
 describe('Desktop version <NavItem/>', () => {
@@ -21,7 +21,7 @@ describe('Desktop version <NavItem/>', () => {
   it('has the aria-haspopup attribute', () => {
     const wrapper = shallow(<NavItem item={mockData} />)
     expect(
-      wrapper.find('styles__SubmenuToggle').prop('aria-haspopup')
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-haspopup')
     ).toBeTruthy()
   })
 
@@ -30,32 +30,32 @@ describe('Desktop version <NavItem/>', () => {
     wrapper.simulate('mouseEnter')
     wrapper.update()
     expect(
-      wrapper.find('styles__SubmenuToggle').prop('aria-expanded')
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-expanded')
     ).toBeTruthy()
 
     wrapper.simulate('mouseLeave')
     wrapper.update()
     expect(
-      wrapper.find('styles__SubmenuToggle').prop('aria-expanded')
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-expanded')
     ).toBeFalsy()
   })
 
   it('toggles the submenu on click', () => {
     const wrapper = mount(<NavItem item={mockData} />)
-    const SubmenuToggle = wrapper.find('styles__SubmenuToggle')
-    const isOpen = SubmenuToggle.prop('aria-expanded')
+    const SubMenuToggle = wrapper.find('NavItemstyles__SubMenuToggle')
+    const isOpen = SubMenuToggle.prop('aria-expanded')
 
-    SubmenuToggle.simulate('click')
+    SubMenuToggle.simulate('click')
     wrapper.update()
-    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
-      !isOpen
-    )
+    expect(
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-expanded')
+    ).toBe(!isOpen)
 
-    SubmenuToggle.simulate('click')
+    SubMenuToggle.simulate('click')
     wrapper.update()
-    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
-      isOpen
-    )
+    expect(
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-expanded')
+    ).toBe(isOpen)
   })
 })
 
@@ -63,41 +63,43 @@ describe('Mobile version <NavItem/>', () => {
   it('has not the aria-haspopup attribute', () => {
     const wrapper = shallow(<NavItem item={mockData} />)
     expect(
-      wrapper.find('styles__SubmenuToggle').prop('aria-haspopup')
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-haspopup')
     ).toBeFalsy()
   })
 
   it('does not open/close on mouseenter or mouseleave', () => {
     const wrapper = mount(<NavItem item={mockData} />)
-    const isOpen = wrapper.find('styles__SubmenuToggle').prop('aria-expanded')
+    const isOpen = wrapper
+      .find('NavItemstyles__SubMenuToggle')
+      .prop('aria-expanded')
     wrapper.simulate('mouseEnter')
     wrapper.update()
-    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
-      isOpen
-    )
+    expect(
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-expanded')
+    ).toBe(isOpen)
 
     wrapper.simulate('mouseLeave')
     wrapper.update()
-    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
-      isOpen
-    )
+    expect(
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-expanded')
+    ).toBe(isOpen)
   })
 
   it('toggles the submenu on click', () => {
     const wrapper = mount(<NavItem item={mockData} />)
-    const SubmenuToggle = wrapper.find('styles__SubmenuToggle')
-    const isOpen = SubmenuToggle.prop('aria-expanded')
+    const SubMenuToggle = wrapper.find('NavItemstyles__SubMenuToggle')
+    const isOpen = SubMenuToggle.prop('aria-expanded')
 
-    SubmenuToggle.simulate('click')
+    SubMenuToggle.simulate('click')
     wrapper.update()
-    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
-      !isOpen
-    )
+    expect(
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-expanded')
+    ).toBe(!isOpen)
 
-    SubmenuToggle.simulate('click')
+    SubMenuToggle.simulate('click')
     wrapper.update()
-    expect(wrapper.find('styles__SubmenuToggle').prop('aria-expanded')).toBe(
-      isOpen
-    )
+    expect(
+      wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-expanded')
+    ).toBe(isOpen)
   })
 })

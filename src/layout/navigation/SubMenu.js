@@ -1,10 +1,10 @@
 import React, { useRef, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
 import shortid from 'shortid'
-import theme from '../../../theme/theme'
-import { Container } from '../../grid'
-import { checkBreakpoint } from '../../../utils/style-utils'
-import { handleUrl } from '../../../utils/location-utils'
+import theme from '../../theme/theme'
+import { Container } from '../../components/grid'
+import { checkBreakpoint } from '../../utils/style-utils'
+import { handleUrl } from '../../utils/location-utils'
 import {
   Panel,
   PanelRow,
@@ -15,7 +15,7 @@ import {
   PanelListSection,
   Heading,
   PanelLink,
-} from './styles'
+} from './SubMenu.styles'
 
 function setHeightAuto(ref) {
   if (ref.current.offsetHeight > 0 && !checkBreakpoint(theme.navBreakpoint)) {
@@ -23,7 +23,7 @@ function setHeightAuto(ref) {
   }
 }
 
-const Submenu = props => {
+const SubMenu = props => {
   const {
     item: { title, desc, id, submenu },
     isOpen,
@@ -99,7 +99,7 @@ const Submenu = props => {
   )
 }
 
-Submenu.propTypes = {
+SubMenu.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
@@ -112,4 +112,4 @@ Submenu.propTypes = {
   setNavItemOpen: PropTypes.func.isRequired,
 }
 
-export default Submenu
+export default SubMenu
