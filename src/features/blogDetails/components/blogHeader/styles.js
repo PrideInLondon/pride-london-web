@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from '../../../../theme/theme'
-import { getMostReadable } from '../../../../components/filterButton/styles'
+import { getMostReadable } from '../../../../components/filterButton/FilterButton.styles'
 
 export const FlexDiv = styled.div`
   display: flex;

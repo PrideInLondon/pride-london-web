@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import { FilterLabel } from './styles'
-import FilterButton from '.'
+import { FilterLabel } from './FilterButton.styles'
+import FilterButton from './FilterButton'
 
 describe(FilterButton.name, () => {
   const mockClick = jest.fn()

@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import FilterButton from '../../../../components/filterButton'
+import { FilterButton } from '../../../../components/filterButton'
 import LetterGroup from '../../components/letterGroup'
 import theme from '../../../../theme/theme'
 import ParadeGroupsContainer from '.'

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Container, Row, Column } from '../../../../components/grid'
-import FilterButton from '../../../../components/filterButton'
+import { FilterButton } from '../../../../components/filterButton'
 import { FiltersWrapper } from './styles'
 
 const FilterContainer = ({ handleFilterClick, selectedFilter, categories }) => {

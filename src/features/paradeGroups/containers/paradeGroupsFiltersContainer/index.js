@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import FilterButton from '../../../../components/filterButton'
+import { FilterButton } from '../../../../components/filterButton'
 import { paradeGroupFilterPropType } from '../../paradeGroupFilterPropType'
 import { ParadeGroupsFiltersWrapper, ParadeGroupsFilterLabel } from './styles'
 

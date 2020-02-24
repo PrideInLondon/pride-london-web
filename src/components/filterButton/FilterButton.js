@@ -1,6 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FilterLabel, FilterText, FilterIcon, FilterRadio } from './styles'
+import {
+  FilterLabel,
+  FilterText,
+  FilterIcon,
+  FilterRadio,
+} from './FilterButton.styles'
 
 const FilterButton = ({
   filterType,
