@@ -1,11 +1,11 @@
 import React from 'react'
-import { Title, Header, Link, StyledChevronRight } from './styles'
+import { Title, Header, Link, StyledChevronIcon } from './styles'
 
 const OtherArticlesHeader = () => (
   <Header>
     <Title>You may also like</Title>
     <Link>
-      View all articles <StyledChevronRight />
+      View all articles <StyledChevronIcon />
     </Link>
   </Header>
 )

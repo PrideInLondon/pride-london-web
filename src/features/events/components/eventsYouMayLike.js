@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import moment from 'moment'
-import ChevronRight from '../../../components/chevronRight'
+import ChevronIcon from '../../../theme/assets/images/chevron-icon'
 import { Consumer } from '../../../appContext'
 import { Container, Row, Column } from '../../../components/grid'
 import { media } from '../../../theme/media'
@@ -86,7 +86,7 @@ export const EventsYouMayLike = ({ eventId }) => (
               <Heading>You may also like</Heading>
               <ViewAll href="/events">
                 View all<DesktopOnly>&nbsp;events</DesktopOnly>&nbsp;
-                <ChevronRight />
+                <ChevronIcon />
               </ViewAll>
             </HeadingRow>
             <Row>

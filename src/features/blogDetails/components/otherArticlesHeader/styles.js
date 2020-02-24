@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from '../../../../theme/theme'
-import ChevronRight from '../../../../components/chevronRight'
+import ChevronIcon from '../../../../theme/assets/images/chevron-icon'
 
 export const Title = styled.h2`
   font-weight: bold;
@@ -28,11 +28,13 @@ export const Link = styled.a`
   border-bottom: 2px solid transparent;
   transition: border-bottom-color 200ms ease-out;
   cursor: pointer;
-  &:hover {
+
+  &:hover,
+  &:focus {
     border-bottom-color: ${theme.colors.eucalyptusGreen};
   }
 `
 
-export const StyledChevronRight = styled(ChevronRight)`
+export const StyledChevronIcon = styled(ChevronIcon)`
   width: 9px;
 `

@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import theme from '../../../../../theme/theme'
 import { sm, md, lg, xl } from '../../../../../theme/breakpoints'
-import ChevronRight from '../../../../../components/chevronRight'
+import ChevronIcon from '../../../../../theme/assets/images/chevron-icon'
 import Arrow from './Arrow'
 
 import {
@@ -25,12 +25,12 @@ const carouselSettings = {
   centerMode: true,
   nextArrow: (
     <Arrow>
-      <ChevronRight />
+      <ChevronIcon />
     </Arrow>
   ),
   prevArrow: (
     <Arrow left>
-      <ChevronRight />
+      <ChevronIcon />
     </Arrow>
   ),
   responsive: [
