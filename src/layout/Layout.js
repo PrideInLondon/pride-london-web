@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import Helmet from 'react-helmet'
+import ReactHelmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
-import HelmetComponet from '../components/helmetComponent'
+import { Helmet } from '../components/helmet'
 import { Provider } from '../appContext'
 import CookieNotice from '../cookieNotice'
 import Nav from '../components/navigation/nav'
@@ -128,8 +128,8 @@ const Layout = ({ children, location: { pathname } }) => (
         return (
           <Provider events={events}>
             <Fragment>
-              <HelmetComponet title={title} />
-              <Helmet
+              <Helmet title={title} />
+              <ReactHelmet
                 meta={[
                   // Schema meta tags for http://schema.org/WebPage
                   {

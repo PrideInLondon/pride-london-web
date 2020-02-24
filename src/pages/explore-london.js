@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import HelmetComponent from '../components/helmetComponent'
+import { Helmet } from '../components/helmet'
 import { GreyWrapper } from '../components/grid'
 import { Banner } from '../components/banner'
 import { colors } from '../theme/colors'
@@ -16,7 +16,7 @@ const ExploreLondon = ({
   },
 }) => (
   <div>
-    <HelmetComponent title="Explore London" />
+    <Helmet title="Explore London" />
     <Banner
       titleText="Explore London"
       subtitleText="Find great places to spend time with friends and loved ones around London."

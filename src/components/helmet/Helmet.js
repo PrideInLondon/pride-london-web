@@ -1,10 +1,10 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import ReactHelmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-const HelmetComponent = ({ title, description }) => {
+const Helmet = ({ title, description }) => {
   return (
-    <Helmet
+    <ReactHelmet
       title={title.includes('|') ? title : `${title} | Pride in London`}
       meta={[
         {
@@ -16,14 +16,14 @@ const HelmetComponent = ({ title, description }) => {
   )
 }
 
-HelmetComponent.propTypes = {
+Helmet.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
 }
 
-HelmetComponent.defaultProps = {
+Helmet.defaultProps = {
   description:
     "In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
 }
 
-export default HelmetComponent
+export default Helmet

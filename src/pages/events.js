@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { color } from 'styled-system'
-import HelmetComponent from '../components/helmetComponent'
+import { Helmet } from '../components/helmet'
 import { media } from '../theme/media'
 import { colors } from '../theme/colors'
 import { GroupedEventsCards } from '../features/events'
@@ -98,7 +98,7 @@ export const Events = ({
     <Consumer>
       {context => (
         <PageWrapper backgroundColor={colors.indigo}>
-          <HelmetComponent
+          <Helmet
             title="Coming Out"
             description="The new way to find the best queer events for the queer community from Pride in London"
           />

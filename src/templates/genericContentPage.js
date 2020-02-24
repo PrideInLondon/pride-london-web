@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import HelmetComponent from '../components/helmetComponent'
+import { Helmet } from '../components/helmet'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { Column, Row, Container } from '../components/grid'
@@ -57,7 +57,7 @@ const GenericContentPage = ({
   },
 }) => (
   <>
-    <HelmetComponent title={title} />
+    <Helmet title={title} />
     <Banner
       titleText={title}
       subtitleText={subtitle}
