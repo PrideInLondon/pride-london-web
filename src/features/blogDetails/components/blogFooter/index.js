@@ -5,7 +5,7 @@ import theme from '../../../../theme/theme'
 import Author from '../author'
 import SocialList from '../socialList'
 import { FlexDiv, ShareText } from '../blogHeader/styles'
-import Input from '../../../../components/input'
+import { Input } from '../../../../components/input'
 import { Summary, BlogFooterContainer } from './styles'
 
 export const StyledInput = styled(Input)`

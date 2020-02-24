@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Button from '../../../../components/button'
-import Input from '../../../../components/input'
+import { Input } from '../../../../components/input'
 import { media } from '../../../../theme/media'
 import theme from '../../../../theme/theme'
 
