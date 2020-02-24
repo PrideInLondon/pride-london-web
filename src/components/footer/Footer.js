@@ -28,7 +28,7 @@ import {
   LegalList,
   LegalListItem,
   LegalLink,
-} from './styles'
+} from './Footer.styles'
 
 const intercomShow = () => {
   IntercomAPI('showNewMessage')

@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from 'gatsby'
 import React from 'react'
-import Footer from '../footer'
+import Footer from './Footer'
 
 const query = graphql`
   query footerSponsorsQuery {
