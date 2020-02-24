@@ -1,3 +1,1 @@
-import { CTALink } from './CTALink'
-
-export default CTALink
+export { CTALink } from './CTALink'

@@ -4,7 +4,7 @@ import { Row, FlexColumn } from '../../../../components/grid'
 import LatestNewsHeader from '../../components/latestNews/latestNewsHeader'
 import LatestNews from '../../components/latestNews'
 import constants from '../../../../constants'
-import CTALink from '../../../../components/ctaLink'
+import { CTALink } from '../../../../components/ctaLink'
 import { Wrapper, SecondaryNews, NewsCard, CTALinkOnlyMobile } from './styles'
 
 export const query = graphql`

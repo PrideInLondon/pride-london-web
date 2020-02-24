@@ -8,7 +8,7 @@ import Instagram from '../../components/icons/instagram'
 import Youtube from '../../components/icons/youtube'
 import Linkedin from '../../components/icons/linkedin'
 import Snapchat from '../../components/icons/snapchat'
-import CTALink from '../ctaLink'
+import { CTALink } from '../ctaLink'
 import {
   FooterWrapper,
   StyledFooter,

@@ -1,5 +1,5 @@
 import React from 'react'
-import CTALink from '../../../../../components/ctaLink'
+import { CTALink } from '../../../../../components/ctaLink'
 import { Header, Title, HiddeOnlyMobile } from './styles'
 
 const LatestNewsHeader = () => (
