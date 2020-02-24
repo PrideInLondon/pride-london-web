@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import Cookies from 'js-cookie'
 import Helmet from 'react-helmet'
-import theme from '../../theme/theme'
-import { media } from '../../theme/media'
-import { Container, Row, Column } from '../grid'
+import theme from './theme/theme'
+import { media } from './theme/media'
+import { Container, Row, Column } from './components/grid'
 
 const CookieWrapper = styled.div`
   color: ${theme.colors.white};

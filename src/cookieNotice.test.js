@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import CookieNotice from '.'
+import CookieNotice from './cookieNotice'
 
 describe('<CookieNotice />', () => {
   beforeAll(() => {
