@@ -8,7 +8,7 @@ import {
   CTATitle,
   CTABody,
   RelativeColumn,
-} from './styles'
+} from './CTABox.styles'
 
 const CTABox = props => {
   const { title, body, link } = props

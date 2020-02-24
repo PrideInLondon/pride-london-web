@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CTABox from '../ctaBox'
+import { CTABox } from '../ctaBox'
 import { Row } from '../grid'
 import { MainContainer, IntroContainer } from './styles'
 
