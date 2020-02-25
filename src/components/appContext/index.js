@@ -113,7 +113,7 @@ export const Provider = ({ events, children }) => {
   })
 
   const showMore = filteredCount => {
-    if (this.state.eventsToShow < filteredCount) {
+    if (state.eventsToShow < filteredCount) {
       setState({
         eventsToShow: state.eventsToShow + constants.itemsToLoad,
       })
