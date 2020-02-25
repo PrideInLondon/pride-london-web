@@ -102,7 +102,7 @@ export const Provider = ({ events, children }) => {
       },
     }))
   }
-  const getCheckboxBool = (name, checked) => {
+  const getCheckboxBool = (title, checked) => {
     setState(prevState => ({
       ...prevState,
       filters: {
@@ -111,7 +111,7 @@ export const Provider = ({ events, children }) => {
       },
     }))
   }
-  const getCheckboxSetValues = (e, name) => {
+  const getCheckboxSetValues = (e, title) => {
     const updatedState = {
       ...state,
       filters: {
@@ -120,13 +120,13 @@ export const Provider = ({ events, children }) => {
     }
     if (
       e.target.checked &&
-      updatedState.filters[name].indexOf(e.target.value) === -1
+      updatedState.filters[title].indexOf(e.target.value) === -1
     ) {
-      updatedState.filters[name].push(e.target.value)
+      updatedState.filters[title].push(e.target.value)
     } else {
-      const index = updatedState.filters[name].indexOf(e.target.value)
+      const index = updatedState.filters[title].indexOf(e.target.value)
       if (index > -1) {
-        state.filters[name].splice(index, 1)
+        state.filters[title].splice(index, 1)
       }
     }
     setState(updatedState)
@@ -139,11 +139,11 @@ export const Provider = ({ events, children }) => {
     })
   }
 
-  const closeSiblingFilters = (filterName, isOpen) => {
-    if (isOpen && filterName != state.filterOpen) {
+  const closeSiblingFilters = (filterTitle, isOpen) => {
+    if (isOpen && filterTitle != state.filterOpen) {
       setState(prevState => ({
         ...prevState,
-        filterOpen: filterName,
+        filterOpen: filterTitle,
       }))
     } else {
       setState(prevState => ({
