@@ -30,6 +30,13 @@ function getInitialFilterState() {
   }
 }
 
+const initialState = {
+  events: [],
+  filterOpen: null,
+  eventsToShow: constants.itemsToLoad,
+  filters: getInitialFilterState(),
+}
+
 const HandleEvents = events => {
   const allEventOccurences = []
 
@@ -70,55 +77,11 @@ const HandleEvents = events => {
     )
 }
 
-const filteredEvents = (events, filters) => {
-  const filteredEvents = events
-    .filter(filterByDate, {
-      startDate: filters.startDate,
-      endDate: filters.endDate,
-    })
-    .filter(filterByFree, filters.free)
-    .filter(filterByCategory, {
-      array: filters.eventCategories,
-      key: 'eventCategories',
-    })
-    .filter(filterByCategory, {
-      array: filters.venueDetails,
-      key: 'venueDetails',
-    })
-    .filter(filterByCategory, {
-      array: filters.accessibilityOptions,
-      key: 'accessibilityOptions',
-    })
-    .filter(filterByCategory, {
-      array: filters.audience,
-      key: 'audience',
-    })
-    .filter(filterByArea, filters.area)
-    .filter(filterByTime, filters.timeOfDay)
-
-  return filteredEvents
-}
-
-const initialState = {
-  events: [],
-  filterOpen: null,
-  eventsToShow: constants.itemsToLoad,
-  filters: getInitialFilterState(),
-}
-
 export const Provider = ({ events, children }) => {
   const [state, setState] = useState({
     ...initialState,
     events: HandleEvents(events),
   })
-
-  const showMore = filteredCount => {
-    if (state.eventsToShow < filteredCount) {
-      setState({
-        eventsToShow: state.eventsToShow + constants.itemsToLoad,
-      })
-    }
-  }
 
   const getDatepickerValues = ({ startDate, endDate }) => {
     setState(prevState => ({
@@ -130,7 +93,6 @@ export const Provider = ({ events, children }) => {
       },
     }))
   }
-
   const setDate = (dateToSet, dateToGet) => {
     setState(prevState => ({
       ...prevState,
@@ -140,7 +102,6 @@ export const Provider = ({ events, children }) => {
       },
     }))
   }
-
   const getCheckboxBool = (name, checked) => {
     setState(prevState => ({
       ...prevState,
@@ -150,7 +111,6 @@ export const Provider = ({ events, children }) => {
       },
     }))
   }
-
   const getCheckboxSetValues = (e, name) => {
     const updatedState = {
       ...state,
@@ -158,7 +118,6 @@ export const Provider = ({ events, children }) => {
         ...state.filters,
       },
     }
-
     if (
       e.target.checked &&
       updatedState.filters[name].indexOf(e.target.value) === -1
@@ -170,7 +129,6 @@ export const Provider = ({ events, children }) => {
         state.filters[name].splice(index, 1)
       }
     }
-
     setState(updatedState)
   }
 
@@ -192,6 +150,41 @@ export const Provider = ({ events, children }) => {
         ...prevState,
         filterOpen: null,
       }))
+    }
+  }
+  const filteredEvents = (events, filters) => {
+    const filteredEvents = events
+      .filter(filterByDate, {
+        startDate: filters.startDate,
+        endDate: filters.endDate,
+      })
+      .filter(filterByFree, filters.free)
+      .filter(filterByCategory, {
+        array: filters.eventCategories,
+        key: 'eventCategories',
+      })
+      .filter(filterByCategory, {
+        array: filters.venueDetails,
+        key: 'venueDetails',
+      })
+      .filter(filterByCategory, {
+        array: filters.accessibilityOptions,
+        key: 'accessibilityOptions',
+      })
+      .filter(filterByCategory, {
+        array: filters.audience,
+        key: 'audience',
+      })
+      .filter(filterByArea, filters.area)
+      .filter(filterByTime, filters.timeOfDay)
+
+    return filteredEvents
+  }
+  const showMore = filteredCount => {
+    if (state.eventsToShow < filteredCount) {
+      setState({
+        eventsToShow: state.eventsToShow + constants.itemsToLoad,
+      })
     }
   }
 
