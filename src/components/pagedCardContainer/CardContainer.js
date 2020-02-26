@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container, FlexColumn, Row } from '../../grid'
+import { Container, FlexColumn, Row } from '../grid'
 
 const CardContainer = ({ CardComponent, cardContent, className }) => (
   <Container className={className}>

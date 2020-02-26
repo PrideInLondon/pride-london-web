@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import constants from '../../constants'
 import { FilterContainer, calculateIsSelected } from '../filterContainer'
-import PagedCardContainer from '../pagedCardContainer'
+import { PagedCardContainer } from '../pagedCardContainer'
 
 export const calculateInitialSelected = (filterType, showAllCategoryTitle) => {
   switch (filterType) {

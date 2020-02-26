@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import CardContainer from './cardContainer'
-import ShowMoreButton from './showMoreButton'
+import CardContainer from './CardContainer'
+import ShowMoreButton from './ShowMoreButton'
 
 const PaddedCardContainer = styled(CardContainer)`
   ${({ isFullyLoaded }) => `padding-bottom: ${isFullyLoaded ? 60 : 0}px;`}

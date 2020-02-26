@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ShowMoreButton from '.'
+import ShowMoreButton from './ShowMoreButton'
 
 describe('ShowMoreButton', () => {
   const text = 'Foo'

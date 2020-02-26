@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import PagedCardContainer from '.'
+import PagedCardContainer from './PagedCardContainer'
 
 // eslint-disable-next-line react/prop-types
 const CardComponent = ({ text }) => <div>{text}</div>
