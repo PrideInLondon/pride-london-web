@@ -158,11 +158,11 @@ export const Footer = ({
                 #prideinlondon
               </HashTag>
               <HashTag
-                href="https://twitter.com/intent/tweet?button_hashtag=pridejubilee"
+                href="https://twitter.com/intent/tweet?button_hashtag=YouMeUsWe"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                #pridejubilee
+                #YouMeUsWe
               </HashTag>
             </HashTags>
           </SocialSection>
