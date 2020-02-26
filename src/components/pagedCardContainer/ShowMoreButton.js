@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Column, Row } from '../grid'
-import Button from '../button'
+import { Button } from '../button'
 
 const ShowMoreButton = ({ text, onClick }) => (
   <Row pb={[30, 30, 50]}>

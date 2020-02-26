@@ -14,7 +14,7 @@ import {
   PhoneIcon,
   TicketIcon,
 } from '../../../components/icons'
-import Button from '../../../components/button'
+import { Button } from '../../../components/button'
 import { formatPrice } from '../helpers'
 
 const Wrapper = styled.div`

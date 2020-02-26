@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Container, Row } from '../grid'
-import Button from '../../components/button'
+import { Button } from '../../components/button'
 import {
   CTAWrapper,
   CTAPanel,

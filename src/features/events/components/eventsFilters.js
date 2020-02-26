@@ -10,7 +10,7 @@ import iconClose from '../../../theme/assets/images/icon-close.svg'
 import EventDateFilter from '../filters/eventDateFilter'
 import EventFreeFilter from '../filters/eventFreeFilter'
 import EventDropdownFilter from '../filters/eventDropdownFilter'
-import Button from '../../../components/button'
+import { Button } from '../../../components/button'
 
 const FilterWrapper = styled(Flex)`
   background-color: ${theme.colors.white};

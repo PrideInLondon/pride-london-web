@@ -6,7 +6,7 @@ import googlePlayBadge from '../../../theme/assets/images/google-play.svg'
 import { Column, Row } from '../../../components/grid'
 import theme from '../../../theme/theme'
 import { media } from '../../../theme/media'
-import Button from '../../../components/button'
+import { Button } from '../../../components/button'
 
 const ParadeMapContainer = styled(Row)`
   font-family: Poppins;

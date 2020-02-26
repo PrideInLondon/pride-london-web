@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { media } from '../../../../theme/media'
 import theme from '../../../../theme/theme'
-import Button from '../../../../components/button'
+import { Button } from '../../../../components/button'
 import check from '../../../../theme/assets/images/icon-check.svg'
 import DropDown from '../dropDown'
 

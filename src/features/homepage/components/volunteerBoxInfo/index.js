@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Container, Row, Column } from '../../../../components/grid'
-import Button from '../../../../components/button'
+import { Button } from '../../../../components/button'
 import { ContentVolunteer, BackgroundVolunteer } from './styles'
 
 const VolunteerBoxInfo = () => (
