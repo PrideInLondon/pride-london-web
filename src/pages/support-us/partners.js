@@ -13,7 +13,7 @@ import SponsorHeadline from '../../components/icons/sponsorHeadline'
 import SponsorStar from '../../components/icons/sponsorStar'
 import renderSponsors from '../../components/sponsors/helpers'
 import BannerImg from '../../theme/assets/images/banners/sponsors/bg@2x.jpg'
-import PageIntro from '../../components/pageIntro'
+import { PageIntro } from '../../components/pageIntro'
 
 const ppLink =
   'https://assets.ctfassets.net/0ho16wyr4i9n/2qiM6XcxpwmT2YY9g2hka/361aba69bffe4592f898f15faf61beff/Pride_in_London_2020_Partnerships.pdf'

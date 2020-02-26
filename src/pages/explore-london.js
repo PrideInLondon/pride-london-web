@@ -6,7 +6,7 @@ import { GreyWrapper } from '../components/grid'
 import { Banner } from '../components/banner'
 import { colors } from '../theme/colors'
 import constants from '../constants'
-import PageIntro from '../components/pageIntro'
+import { PageIntro } from '../components/pageIntro'
 import { FilteredPagedCardContainer } from '../components/filteredPagedCardContainer'
 import CommunityPartnerCard from '../features/exploreLondon/components/communityPartnerCard'
 
