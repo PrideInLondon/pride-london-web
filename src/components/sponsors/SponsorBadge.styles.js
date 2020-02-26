@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import { media } from '../../../../theme/media'
-import constants from '../../../../constants'
+import { media } from '../../theme/media'
+import constants from '../../constants'
 
 export const isLargeBadge = level =>
   level === constants.sponsorLevels.headline ||

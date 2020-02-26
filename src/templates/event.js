@@ -17,8 +17,7 @@ import {
 } from '../features/events'
 import { Container, Row, Column } from '../components/grid'
 import { checkBreakpoint } from '../utils/style-utils'
-import SponsorsSubsection from '../components/sponsors/components/sponsorSubsection'
-import renderSponsors from '../components/sponsors/helpers'
+import { SponsorsSubSection, renderSponsors } from '../components/sponsors'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -318,9 +317,9 @@ const Event = ({
               <ReactMarkdown source={eventDescription} />
             </Section>
             {sponsorSection && (
-              <SponsorsSubsection title={sponsorSection.displayName}>
+              <SponsorsSubSection title={sponsorSection.displayName}>
                 {renderSponsors(sponsorSection.sponsors, true)}
-              </SponsorsSubsection>
+              </SponsorsSubSection>
             )}
             {accessibilityDetails && (
               <>

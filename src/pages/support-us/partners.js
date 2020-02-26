@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Banner } from '../../components/banner'
-import SponsorsSubsection from '../../components/sponsors/components/sponsorSubsection/index'
+import { SponsorsSubSection, renderSponsors } from '../../components/sponsors'
 import constants from '../../constants'
 import theme from '../../theme/theme'
 import { media } from '../../theme/media'
@@ -11,7 +11,6 @@ import { Container, Row, Column } from '../../components/grid'
 import Intercom from '../../components/intercom'
 import SponsorHeadline from '../../components/icons/sponsorHeadline'
 import SponsorStar from '../../components/icons/sponsorStar'
-import renderSponsors from '../../components/sponsors/helpers'
 import BannerImg from '../../theme/assets/images/banners/sponsors/bg@2x.jpg'
 import { PageIntro } from '../../components/pageIntro'
 
@@ -119,69 +118,69 @@ const Sponsors = ({ data }) => {
             </p>
             <MainSponsorsContainer>
               {sponsors[constants.sponsorLevels.headline] && (
-                <SponsorsSubsection
+                <SponsorsSubSection
                   title="Headline sponsors"
                   icon={<SponsorHeadline />}
                 >
                   {renderSponsors(sponsors[constants.sponsorLevels.headline])}
-                </SponsorsSubsection>
+                </SponsorsSubSection>
               )}
 
               {sponsors[constants.sponsorLevels.silver] && (
-                <SponsorsSubsection
+                <SponsorsSubSection
                   title="Gold sponsors"
                   icon={<SponsorStar color={theme.colors.gold} />}
                 >
                   {renderSponsors(sponsors[constants.sponsorLevels.gold])}
-                </SponsorsSubsection>
+                </SponsorsSubSection>
               )}
             </MainSponsorsContainer>
 
             <SecondarySponsorsContainer>
               {sponsors[constants.sponsorLevels.silver] && (
-                <SponsorsSubsection
+                <SponsorsSubSection
                   title="Silver sponsors"
                   icon={<SponsorStar color={theme.colors.silver} />}
                 >
                   {renderSponsors(sponsors[constants.sponsorLevels.silver])}
-                </SponsorsSubsection>
+                </SponsorsSubSection>
               )}
 
               {sponsors[constants.sponsorLevels.bronze] && (
-                <SponsorsSubsection
+                <SponsorsSubSection
                   title="Bronze sponsors"
                   icon={<SponsorStar color={theme.colors.bronze} />}
                 >
                   {renderSponsors(sponsors[constants.sponsorLevels.bronze])}
-                </SponsorsSubsection>
+                </SponsorsSubSection>
               )}
 
               {sponsors[constants.sponsorLevels.partners] && (
-                <SponsorsSubsection title="Partners">
+                <SponsorsSubSection title="Partners">
                   {renderSponsors(sponsors[constants.sponsorLevels.partners])}
-                </SponsorsSubsection>
+                </SponsorsSubSection>
               )}
 
               {sponsors[constants.sponsorLevels.supporters] && (
-                <SponsorsSubsection title="Supporters">
+                <SponsorsSubSection title="Supporters">
                   {renderSponsors(sponsors[constants.sponsorLevels.supporters])}
-                </SponsorsSubsection>
+                </SponsorsSubSection>
               )}
 
               {sponsors[constants.sponsorLevels.mediaPartners] && (
-                <SponsorsSubsection title="Media Partners">
+                <SponsorsSubSection title="Media Partners">
                   {renderSponsors(
                     sponsors[constants.sponsorLevels.mediaPartners]
                   )}
-                </SponsorsSubsection>
+                </SponsorsSubSection>
               )}
 
               {sponsors[constants.sponsorLevels.digitalPartners] && (
-                <SponsorsSubsection title="Digital Partners">
+                <SponsorsSubSection title="Digital Partners">
                   {renderSponsors(
                     sponsors[constants.sponsorLevels.digitalPartners]
                   )}
-                </SponsorsSubsection>
+                </SponsorsSubSection>
               )}
             </SecondarySponsorsContainer>
           </Column>

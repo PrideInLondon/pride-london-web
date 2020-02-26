@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { BadgesContainer, TitleWrapper, Title } from './styles'
+import {
+  BadgesContainer,
+  TitleWrapper,
+  Title,
+} from './SponsorsSubSection.styles'
 
-const SponsorsSubsection = ({ title, icon, children }) => (
+const SponsorsSubSection = ({ title, icon, children }) => (
   <Fragment>
     <TitleWrapper>
       {icon}
@@ -12,7 +16,7 @@ const SponsorsSubsection = ({ title, icon, children }) => (
   </Fragment>
 )
 
-SponsorsSubsection.propTypes = {
+SponsorsSubSection.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.node,
   children: PropTypes.oneOfType([
@@ -21,9 +25,9 @@ SponsorsSubsection.propTypes = {
   ]).isRequired,
 }
 
-SponsorsSubsection.defaultProps = {
+SponsorsSubSection.defaultProps = {
   title: null,
   icon: null,
 }
 
-export default SponsorsSubsection
+export default SponsorsSubSection

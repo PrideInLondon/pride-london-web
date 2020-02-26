@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import constants from '../../../../constants'
-import { Badge, BadgeImage, NamePlaceholder } from './styles'
+import constants from '../../constants'
+import { Badge, BadgeImage, NamePlaceholder } from './SponsorBadge.styles'
 
 const SponsorBadge = ({ logo, name, url, level, preventLevelSize }) => (
   <Badge

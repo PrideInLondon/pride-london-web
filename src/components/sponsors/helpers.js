@@ -1,7 +1,7 @@
 import React from 'react'
-import SponsorBadge from '../components/sponsorBadge'
+import SponsorBadge from './SponsorBadge'
 
-const renderSponsors = (sponsors = [], preventLevelSize = false) =>
+export const renderSponsors = (sponsors = [], preventLevelSize = false) =>
   sponsors.map(sponsor => (
     <SponsorBadge
       key={sponsor.name}
@@ -9,5 +9,3 @@ const renderSponsors = (sponsors = [], preventLevelSize = false) =>
       preventLevelSize={preventLevelSize}
     />
   ))
-
-export default renderSponsors
