@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import ReactMarkdown from 'react-markdown'
-import Category from '../../../../components/newsCategory'
+import { NewsCategory } from '../../../../components/newsCategory'
 import constants from '../../../../constants'
 import theme from '../../../../theme/theme'
 import { media } from '../../../../theme/media'
@@ -61,7 +61,7 @@ const CardBody = styled.div`
     min-height: 480px;
   `};
 `
-const CardCategory = styled(Category)`
+const CardCategory = styled(NewsCategory)`
   margin-bottom: 10px;
   margin-right: 5px;
 `

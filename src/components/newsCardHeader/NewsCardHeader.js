@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewsMetrics from '../newsMetrics'
-import NewsCategory from '../newsCategory'
+import { NewsCategory } from '../newsCategory'
 import { NewsCardHeaderContainer } from './NewsCardHeader.styles'
 
 export const NewsCardHeader = ({

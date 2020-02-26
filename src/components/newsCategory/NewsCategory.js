@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Star from '../../components/icons/star'
-import { NewsCategoryContainer, StarWrapper } from './styles'
+import { NewsCategoryContainer, StarWrapper } from './NewsCategory.styles'
 
 export const NewsCategory = ({ category, className }) => {
   return (
