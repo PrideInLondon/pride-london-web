@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyledFigure } from './styles'
+import { StyledFigure } from './Figure.styles'
 
 const Figure = ({ file, title, description }) => (
   <StyledFigure>

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { VideoContainer } from './styles'
+import { VideoContainer } from './Video.styles'
 
 const Video = ({ videoId }) => (
   <VideoContainer>

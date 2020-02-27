@@ -7,7 +7,7 @@ import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { Column, Row, Container } from '../components/grid'
 import { Banner } from '../components/banner'
-import GenericContent from '../features/genericContentPage'
+import { GenericContent } from '../genericContentPage'
 
 const PageWrapper = styled.div`
   position: relative;

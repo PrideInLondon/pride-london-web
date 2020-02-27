@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { BLOCKS } from '@contentful/rich-text-types'
 import { ReactTypeformEmbed } from 'react-typeform-embed'
-import { Button } from '../../components/button'
-import { SponsorsSubSection, renderSponsors } from '../../components/sponsors'
-import Figure from './components/figure'
-import Video from './components/video'
+import { Button } from '../components/button'
+import { SponsorsSubSection, renderSponsors } from '../components/sponsors'
+import Figure from './Figure'
+import Video from './Video'
 
 export const renderFigure = node => <Figure {...node.data.target.fields} />
 
