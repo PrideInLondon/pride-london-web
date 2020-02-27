@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import SponsorStar from '../../components/icons/sponsorStar'
+import SponsorStar from '../components/icons/sponsorStar'
 import SponsorsSubSection from './SponsorsSubSection'
 import { renderSponsors } from './helpers'
 import { mockSponsors } from './__mocks__'

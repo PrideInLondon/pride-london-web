@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { BLOCKS } from '@contentful/rich-text-types'
 import { ReactTypeformEmbed } from 'react-typeform-embed'
 import { Button } from '../components/button'
-import { SponsorsSubSection, renderSponsors } from '../components/sponsors'
+import { SponsorsSubSection, renderSponsors } from '../sponsors'
 import Figure from './Figure'
 import Video from './Video'
 
