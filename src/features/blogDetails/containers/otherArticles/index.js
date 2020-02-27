@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Row, FlexColumn } from '../../../../components/grid'
 import OtherArticlesHeader from '../../components/otherArticlesHeader'
-import NewsCard from '../../../blog/components/newsCard'
+import { NewsCard } from '../../../../components/newsCard'
 import { Container } from './styles'
 
 export const ArticleCard = styled(NewsCard)`

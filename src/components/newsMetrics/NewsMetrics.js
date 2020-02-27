@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NewsDate from '../../features/blog/components/newsDate'
+import { NewsDate } from '../newsDate'
 import { NewsMetricsContainer, ReadTime } from './NewsMetrics.styles'
 
 const CenterDot = () => <span> • </span>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import { views } from './__mocks__'
-import ViewsContainer from '.'
+import ViewsContainer from './ViewsContainer'
 
 describe('ViewsContainer', () => {
   it('should render 4 views', () => {

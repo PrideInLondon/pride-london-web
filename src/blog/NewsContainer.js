@@ -1,15 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Title from '../../components/title'
-import NewsCard from '../../../../features/blog/components/newsCard/index'
-import FeaturedArticleContainer from '../featuredArticleContainer'
-import { FilteredPagedCardContainer } from '../../../../components/filteredPagedCardContainer'
-import {
-  Container,
-  Column,
-  Row,
-  GreyWrapper,
-} from '../../../../components/grid'
+import { FilteredPagedCardContainer } from '../components/filteredPagedCardContainer'
+import { Container, Column, Row, GreyWrapper } from '../components/grid'
+import { NewsCard } from '../components/newsCard'
+import Title from './Title'
+import FeaturedArticleContainer from './FeaturedArticleContainer'
 
 export const pageSize = 9
 

@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import { NewsCard as NewsCardHomepage } from '../../../homepage/containers/latestNewsContainer/styles'
 import { media } from '../../../../theme/media'
 import theme from '../../../../theme/theme'
-import { CardTitle } from '../../../blog/components/newsCard/styles'
+import { CardTitle } from '../../../../components/newsCard'
 
 export const Background = styled(Link)`
   display: flex;

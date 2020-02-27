@@ -1,4 +1,4 @@
-import { md } from '../../../../theme/breakpoints'
+import { md } from '../theme/breakpoints'
 
 export const settings = {
   speed: 500,

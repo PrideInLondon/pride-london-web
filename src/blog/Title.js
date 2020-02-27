@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyledTitle } from './styles'
+import { StyledTitle } from './Title.styles'
 
 const Title = ({ children, isLight, isCentered, className }) => (
   <StyledTitle className={className} isLight={isLight} isCentered={isCentered}>

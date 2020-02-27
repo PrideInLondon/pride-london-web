@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { handleSlug } from '../../../../utils/location-utils'
-import { ArticleTitle, ViewsSlide, ViewsThumbnail } from './styles'
+import { handleSlug } from '../utils/location-utils'
+import { ArticleTitle, ViewsSlide, ViewsThumbnail } from './ViewsCard.styles'
 
 const ViewsCard = ({ featuredImage, title, slug }) => {
   return (

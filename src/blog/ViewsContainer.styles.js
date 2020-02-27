@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { media } from '../../../../theme/media'
-import Title from '../../components/title'
+import { media } from '../theme/media'
+import Title from './Title'
 
 export const ViewsTitle = styled(Title)`
   margin: 0 10px 0.5em 10px;

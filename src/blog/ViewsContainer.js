@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
-import ViewsCard from '../../components/viewsCard'
-import { Container, Row, Column } from '../../../../components/grid'
-import { CardContainer, ViewsTitle } from './styles'
+import { Container, Row, Column } from '../components/grid'
+import ViewsCard from './ViewsCard'
+import { CardContainer, ViewsTitle } from './ViewsContainer.styles'
 import { settings } from './slickSettings'
 
 class ViewsContainer extends React.Component {

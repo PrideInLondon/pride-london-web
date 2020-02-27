@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { default as NewsCardOryg } from '../../../blog/components/newsCard'
+import { NewsCard as NewsCardOryg } from '../../../../components/newsCard'
 import theme from '../../../../theme/theme'
 import { Container } from '../../../../components/grid'
 import { media } from '../../../../theme/media'

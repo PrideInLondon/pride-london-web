@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NewsCard from '../../components/newsCard'
-import { FlexColumn, Row, Container } from '../../../../components/grid'
+import { FlexColumn, Row, Container } from '../components/grid'
+import { NewsCard } from '../components/newsCard'
 
 const NewsCards = ({ articles }) => (
   <Container>

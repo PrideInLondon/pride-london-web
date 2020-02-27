@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
-import { media } from '../../../../theme/media'
-import theme from '../../../../theme/theme'
+import { media } from '../theme/media'
+import theme from '../theme/theme'
 
 export const ViewsSlide = styled(Link)`
   display: block;

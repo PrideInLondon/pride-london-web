@@ -1,8 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { Banner } from '../../../../components/banner'
-import FeaturedArticle from '../../components/featuredArticle'
-import { Container, Row, Column } from '../../../../components/grid'
+import { Banner } from '../components/banner'
+import { Container, Row, Column } from '../components/grid'
+import FeaturedArticle from './FeaturedArticle'
 
 export const query = graphql`
   query articleQuery {

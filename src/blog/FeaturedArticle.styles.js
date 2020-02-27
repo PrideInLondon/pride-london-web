@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import theme from '../../../../theme/theme'
-import { media } from '../../../../theme/media'
+import theme from '../theme/theme'
+import { media } from '../theme/media'
 
 export const FeaturedArticleCard = styled(Link)`
   display: block;

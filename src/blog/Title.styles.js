@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import theme from '../../../../theme/theme'
-import { media } from '../../../../theme/media'
+import theme from '../theme/theme'
+import { media } from '../theme/media'
 
 export const StyledTitle = styled.h2`
   color: ${props => (props.isLight ? theme.colors.white : theme.colors.indigo)};
