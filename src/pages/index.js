@@ -6,11 +6,11 @@ import theme from '../theme/theme'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
 import { Banner } from '../components/banner'
-import VolunteerBoxInfo from '../features/homepage/components/volunteerBoxInfo'
+import VolunteerBoxInfo from '../homepage/VolunteerBoxInfo'
 import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
-import LatestNewsContainer from '../features/homepage/containers/latestNewsContainer'
-import AnnouncementsContainer from '../features/homepage/containers/announcementsContainer'
-import DonateContainer from '../features/homepage/containers/donateContainer'
+import LatestNewsContainer from '../homepage/LatestNewsContainer'
+import Announcements from '../homepage/Announcements'
+import Donate from '../homepage/Donate'
 
 export const HomePageQuery = graphql`
   query HomePageQuery {
@@ -61,9 +61,9 @@ const Home = ({
       fixed={childImageSharp}
     />
     <Divider />
-    <DonateContainer />
+    <Donate />
     <VolunteerBoxInfo />
-    <AnnouncementsContainer />
+    <Announcements />
     <LatestNewsContainer />
   </Fragment>
 )
