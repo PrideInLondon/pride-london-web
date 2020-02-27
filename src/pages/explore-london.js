@@ -8,7 +8,7 @@ import { colors } from '../theme/colors'
 import constants from '../constants'
 import { PageIntro } from '../components/pageIntro'
 import { FilteredPagedCardContainer } from '../components/filteredPagedCardContainer'
-import CommunityPartnerCard from '../features/exploreLondon/components/communityPartnerCard'
+import CommunityPartnerCard from '../exploreLondon/CommunityPartnerCard'
 
 const ExploreLondon = ({
   data: {
