@@ -1,7 +1,7 @@
 import { StaticQuery, graphql } from 'gatsby'
 import React from 'react'
 import moment from 'moment'
-import { getDuration, filterPastEvents } from '../features/events/helpers'
+import { getDuration, filterPastEvents } from '../events/helpers'
 import constants from '../constants'
 import FeaturedEvents from './FeaturedEvents'
 

@@ -14,7 +14,7 @@ import {
   EventInfoCard,
   EventDirectionsSection,
   EventShareSection,
-} from '../features/events'
+} from '../events'
 import { Container, Row, Column } from '../components/grid'
 import { checkBreakpoint } from '../utils/style-utils'
 import { SponsorsSubSection, renderSponsors } from '../components/sponsors'

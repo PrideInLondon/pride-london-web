@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import PropTypes from 'prop-types'
-import { EventListingCard } from '../features/events'
+import { EventListingCard } from '../events'
 import { FlexColumn } from '../components/grid'
 import { settings } from './featuredEventsSlickSettings'
 import { FeaturedEventContent } from './FeaturedEvents.styles'

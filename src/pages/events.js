@@ -6,12 +6,11 @@ import { color } from 'styled-system'
 import { Helmet } from '../components/helmet'
 import { media } from '../theme/media'
 import { colors } from '../theme/colors'
-import { GroupedEventsCards } from '../features/events'
+import { GroupedEventsCards, EventsPageBanner } from '../events'
 import { Button } from '../components/button'
 import { Container, Row, Column } from '../components/grid'
 import { Consumer } from '../appContext'
-import { filterByLimit } from '../features/events/helpers'
-import { EventsPageBanner } from '../features/events/components/eventsPageBanner'
+import { filterByLimit } from '../events/helpers'
 
 export const EventsPageQuery = graphql`
   query eventsPageQuery {

@@ -10,7 +10,7 @@ import {
   filterPastEvents,
   getDuration,
   sanitizeDates,
-} from './features/events/helpers/index'
+} from './events/helpers'
 import constants from './constants'
 
 const AppContext = React.createContext()

@@ -5,9 +5,9 @@ import {
   getDuration,
   filterPastEvents,
   generateEventSlug,
-} from './src/features/events/helpers'
-
+} from './src/events/helpers'
 import constants from './src/constants'
+
 exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
