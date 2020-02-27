@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import PageHeader from '../blog/article/PageHeader'
-import PageContent from '../blog/article/PageContent'
-import PageFooter from '../blog/article/PageFooter'
-import constants from '../constants'
+import constants from '../../constants'
+import PageHeader from './PageHeader'
+import PageContent from './PageContent'
+import PageFooter from './PageFooter'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -14,7 +14,7 @@ const PageWrapper = styled.div`
   margin: 0;
 `
 
-const Article = ({
+const ArticlePage = ({
   data: {
     contentfulArticle: {
       title,
@@ -182,7 +182,14 @@ const Article = ({
   )
 }
 
-export const articleDetailsQuery = graphql`
+ArticlePage.propTypes = {
+  data: PropTypes.object.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
+}
+
+export const query = graphql`
   query articleDetailsQuery($id: String!) {
     site {
       siteMetadata {
@@ -261,11 +268,4 @@ export const articleDetailsQuery = graphql`
   }
 `
 
-Article.propTypes = {
-  data: PropTypes.object.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }).isRequired,
-}
-
-export default Article
+export default ArticlePage

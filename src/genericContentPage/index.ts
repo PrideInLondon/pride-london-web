@@ -1,1 +1,1 @@
-export { default as GenericContent } from './GenericContent'
+export { default as GenericContentPage } from './GenericContentPage'

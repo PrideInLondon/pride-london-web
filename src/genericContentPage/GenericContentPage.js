@@ -7,7 +7,7 @@ import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { Column, Row, Container } from '../components/grid'
 import { Banner } from '../components/banner'
-import { GenericContent } from '../genericContentPage'
+import GenericContent from './GenericContent'
 
 const PageWrapper = styled.div`
   position: relative;
@@ -82,8 +82,6 @@ GenericContentPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default GenericContentPage
-
 export const query = graphql`
   query genericContentPageQuery($id: String!) {
     contentfulGenericContentPage(id: { eq: $id }) {
@@ -127,3 +125,5 @@ export const query = graphql`
     }
   }
 `
+
+export default GenericContentPage
