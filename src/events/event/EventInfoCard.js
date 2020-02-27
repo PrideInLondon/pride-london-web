@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import moment from 'moment'
 import PropTypes from 'prop-types'
-import { media } from '../theme/media'
-import theme from '../theme/theme'
+import { media } from '../../theme/media'
+import theme from '../../theme/theme'
 import {
   AccessibilityIcon,
   DateIcon,
@@ -13,9 +13,9 @@ import {
   MapPinIcon,
   PhoneIcon,
   TicketIcon,
-} from '../components/icons'
-import { Button } from '../components/button'
-import { formatPrice } from './helpers'
+} from '../../components/icons'
+import { Button } from '../../components/button'
+import { formatPrice } from '../helpers'
 
 const Wrapper = styled.div`
   background-color: ${theme.colors.indigo};

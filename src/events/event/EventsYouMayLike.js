@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import moment from 'moment'
-import ChevronIcon from '../theme/assets/images/chevron-icon'
-import { Consumer } from '../appContext'
-import { Container, Row, Column } from '../components/grid'
-import { media } from '../theme/media'
-import theme from '../theme/theme'
-import EventListingCard from './EventListingCard'
+import ChevronIcon from '../../theme/assets/images/chevron-icon'
+import { Consumer } from '../../appContext'
+import { Container, Row, Column } from '../../components/grid'
+import { media } from '../../theme/media'
+import theme from '../../theme/theme'
+import EventListingCard from '../EventListingCard'
 
 const ViewAll = styled.a`
   color: ${theme.colors.indigo};

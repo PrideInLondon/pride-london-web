@@ -1,15 +1,15 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { ThemeProvider, ThemeConsumer } from 'styled-components'
-import importedTheme from '../theme/theme'
+import importedTheme from '../../theme/theme'
+import EventListingCard from '../EventListingCard'
 import { EventsYouMayLike } from './EventsYouMayLike'
-import EventListingCard from './EventListingCard'
 
 beforeEach(() => {
   jest.resetModules()
 })
 
-jest.mock('../appContext', () => {
+jest.mock('../../appContext', () => {
   const nodeOne = {
     node: {
       id: '123',

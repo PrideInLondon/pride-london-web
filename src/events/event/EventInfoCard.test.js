@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
+import { mockEvents } from '../__mocks__'
 import EventInfoCard from './EventInfoCard'
-import { mockEvents } from './__mocks__'
 
 describe(EventInfoCard.name, () => {
   it('renders correctly', () => {

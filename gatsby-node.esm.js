@@ -75,7 +75,7 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
 
-    const eventTemplate = path.resolve('./src/templates/event.js')
+    const eventTemplate = path.resolve('./src/events/event/EventPage.js')
     // Don't create pages for past events
     result.data.events.edges.forEach(edge => {
       if (!edge.node.recurrenceDates) {

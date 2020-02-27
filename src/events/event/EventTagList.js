@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import hash from 'string-hash'
-import Theme from '../theme/theme'
+import Theme from '../../theme/theme'
 
 const hotPink = css`
   background-color: hsl(339, 87%, 55%);
