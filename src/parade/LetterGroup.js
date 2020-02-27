@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Heading, GroupsContainer, Wrapper } from './styles'
+import { Heading, GroupsContainer, Wrapper } from './LetterGroup.styles'
 
 const LetterGroup = ({ children, letter }) => {
   return (

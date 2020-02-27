@@ -6,13 +6,13 @@ import React, {
   useRef,
 } from 'react'
 import PropTypes from 'prop-types'
-import LetterLink from '../../components/letterLink'
-import LetterGroup from '../../components/letterGroup'
-import ParadeGroup from '../../components/paradeGroup'
-import ParadeGroupsFilterContainer from '../paradeGroupsFiltersContainer'
-import { paradeGroupFilterPropType } from '../../paradeGroupFilterPropType'
-import constants from '../../../../constants'
-import { LetterContainer, ScrolledLetters } from './styles'
+import constants from '../constants'
+import LetterLink from './LetterLink'
+import LetterGroup from './LetterGroup'
+import ParadeGroup from './ParadeGroup'
+import ParadeGroupsFilters from './ParadeGroupsFilters'
+import { paradeGroupFilterPropType } from './ParadeGroupsFilters.types'
+import { LetterContainer, ScrolledLetters } from './ParadeGroups.styles'
 
 const lettersArray = '#abcdefghijklmnopqrstuvwxyz'.split('') // => ['a', 'b', ...]
 const lettersContainerHeight = 50
@@ -98,7 +98,7 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
 
   return (
     <>
-      <ParadeGroupsFilterContainer
+      <ParadeGroupsFilters
         categories={categories}
         selectedFilter={selectedFilter}
         handleFilterClick={handleFilterClick}

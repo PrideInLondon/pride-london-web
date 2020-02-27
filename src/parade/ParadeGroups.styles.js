@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import theme from '../../../../theme/theme'
-
-import { media } from '../../../../theme/media'
+import theme from '../theme/theme'
+import { media } from '../theme/media'
 
 export const LetterContainer = styled.div`
   align-items: center;

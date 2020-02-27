@@ -1,11 +1,11 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { FilterButton } from '../../../../components/filterButton'
-import LetterGroup from '../../components/letterGroup'
-import theme from '../../../../theme/theme'
-import ParadeGroupsContainer from '.'
+import { FilterButton } from '../components/filterButton'
+import theme from '../theme/theme'
+import LetterGroup from './LetterGroup'
+import ParadeGroups from './ParadeGroups'
 
-describe(ParadeGroupsContainer.name, () => {
+describe(ParadeGroups.name, () => {
   const paradeGroups = [
     { name: '23 group', id: '0', category: ['Arts'] },
     { name: 'A group', id: '1', category: ['Arts'] },
@@ -32,10 +32,7 @@ describe(ParadeGroupsContainer.name, () => {
 
   it('should filter parade groups by category Business', () => {
     const instance = mount(
-      <ParadeGroupsContainer
-        paradeGroups={paradeGroups}
-        categories={categories}
-      />
+      <ParadeGroups paradeGroups={paradeGroups} categories={categories} />
     )
     const businessCategoryFilterButton = instance.find(FilterButton).last()
 
@@ -48,10 +45,7 @@ describe(ParadeGroupsContainer.name, () => {
 
   it('should set active letter styles on scroll to letter section', () => {
     const instance = mount(
-      <ParadeGroupsContainer
-        paradeGroups={paradeGroups}
-        categories={categories}
-      />
+      <ParadeGroups paradeGroups={paradeGroups} categories={categories} />
     )
     const bLetter = instance.find('a[href="#parade-group-b"]')
     const bSection = instance.find('div[id="parade-group-b"]')

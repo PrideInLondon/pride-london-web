@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import theme from '../../../../theme/theme'
-import { media } from '../../../../theme/media'
+import theme from '../theme/theme'
+import { media } from '../theme/media'
 
 export const RowContainer = styled.div`
   border-bottom: 1px solid ${theme.colors.lightGrey};

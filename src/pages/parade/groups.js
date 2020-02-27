@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { Banner } from '../../components/banner'
 import background from '../../theme/assets/images/banners/parade-groups/bg@2x.jpg'
-import ParadeGroupsContainer from '../../features/paradeGroups/containers/paradeGroupsContainer'
+import ParadeGroups from '../../parade/ParadeGroups'
 import { media } from '../../theme/media'
 import constants from '../../constants'
 
@@ -27,7 +27,7 @@ const mapEntries = paradeGroups => {
   return paradeGroups.edges.map(({ node }) => ({ ...node }))
 }
 
-const ParadeGroups = ({ data: { paradeGroups } }) => {
+const Groups = ({ data: { paradeGroups } }) => {
   const mappedParadeGroups = mapEntries(paradeGroups)
   return (
     <>
@@ -53,7 +53,7 @@ const ParadeGroups = ({ data: { paradeGroups } }) => {
           will open in the new year. Further information will be announced in
           due course.
         </TextContainer>
-        <ParadeGroupsContainer
+        <ParadeGroups
           paradeGroups={mappedParadeGroups}
           categories={constants.paradeGroupCategories}
         />
@@ -62,13 +62,13 @@ const ParadeGroups = ({ data: { paradeGroups } }) => {
   )
 }
 
-ParadeGroups.propTypes = {
+Groups.propTypes = {
   data: PropTypes.shape({
     paradeGroups: PropTypes.any,
   }).isRequired,
 }
 
-export default ParadeGroups
+export default Groups
 
 export const paradeGroupsQuery = graphql`
   query paradeGroups {

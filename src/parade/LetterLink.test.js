@@ -1,8 +1,8 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import theme from '../../../../theme/theme'
-import StyledLetterLink from './styles'
-import LetterLink from '.'
+import theme from '../theme/theme'
+import StyledLetterLink from './LetterLink.styles'
+import LetterLink from './LetterLink'
 
 describe(StyledLetterLink.name, () => {
   it('should render active StyledLetterLink with the correct styles', () => {
