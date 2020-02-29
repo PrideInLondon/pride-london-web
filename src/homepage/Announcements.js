@@ -4,10 +4,12 @@ import Slider from 'react-slick'
 import styled from 'styled-components'
 import { FlexColumn, Container, Row, Column } from '../components/grid'
 import AnnouncementCard from './AnnouncementCard'
-import { FeaturedEventContent } from './FeaturedEvents.styles'
 import AnnouncementHeader from './AnnouncementHeader'
 import { settings } from './announcementsSlickSettings'
-import { AnnouncementsSliderWrapper } from './Announcements.styles'
+import {
+  AnnouncementsSliderWrapper,
+  AnnouncementsContent,
+} from './Announcements.styles'
 
 export const query = graphql`
   query announcementsQuery {
@@ -56,7 +58,7 @@ const AnnouncementsContainer = () => (
     render={({
       allContentfulAnnouncement: { edges: announcements = [] } = {},
     }) => (
-      <FeaturedEventContent>
+      <AnnouncementsContent>
         <BgAnnouncement>
           <Container>
             <Row>
@@ -89,7 +91,7 @@ const AnnouncementsContainer = () => (
             </Row>
           </Container>
         </BgAnnouncement>
-      </FeaturedEventContent>
+      </AnnouncementsContent>
     )}
   />
 )
