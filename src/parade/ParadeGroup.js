@@ -64,7 +64,6 @@ ParadeGroup.propTypes = {
 }
 
 ParadeGroup.defaultProps = {
-  name: null,
   websiteUrl: null,
   twitterUrl: null,
   facebookUrl: null,
