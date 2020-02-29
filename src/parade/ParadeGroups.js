@@ -26,7 +26,7 @@ const isInViewport = (e, { top: t, height: h } = e.getBoundingClientRect()) =>
   // eslint-disable-next-line no-restricted-globals
   t <= innerHeight && t - lettersContainerHeight + h >= 0
 
-const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
+const ParadeGroups = ({ paradeGroups, categories }) => {
   const [selectedFilter, setSelectedFilter] = useState(
     constants.paradeGroupCategories[0]
   )
@@ -159,9 +159,9 @@ const ParadeGroupsContainer = ({ paradeGroups, categories }) => {
   )
 }
 
-ParadeGroupsContainer.propTypes = {
+ParadeGroups.propTypes = {
   paradeGroups: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   categories: PropTypes.arrayOf(paradeGroupFilterPropType).isRequired,
 }
 
-export default ParadeGroupsContainer
+export default ParadeGroups

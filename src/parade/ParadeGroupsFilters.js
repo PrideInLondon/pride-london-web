@@ -7,7 +7,7 @@ import {
   ParadeGroupsFilterLabel,
 } from './ParadeGroupsFilters.styles'
 
-const ParadeGroupsFilterContainer = ({
+const ParadeGroupsFilters = ({
   handleFilterClick,
   selectedFilter,
   categories,
@@ -33,7 +33,7 @@ const ParadeGroupsFilterContainer = ({
   )
 }
 
-ParadeGroupsFilterContainer.propTypes = {
+ParadeGroupsFilters.propTypes = {
   handleFilterClick: PropTypes.func.isRequired,
   selectedFilter: PropTypes.shape({
     hexColour: PropTypes.string,
@@ -43,4 +43,4 @@ ParadeGroupsFilterContainer.propTypes = {
   categories: PropTypes.arrayOf(paradeGroupFilterPropType).isRequired,
 }
 
-export default ParadeGroupsFilterContainer
+export default ParadeGroupsFilters
