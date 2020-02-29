@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ChevronDown = () => (
+const ChevronDownIcon = () => (
   <svg
     height="9"
     viewBox="0 0 14 9"
@@ -15,4 +15,4 @@ const ChevronDown = () => (
   </svg>
 )
 
-export default ChevronDown
+export default ChevronDownIcon
