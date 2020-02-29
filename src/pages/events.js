@@ -3,7 +3,7 @@ import { EventsPage } from '../events'
 
 export const query = graphql`
   query eventsPageQuery {
-    file(relativePath: { regex: "/banners/events/bg@3x/" }) {
+    file(relativePath: { regex: "/events/heroImage/" }) {
       size
       name
       childImageSharp {

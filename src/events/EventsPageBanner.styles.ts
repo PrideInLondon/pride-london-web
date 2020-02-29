@@ -3,8 +3,8 @@ import { BackgroundColorProps, color } from 'styled-system'
 import Img from 'gatsby-image'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
-import left from '../theme/assets/images/banners/events/left.svg'
-import right from '../theme/assets/images/banners/events/right.svg'
+import left from './bannerLeft.svg'
+import right from './bannerRight.svg'
 import { TitleProps } from './EventsPageBanner.types'
 
 export const StyledBanner = styled.div<BackgroundColorProps>`
