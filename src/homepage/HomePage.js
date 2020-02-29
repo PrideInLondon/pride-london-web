@@ -5,7 +5,7 @@ import theme from '../theme/theme'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
 import { Banner } from '../components/banner'
-import BannerImg from '../theme/assets/images/banners/home/bg@3x.jpg'
+import bannerBackground from './bannerBackground.jpg'
 import VolunteerBoxInfo from './VolunteerBoxInfo'
 import LatestNewsContainer from './LatestNewsContainer'
 import Announcements from './Announcements'
@@ -32,7 +32,7 @@ const HomePage = ({
       subtitleText="The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community."
       titlePosition="bottom"
       date="Saturday 27 June 2020"
-      imageSrc={BannerImg}
+      imageSrc={bannerBackground}
       color={theme.colors.eucalyptusGreen}
       large
       allowContentUnderflow

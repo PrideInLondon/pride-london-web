@@ -3,7 +3,7 @@ import { HomePage } from '../homepage'
 
 export const query = graphql`
   query HomePageQuery {
-    file(relativePath: { regex: "/video-poster/" }) {
+    file(relativePath: { regex: "/homepage/videoPoster/" }) {
       size
       name
       childImageSharp {
