@@ -2,7 +2,7 @@ import React from 'react'
 import Facebook from '../../components/icons/facebook'
 import Twitter from '../../components/icons/twitter'
 import LinkedIn from '../../components/icons/linkedin'
-import { SocialList, SocialItem, SocialLink } from './SocialList.styles'
+import { SocialList, SocialItem, SocialLink } from './SocialMediaList.styles'
 
 const SocialMediaList = () => {
   let location

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { NewsCardHeader } from '../../components/newsCardHeader'
-import SocialList from './SocialList'
+import SocialMediaList from './SocialMediaList'
 import {
   Title,
   SubHeader,
@@ -21,7 +21,7 @@ const BlogHeader = ({ title, datePublished, category, readTime }) => (
       />
       <FlexDiv>
         <ShareText>Share this post</ShareText>
-        <SocialList />
+        <SocialMediaList />
       </FlexDiv>
     </SubHeader>
   </BlogHeaderContainer>

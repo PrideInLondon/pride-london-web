@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import theme from '../../theme/theme'
 import { Input } from '../../components/input'
 import Author from './Author'
-import SocialList from './SocialList'
+import SocialMediaList from './SocialMediaList'
 import { FlexDiv, ShareText } from './BlogHeader.styles'
 import { Summary, BlogFooterContainer } from './BlogFooter.styles'
 
@@ -24,7 +24,7 @@ const BlogFooter = ({ author }) => (
       {author && <Author author={author} />}
       <FlexDiv>
         <ShareText>Share this post</ShareText>
-        <SocialList />
+        <SocialMediaList />
       </FlexDiv>
     </Summary>
   </BlogFooterContainer>
