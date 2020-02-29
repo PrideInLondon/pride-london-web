@@ -46,7 +46,7 @@ class Provider extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.events === prevState.events) return
+    if (nextProps.events === prevState.events) return null
 
     const allEventOccurences = []
 
