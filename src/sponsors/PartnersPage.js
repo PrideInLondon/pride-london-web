@@ -9,8 +9,8 @@ import { Container, Row, Column } from '../components/grid'
 import Intercom from '../components/intercom'
 import SponsorHeadline from '../components/icons/sponsorHeadline'
 import SponsorStar from '../components/icons/sponsorStar'
-import BannerImg from '../theme/assets/images/banners/sponsors/bg@2x.jpg'
 import { PageIntro } from '../components/pageIntro'
+import bannerBackground from './bannerBackground.jpg'
 import SponsorsSubSection from './SponsorsSubSection'
 import { renderSponsors } from './helpers'
 
@@ -63,7 +63,7 @@ const PartnersPage = ({ data }) => {
         titleText="Partner with us"
         subtitleText="Find out how your company can help us to keep Pride free for everyone"
         color={theme.colors.yellow}
-        imageSrc={BannerImg}
+        imageSrc={bannerBackground}
         imageFullWidth
       />
       <PageIntro
