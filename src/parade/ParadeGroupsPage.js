@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Banner } from '../components/banner'
-import background from '../theme/assets/images/banners/parade-groups/bg@2x.jpg'
 import { media } from '../theme/media'
 import constants from '../constants'
+import bannerBackground from './bannerBackground.jpg'
 import ParadeGroups from './ParadeGroups'
 
 const Container = styled.div`
@@ -32,7 +32,7 @@ const ParadeGroupsPage = ({ data: { paradeGroups } }) => (
       titleText="Parade groups"
       subtitleText="Find out more about each group marching in this year’s parade below!"
       altText="Parade groups"
-      imageSrc={background}
+      imageSrc={bannerBackground}
       imageFullWidth
     />
     <Container>
