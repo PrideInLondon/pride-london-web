@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import theme from '../theme/theme'
 import { media } from '../theme/media'
 
-const StyledLetterLink = styled.a`
+export const StyledLetterLink = styled.a`
   color: ${props => (props.isDisabled ? 'grey' : 'initial')};
   cursor: ${props => (props.isDisabled ? 'default' : 'pointer')};
   font-size: 16px;
@@ -37,5 +37,3 @@ const StyledLetterLink = styled.a`
     margin-right: 8px;
   `}
 `
-
-export default StyledLetterLink

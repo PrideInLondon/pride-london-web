@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import StyledLetterLink from './LetterLink.styles'
+import { StyledLetterLink } from './LetterLink.styles'
 
 const LetterLink = ({ letter, isDisabled, isActive }) => {
   const letterAttributes = isDisabled
