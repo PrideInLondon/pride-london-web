@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IntercomAPI } from 'react-intercom'
+import { ReactTypeformEmbed } from 'react-typeform-embed'
 import { Row } from '../../components/grid'
 import Facebook from '../../components/icons/facebook'
 import Twitter from '../../components/icons/twitter'
@@ -44,7 +45,6 @@ export const Footer = ({
   snapchat,
 }) => {
   const { edges } = data.allContentfulSponsor
-  const { ReactTypeformEmbed } = require('react-typeform-embed')
   const iconSize = 20
   const sponsorOrder = ['Headline', 'Gold', 'Silver', 'Bronze']
   const reportBugFormUrl = 'https://prideinlondon.typeform.com/to/DYvC2n'
