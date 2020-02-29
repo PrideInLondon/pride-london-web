@@ -85,8 +85,8 @@ export function filterByArea(event) {
     let area
     const postcode = event.node.postcode.toLowerCase()
     switch (true) {
-      case postcode.lastIndexOf('wc', 0) === 0 ||
-        postcode.lastIndexOf('ec', 0) === 0:
+      case postcode.lastIndexOf('wc', 0) === 0:
+      case postcode.lastIndexOf('ec', 0) === 0:
         area = 'Central'
         break
       case postcode.lastIndexOf('w', 0) === 0:
