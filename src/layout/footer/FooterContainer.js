@@ -25,13 +25,11 @@ const query = graphql`
   }
 `
 
-const FooterQuery = props => (
+const FooterContainer = props => (
   <StaticQuery
     query={query}
-    render={data => {
-      return <Footer {...props} data={data} />
-    }}
+    render={data => <Footer {...props} data={data} />}
   />
 )
 
-export default FooterQuery
+export default FooterContainer
