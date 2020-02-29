@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
-import umbrellaJpg from '../../assets/umbrella.jpg'
+import logo from '../../assets/logo.png'
 import { Card, CardImage, CardContent, CardTitle, CardFooter } from './Card'
 
 const variants = {
@@ -23,10 +23,10 @@ storiesOf('Card', module).add('with image', () => {
           image={{
             width: 200,
             height: 200,
-            src: umbrellaJpg,
-            srcSet: umbrellaJpg,
+            src: logo,
+            srcSet: logo,
           }}
-          alt="A rainbow umbrella"
+          alt="Pride in London logo"
         />
         <CardContent>
           <CardTitle>This is the title</CardTitle>
