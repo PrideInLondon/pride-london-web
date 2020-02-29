@@ -159,7 +159,7 @@ export default function EventInfoCard({
         title={locationName}
         detail={formatAddress(addressLine1, addressLine2, city, postcode)}
       />
-      {accessibilityOptions && accessibilityOptions.length && (
+      {accessibilityOptions && accessibilityOptions.length > 0 && (
         <Item
           icon={<AccessibilityIcon />}
           title="Accessibility"
