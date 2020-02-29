@@ -4,7 +4,7 @@ import GroupedEventsCards from './GroupedEventsCards'
 import { mockNodes, testEvent } from './__mocks__'
 
 describe('The GroupedEventsCards component', () => {
-  describe('Render', () => {
+  describe('Props', () => {
     const wrapper = shallow(
       <GroupedEventsCards
         event={testEvent}
@@ -13,28 +13,27 @@ describe('The GroupedEventsCards component', () => {
         toLoad={24}
       />
     )
-
-    describe('Props', () => {
-      it('passing event.node correctly', () => {
-        expect(
-          wrapper
-            .find('EventListingCard')
-            .first()
-            .prop('event')
-        ).toBe(testEvent.node)
-      })
-
-      it('testing animation logic', () => {
-        expect(
-          wrapper
-            .find('Wrapper')
-            .first()
-            .prop('animation')
-        ).toBe(false)
-      })
+    it('passing event.node correctly', () => {
+      expect(
+        wrapper
+          .find('EventListingCard')
+          .first()
+          .prop('event')
+      ).toBe(testEvent.node)
     })
 
-    describe('Animation Logic', () => {
+    it('testing animation logic', () => {
+      expect(
+        wrapper
+          .find('Wrapper')
+          .first()
+          .prop('animation')
+      ).toBe(false)
+    })
+  })
+
+  describe('Animation Logic', () => {
+    it('testing animation logic', () => {
       const extendedMockNodes = new Array(25)
       const wrapper = shallow(
         <GroupedEventsCards
@@ -44,15 +43,12 @@ describe('The GroupedEventsCards component', () => {
           toLoad={27}
         />
       )
-
-      it('testing animation logic', () => {
-        expect(
-          wrapper
-            .find('Wrapper')
-            .first()
-            .prop('animation')
-        ).toBe(true)
-      })
+      expect(
+        wrapper
+          .find('Wrapper')
+          .first()
+          .prop('animation')
+      ).toBe(true)
     })
   })
 })
