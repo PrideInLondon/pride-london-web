@@ -9,7 +9,6 @@ describe('Checkbox', () => {
   const value = 'selected'
   const label = 'hello'
   const handleChange = jest.fn()
-  const checked = false
 
   const props = {
     id,
@@ -17,7 +16,7 @@ describe('Checkbox', () => {
     value,
     label,
     handleChange,
-    checked,
+    checked: false,
   }
 
   let wrapper
