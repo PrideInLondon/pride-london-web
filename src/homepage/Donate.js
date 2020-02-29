@@ -4,7 +4,7 @@ import DonateSectionHeader from './DonateSectionHeader'
 import DonateSection from './DonateSection'
 import { DonateWrapper, BgDonateWrapper } from './Donate.styles'
 
-const DonateContainer = () => (
+const Donate = () => (
   <BgDonateWrapper>
     <Container>
       <Row>
@@ -19,4 +19,4 @@ const DonateContainer = () => (
   </BgDonateWrapper>
 )
 
-export default DonateContainer
+export default Donate
