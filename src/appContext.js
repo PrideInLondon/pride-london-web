@@ -46,46 +46,46 @@ class Provider extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.events !== prevState.events) {
-      const allEventOccurences = []
+    if (nextProps.events === prevState.events) return
 
-      nextProps.events.forEach(event => {
-        if (!event.node.recurrenceDates) {
-          allEventOccurences.push(event)
-        } else {
-          const recurrenceDates = sanitizeDates([
-            moment(event.node.startTime).format(constants.dateFormat),
-            ...event.node.recurrenceDates,
-          ])
-          const time = moment(event.node.startTime).format('HH:mm')
-          const duration = getDuration(event.node.startTime, event.node.endTime)
+    const allEventOccurences = []
 
-          recurrenceDates.forEach(date => {
-            const copy = JSON.parse(JSON.stringify(event))
+    nextProps.events.forEach(event => {
+      if (!event.node.recurrenceDates) {
+        allEventOccurences.push(event)
+      } else {
+        const recurrenceDates = sanitizeDates([
+          moment(event.node.startTime).format(constants.dateFormat),
+          ...event.node.recurrenceDates,
+        ])
+        const time = moment(event.node.startTime).format('HH:mm')
+        const duration = getDuration(event.node.startTime, event.node.endTime)
 
-            copy.node.startTime = moment(
-              `${date} ${time}`,
-              'DD/MM/YYYY hh:mm'
-            ).format()
-            copy.node.endTime = moment(copy.node.startTime)
-              .add(duration, 'milliseconds')
-              .format()
+        recurrenceDates.forEach(date => {
+          const copy = JSON.parse(JSON.stringify(event))
 
-            allEventOccurences.push(copy)
-          })
-        }
-      })
-      return {
-        events: allEventOccurences
-          .filter(filterPastEvents)
-          .sort((a, b) =>
-            a.node.startTime < b.node.startTime
-              ? -1
-              : a.node.startTime > b.node.startTime
-              ? 1
-              : 0
-          ),
+          copy.node.startTime = moment(
+            `${date} ${time}`,
+            'DD/MM/YYYY hh:mm'
+          ).format()
+          copy.node.endTime = moment(copy.node.startTime)
+            .add(duration, 'milliseconds')
+            .format()
+
+          allEventOccurences.push(copy)
+        })
       }
+    })
+    return {
+      events: allEventOccurences
+        .filter(filterPastEvents)
+        .sort((a, b) =>
+          a.node.startTime < b.node.startTime
+            ? -1
+            : a.node.startTime > b.node.startTime
+            ? 1
+            : 0
+        ),
     }
   }
 
