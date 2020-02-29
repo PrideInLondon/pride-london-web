@@ -11,7 +11,7 @@ import {
   CardTitle,
   CardFooter,
 } from '../components/card'
-import CalendarIcon from '../theme/assets/images/calendar-icon'
+import CalendarIcon from '../components/icons/calendarIcon'
 import { generateEventSlug } from './helpers'
 import { generateDisplayDate } from './EventCard'
 

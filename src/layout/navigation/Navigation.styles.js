@@ -4,8 +4,8 @@ import Link from 'gatsby-link'
 import { Row, Column } from '../../components/grid'
 import { media } from '../../theme/media'
 import { Button } from '../../components/button'
-import burger from '../../theme/assets/images/icon-menu.svg'
-import iconClose from '../../theme/assets/images/icon-close.svg'
+import burgerIcon from '../../components/icons/burgerIcon.svg'
+import closeIcon from '../../components/icons/closeIcon.svg'
 import theme from '../../theme/theme'
 
 export const HeaderWrapper = styled.div`
@@ -119,7 +119,7 @@ export const Burger = styled.button`
   span {
     display: block;
     padding-top: 20px;
-    background-image: url(${props => (props.isOpen ? iconClose : burger)});
+    background-image: url(${props => (props.isOpen ? closeIcon : burgerIcon)});
     background-position: center top;
     background-repeat: no-repeat;
   }

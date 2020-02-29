@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
-import checkmark from '../../theme/assets/images/icon-check.svg'
+import checkmark from '../../components/icons/checkIcon.svg'
 
 const Wrapper = styled.div`
   display: flex;

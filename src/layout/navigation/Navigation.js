@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { noScroll } from '../../utils/style-utils'
-import logo from '../../theme/assets/images/logo-pride.svg'
+import logo from '../../assets/logo.svg'
 import NavItem from './NavItem'
 import {
   HeaderWrapper,

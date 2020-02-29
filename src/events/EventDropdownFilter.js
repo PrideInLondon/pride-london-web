@@ -6,8 +6,6 @@ import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { AppContext } from '../appContext'
 import { CheckboxSet } from '../components/checkboxSet'
-import iconDown from '../theme/assets/images/icon-chevron-down.svg'
-import iconUp from '../theme/assets/images/icon-chevron-up.svg'
 
 const Wrapper = styled.div`
   position: relative;
@@ -37,7 +35,6 @@ const FilterButton = styled.button`
     font-family: ${theme.fonts.body};
     font-weight: 500;
     font-size: 0.875rem;
-    background-image: url(${props => (props.isOpen ? iconUp : iconDown)});
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-color: ${props =>

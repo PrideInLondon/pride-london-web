@@ -5,8 +5,6 @@ import { Flex, Box } from '@rebass/grid'
 import theme from '../theme/theme'
 import { media } from '../theme/media'
 import { Consumer } from '../appContext'
-import iconClear from '../theme/assets/images/icon-clear.svg'
-import iconClose from '../theme/assets/images/icon-close.svg'
 import { Button } from '../components/button'
 import EventDateFilter from './EventDateFilter'
 import EventFreeFilter from './EventFreeFilter'
@@ -171,7 +169,6 @@ const IconClear = styled.i`
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url(${iconClear});
     background-repeat: no-repeat;
     background-position: left center;
     width: 20px;
@@ -183,7 +180,6 @@ const CloseButton = styled.button`
   display: inline-block;
   height: 20px;
   width: 20px;
-  background-image: url(${iconClose});
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;

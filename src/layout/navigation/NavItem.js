@@ -2,7 +2,7 @@ import React, { useReducer, useRef, useEffect, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import theme from '../../theme/theme'
 import { checkBreakpoint } from '../../utils/style-utils'
-import ChevronDown from '../../components/icons/chevronDown'
+import ChevronDownIcon from '../../components/icons/chevronDownIcon'
 import SubMenu from './SubMenu'
 import { MenuLink, SubMenuToggle, MenuItem } from './NavItem.styles'
 
@@ -91,7 +91,7 @@ const NavItem = props => {
             }}
           >
             <span>{title}</span>
-            <ChevronDown />
+            <ChevronDownIcon />
           </SubMenuToggle>
           <SubMenu
             item={{ submenu, title, url, desc, id }}

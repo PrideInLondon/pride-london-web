@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import theme from '../../../theme/theme'
 import { sm, md, lg, xl } from '../../../theme/breakpoints'
-import ChevronIcon from '../../../theme/assets/images/chevron-icon'
+import ChevronIcon from '../../../components/icons/chevronIcon'
 import Arrow from './Arrow'
 
 import {

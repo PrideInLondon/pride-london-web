@@ -3,9 +3,6 @@ import { shallow, mount } from 'enzyme'
 import theme from '../../theme/theme'
 import Checkbox from './Checkbox'
 
-// SVGs need to be mocked as the SVG output causes Babel to throw
-jest.mock('../../theme/assets/images/icon-check.svg', () => 'foo')
-
 describe('Checkbox', () => {
   const id = 'test'
   const name = 'myInput'

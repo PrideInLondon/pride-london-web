@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { media } from '../theme/media'
-import bgFigureVolunter from '../theme/assets/images/volunteer-shapes.svg'
-import volunteerBg from '../theme/assets/images/volunteer-bg.jpg'
-import volunteerBgMobile from '../theme/assets/images/volunteer-bg-mobile.jpg'
+import bgFigureVolunter from './volunteerShapes.svg'
+import volunteerBg from './volunteerBackground.jpg'
+import volunteerBgMobile from './volunteerBackgroundMobile.jpg'
 
 export const BackgroundVolunteer = styled.div`
   width: 100%;
@@ -30,7 +30,7 @@ export const ContentVolunteer = styled.div`
   h2 {
     color: #fff;
     margin: 20px;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: bold;
   }
 
@@ -49,10 +49,6 @@ export const ContentVolunteer = styled.div`
     }
     margin-top: -10%;
   `};
-
-  h2 {
-    font-size: 26px;
-  }
 
   ${media.tabletMax`
     background-size: 58% 42%;

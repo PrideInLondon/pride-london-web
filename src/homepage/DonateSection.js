@@ -1,8 +1,8 @@
 import React from 'react'
 import { Row } from '../components/grid'
-import bgDonateLeft from '../theme/assets/images/bg-donate-left.svg'
-import bgDonateRight from '../theme/assets/images/bg-donate-right.svg'
-import bgMobileDonateRight from '../theme/assets/images/bg-mobile-donate-right.svg'
+import donateSectionLeft from './donateSectionLeft.svg'
+import donateSectionRight from './donateSectionRight.svg'
+import donateSectionRightMobile from './donateSectionRightMobile.svg'
 import DonateButtonsGroup from './DonateButtonsGroup'
 import {
   DonateSectionsWrapper,
@@ -15,12 +15,12 @@ import {
 const DonateSection = () => (
   <DonateSectionsWrapper>
     <BackgroundLeft>
-      <img src={bgDonateLeft} alt="bg donate" />
+      <img src={donateSectionLeft} alt="bg donate" />
     </BackgroundLeft>
     <BackgroundRight>
       <picture>
-        <source media="(min-width: 768px)" srcSet={bgDonateRight} />
-        <img src={bgMobileDonateRight} alt="Mobile background" />
+        <source media="(min-width: 768px)" srcSet={donateSectionRight} />
+        <img src={donateSectionRightMobile} alt="Mobile background" />
       </picture>
     </BackgroundRight>
     <LayerContent>

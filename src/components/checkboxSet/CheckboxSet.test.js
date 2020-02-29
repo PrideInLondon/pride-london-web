@@ -5,9 +5,6 @@ import { Checkbox } from '../checkbox'
 import { Provider } from '../../appContext'
 import CheckboxSet from './CheckboxSet'
 
-// SVGs need to be mocked as the SVG output causes Babel to throw
-jest.mock('../../theme/assets/images/icon-check.svg', () => 'foo')
-
 describe('CheckboxSet', () => {
   const filterName = 'eventCategories'
   const options = constants[filterName] || []

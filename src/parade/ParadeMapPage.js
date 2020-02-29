@@ -1,7 +1,7 @@
 import querystring from 'querystring'
 import React from 'react'
-import appStoreBadge from '../theme/assets/images/apple.svg'
-import googlePlayBadge from '../theme/assets/images/google-play.svg'
+import appStoreBadge from '../assets/appStore.svg'
+import googlePlayBadge from '../assets/googlePlayStore.svg'
 import { Column } from '../components/grid'
 import { Button } from '../components/button'
 import {

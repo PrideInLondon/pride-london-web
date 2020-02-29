@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
-import appleStore from '../theme/assets/images/apple.svg'
-import googlePlayStore from '../theme/assets/images/google-play.svg'
+import appleStore from '../assets/appStore.svg'
+import googlePlayStore from '../assets/googlePlayStore.svg'
 
 const CardWrapper = styled.div`
   padding-left: 20px;

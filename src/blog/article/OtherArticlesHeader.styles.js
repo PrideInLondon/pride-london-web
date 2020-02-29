@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from '../../theme/theme'
-import ChevronIcon from '../../theme/assets/images/chevron-icon'
+import ChevronIcon from '../../components/icons/chevronIcon'
 
 export const Title = styled.h2`
   font-weight: bold;
