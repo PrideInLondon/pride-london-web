@@ -125,7 +125,8 @@
     "stylelint-prettier": "^1.1.2",
     "stylelint-processor-styled-components": "^1.9.0",
     "typescript": "^3.7.5",
-    "typescript-styled-plugin": "^0.15.0"
+    "typescript-styled-plugin": "^0.15.0",
+    "uuid": "^7.0.1"
   },
   "resolutions": {
     "@reach/router": "^1.1.1",
