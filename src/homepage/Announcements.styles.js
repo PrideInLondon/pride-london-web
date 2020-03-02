@@ -33,6 +33,7 @@ export const AnnouncementsSliderWrapper = styled.div`
   ${media.desktop`
     .slick-list {
       margin-left: -15px;
+      padding-left: 100px !important;
     }
   `};
 `
