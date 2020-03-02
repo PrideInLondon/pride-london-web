@@ -15,7 +15,7 @@
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand",
     "test:watch": "yarn jest --watch",
-    "storybook": "start-storybook -p 9001 -c .storybook -s ./src/components"
+    "storybook": "NODE_ENV=production start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",

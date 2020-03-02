@@ -27,7 +27,7 @@ window.___navigate = pathname => {
   action('NavigateTo:')(pathname)
 }
 
-const req = require.context('../src', true, /.stories.tsx$/)
+const req = require.context('../src', true, /\.stories\.tsx$/)
 
 function loadStories() {
   req.keys().forEach(req)

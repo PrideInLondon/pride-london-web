@@ -1,3 +1,6 @@
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
@@ -30,9 +33,6 @@ import mstile310150 from './favicons/mstile-310x150.png'
 import { Navigation } from './navigation'
 import { GlobalStyle, SiteWrapper } from './Layout.styles'
 import { Footer } from './footer'
-
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 
 const query = graphql`
   query rootQuery {
