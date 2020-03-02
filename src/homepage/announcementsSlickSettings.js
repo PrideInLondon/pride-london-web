@@ -6,7 +6,7 @@ export const settings = {
   slidesToScroll: 1,
   infinite: true,
   arrows: false,
-  centerMode: false,
+  centerMode: true,
   centerPadding: '100px',
   responsive: [
     {
