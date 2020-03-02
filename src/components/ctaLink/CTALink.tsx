@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import theme from '../../theme/theme'
-import { handleUrl } from '../../utilities'
+import { handleUrl } from '../../utils/location-utils'
 import { CTALinkProps } from './CTALink.types'
 
 const StyledLink = styled.a`

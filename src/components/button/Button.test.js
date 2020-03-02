@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import Button from './'
+import { Button } from './Button'
 
 describe('<Button/>', () => {
   it('fires correct method when set onClick property', () => {

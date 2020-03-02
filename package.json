@@ -8,13 +8,14 @@
   "scripts": {
     "build": "gatsby build",
     "cov": "codecov",
+    "clean": "gatsby clean",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint 'src/**/*.[jt]s?(x)' && remark . --frail",
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "test": "yarn jest --runInBand",
     "test:watch": "yarn jest --watch",
-    "storybook": "start-storybook -p 9001 -c .storybook -s ./src/components"
+    "storybook": "NODE_ENV=production start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
@@ -41,7 +42,6 @@
     "polished": "^3.4.4",
     "querystring": "^0.2.0",
     "react": "^16.9.0",
-    "react-accessible-accordion": "^3.0.1",
     "react-dates": "16.7.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
@@ -125,7 +125,8 @@
     "stylelint-prettier": "^1.1.2",
     "stylelint-processor-styled-components": "^1.9.0",
     "typescript": "^3.7.5",
-    "typescript-styled-plugin": "^0.15.0"
+    "typescript-styled-plugin": "^0.15.0",
+    "uuid": "^7.0.1"
   },
   "resolutions": {
     "@reach/router": "^1.1.1",

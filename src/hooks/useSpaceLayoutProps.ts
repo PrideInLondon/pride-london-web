@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { space, layout } from 'styled-system'
-import { IndexSignature, pick, reject } from '../utilities'
+import { IndexSignature, pick, reject } from '../utils/iteration-utils'
 /**
  * Split out styled-system's space/layout props
  *
