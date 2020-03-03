@@ -10,7 +10,7 @@
 
 This project is a community effort to release a brand new web platform to supplant and improve upon the product currently available at prideinlondon.org.
 
-## Contributing
+## Contributing 
 
 Want to help out? That's amazing! The Contribution Guide should hopefully get you on your way.
 
