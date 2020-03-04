@@ -100,13 +100,7 @@ When.defaultProps = {
 
 export const EventListingCard = ({ event, variant }) => {
   return (
-    <Card
-      variant={variant}
-      to={generateEventSlug({
-        ...event,
-        occurrence: event.recurrenceDates && event.startTime,
-      })}
-    >
+    <Card variant={variant} to={generateEventSlug(event)}>
       <CardImage
         image={event.eventsListPicture.fixed}
         alt={event.eventsListPicture.title}

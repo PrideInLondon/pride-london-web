@@ -169,13 +169,11 @@ export function getDuration(start, end) {
   return moment(end).diff(moment(start))
 }
 
-export const generateEventSlug = ({ id, name, occurrence }) =>
+export const generateEventSlug = ({ id, name }) =>
   `/event/${slugify(name, {
     lower: true,
     remove: /[<>:"/\\|?*,'+]/g,
-  })}${
-    occurrence ? `-${moment(occurrence).format('DDMMYY')}` : ''
-  }-${encoder.encode(id)}/`
+  })}-${encoder.encode(id)}/`
 
 export const extractEventIdFromSlug = slug => {
   const [encodedId] = slug.split('-').slice(-1)

@@ -73,6 +73,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
     // Don't create pages for past events
     result.data.events.edges.forEach(edge => {
+      const slug = generateEventSlug({ ...edge.node })
       if (!edge.node.recurrenceDates) {
         //   Filter past events
         if (filterPastEvents(edge)) {
@@ -81,7 +82,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
             // as a template component. The `context` is
             // optional but is often necessary so the template
             // can query data specific to each page.
-            path: generateEventSlug({ ...edge.node }),
+            path: slug,
             component: EventPage,
             context: {
               id: edge.node.id,
@@ -105,10 +106,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
             .toISOString()
           if (filterPastEvents(endTime)) {
             createPage({
-              path: generateEventSlug({
-                ...edge.node,
-                occurrence: startTime,
-              }),
+              path: slug,
               component: EventPage,
               context: {
                 id: edge.node.id,
