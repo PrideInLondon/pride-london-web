@@ -7,25 +7,9 @@ import constants from './constants'
 const AppContext = React.createContext()
 const { Consumer } = AppContext
 
-function getInitialFilterState() {
-  return {
-    startDate: null,
-    endDate: null,
-    free: false,
-    eventCategories: [],
-    venueDetails: [],
-    audience: [],
-    accessibilityOptions: [],
-    area: [],
-    timeOfDay: [],
-  }
-}
-
 const initialState = {
   events: [],
-  filterOpen: null,
   eventsToShow: constants.itemsToLoad,
-  filters: getInitialFilterState(),
 }
 
 class Provider extends Component {
@@ -80,79 +64,6 @@ class Provider extends Component {
     }
   }
 
-  getDatepickerValues = ({ startDate, endDate }) => {
-    this.setState(prevState => ({
-      ...prevState,
-      filters: {
-        ...prevState.filters,
-        startDate,
-        endDate,
-      },
-    }))
-  }
-
-  setDate = (dateToSet, dateToGet) => {
-    this.setState(prevState => ({
-      ...prevState,
-      filters: {
-        ...prevState.filters,
-        [dateToSet]: prevState.filters[dateToGet],
-      },
-    }))
-  }
-
-  getCheckboxBool = (name, checked) => {
-    this.setState(prevState => ({
-      ...prevState,
-      filters: {
-        ...prevState.filters,
-        free: checked,
-      },
-    }))
-  }
-
-  getCheckboxSetValues = (e, name) => {
-    const state = {
-      ...this.state,
-      filters: { ...this.state.filters },
-    }
-
-    if (
-      e.target.checked &&
-      state.filters[name].indexOf(e.target.value) === -1
-    ) {
-      state.filters[name].push(e.target.value)
-    } else {
-      const index = state.filters[name].indexOf(e.target.value)
-      if (index > -1) {
-        this.state.filters[name].splice(index, 1)
-      }
-    }
-
-    this.setState(state)
-  }
-
-  clearFilters = () => {
-    this.setState({
-      filterOpen: null,
-      filters: getInitialFilterState(),
-    })
-  }
-
-  closeSiblingFilters = (filterName, isOpen) => {
-    if (isOpen && filterName != this.state.filterOpen) {
-      this.setState(prevState => ({
-        ...prevState,
-        filterOpen: filterName,
-      }))
-    } else {
-      this.setState(prevState => ({
-        ...prevState,
-        filterOpen: null,
-      }))
-    }
-  }
-
   showMore = filteredCount => {
     if (this.state.eventsToShow < filteredCount) {
       this.setState({
@@ -167,13 +78,7 @@ class Provider extends Component {
         value={{
           state: this.state,
           actions: {
-            getCheckboxBool: this.getCheckboxBool,
-            getDatepickerValues: this.getDatepickerValues,
-            getCheckboxSetValues: this.getCheckboxSetValues,
-            clearFilters: this.clearFilters,
-            closeSiblingFilters: this.closeSiblingFilters,
             showMore: this.showMore,
-            setDate: this.setDate,
           },
         }}
       >

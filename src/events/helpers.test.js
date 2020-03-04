@@ -1,6 +1,5 @@
 import {
   filterPastEvents,
-  formatDate,
   getDuration,
   sanitizeDates,
   generateEventSlug,
@@ -25,16 +24,6 @@ const pastEvent = {
   },
 }
 
-const eventOneDay = {
-  startTime: '2019-06-03T06:00+00:00',
-  endTime: '2019-06-03T08:00+00:00',
-}
-
-const eventTwoDays = {
-  startTime: '2019-06-03T08:00+00:00',
-  endTime: '2019-06-04T11:30+00:00',
-}
-
 describe('filterPastEvents', () => {
   it('returns true if date is after today', () => {
     expect(filterPastEvents(futureEvent)).toBeTruthy()
@@ -46,19 +35,6 @@ describe('filterPastEvents', () => {
 
   it('returns true if date is after today and object is date string', () => {
     expect(filterPastEvents(futureEvent.node.endTime)).toBeTruthy()
-  })
-
-  it('format 1-day event date properly', () => {
-    const date = formatDate(eventOneDay)
-    const expectedDate = 'Mon 3 Jun'
-
-    expect(date.date).toBe(expectedDate)
-  })
-
-  it('format multi-days event date properly', () => {
-    const date = formatDate(eventTwoDays)
-    const expectedDate = 'Mon 3 - Tue 4 Jun'
-    expect(date.date).toBe(expectedDate)
   })
 
   it('returns 1 day as diff', () => {
