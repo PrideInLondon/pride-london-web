@@ -1,16 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
-import {
-  filterByDate,
-  filterByFree,
-  filterByCategory,
-  filterByArea,
-  filterByTime,
-  filterPastEvents,
-  getDuration,
-  sanitizeDates,
-} from './events/helpers'
+import { filterPastEvents, getDuration, sanitizeDates } from './events/helpers'
 import constants from './constants'
 
 const AppContext = React.createContext()
@@ -162,35 +153,6 @@ class Provider extends Component {
     }
   }
 
-  filterEvents = () => {
-    const filteredEvents = this.state.events
-      .filter(filterByDate, {
-        startDate: this.state.filters.startDate,
-        endDate: this.state.filters.endDate,
-      })
-      .filter(filterByFree, this.state.filters.free)
-      .filter(filterByCategory, {
-        array: this.state.filters.eventCategories,
-        key: 'eventCategories',
-      })
-      .filter(filterByCategory, {
-        array: this.state.filters.venueDetails,
-        key: 'venueDetails',
-      })
-      .filter(filterByCategory, {
-        array: this.state.filters.accessibilityOptions,
-        key: 'accessibilityOptions',
-      })
-      .filter(filterByCategory, {
-        array: this.state.filters.audience,
-        key: 'audience',
-      })
-      .filter(filterByArea, this.state.filters.area)
-      .filter(filterByTime, this.state.filters.timeOfDay)
-
-    return filteredEvents
-  }
-
   showMore = filteredCount => {
     if (this.state.eventsToShow < filteredCount) {
       this.setState({
@@ -204,7 +166,6 @@ class Provider extends Component {
       <AppContext.Provider
         value={{
           state: this.state,
-          filteredEvents: this.filterEvents(),
           actions: {
             getCheckboxBool: this.getCheckboxBool,
             getDatepickerValues: this.getDatepickerValues,
