@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from '../components/helmet'
 import { colors } from '../theme/colors'
@@ -6,6 +6,7 @@ import { Button } from '../components/button'
 import { Container, Row } from '../components/grid'
 import { AppContext } from '../appContext'
 import { filterByLimit } from '../events/helpers'
+import constants from '../constants'
 import GroupedEventsCards from './GroupedEventsCards'
 import { EventsPageBanner } from './EventsPageBanner'
 import {
@@ -22,6 +23,9 @@ const EventsPage = ({
   },
 }) => {
   const context = useContext(AppContext)
+  const [numberOfEventsToShow, setNumberOfEventsToShow] = useState(
+    constants.itemsToLoad - 1
+  )
   return (
     <>
       <Helmet
@@ -40,7 +44,7 @@ const EventsPage = ({
           <Row>
             <ListingCardWrapper>
               {context.state.events
-                .filter(filterByLimit, context.state.eventsToShow - 1)
+                .filter(filterByLimit, numberOfEventsToShow)
                 .sort((event1, event2) => {
                   return (
                     new Date(event1.node.startTime) -
@@ -53,20 +57,23 @@ const EventsPage = ({
                     index={index}
                     event={event}
                     key={event.node.id + event.node.startTime}
-                    toLoad={context.state.eventsToShow}
+                    toLoad={numberOfEventsToShow}
                   />
                 ))}
             </ListingCardWrapper>
             <ColumnPagination width={1}>
-              <EventCount>{`You're viewing ${context.state.eventsToShow} of ${context.state.events.length} events`}</EventCount>
-              {context.state.eventsToShow < context.state.events.length && (
+              <EventCount>{`You're viewing ${numberOfEventsToShow} of ${context.state.events.length} events`}</EventCount>
+              {numberOfEventsToShow < context.state.events.length && (
                 <Button
                   onClick={() => {
-                    context.actions.showMore(context.state.events.length)
+                    const next = numberOfEventsToShow + constants.itemsToLoad
+                    setNumberOfEventsToShow(
+                      next > context.state.events.length
+                        ? context.state.events.length
+                        : next
+                    )
                   }}
-                  disabled={
-                    context.state.eventsToShow >= context.state.events.length
-                  }
+                  disabled={numberOfEventsToShow >= context.state.events.length}
                   width={{ default: '100%', md: 'auto' }}
                   variant="outline-white"
                 >

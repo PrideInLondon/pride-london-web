@@ -9,7 +9,6 @@ const { Consumer } = AppContext
 
 const initialState = {
   events: [],
-  eventsToShow: constants.itemsToLoad,
 }
 
 class Provider extends Component {
@@ -64,22 +63,11 @@ class Provider extends Component {
     }
   }
 
-  showMore = filteredCount => {
-    if (this.state.eventsToShow < filteredCount) {
-      this.setState({
-        eventsToShow: this.state.eventsToShow + constants.itemsToLoad,
-      })
-    }
-  }
-
   render() {
     return (
       <AppContext.Provider
         value={{
           state: this.state,
-          actions: {
-            showMore: this.showMore,
-          },
         }}
       >
         {this.props.children}
