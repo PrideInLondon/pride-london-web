@@ -29,7 +29,7 @@ export const StyledBanner = styled.div<BackgroundColorProps>`
     padding-bottom: 50px;
     &:after {
       background-image: url(${left});
-      bottom: 40px;
+      bottom: 0;
       left: 0;
       right: unset;
     }
@@ -37,7 +37,7 @@ export const StyledBanner = styled.div<BackgroundColorProps>`
 
   ${mediaQueries.lg} {
     &:after {
-      bottom: 60px;
+      bottom: 0;
       width: 104px;
       height: 177px;
     }
@@ -53,11 +53,6 @@ export const Subtitle = styled.p`
   margin-bottom: 0;
   max-width: 275px;
   line-height: 1.18;
-
-  /* ${mediaQueries.lg} {
-    font-size: 2rem;
-    max-width: none;
-  } */
 
   ${mediaQueries.xl} {
     font-size: 1.375rem;
