@@ -56,7 +56,7 @@ const EventsPage = ({
               <Row>
                 <ListingCardWrapper>
                   {context.filteredEvents
-                    .filter(filterByLimit, context.state.eventsToShow)
+                    .filter(filterByLimit, context.state.eventsToShow - 1)
                     .sort((event1, event2) => {
                       return (
                         new Date(event1.node.startTime) -
