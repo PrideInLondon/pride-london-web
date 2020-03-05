@@ -95,7 +95,7 @@ const NavItem: React.FC<NavItemProps> = ({
             <span>{item.title}</span>
             <ChevronDownIcon />
           </SubMenuToggle>
-          {item?.submenu && (
+          {item.submenu && (
             <SubMenu
               item={item}
               isOpen={isOpen}
