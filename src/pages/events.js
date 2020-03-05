@@ -11,7 +11,7 @@ export const query = graphql`
       }
     }
 
-    file(relativePath: { regex: "/events/heroImage/" }) {
+    file(relativePath: { regex: "/events/heroImage2/" }) {
       size
       name
       childImageSharp {

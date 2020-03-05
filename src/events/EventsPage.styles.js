@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { mediaQueries } from '../theme/mediaQueries'
 import { Column } from '../components/grid'
 import { colors } from '../theme/colors'
+import mainBackground2880 from './mainBackground2880.jpg'
+import mainBackground1600 from './mainBackground1600.jpg'
+import mainBackground1024 from './mainBackground1024.jpg'
+import mainBackground768 from './mainBackground768.jpg'
 
 export const ColumnPagination = styled(Column)`
   text-align: center;
@@ -27,4 +31,26 @@ export const ListingCardWrapper = styled.div`
 
 export const Background = styled.div`
   background-color: ${colors.raisinBlack};
+  background-size: 100% auto;
+  background-image: url(${mainBackground768});
+
+  ${mediaQueries.md} {
+    background-image: url(${mainBackground1024});
+  }
+
+  ${mediaQueries.lg} {
+    background-image: url(${mainBackground1600});
+  }
+
+  ${mediaQueries.retina2x} {
+    background-image: url(${mainBackground1024});
+
+    ${mediaQueries.md} {
+      background-image: url(${mainBackground1600});
+    }
+
+    ${mediaQueries.lg} {
+      background-image: url(${mainBackground2880});
+    }
+  }
 `
