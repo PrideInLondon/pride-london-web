@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { noScroll } from '../../utils/style-utils'
-import logo from '../../assets/logo.svg'
+
 import NavItem from './NavItem'
 import {
   HeaderWrapper,
@@ -14,8 +14,13 @@ import {
   DonateButton,
 } from './Navigation.styles'
 
-const Navigation = () => {
-  const [isOpen, setOpen] = useState(false)
+import { NavigationProps } from './Navigation.types'
+
+const Navigation: React.FC<NavigationProps> = ({
+  backgroundColor,
+  logoUrl,
+}) => {
+  const [isOpen, setOpen] = useState<boolean>(false)
   useEffect(() => {
     if (isOpen) {
       noScroll.on()
@@ -24,24 +29,19 @@ const Navigation = () => {
     }
   })
   return (
-    <HeaderWrapper>
-      <Header>
+    <HeaderWrapper backgroundColor={backgroundColor}>
+      <Header backgroundColor={backgroundColor}>
         <FlexRow
           flexWrap="nowrap"
-          mx={[
-            0, // Margin between 0px and 1st breakpoint (375px). 1 = 5px on spacing scale
-            0, // Margin between 1st breakpoint(375px) and 2nd breakpoint (768px)
-            40, // Margin between 2nd breakpoint(768px) and 3rd breakpoint (1024px)
-            75, // Margin 1440 onwards
-          ]}
+          mx={{ default: '0', sm: '0', md: '40px', lg: '75px' }}
         >
           <FlexColumn width={1}>
             <LogoWrapper to="/">
-              <Logo src={logo} alt="Pride in London Logo" />
+              <Logo src={logoUrl} alt="Pride in London Logo" />
             </LogoWrapper>
             <nav
               role="navigation"
-              itemScope="itemscope"
+              itemScope
               itemType="http://www.schema.org/SiteNavigationElement"
             >
               <Burger
@@ -50,11 +50,13 @@ const Navigation = () => {
                 aria-controls="menu"
                 aria-expanded={isOpen}
                 type="button"
+                backgroundColor={backgroundColor}
               >
                 <span>Menu</span>
               </Burger>
-              <Menu id="menu" isOpen={isOpen}>
+              <Menu id="menu" isOpen={isOpen} backgroundColor={backgroundColor}>
                 <NavItem
+                  backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-about',
@@ -87,6 +89,7 @@ const Navigation = () => {
                   }}
                 />
                 <NavItem
+                  backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-parade-day',
@@ -163,6 +166,7 @@ const Navigation = () => {
                   }}
                 />
                 <NavItem
+                  backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-events',
@@ -171,6 +175,7 @@ const Navigation = () => {
                   }}
                 />
                 <NavItem
+                  backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-support-us',
@@ -217,6 +222,7 @@ const Navigation = () => {
                   }}
                 />
                 <NavItem
+                  backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-visitor-info',
@@ -225,6 +231,7 @@ const Navigation = () => {
                   }}
                 />
                 <NavItem
+                  backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-blog',
@@ -232,7 +239,7 @@ const Navigation = () => {
                     url: '/news-and-views',
                   }}
                 />
-                <NavItem>
+                <NavItem backgroundColor={backgroundColor}>
                   <DonateButton to="https://donate.prideinlondon.org/">
                     Donate
                   </DonateButton>

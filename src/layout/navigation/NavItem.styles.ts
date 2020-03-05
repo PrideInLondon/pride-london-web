@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
-import { lighten } from 'polished'
+import { darken } from 'polished'
 import { Link } from 'gatsby'
-import { media } from '../../theme/media'
+import { mediaQueries } from '../../theme/mediaQueries'
 import theme from '../../theme/theme'
 
 export const linkStyles = css`
@@ -16,19 +16,19 @@ export const linkStyles = css`
   padding: 20px 0;
   border: none;
 
-  ${media.nav`
+  ${mediaQueries.nav} {
     padding: 35px 20px;
     line-height: 1.8125rem;
-  `};
+  }
 `
 
 export const MenuLink = styled(Link)`
   ${linkStyles}
 
-  ${media.navMax`
+  ${mediaQueries.navMax} {
     padding-left: 20px;
     padding-right: 20px;
-  `};
+  }
 `
 
 export const SubMenuToggle = styled.a`
@@ -41,23 +41,23 @@ export const SubMenuToggle = styled.a`
     }
   }
 
-  ${media.nav`
+  ${mediaQueries.nav} {
     svg {
-        display: none;
+      display: none;
     }
-  `};
+  }
 
-  ${media.navMax`
+  ${mediaQueries.navMax} {
     padding-left: 20px;
     padding-right: 20px;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    
+
     span {
-        margin-right: 20px;
+      margin-right: 20px;
     }
-  `};
+  }
 
   svg {
     path {
@@ -66,18 +66,28 @@ export const SubMenuToggle = styled.a`
   }
 `
 
-export const MenuItem = styled.li`
-  ${media.nav`
-    height: auto;
-    padding: 0;
-    ${SubMenuToggle} {
-      background-color: ${props =>
-        props.isOpen && lighten(0.05, theme.colors.indigo)};
+export const MenuItem = styled.li<{ isOpen: boolean; backgroundColor: string }>(
+  ({ isOpen, backgroundColor }) => css`
+    ${mediaQueries.nav} {
+      height: auto;
+      padding: 0;
+      ${SubMenuToggle} {
+        background-color: ${isOpen && darken(0.05, backgroundColor)};
+      }
+
+      ${MenuLink} {
+        background-color: ${isOpen && darken(0.05, backgroundColor)};
+      }
     }
 
-    ${MenuLink} {
-      background-color: ${props =>
-        props.isOpen && lighten(0.05, theme.colors.indigo)};
+    ${mediaQueries.navMax} {
+      ${SubMenuToggle} {
+        background-color: ${darken(0.05, backgroundColor)};
+      }
+
+      ${MenuLink} {
+        background-color: ${darken(0.05, backgroundColor)};
+      }
     }
-  `};
-`
+  `
+)

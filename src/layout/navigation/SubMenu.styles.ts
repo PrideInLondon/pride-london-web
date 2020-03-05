@@ -1,37 +1,41 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
-import { lighten } from 'polished'
+import { darken } from 'polished'
 import theme from '../../theme/theme'
-import { media } from '../../theme/media'
+import { mediaQueries } from '../../theme/mediaQueries'
+
 import { Row, Column } from '../../components/grid'
 
-export const Panel = styled.div`
-  background-color: ${lighten(0.05, theme.colors.indigo)};
-  color: ${theme.colors.white};
+export const Panel = styled.div<{ isOpen: boolean; backgroundColor: string }>(
+  ({ isOpen, backgroundColor }) => css`
+    color: ${theme.colors.white};
 
-  ${media.nav`
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 100px;
-    display: ${props => (props.isOpen ? 'block' : 'none')};
-    padding: 60px 0;
-    height: auto !important;
-  `};
+    ${mediaQueries.nav} {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 100px;
+      display: ${isOpen ? 'block' : 'none'};
+      padding: 60px 0;
+      height: auto !important;
+      background-color: ${darken(0.05, backgroundColor)};
+    }
 
-  ${media.navMax`
-    overflow: hidden;
-    transition: height 0.15s linear;
-    height: 0;
-  `};
-`
+    ${mediaQueries.navMax} {
+      overflow: hidden;
+      transition: height 0.15s linear;
+      height: 0;
+      background-color: ${backgroundColor};
+    }
+  `
+)
 
 export const PanelRow = styled(Row)`
   flex-wrap: nowrap;
 
-  ${media.navMax`
+  ${mediaQueries.navMax} {
     margin: 0;
-  `};
+  }
 `
 
 export const PanelTitle = styled.h2`
@@ -44,28 +48,27 @@ export const PanelInfoWrapper = styled(Column)`
   border-right: 1px solid ${theme.colors.eucalyptusGreen};
   padding-right: 40px;
   display: none;
-
-  ${media.nav`
+  ${mediaQueries.nav} {
     display: block;
-  `};
+  }
 `
 
-export const PanelListWrapper = styled(Column)`
-  ${media.nav`
+export const PanelListWrapper = styled(Column)<{ isOpen: boolean }>`
+  ${mediaQueries.nav} {
     padding-left: 40px;
     column-count: 3;
     column-gap: 40px;
     column-width: 250px;
 
     & > * {
-        align-self: stretch;
+      align-self: stretch;
     }
-  `};
+  }
 
-  ${media.navMax`
+  ${mediaQueries.navMax} {
     padding: 20px;
     width: 100%;
-  `};
+  }
 `
 
 export const PanelList = styled.ul`
@@ -75,18 +78,20 @@ export const PanelList = styled.ul`
 `
 
 export const PanelListSection = styled.div`
-  ${media.nav`
+  ${mediaQueries.nav} {
     page-break-inside: avoid;
     break-inside: avoid;
-  `};
+  }
 
-  ${media.navMax`
+  ${mediaQueries.navMax} {
     &:last-child {
       ul {
         margin-bottom: 0;
       }
     }
-  `};
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
 `
 
 export const Heading = styled.h2`
@@ -95,9 +100,9 @@ export const Heading = styled.h2`
   margin: 0 0 0.5em 0;
   line-height: 1.25;
 
-  ${media.nav`
+  ${mediaQueries.nav} {
     margin: 0 0 0.2em 0;
-  `};
+  }
 `
 
 export const PanelLink = styled(Link)`
@@ -109,10 +114,11 @@ export const PanelLink = styled(Link)`
   display: block;
   border: none;
 
-  ${media.nav`
+  ${mediaQueries.nav} {
     padding: 5px 0;
     font-size: 1.25rem;
-  `};
+  }
+
   span {
     transition: box-shadow 0.15s linear;
   }
