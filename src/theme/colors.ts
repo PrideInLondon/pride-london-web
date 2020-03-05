@@ -26,4 +26,5 @@ export const colors = {
   silver: '#E0DFDC',
   bronze: '#B59035',
   mexicanPink: '#E6007E',
+  raisinBlack: '#272727',
 }

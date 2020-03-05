@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { color } from 'styled-system'
-import { media } from '../theme/media'
+import { mediaQueries } from '../theme/mediaQueries'
 import { Column } from '../components/grid'
 import { colors } from '../theme/colors'
 
@@ -8,10 +7,10 @@ export const ColumnPagination = styled(Column)`
   text-align: center;
   padding-bottom: 20px;
 
-  ${media.tablet`
+  ${mediaQueries.md} {
     padding-top: 50px;
     padding-bottom: 60px;
-  `};
+  }
 `
 
 export const EventCount = styled.p`
@@ -26,6 +25,6 @@ export const ListingCardWrapper = styled.div`
   flex-basis: 100%;
 `
 
-export const PageWrapper = styled.div`
-  ${color}
+export const Background = styled.div`
+  background-color: ${colors.raisinBlack};
 `

@@ -12,7 +12,7 @@ import {
   ColumnPagination,
   EventCount,
   ListingCardWrapper,
-  PageWrapper,
+  Background,
 } from './EventsPage.styles'
 
 const EventsPage = ({
@@ -39,7 +39,7 @@ const EventsPage = ({
   return (
     <Consumer>
       {context => (
-        <PageWrapper backgroundColor={colors.indigo}>
+        <>
           <Helmet
             title="Coming Out"
             description="The new way to find the best queer events for the queer community from Pride in London"
@@ -51,52 +51,55 @@ const EventsPage = ({
             image={childImageSharp}
             sponsor={diageo.childImageSharp}
           />
-          <Container marginTop={{ default: 0, md: '60px' }}>
-            <Row>
-              <ListingCardWrapper>
-                {context.filteredEvents
-                  .filter(filterByLimit, context.state.eventsToShow)
-                  .sort((event1, event2) => {
-                    return (
-                      new Date(event1.node.startTime) -
-                      new Date(event2.node.startTime)
-                    )
-                  })
-                  .map((event, index, events) => (
-                    <GroupedEventsCards
-                      events={events}
-                      index={index}
-                      event={event}
-                      key={event.node.id + event.node.startTime}
-                      toLoad={context.state.eventsToShow}
-                    />
-                  ))}
-              </ListingCardWrapper>
+          <Background>
+            <Container paddingTop={{ default: 0, md: '60px' }}>
+              <Row>
+                <ListingCardWrapper>
+                  {context.filteredEvents
+                    .filter(filterByLimit, context.state.eventsToShow)
+                    .sort((event1, event2) => {
+                      return (
+                        new Date(event1.node.startTime) -
+                        new Date(event2.node.startTime)
+                      )
+                    })
+                    .map((event, index, events) => (
+                      <GroupedEventsCards
+                        events={events}
+                        index={index}
+                        event={event}
+                        key={event.node.id + event.node.startTime}
+                        toLoad={context.state.eventsToShow}
+                      />
+                    ))}
+                </ListingCardWrapper>
 
-              <ColumnPagination width={1}>
-                {renderEventCount(
-                  context.filteredEvents.length,
-                  context.state.eventsToShow
-                )}
-                {context.state.eventsToShow < context.filteredEvents.length && (
-                  <Button
-                    onClick={() => {
-                      context.actions.showMore(context.filteredEvents.length)
-                    }}
-                    disabled={
-                      context.state.eventsToShow >=
-                      context.filteredEvents.length
-                    }
-                    width={{ default: '100%', md: 'auto' }}
-                    variant="outline-white"
-                  >
-                    Show more events
-                  </Button>
-                )}
-              </ColumnPagination>
-            </Row>
-          </Container>
-        </PageWrapper>
+                <ColumnPagination width={1}>
+                  {renderEventCount(
+                    context.filteredEvents.length,
+                    context.state.eventsToShow
+                  )}
+                  {context.state.eventsToShow <
+                    context.filteredEvents.length && (
+                    <Button
+                      onClick={() => {
+                        context.actions.showMore(context.filteredEvents.length)
+                      }}
+                      disabled={
+                        context.state.eventsToShow >=
+                        context.filteredEvents.length
+                      }
+                      width={{ default: '100%', md: 'auto' }}
+                      variant="outline-white"
+                    >
+                      Show more events
+                    </Button>
+                  )}
+                </ColumnPagination>
+              </Row>
+            </Container>
+          </Background>
+        </>
       )}
     </Consumer>
   )
