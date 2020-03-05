@@ -1,14 +1,11 @@
-import { HTMLAttributes } from 'react'
 import { BackgroundColorProps } from 'styled-system'
+import { FixedObject } from 'gatsby-image'
 import { BannerImage } from '../components/banner/Banner.types'
-
-export interface TitleProps extends HTMLAttributes<HTMLHeadingElement> {
-  backgroundColor: string
-}
 
 export interface EventsPageBannerProps extends BackgroundColorProps {
   title: string
   subtitle: string
   image: BannerImage
+  sponsor: { fixed: FixedObject }
   backgroundColor: string
 }

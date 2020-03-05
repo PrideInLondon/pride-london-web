@@ -3,6 +3,14 @@ import { EventsPage } from '../events'
 
 export const query = graphql`
   query eventsPageQuery {
+    diageo: file(relativePath: { regex: "/events/diageo/" }) {
+      childImageSharp {
+        fixed(width: 106, height: 89, quality: 100) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+
     file(relativePath: { regex: "/events/heroImage/" }) {
       size
       name

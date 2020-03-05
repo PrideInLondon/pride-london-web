@@ -13,6 +13,8 @@ import Intercom from '../components/intercom'
 import theme from '../theme/theme'
 import logo from '../assets/logo.svg'
 import metaImg from '../assets/logo.png'
+import { colors } from '../theme/colors'
+import logoWhite from '../assets/logo-white.svg'
 import favicon from './favicons/favicon.ico'
 import favicon16 from './favicons/favicon-16x16.png'
 import favicon32 from './favicons/favicon-32x32.png'
@@ -372,7 +374,16 @@ const Layout = ({ children, location: { pathname } }) => (
                 ]}
               />
               <SiteWrapper>
-                <Navigation />
+                <Navigation
+                  logoUrl={
+                    pathname.replace(/\/$/, '') === '/events' ? logoWhite : logo
+                  }
+                  backgroundColor={
+                    pathname.replace(/\/$/, '') === '/events'
+                      ? colors.mexicanPink
+                      : colors.indigo
+                  }
+                />
                 <main>{children}</main>
                 <Footer
                   facebook={facebook}

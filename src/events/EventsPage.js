@@ -17,6 +17,7 @@ import {
 
 const EventsPage = ({
   data: {
+    diageo,
     file: { childImageSharp },
   },
 }) => {
@@ -46,8 +47,9 @@ const EventsPage = ({
           <EventsPageBanner
             title="Coming Out"
             subtitle=" The new way to find the best queer events for the queer community from Pride in London."
-            backgroundColor={colors.darkCyan}
+            backgroundColor={colors.mexicanPink}
             image={childImageSharp}
+            sponsor={diageo.childImageSharp}
           />
           <Container marginTop={{ default: 0, md: '60px' }}>
             <Row>

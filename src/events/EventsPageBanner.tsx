@@ -7,14 +7,18 @@ import {
   Subtitle,
   ResponsiveImg,
   ImgWrapper,
+  SponsorLogoWrapper,
+  SponsorLogoInner,
 } from './EventsPageBanner.styles'
 import { EventsPageBannerProps } from './EventsPageBanner.types'
+import { ComingOut } from './ComingOut'
 
 export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
   title,
   subtitle,
   backgroundColor,
   image,
+  sponsor,
 }) => (
   <StyledBanner role="banner" backgroundColor={backgroundColor}>
     <Row
@@ -24,13 +28,7 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
       mr="0"
       flexWrap={{ default: 'wrap', md: 'nowrap' }}
     >
-      <Column
-        pr="0"
-        py="0"
-        maxWidth="920px"
-        width={{ default: 1, md: 0.6666 }}
-        mb={{ default: '-20px', md: '0' }}
-      >
+      <Column pr="0" py="0" maxWidth="920px" width={{ default: 1, md: 0.6666 }}>
         <ImgWrapper>
           <ResponsiveImg
             fixed={
@@ -41,16 +39,23 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
                 : image.desktop
             }
           />
+          <SponsorLogoWrapper>
+            <span>Sponsored by</span>
+            <SponsorLogoInner>
+              <ResponsiveImg fixed={sponsor.fixed} alt="Diageo" />
+            </SponsorLogoInner>
+          </SponsorLogoWrapper>
         </ImgWrapper>
       </Column>
       <Column
         width={{ default: 1, md: 0.3333 }}
-        ml={{ xl: '80px' }}
         zIndex={1}
-        pb={{ default: '30px', sm: '40px', lg: '60px' }}
+        ml={{ xl: '80px' }}
+        mr={{ default: '30px', md: '0' }}
       >
         <div>
-          <Title backgroundColor={backgroundColor}>{title}</Title>
+          <ComingOut />
+          <Title>{title}</Title>
           <Subtitle>{subtitle}</Subtitle>
         </div>
       </Column>
