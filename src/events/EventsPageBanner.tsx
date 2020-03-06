@@ -40,7 +40,7 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
             }
           />
           <SponsorLogoWrapper>
-            <span>Sponsored by</span>
+            <span>Official launch partner</span>
             <SponsorLogoInner>
               <ResponsiveImg fixed={sponsor.fixed} alt="Diageo" />
             </SponsorLogoInner>
