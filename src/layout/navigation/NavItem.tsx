@@ -1,33 +1,37 @@
-import React, { useReducer, useRef, useEffect, Fragment } from 'react'
-import PropTypes from 'prop-types'
+import React, {
+  useReducer,
+  useRef,
+  useEffect,
+  Fragment,
+  Dispatch,
+  RefObject,
+} from 'react'
 import theme from '../../theme/theme'
 import { checkBreakpoint } from '../../utils/style-utils'
 import ChevronDownIcon from '../../components/icons/chevronDownIcon'
 import SubMenu from './SubMenu'
 import { MenuLink, SubMenuToggle, MenuItem } from './NavItem.styles'
+import { NavItemProps } from './NavItem.types'
 
-function reducer(state, action) {
+function reducer(state: boolean, action: { type: string }) {
   switch (action.type) {
     case 'open':
-      return {
-        isOpen: true,
-      }
+      return true
     case 'close':
-      return {
-        isOpen: false,
-      }
+      return false
     case 'toggle':
-      return {
-        isOpen: !state.isOpen,
-      }
+      return !state
     default:
-      return
+      return state
   }
 }
 
-function useOnClickOutside(ref, handler) {
+function useOnClickOutside(
+  ref: RefObject<HTMLLIElement>,
+  handler: Dispatch<{ type: string }>
+) {
   useEffect(() => {
-    const listener = e => {
+    const listener = (e: any) => {
       if (!ref.current || ref.current.contains(e.target)) {
         return
       }
@@ -52,17 +56,14 @@ function useOnClickOutside(ref, handler) {
   })
 }
 
-const NavItem = props => {
-  const {
-    children,
-    setNavOpen,
-    item: { submenu = false, title, url, desc, id },
-  } = props
-
-  const initialState = { isOpen: false }
-  const [state, dispatch] = useReducer(reducer, initialState)
-  const { isOpen } = state
-  const ref = useRef()
+const NavItem: React.FC<NavItemProps> = ({
+  children,
+  setNavOpen,
+  item,
+  backgroundColor,
+}) => {
+  const [isOpen, dispatch] = useReducer(reducer, false)
+  const ref = useRef(null)
   useOnClickOutside(ref, dispatch)
 
   return (
@@ -75,62 +76,52 @@ const NavItem = props => {
       }
       isOpen={isOpen}
       ref={ref}
+      backgroundColor={backgroundColor}
     >
       {children ? (
         children
-      ) : submenu ? (
+      ) : item?.submenu ? (
         <Fragment>
           <SubMenuToggle
             href="#"
-            aria-haspopup={checkBreakpoint(theme.navBreakpoint) && 'true'}
+            aria-haspopup={checkBreakpoint(theme.navBreakpoint)}
             aria-expanded={isOpen}
-            aria-controls={id}
+            aria-controls={item.id}
             onClick={e => {
               e.preventDefault()
               dispatch({ type: 'toggle' })
             }}
           >
-            <span>{title}</span>
+            <span>{item.title}</span>
             <ChevronDownIcon />
           </SubMenuToggle>
-          <SubMenu
-            item={{ submenu, title, url, desc, id }}
-            isOpen={isOpen}
-            setNavOpen={setNavOpen}
-            setNavItemOpen={dispatch}
-          />
+          {item.submenu && (
+            <SubMenu
+              item={item}
+              isOpen={isOpen}
+              setNavOpen={setNavOpen}
+              setNavItemOpen={dispatch}
+              backgroundColor={backgroundColor}
+            />
+          )}
         </Fragment>
       ) : (
-        <MenuLink
-          to={url}
-          itemProp="url"
-          onClick={() =>
-            !checkBreakpoint(theme.navBreakpoint) && setNavOpen(false)
-          }
-        >
-          <span itemProp="name">{title}</span>
-        </MenuLink>
+        item?.url && (
+          <MenuLink
+            to={item.url}
+            itemProp="url"
+            onClick={() =>
+              !checkBreakpoint(theme.navBreakpoint) &&
+              setNavOpen &&
+              setNavOpen(false)
+            }
+          >
+            <span itemProp="name">{item.title}</span>
+          </MenuLink>
+        )
       )}
     </MenuItem>
   )
-}
-
-NavItem.propTypes = {
-  children: PropTypes.node,
-  setNavOpen: PropTypes.func,
-  item: PropTypes.shape({
-    title: PropTypes.string,
-    url: PropTypes.string,
-    desc: PropTypes.string,
-    id: PropTypes.string,
-    submenu: PropTypes.array,
-  }).isRequired,
-}
-
-NavItem.defaultProps = {
-  children: null,
-  setNavOpen: () => {},
-  item: {},
 }
 
 export default NavItem

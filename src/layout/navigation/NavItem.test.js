@@ -19,14 +19,16 @@ describe('Desktop version <NavItem/>', () => {
   })
 
   it('has the aria-haspopup attribute', () => {
-    const wrapper = shallow(<NavItem item={mockData} />)
+    const wrapper = shallow(
+      <NavItem item={mockData} backgroundColor="indigo" />
+    )
     expect(
       wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-haspopup')
     ).toBeTruthy()
   })
 
   it('displays the submenu on mouseenter and hides it on mouseleave', () => {
-    const wrapper = mount(<NavItem item={mockData} />)
+    const wrapper = mount(<NavItem item={mockData} backgroundColor="indigo" />)
     wrapper.simulate('mouseEnter')
     wrapper.update()
     expect(
@@ -41,7 +43,7 @@ describe('Desktop version <NavItem/>', () => {
   })
 
   it('toggles the submenu on click', () => {
-    const wrapper = mount(<NavItem item={mockData} />)
+    const wrapper = mount(<NavItem item={mockData} backgroundColor="indigo" />)
     const SubMenuToggle = wrapper.find('NavItemstyles__SubMenuToggle')
     const isOpen = SubMenuToggle.prop('aria-expanded')
 
@@ -61,14 +63,16 @@ describe('Desktop version <NavItem/>', () => {
 
 describe('Mobile version <NavItem/>', () => {
   it('has not the aria-haspopup attribute', () => {
-    const wrapper = shallow(<NavItem item={mockData} />)
+    const wrapper = shallow(
+      <NavItem item={mockData} backgroundColor="indigo" />
+    )
     expect(
       wrapper.find('NavItemstyles__SubMenuToggle').prop('aria-haspopup')
     ).toBeFalsy()
   })
 
   it('does not open/close on mouseenter or mouseleave', () => {
-    const wrapper = mount(<NavItem item={mockData} />)
+    const wrapper = mount(<NavItem item={mockData} backgroundColor="indigo" />)
     const isOpen = wrapper
       .find('NavItemstyles__SubMenuToggle')
       .prop('aria-expanded')
@@ -86,7 +90,7 @@ describe('Mobile version <NavItem/>', () => {
   })
 
   it('toggles the submenu on click', () => {
-    const wrapper = mount(<NavItem item={mockData} />)
+    const wrapper = mount(<NavItem item={mockData} backgroundColor="indigo" />)
     const SubMenuToggle = wrapper.find('NavItemstyles__SubMenuToggle')
     const isOpen = SubMenuToggle.prop('aria-expanded')
 
