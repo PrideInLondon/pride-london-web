@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import theme from '../../theme/theme'
+import { color } from 'styled-system'
+import { colors } from '../../theme/colors'
 import { handleUrl } from '../../utils/location-utils'
 import { CTALinkProps } from './CTALink.types'
 
-const StyledLink = styled.a`
-  border-bottom: 2px solid ${theme.colors.eucalyptusGreen};
+const StyledLink = styled.a<{ color?: string }>`
+  border-bottom: 2px solid ${colors.eucalyptusGreen};
   text-decoration: none;
-  color: ${theme.colors.black};
   transition: color 0.15s linear;
 
   & + .cta-link {
@@ -16,9 +16,14 @@ const StyledLink = styled.a`
   }
   &:hover,
   &:focus {
-    color: ${theme.colors.eucalyptusGreen};
+    color: ${colors.eucalyptusGreen};
   }
+
+  ${color}
 `
+StyledLink.defaultProps = {
+  color: colors.black,
+}
 
 export const CTALink: React.FC<CTALinkProps> = ({ to, children, ...props }) => (
   <StyledLink<'a' | typeof Link>

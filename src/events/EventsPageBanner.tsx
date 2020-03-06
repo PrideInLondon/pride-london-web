@@ -1,6 +1,8 @@
 import React from 'react'
 import { Row, Column } from '../components/grid'
 import { checkBreakpoint } from '../utils/style-utils'
+import { CTALink } from '../components/ctaLink'
+import { colors } from '../theme/colors'
 import {
   StyledBanner,
   Title,
@@ -57,6 +59,11 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
           <ComingOut />
           <Title>{title}</Title>
           <Subtitle>{subtitle}</Subtitle>
+          <p>
+            <CTALink to="/events/about-coming-out" color={colors.white}>
+              Find out more
+            </CTALink>
+          </p>
         </div>
       </Column>
     </Row>
