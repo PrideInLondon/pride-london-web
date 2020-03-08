@@ -23,6 +23,9 @@ export function filterPastEvents(event) {
     : moment(event).isSameOrAfter(today) // assume event is date string if not event object
 }
 
+export const sortEventsByStartTime = (a, b) =>
+  a.node.startTime - b.node.startTime
+
 export function filterByLimit(event, index) {
   return index < this
 }

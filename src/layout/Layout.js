@@ -7,10 +7,11 @@ import { StaticQuery, graphql } from 'gatsby'
 import ReactHelmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 import { Helmet } from '../components/helmet'
-import { Provider } from '../appContext'
 import CookieNotice from '../cookieNotice'
 import Intercom from '../components/intercom'
+import EventsContext from '../contexts/eventsContext'
 import theme from '../theme/theme'
+import { filterPastEvents, sortEventsByStartTime } from '../events/helpers'
 import logo from '../assets/logo.svg'
 import metaImg from '../assets/logo.png'
 import { colors } from '../theme/colors'
@@ -128,7 +129,9 @@ const Layout = ({ children, location: { pathname } }) => (
         const metaUrl = pathname === '/' ? siteUrl : siteUrl + pathname
         const metaImgUrl = `${siteUrl}${metaImg}`
         return (
-          <Provider events={events}>
+          <EventsContext.Provider
+            value={events.filter(filterPastEvents).sort(sortEventsByStartTime)}
+          >
             <Fragment>
               <Helmet title={title} />
               <ReactHelmet
@@ -397,7 +400,7 @@ const Layout = ({ children, location: { pathname } }) => (
               </SiteWrapper>
               <Intercom />
             </Fragment>
-          </Provider>
+          </EventsContext.Provider>
         )
       }}
     />

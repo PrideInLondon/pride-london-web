@@ -4,6 +4,7 @@ import {
   sanitizeDates,
   generateEventSlug,
   extractEventIdFromSlug,
+  sortEventsByStartTime,
 } from './helpers'
 
 const yesterday = new Date()
@@ -46,6 +47,17 @@ describe('filterPastEvents', () => {
     const dates = ['1/3/2019', '12/12/2019']
     const expectedDates = ['01/03/2019', '12/12/2019']
     expect(sanitizeDates(dates)).toEqual(expectedDates)
+  })
+})
+
+describe('sortEventsByStartTime', () => {
+  it('sorts dates by start time to earliest first', () => {
+    const dates = Array(5)
+      .fill(0)
+      .map((_, index) => ({ node: { startTime: new Date(index) } }))
+    const jumbledDates = [dates[2], dates[0], dates[4], dates[3], dates[1]]
+    const actual = jumbledDates.sort(sortEventsByStartTime)
+    expect(actual).toEqual(dates)
   })
 })
 

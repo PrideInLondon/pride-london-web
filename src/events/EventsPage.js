@@ -4,7 +4,7 @@ import { Helmet } from '../components/helmet'
 import { colors } from '../theme/colors'
 import { Button } from '../components/button'
 import { Container, Row } from '../components/grid'
-import { AppContext } from '../appContext'
+import EventsContext from '../contexts/eventsContext'
 import { filterByLimit } from '../events/helpers'
 import constants from '../constants'
 import GroupedEventsCards from './GroupedEventsCards'
@@ -22,7 +22,7 @@ const EventsPage = ({
     file: { childImageSharp },
   },
 }) => {
-  const context = useContext(AppContext)
+  const events = useContext(EventsContext)
   const [numberOfEventsToShow, setNumberOfEventsToShow] = useState(
     constants.itemsToLoad - 1
   )
@@ -43,7 +43,7 @@ const EventsPage = ({
         <Container paddingTop={{ default: 0, md: '60px' }}>
           <Row>
             <ListingCardWrapper>
-              {context.state.events
+              {events
                 .filter(filterByLimit, numberOfEventsToShow)
                 .sort((event1, event2) => {
                   return (
@@ -62,18 +62,16 @@ const EventsPage = ({
                 ))}
             </ListingCardWrapper>
             <ColumnPagination width={1}>
-              <EventCount>{`You're viewing ${numberOfEventsToShow} of ${context.state.events.length} events`}</EventCount>
-              {numberOfEventsToShow < context.state.events.length && (
+              <EventCount>{`You're viewing ${numberOfEventsToShow} of ${events.length} events`}</EventCount>
+              {numberOfEventsToShow < events.length && (
                 <Button
                   onClick={() => {
                     const next = numberOfEventsToShow + constants.itemsToLoad
                     setNumberOfEventsToShow(
-                      next > context.state.events.length
-                        ? context.state.events.length
-                        : next
+                      next > events.length ? events.length : next
                     )
                   }}
-                  disabled={numberOfEventsToShow >= context.state.events.length}
+                  disabled={numberOfEventsToShow >= events.length}
                   width={{ default: '100%', md: 'auto' }}
                   variant="outline-white"
                 >
