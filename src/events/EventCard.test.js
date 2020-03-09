@@ -49,4 +49,99 @@ describe('generateDisplayDate', () => {
 
     expect(actual).toEqual('Mon, 01 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00')
   })
+
+  it('should display a range of dates if end time is a different day from the start time', () => {
+    const start = new Date(firstOfJune)
+    start.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    start.setHours(19, 30, 0)
+
+    const end = new Date(firstOfJune)
+    end.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    end.setHours(21, 0, 0)
+
+    const lastOccurrence = new Date(firstOfJune)
+    lastOccurrence.setMonth(firstOfJune.getMonth() + 1)
+    lastOccurrence.setDate(firstOfJune.getDate() + 2) // set to July 03
+
+    const actual = generateDisplayDate({
+      start,
+      end,
+      lastOccurrence,
+      now: firstOfJune,
+    })
+
+    expect(actual).toEqual(
+      'Mon, 01 Jul - Wed, 03 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
+    )
+  })
+
+  it('should display a range of dates starting at today if end time is a different day from the start time and event series has already started', () => {
+    const start = new Date(firstOfJune)
+    start.setMonth(firstOfJune.getMonth() - 1) // set to May 01
+    start.setHours(19, 30, 0)
+
+    const end = new Date(firstOfJune)
+    end.setMonth(firstOfJune.getMonth() - 1) // set to May 01
+    end.setHours(21, 0, 0)
+
+    const lastOccurrence = new Date(firstOfJune)
+    lastOccurrence.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+
+    const actual = generateDisplayDate({
+      start,
+      end,
+      lastOccurrence,
+      now: firstOfJune,
+    })
+
+    expect(actual).toEqual(
+      'Today - Mon, 01 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
+    )
+  })
+
+  it('should display a range of dates starting at today if end time is a different day from the start time and event series starts today', () => {
+    const start = new Date(firstOfJune) // set to June 01
+    start.setHours(19, 30, 0)
+
+    const end = new Date(firstOfJune) // set to June 01
+    end.setHours(21, 0, 0)
+
+    const lastOccurrence = new Date(firstOfJune)
+    lastOccurrence.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+
+    const actual = generateDisplayDate({
+      start,
+      end,
+      lastOccurrence,
+      now: firstOfJune,
+    })
+
+    expect(actual).toEqual(
+      'Today - Mon, 01 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
+    )
+  })
+
+  it('should display a range of dates starting at today if end time is a different day from the start time and event series starts tomorrow', () => {
+    const start = new Date(firstOfJune)
+    start.setDate(firstOfJune.getDate() + 1) // set to June 02
+    start.setHours(19, 30, 0)
+
+    const end = new Date(firstOfJune)
+    end.setDate(firstOfJune.getDate() + 1) // set to June 02
+    end.setHours(21, 0, 0)
+
+    const lastOccurrence = new Date(firstOfJune)
+    lastOccurrence.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+
+    const actual = generateDisplayDate({
+      start,
+      end,
+      lastOccurrence,
+      now: firstOfJune,
+    })
+
+    expect(actual).toEqual(
+      'Tomorrow - Mon, 01 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
+    )
+  })
 })

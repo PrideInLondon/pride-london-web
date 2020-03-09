@@ -12,7 +12,7 @@ import {
   CardFooter,
 } from '../components/card'
 import CalendarIcon from '../components/icons/calendarIcon'
-import { generateEventSlug } from './helpers'
+import { generateEventSlug, momentizeRecurrenceDate } from './helpers'
 import { generateDisplayDate } from './EventCard'
 
 const CardDate = styled.span`
@@ -84,6 +84,11 @@ const When = ({ startTime, endTime, recurrenceDates }) => (
     {generateDisplayDate({
       start: new Date(startTime),
       end: new Date(endTime),
+      lastOccurrence:
+        recurrenceDates &&
+        new Date(
+          momentizeRecurrenceDate(recurrenceDates[recurrenceDates.length - 1])
+        ),
     })}
   </CardDate>
 )

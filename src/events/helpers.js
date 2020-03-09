@@ -30,7 +30,7 @@ export function filterByLimit(event, index) {
   return index < this
 }
 
-const momentizeDate = date => {
+export const momentizeRecurrenceDate = date => {
   const [day, month, year] = date.split('/')
   // Create moment date, note month is zero-based in js
   return moment(new Date(parseInt(year), parseInt(month) - 1, parseInt(day)))
@@ -38,7 +38,7 @@ const momentizeDate = date => {
 
 export function sanitizeDates(dates) {
   const formattedDates = dates.reduce((acc, date) => {
-    const momentDate = momentizeDate(date)
+    const momentDate = momentizeRecurrenceDate(date)
     // Create array of valid dates
     return momentDate.isValid()
       ? [...acc, momentDate.format(constants.dateFormat)]
@@ -65,7 +65,7 @@ export const extractEventIdFromSlug = slug => {
 export const calculateEndTime = ({ startTime, endTime, recurrenceDates }) => {
   if (!recurrenceDates) return endTime
 
-  const lastOccurrence = momentizeDate(
+  const lastOccurrence = momentizeRecurrenceDate(
     recurrenceDates[recurrenceDates.length - 1]
   )
   const originalStartTime = moment(startTime)
