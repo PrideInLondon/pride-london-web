@@ -10,7 +10,11 @@ import CookieNotice from '../cookieNotice'
 import Intercom from '../components/intercom'
 import EventsContext from '../contexts/eventsContext'
 import theme from '../theme/theme'
-import { filterPastEvents, sortEventsByStartTime } from '../events/helpers'
+import {
+  filterPastEvents,
+  sortEventsByStartTime,
+  calculateEndTime,
+} from '../events/helpers'
 import logo from '../assets/logo.svg'
 import { colors } from '../theme/colors'
 import logoWhite from '../assets/logo-white.svg'
@@ -88,7 +92,9 @@ const Layout = ({ children, location: { pathname } }) => (
         site: { siteMetadata },
       }) => (
         <EventsContext.Provider
-          value={events.filter(filterPastEvents).sort(sortEventsByStartTime)}
+          value={events
+            .filter(event => filterPastEvents(calculateEndTime(event.node)))
+            .sort(sortEventsByStartTime)}
         >
           <Fragment>
             <Helmet title={siteMetadata.title} />

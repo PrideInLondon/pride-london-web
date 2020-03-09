@@ -45,12 +45,6 @@ const EventsPage = ({
             <ListingCardWrapper>
               {events
                 .filter(filterByLimit, numberOfEventsToShow)
-                .sort((event1, event2) => {
-                  return (
-                    new Date(event1.node.startTime) -
-                    new Date(event2.node.startTime)
-                  )
-                })
                 .map((event, index, events) => (
                   <GroupedEventsCards
                     events={events}
