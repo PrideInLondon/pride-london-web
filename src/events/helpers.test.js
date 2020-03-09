@@ -5,6 +5,7 @@ import {
   generateEventSlug,
   extractEventIdFromSlug,
   sortEventsByStartTime,
+  calculateEndTime,
 } from './helpers'
 
 const yesterday = new Date()
@@ -91,4 +92,20 @@ describe('extractEventIdFromSlug', () => {
       expect(actual).toEqual(expected)
     }
   )
+})
+
+describe('calculateEndTime', () => {
+  it('should calculate the end time of a non-recurring event', () => {
+    const actual = calculateEndTime({ endTime: '2020-03-04T00:00:00.000Z' })
+    expect(actual).toEqual('2020-03-04T00:00:00.000Z')
+  })
+
+  it('should calculate the end time of a recurring event', () => {
+    const actual = calculateEndTime({
+      startTime: '2020-03-04T00:00:00.000Z',
+      endTime: '2020-03-04T03:45:00.000Z', // duration should be 3h 45m
+      recurrenceDates: ['06/03/2020', '08/03/2020', '10/03/2020'],
+    })
+    expect(actual).toEqual('2020-03-10T03:45:00.000Z')
+  })
 })

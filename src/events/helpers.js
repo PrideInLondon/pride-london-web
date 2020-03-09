@@ -30,15 +30,15 @@ export function filterByLimit(event, index) {
   return index < this
 }
 
+const momentizeDate = date => {
+  const [day, month, year] = date.split('/')
+  // Create moment date, note month is zero-based in js
+  return moment(new Date(parseInt(year), parseInt(month) - 1, parseInt(day)))
+}
+
 export function sanitizeDates(dates) {
   const formattedDates = dates.reduce((acc, date) => {
-    const [day, month, year] = date.split('/')
-
-    // Create moment date, note month is zero-based in js
-    const momentDate = moment(
-      new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
-    )
-
+    const momentDate = momentizeDate(date)
     // Create array of valid dates
     return momentDate.isValid()
       ? [...acc, momentDate.format(constants.dateFormat)]
@@ -49,9 +49,7 @@ export function sanitizeDates(dates) {
   return Array.from(new Set([...formattedDates]))
 }
 
-export function getDuration(start, end) {
-  return moment(end).diff(moment(start))
-}
+export const getDuration = (start, end) => moment(end).diff(moment(start))
 
 export const generateEventSlug = ({ id, name }) =>
   `/event/${slugify(name, {
@@ -62,4 +60,20 @@ export const generateEventSlug = ({ id, name }) =>
 export const extractEventIdFromSlug = slug => {
   const [encodedId] = slug.split('-').slice(-1)
   return encoder.decode(encodedId.replace('/', ''))
+}
+
+export const calculateEndTime = ({ startTime, endTime, recurrenceDates }) => {
+  if (!recurrenceDates) return endTime
+
+  const lastOccurrence = momentizeDate(
+    recurrenceDates[recurrenceDates.length - 1]
+  )
+  const originalStartTime = moment(startTime)
+  const lastStartTime = lastOccurrence
+    .hours(originalStartTime.hours())
+    .minutes(originalStartTime.minutes())
+    .toISOString()
+  return moment(lastStartTime)
+    .add(getDuration(startTime, endTime), 'ms')
+    .toISOString()
 }
