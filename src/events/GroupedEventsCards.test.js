@@ -7,9 +7,9 @@ describe('The GroupedEventsCards component', () => {
   describe('Props', () => {
     const wrapper = shallow(
       <GroupedEventsCards
+        prevEvent={mockNodes[0]}
         event={testEvent}
         index={1}
-        events={mockNodes}
         toLoad={24}
       />
     )
@@ -34,12 +34,11 @@ describe('The GroupedEventsCards component', () => {
 
   describe('Animation Logic', () => {
     it('testing animation logic', () => {
-      const extendedMockNodes = new Array(25)
       const wrapper = shallow(
         <GroupedEventsCards
+          prevEvent={mockNodes[2]}
           event={testEvent}
           index={27}
-          events={[...extendedMockNodes, ...mockNodes]}
           toLoad={27}
         />
       )

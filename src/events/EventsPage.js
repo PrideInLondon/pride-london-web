@@ -45,9 +45,9 @@ const EventsPage = ({
             <ListingCardWrapper>
               {events
                 .filter(filterByLimit, numberOfEventsToShow)
-                .map((event, index, events) => (
+                .map((event, index, filteredEvents) => (
                   <GroupedEventsCards
-                    events={events}
+                    prevEvent={filteredEvents[index - 1]}
                     index={index}
                     event={event}
                     key={event.node.id + event.node.startTime}

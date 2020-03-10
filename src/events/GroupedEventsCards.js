@@ -26,22 +26,18 @@ const Wrapper = props => (
   />
 )
 
-const GroupedEventsCards = ({ event, index, events, toLoad }) => {
-  let header
+const generateHeader = ({ index, prevEvent, event }) => {
   const longDayOfMonth = 'dddd D MMM'
 
-  if (index === 0) {
-    header = moment(event.node.startTime).format(longDayOfMonth)
-  } else {
-    const startDate = moment(event.node.startTime).format(constants.dateFormat)
-    const prevStartDate = moment(events[index - 1].node.startTime).format(
-      constants.dateFormat
-    )
+  return index === 0
+    ? moment(event.node.startTime).format(longDayOfMonth)
+    : moment(event.node.startTime).format(constants.dateFormat) !==
+        moment(prevEvent.node.startTime).format(constants.dateFormat) &&
+        moment(event.node.startTime).format(longDayOfMonth)
+}
 
-    if (startDate !== prevStartDate) {
-      header = moment(event.node.startTime).format(longDayOfMonth)
-    }
-  }
+const GroupedEventsCards = ({ event, index, prevEvent, toLoad }) => {
+  const header = generateHeader({ index, prevEvent, event })
   return (
     <>
       {index === 3 && (
@@ -69,7 +65,7 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
 }
 
 GroupedEventsCards.propTypes = {
-  events: PropTypes.array.isRequired,
+  prevEvent: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
   event: PropTypes.object.isRequired,
   toLoad: PropTypes.number.isRequired,
