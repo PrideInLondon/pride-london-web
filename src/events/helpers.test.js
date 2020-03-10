@@ -56,8 +56,9 @@ describe('sortEventsByStartTime', () => {
     const dates = Array(5)
       .fill(0)
       .map((_, index) => ({ node: { startTime: new Date(index) } }))
-    const jumbledDates = [dates[2], dates[0], dates[4], dates[3], dates[1]]
-    const actual = jumbledDates.sort(sortEventsByStartTime)
+    const actual = [dates[2], dates[0], dates[4], dates[3], dates[1]].sort(
+      sortEventsByStartTime
+    )
     expect(actual).toEqual(dates)
   })
 })
