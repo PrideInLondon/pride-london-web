@@ -1,5 +1,8 @@
 import '@testing-library/jest-dom'
 import 'jest-styled-components'
+import { toHaveNoViolations } from 'jest-axe'
+
+expect.extend(toHaveNoViolations)
 
 interface CustomNodeJsGlobal extends NodeJS.Global {
   window: Window & { ResizeObserver: any }
