@@ -159,13 +159,18 @@ export default function EventInfoCard({
         title={locationName}
         detail={formatAddress(addressLine1, addressLine2, city, postcode)}
       />
-      {accessibilityOptions && accessibilityOptions.length > 0 && (
-        <Item
-          icon={<AccessibilityIcon />}
-          title="Accessibility"
-          detail={`${accessibilityOptions.join(', ')}.`}
-        />
-      )}
+      <Item
+        icon={<AccessibilityIcon />}
+        title="Accessibility"
+        detail={
+          !accessibilityOptions ||
+          accessibilityOptions.includes(
+            "My venue doesn't cater for any of these accessibility needs"
+          )
+            ? 'Accessibility is limited. Please contact venue for further info.'
+            : `${accessibilityOptions.join(', ')}.`
+        }
+      />
       {venueDetails &&
         venueDetails.indexOf(VENUE_DETAILS.genderNeutralToilets) > -1 && (
           <Item icon={<GenderIcon />} detail="Gender neutral toilets" />
