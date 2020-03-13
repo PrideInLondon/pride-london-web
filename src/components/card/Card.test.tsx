@@ -1,4 +1,5 @@
 import React from 'react'
+import { axe } from 'jest-axe'
 import { render } from '../../utils/testing-utils'
 import logo from '../../assets/logo.png'
 import { Card, CardImage, CardContent, CardTitle, CardFooter } from './Card'
@@ -25,6 +26,12 @@ const MockCard: React.FC<CardProps> = ({ variant }) => (
     </CardContent>
   </Card>
 )
+
+it('should have no accessibility violations', async () => {
+  const { container } = render(<MockCard />)
+  const results = await axe(container)
+  expect(results).toHaveNoViolations()
+})
 
 it('should render a card which is a link', () => {
   const { container } = render(<MockCard />)
