@@ -26,14 +26,27 @@ const Wrapper = props => (
   />
 )
 
-const generateHeader = ({ index, prevEvent, event }) => {
-  const longDayOfMonth = 'dddd D MMM'
+export const generateHeader = ({ index, prevEvent, event }) => {
+  const prevStartDate =
+    prevEvent && moment(prevEvent.node.startTime).format(constants.dateFormat)
+  const currStartDate = moment(event.node.startTime).format(
+    constants.dateFormat
+  )
 
-  return index === 0
-    ? moment(event.node.startTime).format(longDayOfMonth)
-    : moment(event.node.startTime).format(constants.dateFormat) !==
-        moment(prevEvent.node.startTime).format(constants.dateFormat) &&
-        moment(event.node.startTime).format(longDayOfMonth)
+  const prevIsRecurring = prevEvent && !!prevEvent.node.recurrenceDates
+  const currIsRecurring = !!event.node.recurrenceDates
+
+  // first event on page
+  // OR events do not begin on the same day
+  // OR one is single and one is recurring
+  return (
+    (index === 0 ||
+      prevStartDate !== currStartDate ||
+      prevIsRecurring !== currIsRecurring) &&
+    `${currIsRecurring ? 'From ' : ''}${moment(event.node.startTime).format(
+      'dddd D MMM'
+    )}`
+  )
 }
 
 const GroupedEventsCards = ({ event, index, prevEvent, toLoad }) => {
