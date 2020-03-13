@@ -26,7 +26,7 @@ const Wrapper = props => (
   />
 )
 
-export const generateHeader = ({ index, prevEvent, event }) => {
+export const generateHeader = ({ prevEvent, event }) => {
   const prevStartDate =
     prevEvent && moment(prevEvent.node.startTime).format(constants.dateFormat)
   const currStartDate = moment(event.node.startTime).format(
@@ -36,21 +36,20 @@ export const generateHeader = ({ index, prevEvent, event }) => {
   const prevIsRecurring = prevEvent && !!prevEvent.node.recurrenceDates
   const currIsRecurring = !!event.node.recurrenceDates
 
-  // first event on page
+  // EITHER first event on page
   // OR events do not begin on the same day
   // OR one is single and one is recurring
-  return (
-    (index === 0 ||
-      prevStartDate !== currStartDate ||
-      prevIsRecurring !== currIsRecurring) &&
-    `${currIsRecurring ? 'From ' : ''}${moment(event.node.startTime).format(
-      'dddd D MMM'
-    )}`
-  )
+  return !prevEvent ||
+    prevStartDate !== currStartDate ||
+    prevIsRecurring !== currIsRecurring
+    ? `${currIsRecurring ? 'From ' : ''}${moment(event.node.startTime).format(
+        'dddd D MMM'
+      )}`
+    : null
 }
 
 const GroupedEventsCards = ({ event, index, prevEvent, toLoad }) => {
-  const header = generateHeader({ index, prevEvent, event })
+  const header = generateHeader({ prevEvent, event })
   return (
     <>
       {index === 3 && (
