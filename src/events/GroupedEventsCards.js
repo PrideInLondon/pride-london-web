@@ -27,22 +27,22 @@ const Wrapper = props => (
   />
 )
 
-const generateDateHeader = ({ prevEvent, currEvent }) => {
-  const formatEventStart = event =>
-    moment(event.node.startTime).format(constants.dateFormat)
-
-  const currStartDate = formatEventStart(currEvent)
-  const prevStartDate = prevEvent && formatEventStart(prevEvent)
-
-  if (!prevEvent || currStartDate !== prevStartDate)
-    return moment(currEvent.node.startTime).format('dddd DD MMM')
-}
-
 const GroupedEventsCards = ({ event, index, events, toLoad }) => {
-  const header = generateDateHeader({
-    prevEvent: events[index - 1],
-    currEvent: event,
-  })
+  let header
+  const longDayOfMonth = 'dddd D MMM'
+
+  if (index === 0) {
+    header = moment(event.node.startTime).format(longDayOfMonth)
+  } else {
+    const startDate = moment(event.node.startTime).format(constants.dateFormat)
+    const prevStartDate = moment(events[index - 1].node.startTime).format(
+      constants.dateFormat
+    )
+
+    if (startDate !== prevStartDate) {
+      header = moment(event.node.startTime).format(longDayOfMonth)
+    }
+  }
   return (
     <>
       {index === 3 && (
