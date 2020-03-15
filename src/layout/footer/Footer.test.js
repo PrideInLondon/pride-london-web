@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import * as Intercom from 'react-intercom'
-import uuid from 'uuid/v4'
+import { v4 as uuid } from 'uuid'
 import Footer from './Footer'
 
 const generateMockSponsors = numberOfSponsors => ({

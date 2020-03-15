@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import moment from 'moment'
 import ChevronIcon from '../../components/icons/chevronIcon'
-import { Consumer } from '../../appContext'
+import EventsContext from '../../contexts/eventsContext'
 import { Container, Row, Column } from '../../components/grid'
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
@@ -59,52 +58,36 @@ const GreyWrapper = styled.div`
   background-color: ${theme.colors.lightGrey};
 `
 
-const filterEventsYouMayLike = (events, eventId) => {
-  const filteredEvents = events.filter(event => {
-    if (event.node.id === eventId) return false
+const filterNextThreeEvents = (events, eventId) =>
+  events.filter(event => event.node.id !== eventId).splice(0, 3)
 
-    return moment(event.node.startTime).diff(moment(), 'hours') > 0
-  })
-
-  return filteredEvents.splice(0, 3)
+export const EventsYouMayLike = ({ eventId }) => {
+  const events = useContext(EventsContext)
+  const eventsYouMayLike = filterNextThreeEvents(events, eventId)
+  return eventsYouMayLike.length > 0 ? (
+    <GreyWrapper>
+      <StyledContainer>
+        <HeadingRow>
+          <Heading>You may also like</Heading>
+          <ViewAll href="/events">
+            View all<DesktopOnly>&nbsp;events</DesktopOnly>&nbsp;
+            <ChevronIcon />
+          </ViewAll>
+        </HeadingRow>
+        <Row>
+          {eventsYouMayLike.map(event => (
+            <FlexColumn
+              width={{ default: 1, sm: 0.5, lg: 0.3333 }}
+              key={event.node.id}
+            >
+              <EventListingCard event={event.node} />
+            </FlexColumn>
+          ))}
+        </Row>
+      </StyledContainer>
+    </GreyWrapper>
+  ) : null
 }
-
-export const EventsYouMayLike = ({ eventId }) => (
-  <Consumer>
-    {context => {
-      const eventsYouMayLike = filterEventsYouMayLike(
-        context.state.events,
-        eventId
-      )
-
-      if (eventsYouMayLike.length === 0) return null
-
-      return (
-        <GreyWrapper>
-          <StyledContainer>
-            <HeadingRow>
-              <Heading>You may also like</Heading>
-              <ViewAll href="/events">
-                View all<DesktopOnly>&nbsp;events</DesktopOnly>&nbsp;
-                <ChevronIcon />
-              </ViewAll>
-            </HeadingRow>
-            <Row>
-              {eventsYouMayLike.map(event => (
-                <FlexColumn
-                  width={{ default: 1, sm: 0.5, lg: 0.3333 }}
-                  key={event.node.id}
-                >
-                  <EventListingCard event={event.node} />
-                </FlexColumn>
-              ))}
-            </Row>
-          </StyledContainer>
-        </GreyWrapper>
-      )
-    }}
-  </Consumer>
-)
 
 EventsYouMayLike.propTypes = {
   eventId: PropTypes.string.isRequired,
