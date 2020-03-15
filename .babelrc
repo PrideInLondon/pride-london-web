@@ -11,7 +11,8 @@
   ],
   "env": {
     "test": {
-      "plugins": ["babel-plugin-remove-graphql-queries"]
+      "plugins": ["babel-plugin-remove-graphql-queries", "@babel/plugin-transform-runtime"]
     }
   }
 }
+

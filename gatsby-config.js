@@ -36,7 +36,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-layout',
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/layout/Layout.js'),
+      },
+    },
     'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-source-contentful',
@@ -90,7 +95,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/theme/assets/images`,
+        path: `${__dirname}/src`,
       },
     },
     `gatsby-transformer-sharp`,

@@ -5,12 +5,17 @@ import {
   getDuration,
   filterPastEvents,
   generateEventSlug,
-} from './src/features/events/helpers'
-
+} from './src/events/helpers'
 import constants from './src/constants'
-exports.sourceNodes = ({ actions }) => {
-  const { createTypes } = actions
-  const typeDefs = `
+
+const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
+const EventPage = path.resolve('./src/events/event/EventPage.js')
+const GenericContentPage = path.resolve(
+  './src/genericContentPage/GenericContentPage.js'
+)
+
+exports.sourceNodes = ({ actions: { createTypes } }) =>
+  createTypes(`
     type ContentfulEvent implements Node {
       sponsorSection: ContentfulSponsorSection @link(from: "sponsorSection___NODE")
     }
@@ -18,14 +23,9 @@ exports.sourceNodes = ({ actions }) => {
       displayName: String!
       sponsors: [ContentfulSponsor!] @link(from: "sponsors___NODE")
     }
-  `
+  `)
 
-  createTypes(typeDefs)
-}
-
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const events = await graphql(`
     {
       events: allContentfulEvent(filter: {}) {
@@ -61,10 +61,6 @@ exports.createPages = async ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const GenericContentPage = path.resolve(
-      './src/templates/genericContentPage.js'
-    )
-
     result.data.genericContentPages.edges.forEach(edge => {
       createPage({
         path: `/${edge.node.slug}/`,
@@ -75,7 +71,6 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
 
-    const eventTemplate = path.resolve('./src/templates/event.js')
     // Don't create pages for past events
     result.data.events.edges.forEach(edge => {
       if (!edge.node.recurrenceDates) {
@@ -87,7 +82,7 @@ exports.createPages = async ({ graphql, actions }) => {
             // optional but is often necessary so the template
             // can query data specific to each page.
             path: generateEventSlug({ ...edge.node }),
-            component: eventTemplate,
+            component: EventPage,
             context: {
               id: edge.node.id,
               startTime: edge.node.startTime,
@@ -96,12 +91,10 @@ exports.createPages = async ({ graphql, actions }) => {
           })
         }
       } else {
-        const recurrenceDates = sanitizeDates([
+        sanitizeDates([
           moment(edge.node.startTime).format(constants.dateFormat),
           ...edge.node.recurrenceDates,
-        ])
-
-        recurrenceDates.forEach(date => {
+        ]).forEach(date => {
           const originalStartTime = moment(edge.node.startTime)
           const startTime = moment(date, constants.dateFormat)
             .hours(originalStartTime.hours())
@@ -116,7 +109,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 ...edge.node,
                 occurrence: startTime,
               }),
-              component: eventTemplate,
+              component: EventPage,
               context: {
                 id: edge.node.id,
                 startTime,
@@ -128,17 +121,17 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     })
 
-    const blogDetailsTemplate = path.resolve('./src/templates/blogDetails.js')
     result.data.articles.edges.forEach(edge => {
       createPage({
         path: `/${edge.node.slug}/`,
-        component: blogDetailsTemplate,
+        component: ArticlePage,
         context: {
           id: edge.node.id,
         },
       })
     })
   })
+
   return events
 }
 

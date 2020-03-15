@@ -1,4 +1,4 @@
-import { lg, md, sm, xl } from './breakpoints'
+import { lg, md, sm, xl, nav } from './breakpoints'
 
 export const mediaQueries = {
   /**
@@ -8,6 +8,7 @@ export const mediaQueries = {
   md: `@media screen and (min-width: ${md}px)`,
   lg: `@media screen and (min-width: ${lg}px)`,
   xl: `@media screen and (min-width: ${xl}px)`,
+  nav: `@media screen and (min-width: ${nav}px)`,
   /**
    * Max-width media queries
    */
@@ -15,6 +16,7 @@ export const mediaQueries = {
   mdMax: `@media screen and (max-width: ${md - 1}px)`,
   lgMax: `@media screen and (max-width: ${lg - 1}px)`,
   xlMax: `@media screen and (max-width: ${xl - 1}px)`,
+  navMax: `@media screen and (max-width: ${nav - 1}px)`,
   /**
    * Microsoft Edge specific media query
    */

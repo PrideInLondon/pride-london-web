@@ -1,6 +1,5 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
-import toJSON from 'enzyme-to-json'
+import { mount } from 'enzyme'
 import { CTALink } from './CTALink'
 
 const link = {
@@ -11,11 +10,6 @@ const link = {
 }
 
 describe('<CTALink/>', () => {
-  it('should render and match snapshot', () => {
-    const wrapper = shallow(<CTALink to={link.url}>{link.text}</CTALink>)
-    expect(toJSON(wrapper)).toMatchSnapshot()
-  })
-
   it('should render a Link component', () => {
     const wrapper = mount(<CTALink to={link.url}>{link.text}</CTALink>)
     expect(wrapper.find('GatsbyLink')).toHaveLength(1)

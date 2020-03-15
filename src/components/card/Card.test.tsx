@@ -1,8 +1,9 @@
 import React from 'react'
-import { render } from '../../utilities/testing'
+import { axe } from 'jest-axe'
+import { render } from '../../utils/testing-utils'
+import logo from '../../assets/logo.png'
 import { Card, CardImage, CardContent, CardTitle, CardFooter } from './Card'
 import { CardProps } from './Card.types'
-import umbrellaJpg from './umbrella.jpg'
 
 const MockCard: React.FC<CardProps> = ({ variant }) => (
   <Card variant={variant} to="/">
@@ -10,10 +11,10 @@ const MockCard: React.FC<CardProps> = ({ variant }) => (
       image={{
         width: 200,
         height: 200,
-        src: umbrellaJpg,
-        srcSet: umbrellaJpg,
+        src: logo,
+        srcSet: logo,
       }}
-      alt="A rainbow umbrella"
+      alt="Pride in London logo"
     />
     <CardContent>
       <CardTitle>This is the title</CardTitle>
@@ -26,17 +27,23 @@ const MockCard: React.FC<CardProps> = ({ variant }) => (
   </Card>
 )
 
-test('it should render a card which is a link', () => {
+it('should have no accessibility violations', async () => {
+  const { container } = render(<MockCard />)
+  const results = await axe(container)
+  expect(results).toHaveNoViolations()
+})
+
+it('should render a card which is a link', () => {
   const { container } = render(<MockCard />)
   expect(container.firstChild?.nodeName).toBe('A')
 })
 
-test('it should render a Gatsby Image', () => {
+it('should render a Gatsby Image', () => {
   const { container } = render(<MockCard />)
   expect(container.querySelector('.gatsby-image-wrapper')).toBeTruthy()
 })
 
-test('it should render a column or row variant when the prop is passed', () => {
+it('should render a column or row variant when the prop is passed', () => {
   const { container, rerender } = render(<MockCard variant="column" />)
   expect(container.firstChild).toHaveStyle('flex-direction: column;')
   rerender(<MockCard variant="row" />)

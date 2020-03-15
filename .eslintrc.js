@@ -1,6 +1,11 @@
 module.exports = {
-  extends: ['prettier', 'react-app', 'plugin:import/typescript'],
-  plugins: ['prettier', 'react', 'react-hooks', '@typescript-eslint'],
+  extends: [
+    'prettier',
+    'react-app',
+    'plugin:import/typescript',
+    'plugin:jest/recommended',
+  ],
+  plugins: ['prettier', 'react', 'react-hooks', '@typescript-eslint', 'jest'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
@@ -31,6 +36,15 @@ module.exports = {
     'import/no-named-as-default': 'off',
     'import/no-unresolved': 'error',
     'import/prefer-default-export': 'off',
+    'jest/consistent-test-it': [
+      'error',
+      {
+        fn: 'it',
+        withinDescribe: 'it',
+      },
+    ],
+    'jest/no-disabled-tests': 'error',
+    'jest/no-mocks-import': 'off',
     indent: 'off', // in conflict with prettier
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/no-redundant-roles': 'off',
