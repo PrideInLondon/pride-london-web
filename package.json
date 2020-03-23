@@ -24,7 +24,7 @@
     "@types/shortid": "^0.0.29",
     "dotenv": "^8.2.0",
     "gatsby": "^2.19.12",
-    "gatsby-image": "^2.2.40",
+    "gatsby-image": "^2.3.0",
     "gatsby-link": "^2.2.29",
     "gatsby-plugin-layout": "^1.1.22",
     "gatsby-plugin-offline": "^3.0.34",
