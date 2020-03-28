@@ -9,8 +9,6 @@ import {
   Subtitle,
   ResponsiveImg,
   ImgWrapper,
-  SponsorLogoWrapper,
-  SponsorLogoInner,
 } from './EventsPageBanner.styles'
 import { EventsPageBannerProps } from './EventsPageBanner.types'
 import { ComingOut } from './ComingOut'
@@ -20,7 +18,6 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
   subtitle,
   backgroundColor,
   image,
-  sponsor,
 }) => (
   <StyledBanner role="banner" backgroundColor={backgroundColor}>
     <Row
@@ -41,12 +38,6 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
                 : image.desktop
             }
           />
-          <SponsorLogoWrapper>
-            <span>Official launch partner</span>
-            <SponsorLogoInner>
-              <ResponsiveImg fixed={sponsor.fixed} alt="Diageo" />
-            </SponsorLogoInner>
-          </SponsorLogoWrapper>
         </ImgWrapper>
       </Column>
       <Column
