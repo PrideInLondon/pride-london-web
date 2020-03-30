@@ -55,6 +55,11 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
               Find out more
             </CTALink>
           </p>
+          <p>
+            <CTALink to="/events/list-your-event" color={colors.white}>
+              Get your event listed
+            </CTALink>
+          </p>
         </div>
       </Column>
     </Row>
