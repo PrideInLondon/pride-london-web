@@ -77,10 +77,14 @@ const GroupedEventsCards = ({ event, index, prevEvent, toLoad }) => {
 }
 
 GroupedEventsCards.propTypes = {
-  prevEvent: PropTypes.object.isRequired,
+  prevEvent: PropTypes.object,
   index: PropTypes.number.isRequired,
   event: PropTypes.object.isRequired,
   toLoad: PropTypes.number.isRequired,
+}
+
+GroupedEventsCards.defaultProps = {
+  prevEvent: null,
 }
 
 export default GroupedEventsCards
