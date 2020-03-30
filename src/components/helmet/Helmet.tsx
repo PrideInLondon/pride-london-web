@@ -1,8 +1,12 @@
 import React from 'react'
 import ReactHelmet from 'react-helmet'
-import PropTypes from 'prop-types'
 
-const Helmet = ({ title, description }) => {
+export interface HelmetProps {
+  title: string
+  description?: string
+}
+
+const Helmet: React.FC<HelmetProps> = ({ title, description }) => {
   return (
     <ReactHelmet
       title={title.includes('|') ? title : `${title} | Pride in London`}
@@ -14,11 +18,6 @@ const Helmet = ({ title, description }) => {
       ]}
     />
   )
-}
-
-Helmet.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
 }
 
 Helmet.defaultProps = {
