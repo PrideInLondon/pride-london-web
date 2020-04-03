@@ -6,10 +6,13 @@ export interface HelmetProps {
   description?: string
 }
 
+export const generateTitle = (title: string) =>
+  title.includes('|') ? title : `${title} | Pride in London`
+
 const Helmet: React.FC<HelmetProps> = ({ title, description }) => {
   return (
     <ReactHelmet
-      title={title.includes('|') ? title : `${title} | Pride in London`}
+      title={generateTitle(title)}
       meta={[
         {
           name: 'description',
