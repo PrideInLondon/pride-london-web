@@ -13,11 +13,12 @@ export const formatPrice = (eventPriceLow, eventPriceHigh) =>
 
 /**
  * @param {string} isoDate Date in format YYYY-MM-DDTHH:mm+HH:mm
+ * @param {string} [format] Optional time format, default is HH:mm
  */
-export const formatTime = isoDate =>
+export const formatTime = (isoDate, format = 'HH:mm') =>
   momentTz(isoDate)
     .tz('Europe/London')
-    .format('HH:mm')
+    .format(format)
 
 export function filterPastEvents(event) {
   const today = moment()

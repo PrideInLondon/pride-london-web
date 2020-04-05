@@ -34,10 +34,23 @@ describe('formatTime', () => {
     ${'2020-01-01T09:30+00:00'} | ${'09:30' /* 1st January 2020 09:30 UTC */}
     ${'2020-06-01T09:30+00:00'} | ${'10:30' /* 1st June 2020 09:30 UTC */}
     ${'2020-06-01T09:30+01:00'} | ${'09:30' /* 1st June 2020 09:30 BST */}
+    ${'2020-06-01T09:30+01:00'} | ${'09:30' /* 1st June 2020 09:30 BST */}
   `(
     'should format time $date as $expected according to current London timezone',
     ({ date, expected }) => {
       const actual = formatTime(date)
+      expect(actual).toEqual(expected)
+    }
+  )
+
+  it.each`
+    date                        | expected
+    ${'2020-01-01T09:30+00:00'} | ${'9:30am'}
+    ${'2020-01-01T19:30+00:00'} | ${'7:30pm'}
+  `(
+    'should format time $date with requested override format when supplied',
+    ({ date, expected }) => {
+      const actual = formatTime(date, 'h:mma')
       expect(actual).toEqual(expected)
     }
   )
