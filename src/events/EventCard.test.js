@@ -1,4 +1,8 @@
+import moment from 'moment'
+
 import { generateDisplayDate } from './EventCard'
+
+const formatToIsoDate = date => moment(date).format('YYYY-MM-DDTHH:mm+00:00')
 
 describe('generateDisplayDate', () => {
   let firstOfJanuary
@@ -17,7 +21,11 @@ describe('generateDisplayDate', () => {
     const end = new Date(firstOfJanuary)
     end.setHours(22, 0, 0)
 
-    const actual = generateDisplayDate({ start, end, now: firstOfJanuary })
+    const actual = generateDisplayDate({
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
+      now: firstOfJanuary,
+    })
 
     expect(actual).toEqual('Today\u00A0\u00A0•\u00A0\u00A019:00 - 22:00')
   })
@@ -31,7 +39,11 @@ describe('generateDisplayDate', () => {
     end.setDate(firstOfJanuary.getDate() + 1) // set to January 02
     end.setHours(20, 0, 0)
 
-    const actual = generateDisplayDate({ start, end, now: firstOfJanuary })
+    const actual = generateDisplayDate({
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
+      now: firstOfJanuary,
+    })
 
     expect(actual).toEqual('Tomorrow\u00A0\u00A0•\u00A0\u00A018:00 - 20:00')
   })
@@ -45,9 +57,31 @@ describe('generateDisplayDate', () => {
     end.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
     end.setHours(21, 0, 0)
 
-    const actual = generateDisplayDate({ start, end, now: firstOfJanuary })
+    const actual = generateDisplayDate({
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
+      now: firstOfJanuary,
+    })
 
     expect(actual).toEqual('Fri, 01 Feb\u00A0\u00A0•\u00A0\u00A019:30 - 21:00')
+  })
+
+  it('should display the day and date it occurs when event occurs 2 or more days from now and during BST', () => {
+    const start = new Date(firstOfJanuary)
+    start.setMonth(firstOfJanuary.getMonth() + 5) // set to June 01
+    start.setHours(19, 30, 0)
+
+    const end = new Date(firstOfJanuary)
+    end.setMonth(firstOfJanuary.getMonth() + 5) // set to June 01
+    end.setHours(21, 0, 0)
+
+    const actual = generateDisplayDate({
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
+      now: firstOfJanuary,
+    })
+
+    expect(actual).toEqual('Sat, 01 Jun\u00A0\u00A0•\u00A0\u00A020:30 - 22:00')
   })
 
   it('should display a range of dates if end time is a different day from the start time', () => {
@@ -64,8 +98,8 @@ describe('generateDisplayDate', () => {
     lastOccurrence.setDate(firstOfJanuary.getDate() + 2) // set to February 03
 
     const actual = generateDisplayDate({
-      start,
-      end,
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
       lastOccurrence,
       now: firstOfJanuary,
     })
@@ -88,8 +122,8 @@ describe('generateDisplayDate', () => {
     lastOccurrence.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
 
     const actual = generateDisplayDate({
-      start,
-      end,
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
       lastOccurrence,
       now: firstOfJanuary,
     })
@@ -110,8 +144,8 @@ describe('generateDisplayDate', () => {
     lastOccurrence.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
 
     const actual = generateDisplayDate({
-      start,
-      end,
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
       lastOccurrence,
       now: firstOfJanuary,
     })
@@ -134,8 +168,8 @@ describe('generateDisplayDate', () => {
     lastOccurrence.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
 
     const actual = generateDisplayDate({
-      start,
-      end,
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
       lastOccurrence,
       now: firstOfJanuary,
     })
