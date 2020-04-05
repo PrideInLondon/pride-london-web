@@ -1,5 +1,5 @@
 import querystring from 'querystring'
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
@@ -60,85 +60,70 @@ const IndigoWrapper = styled.div`
   `};
 `
 
-export default class EventDirectionsSection extends React.Component {
-  state = { width: null, height: null }
+const EventDirectionsSection = ({ data }) => {
+  const [width, setWidth] = useState(null)
+  const [height, setHeight] = useState(null)
+  const wrapperRef = useRef()
 
-  componentDidMount() {
-    this.updateMapSize()
-  }
-
-  componentDidUpdate() {
-    this.updateMapSize()
-  }
-
-  updateMapSize = () => {
-    if (this.wrapperRef) {
-      const rect = this.wrapperRef.getBoundingClientRect()
-      if (
-        rect.width !== this.state.width ||
-        rect.height !== this.state.height
-      ) {
-        this.setState({
-          width: rect.width,
-          height: rect.height,
-        })
+  const updateMapSize = currentRef => {
+    if (currentRef) {
+      const rect = currentRef.getBoundingClientRect()
+      if (rect.width !== width || rect.height !== height) {
+        setWidth(rect.width)
+        setHeight(rect.height)
       }
     }
   }
 
-  render() {
-    const {
-      location: { lat, lon },
-      locationName,
-      addressLine1,
-      addressLine2,
-      postcode,
-      city,
-    } = this.props.data
-    const { width, height } = this.state
+  useEffect(() => {
+    const { current } = wrapperRef
+    updateMapSize(current)
+  }, [])
 
-    return (
-      <IndigoWrapper>
-        <StyledContainer>
-          <Row>
-            <Heading>Getting to {locationName}</Heading>
-          </Row>
-          <MapLink
-            alt="Get directions to the venue"
-            ref={ref => (this.wrapperRef = ref)}
-            href={`https://www.google.com/maps/search/?api=1&${querystring.encode(
-              {
-                query: [
-                  locationName,
-                  addressLine1,
-                  addressLine2,
-                  city,
-                  postcode,
-                ]
-                  .filter(Boolean)
-                  .join(', '),
-              }
-            )}`}
-            style={{
-              backgroundImage:
-                Boolean(width && height) &&
-                `url(https://maps.googleapis.com/maps/api/staticmap?${querystring.encode(
-                  {
-                    center: `${lat}${','}${lon}`,
-                    zoom: 16,
-                    size: `${width}x${height}`,
-                    scale: 2,
-                    maptype: 'roadmap',
-                    markers: `color:red|label:${locationName}|${lat},${lon}`,
-                    key: process.env.GATSBY_GOOGLE_MAPS_API_KEY,
-                  }
-                )})`,
-            }}
-          />
-        </StyledContainer>
-      </IndigoWrapper>
-    )
-  }
+  const {
+    location: { lat, lon },
+    locationName,
+    addressLine1,
+    addressLine2,
+    postcode,
+    city,
+  } = data
+
+  return (
+    <IndigoWrapper>
+      <StyledContainer>
+        <Row>
+          <Heading>Getting to {locationName}</Heading>
+        </Row>
+        <MapLink
+          alt="Get directions to the venue"
+          ref={wrapperRef}
+          href={`https://www.google.com/maps/search/?api=1&${querystring.encode(
+            {
+              query: [locationName, addressLine1, addressLine2, city, postcode]
+                .filter(Boolean)
+                .join(', '),
+            }
+          )}`}
+          style={{
+            backgroundImage:
+              Boolean(width && height) &&
+              `url(https://maps.googleapis.com/maps/api/staticmap?${querystring.encode(
+                {
+                  center: `${lat}${','}${lon}`,
+                  zoom: 16,
+                  size: `${width}x${height}`,
+                  scale: 2,
+                  maptype: 'roadmap',
+                  markers: `color:red|label:${locationName}|${lat},${lon}`,
+                  key: process.env.GATSBY_GOOGLE_MAPS_API_KEY,
+                }
+              )})`,
+          }}
+        />
+      </StyledContainer>
+    </IndigoWrapper>
+  )
 }
 
 EventDirectionsSection.propTypes = {
@@ -168,3 +153,4 @@ export const query = graphql`
     postcode
   }
 `
+export default EventDirectionsSection
