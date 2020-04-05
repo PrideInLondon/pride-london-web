@@ -1,5 +1,6 @@
 import {
   formatTime,
+  formatShortTime,
   filterPastEvents,
   getDuration,
   sanitizeDates,
@@ -51,6 +52,22 @@ describe('formatTime', () => {
     'should format time $date with requested override format when supplied',
     ({ date, expected }) => {
       const actual = formatTime(date, 'h:mma')
+      expect(actual).toEqual(expected)
+    }
+  )
+})
+
+describe('formatShortTime', () => {
+  it.each`
+    date                          | expected
+    ${'2020-01-01T09:30:00.000Z'} | ${'9:30am'}
+    ${'2020-01-01T09:00:00.000Z'} | ${'9am'}
+    ${'2020-01-01T20:45:00.000Z'} | ${'8:45pm'}
+    ${'2020-01-01T20:00:00.000Z'} | ${'8pm'}
+  `(
+    'should render time as $expected when date is $date',
+    ({ date, expected }) => {
+      const actual = formatShortTime(date)
       expect(actual).toEqual(expected)
     }
   )

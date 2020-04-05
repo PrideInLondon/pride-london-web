@@ -20,6 +20,9 @@ export const formatTime = (isoDate, format = 'HH:mm') =>
     .tz('Europe/London')
     .format(format)
 
+export const formatShortTime = date =>
+  formatTime(date, 'h:mma').replace(':00', '')
+
 export function filterPastEvents(event) {
   const today = moment()
   return event.node && event.node.endTime
