@@ -3,6 +3,7 @@ import { render } from '@testing-library/react'
 
 import {
   formatDayRange,
+  formatTimeWithoutZeroes,
   formatTimeRange,
   formatAddress,
   Location,
@@ -56,6 +57,22 @@ describe('Location', () => {
     ({ platform, props, expected }) => {
       const { queryByText } = render(<Location {...{ platform, ...props }} />)
       expect(queryByText(expected)).toBeTruthy()
+    }
+  )
+})
+
+describe('formatTimeWithoutZeroes', () => {
+  it.each`
+    date                          | expected
+    ${'2020-01-01T09:30:00.000Z'} | ${'9:30am'}
+    ${'2020-01-01T09:00:00.000Z'} | ${'9am'}
+    ${'2020-01-01T20:45:00.000Z'} | ${'8:45pm'}
+    ${'2020-01-01T20:00:00.000Z'} | ${'8pm'}
+  `(
+    'should render time as $expected when date is $date',
+    ({ date, expected }) => {
+      const actual = formatTimeWithoutZeroes(date)
+      expect(actual).toEqual(expected)
     }
   )
 })
