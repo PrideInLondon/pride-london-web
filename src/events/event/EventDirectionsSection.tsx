@@ -100,7 +100,8 @@ const EventDirectionsSection: React.FC<EventDirectionsSectionProps> = ({
   useEffect(() => {
     const { current } = wrapperRef
     updateMapSize(current)
-  }, [updateMapSize])
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <IndigoWrapper>
