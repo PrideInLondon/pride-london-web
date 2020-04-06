@@ -3,7 +3,6 @@ import { BackgroundColorProps, color } from 'styled-system'
 import Img from 'gatsby-image'
 import { hideVisually } from 'polished'
 import { colors } from '../theme/colors'
-import { fonts } from '../theme/fonts'
 import { mediaQueries } from '../theme/mediaQueries'
 import left from './bannerLeft.svg'
 import right from './bannerRight.svg'
@@ -78,40 +77,4 @@ export const ResponsiveImg = styled(Img)`
     min-height: 100%;
     min-width: 100%;
   }
-`
-
-export const SponsorLogoWrapper = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: ${colors.white};
-  padding: 10px 10px 5px 10px;
-  width: 100px;
-
-  span {
-    display: block;
-    text-align: center;
-    font-size: 0.625rem;
-    color: ${colors.indigo};
-    font-family: ${fonts.title};
-    margin-bottom: 0.5em;
-  }
-
-  .gatsby-image-wrapper {
-    margin: 0;
-    max-width: 100%;
-    height: auto;
-  }
-
-  ${mediaQueries.md} {
-    padding: 20px 20px 15px 20px;
-    width: 150px;
-    span {
-      font-size: 0.875rem;
-    }
-  }
-`
-export const SponsorLogoInner = styled.div`
-  position: relative;
-  padding-top: 83.96%;
 `

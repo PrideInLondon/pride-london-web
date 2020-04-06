@@ -1,12 +1,9 @@
 import path from 'path'
-import moment from 'moment'
 import {
-  sanitizeDates,
-  getDuration,
   filterPastEvents,
   generateEventSlug,
+  calculateEndTime,
 } from './src/events/helpers'
-import constants from './src/constants'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
@@ -71,52 +68,18 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     })
 
-    // Don't create pages for past events
+    // don't create pages for past events
     result.data.events.edges.forEach(edge => {
-      if (!edge.node.recurrenceDates) {
-        //   Filter past events
-        if (filterPastEvents(edge)) {
-          createPage({
-            // Each page is required to have a `path` as well
-            // as a template component. The `context` is
-            // optional but is often necessary so the template
-            // can query data specific to each page.
-            path: generateEventSlug({ ...edge.node }),
-            component: EventPage,
-            context: {
-              id: edge.node.id,
-              startTime: edge.node.startTime,
-              endTime: edge.node.endTime,
-            },
-          })
-        }
-      } else {
-        sanitizeDates([
-          moment(edge.node.startTime).format(constants.dateFormat),
-          ...edge.node.recurrenceDates,
-        ]).forEach(date => {
-          const originalStartTime = moment(edge.node.startTime)
-          const startTime = moment(date, constants.dateFormat)
-            .hours(originalStartTime.hours())
-            .minutes(originalStartTime.minutes())
-            .toISOString()
-          const endTime = moment(startTime)
-            .add(getDuration(edge.node.startTime, edge.node.endTime), 'ms')
-            .toISOString()
-          if (filterPastEvents(endTime)) {
-            createPage({
-              path: generateEventSlug({
-                ...edge.node,
-                occurrence: startTime,
-              }),
-              component: EventPage,
-              context: {
-                id: edge.node.id,
-                startTime,
-                endTime,
-              },
-            })
-          }
+      const endTime = calculateEndTime(edge.node)
+      if (filterPastEvents(endTime)) {
+        createPage({
+          path: generateEventSlug({ ...edge.node }),
+          component: EventPage,
+          context: {
+            id: edge.node.id,
+            startTime: edge.node.startTime,
+            endTime,
+          },
         })
       }
     })

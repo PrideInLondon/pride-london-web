@@ -1,10 +1,11 @@
 import {
   filterPastEvents,
-  formatDate,
   getDuration,
   sanitizeDates,
   generateEventSlug,
   extractEventIdFromSlug,
+  sortEventsByStartTime,
+  calculateEndTime,
 } from './helpers'
 
 const yesterday = new Date()
@@ -25,16 +26,6 @@ const pastEvent = {
   },
 }
 
-const eventOneDay = {
-  startTime: '2019-06-03T06:00+00:00',
-  endTime: '2019-06-03T08:00+00:00',
-}
-
-const eventTwoDays = {
-  startTime: '2019-06-03T08:00+00:00',
-  endTime: '2019-06-04T11:30+00:00',
-}
-
 describe('filterPastEvents', () => {
   it('returns true if date is after today', () => {
     expect(filterPastEvents(futureEvent)).toBeTruthy()
@@ -46,19 +37,6 @@ describe('filterPastEvents', () => {
 
   it('returns true if date is after today and object is date string', () => {
     expect(filterPastEvents(futureEvent.node.endTime)).toBeTruthy()
-  })
-
-  it('format 1-day event date properly', () => {
-    const date = formatDate(eventOneDay)
-    const expectedDate = 'Mon 3 Jun'
-
-    expect(date.date).toBe(expectedDate)
-  })
-
-  it('format multi-days event date properly', () => {
-    const date = formatDate(eventTwoDays)
-    const expectedDate = 'Mon 3 - Tue 4 Jun'
-    expect(date.date).toBe(expectedDate)
   })
 
   it('returns 1 day as diff', () => {
@@ -73,18 +51,29 @@ describe('filterPastEvents', () => {
   })
 })
 
+describe('sortEventsByStartTime', () => {
+  it('sorts dates by start time to earliest first', () => {
+    const dates = Array(5)
+      .fill(0)
+      .map((_, index) => ({ node: { startTime: new Date(index) } }))
+    const actual = [dates[2], dates[0], dates[4], dates[3], dates[1]].sort(
+      sortEventsByStartTime
+    )
+    expect(actual).toEqual(dates)
+  })
+})
+
 describe('generateEventSlug', () => {
   it.each`
-    id                                        | name           | occurrence                     | expected
-    ${'cfaa55ae-9d84-4cac-bb3e-1bb84bd8ba0e'} | ${'foo'}       | ${null}                        | ${'/event/foo-6JrFngCyUZYHYY1Ay5ddWQ/'}
-    ${'9c84548d-5a59-4c59-ad6f-3f1d898ba001'} | ${'foo-bar'}   | ${null}                        | ${'/event/foo-bar-4lLHF5FUWwwHcy0A07KGMT/'}
-    ${'b2ff5bf6-20e5-491f-9706-8819f679ad7e'} | ${'foo - bar'} | ${null}                        | ${'/event/foo-bar-5RlKgiwNHXaWUkY7jck19y/'}
-    ${'a5a53094-22b6-4d38-b856-bd8fb6e005ff'} | ${'Foo: Bar'}  | ${null}                        | ${'/event/foo-bar-52ZE0IY5o9ABOqlQ7DtdPT/'}
-    ${'6d267faa-bffc-4d6c-b9c7-ede073d66d5e'} | ${'foo-bar'}   | ${'2019-12-07T19:00:00+01:00'} | ${'/event/foo-bar-071219-3JxkyCOjnotcjZEY5eqLU6/'}
+    id                                        | name           | expected
+    ${'cfaa55ae-9d84-4cac-bb3e-1bb84bd8ba0e'} | ${'foo'}       | ${'/event/foo-6JrFngCyUZYHYY1Ay5ddWQ/'}
+    ${'9c84548d-5a59-4c59-ad6f-3f1d898ba001'} | ${'foo-bar'}   | ${'/event/foo-bar-4lLHF5FUWwwHcy0A07KGMT/'}
+    ${'b2ff5bf6-20e5-491f-9706-8819f679ad7e'} | ${'foo - bar'} | ${'/event/foo-bar-5RlKgiwNHXaWUkY7jck19y/'}
+    ${'a5a53094-22b6-4d38-b856-bd8fb6e005ff'} | ${'Foo: Bar'}  | ${'/event/foo-bar-52ZE0IY5o9ABOqlQ7DtdPT/'}
   `(
     'should generate a URL-friendly slug for event with id $id and name $name',
-    ({ id, name, occurrence, expected }) => {
-      const actual = generateEventSlug({ id, name, occurrence })
+    ({ id, name, expected }) => {
+      const actual = generateEventSlug({ id, name })
       expect(actual).toEqual(expected)
     }
   )
@@ -92,12 +81,11 @@ describe('generateEventSlug', () => {
 
 describe('extractEventIdFromSlug', () => {
   it.each`
-    slug                                               | expected
-    ${'/event/foo-6JrFngCyUZYHYY1Ay5ddWQ/'}            | ${'cfaa55ae-9d84-4cac-bb3e-1bb84bd8ba0e'}
-    ${'/event/foo-bar-4lLHF5FUWwwHcy0A07KGMT/'}        | ${'9c84548d-5a59-4c59-ad6f-3f1d898ba001'}
-    ${'/event/foo-bar-5RlKgiwNHXaWUkY7jck19y/'}        | ${'b2ff5bf6-20e5-491f-9706-8819f679ad7e'}
-    ${'/event/foo-bar-52ZE0IY5o9ABOqlQ7DtdPT/'}        | ${'a5a53094-22b6-4d38-b856-bd8fb6e005ff'}
-    ${'/event/foo-bar-071219-3JxkyCOjnotcjZEY5eqLU6/'} | ${'6d267faa-bffc-4d6c-b9c7-ede073d66d5e'}
+    slug                                        | expected
+    ${'/event/foo-6JrFngCyUZYHYY1Ay5ddWQ/'}     | ${'cfaa55ae-9d84-4cac-bb3e-1bb84bd8ba0e'}
+    ${'/event/foo-bar-4lLHF5FUWwwHcy0A07KGMT/'} | ${'9c84548d-5a59-4c59-ad6f-3f1d898ba001'}
+    ${'/event/foo-bar-5RlKgiwNHXaWUkY7jck19y/'} | ${'b2ff5bf6-20e5-491f-9706-8819f679ad7e'}
+    ${'/event/foo-bar-52ZE0IY5o9ABOqlQ7DtdPT/'} | ${'a5a53094-22b6-4d38-b856-bd8fb6e005ff'}
   `(
     'should decode the event id from generated URL-friendly slug with slug $slug',
     ({ slug, expected }) => {
@@ -105,4 +93,20 @@ describe('extractEventIdFromSlug', () => {
       expect(actual).toEqual(expected)
     }
   )
+})
+
+describe('calculateEndTime', () => {
+  it('should calculate the end time of a non-recurring event', () => {
+    const actual = calculateEndTime({ endTime: '2020-03-04T00:00:00.000Z' })
+    expect(actual).toEqual('2020-03-04T00:00:00.000Z')
+  })
+
+  it('should calculate the end time of a recurring event', () => {
+    const actual = calculateEndTime({
+      startTime: '2020-03-04T00:00:00.000Z',
+      endTime: '2020-03-04T03:45:00.000Z', // duration should be 3h 45m
+      recurrenceDates: ['06/03/2020', '08/03/2020', '10/03/2020'],
+    })
+    expect(actual).toEqual('2020-03-10T03:45:00.000Z')
+  })
 })

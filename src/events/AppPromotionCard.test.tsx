@@ -21,7 +21,7 @@ describe('GroupedEventsCards: AppPromotionCard is rendered at a index of 3 in ',
     <GroupedEventsCards
       event={testEvent}
       index={3}
-      events={mockNodes}
+      prevEvent={mockNodes[2]}
       toLoad={24}
     />
   )
