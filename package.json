@@ -53,7 +53,7 @@
     "slugify": "^1.3.6",
     "string-hash": "^1.1.3",
     "styled-components": "^4.4.1",
-    "styled-system": "^5.1.4",
+    "styled-system": "^5.1.5",
     "tinycolor2": "^1.4.1",
     "use-onclickoutside": "^0.3.1",
     "uuid-encoder": "^1.2.0"
