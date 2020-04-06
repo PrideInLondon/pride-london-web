@@ -4,5 +4,9 @@
     "stylelint",
     "jest --findRelatedTests"
   ],
-  "*.md": "remark . --frail"
+  "*.md": "remark . --frail",
+  "package.json": [
+    "prettier-package-json --write",
+    "git add ."
+  ]
 }
