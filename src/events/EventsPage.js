@@ -16,6 +16,10 @@ import {
   EventCount,
 } from './EventsPage.styles'
 
+export const eventCount = (numberOfEventsToShow, eventsLength) => {
+  return `You're viewing ${numberOfEventsToShow} of ${eventsLength} events`
+}
+
 const EventsPage = ({
   data: {
     file: { childImageSharp },
@@ -25,6 +29,7 @@ const EventsPage = ({
   const [numberOfEventsToShow, setNumberOfEventsToShow] = useState(
     constants.itemsToLoad - 1
   )
+
   return (
     <>
       <Helmet
@@ -54,7 +59,9 @@ const EventsPage = ({
                 ))}
             </ListingCardWrapper>
             <ColumnPagination width={1}>
-              <EventCount>{`You're viewing ${numberOfEventsToShow} of ${events.length} events`}</EventCount>
+              <EventCount>
+                {eventCount(numberOfEventsToShow, events.length)}
+              </EventCount>
               {numberOfEventsToShow < events.length && (
                 <Button
                   onClick={() => {
