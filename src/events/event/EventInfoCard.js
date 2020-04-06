@@ -83,26 +83,23 @@ const VSpace = styled.div`
   margin-top: 15px;
 `
 
-const dateFormat = 'dddd D MMMM YYYY'
+export const formatDayRange = ({ startTime, endTime }) => {
+  const startMoment = moment(startTime)
+  const endMoment = moment(endTime)
 
-const formatDayRange = (startTime, endTime) => {
-  const startDate = moment(startTime).format('L')
-  const endDate = moment(endTime).format('L')
-
-  const sameDay =
-    startDate === endDate ||
-    (moment(endTime).format('Hms') === '000' &&
-      moment(endTime).diff(startTime, 'days') < 1)
-  if (sameDay) {
-    return startTime.format(dateFormat)
-  }
-  return `${startTime.format(dateFormat)} to ${endTime.format(dateFormat)}`
+  const dateFormat = 'dddd D MMMM YYYY'
+  // if same day, return full day
+  // if not same day, return a range
+  return startMoment.format('L') === endMoment.format('L') ||
+    (endMoment.format('Hms') === '000' && endMoment.diff(startTime, 'days') < 1)
+    ? startMoment.format(dateFormat)
+    : `${startMoment.format(dateFormat)} to ${endMoment.format(dateFormat)}`
 }
 
-const timeFormat = 'h:mma'
-
-const formatTimeRange = (startTime, endTime) =>
-  `${startTime.format(timeFormat)} to ${endTime.format(timeFormat)}`
+const formatTimeRange = (startTime, endTime) => {
+  const timeFormat = 'h:mma'
+  return `${startTime.format(timeFormat)} to ${endTime.format(timeFormat)}`
+}
 
 const formatAddress = (addressLine1, addressLine2, city, postcode) =>
   [addressLine1, addressLine2, [city, postcode].filter(Boolean).join(' ')]
@@ -124,7 +121,7 @@ const VENUE_DETAILS = {
   indoors: 'Indoors',
 }
 
-export default function EventInfoCard({
+const EventInfoCard = ({
   data: {
     locationName,
     addressLine1,
@@ -140,62 +137,60 @@ export default function EventInfoCard({
     accessibilityOptions,
   },
   pageContext: { startTime, endTime },
-}) {
-  return (
-    <Wrapper>
-      {startTime && endTime && (
-        <Item
-          icon={<DateIcon />}
-          title={formatDayRange(moment(startTime), moment(endTime))}
-          detail={formatTimeRange(moment(startTime), moment(endTime))}
-        />
-      )}
+}) => (
+  <Wrapper>
+    {startTime && endTime && (
       <Item
-        icon={<TicketIcon />}
-        title={formatPrice(eventPriceLow, eventPriceHigh)}
+        icon={<DateIcon />}
+        title={formatDayRange({ startTime, endTime })}
+        detail={formatTimeRange(moment(startTime), moment(endTime))}
       />
+    )}
+    <Item
+      icon={<TicketIcon />}
+      title={formatPrice(eventPriceLow, eventPriceHigh)}
+    />
+    <Item
+      icon={<MapPinIcon />}
+      title={locationName}
+      detail={formatAddress(addressLine1, addressLine2, city, postcode)}
+    />
+    {accessibilityOptions && accessibilityOptions.length > 0 && (
       <Item
-        icon={<MapPinIcon />}
-        title={locationName}
-        detail={formatAddress(addressLine1, addressLine2, city, postcode)}
+        icon={<AccessibilityIcon />}
+        title="Accessibility"
+        detail={`${accessibilityOptions.join(', ')}.`}
       />
-      {accessibilityOptions && accessibilityOptions.length > 0 && (
-        <Item
-          icon={<AccessibilityIcon />}
-          title="Accessibility"
-          detail={`${accessibilityOptions.join(', ')}.`}
-        />
+    )}
+    {venueDetails &&
+      venueDetails.indexOf(VENUE_DETAILS.genderNeutralToilets) > -1 && (
+        <Item icon={<GenderIcon />} detail="Gender neutral toilets" />
       )}
-      {venueDetails &&
-        venueDetails.indexOf(VENUE_DETAILS.genderNeutralToilets) > -1 && (
-          <Item icon={<GenderIcon />} detail="Gender neutral toilets" />
-        )}
-      {(email || phone || ticketingUrl) && <Hr />}
-      {email && (
-        <Item
-          icon={<MailIcon role="presentation" />}
-          detail={
-            <Link href={`mailto:${email}`} aria-label="email the venue">
-              {email}
-            </Link>
-          }
-        />
-      )}
-      {phone && (
-        <Item
-          icon={<PhoneIcon />}
-          detail={
-            <Link href={`tel:${phone}`} aria-label="call the venue">
-              {phone}
-            </Link>
-          }
-        />
-      )}
-      {(phone || email) && ticketingUrl && <VSpace />}
-      {ticketingUrl && <Button to={ticketingUrl}>Get tickets</Button>}
-    </Wrapper>
-  )
-}
+    {(email || phone || ticketingUrl) && <Hr />}
+    {email && (
+      <Item
+        icon={<MailIcon role="presentation" />}
+        detail={
+          <Link href={`mailto:${email}`} aria-label="email the venue">
+            {email}
+          </Link>
+        }
+      />
+    )}
+    {phone && (
+      <Item
+        icon={<PhoneIcon />}
+        detail={
+          <Link href={`tel:${phone}`} aria-label="call the venue">
+            {phone}
+          </Link>
+        }
+      />
+    )}
+    {(phone || email) && ticketingUrl && <VSpace />}
+    {ticketingUrl && <Button to={ticketingUrl}>Get tickets</Button>}
+  </Wrapper>
+)
 
 Item.propTypes = {
   title: PropTypes.string,
@@ -229,6 +224,8 @@ EventInfoCard.propTypes = {
     endTime: PropTypes.string.isRequired,
   }).isRequired,
 }
+
+export default EventInfoCard
 
 export const query = graphql`
   fragment eventInfoCardQuery on ContentfulEvent {

@@ -26,22 +26,30 @@ const Wrapper = props => (
   />
 )
 
-const GroupedEventsCards = ({ event, index, events, toLoad }) => {
-  let header
-  const longDayOfMonth = 'dddd D MMM'
+export const generateHeader = ({ prevEvent, event }) => {
+  const prevStartDate =
+    prevEvent && moment(prevEvent.node.startTime).format(constants.dateFormat)
+  const currStartDate = moment(event.node.startTime).format(
+    constants.dateFormat
+  )
 
-  if (index === 0) {
-    header = moment(event.node.startTime).format(longDayOfMonth)
-  } else {
-    const startDate = moment(event.node.startTime).format(constants.dateFormat)
-    const prevStartDate = moment(events[index - 1].node.startTime).format(
-      constants.dateFormat
-    )
+  const prevIsRecurring = prevEvent && !!prevEvent.node.recurrenceDates
+  const currIsRecurring = !!event.node.recurrenceDates
 
-    if (startDate !== prevStartDate) {
-      header = moment(event.node.startTime).format(longDayOfMonth)
-    }
-  }
+  // EITHER first event on page
+  // OR events do not begin on the same day
+  // OR one is single and one is recurring
+  return !prevEvent ||
+    prevStartDate !== currStartDate ||
+    prevIsRecurring !== currIsRecurring
+    ? `${currIsRecurring ? 'From ' : ''}${moment(event.node.startTime).format(
+        'dddd D MMM'
+      )}`
+    : null
+}
+
+const GroupedEventsCards = ({ event, index, prevEvent, toLoad }) => {
+  const header = generateHeader({ prevEvent, event })
   return (
     <>
       {index === 3 && (
@@ -69,10 +77,14 @@ const GroupedEventsCards = ({ event, index, events, toLoad }) => {
 }
 
 GroupedEventsCards.propTypes = {
-  events: PropTypes.array.isRequired,
+  prevEvent: PropTypes.object,
   index: PropTypes.number.isRequired,
   event: PropTypes.object.isRequired,
   toLoad: PropTypes.number.isRequired,
+}
+
+GroupedEventsCards.defaultProps = {
+  prevEvent: null,
 }
 
 export default GroupedEventsCards
