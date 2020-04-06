@@ -1,6 +1,5 @@
 import querystring from 'querystring'
 import React, { useEffect, useState, useRef } from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Container, Row } from '../../components/grid'
@@ -35,8 +34,8 @@ const Heading = styled.h2`
     color: white;
   `};
 `
-
-const MapLink = styled.a`
+// allowing any props type as alt prop causing type errors
+const MapLink: React.FC<any> = styled.a`
   display: block;
   height: 215px;
   background-size: cover;
@@ -59,13 +58,36 @@ const IndigoWrapper = styled.div`
     background-color: ${theme.colors.indigo};
   `};
 `
+interface EventDirectionsSectionProps {
+  data: {
+    location: {
+      lat: number
+      lon: number
+    }
+    locationName: string
+    addressLine1?: string
+    addressLine2?: string
+    postcode?: string
+    city?: string
+  }
+}
 
-const EventDirectionsSection = ({ data }) => {
-  const [width, setWidth] = useState(null)
-  const [height, setHeight] = useState(null)
-  const wrapperRef = useRef()
+const EventDirectionsSection: React.FC<EventDirectionsSectionProps> = ({
+  data,
+}) => {
+  const [width, setWidth] = useState<number | null>(null)
+  const [height, setHeight] = useState<number | null>(null)
+  const wrapperRef = useRef<HTMLAnchorElement>()
+  const {
+    location: { lat, lon },
+    locationName,
+    addressLine1,
+    addressLine2,
+    postcode,
+    city,
+  } = data
 
-  const updateMapSize = currentRef => {
+  const updateMapSize = (currentRef: HTMLAnchorElement | undefined): void => {
     if (currentRef) {
       const rect = currentRef.getBoundingClientRect()
       if (rect.width !== width || rect.height !== height) {
@@ -78,16 +100,7 @@ const EventDirectionsSection = ({ data }) => {
   useEffect(() => {
     const { current } = wrapperRef
     updateMapSize(current)
-  }, [])
-
-  const {
-    location: { lat, lon },
-    locationName,
-    addressLine1,
-    addressLine2,
-    postcode,
-    city,
-  } = data
+  }, [updateMapSize])
 
   return (
     <IndigoWrapper>
@@ -124,20 +137,6 @@ const EventDirectionsSection = ({ data }) => {
       </StyledContainer>
     </IndigoWrapper>
   )
-}
-
-EventDirectionsSection.propTypes = {
-  data: PropTypes.shape({
-    location: PropTypes.shape({
-      lat: PropTypes.number.isRequired,
-      lon: PropTypes.number.isRequired,
-    }),
-    locationName: PropTypes.string.isRequired,
-    addressLine1: PropTypes.string,
-    addressLine2: PropTypes.string,
-    postcode: PropTypes.string,
-    city: PropTypes.string,
-  }).isRequired,
 }
 
 export const query = graphql`
