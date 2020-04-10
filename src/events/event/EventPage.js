@@ -37,6 +37,7 @@ const EventPage = ({
       eventCategories,
       ticketingUrl,
       accessibilityDetails,
+      location2,
       location,
       locationName,
       addressLine1,
@@ -110,29 +111,32 @@ const EventPage = ({
             property: 'og:description',
             content: eventDescription,
           },
-          {
-            property: 'og:latitude',
-            content: location && location.lat,
-          },
-          {
-            property: 'og:longitude',
-            content: location && location.lon,
-          },
-          {
-            property: 'og:street-address',
-            content:
-              addressLine1 && addressLine2
-                ? `${locationName}, ${addressLine1}, ${addressLine2}`
-                : `${locationName}, ${addressLine1}`,
-          },
-          {
-            property: 'og:locality',
-            content: city,
-          },
-          {
-            property: 'og:postal-code',
-            content: postcode,
-          },
+          ...(isVirtualEvent({ location2 })
+            ? []
+            : [
+                {
+                  property: 'og:latitude',
+                  content: location.lat,
+                },
+                {
+                  property: 'og:longitude',
+                  content: location.lon,
+                },
+                {
+                  property: 'og:street-address',
+                  content: `${locationName}, ${addressLine1}${
+                    addressLine2 ? `, ${addressLine2}` : ''
+                  }`,
+                },
+                {
+                  property: 'og:locality',
+                  content: city,
+                },
+                {
+                  property: 'og:postal-code',
+                  content: postcode,
+                },
+              ]),
           {
             property: 'og:url',
             content: metaUrl,
@@ -270,7 +274,7 @@ const EventPage = ({
           </Column>
         </Row>
       </Container>
-      {!isVirtualEvent(contentfulEvent) && (
+      {!isVirtualEvent({ location2 }) && (
         <EventDirectionsSection data={contentfulEvent} />
       )}
       <EventsYouMayLike eventId={id} />
