@@ -270,7 +270,7 @@ const EventPage = ({
           </Column>
         </Row>
       </Container>
-      {(!isVirtualEvent(contentfulEvent) || !location) && (
+      {(!isVirtualEvent(contentfulEvent) || location) && (
         <EventDirectionsSection data={contentfulEvent} />
       )}
       <EventsYouMayLike eventId={id} />
