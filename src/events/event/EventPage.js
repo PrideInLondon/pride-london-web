@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown'
 import { Container, Row, Column } from '../../components/grid'
 import { checkBreakpoint } from '../../utils/style-utils'
 import { SponsorsSubSection, renderSponsors } from '../../sponsors'
+import { isVirtualEvent } from '../helpers'
 import EventTagList from './EventTagList'
 import EventSchedule from './EventSchedule'
 import EventsYouMayLike from './EventsYouMayLike'
@@ -111,19 +112,18 @@ const EventPage = ({
           },
           {
             property: 'og:latitude',
-            content: location.lat,
+            content: location && location.lat,
           },
           {
             property: 'og:longitude',
-            content: location.lon,
+            content: location && location.lon,
           },
           {
             property: 'og:street-address',
-            content: !addressLine1
-              ? ''
-              : addressLine2
-              ? `${locationName}, ${addressLine1}, ${addressLine2}`
-              : `${locationName}, ${addressLine1}`,
+            content:
+              addressLine1 && addressLine2
+                ? `${locationName}, ${addressLine1}, ${addressLine2}`
+                : `${locationName}, ${addressLine1}`,
           },
           {
             property: 'og:locality',
@@ -270,7 +270,9 @@ const EventPage = ({
           </Column>
         </Row>
       </Container>
-      <EventDirectionsSection data={contentfulEvent} />
+      {!isVirtualEvent(contentfulEvent) && (
+        <EventDirectionsSection data={contentfulEvent} />
+      )}
       <EventsYouMayLike eventId={id} />
     </PageWrapper>
   )
