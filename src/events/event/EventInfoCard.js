@@ -134,6 +134,7 @@ const EventInfoCard = ({
     phone,
     venueDetails,
     ticketingUrl,
+    cta,
     accessibilityOptions,
   },
   pageContext: { startTime, endTime },
@@ -188,7 +189,7 @@ const EventInfoCard = ({
       />
     )}
     {(phone || email) && ticketingUrl && <VSpace />}
-    {ticketingUrl && <Button to={ticketingUrl}>Get tickets</Button>}
+    {ticketingUrl && <Button to={ticketingUrl}>{cta}</Button>}
   </Wrapper>
 )
 
@@ -215,6 +216,7 @@ EventInfoCard.propTypes = {
     email: PropTypes.string,
     phone: PropTypes.string,
     ticketingUrl: PropTypes.string,
+    cta: PropTypes.string,
     accessibilityOptions: PropTypes.arrayOf(PropTypes.string),
     venueDetails: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
@@ -239,6 +241,7 @@ export const query = graphql`
     email
     phone
     ticketingUrl
+    cta
     accessibilityOptions
     venueDetails
   }
