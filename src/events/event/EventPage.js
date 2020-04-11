@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown'
 import { Container, Row, Column } from '../../components/grid'
 import { checkBreakpoint } from '../../utils/style-utils'
 import { SponsorsSubSection, renderSponsors } from '../../sponsors'
+import { isVirtualEvent } from '../helpers'
 import EventTagList from './EventTagList'
 import EventSchedule from './EventSchedule'
 import EventsYouMayLike from './EventsYouMayLike'
@@ -37,6 +38,7 @@ const EventPage = ({
       ticketingUrl,
       cta,
       accessibilityDetails,
+      location2,
       location,
       locationName,
       addressLine1,
@@ -110,30 +112,32 @@ const EventPage = ({
             property: 'og:description',
             content: eventDescription,
           },
-          {
-            property: 'og:latitude',
-            content: location.lat,
-          },
-          {
-            property: 'og:longitude',
-            content: location.lon,
-          },
-          {
-            property: 'og:street-address',
-            content: !addressLine1
-              ? ''
-              : addressLine2
-              ? `${locationName}, ${addressLine1}, ${addressLine2}`
-              : `${locationName}, ${addressLine1}`,
-          },
-          {
-            property: 'og:locality',
-            content: city,
-          },
-          {
-            property: 'og:postal-code',
-            content: postcode,
-          },
+          ...(isVirtualEvent({ location2 })
+            ? []
+            : [
+                {
+                  property: 'og:latitude',
+                  content: location.lat,
+                },
+                {
+                  property: 'og:longitude',
+                  content: location.lon,
+                },
+                {
+                  property: 'og:street-address',
+                  content: `${locationName}, ${addressLine1}${
+                    addressLine2 ? `, ${addressLine2}` : ''
+                  }`,
+                },
+                {
+                  property: 'og:locality',
+                  content: city,
+                },
+                {
+                  property: 'og:postal-code',
+                  content: postcode,
+                },
+              ]),
           {
             property: 'og:url',
             content: metaUrl,
@@ -271,7 +275,9 @@ const EventPage = ({
           </Column>
         </Row>
       </Container>
-      <EventDirectionsSection data={contentfulEvent} />
+      {!isVirtualEvent({ location2 }) && (
+        <EventDirectionsSection data={contentfulEvent} />
+      )}
       <EventsYouMayLike eventId={id} />
     </PageWrapper>
   )
