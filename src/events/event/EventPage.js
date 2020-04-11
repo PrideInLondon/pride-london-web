@@ -54,7 +54,6 @@ const EventPage = ({
   pageContext: { startTime, endTime },
   pageContext,
 }) => {
-  console.log('EVENT', contentfulEvent)
   const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
   const metaUrl = siteUrl + pathname
 
