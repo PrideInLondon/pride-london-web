@@ -36,6 +36,7 @@ const EventPage = ({
       eventPriceLow,
       eventCategories,
       ticketingUrl,
+      cta,
       accessibilityDetails,
       location2,
       location,
