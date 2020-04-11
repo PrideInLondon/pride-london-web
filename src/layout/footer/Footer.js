@@ -167,7 +167,7 @@ export const Footer = ({
             </HashTags>
           </SocialSection>
           <SponsorsSection width={1}>
-            <SponsorsHeading>Our amazing partners</SponsorsHeading>
+            <SponsorsHeading>Thank you to our 2019 partners</SponsorsHeading>
             <SponsorsContainer>
               {sponsorOrder.map(order =>
                 edges.map(
