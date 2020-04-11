@@ -9,13 +9,14 @@ import {
   AccessibilityIcon,
   DateIcon,
   GenderIcon,
+  LaptopIcon,
   MailIcon,
   MapPinIcon,
   PhoneIcon,
   TicketIcon,
 } from '../../components/icons'
 import { Button } from '../../components/button'
-import { formatPrice } from '../helpers'
+import { formatPrice, isVirtualEvent } from '../helpers'
 
 const Wrapper = styled.div`
   background-color: ${theme.colors.indigo};
@@ -54,11 +55,10 @@ const Title = styled.h3`
   font-weight: 500;
   font-family: Roboto, sans-serif;
   color: white;
-  margin-bottom: 4px;
 `
 
 const Detail = styled.p`
-  margin: 0;
+  margin-top: 4px;
   font-size: 0.875rem;
 `
 
@@ -115,14 +115,27 @@ const Link = styled.a`
   }
 `
 
-const VENUE_DETAILS = {
-  genderNeutralToilets: 'Gender neutral toilets',
-  outdoors: 'Outdoors',
-  indoors: 'Indoors',
-}
+export const Location = ({
+  platform,
+  locationName,
+  addressLine1,
+  addressLine2,
+  city,
+  postcode,
+}) =>
+  isVirtualEvent(platform) ? (
+    <Item icon={<LaptopIcon size={26} />} title={`On ${platform}`} />
+  ) : (
+    <Item
+      icon={<MapPinIcon />}
+      title={locationName}
+      detail={formatAddress(addressLine1, addressLine2, city, postcode)}
+    />
+  )
 
 const EventInfoCard = ({
   data: {
+    location2,
     locationName,
     addressLine1,
     addressLine2,
@@ -151,10 +164,9 @@ const EventInfoCard = ({
       icon={<TicketIcon />}
       title={formatPrice(eventPriceLow, eventPriceHigh)}
     />
-    <Item
-      icon={<MapPinIcon />}
-      title={locationName}
-      detail={formatAddress(addressLine1, addressLine2, city, postcode)}
+    <Location
+      platform={location2}
+      {...{ locationName, addressLine1, addressLine2, city, postcode }}
     />
     {accessibilityOptions && accessibilityOptions.length > 0 && (
       <Item
@@ -163,10 +175,9 @@ const EventInfoCard = ({
         detail={`${accessibilityOptions.join(', ')}.`}
       />
     )}
-    {venueDetails &&
-      venueDetails.indexOf(VENUE_DETAILS.genderNeutralToilets) > -1 && (
-        <Item icon={<GenderIcon />} detail="Gender neutral toilets" />
-      )}
+    {venueDetails && venueDetails.includes('Gender neutral toilets') && (
+      <Item icon={<GenderIcon />} detail="Gender neutral toilets" />
+    )}
     {(email || phone || ticketingUrl) && <Hr />}
     {email && (
       <Item
@@ -204,8 +215,27 @@ Item.defaultProps = {
   title: null,
 }
 
+Location.propTypes = {
+  platform: PropTypes.string,
+  locationName: PropTypes.string,
+  addressLine1: PropTypes.string,
+  addressLine2: PropTypes.string,
+  city: PropTypes.string,
+  postcode: PropTypes.string,
+}
+
+Location.defaultProps = {
+  platform: '',
+  locationName: '',
+  addressLine1: '',
+  addressLine2: '',
+  city: '',
+  postcode: '',
+}
+
 EventInfoCard.propTypes = {
   data: PropTypes.shape({
+    location2: PropTypes.string.isRequired,
     locationName: PropTypes.string.isRequired,
     addressLine1: PropTypes.string,
     addressLine2: PropTypes.string,
@@ -231,6 +261,7 @@ export default EventInfoCard
 
 export const query = graphql`
   fragment eventInfoCardQuery on ContentfulEvent {
+    location2
     locationName
     addressLine1
     addressLine2
