@@ -96,9 +96,9 @@ export const formatDayRange = ({ startTime, endTime }) => {
     : `${startMoment.format(dateFormat)} to ${endMoment.format(dateFormat)}`
 }
 
-const formatTimeRange = (startTime, endTime) => {
-  const timeFormat = 'h:mma'
-  return `${startTime.format(timeFormat)} to ${endTime.format(timeFormat)}`
+export const formatTimeRange = ({ startTime, endTime }) => {
+  const formatTime = time => moment(time).format('h:mma')
+  return `${formatTime(startTime)} to ${formatTime(endTime)}`
 }
 
 export const formatAddress = (addressLine1, addressLine2, city, postcode) =>
@@ -157,7 +157,7 @@ const EventInfoCard = ({
       <Item
         icon={<DateIcon />}
         title={formatDayRange({ startTime, endTime })}
-        detail={formatTimeRange(moment(startTime), moment(endTime))}
+        detail={formatTimeRange({ startTime, endTime })}
       />
     )}
     <Item

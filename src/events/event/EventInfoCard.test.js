@@ -1,7 +1,12 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import { formatDayRange, formatAddress, Location } from './EventInfoCard'
+import {
+  formatDayRange,
+  formatTimeRange,
+  formatAddress,
+  Location,
+} from './EventInfoCard'
 
 describe('formatDayRange', () => {
   it.each`
@@ -15,6 +20,15 @@ describe('formatDayRange', () => {
       expect(actual).toEqual(expected)
     }
   )
+})
+
+describe('formatTimeRange', () => {
+  it('should format time range for event', () => {
+    const startTime = '2020-03-04T09:00:00.000Z'
+    const endTime = '2020-03-04T12:45:00.000Z'
+    const actual = formatTimeRange({ startTime, endTime })
+    expect(actual).toEqual('9:00am to 12:45pm')
+  })
 })
 
 describe('formatAddress', () => {
