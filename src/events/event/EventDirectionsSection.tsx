@@ -1,6 +1,12 @@
 import querystring from 'querystring'
-import React, { useEffect, useState, useRef } from 'react'
 import { graphql } from 'gatsby'
+import React, {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import styled from 'styled-components'
 import { Container, Row } from '../../components/grid'
 import { media } from '../../theme/media'
@@ -58,6 +64,30 @@ const IndigoWrapper = styled.div`
     background-color: ${theme.colors.indigo};
   `};
 `
+
+interface updateMapSizeArgs {
+  current: HTMLAnchorElement | undefined
+  setWidth: Dispatch<SetStateAction<number | null>>
+  setHeight: Dispatch<SetStateAction<number | null>>
+  width: number | null
+  height: number | null
+}
+
+const updateMapSize = ({
+  current,
+  setWidth,
+  setHeight,
+  width,
+  height,
+}: updateMapSizeArgs): void => {
+  if (current) {
+    const rect = current.getBoundingClientRect()
+    if (rect.width !== width || rect.height !== height) {
+      setWidth(rect.width)
+      setHeight(rect.height)
+    }
+  }
+}
 interface EventDirectionsSectionProps {
   data: {
     location: {
@@ -73,33 +103,22 @@ interface EventDirectionsSectionProps {
 }
 
 const EventDirectionsSection: React.FC<EventDirectionsSectionProps> = ({
-  data,
-}) => {
-  const [width, setWidth] = useState<number | null>(null)
-  const [height, setHeight] = useState<number | null>(null)
-  const wrapperRef = useRef<HTMLAnchorElement>()
-  const {
+  data: {
     location: { lat, lon },
     locationName,
     addressLine1,
     addressLine2,
     postcode,
     city,
-  } = data
-
-  const updateMapSize = (currentRef: HTMLAnchorElement | undefined): void => {
-    if (currentRef) {
-      const rect = currentRef.getBoundingClientRect()
-      if (rect.width !== width || rect.height !== height) {
-        setWidth(rect.width)
-        setHeight(rect.height)
-      }
-    }
-  }
+  },
+}) => {
+  const [width, setWidth] = useState<number | null>(null)
+  const [height, setHeight] = useState<number | null>(null)
+  const wrapperRef = useRef<HTMLAnchorElement>()
 
   useEffect(() => {
     const { current } = wrapperRef
-    updateMapSize(current)
+    updateMapSize({ current, setWidth, setHeight, width, height })
     // eslint-disable-next-line
   }, [])
 
@@ -121,7 +140,8 @@ const EventDirectionsSection: React.FC<EventDirectionsSectionProps> = ({
           )}`}
           style={{
             backgroundImage:
-              Boolean(width && height) &&
+              width &&
+              height &&
               `url(https://maps.googleapis.com/maps/api/staticmap?${querystring.encode(
                 {
                   center: `${lat}${','}${lon}`,
