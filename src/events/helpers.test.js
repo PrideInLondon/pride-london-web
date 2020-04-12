@@ -6,6 +6,7 @@ import {
   extractEventIdFromSlug,
   sortEventsByStartTime,
   calculateEndTime,
+  isVirtualEvent,
 } from './helpers'
 
 const yesterday = new Date()
@@ -109,4 +110,19 @@ describe('calculateEndTime', () => {
     })
     expect(actual).toEqual('2020-03-10T03:45:00.000Z')
   })
+})
+
+describe('isVirtualEvent', () => {
+  it.each`
+    location2                   | expected
+    ${'In a physical location'} | ${false}
+    ${null}                     | ${true}
+    ${'foo'}                    | ${true}
+  `(
+    'should return $expected when location2 is $location2',
+    ({ location2, expected }) => {
+      const actual = isVirtualEvent({ location2 })
+      expect(actual).toEqual(expected)
+    }
+  )
 })

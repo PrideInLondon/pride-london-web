@@ -77,3 +77,10 @@ export const calculateEndTime = ({ startTime, endTime, recurrenceDates }) => {
     .add(getDuration(startTime, endTime), 'ms')
     .toISOString()
 }
+
+/**
+ * @param {object} Event
+ * @param {string} location2
+ */
+export const isVirtualEvent = ({ location2 }) =>
+  location2 !== 'In a physical location'
