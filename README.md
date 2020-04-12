@@ -10,13 +10,13 @@
 
 This project is a community effort to provide the [Pride in London website](https://prideinlondon.org). The project is written in JavaScript/TypeScript and leverages the [Gatsby](https://www.gatsbyjs.org) and [React](https://reactjs.org) web frameworks.
 
-- [Developing locally :headphones:](#developing-locally-headphones)
-  - [Prerequisites :new:](#prerequisites-new)
-    - [Preview draft content :mag:](#preview-draft-content-mag)
-  - [Running the development server :running:](#running-the-development-server-running)
-  - [Running the unit tests :white_check_mark:](#running-the-unit-tests-white_check_mark)
-  - [Building the static site :hammer_and_wrench:](#building-the-static-site-hammer_and_wrench)
+- [Developing locally](#developing-locally-headphones)
+  - [Prerequisites](#prerequisites-new)
+  - [Running the development server](#running-the-development-server-running)
+  - [Running the unit tests](#running-the-unit-tests-white_check_mark)
+  - [Building the static site](#building-the-static-site-hammer_and_wrench)
 - [Resources](#resources-notebook)
+- [Contributing](#contributing-handshaking)
 - [License](#license-necktie)
 
 ## Developing locally :headphones:
@@ -104,6 +104,10 @@ There are some resources available in this repo to aid development process:
 
 - [How to guide](./how-to-guide.md): a guide for performing common development actions
 - [Code of conduct](./.github/CODE_OF_CONDUCT.md): defines standards for how to engage in the Pride in London community
+
+## Contributing :handshaking:
+
+Want to help out? That's amazing! Please see the [roles available](https://volunteer.prideinlondon.org/jobs?department_id=34173) on the Pride in London volunteer platform.
 
 ## License :necktie:
 
