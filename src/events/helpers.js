@@ -80,7 +80,6 @@ export const calculateEndTime = ({ startTime, endTime, recurrenceDates }) => {
 
 /**
  * @param {object} Event
- * @param {string} location2
+ * @param {string} platform This should come from the Event.location2 field
  */
-export const isVirtualEvent = ({ location2 }) =>
-  location2 !== 'In a physical location'
+export const isVirtualEvent = platform => platform !== 'In a physical location'
