@@ -20,6 +20,12 @@ export const eventCount = (numberOfEventsToShow, eventsLength) => {
   return `You're viewing ${numberOfEventsToShow} of ${eventsLength} events`
 }
 
+export const checkNumberOfEventsToShow = events => {
+  return events.length < constants.itemsToLoad - 1
+    ? events.length
+    : constants.itemsToLoad - 1
+}
+
 const EventsPage = ({
   data: {
     file: { childImageSharp },
@@ -28,9 +34,7 @@ const EventsPage = ({
   const events = useContext(EventsContext)
 
   const [numberOfEventsToShow, setNumberOfEventsToShow] = useState(
-    events.length < constants.itemsToLoad - 1
-      ? events.length
-      : constants.itemsToLoad - 1
+    checkNumberOfEventsToShow(events)
   )
 
   return (
