@@ -61,6 +61,7 @@ const query = graphql`
           venueDetails
           audience
           accessibilityOptions
+          location2
           locationName
           addressLine1
           postcode

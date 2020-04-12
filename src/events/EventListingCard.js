@@ -12,7 +12,11 @@ import {
   CardFooter,
 } from '../components/card'
 import CalendarIcon from '../components/icons/calendarIcon'
-import { generateEventSlug, momentizeRecurrenceDate } from './helpers'
+import {
+  generateEventSlug,
+  momentizeRecurrenceDate,
+  isVirtualEvent,
+} from './helpers'
 import { generateDisplayDate } from './EventCard'
 
 const CardDate = styled.span`
@@ -103,37 +107,53 @@ When.defaultProps = {
   recurrenceDates: [],
 }
 
-export const EventListingCard = ({ event, variant }) => {
-  return (
-    <Card variant={variant} to={generateEventSlug(event)}>
-      <CardImage
-        image={event.eventsListPicture.fixed}
-        alt={event.eventsListPicture.title}
-      />
-      <CardContent>
-        <When {...event} />
-        <CardTitle>{event.name}</CardTitle>
-        <Location>
-          {event.locationName}, {event.addressLine1}
-        </Location>
-        <StyledCardFooter>
-          <div>
-            <Details>Event details</Details>
-          </div>
-          <Price>
-            {event.eventPriceLow === 0
-              ? 'Free entry'
-              : `From £${
-                  event.eventPriceLow % 1 === 0
-                    ? event.eventPriceLow
-                    : event.eventPriceLow.toFixed(2)
-                }`}
-          </Price>
-        </StyledCardFooter>
-      </CardContent>
-    </Card>
-  )
-}
+export const formatLocation = ({ platform, locationName, addressLine1 }) =>
+  isVirtualEvent(platform) ? platform : `${locationName}, ${addressLine1}`
+
+export const EventListingCard = ({
+  event: {
+    id,
+    name,
+    eventsListPicture,
+    startTime,
+    endTime,
+    recurrenceDates,
+    location2: platform,
+    locationName,
+    addressLine1,
+    eventPriceLow,
+  },
+  variant,
+}) => (
+  <Card variant={variant} to={generateEventSlug({ id, name })}>
+    <CardImage image={eventsListPicture.fixed} alt={eventsListPicture.title} />
+    <CardContent>
+      <When {...{ startTime, endTime, recurrenceDates }} />
+      <CardTitle>{name}</CardTitle>
+      <Location>
+        {formatLocation({
+          platform,
+          locationName,
+          addressLine1,
+        })}
+      </Location>
+      <StyledCardFooter>
+        <div>
+          <Details>Event details</Details>
+        </div>
+        <Price>
+          {eventPriceLow === 0
+            ? 'Free entry'
+            : `From £${
+                eventPriceLow % 1 === 0
+                  ? eventPriceLow
+                  : eventPriceLow.toFixed(2)
+              }`}
+        </Price>
+      </StyledCardFooter>
+    </CardContent>
+  </Card>
+)
 
 EventListingCard.propTypes = {
   event: PropTypes.object.isRequired,
