@@ -1,4 +1,7 @@
-import { formatDayRange, formatAddress } from './EventInfoCard'
+import React from 'react'
+import { render } from '@testing-library/react'
+
+import { formatDayRange, formatAddress, Location } from './EventInfoCard'
 
 describe('formatDayRange', () => {
   it.each`
@@ -25,6 +28,20 @@ describe('formatAddress', () => {
     ({ addressLine1, addressLine2, city, postcode, expected }) => {
       const actual = formatAddress(addressLine1, addressLine2, city, postcode)
       expect(actual).toEqual(expected)
+    }
+  )
+})
+
+describe('Location', () => {
+  it.each`
+    platform                    | props                                                                 | expected
+    ${'Facebook'}               | ${{}}                                                                 | ${'On Facebook'}
+    ${'In a physical location'} | ${{ addressLine1: 'a', addressLine2: 'b', city: 'c', postcode: 'd' }} | ${'a, b, c d'}
+  `(
+    'should render Location info as $expected when given platform $platform',
+    ({ platform, props, expected }) => {
+      const { queryByText } = render(<Location {...{ platform, ...props }} />)
+      expect(queryByText(expected)).toBeTruthy()
     }
   )
 })
