@@ -108,7 +108,9 @@ When.defaultProps = {
 }
 
 export const formatLocation = ({ platform, locationName, addressLine1 }) =>
-  isVirtualEvent(platform) ? platform : `${locationName}, ${addressLine1}`
+  isVirtualEvent(platform)
+    ? platform
+    : `${locationName}${addressLine1 ? `, ${addressLine1}` : ''}`
 
 export const EventListingCard = ({
   event: {
