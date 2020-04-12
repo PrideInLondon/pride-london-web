@@ -14,15 +14,15 @@ const LaptopIcon = ({ size = 32 }) => (
     />
     <path
       fill="#2CDA9D"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="M16 9c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />
     <path
       fill="#fff"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="M19 15l-5 3v-6l5 3z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />
   </svg>
 )
