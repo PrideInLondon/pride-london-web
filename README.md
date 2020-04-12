@@ -15,6 +15,9 @@ This project is a community effort to provide the [Pride in London website](http
     - [Preview draft content :mag:](#preview-draft-content-mag)
   - [Running the development server :running:](#running-the-development-server-running)
   - [Running the unit tests :white_check_mark:](#running-the-unit-tests-white_check_mark)
+  - [Building the static site :hammer_and_wrench:](#building-the-static-site-hammer_and_wrench)
+- [Resources](#resources-notebook)
+- [License](#license-necktie)
 
 ## Developing locally :headphones:
 
@@ -46,8 +49,8 @@ In order for Contentful draft content (i.e. unpublished content) to be available
 
 If the app is not reading the content from the correct environment, try the following steps:
 
-- ensure you have closed all running app instances between config changes
-- delete your local Contentful cache via the command `gatsby clean`
+- ensure all running app instances are closed between config changes
+- delete the local Contentful cache via the command `gatsby clean`
 
 ### Running the development server :running:
 
@@ -76,3 +79,32 @@ yarn test
 ```
 
 _Note that all dependencies must be installed prior to this command being run for the first time. See [section above](#running-the-development-server-running) for more information on how to do this._
+
+### Building the static site :hammer_and_wrench:
+
+As the site is built using Gatsby, only the static files are served in a production setting. These files can be built locally in order to e.g. debug issues with the deployed site.
+
+In order to achieve this, a `.env.production` is required in the root of the project. This may be an exact clone of the `.env.development` file mentioned in the [section above](#prerequisites-new).
+
+Prior to running the build command, ensure that all dependencies are installed via the command:
+
+```bash
+yarn install
+```
+
+Once this has been completed, the build command may be run. This can be done via the command:
+
+```bash
+yarn build
+```
+
+## Resources :notebook:
+
+There are some resources available in this repo to aid development process:
+
+- [How to guide](./how-to-guide.md): a guide for performing common development actions
+- [Code of conduct](./.github/CODE_OF_CONDUCT.md): defines standards for how to engage in the Pride in London community
+
+## License :necktie:
+
+This project is licensed under the terms of the [Apache License 2.0](./LICENSE).
