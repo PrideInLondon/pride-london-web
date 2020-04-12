@@ -114,14 +114,14 @@ describe('calculateEndTime', () => {
 
 describe('isVirtualEvent', () => {
   it.each`
-    location2                   | expected
+    platform                    | expected
     ${'In a physical location'} | ${false}
     ${null}                     | ${true}
     ${'foo'}                    | ${true}
   `(
-    'should return $expected when location2 is $location2',
-    ({ location2, expected }) => {
-      const actual = isVirtualEvent({ location2 })
+    'should return $expected when platform is $location2',
+    ({ platform, expected }) => {
+      const actual = isVirtualEvent(platform)
       expect(actual).toEqual(expected)
     }
   )

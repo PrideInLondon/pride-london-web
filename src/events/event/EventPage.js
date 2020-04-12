@@ -112,7 +112,7 @@ const EventPage = ({
             property: 'og:description',
             content: eventDescription,
           },
-          ...(isVirtualEvent({ location2 })
+          ...(isVirtualEvent(location2)
             ? []
             : [
                 {
@@ -275,7 +275,7 @@ const EventPage = ({
           </Column>
         </Row>
       </Container>
-      {!isVirtualEvent({ location2 }) && (
+      {!isVirtualEvent(location2) && (
         <EventDirectionsSection data={contentfulEvent} />
       )}
       <EventsYouMayLike eventId={id} />
