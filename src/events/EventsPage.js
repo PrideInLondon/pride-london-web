@@ -26,8 +26,11 @@ const EventsPage = ({
   },
 }) => {
   const events = useContext(EventsContext)
+
   const [numberOfEventsToShow, setNumberOfEventsToShow] = useState(
-    constants.itemsToLoad - 1
+    events.length < constants.itemsToLoad - 1
+      ? events.length
+      : constants.itemsToLoad - 1
   )
 
   return (
