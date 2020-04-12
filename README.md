@@ -17,6 +17,7 @@ This project is a community effort to provide the [Pride in London website](http
   - [Building the static site](#building-the-static-site-hammer_and_wrench)
 - [Resources](#resources-notebook)
 - [Contributing](#contributing-handshaking)
+- [Contributors](#contributors-sparkles)
 - [License](#license-necktie)
 
 ## Developing locally :headphones:
@@ -108,6 +109,18 @@ There are some resources available in this repo to aid development process:
 ## Contributing :handshaking:
 
 Want to help out? That's amazing! Please see the [roles available](https://volunteer.prideinlondon.org/jobs?department_id=34173) on the Pride in London volunteer platform.
+
+## Contributors :sparkles:
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License :necktie:
 
