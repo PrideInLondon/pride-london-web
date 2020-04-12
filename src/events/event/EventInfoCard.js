@@ -101,7 +101,7 @@ const formatTimeRange = (startTime, endTime) => {
   return `${startTime.format(timeFormat)} to ${endTime.format(timeFormat)}`
 }
 
-const formatAddress = (addressLine1, addressLine2, city, postcode) =>
+export const formatAddress = (addressLine1, addressLine2, city, postcode) =>
   [addressLine1, addressLine2, [city, postcode].filter(Boolean).join(' ')]
     .filter(Boolean)
     .join(', ')
