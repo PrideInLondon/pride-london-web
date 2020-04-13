@@ -47,10 +47,46 @@
       ]
     },
     {
+      "login": "ja9-look",
+      "name": "Janine Luk",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/43492801?v=4",
+      "profile": "https://github.com/ja9-look",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "vlbee",
       "name": "Vanessa B.",
       "avatar_url": "https://avatars3.githubusercontent.com/u/32312712?v=4",
       "profile": "https://github.com/vlbee",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "haaminyangibo",
+      "name": "Haami Nyangibo",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/40605956?v=4",
+      "profile": "https://github.com/haaminyangibo",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "pedroeldiablo",
+      "name": "Peter Williams",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20640939?v=4",
+      "profile": "https://github.com/pedroeldiablo",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "SahelaR",
+      "name": "Sahela R.",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/46283569?v=4",
+      "profile": "https://github.com/SahelaR",
       "contributions": [
         "code"
       ]
@@ -62,6 +98,33 @@
       "profile": "https://github.com/schazbot",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "GingerGeek",
+      "name": "Zed Spencer-Milnes",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4943487?v=4",
+      "profile": "https://github.com/GingerGeek",
+      "contributions": [
+        "infra"
+      ]
+    },
+    {
+      "login": "janteichmann",
+      "name": "Jan Teichmann",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/51962841?v=4",
+      "profile": "https://github.com/janteichmann",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "login": "kristofhamilton",
+      "name": "Kristof Hamilton",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/36228540?v=4",
+      "profile": "https://github.com/kristofhamilton",
+      "contributions": [
+        "business"
       ]
     }
   ],
