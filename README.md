@@ -16,7 +16,7 @@ This project is a community effort to provide the [Pride in London website](http
   - [Running the unit tests](#running-the-unit-tests-white_check_mark)
   - [Building the static site](#building-the-static-site-hammer_and_wrench)
 - [Resources](#resources-notebook)
-- [Contributing](#contributing-handshaking)
+- [Contributing](#contributing-handshake)
 - [Contributors](#contributors-sparkles)
 - [License](#license-necktie)
 
@@ -106,7 +106,7 @@ There are some resources available in this repo to aid development process:
 - [How to guide](./how-to-guide.md): a guide for performing common development actions
 - [Code of conduct](./.github/CODE_OF_CONDUCT.md): defines standards for how to engage in the Pride in London community
 
-## Contributing :handshaking:
+## Contributing :handshake:
 
 Want to help out? That's amazing! Please see the [roles available](https://volunteer.prideinlondon.org/jobs?department_id=34173) on the Pride in London volunteer platform.
 
@@ -139,6 +139,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License :necktie:
