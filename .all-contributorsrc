@@ -9,6 +9,61 @@
   "imageSize": 100,
   "commit": false,
   "commitConvention": "gitmoji",
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "SonyaMoisset",
+      "name": "Sonya Moisset",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/13507232?v=4",
+      "profile": "https://github.com/SonyaMoisset",
+      "contributions": [
+        "security"
+      ]
+    },
+    {
+      "login": "laij84",
+      "name": "Jason Lai",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/18145822?v=4",
+      "profile": "https://github.com/laij84",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "egmcdonald",
+      "name": "Em McDonald",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6469639?v=4",
+      "profile": "https://github.com/egmcdonald",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dubhcait",
+      "name": "Kate O'Brien",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/39469813?v=4",
+      "profile": "https://github.com/dubhcait",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "vlbee",
+      "name": "Vanessa B.",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/32312712?v=4",
+      "profile": "https://github.com/vlbee",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "schazbot",
+      "name": "Charlotte Pearce",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/28059086?v=4",
+      "profile": "https://github.com/schazbot",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
   "contributorsPerLine": 7
 }
