@@ -25,7 +25,7 @@ export const formatShortTime = date =>
 
 export function filterPastEvents(event) {
   const today = moment()
-  return moment(date).isSameOrAfter(today) // assume event is date string if not event object
+  return moment(date).isSameOrAfter(today)
 }
 
 /**
