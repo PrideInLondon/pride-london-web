@@ -16,15 +16,13 @@ import {
   EventCount,
 } from './EventsPage.styles'
 
-export const eventCount = (numberOfEventsToShow, eventsLength) => {
-  return `You're viewing ${numberOfEventsToShow} of ${eventsLength} events`
-}
+export const eventCount = (numberOfEventsToShow, eventsLength) =>
+  `You're viewing ${numberOfEventsToShow} of ${eventsLength} events`
 
-export const checkNumberOfEventsToShow = events => {
-  return events.length < constants.itemsToLoad - 1
+export const checkNumberOfEventsToShow = events =>
+  events.length < constants.itemsToLoad - 1
     ? events.length
     : constants.itemsToLoad - 1
-}
 
 const EventsPage = ({
   data: {
