@@ -27,7 +27,7 @@ describe('formatTimeRange', () => {
     const startTime = '2020-03-04T09:00:00.000Z'
     const endTime = '2020-03-04T12:45:00.000Z'
     const actual = formatTimeRange({ startTime, endTime })
-    expect(actual).toEqual('9:00am to 12:45pm')
+    expect(actual).toEqual('9am to 12:45pm')
   })
 })
 
@@ -58,14 +58,4 @@ describe('Location', () => {
       expect(queryByText(expected)).toBeTruthy()
     }
   )
-})
-
-describe('formatTimeRange', () => {
-  it('should render time range', () => {
-    const startTime = '2020-01-01T20:00:00.000Z'
-    const endTime = '2020-01-01T23:30:00.000Z'
-    const expected = '8pm to 11:30pm'
-    const actual = formatTimeRange(startTime, endTime)
-    expect(actual).toEqual(expected)
-  })
 })

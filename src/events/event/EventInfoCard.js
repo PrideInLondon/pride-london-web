@@ -96,7 +96,7 @@ export const formatDayRange = ({ startTime, endTime }) => {
     : `${startMoment.format(dateFormat)} to ${endMoment.format(dateFormat)}`
 }
 
-export const formatTimeRange = (startTime, endTime) => {
+export const formatTimeRange = ({ startTime, endTime }) => {
   return `${formatShortTime(startTime)} to ${formatShortTime(endTime)}`
 }
 
