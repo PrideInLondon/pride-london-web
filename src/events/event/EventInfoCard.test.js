@@ -27,7 +27,7 @@ describe('formatTimeRange', () => {
     const startTime = '2020-03-04T09:00:00.000Z'
     const endTime = '2020-03-04T12:45:00.000Z'
     const actual = formatTimeRange({ startTime, endTime })
-    expect(actual).toEqual('9:00am to 12:45pm')
+    expect(actual).toEqual('9am to 12:45pm')
   })
 })
 

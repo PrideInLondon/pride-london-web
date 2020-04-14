@@ -1,4 +1,6 @@
 import {
+  formatTime,
+  formatShortTime,
   filterPastEvents,
   getDuration,
   sanitizeDates,
@@ -26,6 +28,50 @@ const pastEvent = {
     endTime: yesterday,
   },
 }
+
+describe('formatTime', () => {
+  it.each`
+    date                        | expected
+    ${'2020-01-01T09:30+00:00'} | ${'09:30' /* 1st January 2020 09:30 UTC */}
+    ${'2020-06-01T09:30+00:00'} | ${'10:30' /* 1st June 2020 09:30 UTC */}
+    ${'2020-06-01T09:30+01:00'} | ${'09:30' /* 1st June 2020 09:30 BST */}
+    ${'2020-06-01T09:30+01:00'} | ${'09:30' /* 1st June 2020 09:30 BST */}
+  `(
+    'should format time $date as $expected according to current London timezone',
+    ({ date, expected }) => {
+      const actual = formatTime(date)
+      expect(actual).toEqual(expected)
+    }
+  )
+
+  it.each`
+    date                        | expected
+    ${'2020-01-01T09:30+00:00'} | ${'9:30am'}
+    ${'2020-01-01T19:30+00:00'} | ${'7:30pm'}
+  `(
+    'should format time $date with requested override format when supplied',
+    ({ date, expected }) => {
+      const actual = formatTime(date, 'h:mma')
+      expect(actual).toEqual(expected)
+    }
+  )
+})
+
+describe('formatShortTime', () => {
+  it.each`
+    date                          | expected
+    ${'2020-01-01T09:30:00.000Z'} | ${'9:30am'}
+    ${'2020-01-01T09:00:00.000Z'} | ${'9am'}
+    ${'2020-01-01T20:45:00.000Z'} | ${'8:45pm'}
+    ${'2020-01-01T20:00:00.000Z'} | ${'8pm'}
+  `(
+    'should render time as $expected when date is $date',
+    ({ date, expected }) => {
+      const actual = formatShortTime(date)
+      expect(actual).toEqual(expected)
+    }
+  )
+})
 
 describe('filterPastEvents', () => {
   it('returns true if date is after today', () => {

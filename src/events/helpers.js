@@ -1,4 +1,5 @@
 import moment from 'moment'
+import momentTz from 'moment-timezone'
 import slugify from 'slugify'
 import UuidEncoder from 'uuid-encoder'
 import constants from '../constants'
@@ -10,11 +11,17 @@ export const formatPrice = (eventPriceLow, eventPriceHigh) =>
     ? 'Free'
     : `From £${eventPriceLow.toFixed(2).replace('.00', '')}`
 
-export const formatTime = time => {
-  return moment(time).format('mm') === '00'
-    ? moment(time).format('ha')
-    : moment(time).format('h:mma')
-}
+/**
+ * @param {string} isoDate Date in format YYYY-MM-DDTHH:mm+HH:mm
+ * @param {string} [format] Optional time format, default is HH:mm
+ */
+export const formatTime = (isoDate, format = 'HH:mm') =>
+  momentTz(isoDate)
+    .tz('Europe/London')
+    .format(format)
+
+export const formatShortTime = date =>
+  formatTime(date, 'h:mma').replace(':00', '')
 
 export function filterPastEvents(event) {
   const today = moment()

@@ -1,5 +1,7 @@
 import moment from 'moment'
 
+import { formatTime } from './helpers'
+
 // second param required for testing
 const isToday = (date: Date, today: Date) => moment(today).isSame(date, 'day')
 
@@ -46,14 +48,14 @@ export const generateDisplayDate = ({
   lastOccurrence,
   now = new Date(), // note that this param should only be used for testing
 }: {
-  start: Date
-  end: Date
+  start: string // start time in format YYYY-MM-DDTHH:mm+HH:mm
+  end: string // end time in format YYYY-MM-DDTHH:mm+HH:mm
   lastOccurrence: Date
   now?: Date
 }) => {
   const prefix = lastOccurrence
-    ? generateMultiDatePrefix({ start, lastOccurrence, now })
-    : generateSingleDatePrefix({ start, now })
+    ? generateMultiDatePrefix({ start: new Date(start), lastOccurrence, now })
+    : generateSingleDatePrefix({ start: new Date(start), now })
 
   // Today • HH:mm - HH:mm (events occurring today)
   // Tomorrow • HH:mm - HH:mm (events occurring tomorrow)
@@ -62,7 +64,7 @@ export const generateDisplayDate = ({
   // Today - ddd, DD MMM  • HH:mm - HH:mm (recurring event series already started or starting today)
   // Tomorrow - ddd, DD MMM • HH:mm - HH:mm (recurring event series beginning tomorrow)
   // ddd, DD MMM - ddd, DD MMM • HH:mm - HH:mm (recurring event series beginning in 2 or more days)
-  return `${prefix}\u00A0\u00A0•\u00A0\u00A0${moment(start).format(
-    'HH:mm'
-  )} - ${moment(end).format('HH:mm')}`
+  return `${prefix}\u00A0\u00A0•\u00A0\u00A0${formatTime(start)} - ${formatTime(
+    end
+  )}`
 }
