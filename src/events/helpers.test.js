@@ -7,7 +7,6 @@ import {
   generateEventSlug,
   extractEventIdFromSlug,
   sortEventsByStartTime,
-  calculateEndTime,
   isVirtualEvent,
 } from './helpers'
 
@@ -16,18 +15,6 @@ yesterday.setDate(yesterday.getDate() - 1)
 
 const tomorrow = new Date()
 tomorrow.setDate(tomorrow.getDate() + 1)
-
-const futureEvent = {
-  node: {
-    endTime: tomorrow,
-  },
-}
-
-const pastEvent = {
-  node: {
-    endTime: yesterday,
-  },
-}
 
 describe('formatTime', () => {
   it.each`
@@ -75,15 +62,11 @@ describe('formatShortTime', () => {
 
 describe('filterPastEvents', () => {
   it('returns true if date is after today', () => {
-    expect(filterPastEvents(futureEvent)).toBeTruthy()
+    expect(filterPastEvents(tomorrow.toISOString())).toBeTruthy()
   })
 
   it('returns false if date is in the past', () => {
-    expect(filterPastEvents(pastEvent)).toBeFalsy()
-  })
-
-  it('returns true if date is after today and object is date string', () => {
-    expect(filterPastEvents(futureEvent.node.endTime)).toBeTruthy()
+    expect(filterPastEvents(yesterday.toISOString())).toBeFalsy()
   })
 
   it('returns 1 day as diff', () => {
@@ -102,7 +85,9 @@ describe('sortEventsByStartTime', () => {
   it('sorts dates by start time to earliest first', () => {
     const dates = Array(5)
       .fill(0)
-      .map((_, index) => ({ node: { startTime: new Date(index) } }))
+      .map((_, index) => ({
+        node: { date: { dates: [{ startDate: new Date(index) }] } },
+      }))
     const actual = [dates[2], dates[0], dates[4], dates[3], dates[1]].sort(
       sortEventsByStartTime
     )
@@ -140,22 +125,6 @@ describe('extractEventIdFromSlug', () => {
       expect(actual).toEqual(expected)
     }
   )
-})
-
-describe('calculateEndTime', () => {
-  it('should calculate the end time of a non-recurring event', () => {
-    const actual = calculateEndTime({ endTime: '2020-03-04T00:00:00.000Z' })
-    expect(actual).toEqual('2020-03-04T00:00:00.000Z')
-  })
-
-  it('should calculate the end time of a recurring event', () => {
-    const actual = calculateEndTime({
-      startTime: '2020-03-04T00:00:00.000Z',
-      endTime: '2020-03-04T03:45:00.000Z', // duration should be 3h 45m
-      recurrenceDates: ['06/03/2020', '08/03/2020', '10/03/2020'],
-    })
-    expect(actual).toEqual('2020-03-10T03:45:00.000Z')
-  })
 })
 
 describe('isVirtualEvent', () => {
