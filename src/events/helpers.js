@@ -23,7 +23,7 @@ export const formatTime = (isoDate, format = 'HH:mm') =>
 export const formatShortTime = date =>
   formatTime(date, 'h:mma').replace(':00', '')
 
-export function filterPastEvents(event) {
+export function filterPastEvents(date) {
   const today = moment()
   return moment(date).isSameOrAfter(today)
 }
