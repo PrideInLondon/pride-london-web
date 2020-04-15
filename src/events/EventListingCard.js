@@ -82,12 +82,17 @@ const PaddedCalendarIcon = styled(CalendarIcon)`
   height: 1rem;
 `
 
+/**
+ * @param {object} props
+ * @param {string} props.startTime Start time in format YYYY-MM-DDTHH:mm+HH:mm
+ * @param {string} props.endTime End time in format YYYY-MM-DDTHH:mm+HH:mm
+ */
 const When = ({ startTime, endTime, recurrenceDates }) => (
   <CardDate>
     <PaddedCalendarIcon color={colors.darkCyan} />
     {generateDisplayDate({
-      start: new Date(startTime),
-      end: new Date(endTime),
+      start: startTime,
+      end: endTime,
       lastOccurrence:
         recurrenceDates &&
         new Date(

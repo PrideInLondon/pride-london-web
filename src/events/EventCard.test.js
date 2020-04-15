@@ -1,147 +1,181 @@
+import moment from 'moment'
+
 import { generateDisplayDate } from './EventCard'
 
+const formatToIsoDate = date => moment(date).format('YYYY-MM-DDTHH:mm+00:00')
+
 describe('generateDisplayDate', () => {
-  let firstOfJune
+  let firstOfJanuary
 
   beforeAll(() => {
-    // set up to be 1st of June 2019 @ 09:00
-    firstOfJune = new Date()
-    firstOfJune.setFullYear(2019, 5, 1)
-    firstOfJune.setHours(9, 0, 0)
+    // set up to be 1st of January 2019 @ 09:00 UTC
+    firstOfJanuary = new Date()
+    firstOfJanuary.setFullYear(2019, 0, 1)
+    firstOfJanuary.setHours(9, 0, 0)
   })
 
   it('should display the date as today when event occurs today', () => {
-    const start = new Date(firstOfJune)
+    const start = new Date(firstOfJanuary)
     start.setHours(19, 0, 0)
 
-    const end = new Date(firstOfJune)
+    const end = new Date(firstOfJanuary)
     end.setHours(22, 0, 0)
 
-    const actual = generateDisplayDate({ start, end, now: firstOfJune })
+    const actual = generateDisplayDate({
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
+      now: firstOfJanuary,
+    })
 
     expect(actual).toEqual('Today\u00A0\u00A0•\u00A0\u00A019:00 - 22:00')
   })
 
   it('should display the date as tomorrow when event occurs tomorrow', () => {
-    const start = new Date(firstOfJune)
-    start.setDate(firstOfJune.getDate() + 1)
+    const start = new Date(firstOfJanuary)
+    start.setDate(firstOfJanuary.getDate() + 1) // set to January 02
     start.setHours(18, 0, 0)
 
-    const end = new Date(firstOfJune)
-    end.setDate(firstOfJune.getDate() + 1)
+    const end = new Date(firstOfJanuary)
+    end.setDate(firstOfJanuary.getDate() + 1) // set to January 02
     end.setHours(20, 0, 0)
 
-    const actual = generateDisplayDate({ start, end, now: firstOfJune })
+    const actual = generateDisplayDate({
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
+      now: firstOfJanuary,
+    })
 
     expect(actual).toEqual('Tomorrow\u00A0\u00A0•\u00A0\u00A018:00 - 20:00')
   })
 
   it('should display the day and date it occurs when event occurs 2 or more days from now', () => {
-    const start = new Date(firstOfJune)
-    start.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    const start = new Date(firstOfJanuary)
+    start.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
     start.setHours(19, 30, 0)
 
-    const end = new Date(firstOfJune)
-    end.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    const end = new Date(firstOfJanuary)
+    end.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
     end.setHours(21, 0, 0)
 
-    const actual = generateDisplayDate({ start, end, now: firstOfJune })
+    const actual = generateDisplayDate({
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
+      now: firstOfJanuary,
+    })
 
-    expect(actual).toEqual('Mon, 01 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00')
+    expect(actual).toEqual('Fri, 01 Feb\u00A0\u00A0•\u00A0\u00A019:30 - 21:00')
+  })
+
+  it('should display the day and date it occurs when event occurs 2 or more days from now and during BST', () => {
+    const start = new Date(firstOfJanuary)
+    start.setMonth(firstOfJanuary.getMonth() + 5) // set to June 01
+    start.setHours(19, 30, 0)
+
+    const end = new Date(firstOfJanuary)
+    end.setMonth(firstOfJanuary.getMonth() + 5) // set to June 01
+    end.setHours(21, 0, 0)
+
+    const actual = generateDisplayDate({
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
+      now: firstOfJanuary,
+    })
+
+    expect(actual).toEqual('Sat, 01 Jun\u00A0\u00A0•\u00A0\u00A020:30 - 22:00')
   })
 
   it('should display a range of dates if end time is a different day from the start time', () => {
-    const start = new Date(firstOfJune)
-    start.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    const start = new Date(firstOfJanuary)
+    start.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
     start.setHours(19, 30, 0)
 
-    const end = new Date(firstOfJune)
-    end.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    const end = new Date(firstOfJanuary)
+    end.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
     end.setHours(21, 0, 0)
 
-    const lastOccurrence = new Date(firstOfJune)
-    lastOccurrence.setMonth(firstOfJune.getMonth() + 1)
-    lastOccurrence.setDate(firstOfJune.getDate() + 2) // set to July 03
+    const lastOccurrence = new Date(firstOfJanuary)
+    lastOccurrence.setMonth(firstOfJanuary.getMonth() + 1)
+    lastOccurrence.setDate(firstOfJanuary.getDate() + 2) // set to February 03
 
     const actual = generateDisplayDate({
-      start,
-      end,
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
       lastOccurrence,
-      now: firstOfJune,
+      now: firstOfJanuary,
     })
 
     expect(actual).toEqual(
-      'Mon, 01 Jul - Wed, 03 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
+      'Fri, 01 Feb - Sun, 03 Feb\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
     )
   })
 
   it('should display a range of dates starting at today if end time is a different day from the start time and event series has already started', () => {
-    const start = new Date(firstOfJune)
-    start.setMonth(firstOfJune.getMonth() - 1) // set to May 01
+    const start = new Date(firstOfJanuary)
+    start.setMonth(firstOfJanuary.getMonth() - 1) // set to December 01
     start.setHours(19, 30, 0)
 
-    const end = new Date(firstOfJune)
-    end.setMonth(firstOfJune.getMonth() - 1) // set to May 01
+    const end = new Date(firstOfJanuary)
+    end.setMonth(firstOfJanuary.getMonth() - 1) // set to December 01
     end.setHours(21, 0, 0)
 
-    const lastOccurrence = new Date(firstOfJune)
-    lastOccurrence.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    const lastOccurrence = new Date(firstOfJanuary)
+    lastOccurrence.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
 
     const actual = generateDisplayDate({
-      start,
-      end,
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
       lastOccurrence,
-      now: firstOfJune,
+      now: firstOfJanuary,
     })
 
     expect(actual).toEqual(
-      'Today - Mon, 01 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
+      'Today - Fri, 01 Feb\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
     )
   })
 
   it('should display a range of dates starting at today if end time is a different day from the start time and event series starts today', () => {
-    const start = new Date(firstOfJune) // set to June 01
+    const start = new Date(firstOfJanuary) // set to January 01
     start.setHours(19, 30, 0)
 
-    const end = new Date(firstOfJune) // set to June 01
+    const end = new Date(firstOfJanuary) // set to January 01
     end.setHours(21, 0, 0)
 
-    const lastOccurrence = new Date(firstOfJune)
-    lastOccurrence.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    const lastOccurrence = new Date(firstOfJanuary)
+    lastOccurrence.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
 
     const actual = generateDisplayDate({
-      start,
-      end,
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
       lastOccurrence,
-      now: firstOfJune,
+      now: firstOfJanuary,
     })
 
     expect(actual).toEqual(
-      'Today - Mon, 01 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
+      'Today - Fri, 01 Feb\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
     )
   })
 
   it('should display a range of dates starting at today if end time is a different day from the start time and event series starts tomorrow', () => {
-    const start = new Date(firstOfJune)
-    start.setDate(firstOfJune.getDate() + 1) // set to June 02
+    const start = new Date(firstOfJanuary)
+    start.setDate(firstOfJanuary.getDate() + 1) // set to January 02
     start.setHours(19, 30, 0)
 
-    const end = new Date(firstOfJune)
-    end.setDate(firstOfJune.getDate() + 1) // set to June 02
+    const end = new Date(firstOfJanuary)
+    end.setDate(firstOfJanuary.getDate() + 1) // set to January 02
     end.setHours(21, 0, 0)
 
-    const lastOccurrence = new Date(firstOfJune)
-    lastOccurrence.setMonth(firstOfJune.getMonth() + 1) // set to July 01
+    const lastOccurrence = new Date(firstOfJanuary)
+    lastOccurrence.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
 
     const actual = generateDisplayDate({
-      start,
-      end,
+      start: formatToIsoDate(start),
+      end: formatToIsoDate(end),
       lastOccurrence,
-      now: firstOfJune,
+      now: firstOfJanuary,
     })
 
     expect(actual).toEqual(
-      'Tomorrow - Mon, 01 Jul\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
+      'Tomorrow - Fri, 01 Feb\u00A0\u00A0•\u00A0\u00A019:30 - 21:00'
     )
   })
 })

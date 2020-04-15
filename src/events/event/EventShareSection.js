@@ -8,7 +8,7 @@ import FacebookIcon from '../../components/icons/facebook'
 import LinkedinIcon from '../../components/icons/linkedin'
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
-import { formatTime } from '../helpers'
+import { formatShortTime } from '../helpers'
 
 const ShareList = styled.div`
   display: inline-flex;
@@ -60,7 +60,7 @@ const ShareLink = styled.a`
 
 const shareText = (name, date, location) => {
   const startDay = moment(date).format('ddd D MMM')
-  const startTime = formatTime(date)
+  const startTime = formatShortTime(date)
   return `I'm heading to ${name} on ${startDay} at ${startTime}. Join me!\n\nFind out more here:\n${location}`
 }
 

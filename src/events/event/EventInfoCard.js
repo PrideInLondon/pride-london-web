@@ -16,7 +16,7 @@ import {
   TicketIcon,
 } from '../../components/icons'
 import { Button } from '../../components/button'
-import { formatPrice, isVirtualEvent } from '../helpers'
+import { formatPrice, formatShortTime, isVirtualEvent } from '../helpers'
 
 const Wrapper = styled.div`
   background-color: ${theme.colors.indigo};
@@ -97,8 +97,7 @@ export const formatDayRange = ({ startTime, endTime }) => {
 }
 
 export const formatTimeRange = ({ startTime, endTime }) => {
-  const formatTime = time => moment(time).format('h:mma')
-  return `${formatTime(startTime)} to ${formatTime(endTime)}`
+  return `${formatShortTime(startTime)} to ${formatShortTime(endTime)}`
 }
 
 export const formatAddress = (addressLine1, addressLine2, city, postcode) =>
