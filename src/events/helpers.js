@@ -23,15 +23,22 @@ export const formatTime = (isoDate, format = 'HH:mm') =>
 export const formatShortTime = date =>
   formatTime(date, 'h:mma').replace(':00', '')
 
-export function filterPastEvents(event) {
+/**
+ *
+ * @param {string} date - ISO Date String
+ */
+export function filterPastEvents(date) {
   const today = moment()
-  return event.node && event.node.endTime
-    ? moment(event.node.endTime).isSameOrAfter(today)
-    : moment(event).isSameOrAfter(today) // assume event is date string if not event object
+  return moment(date).isSameOrAfter(today)
 }
 
+/**
+ *
+ * @param {object} a Event object from contentful
+ * @param {object} b Event object from contentful
+ */
 export const sortEventsByStartTime = (a, b) =>
-  a.node.startTime - b.node.startTime
+  a.node.date.dates[0].startDate - b.node.date.dates[0].startDate
 
 export function filterByLimit(event, index) {
   return index < this
@@ -67,22 +74,6 @@ export const generateEventSlug = ({ id, name }) =>
 export const extractEventIdFromSlug = slug => {
   const [encodedId] = slug.split('-').slice(-1)
   return encoder.decode(encodedId.replace('/', ''))
-}
-
-export const calculateEndTime = ({ startTime, endTime, recurrenceDates }) => {
-  if (!recurrenceDates) return endTime
-
-  const lastOccurrence = momentizeRecurrenceDate(
-    recurrenceDates[recurrenceDates.length - 1]
-  )
-  const originalStartTime = moment(startTime)
-  const lastStartTime = lastOccurrence
-    .hours(originalStartTime.hours())
-    .minutes(originalStartTime.minutes())
-    .toISOString()
-  return moment(lastStartTime)
-    .add(getDuration(startTime, endTime), 'ms')
-    .toISOString()
 }
 
 /**
