@@ -30,5 +30,5 @@ export interface WhenProps {
   /** End time in format YYYY-MM-DDTHH:mm+HH:mm */
   endTime: string
   recurrenceDates: string[]
-  dates: EventDateOccurence[]
+  dates?: EventDateOccurence[]
 }

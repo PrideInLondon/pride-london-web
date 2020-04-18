@@ -64,7 +64,6 @@ export const EventListingCard: React.FC<EventListingCardProps> = ({
     startTime,
     endTime,
     recurrenceDates,
-    date: { dates },
     location2: platform,
     locationName,
     addressLine1,
@@ -75,7 +74,7 @@ export const EventListingCard: React.FC<EventListingCardProps> = ({
   <Card variant={variant} to={generateEventSlug({ id, name })}>
     <CardImage image={eventsListPicture.fixed} alt={eventsListPicture.title} />
     <CardContent>
-      <When {...{ startTime, endTime, recurrenceDates, dates }} />
+      <When {...{ startTime, endTime, recurrenceDates }} />
       <CardTitle>{name}</CardTitle>
       <Location>
         {formatLocation({
