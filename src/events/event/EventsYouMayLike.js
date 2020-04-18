@@ -6,7 +6,7 @@ import EventsContext from '../../contexts/eventsContext'
 import { Container, Row, Column } from '../../components/grid'
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
-import EventListingCard from '../EventListingCard'
+import EventListingCard from '../eventListingCard/EventListingCard'
 
 const ViewAll = styled.a`
   color: ${theme.colors.indigo};
