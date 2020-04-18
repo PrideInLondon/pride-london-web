@@ -6,7 +6,7 @@ import { AnimatedFlexColumn } from '../components/grid'
 import { media } from '../theme/media'
 import constants from '../constants'
 import { colors } from '../theme/colors'
-import EventListingCard from './EventListingCard'
+import EventListingCard from './eventListingCard/EventListingCard'
 import AppPromotionCard from './AppPromotionCard'
 
 const DateGroupHeading = styled.h2`

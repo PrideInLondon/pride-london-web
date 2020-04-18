@@ -44,6 +44,14 @@ export const testEvent = {
       "My venue doesn't cater for any of these accessibility needs",
     ],
     audience: ['18+'],
+    date: {
+      dates: [
+        {
+          startDate: new Date().toISOString(),
+          endDate: new Date().toISOString(),
+        },
+      ],
+    },
     endTime: '2035-06-07T20:30+01:00',
     eventCategories: ['Talks and Debates'],
     eventPriceLow: 0,

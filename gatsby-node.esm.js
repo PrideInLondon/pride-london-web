@@ -1,9 +1,5 @@
 import path from 'path'
-import {
-  filterPastEvents,
-  generateEventSlug,
-  calculateEndTime,
-} from './src/events/helpers'
+import { filterPastEvents, generateEventSlug } from './src/events/helpers'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
@@ -23,20 +19,28 @@ exports.sourceNodes = ({ actions: { createTypes } }) =>
   `)
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
-  const events = await graphql(`
+  await graphql(`
     {
-      events: allContentfulEvent(filter: {}) {
+      events: allContentfulEvent(
+        filter: {
+          date: { dates: { elemMatch: { endDate: { gte: "${new Date().toISOString()}" } } } }
+        }
+      ) {
         edges {
           node {
             id
             name
-            recurrenceDates
-            startTime
-            endTime
+            date {
+              dates {
+                id
+                startDate
+                endDate
+              }
+            }
           }
         }
       }
-      genericContentPages: allContentfulGenericContentPage(filter: {}) {
+      genericContentPages: allContentfulGenericContentPage {
         edges {
           node {
             id
@@ -44,7 +48,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
           }
         }
       }
-      articles: allContentfulArticle(filter: {}) {
+      articles: allContentfulArticle {
         edges {
           node {
             id
@@ -70,14 +74,16 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
     // don't create pages for past events
     result.data.events.edges.forEach(edge => {
-      const endTime = calculateEndTime(edge.node)
+      const endTime =
+        edge.node.date.dates[edge.node.date.dates.length - 1].endDate
+      const startTime = edge.node.date.dates[0].startDate
       if (filterPastEvents(endTime)) {
         createPage({
           path: generateEventSlug({ ...edge.node }),
           component: EventPage,
           context: {
             id: edge.node.id,
-            startTime: edge.node.startTime,
+            startTime,
             endTime,
           },
         })
@@ -94,8 +100,6 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     })
   })
-
-  return events
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {

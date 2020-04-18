@@ -1,7 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import { space, layout, compose, variant } from 'styled-system'
+import {
+  flexbox,
+  space,
+  layout,
+  compose,
+  variant,
+  SpaceProps,
+  LayoutProps,
+  FlexboxProps,
+} from 'styled-system'
 import Image from 'gatsby-image'
 import { colors } from '../../theme/colors'
 import { mediaQueries } from '../../theme/mediaQueries'
@@ -82,10 +91,12 @@ export const CardContent = styled.div<CardContentProps>`
   ${compose(space, layout)}
 `
 
-export const CardFooter = styled.div`
+export const CardFooter = styled.div<SpaceProps & LayoutProps & FlexboxProps>`
   display: flex;
   margin-top: auto;
+  ${compose(space, layout, flexbox)}
 `
+
 export const Card = styled(Link)<CardProps>`
   width: 100%;
   display: flex;

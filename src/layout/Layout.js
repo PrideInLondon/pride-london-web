@@ -10,11 +10,7 @@ import CookieNotice from '../cookieNotice'
 import Intercom from '../components/intercom'
 import EventsContext from '../contexts/eventsContext'
 import theme from '../theme/theme'
-import {
-  filterPastEvents,
-  sortEventsByStartTime,
-  calculateEndTime,
-} from '../events/helpers'
+import { filterPastEvents, sortEventsByStartTime } from '../events/helpers'
 import logo from '../assets/logo.svg'
 import { colors } from '../theme/colors'
 import logoWhite from '../assets/logo-white.svg'
@@ -48,13 +44,22 @@ const query = graphql`
       }
     }
 
-    allContentfulEvent(filter: {}, sort: { fields: [startTime], order: ASC }) {
+    allContentfulEvent(
+      sort: { fields: [date___dates___startDate], order: ASC }
+    ) {
       edges {
         node {
           id
           name
           startTime
           endTime
+          date {
+            dates {
+              id
+              startDate
+              endDate
+            }
+          }
           recurrenceDates
           eventPriceLow
           eventCategories
@@ -94,7 +99,11 @@ const Layout = ({ children, location: { pathname } }) => (
       }) => (
         <EventsContext.Provider
           value={events
-            .filter(event => filterPastEvents(calculateEndTime(event.node)))
+            .filter(event => {
+              const lastOccurenceEndDate =
+                event.node.date.dates[event.node.date.dates.length - 1].endDate
+              return filterPastEvents(lastOccurenceEndDate)
+            })
             .sort(sortEventsByStartTime)}
         >
           <Fragment>
