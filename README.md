@@ -1,4 +1,4 @@
-# Pride in London
+# Pride in London website :rainbow:
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/94c5776f-6b68-460b-9d6f-400504d691a4/deploy-status)](https://app.netlify.com/sites/prideinlondon-production/deploys)  
 [![CircleCI](https://circleci.com/gh/PrideInLondon/pride-london-web.svg?style=svg)](https://circleci.com/gh/PrideInLondon/pride-london-web)  
@@ -6,90 +6,109 @@
 [![DeepScan grade](https://deepscan.io/api/teams/3576/projects/5314/branches/40859/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3576&pid=5314&bid=40859)  
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/context:javascript) [![Total alerts](https://img.shields.io/lgtm/alerts/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/alerts/)  
 [![codecov](https://codecov.io/gh/PrideInLondon/pride-london-web/branch/master/graph/badge.svg)](https://codecov.io/gh/PrideInLondon/pride-london-web)  
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=PrideInLondon_pride-london-web&metric=alert_status)](https://sonarcloud.io/dashboard?id=PrideInLondon_pride-london-web)  
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=PrideInLondon_pride-london-web&metric=alert_status)](https://sonarcloud.io/dashboard?id=PrideInLondon_pride-london-web)
 
-This project is a community effort to release a brand new web platform to supplant and improve upon the product currently available at prideinlondon.org.
+This project is a community effort to provide the [Pride in London website](https://prideinlondon.org). The project is written in JavaScript/TypeScript and leverages the [Gatsby](https://www.gatsbyjs.org) and [React](https://reactjs.org) web frameworks.
 
-## Contributing
+- [Developing locally](#developing-locally-headphones)
+  - [Prerequisites](#prerequisites-new)
+  - [Running the development server](#running-the-development-server-running)
+  - [Running the unit tests](#running-the-unit-tests-white_check_mark)
+  - [Building the static site](#building-the-static-site-hammer_and_wrench)
+- [Resources](#resources-notebook)
+- [Contributing](#contributing-handshake)
+- [License](#license-necktie)
 
-Want to help out? That's amazing! The Contribution Guide should hopefully get you on your way.
+## Developing locally :headphones:
 
-Check the [issues](https://github.com/PrideInLondon/pride-london-web/issues) section of the repo for tickets to pick up.
+### Prerequisites :new:
 
-## Install
+Prior to getting started with development on this project, there are a few software installations required:
 
-1. Make sure that you have the Gatsby CLI program installed:
+- [`node`](https://nodejs.org/en): preferably installed via ([`nvm`](https://github.com/nvm-sh/nvm))
+  - take note of the recommended version defined in the [`.nvmrc`](./.nvmrc) file
+- [`yarn`](https://yarnpkg.com): installed globally at the latest version
+- [`gatsby-cli`](https://www.gatsbyjs.org/docs/gatsby-cli): installed globally at the latest version
 
-```sh
-npm install --global gatsby-cli
-```
+Once the repo has been cloned, an environment file is required in the root of the project to supply connections to our upstream systems, e.g. [Contentful](https://www.contentful.com).
 
-2. Pull the repository.
-3. Install nvm from [here](https://github.com/creationix/nvm)
-4. Make sure you're using the correct version of node `nvm use`
-5. Ensure you have [yarn](https://yarnpkg.com/en/docs/install) installed.
-
-## Environment Variables
-
-1. Copy the [`.env.example`](./.env.example) file (from the root of the project) to a new file (also at the root of the project) called `.env.development`
+Copy the [`.env.example`](./.env.example) file (from the root of the project) to a new file (also at the root of the project) called `.env.development`:
 
 ```bash
+# run this command in a terminal window from project root
 cp .env.example .env.development
 ```
 
-2. Replace the values on the right of the `=` signs to be the API details from Contentful's Pride `web` space
+Replace the values on the right of the `=` signs with the following values:
 
-### Preview draft content
+- `CONTENTFUL` section: the API details from Contentful's Pride `web` space
 
-If you wish to view draft content (i.e. unpublished content) from Contentful on your development setup, you can update the `PREVIEW_CONTENT` boolean to be `true` in your [`.env.development`](./.env.development) file. This can simply be changed back to `false` in order to pull production content again.
+#### Preview draft content :mag:
 
-If your app is not reading the content from the correct environment, try the following steps:
+In order for Contentful draft content (i.e. unpublished content) to be available from a development setup, the `PREVIEW_CONTENT` boolean to be set to `true` in the [`.env.development`](./.env.development) file. This can simply be changed back to `false` in order to pull published content again.
 
-- ensure you have closed all running app instances between config changes
-- delete your local Contentful cache via the command `gatsby clean`
+If the app is not reading the content from the correct environment, try the following steps:
 
-## Running 🏃
+- ensure all running app instances are closed between config changes
+- delete the local Contentful cache via the command `gatsby clean`
 
-```sh
-gatsby develop
+### Running the development server :running:
+
+Ensure all the [prerequisites](#prerequisites-new) mentioned above are installed and set to the recommended versions.
+
+In order to install the dependencies required for the project, open a terminal window at project root and run the following command:
+
+```bash
+yarn install
 ```
 
-Make sure you have the correct Contentful configuration or the project won't run.
+_Note that this command will require re-running for every update to the [`yarn.lock`](./yarn.lock) file._
 
-## Tests
+In order to run the project, open a terminal window at project root and run the following command:
 
-Test will be run using Jest + Enzyme. Can be run with:
+```bash
+yarn develop
+```
 
-```sh
+### Running the unit tests :white_check_mark:
+
+There are a number of unit tests included in the project used to ensure business logic is behaving as expected across the codebase. In order to run these locally, open a terminal window at project root and run the following command:
+
+```bash
 yarn test
 ```
 
-or to watch:
+_Note that all dependencies must be installed prior to this command being run for the first time. See [section above](#running-the-development-server-running) for more information on how to do this._
 
-```sh
-yarn test:watch
+### Building the static site :hammer_and_wrench:
+
+As the site is built using Gatsby, only the static files are served in a production setting. These files can be built locally in order to e.g. debug issues with the deployed site.
+
+In order to achieve this, a `.env.production` is required in the root of the project. This may be an exact clone of the `.env.development` file mentioned in the [section above](#prerequisites-new).
+
+Prior to running the build command, ensure that all dependencies are installed via the command:
+
+```bash
+yarn install
 ```
 
-## Layout
+Once this has been completed, the build command may be run. This can be done via the command:
 
-Grid layout will be done via [Grid-Styled](http://jxnblk.com/grid-styled/). Breakpoints and spacing configuration can be found in `src/theme/theme.js`. See `src/grid/grid.js` to see how the Container, Column and Row components are made. Example of usage can be found on the events page on `src/pages/events.js`. Please see [Official Documentation](https://github.com/jxnblk/grid-styled) on how to set widths for your columns and set alignment.
-
-## Styling
-
-Styling will be done via [Styled-Components](https://www.styled-components.com/).
-
-## Linting
-
-This project uses **ESlint** with **Prettier**
-
-To run the linter...
-
-```sh
-yarn lint
+```bash
+yarn build
 ```
 
-To apply Prettier formatting to all `.js` files...
+## Resources :notebook:
 
-```sh
-yarn format
-```
+There are some resources available in this repo to aid development process:
+
+- [How to guide](./how-to-guide.md): a guide for performing common development actions
+- [Code of conduct](./.github/CODE_OF_CONDUCT.md): defines standards for how to engage in the Pride in London community
+
+## Contributing :handshake:
+
+Want to help out? That's amazing! Please see the [roles available](https://volunteer.prideinlondon.org/jobs?department_id=34173) on the Pride in London volunteer platform.
+
+## License :necktie:
+
+This project is licensed under the terms of the [Apache License 2.0](./LICENSE).
