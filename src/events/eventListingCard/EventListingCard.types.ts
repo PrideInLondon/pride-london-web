@@ -1,21 +1,19 @@
 import { ResponsiveValue } from 'styled-system'
-interface EventDateOccurence {
+export interface EventDateOccurrence {
   startDate: string
   endDate: string
+  id: string
 }
 export interface ContentfulEvent {
   id: string
   name: string
   eventsListPicture: any
-  startTime: string
-  endTime: string
-  recurrenceDates: string[]
   location2: string
   locationName: string
   addressLine1: string
   eventPriceLow: number
   date: {
-    dates: EventDateOccurence[]
+    dates: EventDateOccurrence[]
   }
 }
 
@@ -25,10 +23,5 @@ export interface EventListingCardProps {
 }
 
 export interface WhenProps {
-  /** Start time in format YYYY-MM-DDTHH:mm+HH:mm */
-  startTime: string
-  /** End time in format YYYY-MM-DDTHH:mm+HH:mm */
-  endTime: string
-  recurrenceDates: string[]
-  dates?: EventDateOccurence[]
+  dates: EventDateOccurrence[]
 }

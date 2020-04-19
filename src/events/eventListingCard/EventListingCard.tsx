@@ -7,12 +7,8 @@ import {
   CardTitle,
   CardFooter,
 } from '../../components/card'
-import {
-  generateEventSlug,
-  momentizeRecurrenceDate,
-  isVirtualEvent,
-} from '../helpers'
-import { generateDisplayDate } from '../EventCard'
+import { generateEventSlug } from '../helpers'
+import { generateDisplayDate, formatLocation } from './EventListingCard.utils'
 import { EventListingCardProps, WhenProps } from './EventListingCard.types'
 import {
   CardDate,
@@ -22,48 +18,23 @@ import {
   Price,
 } from './EventListingCard.styles'
 
-const When: React.FC<WhenProps> = ({ startTime, endTime, recurrenceDates }) => {
+const When: React.FC<WhenProps> = ({ dates }) => {
   return (
     <CardDate>
       <PaddedCalendarIcon color={colors.darkCyan} />
       {generateDisplayDate({
-        start: startTime,
-        end: endTime,
-        lastOccurrence:
-          recurrenceDates &&
-          momentizeRecurrenceDate(
-            recurrenceDates[recurrenceDates.length - 1]
-          ).toDate(),
+        dates,
       })}
     </CardDate>
   )
 }
-
-When.defaultProps = {
-  recurrenceDates: [],
-}
-
-export const formatLocation = ({
-  platform,
-  locationName,
-  addressLine1,
-}: {
-  platform: string
-  locationName: string
-  addressLine1: string
-}) =>
-  isVirtualEvent(platform)
-    ? platform
-    : `${locationName}${addressLine1 ? `, ${addressLine1}` : ''}`
 
 export const EventListingCard: React.FC<EventListingCardProps> = ({
   event: {
     id,
     name,
     eventsListPicture,
-    startTime,
-    endTime,
-    recurrenceDates,
+    date: { dates },
     location2: platform,
     locationName,
     addressLine1,
@@ -74,7 +45,7 @@ export const EventListingCard: React.FC<EventListingCardProps> = ({
   <Card variant={variant} to={generateEventSlug({ id, name })}>
     <CardImage image={eventsListPicture.fixed} alt={eventsListPicture.title} />
     <CardContent>
-      <When {...{ startTime, endTime, recurrenceDates }} />
+      <When dates={dates} />
       <CardTitle>{name}</CardTitle>
       <Location>
         {formatLocation({

@@ -34,9 +34,10 @@ export const formatShortTime = (date: string): string =>
 /**
  *
  * @param {string} date - ISO Date String
+ * @param {Date} now - date object, param needed for testing
  */
-export function filterPastEvents(date: string): boolean {
-  const today = moment()
+export function filterPastEvents(date: string, now = new Date()): boolean {
+  const today = moment(now)
   return moment(date).isSameOrAfter(today)
 }
 
