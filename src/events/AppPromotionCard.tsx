@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
-import appleStore from '../assets/appStore.svg'
-import googlePlayStore from '../assets/googlePlayStore.svg'
+import { CTALink } from '../components/ctaLink/CTALink'
 
 const CardWrapper = styled.div`
   padding-left: 20px;
@@ -43,22 +42,8 @@ const LinkWrapper = styled.div`
   }
 `
 
-const AppStoreLink = styled.a`
-  text-decoration: none;
-  margin: 5px 0;
-  ${mediaQueries.md} {
-    margin-right: 0;
-  }
-`
-const AppStoreImg = styled.img`
-  background: black;
-  width: 140px;
-  height: 48px;
-  object-fit: contain;
-`
-export const title = 'Download our app'
-export const description = `Download our iOS & Android app to carry our interactive Parade map,
-stage line up info and afterparty information around with you on the day`
+export const title = 'List your event'
+export const description = `Whether you're hosting an Instagram Live Q&A, digital drag brunch or a theatre run, we'd love to showcase your event on our platform.`
 
 const AppPromotionCard: React.FC = () => {
   return (
@@ -66,30 +51,12 @@ const AppPromotionCard: React.FC = () => {
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
       <LinkWrapper>
-        <AppStoreLink
-          href="https://apps.apple.com/gb/app/pride-in-london/id1250496471"
-          rel="noopener noreferrer"
-          aria-label="link to the Apple store so you can download the IOS version of the Pride in London app"
-          target="_blank"
+        <CTALink
+          to="https://prideinlondon.org/events/list-your-event"
+          color={colors.white}
         >
-          <AppStoreImg
-            src={appleStore}
-            alt="Apple store icon"
-            aria-hidden="true"
-          />
-        </AppStoreLink>
-        <AppStoreLink
-          href="https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en_GB"
-          aria-label="link to the Google store so you can download the Android version Pride in London app"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <AppStoreImg
-            src={googlePlayStore}
-            alt="Apple store icon"
-            aria-hidden="true"
-          />
-        </AppStoreLink>
+          Click to find out more
+        </CTALink>
       </LinkWrapper>
     </CardWrapper>
   )
