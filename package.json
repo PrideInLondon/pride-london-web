@@ -20,7 +20,7 @@
     "@rebass/grid": "^6.0.0",
     "@types/shortid": "^0.0.29",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.20.18",
+    "gatsby": "^2.20.26",
     "gatsby-image": "^2.3.2",
     "gatsby-link": "^2.3.2",
     "gatsby-plugin-layout": "^1.1.22",
