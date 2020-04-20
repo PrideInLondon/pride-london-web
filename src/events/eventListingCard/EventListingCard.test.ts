@@ -1,3 +1,4 @@
+import { changeTimeZone } from '../helpers'
 import {
   generateDisplayDate,
   formatLocation,
@@ -83,9 +84,7 @@ describe('generateDisplayDate', () => {
 
   beforeAll(() => {
     // set up to be 1st of January 2019 @ 09:00 UTC
-    firstOfJanuary = new Date()
-    firstOfJanuary.setFullYear(2019, 0, 1)
-    firstOfJanuary.setHours(9, 0, 0)
+    firstOfJanuary = new Date('2019-01-01T09:00:00')
   })
 
   it('should display the date as today when event occurs today', () => {
@@ -98,8 +97,8 @@ describe('generateDisplayDate', () => {
     const actual = generateDisplayDate({
       dates: [
         {
-          startDate: start.toISOString(),
-          endDate: end.toISOString(),
+          startDate: changeTimeZone(start).toISOString(),
+          endDate: changeTimeZone(end).toISOString(),
           id: 'test',
         },
       ],
@@ -121,8 +120,8 @@ describe('generateDisplayDate', () => {
     const actual = generateDisplayDate({
       dates: [
         {
-          startDate: start.toISOString(),
-          endDate: end.toISOString(),
+          startDate: changeTimeZone(start).toISOString(),
+          endDate: changeTimeZone(end).toISOString(),
           id: 'test',
         },
       ],
@@ -144,8 +143,8 @@ describe('generateDisplayDate', () => {
     const actual = generateDisplayDate({
       dates: [
         {
-          startDate: start.toISOString(),
-          endDate: end.toISOString(),
+          startDate: changeTimeZone(start).toISOString(),
+          endDate: changeTimeZone(end).toISOString(),
           id: 'test',
         },
       ],
@@ -167,8 +166,8 @@ describe('generateDisplayDate', () => {
     const actual = generateDisplayDate({
       dates: [
         {
-          startDate: start.toISOString(),
-          endDate: end.toISOString(),
+          startDate: changeTimeZone(start).toISOString(),
+          endDate: changeTimeZone(end).toISOString(),
           id: 'test',
         },
       ],
@@ -191,8 +190,8 @@ describe('generateDisplayDate', () => {
     const actual = generateDisplayDate({
       dates: [
         {
-          startDate: start.toISOString(),
-          endDate: end.toISOString(),
+          startDate: changeTimeZone(start).toISOString(),
+          endDate: changeTimeZone(end).toISOString(),
           id: 'test',
         },
       ],
@@ -225,13 +224,13 @@ describe('generateDisplayDate', () => {
     const actual = generateDisplayDate({
       dates: [
         {
-          startDate: start.toISOString(),
-          endDate: end.toISOString(),
+          startDate: changeTimeZone(start).toISOString(),
+          endDate: changeTimeZone(end).toISOString(),
           id: 'test1',
         },
         {
-          startDate: start2.toISOString(),
-          endDate: end2.toISOString(),
+          startDate: changeTimeZone(start2).toISOString(),
+          endDate: changeTimeZone(end2).toISOString(),
           id: 'test2',
         },
       ],
@@ -272,18 +271,18 @@ describe('generateDisplayDate', () => {
     const actual = generateDisplayDate({
       dates: [
         {
-          startDate: start.toISOString(),
-          endDate: end.toISOString(),
+          startDate: changeTimeZone(start).toISOString(),
+          endDate: changeTimeZone(end).toISOString(),
           id: 'test1',
         },
         {
-          startDate: start2.toISOString(),
-          endDate: end2.toISOString(),
+          startDate: changeTimeZone(start2).toISOString(),
+          endDate: changeTimeZone(end2).toISOString(),
           id: 'test2',
         },
         {
-          startDate: start3.toISOString(),
-          endDate: end3.toISOString(),
+          startDate: changeTimeZone(start3).toISOString(),
+          endDate: changeTimeZone(end3).toISOString(),
           id: 'test3',
         },
       ],
@@ -322,18 +321,18 @@ describe('generateDisplayDate', () => {
     const actual = generateDisplayDate({
       dates: [
         {
-          startDate: start.toISOString(),
-          endDate: end.toISOString(),
+          startDate: changeTimeZone(start).toISOString(),
+          endDate: changeTimeZone(end).toISOString(),
           id: 'test1',
         },
         {
-          startDate: start2.toISOString(),
-          endDate: end2.toISOString(),
+          startDate: changeTimeZone(start2).toISOString(),
+          endDate: changeTimeZone(end2).toISOString(),
           id: 'test2',
         },
         {
-          startDate: start3.toISOString(),
-          endDate: end3.toISOString(),
+          startDate: changeTimeZone(start3).toISOString(),
+          endDate: changeTimeZone(end3).toISOString(),
           id: 'test3',
         },
       ],
@@ -374,18 +373,18 @@ describe('generateDisplayDate', () => {
     const actual = generateDisplayDate({
       dates: [
         {
-          startDate: start.toISOString(),
-          endDate: end.toISOString(),
+          startDate: changeTimeZone(start).toISOString(),
+          endDate: changeTimeZone(end).toISOString(),
           id: 'test1',
         },
         {
-          startDate: start2.toISOString(),
-          endDate: end2.toISOString(),
+          startDate: changeTimeZone(start2).toISOString(),
+          endDate: changeTimeZone(end2).toISOString(),
           id: 'test2',
         },
         {
-          startDate: start3.toISOString(),
-          endDate: end3.toISOString(),
+          startDate: changeTimeZone(start3).toISOString(),
+          endDate: changeTimeZone(end3).toISOString(),
           id: 'test3',
         },
       ],
