@@ -120,3 +120,19 @@ export const extractEventIdFromSlug = (slug: string): string => {
  */
 export const isVirtualEvent = (platform: string): boolean =>
   platform !== 'In a physical location'
+
+export function sortByNextOccurrence(
+  a: EventNode,
+  b: EventNode,
+  now: Date = new Date()
+): number {
+  const aDates = a.node.date.dates.filter(date =>
+    filterPastEvents(date.endDate, now)
+  )
+  const bDates = b.node.date.dates.filter(date =>
+    filterPastEvents(date.endDate, now)
+  )
+
+  if (new Date(aDates[0].startDate) >= new Date(bDates[0].startDate)) return 1
+  return -1
+}

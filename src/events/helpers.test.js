@@ -8,6 +8,7 @@ import {
   extractEventIdFromSlug,
   sortEventsByStartTime,
   isVirtualEvent,
+  sortByNextOccurrence,
 } from './helpers'
 
 const yesterday = new Date()
@@ -15,6 +16,15 @@ yesterday.setDate(yesterday.getDate() - 1)
 
 const tomorrow = new Date()
 tomorrow.setDate(tomorrow.getDate() + 1)
+
+const today = new Date()
+today.setHours(0, 0, 0, 0)
+
+const addDays = (date, days) => {
+  const datePlusDays = new Date(date)
+  datePlusDays.setDate(date.getDate() + days)
+  return datePlusDays
+}
 
 describe('formatTime', () => {
   it.each`
@@ -140,4 +150,78 @@ describe('isVirtualEvent', () => {
       expect(actual).toEqual(expected)
     }
   )
+})
+
+describe('sortByNextOccurrence', () => {
+  const events = [
+    {
+      node: {
+        id: 'event1',
+        date: {
+          dates: [
+            {
+              id: 'test1',
+              startDate: yesterday.toISOString(),
+              endDate: yesterday.toISOString(),
+            },
+            {
+              id: 'test2',
+              startDate: tomorrow.toISOString(),
+              endDate: tomorrow.toISOString(),
+            },
+            {
+              id: 'test3',
+              startDate: addDays(today, 2).toISOString(),
+              endDate: addDays(today, 2).toISOString(),
+            },
+          ],
+        },
+      },
+    },
+    {
+      node: {
+        id: 'event2',
+        date: {
+          dates: [
+            {
+              id: 'test4',
+              startDate: yesterday.toISOString(),
+              endDate: yesterday.toISOString(),
+            },
+            {
+              id: 'test5',
+              startDate: today.toISOString(),
+              endDate: today.toISOString(),
+            },
+            {
+              id: 'test6',
+              startDate: tomorrow.toISOString(),
+              endDate: tomorrow.toISOString(),
+            },
+          ],
+        },
+      },
+    },
+    {
+      node: {
+        id: 'event3',
+        date: {
+          dates: [
+            {
+              id: 'test7',
+              startDate: yesterday.toISOString(),
+              endDate: tomorrow.toISOString(),
+            },
+          ],
+        },
+      },
+    },
+  ]
+
+  it('should sort the events in order event3, event2, event1', () => {
+    const sortedEvents = events.sort(sortByNextOccurrence, today)
+    expect(sortedEvents[0].node.id).toBe('event3')
+    expect(sortedEvents[1].node.id).toBe('event2')
+    expect(sortedEvents[2].node.id).toBe('event1')
+  })
 })
