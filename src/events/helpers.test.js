@@ -219,9 +219,8 @@ describe('sortByNextOccurrence', () => {
   ]
 
   it('should sort the events in order event3, event2, event1', () => {
-    const sortedEvents = events.sort(
-      sortByNextOccurrence,
-      changeTimeZone(today)
+    const sortedEvents = events.sort((a, b) =>
+      sortByNextOccurrence(a, b, changeTimeZone(today))
     )
     expect(sortedEvents[0].node.id).toBe('event3')
     expect(sortedEvents[1].node.id).toBe('event2')
