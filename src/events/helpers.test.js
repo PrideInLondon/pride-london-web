@@ -9,6 +9,7 @@ import {
   sortEventsByStartTime,
   isVirtualEvent,
   sortByNextOccurrence,
+  changeTimeZone,
 } from './helpers'
 
 const yesterday = new Date()
@@ -18,7 +19,6 @@ const tomorrow = new Date()
 tomorrow.setDate(tomorrow.getDate() + 1)
 
 const today = new Date()
-today.setHours(0, 0, 0, 0)
 
 const addDays = (date, days) => {
   const datePlusDays = new Date(date)
@@ -161,18 +161,18 @@ describe('sortByNextOccurrence', () => {
           dates: [
             {
               id: 'test1',
-              startDate: yesterday.toISOString(),
-              endDate: yesterday.toISOString(),
+              startDate: changeTimeZone(yesterday).toISOString(),
+              endDate: changeTimeZone(yesterday).toISOString(),
             },
             {
               id: 'test2',
-              startDate: tomorrow.toISOString(),
-              endDate: tomorrow.toISOString(),
+              startDate: changeTimeZone(tomorrow).toISOString(),
+              endDate: changeTimeZone(tomorrow).toISOString(),
             },
             {
               id: 'test3',
-              startDate: addDays(today, 2).toISOString(),
-              endDate: addDays(today, 2).toISOString(),
+              startDate: changeTimeZone(addDays(today, 2)).toISOString(),
+              endDate: changeTimeZone(addDays(today, 2)).toISOString(),
             },
           ],
         },
@@ -185,18 +185,18 @@ describe('sortByNextOccurrence', () => {
           dates: [
             {
               id: 'test4',
-              startDate: yesterday.toISOString(),
-              endDate: yesterday.toISOString(),
+              startDate: changeTimeZone(yesterday).toISOString(),
+              endDate: changeTimeZone(yesterday).toISOString(),
             },
             {
               id: 'test5',
-              startDate: today.toISOString(),
-              endDate: today.toISOString(),
+              startDate: changeTimeZone(today).toISOString(),
+              endDate: changeTimeZone(today).toISOString(),
             },
             {
               id: 'test6',
-              startDate: tomorrow.toISOString(),
-              endDate: tomorrow.toISOString(),
+              startDate: changeTimeZone(tomorrow).toISOString(),
+              endDate: changeTimeZone(tomorrow).toISOString(),
             },
           ],
         },
@@ -209,8 +209,8 @@ describe('sortByNextOccurrence', () => {
           dates: [
             {
               id: 'test7',
-              startDate: yesterday.toISOString(),
-              endDate: tomorrow.toISOString(),
+              startDate: changeTimeZone(yesterday).toISOString(),
+              endDate: changeTimeZone(tomorrow).toISOString(),
             },
           ],
         },
