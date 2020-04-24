@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from '../components/helmet'
-import { colors } from '../theme/colors'
 import { Button } from '../components/button'
 import { Container, Row } from '../components/grid'
 import EventsContext from '../contexts/eventsContext'
@@ -41,12 +40,7 @@ const EventsPage = ({
         title="Coming Out"
         description="The new way to find the best queer events for the queer community from Pride in London"
       />
-      <EventsPageBanner
-        title="Coming Out"
-        subtitle=" The new way to find the best queer events for the queer community from Pride in London."
-        backgroundColor={colors.mexicanPink}
-        image={childImageSharp}
-      />
+      <EventsPageBanner image={childImageSharp} />
       <Background>
         <Container paddingTop={{ default: 0, md: '60px' }}>
           <Row>
