@@ -4,7 +4,7 @@ import { Helmet } from '../components/helmet'
 import { Button } from '../components/button'
 import { Container, Row } from '../components/grid'
 import EventsContext from '../contexts/eventsContext'
-import { filterByLimit } from '../events/helpers'
+import { filterByLimit, sortByNextOccurrence } from '../events/helpers'
 import constants from '../constants'
 import GroupedEventsCards from './GroupedEventsCards'
 import { EventsPageBanner } from './EventsPageBanner'
@@ -46,6 +46,7 @@ const EventsPage = ({
           <Row>
             <ListingCardWrapper>
               {events
+                .sort((a, b) => sortByNextOccurrence(a, b))
                 .filter(filterByLimit, numberOfEventsToShow)
                 .map((event, index, filteredEvents) => (
                   <GroupedEventsCards

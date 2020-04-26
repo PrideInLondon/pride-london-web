@@ -7,6 +7,20 @@ import { ContentfulEvent } from './eventListingCard/EventListingCard.types'
 
 const encoder = new UuidEncoder('base62')
 
+export const changeTimeZone = (
+  date: Date,
+  timeZone = 'Europe/London'
+): Date => {
+  const dateWithTimeZone = new Date(
+    date.toLocaleString('en-GB', {
+      timeZone,
+    })
+  )
+
+  const diff = date.getTime() - dateWithTimeZone.getTime()
+  return new Date(date.getTime() + diff)
+}
+
 export const formatPrice = (
   eventPriceLow: number,
   eventPriceHigh: number
@@ -34,9 +48,10 @@ export const formatShortTime = (date: string): string =>
 /**
  *
  * @param {string} date - ISO Date String
+ * @param {Date} now - date object, param needed for testing
  */
-export function filterPastEvents(date: string): boolean {
-  const today = moment()
+export function filterPastEvents(date: string, now = new Date()): boolean {
+  const today = moment(now)
   return moment(date).isSameOrAfter(today)
 }
 
@@ -105,3 +120,19 @@ export const extractEventIdFromSlug = (slug: string): string => {
  */
 export const isVirtualEvent = (platform: string): boolean =>
   platform !== 'In a physical location'
+
+export function sortByNextOccurrence(
+  a: EventNode,
+  b: EventNode,
+  now: Date = new Date()
+): number {
+  const aDates = a.node.date.dates.filter(date =>
+    filterPastEvents(date.endDate, now)
+  )
+  const bDates = b.node.date.dates.filter(date =>
+    filterPastEvents(date.endDate, now)
+  )
+
+  if (new Date(aDates[0].startDate) >= new Date(bDates[0].startDate)) return 1
+  return -1
+}

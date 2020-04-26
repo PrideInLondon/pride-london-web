@@ -3,7 +3,14 @@ export const mockNodes = [
   {
     node: {
       id: '123',
-      startTime: '2035-06-02T13:30+01:00',
+      date: {
+        dates: [
+          {
+            startDate: '2035-06-02T13:30:00.000Z',
+            endDate: '2035-06-02T00:14:30.000Z',
+          },
+        ],
+      },
       eventsListPicture: {
         file: {
           url: '123123',
@@ -15,7 +22,14 @@ export const mockNodes = [
   {
     node: {
       id: '234',
-      startTime: '2006-06-02T13:30+01:00',
+      date: {
+        dates: [
+          {
+            startDate: '2035-06-03T13:30:00.000Z',
+            endDate: '2035-06-03T00:14:30.000Z',
+          },
+        ],
+      },
       eventsListPicture: {
         file: {
           url: '123123',
@@ -28,7 +42,14 @@ export const mockNodes = [
   {
     node: {
       id: '1234',
-      startTime: '2035-06-02T13:30+01:00',
+      date: {
+        dates: [
+          {
+            startDate: '2035-06-03T13:30:00.000Z',
+            endDate: '2035-06-03T00:14:30.000Z',
+          },
+        ],
+      },
       eventsListPicture: {
         file: {
           url: '123123',
@@ -47,12 +68,11 @@ export const testEvent = {
     date: {
       dates: [
         {
-          startDate: new Date().toISOString(),
-          endDate: new Date().toISOString(),
+          startDate: '2035-06-02T13:30:00.000Z',
+          endDate: '2035-06-02T00:14:30.000Z',
         },
       ],
     },
-    endTime: '2035-06-07T20:30+01:00',
     eventCategories: ['Talks and Debates'],
     eventPriceLow: 0,
     eventsListPicture: {
