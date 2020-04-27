@@ -26,7 +26,6 @@ const CardTitle = styled.h3`
     max-width: 174px;
   }
 `
-
 const CardDescription = styled.p`
   color: ${colors.white};
   padding-right: 30px;
@@ -34,10 +33,10 @@ const CardDescription = styled.p`
   line-height: 26px;
 `
 
-export const title = 'List your event'
-export const description = `Whether you're hosting an Instagram Live Q&A, digital drag brunch or a theatre run, we'd love to showcase your event on our platform.`
-
 const EventListingPromotionCard: React.FC = () => {
+  const title = 'List your event'
+  const description = `Whether you're hosting an Instagram Live Q&A, digital drag brunch or a theatre run, we'd love to showcase your event on our platform.`
+
   return (
     <CardWrapper>
       <CardTitle>{title}</CardTitle>
