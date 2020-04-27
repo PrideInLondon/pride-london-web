@@ -33,19 +33,17 @@ const CardDescription = styled.p`
   line-height: 26px;
 `
 
-const EventListingPromotionCard: React.FC = () => {
-  const title = 'List your event'
-  const description = `Whether you're hosting an Instagram Live Q&A, digital drag brunch or a theatre run, we'd love to showcase your event on our platform.`
-
-  return (
-    <CardWrapper>
-      <CardTitle>{title}</CardTitle>
-      <CardDescription>{description}</CardDescription>
-      <CTALink to="/events/list-your-event" color={colors.white}>
-        Click to find out more
-      </CTALink>
-    </CardWrapper>
-  )
-}
+const EventListingPromotionCard: React.FC = () => (
+  <CardWrapper>
+    <CardTitle>List your event</CardTitle>
+    <CardDescription>
+      Whether you're hosting an Instagram Live Q&amp;A, digital drag brunch or a
+      theatre run, we'd love to showcase your event on our platform.
+    </CardDescription>
+    <CTALink to="/events/list-your-event" color={colors.white}>
+      Click to find out more
+    </CTALink>
+  </CardWrapper>
+)
 
 export default EventListingPromotionCard
