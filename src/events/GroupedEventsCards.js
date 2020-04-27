@@ -9,6 +9,7 @@ import { colors } from '../theme/colors'
 import EventListingCard from './EventListingCard'
 import EventListingPromotionCard from './EventListingPromotionCard'
 
+
 const DateGroupHeading = styled.h2`
   margin: 1rem 0;
   color: ${colors.white};

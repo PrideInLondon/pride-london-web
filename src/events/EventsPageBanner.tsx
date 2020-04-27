@@ -14,12 +14,9 @@ import { EventsPageBannerProps } from './EventsPageBanner.types'
 import { ComingOut } from './ComingOut'
 
 export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
-  title,
-  subtitle,
-  backgroundColor,
   image,
 }) => (
-  <StyledBanner role="banner" backgroundColor={backgroundColor}>
+  <StyledBanner role="banner" backgroundColor={colors.mexicanPink}>
     <Row
       alignItems="center"
       flexDirection={'row-reverse'}
@@ -48,8 +45,14 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
       >
         <div>
           <ComingOut />
-          <Title>{title}</Title>
-          <Subtitle>{subtitle}</Subtitle>
+          <Title>
+            <del>Coming Out</del>
+            <ins>Staying In</ins>
+          </Title>
+          <Subtitle>
+            The new way to find the best queer events for the queer community
+            from Pride in London.
+          </Subtitle>
           <p>
             <CTALink to="/events/about-coming-out" color={colors.white}>
               Find out more

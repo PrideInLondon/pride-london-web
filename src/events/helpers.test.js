@@ -8,6 +8,8 @@ import {
   extractEventIdFromSlug,
   sortEventsByStartTime,
   isVirtualEvent,
+  sortByNextOccurrence,
+  changeTimeZone,
 } from './helpers'
 
 const yesterday = new Date()
@@ -15,6 +17,14 @@ yesterday.setDate(yesterday.getDate() - 1)
 
 const tomorrow = new Date()
 tomorrow.setDate(tomorrow.getDate() + 1)
+
+const today = new Date()
+
+const addDays = (date, days) => {
+  const datePlusDays = new Date(date)
+  datePlusDays.setDate(date.getDate() + days)
+  return datePlusDays
+}
 
 describe('formatTime', () => {
   it.each`
@@ -140,4 +150,80 @@ describe('isVirtualEvent', () => {
       expect(actual).toEqual(expected)
     }
   )
+})
+
+describe('sortByNextOccurrence', () => {
+  const events = [
+    {
+      node: {
+        id: 'event1',
+        date: {
+          dates: [
+            {
+              id: 'test1',
+              startDate: changeTimeZone(yesterday).toISOString(),
+              endDate: changeTimeZone(yesterday).toISOString(),
+            },
+            {
+              id: 'test2',
+              startDate: changeTimeZone(tomorrow).toISOString(),
+              endDate: changeTimeZone(tomorrow).toISOString(),
+            },
+            {
+              id: 'test3',
+              startDate: changeTimeZone(addDays(today, 2)).toISOString(),
+              endDate: changeTimeZone(addDays(today, 2)).toISOString(),
+            },
+          ],
+        },
+      },
+    },
+    {
+      node: {
+        id: 'event2',
+        date: {
+          dates: [
+            {
+              id: 'test4',
+              startDate: changeTimeZone(yesterday).toISOString(),
+              endDate: changeTimeZone(yesterday).toISOString(),
+            },
+            {
+              id: 'test5',
+              startDate: changeTimeZone(today).toISOString(),
+              endDate: changeTimeZone(today).toISOString(),
+            },
+            {
+              id: 'test6',
+              startDate: changeTimeZone(tomorrow).toISOString(),
+              endDate: changeTimeZone(tomorrow).toISOString(),
+            },
+          ],
+        },
+      },
+    },
+    {
+      node: {
+        id: 'event3',
+        date: {
+          dates: [
+            {
+              id: 'test7',
+              startDate: changeTimeZone(yesterday).toISOString(),
+              endDate: changeTimeZone(tomorrow).toISOString(),
+            },
+          ],
+        },
+      },
+    },
+  ]
+
+  it('should sort the events in order event3, event2, event1', () => {
+    const sortedEvents = events.sort((a, b) =>
+      sortByNextOccurrence(a, b, changeTimeZone(today))
+    )
+    expect(sortedEvents[0].node.id).toBe('event3')
+    expect(sortedEvents[1].node.id).toBe('event2')
+    expect(sortedEvents[2].node.id).toBe('event1')
+  })
 })
