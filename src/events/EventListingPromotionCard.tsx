@@ -33,33 +33,20 @@ const CardDescription = styled.p`
   font-size: 1.125rem;
   line-height: 26px;
 `
-const LinkWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  max-width: 300px;
-  ${mediaQueries.md} {
-    flex-direction: column;
-  }
-`
 
 export const title = 'List your event'
 export const description = `Whether you're hosting an Instagram Live Q&A, digital drag brunch or a theatre run, we'd love to showcase your event on our platform.`
 
-const AppPromotionCard: React.FC = () => {
+const EventListingPromotionCard: React.FC = () => {
   return (
     <CardWrapper>
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
-      <LinkWrapper>
-        <CTALink
-          to="https://prideinlondon.org/events/list-your-event"
-          color={colors.white}
-        >
-          Click to find out more
-        </CTALink>
-      </LinkWrapper>
+      <CTALink to="/events/list-your-event" color={colors.white}>
+        Click to find out more
+      </CTALink>
     </CardWrapper>
   )
 }
 
-export default AppPromotionCard
+export default EventListingPromotionCard

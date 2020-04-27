@@ -7,7 +7,7 @@ import { media } from '../theme/media'
 import constants from '../constants'
 import { colors } from '../theme/colors'
 import EventListingCard from './EventListingCard'
-import AppPromotionCard from './AppPromotionCard'
+import EventListingPromotionCard from './EventListingPromotionCard'
 
 const DateGroupHeading = styled.h2`
   margin: 1rem 0;
@@ -53,8 +53,8 @@ const GroupedEventsCards = ({ event, index, prevEvent, toLoad }) => {
   return (
     <>
       {index === 3 && (
-        <Wrapper key="appPromotionCard">
-          <AppPromotionCard />
+        <Wrapper key="eventListingPromotionCard">
+          <EventListingPromotionCard />
         </Wrapper>
       )}
       <Wrapper

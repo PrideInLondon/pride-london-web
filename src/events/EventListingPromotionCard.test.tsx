@@ -1,6 +1,9 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import AppPromotionCard, { title, description } from './AppPromotionCard'
+import AppPromotionCard, {
+  title,
+  description,
+} from './EventListingPromotionCard'
 import GroupedEventsCards from './GroupedEventsCards'
 import { mockNodes, testEvent } from './__mocks__'
 
