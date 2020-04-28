@@ -136,3 +136,19 @@ export function sortByNextOccurrence(
   if (new Date(aDates[0].startDate) >= new Date(bDates[0].startDate)) return 1
   return -1
 }
+
+export const formatUpcomingDates = ({
+  startDate,
+  endDate,
+}: {
+  startDate: string
+  endDate: string
+}): string => {
+  const start = new Date(startDate)
+  const end = new Date(endDate)
+  if (moment(start).isSame(end, 'day')) {
+    return moment(start).format('ddd, DD MMM')
+  }
+  return `${moment(start).format('ddd, DD MMM')} -
+    ${moment(end).format('ddd, DD MMM')}`
+}
