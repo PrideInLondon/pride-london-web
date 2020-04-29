@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../theme/colors'
 import { mediaQueries } from '../../theme/mediaQueries'
+import { md } from '../../theme/breakpoints'
 import { formatTime, formatUpcomingDates } from '../helpers'
+import { useMedia } from '../../hooks/useMedia'
 
 export const UpcomingDateItem = styled.div`
   text-align: center;
@@ -11,16 +13,17 @@ export const UpcomingDateItem = styled.div`
   margin-right: 16px;
   min-width: 200px;
   scroll-snap-align: start;
+  width: 185px;
 
   ${mediaQueries.md} {
     min-width: 0;
     margin-right: 32px;
     margin-bottom: 32px;
-    flex-basis: calc(50% - 32px);
+    width: calc(50% - 32px);
   }
 
   ${mediaQueries.lg} {
-    flex-basis: calc(33.3333% - 32px);
+    width: calc(33.3333% - 32px);
   }
 `
 export const UpcomingDate = styled.h3`
@@ -60,10 +63,11 @@ interface EventUpcomingDatesProps {
 export const EventUpcomingDates: React.FC<EventUpcomingDatesProps> = ({
   dates,
 }) => {
+  const matches = useMedia(`(min-width: ${md}px)`)
   return (
     <UpcomingDatesContainer>
       {dates.map(event => (
-        <UpcomingDateItem key={event.id} tabIndex={0}>
+        <UpcomingDateItem key={event.id} {...(!matches && { tabIndex: 0 })}>
           <UpcomingDate>{formatUpcomingDates(event)}</UpcomingDate>
           <UpcomingTimes>{`${formatTime(event.startDate)} - ${formatTime(
             event.endDate

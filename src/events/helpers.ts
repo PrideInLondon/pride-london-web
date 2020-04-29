@@ -149,6 +149,7 @@ export const formatUpcomingDates = ({
   if (moment(start).isSame(end, 'day')) {
     return moment(start).format('ddd, DD MMM')
   }
-  return `${moment(start).format('ddd, DD MMM')} -
-    ${moment(end).format('ddd, DD MMM')}`
+  return `${moment(start).format('ddd, DD MMM')} - ${moment(end).format(
+    'ddd, DD MMM'
+  )}`
 }
