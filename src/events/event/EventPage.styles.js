@@ -86,21 +86,3 @@ export const HeroImage = styled(Img)`
   height: 100% !important;
   width: 100% !important;
 `
-
-export const UpcomingDateItem = styled.div`
-  text-align: center;
-  border: 1px solid ${theme.colors.lightGrey};
-  height: 100%;
-  padding: 16px;
-`
-export const UpcomingDate = styled.h3`
-  margin-top: 0;
-`
-export const UpcomingTimes = styled.p`
-  color: ${theme.colors.indigo};
-`
-
-export const UpcomingDatesContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`

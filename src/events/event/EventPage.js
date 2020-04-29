@@ -6,18 +6,14 @@ import ReactMarkdown from 'react-markdown'
 import { Container, Row, Column } from '../../components/grid'
 import { checkBreakpoint } from '../../utils/style-utils'
 import { SponsorsSubSection, renderSponsors } from '../../sponsors'
-import {
-  isVirtualEvent,
-  formatTime,
-  filterPastEvents,
-  formatUpcomingDates,
-} from '../helpers'
+import { isVirtualEvent, filterPastEvents } from '../helpers'
 import EventTagList from './EventTagList'
 import EventSchedule from './EventSchedule'
 import EventsYouMayLike from './EventsYouMayLike'
 import EventInfoCard from './EventInfoCard'
 import EventDirectionsSection from './EventDirectionsSection'
 import EventShareSection from './EventShareSection'
+import { EventUpcomingDates } from './EventUpcomingDates'
 import {
   AccessibilityHeading,
   EventInfoCardWrapper,
@@ -29,10 +25,6 @@ import {
   SectionTitle,
   Title,
   TitleWrapper,
-  UpcomingDate,
-  UpcomingDateItem,
-  // UpcomingDatesContainer,
-  UpcomingTimes,
 } from './EventPage.styles'
 
 const EventPage = ({
@@ -259,20 +251,7 @@ const EventPage = ({
             {filteredDates.length > 0 && (
               <Section>
                 <SectionTitle>Upcoming Dates</SectionTitle>
-                <Row mx={{ default: '-5px', sm: '-10px', lg: '-15px' }}>
-                  {filteredDates.map(event => (
-                    <Column width={{ default: 0.5, md: 0.3333 }}>
-                      <UpcomingDateItem>
-                        <UpcomingDate>
-                          {formatUpcomingDates(event)}
-                        </UpcomingDate>
-                        <UpcomingTimes>{`${formatTime(
-                          event.startDate
-                        )} - ${formatTime(event.endDate)} `}</UpcomingTimes>
-                      </UpcomingDateItem>
-                    </Column>
-                  ))}
-                </Row>
+                <EventUpcomingDates dates={filteredDates} />
               </Section>
             )}
             <Section>
