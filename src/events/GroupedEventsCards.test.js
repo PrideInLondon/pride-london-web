@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
 import GroupedEventsCards, { generateHeader } from './GroupedEventsCards'
 import { mockNodes, testEvent } from './__mocks__'
 
@@ -89,4 +90,16 @@ describe('generateHeader', () => {
       expect(actual).toEqual(expected)
     }
   )
+})
+
+it('should render EventListingPromotionCard at index 3', () => {
+  const { findByText } = render(
+    <GroupedEventsCards
+      event={testEvent}
+      index={3}
+      prevEvent={mockNodes[2]}
+      toLoad={24}
+    />
+  )
+  expect(findByText('List your event')).toBeTruthy()
 })
