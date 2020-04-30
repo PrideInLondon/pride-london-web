@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
-import { CTALink } from '../components/ctaLink/CTALink'
+import { Button } from '../components/button/Button'
 
 const CardWrapper = styled.div`
   padding-left: 20px;
@@ -40,9 +40,13 @@ const EventListingPromotionCard: React.FC = () => (
       Whether you're hosting an Instagram Live Q&amp;A, digital drag brunch or a
       theatre run, we'd love to showcase your event on our platform.
     </CardDescription>
-    <CTALink to="/events/list-your-event" color={colors.white}>
-      Click to find out more
-    </CTALink>
+    <Button
+      to="/events/list-your-event"
+      width={{ default: '100%', md: 'auto' }}
+      variant="outline-white"
+    >
+      Find out more
+    </Button>
   </CardWrapper>
 )
 
