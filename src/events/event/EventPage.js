@@ -248,7 +248,7 @@ const EventPage = ({
               <Title>{name}</Title>
               <EventTagList values={eventCategories} />
             </TitleWrapper>
-            {filteredDates.length > 0 && (
+            {filteredDates.length > 1 && (
               <Section>
                 <SectionTitle>Upcoming Dates</SectionTitle>
                 <EventUpcomingDates dates={filteredDates} />
