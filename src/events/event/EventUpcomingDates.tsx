@@ -7,29 +7,29 @@ import { formatTime, formatUpcomingDates } from '../helpers'
 import { useMedia } from '../../hooks/useMedia'
 import { Button } from '../../components/button/Button'
 
-const UpcomingDateItem = styled.div`
-  text-align: center;
-  border: 1px solid ${colors.lightGrey};
-  padding: 16px;
-  margin-right: 16px;
-  min-width: 200px;
+const UpcomingDateItem = styled.li`
+  padding: 0 16px;
   scroll-snap-align: start;
-  width: 185px;
+  min-width: 200px;
 
   ${mediaQueries.md} {
     min-width: 0;
-    margin-right: 32px;
-    margin-bottom: 32px;
-    width: calc(50% - 32px);
+    width: 50%;
+    padding: 16px;
   }
 
   ${mediaQueries.lg} {
-    width: calc(33.3333% - 32px);
+    width: 33.3333%;
   }
+`
+const UpcomingDateContent = styled.div`
+  text-align: center;
+  border: 1px solid ${colors.lightGrey};
+  padding: 16px;
 `
 const UpcomingDate = styled.h3`
   margin-top: 0;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   font-size: 1rem;
   line-height: 1;
   ${mediaQueries.md} {
@@ -40,9 +40,13 @@ const UpcomingTimes = styled.p`
   color: ${colors.indigo};
   margin-bottom: 0;
   font-size: 0.875rem;
+  line-height: 1;
 `
 
-const UpcomingDatesContainer = styled.div`
+const UpcomingDatesContainer = styled.ul`
+  padding: 0;
+  margin: 0 -20px;
+  list-style: none;
   display: flex;
   scroll-snap-type: x mandatory;
   /* Required for iOS */
@@ -55,6 +59,8 @@ const UpcomingDatesContainer = styled.div`
 
   ${mediaQueries.md} {
     flex-wrap: wrap;
+    margin: 0;
+    margin: -16px -16px 0 -16px;
   }
 `
 const UpcomingDatesPaginationWrapper = styled.div`
@@ -76,28 +82,34 @@ interface EventUpcomingDatesProps {
 export const EventUpcomingDates: React.FC<EventUpcomingDatesProps> = ({
   dates,
 }) => {
+  const initialCount = 6
   const matches = useMedia(`(min-width: ${md}px)`)
-  const [count, setCount] = useState<number>(3)
+  const [count, setCount] = useState<number>(initialCount)
   return (
     <>
       <UpcomingDatesContainer>
         {dates.slice(0, matches ? count : dates.length).map(event => (
-          <UpcomingDateItem key={event.id} {...(!matches && { tabIndex: 0 })}>
-            <UpcomingDate>{formatUpcomingDates(event)}</UpcomingDate>
-            <UpcomingTimes>{`${formatTime(event.startDate)} - ${formatTime(
-              event.endDate
-            )} `}</UpcomingTimes>
+          <UpcomingDateItem>
+            <UpcomingDateContent
+              key={event.id}
+              {...(!matches && { tabIndex: 0 })}
+            >
+              <UpcomingDate>{formatUpcomingDates(event)}</UpcomingDate>
+              <UpcomingTimes>{`${formatTime(event.startDate)} - ${formatTime(
+                event.endDate
+              )} `}</UpcomingTimes>
+            </UpcomingDateContent>
           </UpcomingDateItem>
         ))}
       </UpcomingDatesContainer>
-      {matches && dates.length > 3 && (
+      {matches && dates.length > initialCount && (
         <UpcomingDatesPaginationWrapper>
           <UpcomingDatesStatus role="status">{`You are viewing ${
             count >= dates.length ? dates.length : count
           } of ${dates.length} dates`}</UpcomingDatesStatus>
           <Button
             variant="outline"
-            onClick={() => setCount(prevState => (prevState += 6))}
+            onClick={() => setCount(prevState => (prevState += initialCount))}
             disabled={count >= dates.length}
             mx="0 auto"
           >
