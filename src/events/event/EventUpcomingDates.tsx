@@ -89,11 +89,8 @@ export const EventUpcomingDates: React.FC<EventUpcomingDatesProps> = ({
     <>
       <UpcomingDatesContainer>
         {dates.slice(0, matches ? count : dates.length).map(event => (
-          <UpcomingDateItem>
-            <UpcomingDateContent
-              key={event.id}
-              {...(!matches && { tabIndex: 0 })}
-            >
+          <UpcomingDateItem key={event.id}>
+            <UpcomingDateContent {...(!matches && { tabIndex: 0 })}>
               <UpcomingDate>{formatUpcomingDates(event)}</UpcomingDate>
               <UpcomingTimes>{`${formatTime(event.startDate)} - ${formatTime(
                 event.endDate
