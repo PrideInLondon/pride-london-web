@@ -148,6 +148,7 @@ const EventInfoCard = ({
     ticketingUrl,
     cta,
     accessibilityOptions,
+    date,
   },
   pageContext: { startTime, endTime },
 }) => (
@@ -248,6 +249,15 @@ EventInfoCard.propTypes = {
     cta: PropTypes.string,
     accessibilityOptions: PropTypes.arrayOf(PropTypes.string),
     venueDetails: PropTypes.arrayOf(PropTypes.string),
+    date: PropTypes.shape({
+      dates: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          startDate: PropTypes.string,
+          endDate: PropTypes.string,
+        })
+      ),
+    }),
   }).isRequired,
   pageContext: PropTypes.shape({
     id: PropTypes.string.isRequired,
@@ -274,5 +284,12 @@ export const query = graphql`
     cta
     accessibilityOptions
     venueDetails
+    date {
+      dates {
+        startDate
+        endDate
+        id
+      }
+    }
   }
 `

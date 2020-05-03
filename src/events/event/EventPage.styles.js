@@ -19,6 +19,10 @@ export const Title = styled.h1`
   font-weight: 700;
 `
 
+export const SectionTitle = styled.h2`
+  margin-top: 0;
+`
+
 export const HeroImageAndTitle = styled.div`
   display: flex;
   flex-direction: column-reverse;
