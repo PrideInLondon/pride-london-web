@@ -10,6 +10,7 @@ import {
   isVirtualEvent,
   sortByNextOccurrence,
   changeTimeZone,
+  formatUpcomingDates,
 } from './helpers'
 
 const yesterday = new Date()
@@ -226,4 +227,18 @@ describe('sortByNextOccurrence', () => {
     expect(sortedEvents[1].node.id).toBe('event2')
     expect(sortedEvents[2].node.id).toBe('event1')
   })
+})
+
+describe('formatUpcomingDates', () => {
+  it.each`
+    startDate                     | endDate                       | expected
+    ${'2020-01-01T09:30:00.000Z'} | ${'2020-01-01T09:30:00.000Z'} | ${'Wed, 01 Jan'}
+    ${'2020-01-01T09:00:00.000Z'} | ${'2020-01-02T09:00:00.000Z'} | ${'Wed, 01 Jan - Thu, 02 Jan'}
+  `(
+    'should render time as $expected when date is $date',
+    ({ startDate, endDate, expected }) => {
+      const actual = formatUpcomingDates({ startDate, endDate })
+      expect(actual).toEqual(expected)
+    }
+  )
 })

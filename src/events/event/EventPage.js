@@ -6,23 +6,25 @@ import ReactMarkdown from 'react-markdown'
 import { Container, Row, Column } from '../../components/grid'
 import { checkBreakpoint } from '../../utils/style-utils'
 import { SponsorsSubSection, renderSponsors } from '../../sponsors'
-import { isVirtualEvent } from '../helpers'
+import { isVirtualEvent, filterPastEvents } from '../helpers'
 import EventTagList from './EventTagList'
 import EventSchedule from './EventSchedule'
 import EventsYouMayLike from './EventsYouMayLike'
 import EventInfoCard from './EventInfoCard'
 import EventDirectionsSection from './EventDirectionsSection'
 import EventShareSection from './EventShareSection'
+import { EventUpcomingDates } from './EventUpcomingDates'
 import {
-  PageWrapper,
-  Title,
-  HeroImageAndTitle,
-  TitleWrapper,
-  Section,
-  RelativeColumn,
-  EventInfoCardWrapper,
   AccessibilityHeading,
+  EventInfoCardWrapper,
   HeroImage,
+  HeroImageAndTitle,
+  PageWrapper,
+  RelativeColumn,
+  Section,
+  SectionTitle,
+  Title,
+  TitleWrapper,
 } from './EventPage.styles'
 
 const EventPage = ({
@@ -46,6 +48,7 @@ const EventPage = ({
       city,
       postcode,
       eventSponsorSection,
+      date,
     },
     contentfulEvent,
     site: {
@@ -58,7 +61,6 @@ const EventPage = ({
 }) => {
   const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
   const metaUrl = siteUrl + pathname
-
   const sponsorSection = eventSponsorSection
     ? {
         ...eventSponsorSection,
@@ -70,7 +72,9 @@ const EventPage = ({
         })),
       }
     : null
-
+  const filteredDates = date.dates.filter(event =>
+    filterPastEvents(event.endDate)
+  )
   return (
     <PageWrapper>
       <Helmet
@@ -244,6 +248,12 @@ const EventPage = ({
               <Title>{name}</Title>
               <EventTagList values={eventCategories} />
             </TitleWrapper>
+            {filteredDates.length > 1 && (
+              <Section>
+                <SectionTitle>Upcoming Dates</SectionTitle>
+                <EventUpcomingDates dates={filteredDates} />
+              </Section>
+            )}
             <Section>
               <ReactMarkdown source={eventDescription} />
             </Section>
