@@ -9,6 +9,7 @@ import {
 import { generateEventSlug, isLiveNow } from '../helpers'
 import { LiveIcon, CalendarIcon } from '../../components/icons'
 import { colors } from '../../theme/colors'
+import { IconProps } from '../../components/icons/Icon.types'
 import { generateDisplayDate, formatLocation } from './EventListingCard.utils'
 import { EventListingCardProps, WhenProps } from './EventListingCard.types'
 import {
@@ -21,18 +22,18 @@ import {
 
 const When: React.FC<WhenProps> = ({ dates }) => {
   const showLiveNow = dates.some(date => isLiveNow(date))
-  const iconSize = 24
+  const iconProps: IconProps = { size: 24, variant: 'blue' }
   return (
     <CardDate>
       <WhenText color={showLiveNow ? colors.indigo : colors.darkCyan}>
         {showLiveNow ? (
           <>
-            <LiveIcon size={iconSize} />
+            <LiveIcon {...iconProps} />
             Live now
           </>
         ) : (
           <>
-            <CalendarIcon size={iconSize} variant="blue" />
+            <CalendarIcon {...iconProps} />
             {generateDisplayDate({
               dates,
             })}

@@ -1,6 +1,8 @@
 import React from 'react'
+import { colors } from '../../theme/colors'
+import { IconProps } from './Icon.types'
 
-const LiveIcon = ({ size = 32 }) => (
+const LiveIcon = ({ variant, size = 32 }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -8,9 +10,13 @@ const LiveIcon = ({ size = 32 }) => (
     fill="none"
     viewBox="0 0 32 32"
   >
-    <path fill="#fff" d="M0 0h32v32H0V0z" />
     <circle cx="16" cy="16" r="8" fill="#2CDA9D" />
-    <circle cx="16" cy="16" r="6" fill="#2D2F7F" />
+    <circle
+      cx="16"
+      cy="16"
+      r="6"
+      fill={{ blue: colors.indigo, white: colors.white }[variant]}
+    />
   </svg>
 )
 
