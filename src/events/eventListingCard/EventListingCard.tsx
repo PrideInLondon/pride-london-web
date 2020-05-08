@@ -8,6 +8,7 @@ import {
 } from '../../components/card'
 import { generateEventSlug, isLiveNow } from '../helpers'
 import { LiveIcon, CalendarIcon } from '../../components/icons'
+import { colors } from '../../theme/colors'
 import { generateDisplayDate, formatLocation } from './EventListingCard.utils'
 import { EventListingCardProps, WhenProps } from './EventListingCard.types'
 import {
@@ -18,25 +19,29 @@ import {
   Price,
 } from './EventListingCard.styles'
 
-const When: React.FC<WhenProps> = ({ dates }) => (
-  <CardDate>
-    <WhenText>
-      {dates.some(date => isLiveNow(date)) ? (
-        <>
-          <LiveIcon size={24} />
-          Live now
-        </>
-      ) : (
-        <>
-          <CalendarIcon size={24} />
-          {generateDisplayDate({
-            dates,
-          })}
-        </>
-      )}
-    </WhenText>
-  </CardDate>
-)
+const When: React.FC<WhenProps> = ({ dates }) => {
+  const showLiveNow = dates.some(date => isLiveNow(date))
+  const iconSize = 24
+  return (
+    <CardDate>
+      <WhenText color={showLiveNow ? colors.indigo : colors.darkCyan}>
+        {showLiveNow ? (
+          <>
+            <LiveIcon size={iconSize} />
+            Live now
+          </>
+        ) : (
+          <>
+            <CalendarIcon size={iconSize} />
+            {generateDisplayDate({
+              dates,
+            })}
+          </>
+        )}
+      </WhenText>
+    </CardDate>
+  )
+}
 
 export const EventListingCard: React.FC<EventListingCardProps> = ({
   event: {

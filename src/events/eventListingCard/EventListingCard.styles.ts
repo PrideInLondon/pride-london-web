@@ -59,6 +59,7 @@ export const Location = styled.p`
 export const WhenText = styled.p`
   margin-bottom: 0;
   font-size: 0.75rem;
+  color: ${({ color }) => color};
 
   ${mediaQueries.md} {
     font-size: 0.875rem;
