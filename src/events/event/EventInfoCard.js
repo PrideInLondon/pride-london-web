@@ -7,7 +7,7 @@ import { media } from '../../theme/media'
 import theme from '../../theme/theme'
 import {
   AccessibilityIcon,
-  DateIcon,
+  CalendarIcon,
   GenderIcon,
   LaptopIcon,
   MailIcon,
