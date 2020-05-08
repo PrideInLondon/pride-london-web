@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import moment from 'moment'
-import PropTypes from 'prop-types'
 import {
   AccessibilityIcon,
   CalendarIcon,
@@ -30,8 +29,13 @@ import {
   Hr,
   VSpace,
 } from './EventInfoCard.styles'
+import {
+  ItemProps,
+  LocationProps,
+  EventInfoCardProps,
+} from './EventInfoCard.types'
 
-const Item = ({ title, icon, detail }) => (
+const Item = ({ title, icon, detail }: ItemProps) => (
   <Row>
     <IconWrapper>{icon}</IconWrapper>
     <div>
@@ -41,7 +45,13 @@ const Item = ({ title, icon, detail }) => (
   </Row>
 )
 
-export const formatDayRange = ({ startDate, endDate }) => {
+export const formatDayRange = ({
+  startDate,
+  endDate,
+}: {
+  startDate: string
+  endDate: string
+}) => {
   const startMoment = moment(startDate)
   const endMoment = moment(endDate)
 
@@ -54,11 +64,22 @@ export const formatDayRange = ({ startDate, endDate }) => {
     : `${startMoment.format(dateFormat)} to ${endMoment.format(dateFormat)}`
 }
 
-export const formatTimeRange = ({ startDate, endDate }) => {
+export const formatTimeRange = ({
+  startDate,
+  endDate,
+}: {
+  startDate: string
+  endDate: string
+}) => {
   return `${formatShortTime(startDate)} to ${formatShortTime(endDate)}`
 }
 
-export const formatAddress = (addressLine1, addressLine2, city, postcode) =>
+export const formatAddress = (
+  addressLine1: string,
+  addressLine2: string,
+  city: string,
+  postcode: string
+) =>
   [addressLine1, addressLine2, [city, postcode].filter(Boolean).join(' ')]
     .filter(Boolean)
     .join(', ')
@@ -70,12 +91,12 @@ export const Location = ({
   addressLine2,
   city,
   postcode,
-}) =>
+}: LocationProps) =>
   isVirtualEvent(platform) ? (
     <Item icon={<LaptopIcon size={26} />} title={`On ${platform}`} />
   ) : (
     <Item
-      icon={<MapPinIcon />}
+      icon={<MapPinIcon variant="white" />}
       title={locationName}
       detail={formatAddress(addressLine1, addressLine2, city, postcode)}
     />
@@ -133,13 +154,16 @@ const EventInfoCard = ({
       />
       {accessibilityOptions && accessibilityOptions.length > 0 && (
         <Item
-          icon={<AccessibilityIcon />}
+          icon={<AccessibilityIcon variant="white" />}
           title="Accessibility"
           detail={`${accessibilityOptions.join(', ')}.`}
         />
       )}
       {venueDetails && venueDetails.includes('Gender neutral toilets') && (
-        <Item icon={<GenderIcon />} detail="Gender neutral toilets" />
+        <Item
+          icon={<GenderIcon variant="white" />}
+          detail="Gender neutral toilets"
+        />
       )}
       {(email || phone || ticketingUrl) && <Hr />}
       {email && (
@@ -166,68 +190,6 @@ const EventInfoCard = ({
       {ticketingUrl && <Button to={ticketingUrl}>{cta}</Button>}
     </Wrapper>
   )
-}
-
-Item.propTypes = {
-  title: PropTypes.string,
-  icon: PropTypes.object.isRequired,
-  detail: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-}
-
-Item.defaultProps = {
-  detail: null,
-  title: null,
-}
-
-Location.propTypes = {
-  platform: PropTypes.string,
-  locationName: PropTypes.string,
-  addressLine1: PropTypes.string,
-  addressLine2: PropTypes.string,
-  city: PropTypes.string,
-  postcode: PropTypes.string,
-}
-
-Location.defaultProps = {
-  platform: '',
-  locationName: '',
-  addressLine1: '',
-  addressLine2: '',
-  city: '',
-  postcode: '',
-}
-
-EventInfoCard.propTypes = {
-  data: PropTypes.shape({
-    location2: PropTypes.string.isRequired,
-    locationName: PropTypes.string.isRequired,
-    addressLine1: PropTypes.string,
-    addressLine2: PropTypes.string,
-    city: PropTypes.string,
-    postcode: PropTypes.string,
-    eventPriceLow: PropTypes.number,
-    eventPriceHigh: PropTypes.number,
-    email: PropTypes.string,
-    phone: PropTypes.string,
-    ticketingUrl: PropTypes.string,
-    cta: PropTypes.string,
-    accessibilityOptions: PropTypes.arrayOf(PropTypes.string),
-    venueDetails: PropTypes.arrayOf(PropTypes.string),
-    date: PropTypes.shape({
-      dates: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          startDate: PropTypes.string,
-          endDate: PropTypes.string,
-        })
-      ),
-    }),
-  }).isRequired,
-  pageContext: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    startDate: PropTypes.string.isRequired,
-    endDate: PropTypes.string.isRequired,
-  }).isRequired,
 }
 
 export default EventInfoCard
