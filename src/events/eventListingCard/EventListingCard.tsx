@@ -32,7 +32,7 @@ const When: React.FC<WhenProps> = ({ dates }) => {
           </>
         ) : (
           <>
-            <CalendarIcon size={iconSize} />
+            <CalendarIcon size={iconSize} variant="blue" />
             {generateDisplayDate({
               dates,
             })}
