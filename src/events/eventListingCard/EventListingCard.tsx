@@ -1,5 +1,4 @@
 import React from 'react'
-import { colors } from '../../theme/colors'
 import {
   Card,
   CardImage,
@@ -7,27 +6,37 @@ import {
   CardTitle,
   CardFooter,
 } from '../../components/card'
-import { generateEventSlug } from '../helpers'
+import { generateEventSlug, isLiveNow } from '../helpers'
+import { LiveIcon, CalendarIcon } from '../../components/icons'
 import { generateDisplayDate, formatLocation } from './EventListingCard.utils'
 import { EventListingCardProps, WhenProps } from './EventListingCard.types'
 import {
   CardDate,
+  WhenText,
   Details,
   Location,
-  PaddedCalendarIcon,
   Price,
 } from './EventListingCard.styles'
 
-const When: React.FC<WhenProps> = ({ dates }) => {
-  return (
-    <CardDate>
-      <PaddedCalendarIcon color={colors.darkCyan} />
-      {generateDisplayDate({
-        dates,
-      })}
-    </CardDate>
-  )
-}
+const When: React.FC<WhenProps> = ({ dates }) => (
+  <CardDate>
+    <WhenText>
+      {dates.some(date => isLiveNow(date)) ? (
+        <>
+          <LiveIcon size={24} />
+          Live now
+        </>
+      ) : (
+        <>
+          <CalendarIcon size={24} />
+          {generateDisplayDate({
+            dates,
+          })}
+        </>
+      )}
+    </WhenText>
+  </CardDate>
+)
 
 export const EventListingCard: React.FC<EventListingCardProps> = ({
   event: {
