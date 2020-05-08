@@ -14,9 +14,15 @@ import {
   MapPinIcon,
   PhoneIcon,
   TicketIcon,
+  LiveIcon,
 } from '../../components/icons'
 import { Button } from '../../components/button'
-import { formatPrice, formatShortTime, isVirtualEvent } from '../helpers'
+import {
+  formatPrice,
+  formatShortTime,
+  isVirtualEvent,
+  isLiveNow,
+} from '../helpers'
 
 const Wrapper = styled.div`
   background-color: ${theme.colors.indigo};
@@ -151,58 +157,66 @@ const EventInfoCard = ({
     date,
   },
   pageContext: { startDate, endDate },
-}) => (
-  <Wrapper>
-    {
+}) => {
+  const liveNow = date.dates.some(date => isLiveNow(date))
+  return (
+    <Wrapper>
       <Item
-        icon={<DateIcon />}
-        title={formatDayRange({ startDate, endDate })}
+        icon={
+          liveNow ? (
+            <LiveIcon variant="white" />
+          ) : (
+            <CalendarIcon variant="white" />
+          )
+        }
+        title={liveNow ? 'Live now' : formatDayRange({ startDate, endDate })}
         detail={formatTimeRange({ startDate, endDate })}
       />
-    }
-    <Item
-      icon={<TicketIcon />}
-      title={formatPrice(eventPriceLow, eventPriceHigh)}
-    />
-    <Location
-      platform={location2}
-      {...{ locationName, addressLine1, addressLine2, city, postcode }}
-    />
-    {accessibilityOptions && accessibilityOptions.length > 0 && (
+
       <Item
-        icon={<AccessibilityIcon />}
-        title="Accessibility"
-        detail={`${accessibilityOptions.join(', ')}.`}
+        icon={<TicketIcon />}
+        title={formatPrice(eventPriceLow, eventPriceHigh)}
       />
-    )}
-    {venueDetails && venueDetails.includes('Gender neutral toilets') && (
-      <Item icon={<GenderIcon />} detail="Gender neutral toilets" />
-    )}
-    {(email || phone || ticketingUrl) && <Hr />}
-    {email && (
-      <Item
-        icon={<MailIcon role="presentation" />}
-        detail={
-          <Link href={`mailto:${email}`} aria-label="email the venue">
-            {email}
-          </Link>
-        }
+      <Location
+        platform={location2}
+        {...{ locationName, addressLine1, addressLine2, city, postcode }}
       />
-    )}
-    {phone && (
-      <Item
-        icon={<PhoneIcon />}
-        detail={
-          <Link href={`tel:${phone}`} aria-label="call the venue">
-            {phone}
-          </Link>
-        }
-      />
-    )}
-    {(phone || email) && ticketingUrl && <VSpace />}
-    {ticketingUrl && <Button to={ticketingUrl}>{cta}</Button>}
-  </Wrapper>
-)
+      {accessibilityOptions && accessibilityOptions.length > 0 && (
+        <Item
+          icon={<AccessibilityIcon />}
+          title="Accessibility"
+          detail={`${accessibilityOptions.join(', ')}.`}
+        />
+      )}
+      {venueDetails && venueDetails.includes('Gender neutral toilets') && (
+        <Item icon={<GenderIcon />} detail="Gender neutral toilets" />
+      )}
+      {(email || phone || ticketingUrl) && <Hr />}
+      {email && (
+        <Item
+          icon={<MailIcon role="presentation" />}
+          detail={
+            <Link href={`mailto:${email}`} aria-label="email the venue">
+              {email}
+            </Link>
+          }
+        />
+      )}
+      {phone && (
+        <Item
+          icon={<PhoneIcon />}
+          detail={
+            <Link href={`tel:${phone}`} aria-label="call the venue">
+              {phone}
+            </Link>
+          }
+        />
+      )}
+      {(phone || email) && ticketingUrl && <VSpace />}
+      {ticketingUrl && <Button to={ticketingUrl}>{cta}</Button>}
+    </Wrapper>
+  )
+}
 
 Item.propTypes = {
   title: PropTypes.string,
