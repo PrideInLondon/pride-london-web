@@ -58,7 +58,7 @@ const CommunityPartnerCard = ({ partner }) => {
         <ReactMarkdown source={description} />
         <CardItem>
           <IconWrapper>
-            <MapPinIcon dark />
+            <MapPinIcon variant="blue" />
           </IconWrapper>
           <div>
             <CardItemTitle
