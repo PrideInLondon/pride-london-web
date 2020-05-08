@@ -57,9 +57,7 @@ export const CardItem = styled.div`
   display: flex;
 `
 export const IconWrapper = styled.div`
-  margin-right: 8px;
-  min-width: 32px;
-  text-align: center;
+  margin-right: 15px;
 `
 
 export const CardItemTitle = styled.h4`
