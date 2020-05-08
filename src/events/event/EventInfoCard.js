@@ -140,7 +140,7 @@ export const Location = ({
 
 const EventInfoCard = ({
   data: {
-    location2,
+    location2: platform,
     locationName,
     addressLine1,
     addressLine2,
@@ -158,7 +158,8 @@ const EventInfoCard = ({
   },
   pageContext: { startDate, endDate },
 }) => {
-  const liveNow = date.dates.some(date => isLiveNow(date))
+  const liveNow =
+    isVirtualEvent(platform) && date.dates.some(date => isLiveNow(date))
   return (
     <Wrapper>
       <Item
@@ -178,8 +179,14 @@ const EventInfoCard = ({
         title={formatPrice(eventPriceLow, eventPriceHigh)}
       />
       <Location
-        platform={location2}
-        {...{ locationName, addressLine1, addressLine2, city, postcode }}
+        {...{
+          platform,
+          locationName,
+          addressLine1,
+          addressLine2,
+          city,
+          postcode,
+        }}
       />
       {accessibilityOptions && accessibilityOptions.length > 0 && (
         <Item

@@ -6,7 +6,7 @@ import {
   CardTitle,
   CardFooter,
 } from '../../components/card'
-import { generateEventSlug, isLiveNow } from '../helpers'
+import { generateEventSlug, isVirtualEvent, isLiveNow } from '../helpers'
 import { LiveIcon, CalendarIcon } from '../../components/icons'
 import { colors } from '../../theme/colors'
 import { IconProps } from '../../components/icons/Icon.types'
@@ -20,8 +20,9 @@ import {
   Price,
 } from './EventListingCard.styles'
 
-const When: React.FC<WhenProps> = ({ dates }) => {
-  const showLiveNow = dates.some(date => isLiveNow(date))
+const When: React.FC<WhenProps> = ({ platform, dates }) => {
+  const showLiveNow =
+    isVirtualEvent(platform) && dates.some(date => isLiveNow(date))
   const iconProps: IconProps = { size: 24, variant: 'blue' }
   return (
     <CardDate>
@@ -60,7 +61,7 @@ export const EventListingCard: React.FC<EventListingCardProps> = ({
   <Card variant={variant} to={generateEventSlug({ id, name })}>
     <CardImage image={eventsListPicture.fixed} alt={eventsListPicture.title} />
     <CardContent>
-      <When dates={dates} />
+      <When {...{ platform, dates }} />
       <CardTitle>{name}</CardTitle>
       <Location>
         {formatLocation({

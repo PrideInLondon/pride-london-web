@@ -23,5 +23,6 @@ export interface EventListingCardProps {
 }
 
 export interface WhenProps {
+  platform: string
   dates: EventDateOccurrence[]
 }
