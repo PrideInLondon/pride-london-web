@@ -1,11 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import theme from '../../theme/theme'
+import React, { SVGProps } from 'react'
+import { colors } from '../../theme/colors'
+import { IconProps } from './Icon.types'
 
-export default function GenderIcon({ dark, ...props }) {
-  const stroke = dark ? theme.colors.indigo : theme.colors.white
-  const pathProps = {
-    stroke,
+const GenderIcon = ({ variant, ...props }: IconProps) => {
+  const pathProps: SVGProps<SVGPathElement> = {
+    stroke: { blue: colors.indigo, white: colors.white }[variant],
     strokeWidth: '1.8',
     strokeLinecap: 'round',
     strokeLinejoin: 'round',
@@ -24,7 +23,7 @@ export default function GenderIcon({ dark, ...props }) {
         clipRule="evenodd"
         d="M10.896 5.448C10.896 8.457 8.457 10.896 5.448 10.896C2.439 10.896 0 8.457 0 5.448C0 2.439 2.439 0 5.448 0C8.457 0 10.896 2.439 10.896 5.448"
         transform="translate(5.875 5.765)"
-        fill={theme.colors.eucalyptusGreen}
+        fill={colors.eucalyptusGreen}
       />
       <path
         clipRule="evenodd"
@@ -67,10 +66,4 @@ export default function GenderIcon({ dark, ...props }) {
   )
 }
 
-GenderIcon.propTypes = {
-  dark: PropTypes.bool,
-}
-
-GenderIcon.defaultProps = {
-  dark: false,
-}
+export default GenderIcon

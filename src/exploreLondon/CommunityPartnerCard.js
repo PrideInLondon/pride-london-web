@@ -95,7 +95,7 @@ const CommunityPartnerCard = ({ partner }) => {
         {genderNeutralToilets && (
           <CardItem>
             <IconWrapper>
-              <GenderIcon dark />
+              <GenderIcon variant="blue" />
             </IconWrapper>
             <div>
               <CardItemTitle>Gender Neutral Toilets</CardItemTitle>

@@ -1,6 +1,6 @@
 export { default as AccessibilityIcon } from './AccessibilityIcon'
 export { default as CalendarIcon } from './CalendarIcon'
-export { default as GenderIcon } from './genderIcon'
+export { default as GenderIcon } from './GenderIcon'
 export { default as LaptopIcon } from './LaptopIcon'
 export { default as LiveIcon } from './LiveIcon'
 export { default as MailIcon } from './mailIcon'
