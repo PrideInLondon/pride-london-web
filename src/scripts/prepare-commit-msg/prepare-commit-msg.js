@@ -5,6 +5,7 @@ const {
   getJiraInfoFromBranch,
   readGitCommitMessage,
   writeGitCommitMessage,
+  isRebasing,
 } = require('./git-utils')
 
 const generateQuestions = ({ gitmojis }) => [
@@ -20,6 +21,8 @@ const generateQuestions = ({ gitmojis }) => [
 ]
 
 const prepareCommitMessage = () => {
+  if (isRebasing()) return
+
   const jiraInfo = getJiraInfoFromBranch()
   if (!jiraInfo.boardId || !jiraInfo.ticketId) {
     console.error(

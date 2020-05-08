@@ -2,11 +2,9 @@ const path = require('path')
 const { execSync } = require('child_process')
 const fs = require('fs')
 
-const GIT_MESSAGE_PATH = path.join(
-  __dirname,
-  '../../../',
-  '.git/COMMIT_EDITMSG'
-)
+const GIT_DIR = path.join(__dirname, '../../../', '.git')
+
+const GIT_MESSAGE_PATH = path.join(GIT_DIR, 'COMMIT_EDITMSG')
 
 const getBranchName = () =>
   execSync('git rev-parse --abbrev-ref HEAD').toString()
@@ -26,8 +24,11 @@ const writeGitCommitMessage = ({ boardId, ticketId, gitmoji, message }) =>
     `${boardId}-${ticketId} ${gitmoji} ${message}`
   )
 
+const isRebasing = () => fs.existsSync(path.join(GIT_DIR, 'rebase-merge'))
+
 module.exports = {
   getJiraInfoFromBranch,
   readGitCommitMessage,
   writeGitCommitMessage,
+  isRebasing,
 }
