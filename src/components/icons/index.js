@@ -1,4 +1,4 @@
-export { default as AccessibilityIcon } from './accessibilityIcon'
+export { default as AccessibilityIcon } from './AccessibilityIcon'
 export { default as CalendarIcon } from './CalendarIcon'
 export { default as GenderIcon } from './genderIcon'
 export { default as LaptopIcon } from './LaptopIcon'

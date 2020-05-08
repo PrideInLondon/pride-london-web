@@ -74,7 +74,7 @@ const CommunityPartnerCard = ({ partner }) => {
         </CardItem>
         <CardItem>
           <IconWrapper>
-            <AccessibilityIcon dark />
+            <AccessibilityIcon variant="blue" />
           </IconWrapper>
           <div>
             <CardItemTitle>Accessibility</CardItemTitle>
