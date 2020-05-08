@@ -6,6 +6,13 @@ export interface ItemProps {
   detail?: string | any
 }
 
+export interface WhenProps {
+  platform: string
+  dates: EventDateOccurrence[]
+  startDate: string
+  endDate: string
+}
+
 export interface LocationProps {
   platform: string
   locationName: string

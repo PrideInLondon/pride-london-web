@@ -31,6 +31,7 @@ import {
 } from './EventInfoCard.styles'
 import {
   ItemProps,
+  WhenProps,
   LocationProps,
   EventInfoCardProps,
 } from './EventInfoCard.types'
@@ -72,6 +73,24 @@ export const formatTimeRange = ({
   endDate: string
 }) => {
   return `${formatShortTime(startDate)} to ${formatShortTime(endDate)}`
+}
+
+const When = ({ platform, dates, startDate, endDate }: WhenProps) => {
+  const liveNow =
+    isVirtualEvent(platform) && dates.some(date => isLiveNow(date))
+  return (
+    <Item
+      icon={
+        liveNow ? (
+          <LiveIcon variant="white" />
+        ) : (
+          <CalendarIcon variant="white" />
+        )
+      }
+      title={liveNow ? 'Live now' : formatDayRange({ startDate, endDate })}
+      detail={formatTimeRange({ startDate, endDate })}
+    />
+  )
 }
 
 export const formatAddress = (
@@ -118,79 +137,64 @@ const EventInfoCard = ({
     ticketingUrl,
     cta,
     accessibilityOptions,
-    date,
+    date: { dates },
   },
   pageContext: { startDate, endDate },
-}) => {
-  const liveNow =
-    isVirtualEvent(platform) && date.dates.some(date => isLiveNow(date))
-  return (
-    <Wrapper>
+}: EventInfoCardProps) => (
+  <Wrapper>
+    <When {...{ platform, dates, startDate, endDate }} />
+    <Item
+      icon={<TicketIcon />}
+      title={formatPrice(eventPriceLow, eventPriceHigh)}
+    />
+    <Location
+      {...{
+        platform,
+        locationName,
+        addressLine1,
+        addressLine2,
+        city,
+        postcode,
+      }}
+    />
+    {accessibilityOptions && accessibilityOptions.length > 0 && (
       <Item
-        icon={
-          liveNow ? (
-            <LiveIcon variant="white" />
-          ) : (
-            <CalendarIcon variant="white" />
-          )
+        icon={<AccessibilityIcon variant="white" />}
+        title="Accessibility"
+        detail={`${accessibilityOptions.join(', ')}.`}
+      />
+    )}
+    {venueDetails && venueDetails.includes('Gender neutral toilets') && (
+      <Item
+        icon={<GenderIcon variant="white" />}
+        detail="Gender neutral toilets"
+      />
+    )}
+    {(email || phone || ticketingUrl) && <Hr />}
+    {email && (
+      <Item
+        icon={<MailIcon role="presentation" />}
+        detail={
+          <Link href={`mailto:${email}`} aria-label="email the venue">
+            {email}
+          </Link>
         }
-        title={liveNow ? 'Live now' : formatDayRange({ startDate, endDate })}
-        detail={formatTimeRange({ startDate, endDate })}
       />
-
+    )}
+    {phone && (
       <Item
-        icon={<TicketIcon />}
-        title={formatPrice(eventPriceLow, eventPriceHigh)}
+        icon={<PhoneIcon />}
+        detail={
+          <Link href={`tel:${phone}`} aria-label="call the venue">
+            {phone}
+          </Link>
+        }
       />
-      <Location
-        {...{
-          platform,
-          locationName,
-          addressLine1,
-          addressLine2,
-          city,
-          postcode,
-        }}
-      />
-      {accessibilityOptions && accessibilityOptions.length > 0 && (
-        <Item
-          icon={<AccessibilityIcon variant="white" />}
-          title="Accessibility"
-          detail={`${accessibilityOptions.join(', ')}.`}
-        />
-      )}
-      {venueDetails && venueDetails.includes('Gender neutral toilets') && (
-        <Item
-          icon={<GenderIcon variant="white" />}
-          detail="Gender neutral toilets"
-        />
-      )}
-      {(email || phone || ticketingUrl) && <Hr />}
-      {email && (
-        <Item
-          icon={<MailIcon role="presentation" />}
-          detail={
-            <Link href={`mailto:${email}`} aria-label="email the venue">
-              {email}
-            </Link>
-          }
-        />
-      )}
-      {phone && (
-        <Item
-          icon={<PhoneIcon />}
-          detail={
-            <Link href={`tel:${phone}`} aria-label="call the venue">
-              {phone}
-            </Link>
-          }
-        />
-      )}
-      {(phone || email) && ticketingUrl && <VSpace />}
-      {ticketingUrl && <Button to={ticketingUrl}>{cta}</Button>}
-    </Wrapper>
-  )
-}
+    )}
+    {(phone || email) && ticketingUrl && <VSpace />}
+    {ticketingUrl && <Button to={ticketingUrl}>{cta}</Button>}
+  </Wrapper>
+)
 
 export default EventInfoCard
 
