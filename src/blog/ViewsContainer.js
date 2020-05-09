@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import { Container, Row, Column } from '../components/grid'
@@ -11,7 +11,29 @@ const ViewsContainer = ({ views }) => {
   // while swiping with react-slick, see
   // https://github.com/akiran/react-slick/issues/1240
 
+  const [firstClientX, setFirstClientX] = useState()
+  const [firstClientY, setFirstClientY] = useState()
+  const [clientX, setClientX] = useState()
+
   useEffect(() => {
+    const touchStart = e => {
+      setFirstClientX(e.touches[0].clientX)
+      setFirstClientY(e.touches[0].clientY)
+    }
+
+    const preventTouch = e => {
+      const minValue = 5 // threshold
+
+      setClientX(e.touches[0].clientX - firstClientX)
+
+      // Vertical scrolling does not work when you start swiping horizontally.
+      if (Math.abs(clientX) > minValue) {
+        e.preventDefault()
+        e.returnValue = false
+        return false
+      }
+    }
+
     window.addEventListener('touchstart', touchStart)
     window.addEventListener('touchmove', preventTouch, { passive: false })
     return () => {
@@ -20,26 +42,7 @@ const ViewsContainer = ({ views }) => {
         passive: false,
       })
     }
-  })
-
-  const touchStart = e => {
-    this.firstClientX = e.touches[0].clientX
-    this.firstClientY = e.touches[0].clientY
-  }
-
-  const preventTouch = e => {
-    const minValue = 5 // threshold
-
-    this.clientX = e.touches[0].clientX - this.firstClientX
-    this.clientY = e.touches[0].clientY - this.firstClientY
-
-    // Vertical scrolling does not work when you start swiping horizontally.
-    if (Math.abs(this.clientX) > minValue) {
-      e.preventDefault()
-      e.returnValue = false
-      return false
-    }
-  }
+  }, [clientX, firstClientX, firstClientY])
 
   return (
     <section>
