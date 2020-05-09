@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import { Container, Row, Column } from '../components/grid'
@@ -6,28 +6,28 @@ import ViewsCard from './ViewsCard'
 import { CardContainer, ViewsTitle } from './ViewsContainer.styles'
 import { settings } from './slickSettings'
 
-class ViewsContainer extends React.Component {
+const ViewsContainer = ({ views }) => {
   // Methods here to prevent horizontal scrolling
   // while swiping with react-slick, see
   // https://github.com/akiran/react-slick/issues/1240
-  componentDidMount() {
-    window.addEventListener('touchstart', this.touchStart)
-    window.addEventListener('touchmove', this.preventTouch, { passive: false })
-  }
 
-  componentWillUnmount() {
-    window.removeEventListener('touchstart', this.touchStart)
-    window.removeEventListener('touchmove', this.preventTouch, {
-      passive: false,
-    })
-  }
+  useEffect(() => {
+    window.addEventListener('touchstart', touchStart)
+    window.addEventListener('touchmove', preventTouch, { passive: false })
+    return () => {
+      window.removeEventListener('touchstart', touchStart)
+      window.removeEventListener('touchmove', preventTouch, {
+        passive: false,
+      })
+    }
+  })
 
-  touchStart(e) {
+  const touchStart = e => {
     this.firstClientX = e.touches[0].clientX
     this.firstClientY = e.touches[0].clientY
   }
 
-  preventTouch(e) {
+  const preventTouch = e => {
     const minValue = 5 // threshold
 
     this.clientX = e.touches[0].clientX - this.firstClientX
@@ -41,29 +41,26 @@ class ViewsContainer extends React.Component {
     }
   }
 
-  render() {
-    const { views } = this.props
-    return (
-      <section>
-        <Container>
-          <Row>
-            <Column width={1}>
-              <CardContainer>
-                <ViewsTitle isLight isCentered>
-                  Views
-                </ViewsTitle>
-                <Slider {...settings}>
-                  {views.map(view => (
-                    <ViewsCard {...view} key={view.id} />
-                  ))}
-                </Slider>
-              </CardContainer>
-            </Column>
-          </Row>
-        </Container>
-      </section>
-    )
-  }
+  return (
+    <section>
+      <Container>
+        <Row>
+          <Column width={1}>
+            <CardContainer>
+              <ViewsTitle isLight isCentered>
+                Views
+              </ViewsTitle>
+              <Slider {...settings}>
+                {views.map(view => (
+                  <ViewsCard {...view} key={view.id} />
+                ))}
+              </Slider>
+            </CardContainer>
+          </Column>
+        </Row>
+      </Container>
+    </section>
+  )
 }
 
 ViewsContainer.propTypes = {
