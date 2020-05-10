@@ -1,8 +1,7 @@
-import moment, { Moment } from 'moment'
+import moment from 'moment'
 import momentTz from 'moment-timezone'
 import slugify from 'slugify'
 import UuidEncoder from 'uuid-encoder'
-import constants from '../constants'
 import {
   ContentfulEvent,
   EventDateOccurrence,
@@ -73,28 +72,6 @@ export const sortEventsByStartTime = (a: EventNode, b: EventNode) =>
 
 export function filterByLimit(this: number, _event: any, index: number) {
   return index < this
-}
-
-export const momentizeRecurrenceDate = (date: string): Moment => {
-  const [day, month, year] = date.split('/')
-  // Create moment date, note month is zero-based in js
-  return moment(new Date(parseInt(year), parseInt(month) - 1, parseInt(day)))
-}
-
-export function sanitizeDates(dates: string[]) {
-  const formattedDates = dates.reduce(
-    (acc: string[], date: string): string[] => {
-      const momentDate = momentizeRecurrenceDate(date)
-      // Create array of valid dates
-      return momentDate.isValid()
-        ? [...acc, momentDate.format(constants.dateFormat)]
-        : acc
-    },
-    []
-  )
-
-  // Strip duplicates and return
-  return Array.from(new Set([...formattedDates]))
 }
 
 export const getDuration = (start: string, end: string) =>

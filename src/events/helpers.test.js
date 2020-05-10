@@ -3,7 +3,6 @@ import {
   formatShortTime,
   filterPastEvents,
   getDuration,
-  sanitizeDates,
   generateEventSlug,
   extractEventIdFromSlug,
   sortEventsByStartTime,
@@ -84,12 +83,6 @@ describe('filterPastEvents', () => {
   it('returns 1 day as diff', () => {
     const date = getDuration('2019-06-03T08:00+00:00', '2019-06-04T08:00+00:00')
     expect(date).toBe(24 * 60 * 60 * 1000)
-  })
-
-  it('returns sanitized dates', () => {
-    const dates = ['1/3/2019', '12/12/2019']
-    const expectedDates = ['01/03/2019', '12/12/2019']
-    expect(sanitizeDates(dates)).toEqual(expectedDates)
   })
 })
 
