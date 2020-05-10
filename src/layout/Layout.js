@@ -60,7 +60,6 @@ const query = graphql`
               endDate
             }
           }
-          recurrenceDates
           eventPriceLow
           eventCategories
           venueDetails
