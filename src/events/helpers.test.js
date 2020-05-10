@@ -11,6 +11,7 @@ import {
   sortByNextOccurrence,
   changeTimeZone,
   formatUpcomingDates,
+  isRecurringEvent,
 } from './helpers'
 
 const yesterday = new Date()
@@ -238,6 +239,31 @@ describe('formatUpcomingDates', () => {
     'should render time as $expected when date is $date',
     ({ startDate, endDate, expected }) => {
       const actual = formatUpcomingDates({ startDate, endDate })
+      expect(actual).toEqual(expected)
+    }
+  )
+})
+
+describe('isRecurringEvent', () => {
+  it.each`
+    count | expected
+    ${0}  | ${false}
+    ${1}  | ${false}
+    ${2}  | ${true}
+  `(
+    'should return $expected when given $count event occurrences',
+    ({ count, expected }) => {
+      const event = {
+        date: {
+          dates: Array(count)
+            .fill(0)
+            .map((_, index) => ({
+              startDate: `2020-01-0${index + 1}T09:30:00.000Z`,
+              endDate: `2020-01-0${index + 1}T10:30:00.000Z`,
+            })),
+        },
+      }
+      const actual = isRecurringEvent(event)
       expect(actual).toEqual(expected)
     }
   )

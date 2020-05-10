@@ -3,7 +3,10 @@ import momentTz from 'moment-timezone'
 import slugify from 'slugify'
 import UuidEncoder from 'uuid-encoder'
 import constants from '../constants'
-import { ContentfulEvent } from './eventListingCard/EventListingCard.types'
+import {
+  ContentfulEvent,
+  EventDateOccurrence,
+} from './eventListingCard/EventListingCard.types'
 
 const encoder = new UuidEncoder('base62')
 
@@ -153,3 +156,9 @@ export const formatUpcomingDates = ({
     'ddd, DD MMM'
   )}`
 }
+
+export const isRecurringEvent = ({
+  date: { dates },
+}: {
+  date: { dates: EventDateOccurrence[] }
+}) => dates && dates.length > 1
