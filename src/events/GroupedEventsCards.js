@@ -8,6 +8,7 @@ import constants from '../constants'
 import { colors } from '../theme/colors'
 import EventListingCard from './eventListingCard/EventListingCard'
 import EventListingPromotionCard from './EventListingPromotionCard'
+import { isRecurringEvent } from './helpers'
 
 const DateGroupHeading = styled.h2`
   margin: 1rem 0;
@@ -28,23 +29,19 @@ const Wrapper = props => (
 
 export const generateHeader = ({ prevEvent, event }) => {
   const prevStartDate =
-    prevEvent && moment(prevEvent.node.startTime).format(constants.dateFormat)
-  const currStartDate = moment(event.node.startTime).format(
-    constants.dateFormat
-  )
+    prevEvent && moment(prevEvent.node.date.dates[0].startDate)
+  const currStartDate = moment(event.node.date.dates[0].startDate)
 
-  const prevIsRecurring = prevEvent && !!prevEvent.node.recurrenceDates
-  const currIsRecurring = !!event.node.recurrenceDates
+  const prevIsRecurring = prevEvent && isRecurringEvent(prevEvent.node)
+  const currIsRecurring = isRecurringEvent(event.node)
 
   // EITHER first event on page
   // OR events do not begin on the same day
   // OR one is single and one is recurring
   return !prevEvent ||
-    prevStartDate !== currStartDate ||
+    !prevStartDate.isSame(currStartDate, 'day') ||
     prevIsRecurring !== currIsRecurring
-    ? `${currIsRecurring ? 'From ' : ''}${moment(event.node.startTime).format(
-        'dddd D MMM'
-      )}`
+    ? `${currIsRecurring ? 'From ' : ''}${currStartDate.format('dddd D MMM')}`
     : null
 }
 
