@@ -51,8 +51,6 @@ const query = graphql`
         node {
           id
           name
-          startTime
-          endTime
           date {
             dates {
               id

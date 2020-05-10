@@ -10,13 +10,13 @@ import {
 
 describe('formatDayRange', () => {
   it.each`
-    startTime                     | endTime                       | expected
+    startDate                     | endDate                       | expected
     ${'2020-03-04T00:00:00.000Z'} | ${'2020-03-12T00:00:00.000Z'} | ${'Wednesday 4 March 2020 to Thursday 12 March 2020'}
     ${'2020-03-04T00:00:00.000Z'} | ${'2020-03-04T01:00:00.000Z'} | ${'Wednesday 4 March 2020'}
   `(
-    'should format day as $expected when given start time $startTime and end time $endTime',
-    ({ startTime, endTime, expected }) => {
-      const actual = formatDayRange({ startTime, endTime })
+    'should format day as $expected when given start time $startDate and end time $endDate',
+    ({ startDate, endDate, expected }) => {
+      const actual = formatDayRange({ startDate, endDate })
       expect(actual).toEqual(expected)
     }
   )
@@ -24,9 +24,9 @@ describe('formatDayRange', () => {
 
 describe('formatTimeRange', () => {
   it('should format time range for event', () => {
-    const startTime = '2020-03-04T09:00:00.000Z'
-    const endTime = '2020-03-04T12:45:00.000Z'
-    const actual = formatTimeRange({ startTime, endTime })
+    const startDate = '2020-03-04T09:00:00.000Z'
+    const endDate = '2020-03-04T12:45:00.000Z'
+    const actual = formatTimeRange({ startDate, endDate })
     expect(actual).toEqual('9am to 12:45pm')
   })
 })

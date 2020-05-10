@@ -89,6 +89,5 @@ export const testEvent = {
     id: '123',
     name: 'Diversity by Default',
     postcode: 'TEST',
-    startTime: '2035-06-02T13:30+01:00',
   },
 }

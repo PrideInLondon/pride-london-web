@@ -72,23 +72,18 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     })
 
-    // don't create pages for past events
-    result.data.events.edges.forEach(edge => {
-      const endTime =
-        edge.node.date.dates[edge.node.date.dates.length - 1].endDate
-      const startTime = edge.node.date.dates[0].startDate
-      if (filterPastEvents(endTime)) {
-        createPage({
-          path: generateEventSlug({ ...edge.node }),
-          component: EventPage,
-          context: {
-            id: edge.node.id,
-            startTime,
-            endTime,
-          },
-        })
-      }
-    })
+    result.data.events.edges.forEach(edge =>
+      createPage({
+        path: generateEventSlug({ ...edge.node }),
+        component: EventPage,
+        context: {
+          id: edge.node.id,
+          startDate: edge.node.date.dates[0].startDate,
+          endDate:
+            edge.node.date.dates[edge.node.date.dates.length - 1].endDate,
+        },
+      })
+    )
 
     result.data.articles.edges.forEach(edge => {
       createPage({
