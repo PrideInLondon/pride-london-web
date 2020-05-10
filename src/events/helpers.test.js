@@ -2,7 +2,6 @@ import {
   formatTime,
   formatShortTime,
   filterPastEvents,
-  getDuration,
   generateEventSlug,
   extractEventIdFromSlug,
   sortEventsByStartTime,
@@ -78,11 +77,6 @@ describe('filterPastEvents', () => {
 
   it('returns false if date is in the past', () => {
     expect(filterPastEvents(yesterday.toISOString())).toBeFalsy()
-  })
-
-  it('returns 1 day as diff', () => {
-    const date = getDuration('2019-06-03T08:00+00:00', '2019-06-04T08:00+00:00')
-    expect(date).toBe(24 * 60 * 60 * 1000)
   })
 })
 

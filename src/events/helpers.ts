@@ -74,9 +74,6 @@ export function filterByLimit(this: number, _event: any, index: number) {
   return index < this
 }
 
-export const getDuration = (start: string, end: string) =>
-  moment(end).diff(moment(start))
-
 export const generateEventSlug = ({
   id,
   name,
