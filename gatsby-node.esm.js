@@ -1,5 +1,5 @@
 import path from 'path'
-import { filterPastEvents, generateEventSlug } from './src/events/helpers'
+import { generateEventSlug } from './src/events/helpers'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
