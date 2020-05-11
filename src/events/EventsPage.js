@@ -53,7 +53,7 @@ const EventsPage = ({
                     prevEvent={filteredEvents[index - 1]}
                     index={index}
                     event={event}
-                    key={event.node.id + event.node.startTime}
+                    key={event.node.id}
                     toLoad={numberOfEventsToShow}
                   />
                 ))}

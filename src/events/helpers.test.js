@@ -2,8 +2,6 @@ import {
   formatTime,
   formatShortTime,
   filterPastEvents,
-  getDuration,
-  sanitizeDates,
   generateEventSlug,
   extractEventIdFromSlug,
   sortEventsByStartTime,
@@ -11,6 +9,7 @@ import {
   sortByNextOccurrence,
   changeTimeZone,
   formatUpcomingDates,
+  isRecurringEvent,
 } from './helpers'
 
 const yesterday = new Date()
@@ -78,17 +77,6 @@ describe('filterPastEvents', () => {
 
   it('returns false if date is in the past', () => {
     expect(filterPastEvents(yesterday.toISOString())).toBeFalsy()
-  })
-
-  it('returns 1 day as diff', () => {
-    const date = getDuration('2019-06-03T08:00+00:00', '2019-06-04T08:00+00:00')
-    expect(date).toBe(24 * 60 * 60 * 1000)
-  })
-
-  it('returns sanitized dates', () => {
-    const dates = ['1/3/2019', '12/12/2019']
-    const expectedDates = ['01/03/2019', '12/12/2019']
-    expect(sanitizeDates(dates)).toEqual(expectedDates)
   })
 })
 
@@ -238,6 +226,31 @@ describe('formatUpcomingDates', () => {
     'should render time as $expected when date is $date',
     ({ startDate, endDate, expected }) => {
       const actual = formatUpcomingDates({ startDate, endDate })
+      expect(actual).toEqual(expected)
+    }
+  )
+})
+
+describe('isRecurringEvent', () => {
+  it.each`
+    count | expected
+    ${0}  | ${false}
+    ${1}  | ${false}
+    ${2}  | ${true}
+  `(
+    'should return $expected when given $count event occurrences',
+    ({ count, expected }) => {
+      const event = {
+        date: {
+          dates: Array(count)
+            .fill(0)
+            .map((_, index) => ({
+              startDate: `2020-01-0${index + 1}T09:30:00.000Z`,
+              endDate: `2020-01-0${index + 1}T10:30:00.000Z`,
+            })),
+        },
+      }
+      const actual = isRecurringEvent(event)
       expect(actual).toEqual(expected)
     }
   )
