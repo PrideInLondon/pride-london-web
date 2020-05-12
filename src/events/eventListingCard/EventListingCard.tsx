@@ -7,7 +7,7 @@ import {
   CardFooter,
 } from '../../components/card'
 import { generateEventSlug, isVirtualEvent, isLiveNow } from '../helpers'
-import { LiveIcon, CalendarIcon } from '../../components/icons'
+import { LiveIcon, CalendarIcon, OnDemandIcon } from '../../components/icons'
 import { colors } from '../../theme/colors'
 import { IconProps } from '../../components/icons/Icon.types'
 import { generateDisplayDate, formatLocation } from './EventListingCard.utils'
@@ -20,14 +20,22 @@ import {
   Price,
 } from './EventListingCard.styles'
 
-const When: React.FC<WhenProps> = ({ platform, dates }) => {
-  const showLiveNow =
-    isVirtualEvent(platform) && dates.some(date => isLiveNow(date))
+const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
   const iconProps: IconProps = { size: 24, variant: 'blue' }
+  const showLiveNow =
+    !onDemand && isVirtualEvent(platform) && dates.some(date => isLiveNow(date))
   return (
     <CardDate>
       <WhenText color={showLiveNow ? colors.indigo : colors.darkCyan}>
-        {showLiveNow ? (
+        {onDemand ? (
+          <>
+            <OnDemandIcon {...iconProps} />
+            {generateDisplayDate({
+              dates,
+              onDemand: true,
+            })}
+          </>
+        ) : showLiveNow ? (
           <>
             <LiveIcon {...iconProps} />
             Live now
@@ -51,6 +59,7 @@ export const EventListingCard: React.FC<EventListingCardProps> = ({
     name,
     eventsListPicture,
     date: { dates },
+    onDemand,
     location2: platform,
     locationName,
     addressLine1,
@@ -61,7 +70,7 @@ export const EventListingCard: React.FC<EventListingCardProps> = ({
   <Card variant={variant} to={generateEventSlug({ id, name })}>
     <CardImage image={eventsListPicture.fixed} alt={eventsListPicture.title} />
     <CardContent>
-      <When {...{ platform, dates }} />
+      <When {...{ onDemand, platform, dates }} />
       <CardTitle>{name}</CardTitle>
       <Location>
         {formatLocation({

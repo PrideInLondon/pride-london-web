@@ -8,6 +8,7 @@ export interface ContentfulEvent {
   id: string
   name: string
   eventsListPicture: any
+  onDemand: boolean
   location2: string
   locationName: string
   addressLine1: string
@@ -23,6 +24,7 @@ export interface EventListingCardProps {
 }
 
 export interface WhenProps {
+  onDemand: boolean
   platform: string
   dates: EventDateOccurrence[]
 }

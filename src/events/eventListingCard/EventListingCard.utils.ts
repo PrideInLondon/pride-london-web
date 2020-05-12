@@ -62,12 +62,13 @@ export const checkTimesAreSame = (dates: EventDateOccurrence[]): boolean => {
 
 export const generateDisplayDate = ({
   dates,
+  onDemand,
   now = new Date(),
 }: {
   dates: EventDateOccurrence[]
+  onDemand?: boolean
   now?: Date
 }) => {
-  let prefix
   const filteredDates = dates.filter(occurrence =>
     filterPastEvents(occurrence.endDate, now)
   )
@@ -79,25 +80,27 @@ export const generateDisplayDate = ({
     filteredDates[filteredDates.length - 1].endDate
   )
 
-  if (filteredDates.length === 1 && endsOnSameDay) {
-    prefix = generateSingleDatePrefix({
-      start,
-      now,
-    })
-  } else {
-    prefix = generateMultiDatePrefix({
-      start,
-      lastOccurrenceEnd,
-      now,
-    })
-  }
-  return `${prefix}\u00A0\u00A0•\u00A0\u00A0${
-    checkTimesAreSame(filteredDates)
-      ? `${formatTime(filteredDates[0].startDate)} - ${formatTime(
-          filteredDates[0].endDate
-        )}`
-      : 'See details for times'
-  }`
+  const prefix =
+    filteredDates.length === 1 && endsOnSameDay
+      ? generateSingleDatePrefix({
+          start,
+          now,
+        })
+      : generateMultiDatePrefix({
+          start,
+          lastOccurrenceEnd,
+          now,
+        })
+
+  const suffix = onDemand
+    ? 'On demand'
+    : checkTimesAreSame(filteredDates)
+    ? `${formatTime(filteredDates[0].startDate)} - ${formatTime(
+        filteredDates[0].endDate
+      )}`
+    : 'See details for times'
+
+  return `${prefix}\u00A0\u00A0•\u00A0\u00A0${suffix}`
 }
 
 export const formatLocation = ({
