@@ -1,5 +1,9 @@
 import { EventDateOccurrence } from '../eventListingCard/EventListingCard.types'
 
+export interface LiveItemProps {
+  endDate: string
+}
+
 export interface ItemProps {
   title?: string
   icon: any

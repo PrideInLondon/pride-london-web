@@ -13,6 +13,7 @@ import {
   LiveIcon,
 } from '../../components/icons'
 import { Button } from '../../components/button'
+import { colors } from '../../theme/colors'
 import {
   formatPrice,
   formatShortTime,
@@ -30,11 +31,23 @@ import {
   VSpace,
 } from './EventInfoCard.styles'
 import {
+  LiveItemProps,
   ItemProps,
   WhenProps,
   LocationProps,
   EventInfoCardProps,
 } from './EventInfoCard.types'
+
+const LiveItem = ({ endDate }: LiveItemProps) => (
+  <Row style={{ backgroundColor: colors.white }}>
+    <LiveIcon variant="blue" />
+    <div style={{ marginLeft: '8px' }}>
+      <Title
+        style={{ color: colors.indigo }}
+      >{`Live now until ${formatShortTime(endDate)}`}</Title>
+    </div>
+  </Row>
+)
 
 const Item = ({ title, icon, detail }: ItemProps) => (
   <Row>
@@ -75,23 +88,16 @@ export const formatTimeRange = ({
   return `${formatShortTime(startDate)} to ${formatShortTime(endDate)}`
 }
 
-const When = ({ platform, dates, startDate, endDate }: WhenProps) => {
-  const liveNow =
-    isVirtualEvent(platform) && dates.some(date => isLiveNow(date))
-  return (
+const When = ({ platform, dates, startDate, endDate }: WhenProps) =>
+  isVirtualEvent(platform) && dates.some(date => isLiveNow(date)) ? (
+    <LiveItem {...{ endDate }} />
+  ) : (
     <Item
-      icon={
-        liveNow ? (
-          <LiveIcon variant="white" />
-        ) : (
-          <CalendarIcon variant="white" />
-        )
-      }
-      title={liveNow ? 'Live now' : formatDayRange({ startDate, endDate })}
+      icon={<CalendarIcon variant="white" />}
+      title={formatDayRange({ startDate, endDate })}
       detail={formatTimeRange({ startDate, endDate })}
     />
   )
-}
 
 export const formatAddress = (
   addressLine1: string,

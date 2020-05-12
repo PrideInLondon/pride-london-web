@@ -39,6 +39,7 @@ export const Title = styled.h3`
   font-weight: 500;
   font-family: Roboto, sans-serif;
   color: white;
+  line-height: 2em;
 `
 
 export const Detail = styled.p`
