@@ -51,8 +51,6 @@ const query = graphql`
         node {
           id
           name
-          startTime
-          endTime
           date {
             dates {
               id
@@ -60,7 +58,6 @@ const query = graphql`
               endDate
             }
           }
-          recurrenceDates
           eventPriceLow
           eventCategories
           venueDetails

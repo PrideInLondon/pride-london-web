@@ -56,7 +56,7 @@ const EventPage = ({
     },
   },
   location: { pathname },
-  pageContext: { startTime, endTime },
+  pageContext: { startDate, endDate },
   pageContext,
 }) => {
   const metaImg = `https:${individualEventPicture.file.url}?w=1000&h=562`
@@ -192,8 +192,8 @@ const EventPage = ({
               name,
               url: metaUrl,
               description: eventDescription,
-              startDate: startTime,
-              endDate: endTime,
+              startDate,
+              endDate,
               image: metaImg,
               location: {
                 '@type': 'Place',
@@ -280,7 +280,7 @@ const EventPage = ({
             <EventShareSection
               name={name}
               location={metaUrl}
-              date={startTime}
+              date={startDate}
             />
           </Column>
         </Row>

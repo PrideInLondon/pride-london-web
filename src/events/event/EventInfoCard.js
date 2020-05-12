@@ -83,21 +83,21 @@ const VSpace = styled.div`
   margin-top: 15px;
 `
 
-export const formatDayRange = ({ startTime, endTime }) => {
-  const startMoment = moment(startTime)
-  const endMoment = moment(endTime)
+export const formatDayRange = ({ startDate, endDate }) => {
+  const startMoment = moment(startDate)
+  const endMoment = moment(endDate)
 
   const dateFormat = 'dddd D MMMM YYYY'
   // if same day, return full day
   // if not same day, return a range
   return startMoment.format('L') === endMoment.format('L') ||
-    (endMoment.format('Hms') === '000' && endMoment.diff(startTime, 'days') < 1)
+    (endMoment.format('Hms') === '000' && endMoment.diff(startDate, 'days') < 1)
     ? startMoment.format(dateFormat)
     : `${startMoment.format(dateFormat)} to ${endMoment.format(dateFormat)}`
 }
 
-export const formatTimeRange = ({ startTime, endTime }) => {
-  return `${formatShortTime(startTime)} to ${formatShortTime(endTime)}`
+export const formatTimeRange = ({ startDate, endDate }) => {
+  return `${formatShortTime(startDate)} to ${formatShortTime(endDate)}`
 }
 
 export const formatAddress = (addressLine1, addressLine2, city, postcode) =>
@@ -150,16 +150,16 @@ const EventInfoCard = ({
     accessibilityOptions,
     date,
   },
-  pageContext: { startTime, endTime },
+  pageContext: { startDate, endDate },
 }) => (
   <Wrapper>
-    {startTime && endTime && (
+    {
       <Item
         icon={<DateIcon />}
-        title={formatDayRange({ startTime, endTime })}
-        detail={formatTimeRange({ startTime, endTime })}
+        title={formatDayRange({ startDate, endDate })}
+        detail={formatTimeRange({ startDate, endDate })}
       />
-    )}
+    }
     <Item
       icon={<TicketIcon />}
       title={formatPrice(eventPriceLow, eventPriceHigh)}
@@ -261,8 +261,8 @@ EventInfoCard.propTypes = {
   }).isRequired,
   pageContext: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    startTime: PropTypes.string.isRequired,
-    endTime: PropTypes.string.isRequired,
+    startDate: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
   }).isRequired,
 }
 
