@@ -11,6 +11,7 @@ export interface ItemProps {
 }
 
 export interface WhenProps {
+  onDemand: boolean
   platform: string
   dates: EventDateOccurrence[]
   startDate: string
@@ -29,6 +30,7 @@ export interface LocationProps {
 export interface EventInfoCardProps {
   data: {
     location2: string
+    onDemand: boolean
     locationName: string
     addressLine1: string
     addressLine2: string

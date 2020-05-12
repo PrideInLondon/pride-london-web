@@ -11,7 +11,7 @@ import {
 describe('formatDayRange', () => {
   it.each`
     startDate                     | endDate                       | expected
-    ${'2020-03-04T00:00:00.000Z'} | ${'2020-03-12T00:00:00.000Z'} | ${'Wednesday 4 March 2020 to Thursday 12 March 2020'}
+    ${'2020-03-04T00:00:00.000Z'} | ${'2020-03-12T00:00:00.000Z'} | ${'04 Mar - 12 Mar'}
     ${'2020-03-04T00:00:00.000Z'} | ${'2020-03-04T01:00:00.000Z'} | ${'Wednesday 4 March 2020'}
   `(
     'should format day as $expected when given start time $startDate and end time $endDate',

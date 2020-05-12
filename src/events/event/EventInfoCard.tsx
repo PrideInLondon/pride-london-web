@@ -6,11 +6,12 @@ import {
   CalendarIcon,
   GenderIcon,
   LaptopIcon,
+  LiveIcon,
   MailIcon,
   MapPinIcon,
+  OnDemandIcon,
   PhoneIcon,
   TicketIcon,
-  LiveIcon,
 } from '../../components/icons'
 import { Button } from '../../components/button'
 import { colors } from '../../theme/colors'
@@ -69,13 +70,12 @@ export const formatDayRange = ({
   const startMoment = moment(startDate)
   const endMoment = moment(endDate)
 
-  const dateFormat = 'dddd D MMMM YYYY'
-  // if same day, return full day
+  // if one day, return full day
   // if not same day, return a range
   return startMoment.format('L') === endMoment.format('L') ||
     (endMoment.format('Hms') === '000' && endMoment.diff(startDate, 'days') < 1)
-    ? startMoment.format(dateFormat)
-    : `${startMoment.format(dateFormat)} to ${endMoment.format(dateFormat)}`
+    ? startMoment.format('dddd D MMMM YYYY')
+    : `${startMoment.format('DD MMM')} - ${endMoment.format('DD MMM')}`
 }
 
 export const formatTimeRange = ({
@@ -88,8 +88,14 @@ export const formatTimeRange = ({
   return `${formatShortTime(startDate)} to ${formatShortTime(endDate)}`
 }
 
-const When = ({ platform, dates, startDate, endDate }: WhenProps) =>
-  isVirtualEvent(platform) && dates.some(date => isLiveNow(date)) ? (
+const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) =>
+  onDemand ? (
+    <Item
+      icon={<OnDemandIcon variant="white" />}
+      title="On demand"
+      detail={formatDayRange({ startDate, endDate })}
+    />
+  ) : isVirtualEvent(platform) && dates.some(date => isLiveNow(date)) ? (
     <LiveItem {...{ endDate }} />
   ) : (
     <Item
@@ -130,6 +136,7 @@ export const Location = ({
 const EventInfoCard = ({
   data: {
     location2: platform,
+    onDemand,
     locationName,
     addressLine1,
     addressLine2,
@@ -148,7 +155,7 @@ const EventInfoCard = ({
   pageContext: { startDate, endDate },
 }: EventInfoCardProps) => (
   <Wrapper>
-    <When {...{ platform, dates, startDate, endDate }} />
+    <When {...{ onDemand, platform, dates, startDate, endDate }} />
     <Item
       icon={<TicketIcon />}
       title={formatPrice(eventPriceLow, eventPriceHigh)}
@@ -207,6 +214,7 @@ export default EventInfoCard
 export const query = graphql`
   fragment eventInfoCardQuery on ContentfulEvent {
     location2
+    onDemand: ondemand
     locationName
     addressLine1
     addressLine2
