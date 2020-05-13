@@ -434,4 +434,54 @@ describe('generateDisplayDate', () => {
       'Thu, 03 Jan - Fri, 04 Jan\u00A0\u00A0•\u00A0\u00A0See details for times'
     )
   })
+
+  it('should display the date if on demand event lasts only one day', () => {
+    const start = new Date(firstOfJanuary)
+    start.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
+    start.setHours(19, 30, 0)
+
+    const end = new Date(firstOfJanuary)
+    end.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
+    end.setHours(21, 0, 0)
+
+    const actual = generateDisplayDate({
+      dates: [
+        {
+          id: 'single-date',
+          startDate: start.toISOString(),
+          endDate: end.toISOString(),
+        },
+      ],
+      onDemand: true,
+      now: firstOfJanuary,
+    })
+
+    expect(actual).toEqual('Fri, 01 Feb\u00A0\u00A0•\u00A0\u00A0On demand')
+  })
+
+  it('should display the day range if on demand event spans multiple days', () => {
+    const start = new Date(firstOfJanuary)
+    start.setMonth(firstOfJanuary.getMonth() + 1) // set to February 01
+    start.setHours(19, 30, 0)
+
+    const end = new Date(firstOfJanuary)
+    end.setMonth(firstOfJanuary.getMonth() + 3) // set to April 01
+    end.setHours(21, 0, 0)
+
+    const actual = generateDisplayDate({
+      dates: [
+        {
+          id: 'multi-date',
+          startDate: start.toISOString(),
+          endDate: end.toISOString(),
+        },
+      ],
+      onDemand: true,
+      now: firstOfJanuary,
+    })
+
+    expect(actual).toEqual(
+      'Fri, 01 Feb - Mon, 01 Apr\u00A0\u00A0•\u00A0\u00A0On demand'
+    )
+  })
 })

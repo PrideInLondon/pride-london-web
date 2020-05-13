@@ -1,11 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import theme from '../../theme/theme'
+import React, { SVGProps } from 'react'
+import { colors } from '../../theme/colors'
+import { IconProps } from './Icon.types'
 
-export default function MapPinIcon({ dark, ...props }) {
-  const stroke = dark ? theme.colors.indigo : theme.colors.white
-  const pathProps = {
-    stroke,
+const MapPinIcon = ({ variant, ...props }: IconProps) => {
+  const pathProps: SVGProps<SVGPathElement> = {
+    stroke: { blue: colors.indigo, white: colors.white }[variant],
     strokeWidth: '1.7',
     strokeLinecap: 'round',
     strokeLinejoin: 'round',
@@ -42,10 +41,4 @@ export default function MapPinIcon({ dark, ...props }) {
   )
 }
 
-MapPinIcon.propTypes = {
-  dark: PropTypes.bool,
-}
-
-MapPinIcon.defaultProps = {
-  dark: false,
-}
+export default MapPinIcon

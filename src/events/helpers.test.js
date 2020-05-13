@@ -10,6 +10,7 @@ import {
   changeTimeZone,
   formatUpcomingDates,
   isRecurringEvent,
+  isLiveNow,
 } from './helpers'
 
 const yesterday = new Date()
@@ -251,6 +252,25 @@ describe('isRecurringEvent', () => {
         },
       }
       const actual = isRecurringEvent(event)
+      expect(actual).toEqual(expected)
+    }
+  )
+})
+
+describe('isLiveNow', () => {
+  const past = '2020-01-01T08:59:00.000Z'
+  const present = '2020-01-01T09:00:00.000Z'
+  const future = '2020-01-01T09:01:00.000Z'
+
+  it.each`
+    startDate | endDate   | expected
+    ${past}   | ${future} | ${true}
+    ${past}   | ${past}   | ${false}
+    ${future} | ${future} | ${false}
+  `(
+    'should return $expected when start time is $startDate, end time is $endDate',
+    ({ startDate, endDate, expected }) => {
+      const actual = isLiveNow({ startDate, endDate }, present)
       expect(actual).toEqual(expected)
     }
   )

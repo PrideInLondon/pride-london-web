@@ -136,3 +136,9 @@ export const isRecurringEvent = ({
 }: {
   date: { dates: EventDateOccurrence[] }
 }) => dates && dates.length > 1
+
+export const isLiveNow = (
+  { startDate, endDate }: EventDateOccurrence,
+  now?: string //param needed for testing
+) =>
+  (now ? moment(now) : moment()).isBetween(moment(startDate), moment(endDate))
