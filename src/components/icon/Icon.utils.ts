@@ -4,7 +4,7 @@ import { InternalIconProps } from './Icon.types'
 import Calendar from './icons/Calendar'
 import Laptop from './icons/Laptop'
 
-const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
+export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
   calendar: Calendar,
   laptop: Laptop,
 }
