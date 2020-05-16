@@ -1,13 +1,12 @@
 import React from 'react'
 import { InternalIconProps } from '../Icon.types'
 
-const Laptop = ({ colors: { primary } }: InternalIconProps) => (
+const Laptop = ({ colors: { primary }, ...props }: InternalIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="32"
-    height="32"
     fill="none"
     viewBox="0 0 32 32"
+    {...props}
   >
     <path
       fill={primary}

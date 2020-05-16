@@ -1,4 +1,6 @@
-export interface IconProps {
+import { LayoutProps } from 'styled-system'
+
+export interface IconProps extends LayoutProps {
   name: string
   variant: 'indigo' | 'white'
 }
