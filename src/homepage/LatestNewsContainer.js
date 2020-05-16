@@ -63,7 +63,7 @@ const LatestNewsContainer = () => (
                 1, // 100% between second breakpoint(768px) and third breakpoint (1024px)
                 2 / 3, // 66% between third breakpoint(1280px) and fourth breakpoint (1440px)
               ]}
-              px={[0, 0, 0, 3]}
+              px={[0, 0, 0, 15]}
             >
               <LatestNews
                 {...{
