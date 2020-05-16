@@ -1,6 +1,6 @@
 import React, { useRef, useLayoutEffect, RefObject } from 'react'
 import shortid from 'shortid'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import theme from '../../theme/theme'
 import { Container } from '../../components/grid'
 import { checkBreakpoint } from '../../utils/style-utils'

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { color } from 'styled-system'
 import { colors } from '../../theme/colors'
 import { handleUrl } from '../../utils/location-utils'
