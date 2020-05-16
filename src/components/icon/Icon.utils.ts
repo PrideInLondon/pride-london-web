@@ -3,10 +3,12 @@ import { InternalIconProps } from './Icon.types'
 
 import Calendar from './icons/Calendar'
 import Laptop from './icons/Laptop'
+import Live from './icons/Live'
 
 export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
   calendar: Calendar,
   laptop: Laptop,
+  live: Live,
 }
 
 export const calculateComponent = (name: string) => COMPONENTS[name]
