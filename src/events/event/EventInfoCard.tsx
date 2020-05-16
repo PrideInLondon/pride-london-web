@@ -4,7 +4,6 @@ import moment from 'moment'
 import {
   AccessibilityIcon,
   GenderIcon,
-  LaptopIcon,
   MailIcon,
   MapPinIcon,
   OnDemandIcon,
@@ -123,7 +122,10 @@ export const Location = ({
   postcode,
 }: LocationProps) =>
   isVirtualEvent(platform) ? (
-    <Item icon={<LaptopIcon size={26} />} title={`On ${platform}`} />
+    <Item
+      icon={<Icon name="laptop" variant="white" width={26} height={26} />}
+      title={`On ${platform}`}
+    />
   ) : (
     <Item
       icon={<MapPinIcon variant="white" />}

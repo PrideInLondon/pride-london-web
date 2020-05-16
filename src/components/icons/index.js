@@ -1,6 +1,5 @@
 export { default as AccessibilityIcon } from './AccessibilityIcon'
 export { default as GenderIcon } from './GenderIcon'
-export { default as LaptopIcon } from './LaptopIcon'
 export { default as MailIcon } from './mailIcon'
 export { default as MapPinIcon } from './MapPinIcon'
 export { default as OnDemandIcon } from './OnDemandIcon'
