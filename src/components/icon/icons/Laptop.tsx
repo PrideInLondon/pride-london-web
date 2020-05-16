@@ -1,7 +1,7 @@
 import React from 'react'
 import { InternalIconProps } from '../Icon.types'
 
-const LaptopIcon = ({ colors: { primary } }: InternalIconProps) => (
+const Laptop = ({ colors: { primary } }: InternalIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="32"
@@ -28,4 +28,4 @@ const LaptopIcon = ({ colors: { primary } }: InternalIconProps) => (
   </svg>
 )
 
-export default LaptopIcon
+export default Laptop
