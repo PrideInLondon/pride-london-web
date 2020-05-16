@@ -6,13 +6,13 @@ import {
   CalendarIcon,
   GenderIcon,
   LaptopIcon,
-  LiveIcon,
   MailIcon,
   MapPinIcon,
   OnDemandIcon,
   PhoneIcon,
   TicketIcon,
 } from '../../components/icons'
+import { Icon } from '../../components/icon'
 import { Button } from '../../components/button'
 import { colors } from '../../theme/colors'
 import {
@@ -41,7 +41,7 @@ import {
 
 const LiveItem = ({ endDate }: LiveItemProps) => (
   <Row style={{ backgroundColor: colors.white }}>
-    <LiveIcon variant="blue" />
+    <Icon name="live" variant="indigo" />
     <div style={{ marginLeft: '8px' }}>
       <Title
         style={{ color: colors.indigo }}

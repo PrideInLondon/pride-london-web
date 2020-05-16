@@ -7,7 +7,8 @@ import {
   CardFooter,
 } from '../../components/card'
 import { generateEventSlug, isVirtualEvent, isLiveNow } from '../helpers'
-import { LiveIcon, CalendarIcon, OnDemandIcon } from '../../components/icons'
+import { CalendarIcon, OnDemandIcon } from '../../components/icons'
+import { Icon } from '../../components/icon'
 import { colors } from '../../theme/colors'
 import { IconProps } from '../../components/icons/Icon.types'
 import { generateDisplayDate, formatLocation } from './EventListingCard.utils'
@@ -37,7 +38,7 @@ const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
           </>
         ) : showLiveNow ? (
           <>
-            <LiveIcon {...iconProps} />
+            <Icon name="live" variant="indigo" width={24} height={24} />
             Live now
           </>
         ) : (
