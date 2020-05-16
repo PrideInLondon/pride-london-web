@@ -6,7 +6,6 @@ import {
   GenderIcon,
   MailIcon,
   MapPinIcon,
-  OnDemandIcon,
   PhoneIcon,
   TicketIcon,
 } from '../../components/icons'
@@ -89,7 +88,7 @@ export const formatTimeRange = ({
 const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) =>
   onDemand ? (
     <Item
-      icon={<OnDemandIcon variant="white" />}
+      icon={<Icon name="on-demand" variant="white" />}
       title="On demand"
       detail={formatDayRange({ startDate, endDate })}
     />
