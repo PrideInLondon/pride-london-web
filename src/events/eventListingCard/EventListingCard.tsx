@@ -7,7 +7,7 @@ import {
   CardFooter,
 } from '../../components/card'
 import { generateEventSlug, isVirtualEvent, isLiveNow } from '../helpers'
-import { CalendarIcon, OnDemandIcon } from '../../components/icons'
+import { OnDemandIcon } from '../../components/icons'
 import { Icon } from '../../components/icon'
 import { colors } from '../../theme/colors'
 import { IconProps } from '../../components/icons/Icon.types'
@@ -43,7 +43,7 @@ const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
           </>
         ) : (
           <>
-            <CalendarIcon {...iconProps} />
+            <Icon name="calendar" variant="indigo" width={24} height={24} />
             {generateDisplayDate({
               dates,
             })}

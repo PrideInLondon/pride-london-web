@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import moment from 'moment'
 import {
   AccessibilityIcon,
-  CalendarIcon,
   GenderIcon,
   LaptopIcon,
   MailIcon,
@@ -99,7 +98,7 @@ const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) =>
     <LiveItem {...{ endDate }} />
   ) : (
     <Item
-      icon={<CalendarIcon variant="white" />}
+      icon={<Icon name="calendar" variant="white" />}
       title={formatDayRange({ startDate, endDate })}
       detail={formatTimeRange({ startDate, endDate })}
     />
