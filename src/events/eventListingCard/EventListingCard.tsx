@@ -7,9 +7,9 @@ import {
   CardFooter,
 } from '../../components/card'
 import { generateEventSlug, isVirtualEvent, isLiveNow } from '../helpers'
-import { LiveIcon, CalendarIcon, OnDemandIcon } from '../../components/icons'
+import { Icon } from '../../components/icon'
 import { colors } from '../../theme/colors'
-import { IconProps } from '../../components/icons/Icon.types'
+import { IconProps } from '../../components/icon/Icon.types'
 import { generateDisplayDate, formatLocation } from './EventListingCard.utils'
 import { EventListingCardProps, WhenProps } from './EventListingCard.types'
 import {
@@ -21,7 +21,12 @@ import {
 } from './EventListingCard.styles'
 
 const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
-  const iconProps: IconProps = { size: 24, variant: 'blue' }
+  const generateIconProps = (name: string): IconProps => ({
+    name,
+    variant: 'indigo',
+    width: 24,
+    height: 24,
+  })
   const showLiveNow =
     !onDemand && isVirtualEvent(platform) && dates.some(date => isLiveNow(date))
   return (
@@ -29,7 +34,7 @@ const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
       <WhenText color={showLiveNow ? colors.indigo : colors.darkCyan}>
         {onDemand ? (
           <>
-            <OnDemandIcon {...iconProps} />
+            <Icon {...generateIconProps('on-demand')} />
             {generateDisplayDate({
               dates,
               onDemand: true,
@@ -37,12 +42,12 @@ const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
           </>
         ) : showLiveNow ? (
           <>
-            <LiveIcon {...iconProps} />
+            <Icon {...generateIconProps('live')} />
             Live now
           </>
         ) : (
           <>
-            <CalendarIcon {...iconProps} />
+            <Icon {...generateIconProps('calendar')} />
             {generateDisplayDate({
               dates,
             })}
