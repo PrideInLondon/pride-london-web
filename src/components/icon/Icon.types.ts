@@ -1,3 +1,4 @@
+import { SVGProps } from 'react'
 import { LayoutProps, SpaceProps } from 'styled-system'
 
 export interface IconProps extends LayoutProps, SpaceProps {
@@ -5,7 +6,7 @@ export interface IconProps extends LayoutProps, SpaceProps {
   variant: 'indigo' | 'white'
 }
 
-export interface InternalIconProps {
+export interface InternalIconProps extends SVGProps<SVGSVGElement> {
   colors: {
     primary: string
     secondary: string
