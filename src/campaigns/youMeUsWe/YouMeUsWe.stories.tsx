@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 // import { select } from '@storybook/addon-knobs'
-import { GridList, GridItem } from './GridList/GridList'
+import { GridList, GridItem } from './GridList'
 
 storiesOf('You Me Us We', module).add('6 grid items', () => {
   return (
