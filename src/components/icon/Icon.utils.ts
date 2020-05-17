@@ -20,11 +20,11 @@ const COLORS: {
 } = {
   indigo: {
     primary: colors.indigo,
-    secondary: colors.white,
+    secondary: colors.eucalyptusGreen,
   },
   white: {
     primary: colors.white,
-    secondary: colors.indigo,
+    secondary: colors.eucalyptusGreen,
   },
 }
 

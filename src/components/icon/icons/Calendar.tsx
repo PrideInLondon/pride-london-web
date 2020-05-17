@@ -1,8 +1,10 @@
 import React from 'react'
-import { colors } from '../../../theme/colors'
 import { InternalIconProps } from '../Icon.types'
 
-const Calendar = ({ colors: { primary }, ...props }: InternalIconProps) => (
+const Calendar = ({
+  colors: { primary, secondary },
+  ...props
+}: InternalIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -10,7 +12,7 @@ const Calendar = ({ colors: { primary }, ...props }: InternalIconProps) => (
     {...props}
   >
     <path
-      fill={colors.eucalyptusGreen}
+      fill={secondary}
       d="M16 29c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z"
     />
     <path
