@@ -28,7 +28,8 @@ export const Count = styled.div`
     font-family: ${fonts.cactus};
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: ${-space.sm};
+    margin-bottom: -${space.lg};
+
     ${mediaQueries.md} {
       margin-bottom: calc(-${space.md} * 2);
     }

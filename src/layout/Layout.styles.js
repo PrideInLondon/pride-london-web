@@ -102,6 +102,7 @@ export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  
   /* Cactus Bold */
   @font-face {
     font-family: 'Cactus';
@@ -111,12 +112,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   /* Cactus Bold Italic */
-    @font-face {
+  @font-face {
     font-family: 'Cactus';
     font-style: italic;
     font-weight: 700;
     src: url('${CactusBoldItalic}') format("opentype"); 
-    }
+  }
   
   /* roboto-300 - latin */
   @font-face {
