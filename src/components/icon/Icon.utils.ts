@@ -1,10 +1,7 @@
 import { colors } from '../../theme/colors'
 import { InternalIconProps } from './Icon.types'
 
-import Calendar from './icons/Calendar'
-import Laptop from './icons/Laptop'
-import Live from './icons/Live'
-import OnDemand from './icons/OnDemand'
+import { Calendar, Laptop, Live, OnDemand } from './icons'
 
 export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
   calendar: Calendar,
