@@ -4,7 +4,7 @@ import { space } from '../../../theme/space'
 import { mediaQueries } from '../../../theme/mediaQueries'
 import { fonts } from '../../../theme/fonts'
 
-const height = 280
+const HEIGHT = 280
 export const Title = styled.div`
   color: ${colors.indigo};
   font-family: ${fonts.cactus};
@@ -46,11 +46,11 @@ export const StyledGridItem = styled.li`
   ${mediaQueries.lg} {
     width: 33.3333%;
     float: left;
-    height: ${height}px;
+    height: ${HEIGHT}px;
 
     &:first-child {
       width: 66.6666%;
-      height: ${height * 2}px;
+      height: ${HEIGHT * 2}px;
     }
   }
 `

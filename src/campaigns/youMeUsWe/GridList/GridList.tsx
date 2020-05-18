@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { CTALink } from '../../../components/ctaLink'
 import { handleUrl } from '../../../utils/location-utils'
 import {
