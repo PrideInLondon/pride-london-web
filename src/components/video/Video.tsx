@@ -12,13 +12,14 @@ const Video = ({ videoId, coverImage, captionString }: VideoProps) => {
           <iframe
             allowFullScreen
             frameBorder="0"
-            src={`https://www.youtube.com/embed/${videoId}`}
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
             title="Youtube video"
           />
         </VideoContainer>
       ) : (
         <div>
           <img src={coverImage} alt={captionString} />
+          <div></div>
         </div>
       )}
       <figcaption>{captionString}</figcaption>
