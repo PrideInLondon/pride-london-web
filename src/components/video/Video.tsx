@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { StyledFigure, VideoContainer } from './Video.styles'
+import { StyledFigure, VideoContainer, PlaceholderButton } from './Video.styles'
 import { VideoProps } from './Video.types'
 
 const Video = ({ videoId, coverImage, captionString }: VideoProps) => {
   const [clicked, setClicked] = useState(false)
 
   return (
-    <StyledFigure onClick={() => setClicked(!clicked)}>
+    <StyledFigure>
       {clicked ? (
         <VideoContainer>
           <iframe
@@ -17,11 +17,13 @@ const Video = ({ videoId, coverImage, captionString }: VideoProps) => {
           />
         </VideoContainer>
       ) : (
-        <div>
+        <div onClick={() => setClicked(!clicked)}>
           <img src={coverImage} alt={captionString} />
-          <div></div>
         </div>
       )}
+      <PlaceholderButton onClick={() => setClicked(!clicked)}>
+        Placeholder Btn
+      </PlaceholderButton>
       <figcaption>{captionString}</figcaption>
     </StyledFigure>
   )

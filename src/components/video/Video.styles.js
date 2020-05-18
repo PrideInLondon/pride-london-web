@@ -16,6 +16,7 @@ export const VideoContainer = styled.div`
 export const StyledFigure = styled.figure`
   margin: 0 0 2em 0;
   cursor: pointer;
+  position: relative;
 
   img {
     display: block;
@@ -34,4 +35,11 @@ export const StyledFigure = styled.figure`
     letter-spacing: normal;
     color: ${colors.indigo};
   }
+`
+export const PlaceholderButton = styled.button`
+  height: 160px;
+  width: 160px;
+  position: absolute;
+  bottom: 0;
+  left: 24px;
 `
