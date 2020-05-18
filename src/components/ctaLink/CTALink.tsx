@@ -26,8 +26,8 @@ StyledLink.defaultProps = {
 }
 
 export const CTALink: React.FC<CTALinkProps> = ({ to, children, ...props }) => (
-  <StyledLink<'a' | typeof Link>
-    {...handleUrl(to)}
+  <StyledLink<'a' | 'span' | typeof Link>
+    {...(to ? handleUrl(to) : { as: 'span' })}
     className="cta-link"
     {...props}
   >
