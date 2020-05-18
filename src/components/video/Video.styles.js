@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../theme/colors'
 
 export const VideoContainer = styled.div`
   position: relative;
@@ -9,5 +10,28 @@ export const VideoContainer = styled.div`
     position: absolute;
     height: 100%;
     width: 100%;
+  }
+`
+
+export const StyledFigure = styled.figure`
+  margin: 0 0 2em 0;
+  cursor: pointer;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  figcaption {
+    padding: 1em;
+    text-align: right;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: ${colors.indigo};
   }
 `
