@@ -30,7 +30,7 @@ const ParadeGroupsPage = ({ data: { paradeGroups } }) => (
   <>
     <Banner
       titleText="Parade groups"
-      subtitleText="Find out more about each group marching in this year’s parade below!"
+      subtitleText="Find out more about the groups who marched in last year's parade!"
       altText="Parade groups"
       imageSrc={bannerBackground}
       imageFullWidth
@@ -46,9 +46,8 @@ const ParadeGroupsPage = ({ data: { paradeGroups } }) => (
         and bisexual communities than ever before.
       </TextContainer>
       <TextContainer>
-        If you want to be part of the 2020 parade, the window for applications
-        will open in the new year. Further information will be announced in due
-        course.
+        Applications for the 2021 parade will open closer to the date. Further
+        information will be announced in due course.
       </TextContainer>
       <ParadeGroups
         paradeGroups={mapEntries(paradeGroups)}
