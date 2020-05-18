@@ -102,7 +102,7 @@ const Navigation: React.FC<NavigationProps> = ({
                         heading: 'Parade',
                         links: [
                           {
-                            title: '2020 Parade',
+                            title: '2021 Parade',
                             url: '/parade',
                           },
                           {
