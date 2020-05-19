@@ -3,16 +3,13 @@ import { graphql } from 'gatsby'
 import moment from 'moment'
 import {
   AccessibilityIcon,
-  CalendarIcon,
   GenderIcon,
-  LaptopIcon,
-  LiveIcon,
   MailIcon,
   MapPinIcon,
-  OnDemandIcon,
   PhoneIcon,
   TicketIcon,
 } from '../../components/icons'
+import { Icon } from '../../components/icon'
 import { Button } from '../../components/button'
 import { colors } from '../../theme/colors'
 import {
@@ -41,8 +38,8 @@ import {
 
 const LiveItem = ({ endDate }: LiveItemProps) => (
   <Row style={{ backgroundColor: colors.white }}>
-    <LiveIcon variant="blue" />
-    <div style={{ marginLeft: '8px' }}>
+    <Icon name="live" variant="indigo" width="2em" height="2em" />
+    <div style={{ marginLeft: '0.25em' }}>
       <Title
         style={{ color: colors.indigo }}
       >{`Live now until ${formatShortTime(endDate)}`}</Title>
@@ -91,7 +88,7 @@ export const formatTimeRange = ({
 const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) =>
   onDemand ? (
     <Item
-      icon={<OnDemandIcon variant="white" />}
+      icon={<Icon name="on-demand" variant="white" width="2em" height="2em" />}
       title="On demand"
       detail={formatDayRange({ startDate, endDate })}
     />
@@ -99,7 +96,7 @@ const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) =>
     <LiveItem {...{ endDate }} />
   ) : (
     <Item
-      icon={<CalendarIcon variant="white" />}
+      icon={<Icon name="calendar" variant="white" width="2em" height="2em" />}
       title={formatDayRange({ startDate, endDate })}
       detail={formatTimeRange({ startDate, endDate })}
     />
@@ -124,7 +121,10 @@ export const Location = ({
   postcode,
 }: LocationProps) =>
   isVirtualEvent(platform) ? (
-    <Item icon={<LaptopIcon size={26} />} title={`On ${platform}`} />
+    <Item
+      icon={<Icon name="laptop" variant="white" width={26} height={26} />}
+      title={`On ${platform}`}
+    />
   ) : (
     <Item
       icon={<MapPinIcon variant="white" />}
