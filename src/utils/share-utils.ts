@@ -1,11 +1,11 @@
-type SharePlatform =
+export type SharePlatform =
   | 'email'
   | 'facebook'
   | 'linked-in'
   | 'messenger'
   | 'twitter'
 
-type ShareContent = {
+export interface ShareContent {
   /**
    * Required for Email/LinkedIn
    */
@@ -30,7 +30,7 @@ const generateQueryParams = (params: any) =>
 export const generateShareUrl = (
   platform: SharePlatform,
   { title, body, url }: ShareContent
-) => {
+): string => {
   switch (platform) {
     case 'email': {
       return `mailto:?${generateQueryParams({ subject: title, body })}`
@@ -47,7 +47,7 @@ export const generateShareUrl = (
         source: 'prideinlondon.org',
       })}`
     case 'messenger':
-      return null
+      return ''
     case 'twitter':
       return `https://twitter.com/intent/tweet?${generateQueryParams({
         text: body,
