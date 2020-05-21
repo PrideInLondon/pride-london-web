@@ -18,12 +18,13 @@ export const ShareBar = ({ content, ...props }: ShareBarProps) => (
     <ShareText>Share</ShareText>
     {SOCIALS.map(({ name }) => (
       <StyledLink
+        key={name}
         href={generateShareUrl(name, content)}
         title={`Share via ${generatePlatformName(name)}`}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon key={name} name={name} variant="indigo" />
+        <Icon name={name} variant="indigo" />
       </StyledLink>
     ))}
   </Wrapper>
