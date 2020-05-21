@@ -36,8 +36,10 @@ export const generateShareUrl = (
       return `mailto:?${generateQueryParams({ subject: title, body })}`
     }
     case 'facebook':
+    case 'messenger':
       return `https://www.facebook.com/sharer/sharer.php?${generateQueryParams({
         u: url,
+        app_id: process.env.GATSBY_FACEBOOK_APP_ID,
       })}`
     case 'linked-in':
       return `https://www.linkedin.com/shareArticle?${generateQueryParams({
@@ -46,8 +48,6 @@ export const generateShareUrl = (
         url,
         source: 'prideinlondon.org',
       })}`
-    case 'messenger':
-      return ''
     case 'twitter':
       return `https://twitter.com/intent/tweet?${generateQueryParams({
         text: body,
