@@ -19,7 +19,7 @@ export const ShareBar = ({ content, ...props }: ShareBarProps) => (
     {SOCIALS.map(({ name }) => (
       <StyledLink
         href={generateShareUrl(name, content)}
-        title={`Share to ${generatePlatformName(name)}`}
+        title={`Share on ${generatePlatformName(name)}`}
         target="_blank"
         rel="noopener noreferrer"
       >
