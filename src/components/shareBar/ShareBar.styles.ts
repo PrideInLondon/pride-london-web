@@ -42,3 +42,7 @@ export const ShareText = styled.h6`
   vertical-align: middle;
   color: ${colors.indigo};
 `
+
+export const StyledLink = styled.a`
+  text-decoration: none;
+`
