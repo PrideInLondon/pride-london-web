@@ -5,6 +5,7 @@ import { variant, space, layout, compose } from 'styled-system'
 import { darken, lighten } from 'polished'
 import { colors } from '../../theme/colors'
 import { fonts } from '../../theme/fonts'
+import { mediaQueries } from '../../theme/mediaQueries'
 import { useSpaceLayoutProps } from '../../hooks/useSpaceLayoutProps'
 import { ButtonAsAnchorProps, ButtonProps } from './YmuwButton.types'
 
@@ -26,17 +27,42 @@ export const StyledButton = styled(
     return <button {...spaceLayoutProps[1]} />
   }
 )`
-  padding: 12px 35px;
-  border-radius: 0px;
-  font-family: ${fonts.title};
-  font-size: 1.125rem;
-  font-weight: 700;
-  line-height: 1.388;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.15s linear, border 0.15s linear;
+  ${mediaQueries.sm} {
+    display: inline-block;
+    padding: 12px 35px;
+    font-family: ${fonts.body};
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.388;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s linear, border 0.15s linear;
+  }
+  ${mediaQueries.md} {
+    padding: 12px 35px;
+    margin: auto 0 auto auto;
+    font-family: ${fonts.body};
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.388;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s linear, border 0.15s linear;
+  }
+  ${mediaQueries.lg} {
+    padding: 12px 35px;
+    margin: auto 0 auto auto;
+    font-family: ${fonts.body};
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.388;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s linear, border 0.15s linear;
+  }
 
   ${variant({
     variants: {

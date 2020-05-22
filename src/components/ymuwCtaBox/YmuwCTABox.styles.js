@@ -1,37 +1,47 @@
 import styled from 'styled-components'
-import { media } from '../../theme/media'
+import { mediaQueries } from '../../theme/mediaQueries'
 import theme from '../../theme/theme'
 import { Column } from '../grid'
 
 export const CTAWrapper = styled.div`
-  ${media.desktopMax`
-    background-color: ${theme.colors.white}; 
-  `};
+  background-color: ${theme.colors.white};
 `
 
 export const CTAPanel = styled.div`
   background-color: ${theme.colors.white};
-  padding: 30px 0;
   color: ${theme.colors.indigo};
-  ${media.desktop`
-    position: absolute;
-    width: 33.3333%;
-    right: 0;
-    top: -100px;
-    padding: 40px;
-    border: solid 2px ${theme.colors.indigo};
- `};
+  margin: auto;
+  border: solid 2px ${theme.colors.indigo};
+  ${mediaQueries.sm} {
+    width: 100%;
+    min-height: 12.875rem;
+    padding: 1.5rem;
+  }
+  ${mediaQueries.md}, ${mediaQueries.lg} {
+    display: flex;
+    width: 95%;
+    min-height: 8rem;
+    padding: 2.25rem 2.5rem 1.5rem 2.5rem;
+  }
 `
 
-export const CTATitle = styled.h3`
-  margin: 0 0 0.5em 0;
+export const CTATitle = styled.h1`
   color: ${theme.colors.indigo};
-`
-
-export const CTABody = styled.p`
-  margin: 0 0 1.875rem;
-  font-size: 0.875rem;
-  line-height: 1.2857;
+  font-family: ${theme.fonts.cactus};
+  text-transform: uppercase;
+  ${mediaQueries.sm} {
+    width: 60%;
+    margin-bottom: 1.5rem;
+    font-size: 2.4375rem;
+  }
+  ${mediaQueries.md} {
+    font-size: 2.4375rem;
+    margin: 0;
+  }
+  ${mediaQueries.lg} {
+    font-size: 3.5625rem;
+    margin: 0;
+  }
 `
 
 export const RelativeColumn = styled(Column)`

@@ -6,12 +6,11 @@ import {
   CTAWrapper,
   CTAPanel,
   CTATitle,
-  CTABody,
   RelativeColumn,
 } from './YmuwCTABox.styles'
 
 const YmuwCTABox = props => {
-  const { title, body, link } = props
+  const { title, link } = props
   return (
     <CTAWrapper>
       <Container>
@@ -19,7 +18,6 @@ const YmuwCTABox = props => {
           <RelativeColumn width={1}>
             <CTAPanel>
               {title && <CTATitle>{title}</CTATitle>}
-              {body && <CTABody>{body}</CTABody>}
               {link.to && <YmuwButton to={link.to}>{link.text}</YmuwButton>}
             </CTAPanel>
           </RelativeColumn>
