@@ -29,7 +29,6 @@ const YmuwCTABox = props => {
 
 YmuwCTABox.propTypes = {
   title: PropTypes.string,
-  body: PropTypes.string,
   link: PropTypes.shape({
     to: PropTypes.string,
     text: PropTypes.string,
