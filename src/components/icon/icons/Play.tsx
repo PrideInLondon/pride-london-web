@@ -1,14 +1,16 @@
 import React from 'react'
 import { InternalIconProps } from '../Icon.types'
 
-const Play = ({ colors: { primary }, ...props }: InternalIconProps) => (
+const Play = ({
+  colors: { primary, secondary },
+  ...props
+}: InternalIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 32 32"
     {...props}
   >
-    <path fill="#2D2F7F" d="M0 0h32v32H0V0z" />
     <path
       fill={primary}
       fillRule="evenodd"
@@ -16,7 +18,7 @@ const Play = ({ colors: { primary }, ...props }: InternalIconProps) => (
       clipRule="evenodd"
     />
     <path
-      fill="#2CDA9D"
+      fill={secondary}
       fillRule="evenodd"
       d="M19 16l-4 3v-6l4 3z"
       clipRule="evenodd"
