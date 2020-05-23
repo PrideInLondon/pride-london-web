@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import theme from '../../theme/theme'
+import { colors } from '../../theme/colors'
 
 export const ButtonWrapper = styled.div`
   width: 160px;
   height: 160px;
-  background-color: ${theme.colors.indigo};
+  background-color: ${colors.indigo};
   cursor: pointer;
   display: flex;
   align-items: center;
