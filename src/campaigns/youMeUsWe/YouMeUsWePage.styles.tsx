@@ -4,6 +4,7 @@ import { Tag } from '../../components/tag'
 import { H1 } from '../../components/typography'
 import { lg, xl, xxl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
+import ActsOfAllyship from './ActsOfAllyship'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -42,4 +43,16 @@ export const CelebratingHeading = styled(H1)`
 
 export const CelebratingContentWrapper = styled.div`
   max-width: 620px;
+`
+
+export const ActsOfAllyshipHeading = styled(ActsOfAllyship)`
+  margin-top: ${xl}px;
+  width: 327px;
+  height: 92px;
+
+  ${mediaQueries.md} {
+    margin-top: ${xxl}px;
+    width: 618px;
+    height: 173px;
+  }
 `

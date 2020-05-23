@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { fonts } from '../../theme/fonts'
 import { colors } from '../../theme/colors'
 import { P } from '../../components/typography'
@@ -8,6 +7,7 @@ import {
   StyledTag,
   CelebratingHeading,
   CelebratingContentWrapper,
+  ActsOfAllyshipHeading,
   PlaceholderDiv,
 } from './YouMeUsWePage.styles'
 
@@ -33,6 +33,15 @@ const YouMeUsWePage = () => (
           be better allies within our own community.
         </P>
       </CelebratingContentWrapper>
+      <PlaceholderDiv
+        name="Video"
+        style={{
+          height: 600,
+          maxWidth: 1050,
+          marginTop: 80,
+        }}
+      />
+      <ActsOfAllyshipHeading />
     </Wrapper>
   </>
 )
