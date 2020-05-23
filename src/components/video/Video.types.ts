@@ -1,5 +1,10 @@
+import { FixedObject } from 'gatsby-image'
+
 export interface VideoProps {
   videoId: string
-  coverImage: string
-  captionString: string
+  caption: string
+  coverImage: {
+    image: FixedObject
+    alt: string
+  }
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Image from 'gatsby-image'
 import { colors } from '../../theme/colors'
 
 export const VideoContainer = styled.div`
@@ -12,16 +13,15 @@ export const VideoContainer = styled.div`
     width: 100%;
   }
 `
+export const StyledVideoImage = styled(Image)`
+  cursor: pointer;
+  display: block;
+  width: 100%;
+`
 
 export const StyledFigure = styled.figure`
   margin: 0 0 2em 0;
-  cursor: pointer;
   position: relative;
-
-  img {
-    display: block;
-    width: 100%;
-  }
 
   figcaption {
     padding: 1em;
@@ -37,6 +37,7 @@ export const StyledFigure = styled.figure`
   }
 `
 export const PlaceholderButton = styled.button`
+  cursor: pointer;
   height: 160px;
   width: 160px;
   position: absolute;
