@@ -4,6 +4,7 @@ import {
   VideoContainer,
   PlaceholderButton,
   StyledVideoImage,
+  StyledFigCaption,
 } from './Video.styles'
 import { VideoProps } from './Video.types'
 
@@ -26,14 +27,16 @@ const Video = ({
           />
         </VideoContainer>
       ) : (
-        <div onClick={() => setClicked(!clicked)}>
-          <StyledVideoImage fixed={image} alt={alt} />
-        </div>
+        <>
+          <div onClick={() => setClicked(!clicked)}>
+            <StyledVideoImage fixed={image} alt={alt} />
+          </div>
+          <PlaceholderButton onClick={() => setClicked(!clicked)}>
+            Placeholder Btn
+          </PlaceholderButton>
+        </>
       )}
-      <PlaceholderButton onClick={() => setClicked(!clicked)}>
-        Placeholder Btn
-      </PlaceholderButton>
-      <figcaption>{caption}</figcaption>
+      <StyledFigCaption>{caption}</StyledFigCaption>
     </StyledFigure>
   )
 }

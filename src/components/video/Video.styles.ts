@@ -22,24 +22,23 @@ export const StyledVideoImage = styled(Image)`
 export const StyledFigure = styled.figure`
   margin: 0 0 2em 0;
   position: relative;
-
-  figcaption {
-    padding: 1em;
-    text-align: right;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.2;
-    letter-spacing: normal;
-    color: ${colors.indigo};
-  }
 `
+export const StyledFigCaption = styled.figcaption`
+  text-align: right;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: ${colors.indigo};
+`
+
 export const PlaceholderButton = styled.button`
   cursor: pointer;
-  height: 160px;
-  width: 160px;
+  height: 120px;
+  width: 120px;
   position: absolute;
   bottom: 0;
   left: 24px;
