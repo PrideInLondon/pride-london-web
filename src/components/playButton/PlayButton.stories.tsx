@@ -5,7 +5,7 @@ import { PlayButton } from './PlayButton'
 
 storiesOf('Play Button', module).add(
   'default',
-  () => <PlayButton onClick={() => alert('Button Clicked')}></PlayButton>,
+  () => <PlayButton onClick={() => alert('Button Clicked')} />,
   {
     info: {
       text:
