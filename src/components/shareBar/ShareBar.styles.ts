@@ -45,4 +45,5 @@ export const ShareText = styled.h6`
 
 export const StyledLink = styled.a`
   text-decoration: none;
+  width: 1em;
 `
