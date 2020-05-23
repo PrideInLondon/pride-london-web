@@ -11,6 +11,7 @@ import {
   Messenger,
   OnDemand,
   Twitter,
+  PlayIcon,
 } from './icons'
 
 export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
@@ -23,6 +24,7 @@ export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
   messenger: Messenger,
   'on-demand': OnDemand,
   twitter: Twitter,
+  'play-icon': PlayIcon,
 }
 
 export const calculateComponent = (name: string) => COMPONENTS[name]
