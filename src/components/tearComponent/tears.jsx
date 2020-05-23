@@ -1,12 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StyledSvg } from './index.styles'
 
-function Rip5({ color = '#fff', ...props }) {
+function Rip5({ color, ...props }) {
   return (
     <StyledSvg
       xmlns="http://www.w3.org/2000/svg"
-      width="2400"
-      height="129"
+      width="100%"
+      height="100%"
       fill="none"
       {...props}
     >
@@ -18,12 +19,12 @@ function Rip5({ color = '#fff', ...props }) {
   )
 }
 
-function Rip2({ color = '#fff', ...props }) {
+function Rip2({ color, ...props }) {
   return (
     <StyledSvg
       xmlns="http://www.w3.org/2000/svg"
-      width="2400"
-      height="108"
+      width="100%"
+      height="100%"
       fill="none"
       {...props}
     >
@@ -35,12 +36,12 @@ function Rip2({ color = '#fff', ...props }) {
   )
 }
 
-function Rip3({ color = '#fff', ...props }) {
+function Rip3({ color, ...props }) {
   return (
     <StyledSvg
       xmlns="http://www.w3.org/2000/svg"
-      width="2400"
-      height="147"
+      width="100%"
+      height="100%"
       fill="none"
       {...props}
     >
@@ -52,12 +53,12 @@ function Rip3({ color = '#fff', ...props }) {
   )
 }
 
-function Rip1({ color = '#fff', ...props }) {
+function Rip1({ color, ...props }) {
   return (
     <StyledSvg
       xmlns="http://www.w3.org/2000/svg"
-      width="2400"
-      height="155"
+      width="100%"
+      height="100%"
       fill="none"
       {...props}
     >
@@ -69,12 +70,12 @@ function Rip1({ color = '#fff', ...props }) {
   )
 }
 
-function Rip4({ color = '#fff', ...props }) {
+function Rip4({ color, ...props }) {
   return (
     <StyledSvg
       xmlns="http://www.w3.org/2000/svg"
-      width="2400"
-      height="132"
+      width="100%"
+      height="100%"
       fill="none"
       {...props}
     >
@@ -109,3 +110,46 @@ const Tear = ({ ripType, ...props }) => {
 }
 
 export { Tear }
+
+Tear.propTypes = {
+  ripType: PropTypes.number.isRequired,
+}
+
+Rip1.propTypes = {
+  color: PropTypes.string,
+}
+
+Rip1.defaultProps = {
+  color: '#fff',
+}
+
+Rip2.propTypes = {
+  color: PropTypes.string,
+}
+
+Rip2.defaultProps = {
+  color: '#fff',
+}
+
+Rip3.propTypes = {
+  color: PropTypes.string,
+}
+
+Rip3.defaultProps = {
+  color: '#fff',
+}
+Rip4.propTypes = {
+  color: PropTypes.string,
+}
+
+Rip4.defaultProps = {
+  color: '#fff',
+}
+
+Rip5.propTypes = {
+  color: PropTypes.string,
+}
+
+Rip5.defaultProps = {
+  color: '#fff',
+}

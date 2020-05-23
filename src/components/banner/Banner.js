@@ -49,7 +49,7 @@ const Banner = ({
       }
     }
   }, [videoId])
-  console.log(fixed.desktop)
+
   return (
     <StyledWrapper
       color={color}

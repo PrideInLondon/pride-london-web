@@ -1,6 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ResponsiveImg, Background } from './index.styles'
+import {
+  ResponsiveImg,
+  Background,
+  StyledExternalWrapper,
+  StyledInternalWrapper,
+} from './index.styles'
 
 import { Tear } from './tears'
 
@@ -12,16 +17,18 @@ const TornBackground = ({
   minHeight,
 }) => {
   return (
-    <div style={{ position: 'relative', height: '100%', outline: '150px' }}>
+    <StyledExternalWrapper>
       {topTear && (
         <Tear
           variant="top"
           ripType={topTear.ripType}
           color={topTear.color}
+          height={topTear.height}
+          marginTop={-topTear.height}
           aria-hidden="true"
         />
       )}
-      <div style={{ position: 'absolute', zIndex: 12 }}> {children}</div>
+      <StyledInternalWrapper> {children}</StyledInternalWrapper>
       <Background height={minHeight}>
         <ResponsiveImg
           aria-hidden="true"
@@ -35,18 +42,19 @@ const TornBackground = ({
           variant="bottom"
           ripType={bottomTear.ripType}
           color={bottomTear.color}
+          height={bottomTear.height}
           aria-hidden="true"
         />
       )}
-    </div>
+    </StyledExternalWrapper>
   )
 }
 
 TornBackground.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   backgroundImage: PropTypes.object.isRequired,
-  topTear: PropTypes.object,
-  bottomTear: PropTypes.object,
+  topTear: PropTypes.object || PropTypes.boolean,
+  bottomTear: PropTypes.object || PropTypes.boolean,
   minHeight: PropTypes.string.isRequired,
 }
 
