@@ -9,6 +9,7 @@ import {
   LayoutProps,
   ResponsiveValue,
   space,
+  system,
   SpaceProps,
   typography,
   TypographyProps,
@@ -18,13 +19,29 @@ import { mediaQueries } from '../../theme/mediaQueries'
 import { fontSizes } from '../../theme/fonts'
 import { space as spacing } from '../../theme/space'
 
+interface TextTransformProps {
+  textTransform?: ResponsiveValue<
+    'lowercase' | 'uppercase' | 'capitalize' | 'inherit' | 'initial' | 'none'
+  >
+}
+
 type TypoProps = ColorProps &
   FlexboxProps &
   LayoutProps &
   SpaceProps &
-  TypographyProps
+  TypographyProps &
+  TextTransformProps
 
-const typoUtils = compose(color, flexbox, layout, space, typography)
+const typoUtils = compose(
+  color,
+  flexbox,
+  layout,
+  space,
+  typography,
+  system({
+    textTransform: true,
+  })
+)
 
 const headingDefaultProps = {
   marginTop: '0',
@@ -38,6 +55,7 @@ const headingDefaultProps = {
 export const H1 = styled.h1<TypoProps>`
   ${typoUtils}
 `
+
 H1.defaultProps = {
   ...headingDefaultProps,
   fontSize: { default: 'h1_mobile', md: 'h1' },
