@@ -1,8 +1,10 @@
 import React from 'react'
 import { InternalIconProps } from '../Icon.types'
-import { colors } from '../../../theme/colors'
 
-const Play = ({ colors: { primary }, ...props }: InternalIconProps) => (
+const Play = ({
+  colors: { primary, secondary },
+  ...props
+}: InternalIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -16,7 +18,7 @@ const Play = ({ colors: { primary }, ...props }: InternalIconProps) => (
       clipRule="evenodd"
     />
     <path
-      fill={colors.eucalyptusGreen}
+      fill={secondary}
       fillRule="evenodd"
       d="M19 16l-4 3v-6l4 3z"
       clipRule="evenodd"
