@@ -1,7 +1,10 @@
 import React from 'react'
 import { InternalIconProps } from '../Icon.types'
 
-const OnDemand = ({ colors: { primary }, ...props }: InternalIconProps) => (
+const OnDemand = ({
+  colors: { primary, secondary },
+  ...props
+}: InternalIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 32 32"
@@ -18,7 +21,7 @@ const OnDemand = ({ colors: { primary }, ...props }: InternalIconProps) => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M20 16L14 20L14 12L20 16Z"
-      fill="#2CDA9D"
+      fill={secondary}
     />
     <path
       fillRule="evenodd"
