@@ -97,14 +97,6 @@ export const ActsOfAllyshipBoxesWrapper = styled.div`
   }
 `
 
-export const ForEveryKindWrapper = styled.div`
-  margin-top: ${xl}px;
-
-  ${mediaQueries.md} {
-    margin-top: ${xxl}px;
-  }
-`
-
 export const ForEveryKindHeading = styled(H1).attrs({
   as: 'h2',
   fontFamily: fonts.cactus,
@@ -112,6 +104,11 @@ export const ForEveryKindHeading = styled(H1).attrs({
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0 !important;
+  margin-top: ${xl}px;
+
+  ${mediaQueries.md} {
+    margin-top: ${xxl}px;
+  }
 `
 
 export const ForEveryKindContent = styled(P)`
