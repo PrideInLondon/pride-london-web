@@ -25,7 +25,7 @@ const Helmet: React.FC<HelmetProps> = ({ title, description }) => {
 
 Helmet.defaultProps = {
   description:
-    "In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances",
+    'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community.',
 }
 
 export default Helmet
