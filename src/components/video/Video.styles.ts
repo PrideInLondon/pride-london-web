@@ -6,16 +6,16 @@ export const VideoContainer = styled.div`
   position: relative;
   padding-bottom: 56.25%;
   margin-bottom: 2em;
-
-  iframe {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
 `
 export const StyledVideoImage = styled(Image)`
   cursor: pointer;
   display: block;
+  width: 100%;
+`
+
+export const StylediFrame = styled.iframe`
+  position: absolute;
+  height: 100%;
   width: 100%;
 `
 

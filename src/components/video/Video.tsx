@@ -5,6 +5,7 @@ import {
   PlaceholderButton,
   StyledVideoImage,
   StyledFigCaption,
+  StylediFrame,
 } from './Video.styles'
 import { VideoProps } from './Video.types'
 
@@ -19,7 +20,7 @@ const Video = ({
     <StyledFigure>
       {clicked ? (
         <VideoContainer>
-          <iframe
+          <StylediFrame
             allowFullScreen
             frameBorder="0"
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
@@ -28,10 +29,17 @@ const Video = ({
         </VideoContainer>
       ) : (
         <>
-          <div onClick={() => setClicked(!clicked)}>
+          <div
+            role="button"
+            title="clickable image"
+            onClick={() => setClicked(!clicked)}
+          >
             <StyledVideoImage fixed={image} alt={alt} />
           </div>
-          <PlaceholderButton onClick={() => setClicked(!clicked)}>
+          <PlaceholderButton
+            title="play video"
+            onClick={() => setClicked(!clicked)}
+          >
             Placeholder Btn
           </PlaceholderButton>
         </>
