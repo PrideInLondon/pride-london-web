@@ -1,10 +1,11 @@
 import styled from 'styled-components'
-import { colors } from '../../../theme/colors'
-import { space } from '../../../theme/space'
-import { mediaQueries } from '../../../theme/mediaQueries'
-import { fonts } from '../../../theme/fonts'
+import { colors } from '../../theme/colors'
+import { space } from '../../theme/space'
+import { mediaQueries } from '../../theme/mediaQueries'
+import { fonts } from '../../theme/fonts'
 
 const HEIGHT = 280
+
 export const Title = styled.div`
   color: ${colors.indigo};
   font-family: ${fonts.cactus};
