@@ -1,16 +1,28 @@
 import { colors } from '../../theme/colors'
 import { InternalIconProps } from './Icon.types'
 
-import Calendar from './icons/Calendar'
-import Laptop from './icons/Laptop'
-import Live from './icons/Live'
-import OnDemand from './icons/OnDemand'
+import {
+  Calendar,
+  Email,
+  Facebook,
+  Laptop,
+  LinkedIn,
+  Live,
+  Messenger,
+  OnDemand,
+  Twitter,
+} from './icons'
 
 export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
   calendar: Calendar,
+  email: Email,
+  facebook: Facebook,
   laptop: Laptop,
+  'linked-in': LinkedIn,
   live: Live,
+  messenger: Messenger,
   'on-demand': OnDemand,
+  twitter: Twitter,
 }
 
 export const calculateComponent = (name: string) => COMPONENTS[name]
@@ -23,11 +35,11 @@ const COLORS: {
 } = {
   indigo: {
     primary: colors.indigo,
-    secondary: colors.white,
+    secondary: colors.eucalyptusGreen,
   },
   white: {
     primary: colors.white,
-    secondary: colors.indigo,
+    secondary: colors.eucalyptusGreen,
   },
 }
 

@@ -107,11 +107,13 @@ const IconName = ({
 export default IconName
 ```
 
-5. import and add the component key to the `COMPONENTS` map in [`Icon.utils.ts`](./src/components/icon/Icon.utils.ts)
+5. re-export the new icon from the [icons index file](./src/components/icon/icons/index.ts)
+
+6. import and add the component key to the `COMPONENTS` map in [`Icon.utils.ts`](./src/components/icon/Icon.utils.ts)
 
 ```ts
 // Icon.utils.ts
-import IconName from './icons/IconName.tsx'
+import { ..., IconName } from './icons'
 
 export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
   ...
@@ -120,7 +122,7 @@ export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
 }
 ```
 
-6. now the component will be ready for use via the `Icon` component (this will automatically be added to Storybook and may be selected from the `Name` dropdown)
+7. now the component will be ready for use via the `Icon` component (this will automatically be added to Storybook and may be selected from the `Name` dropdown)
 
 ```tsx
 import { Icon } from './src/components/icon'
