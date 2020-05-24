@@ -2,14 +2,11 @@ import styled from 'styled-components'
 import { H1, P } from '../../components/typography'
 import { xl, xl_mob, xxl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
-import { fonts } from '../../theme/fonts'
 
 export const Heading = styled(H1).attrs({
   as: 'h2',
-  fontFamily: fonts.cactus,
 })`
   text-align: center;
-  text-transform: uppercase;
   margin-bottom: 0 !important;
   margin-top: ${xl}px;
 

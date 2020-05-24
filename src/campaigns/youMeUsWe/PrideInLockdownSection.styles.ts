@@ -4,7 +4,6 @@ import { lg } from '../../theme/space'
 
 export const Heading = styled(H1)`
   margin-top: ${lg}px;
-  text-transform: uppercase;
   max-width: 840px;
   text-align: center;
 `

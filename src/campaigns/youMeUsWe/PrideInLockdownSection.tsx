@@ -1,14 +1,11 @@
 import React from 'react'
-import { fonts } from '../../theme/fonts'
 import { P } from '../../components/typography'
 import { Heading, Content } from './PrideInLockdownSection.styles'
 import { PlaceholderDiv } from './YouMeUsWePage.styles' // TODO: replace with real
 
 const PrideInLockdownSection = () => (
   <>
-    <Heading fontFamily={fonts.cactus} as="h2">
-      Pride in Lockdown
-    </Heading>
+    <Heading as="h2">Pride in Lockdown</Heading>
     <Content>
       <P variant="lg">
         Every year the capital sees over a million volunteers, artists and

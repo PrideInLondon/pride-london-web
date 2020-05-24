@@ -3,15 +3,12 @@ import styled from 'styled-components'
 import { Box } from '../../components/box'
 import { H4, P } from '../../components/typography'
 import { Button } from '../../components/button'
-import { fonts } from '../../theme/fonts'
 import { sm } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 
 const Heading = styled(H4).attrs({
   as: 'h3',
-  fontFamily: fonts.cactus,
 })`
-  text-transform: uppercase;
   text-align: left;
 `
 
