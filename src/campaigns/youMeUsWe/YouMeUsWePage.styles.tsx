@@ -35,17 +35,6 @@ export const StyledTag = styled(Tag)`
   }
 `
 
-export const CelebratingHeading = styled(H1)`
-  margin-top: ${lg}px;
-  text-transform: uppercase;
-  max-width: 840px;
-  text-align: center;
-`
-
-export const CelebratingContentWrapper = styled.div`
-  max-width: 620px;
-`
-
 export const ActsOfAllyshipHeading = styled(ActsOfAllyship)`
   margin-top: ${xl}px;
   width: 327px;
