@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tag } from '../../components/tag'
-import { H1, P } from '../../components/typography'
-import { lg, xl, xl_mob, xxl } from '../../theme/space'
+import { lg, xl, xxl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
-import { fonts } from '../../theme/fonts'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -31,28 +29,5 @@ export const StyledTag = styled(Tag)`
 
   ${mediaQueries.md} {
     margin-top: ${xxl}px;
-  }
-`
-
-export const ForEveryKindHeading = styled(H1).attrs({
-  as: 'h2',
-  fontFamily: fonts.cactus,
-})`
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 0 !important;
-  margin-top: ${xl}px;
-
-  ${mediaQueries.md} {
-    margin-top: ${xxl}px;
-  }
-`
-
-export const ForEveryKindContent = styled(P)`
-  margin-top: ${xl_mob}px !important;
-
-  ${mediaQueries.md} {
-    max-width: 620px;
-    margin-top: ${xl}px !important;
   }
 `
