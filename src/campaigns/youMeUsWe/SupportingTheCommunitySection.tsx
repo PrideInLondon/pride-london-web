@@ -1,13 +1,11 @@
 import React from 'react'
-import { P, H3 } from '../../components/typography'
-import { Box } from '../../components/box'
-import { Button } from '../../components/button'
+import { P } from '../../components/typography'
 import { Heading } from './SupportingTheCommunitySection.styles'
+import CTABox from './CTABox'
 
 const SupportingTheCommunitySection = () => (
   <>
     <Heading>Supporting the Community</Heading>
-
     <P variant="lg">
       {/* TODO: replace with real content */}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -21,19 +19,10 @@ const SupportingTheCommunitySection = () => (
       dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </P>
-    <Box
-      display={{ default: 'block', md: 'flex' }}
-      alignItems="center"
-      justifyContent="spaceBetween"
-      maxWidth={1050}
-      width={1}
-      marginTop="lg"
-    >
-      <H3 mb={{ default: 'lg', md: '0' }}>Support the community fund</H3>
-      <Button ml="auto" to="https://donate.prideinlondon.org/">
-        Donate now
-      </Button>
-    </Box>
+    <CTABox
+      title="Support the community fund"
+      cta={{ text: 'Donate now', to: 'https://donate.prideinlondon.org/' }}
+    />
   </>
 )
 
