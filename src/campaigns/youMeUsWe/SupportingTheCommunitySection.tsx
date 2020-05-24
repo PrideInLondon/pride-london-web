@@ -22,6 +22,7 @@ const SupportingTheCommunitySection = () => (
     <CTABox
       title="Support the community fund"
       cta={{ text: 'Donate now', to: 'https://donate.prideinlondon.org/' }}
+      marginTop="lg"
     />
   </>
 )

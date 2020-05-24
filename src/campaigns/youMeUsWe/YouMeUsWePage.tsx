@@ -6,6 +6,7 @@ import PrideInLockdownSection from './PrideInLockdownSection'
 import ActsOfAllyshipSection from './ActsOfAllyshipSection'
 import ForEveryKindSection from './ForEveryKindSection'
 import SupportingTheCommunitySection from './SupportingTheCommunitySection'
+import ActsOfKindnessSection from './ActsOfKindnessSection'
 
 const YouMeUsWePage = () => (
   <>
@@ -19,6 +20,8 @@ const YouMeUsWePage = () => (
       <ForEveryKindSection />
       <Mark />
       <SupportingTheCommunitySection />
+      <PlaceholderDiv name="Image" style={{ height: 1000, marginTop: 40 }} />
+      <ActsOfKindnessSection />
     </Wrapper>
   </>
 )
