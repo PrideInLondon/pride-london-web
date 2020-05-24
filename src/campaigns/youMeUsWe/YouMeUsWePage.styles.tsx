@@ -71,3 +71,27 @@ export const ActsOfAllyshipContent = styled.div`
     }
   }
 `
+
+export const ActsOfAllyshipBoxesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: ${lg}px;
+
+  > :nth-child(2) {
+    margin: ${lg}px 0;
+  }
+
+  > * {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  ${mediaQueries.lg} {
+    flex-direction: row;
+    padding: ${xl}px;
+
+    > :nth-child(2) {
+      margin: 0 ${lg}px;
+    }
+  }
+`
