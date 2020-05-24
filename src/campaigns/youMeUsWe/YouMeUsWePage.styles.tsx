@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tag } from '../../components/tag'
-import { H1 } from '../../components/typography'
-import { lg, xl, xxl } from '../../theme/space'
+import { H1, P } from '../../components/typography'
+import { lg, xl, xl_mob, xxl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
+import { fonts } from '../../theme/fonts'
 import ActsOfAllyship from './ActsOfAllyship'
 
 export const Wrapper = styled.div`
@@ -93,5 +94,31 @@ export const ActsOfAllyshipBoxesWrapper = styled.div`
     > :nth-child(2) {
       margin: 0 ${lg}px;
     }
+  }
+`
+
+export const ForEveryKindWrapper = styled.div`
+  margin-top: ${xl}px;
+
+  ${mediaQueries.md} {
+    margin-top: ${xxl}px;
+  }
+`
+
+export const ForEveryKindHeading = styled(H1).attrs({
+  as: 'h2',
+  fontFamily: fonts.cactus,
+})`
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+`
+
+export const ForEveryKindContent = styled(P)`
+  margin-top: ${xl_mob}px !important;
+
+  ${mediaQueries.md} {
+    max-width: 620px;
+    margin-top: ${xl}px !important;
   }
 `
