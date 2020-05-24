@@ -17,6 +17,7 @@ export const Box = styled.div<
 >`
   ${compose(space, layout, flexbox, border)}
 `
+
 Box.defaultProps = {
   px: { default: 'lg', md: 'xl_mob' },
   py: { default: 'lg', md: 'lg' },
