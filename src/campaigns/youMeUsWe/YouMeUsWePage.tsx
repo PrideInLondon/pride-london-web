@@ -7,6 +7,7 @@ import ActsOfAllyshipSection from './ActsOfAllyshipSection'
 import ForEveryKindSection from './ForEveryKindSection'
 import SupportingTheCommunitySection from './SupportingTheCommunitySection'
 import ActsOfKindnessSection from './ActsOfKindnessSection'
+import ShareYourStorySection from './ShareYourStorySection'
 
 const YouMeUsWePage = () => (
   <>
@@ -22,6 +23,9 @@ const YouMeUsWePage = () => (
       <SupportingTheCommunitySection />
       <PlaceholderDiv name="Image" style={{ height: 1000, marginTop: 40 }} />
       <ActsOfKindnessSection />
+      <PlaceholderDiv name="Image" style={{ height: 1000, marginTop: 40 }} />
+      <ShareYourStorySection />
+      <PlaceholderDiv name="Image" style={{ height: 1000, marginTop: 40 }} />
     </Wrapper>
   </>
 )

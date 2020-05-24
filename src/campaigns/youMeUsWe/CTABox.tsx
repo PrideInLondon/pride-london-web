@@ -22,6 +22,7 @@ const CTABox: React.FC<CTABoxProps> = ({
     justifyContent="spaceBetween"
     maxWidth={1050}
     width={1}
+    style={{ textAlign: 'left' }}
     {...props}
   >
     <H3 mb={{ default: 'lg', md: '0' }}>{title}</H3>
