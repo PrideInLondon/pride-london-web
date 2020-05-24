@@ -19,7 +19,6 @@ export const Content = styled(P)`
   margin-top: ${xl_mob}px !important;
 
   ${mediaQueries.md} {
-    max-width: 620px;
     margin-top: ${xl}px !important;
   }
 `

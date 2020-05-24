@@ -10,7 +10,3 @@ export const Heading = styled(H1).attrs({
     margin-top: ${lg}px;
   }
 `
-
-export const Content = styled.div`
-  max-width: 620px;
-`

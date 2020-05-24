@@ -19,6 +19,10 @@ export const Wrapper = styled.div`
     text-transform: uppercase;
     font-family: ${fonts.cactus};
   }
+
+  p {
+    max-width: 620px;
+  }
 `
 
 export const PlaceholderDiv = styled(({ name, ...props }) => (

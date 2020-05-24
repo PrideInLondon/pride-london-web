@@ -7,7 +7,3 @@ export const Heading = styled(H1)`
   max-width: 840px;
   text-align: center;
 `
-
-export const Content = styled.div`
-  max-width: 620px;
-`
