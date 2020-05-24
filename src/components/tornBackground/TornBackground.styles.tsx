@@ -1,16 +1,19 @@
-import Img from 'gatsby-image/withIEPolyfill'
 import styled from 'styled-components'
 import { variant, space } from 'styled-system'
+import Img, {
+  GatsbyImageWithIEPolyfillProps,
+} from 'gatsby-image/withIEPolyfill'
+import { FluidObject, FixedObject } from 'gatsby-image'
 
-export const Background = styled.div`
+export const Background = styled.div<{ height: string }>`
   position: relative;
   display: absolute;
   width: 100%;
   height: ${props => props.height};
   overflow: hidden;
 `
-export const ResponsiveImg = styled(Img)`
-  position: absolute;
+export const ResponsiveImg = styled(Img)<ImageProps>`
+  position: absolute !important;
   top: 50%;
   left: 50%;
   height: 100% !important;
@@ -23,7 +26,9 @@ export const ResponsiveImg = styled(Img)`
   }
 `
 
-export const StyledSvg = styled.svg`
+export const StyledSvg = styled.svg<{
+  variant: string
+}>`
   position: absolute;
   width: 100%;
   z-index: 9;
@@ -42,11 +47,16 @@ export const StyledSvg = styled.svg`
     },
   })}
 `
-export const StyledExternalWrapper = styled.div`
+export const RelativeTornSection = styled.section`
   position: relative;
   height: 100%;
 `
-export const StyledInternalWrapper = styled.div`
+export const AbsoluteTornSection = styled.section`
   position: absolute;
   z-index: 12;
 `
+
+interface ImageProps extends GatsbyImageWithIEPolyfillProps {
+  fluid?: FluidObject
+  fixed?: FixedObject
+}

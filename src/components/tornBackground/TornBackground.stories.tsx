@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select, text, number } from '@storybook/addon-knobs'
-import sampleBackground from './fixture/Background.png'
-import TornBackground from '.'
-
+import sampleBackground from '../../assets/logo.png'
+import { H2, P } from '../typography/Typography'
+import { TornBackground } from './TornBackground'
 const variants = {
   Rip1: 1,
   Rip2: 2,
@@ -12,8 +12,13 @@ const variants = {
   Rip5: 5,
 }
 
-const BackgroundImage = {
+const BackgroundImageSample = {
   src: sampleBackground,
+  srcSet: ``,
+  srcSetWebp: ``,
+  base64: ``,
+  width: 1000,
+  height: 1000,
 }
 
 const readme = `
@@ -34,12 +39,12 @@ storiesOf('Torn Background Component', module)
     'Top and Bottom tears',
     () => (
       <TornBackground
+        backgroundImage={BackgroundImageSample}
         topTear={{
           ripType: select('Top Rip Variant', variants, variants.Rip1),
           color: text('Top color', '#000'),
           height: number('Top height', 150),
         }}
-        backgroundImage={BackgroundImage}
         bottomTear={{
           ripType: select('Bottom Rip Variant', variants, variants.Rip1),
           color: text('Bottom color', '#fff'),
@@ -47,13 +52,13 @@ storiesOf('Torn Background Component', module)
         }}
         minHeight="400px"
       >
-        <h1>Test</h1>
-        <p>
+        <H2 color="black">Test</H2>
+        <P color="black">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
           reiciendis! Aliquam molestias quis eum magni ullam unde impedit facere
           nostrum. Facere animi dolore ea sunt, laboriosam tenetur enim ducimus
           voluptatem.
-        </p>
+        </P>
       </TornBackground>
     ),
     {
@@ -66,20 +71,20 @@ storiesOf('Torn Background Component', module)
     'bottom tear',
     () => (
       <TornBackground
-        backgroundImage={BackgroundImage}
+        backgroundImage={BackgroundImageSample}
         bottomTear={{
           ripType: select('Bottom Rip Variant', variants, variants.Rip1),
           color: text('Bottom color', '#fff'),
         }}
         minHeight="400px"
       >
-        <h1>Test</h1>
-        <p>
+        <H2 color="black">Test</H2>
+        <P color="black">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
           reiciendis! Aliquam molestias quis eum magni ullam unde impedit facere
           nostrum. Facere animi dolore ea sunt, laboriosam tenetur enim ducimus
           voluptatem.
-        </p>
+        </P>
       </TornBackground>
     ),
     {
@@ -92,21 +97,21 @@ storiesOf('Torn Background Component', module)
     'Top tear',
     () => (
       <TornBackground
+        backgroundImage={BackgroundImageSample}
         topTear={{
           ripType: select('Top Rip Variant', variants, variants.Rip1),
           color: text('Top color', '#000'),
           height: number('Top height', 100),
         }}
-        backgroundImage={BackgroundImage}
         minHeight="400px"
       >
-        <h1>Test</h1>
-        <p>
+        <H2 color="black">Test</H2>
+        <P color="black">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
           reiciendis! Aliquam molestias quis eum magni ullam unde impedit facere
           nostrum. Facere animi dolore ea sunt, laboriosam tenetur enim ducimus
           voluptatem.
-        </p>
+        </P>
       </TornBackground>
     ),
     {
