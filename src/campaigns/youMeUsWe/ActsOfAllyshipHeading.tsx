@@ -22,11 +22,11 @@ const HiddenHeading = styled.h2`
   ${hideVisually()}
 `
 
-const ActsOfAllyship = (props: React.SVGProps<SVGSVGElement>) => (
+const ActsOfAllyshipHeading = (props: React.SVGProps<SVGSVGElement>) => (
   <>
     <SVG {...props} />
     <HiddenHeading>30,000 Acts of Allyship</HiddenHeading>
   </>
 )
 
-export default ActsOfAllyship
+export default ActsOfAllyshipHeading

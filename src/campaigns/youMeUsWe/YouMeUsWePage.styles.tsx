@@ -5,7 +5,6 @@ import { H1, P } from '../../components/typography'
 import { lg, xl, xl_mob, xxl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { fonts } from '../../theme/fonts'
-import ActsOfAllyship from './ActsOfAllyship'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -32,57 +31,6 @@ export const StyledTag = styled(Tag)`
 
   ${mediaQueries.md} {
     margin-top: ${xxl}px;
-  }
-`
-
-export const ActsOfAllyshipHeading = styled(ActsOfAllyship)`
-  margin-top: ${xl}px;
-  width: 327px;
-  height: 92px;
-
-  ${mediaQueries.md} {
-    margin-top: ${xxl}px;
-    width: 618px;
-    height: 173px;
-  }
-`
-
-export const ActsOfAllyshipContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 1050px;
-  margin-top: ${xl}px;
-
-  ${mediaQueries.md} {
-    flex-direction: row;
-
-    > :first-child {
-      margin-right: ${lg}px;
-    }
-  }
-`
-
-export const ActsOfAllyshipBoxesWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: ${lg}px;
-
-  > :nth-child(2) {
-    margin: ${lg}px 0;
-  }
-
-  > * {
-    flex-grow: 1;
-    flex-basis: 0;
-  }
-
-  ${mediaQueries.lg} {
-    flex-direction: row;
-    padding: ${xl}px;
-
-    > :nth-child(2) {
-      margin: 0 ${lg}px;
-    }
   }
 `
 

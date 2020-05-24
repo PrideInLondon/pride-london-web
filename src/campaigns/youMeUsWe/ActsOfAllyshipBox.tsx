@@ -7,7 +7,7 @@ import { fonts } from '../../theme/fonts'
 import { sm } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 
-const ActsOfAllyshipBoxHeading = styled(H4).attrs({
+const Heading = styled(H4).attrs({
   as: 'h3',
   fontFamily: fonts.cactus,
 })`
@@ -39,10 +39,10 @@ const ActsOfAllyshipBox: React.FC<ActsOfAllyshipBoxProps> = ({
   cta: { text, to },
 }) => (
   <Box display="flex" flexDirection="column">
-    <ActsOfAllyshipBoxHeading>
+    <Heading>
       0{number}.<br />
       {heading}
-    </ActsOfAllyshipBoxHeading>
+    </Heading>
     <P>{children}</P>
     <ButtonWrapper>
       <Button to={to}>{text}</Button>
