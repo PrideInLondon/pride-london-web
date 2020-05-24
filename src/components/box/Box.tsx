@@ -20,6 +20,6 @@ export const Box = styled.div<
 
 Box.defaultProps = {
   px: { default: 'lg', md: 'xl_mob' },
-  py: { default: 'lg', md: 'lg' },
+  py: { default: 'lg', md: 'xl_mob' },
   border: `2px solid ${colors.indigo}`,
 }
