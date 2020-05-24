@@ -9,7 +9,7 @@ const dynamicContent = () => ({
   title: text('Title', 'Pride in London', CONTENT),
   body: text(
     'Body',
-    'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community.',
+    'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community',
     CONTENT
   ),
   url: text('URL', 'http://prideinlondon.org', CONTENT),
