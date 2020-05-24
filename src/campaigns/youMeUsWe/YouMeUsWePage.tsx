@@ -8,6 +8,7 @@ import {
   CelebratingHeading,
   CelebratingContentWrapper,
   ActsOfAllyshipHeading,
+  ActsOfAllyshipContent,
   PlaceholderDiv,
 } from './YouMeUsWePage.styles'
 
@@ -42,6 +43,29 @@ const YouMeUsWePage = () => (
         }}
       />
       <ActsOfAllyshipHeading />
+      <ActsOfAllyshipContent>
+        <P variant="lg">
+          We are calling on each and every one of you who would have taken part
+          in the festivities this month to make an act of allyship. Our goal is
+          to reach 30,000 acts - one for every person who would have marched in
+          the parade.
+        </P>
+        <div>
+          <P>
+            Historically, the Pride movement was built on a core foundation of
+            us standing up for one another. An attack on one of us is an attack
+            on all of us, and from the Stonewall Uprising through to the present
+            day, Pride has always been the moment we come together as a
+            community in solidarity with one another.
+          </P>
+          <P>
+            As LGBT+ people, especially those from marginalised communities,
+            continue to come under attack from many sides, this allyship is as
+            important now as it has ever been. Show your support for the rest of
+            the community now and make an act of allyship.
+          </P>
+        </div>
+      </ActsOfAllyshipContent>
     </Wrapper>
   </>
 )

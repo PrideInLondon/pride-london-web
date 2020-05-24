@@ -56,3 +56,18 @@ export const ActsOfAllyshipHeading = styled(ActsOfAllyship)`
     height: 173px;
   }
 `
+
+export const ActsOfAllyshipContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1050px;
+  margin-top: ${xl}px;
+
+  ${mediaQueries.md} {
+    flex-direction: row;
+
+    > :first-child {
+      margin-right: ${lg}px;
+    }
+  }
+`
