@@ -15,7 +15,7 @@ const ActsOfAllyshipSection = () => (
       </P>
       <div>
         <P>
-          Historically, the Pride movement was built on a core foundation of us
+          Historically, the Pride movement has been built on a foundation of
           standing up for one another. An attack on one of us is an attack on
           all of us, and from the Stonewall Uprising through to the present day,
           Pride has always been the moment we come together as a community in
@@ -25,35 +25,33 @@ const ActsOfAllyshipSection = () => (
           As LGBT+ people, especially those from marginalised communities,
           continue to come under attack from many sides, this allyship is as
           important now as it has ever been. Show your support for the rest of
-          the community now and make an act of allyship.
+          the community today and make an act of allyship.
         </P>
       </div>
     </Content>
     <BoxesWrapper>
       <ActsOfAllyshipBox
         number={1}
-        heading="Support the community fund"
+        heading="Donate to your community"
         cta={{ text: 'Donate now', to: 'https://donate.prideinlondon.org/' }}
       >
-        If you're able to, donate to our community fund. Any amount, big or
-        small, will help support the LGBTQ+ community in these uncertain times
-        and beyond.
+        Any donation, big or small, helps support the LGBT+ community in these
+        uncertain times, and beyond.
       </ActsOfAllyshipBox>
       <ActsOfAllyshipBox
         number={2}
-        heading="Do an act of kindness"
+        heading="Moments that mean the most"
         cta={{ text: 'See our ideas', to: '/' }} // TODO: get link
       >
-        Show your love for the community by a small act of kindness.
+        Acts of kindness make the world go round. What will be yours?{' '}
       </ActsOfAllyshipBox>
       <ActsOfAllyshipBox
         number={3}
-        heading="Who are your allies?"
+        heading="Who is your support system?"
         cta={{ text: 'Share your story', to: '/' }} // TODO: get link
       >
-        Has someone in your life been there for you as an ally? Tell us about
-        them and what they’ve done to support you. You could even have your
-        story featured on our site!
+        Who has always been there to support you? Tell us about them, and your
+        story could be featured on our site!
       </ActsOfAllyshipBox>
     </BoxesWrapper>
   </>
