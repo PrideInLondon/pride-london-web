@@ -13,6 +13,7 @@ import {
   PlaceholderDiv,
 } from './YouMeUsWePage.styles'
 import ActsOfAllyshipBox from './ActsOfAllyshipBox'
+import Mark from './Mark'
 
 const YouMeUsWePage = () => (
   <>
@@ -95,6 +96,7 @@ const YouMeUsWePage = () => (
           story featured on our site!
         </ActsOfAllyshipBox>
       </ActsOfAllyshipBoxesWrapper>
+      <Mark />
     </Wrapper>
   </>
 )
