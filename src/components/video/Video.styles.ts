@@ -34,3 +34,10 @@ export const StyledFigCaption = styled.figcaption`
   letter-spacing: normal;
   color: ${colors.indigo};
 `
+
+export const StyledButtonContainer = styled.div`
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+`

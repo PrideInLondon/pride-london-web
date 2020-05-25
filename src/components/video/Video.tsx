@@ -6,6 +6,7 @@ import {
   StyledVideoImage,
   StyledFigCaption,
   StylediFrame,
+  StyledButtonContainer,
 } from './Video.styles'
 import { VideoProps } from './Video.types'
 
@@ -36,10 +37,12 @@ const Video = ({
           >
             <StyledVideoImage fixed={image} alt={alt} />
           </div>
-          <PlayButton
-            title={`Play ${caption} video`}
-            onClick={() => setClicked(!clicked)}
-          ></PlayButton>
+          <StyledButtonContainer>
+            <PlayButton
+              title={`Play ${caption} video`}
+              onClick={() => setClicked(!clicked)}
+            ></PlayButton>
+          </StyledButtonContainer>
         </>
       )}
       <StyledFigCaption>{caption}</StyledFigCaption>
