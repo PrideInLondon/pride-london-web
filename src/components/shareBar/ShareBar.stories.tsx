@@ -9,7 +9,7 @@ const dynamicContent = () => ({
   title: text('Title', 'Pride in London', CONTENT),
   body: text(
     'Body',
-    "In June and July 2020, enjoy events across the city culminating in London's iconic Pride parade and free Trafalgar Square performances.",
+    'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community',
     CONTENT
   ),
   url: text('URL', 'http://prideinlondon.org', CONTENT),
