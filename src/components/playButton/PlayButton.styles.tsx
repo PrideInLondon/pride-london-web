@@ -3,7 +3,7 @@ import { colors } from '../../theme/colors'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { space } from '../../theme/space'
 
-export const ButtonWrapper = styled.div`
+export const ButtonWrapper = styled.button`
   padding: ${space.lg};
   background-color: ${colors.indigo};
   cursor: pointer;

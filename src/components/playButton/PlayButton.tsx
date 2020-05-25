@@ -1,10 +1,11 @@
 import React from 'react'
 import { Icon } from '../icon'
 import { space } from '../../theme/space'
-import { PlayButtonProps } from './PlayButton.types'
 import { ButtonWrapper } from './PlayButton.styles'
 
-export const PlayButton: React.FC<PlayButtonProps> = () => {
+export const PlayButton: React.FC<React.ButtonHTMLAttributes<
+  HTMLButtonElement
+>> = () => {
   return (
     <ButtonWrapper onClick={() => alert('clicked')}>
       <Icon
