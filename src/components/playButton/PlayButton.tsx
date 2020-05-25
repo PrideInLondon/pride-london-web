@@ -5,9 +5,9 @@ import { ButtonWrapper } from './PlayButton.styles'
 
 export const PlayButton: React.FC<React.ButtonHTMLAttributes<
   HTMLButtonElement
->> = () => {
+>> = ({ ...props }) => {
   return (
-    <ButtonWrapper onClick={() => alert('clicked')}>
+    <ButtonWrapper {...props}>
       <Icon
         name="play"
         variant="white"
