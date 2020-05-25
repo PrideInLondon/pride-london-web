@@ -31,13 +31,13 @@ const Video = ({
         <>
           <div
             role="button"
-            title="clickable image"
+            title={`Play ${caption} video`}
             onClick={() => setClicked(!clicked)}
           >
             <StyledVideoImage fixed={image} alt={alt} />
           </div>
           <PlaceholderButton
-            title="play video"
+            title={`Play ${caption} video`}
             onClick={() => setClicked(!clicked)}
           >
             Placeholder Btn

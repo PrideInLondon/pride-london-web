@@ -15,22 +15,23 @@ const props = {
 
 it('should render a cover image and button', () => {
   const { queryAllByRole, container } = render(<Video {...props} />)
-  expect(queryAllByRole('button')).toBeTruthy()
+  expect(queryAllByRole('button')).toHaveLength(2)
   queryByTitle(container, 'Pride in London presents: You! Me! Us! We!')
 })
 
 it.each`
-  clicked
-  ${'clickable image'}
-  ${'play video'}
+  clicked                                                    | index
+  ${'Play Pride in London presents: You! Me! Us! We! video'} | ${0}
+  ${'Play Pride in London presents: You! Me! Us! We! video'} | ${1}
 `(
   'should remove the cover image and button when $clicked is clicked',
   ({ clicked }) => {
-    const { queryAllByRole, getByTitle, container } = render(
+    const { queryAllByRole, getAllByTitle, container } = render(
       <Video {...props} />
     )
+    const elements = getAllByTitle(clicked)
     act(() => {
-      fireEvent.click(getByTitle(clicked))
+      elements.forEach(element => fireEvent.click(element))
     })
     expect(queryAllByRole('button')).toHaveLength(0)
     expect(
@@ -46,9 +47,12 @@ it('should have no accessibility violations', async () => {
 })
 
 it('should have no accessibility violations once clicked', async () => {
-  const { getByTitle, container } = render(<Video {...props} />)
+  const { getAllByTitle, container } = render(<Video {...props} />)
+  const elements = getAllByTitle(
+    'Play Pride in London presents: You! Me! Us! We! video'
+  )
   act(() => {
-    fireEvent.click(getByTitle('clickable image'))
+    elements.forEach(element => fireEvent.click(element))
   })
   const results = await axe(container)
   expect(results).toHaveNoViolations()
