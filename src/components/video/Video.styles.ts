@@ -34,12 +34,3 @@ export const StyledFigCaption = styled.figcaption`
   letter-spacing: normal;
   color: ${colors.indigo};
 `
-
-export const PlaceholderButton = styled.button`
-  cursor: pointer;
-  height: 120px;
-  width: 120px;
-  position: absolute;
-  bottom: 0;
-  left: 24px;
-`

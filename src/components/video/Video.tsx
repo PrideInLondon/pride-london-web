@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
+import { PlayButton } from '../playButton'
 import {
   StyledFigure,
   VideoContainer,
-  PlaceholderButton,
   StyledVideoImage,
   StyledFigCaption,
   StylediFrame,
@@ -36,12 +36,10 @@ const Video = ({
           >
             <StyledVideoImage fixed={image} alt={alt} />
           </div>
-          <PlaceholderButton
+          <PlayButton
             title={`Play ${caption} video`}
             onClick={() => setClicked(!clicked)}
-          >
-            Placeholder Btn
-          </PlaceholderButton>
+          ></PlayButton>
         </>
       )}
       <StyledFigCaption>{caption}</StyledFigCaption>
