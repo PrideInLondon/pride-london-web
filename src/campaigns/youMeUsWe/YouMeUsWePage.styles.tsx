@@ -24,6 +24,14 @@ export const DesktopShareBar = styled(ShareBar)`
   margin-bottom: 120px;
 `
 
+export const MobileShareBar = styled(ShareBar)`
+  display: block;
+
+  ${mediaQueries.md} {
+    display: none;
+  }
+`
+
 export const Wrapper = styled.div`
   position: relative;
   display: flex;

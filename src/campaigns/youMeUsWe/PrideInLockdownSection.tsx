@@ -1,13 +1,16 @@
 import React from 'react'
 import { P } from '../../components/typography'
 import { Heading } from './PrideInLockdownSection.styles'
-import { PlaceholderDiv } from './YouMeUsWePage.styles' // TODO: replace with real
+import { MobileShareBar, PlaceholderDiv } from './YouMeUsWePage.styles' // TODO: replace with real
 
 const PrideInLockdownSection = () => (
   <>
     <Heading as="h2">Pride in Lockdown</Heading>
-
-    <P variant="lg">
+    <MobileShareBar
+      variant="horizontal"
+      content={{ title: '', body: '', url: '' }} // TODO: get real content/>
+    />
+    <P variant="lg" marginTop={{ md: '0', default: 'xl' }}>
       Every year the capital sees over a million volunteers, artists and
       Pride-goers come together, united in their support of the LGBT+ community.
     </P>

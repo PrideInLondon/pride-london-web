@@ -1,6 +1,7 @@
 import React from 'react'
 import { P } from '../../components/typography'
 import { Heading } from './ShareYourStorySection.styles'
+import { MobileShareBar } from './YouMeUsWePage.styles'
 import CTABox from './CTABox'
 
 const ShareYourStorySection = () => (
@@ -23,6 +24,11 @@ const ShareYourStorySection = () => (
       title="Want to share your story of allyship?"
       cta={{ text: 'Tell us your story', to: '' }} // TODO: get link
       marginTop="xl"
+      marginBottom={{ md: '0', default: 'xl' }}
+    />
+    <MobileShareBar
+      variant="horizontal"
+      content={{ title: '', body: '', url: '' }} // TODO: get real content/>
     />
   </>
 )
