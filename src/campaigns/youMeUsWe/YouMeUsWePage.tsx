@@ -1,6 +1,12 @@
 import React from 'react'
 import { colors } from '../../theme/colors'
-import { Wrapper, StyledTag, PlaceholderDiv } from './YouMeUsWePage.styles'
+import {
+  DesktopShareBarWrapper,
+  DesktopShareBar,
+  Wrapper,
+  StyledTag,
+  PlaceholderDiv,
+} from './YouMeUsWePage.styles'
 import Mark from './Mark'
 import PrideInLockdownSection from './PrideInLockdownSection'
 import ActsOfAllyshipSection from './ActsOfAllyshipSection'
@@ -13,6 +19,12 @@ const YouMeUsWePage = () => (
   <>
     <PlaceholderDiv name="Banner" style={{ height: 800 }} />
     <Wrapper>
+      <DesktopShareBarWrapper>
+        <DesktopShareBar
+          variant="vertical"
+          content={{ title: '', body: '', url: '' }} // TODO: get real content
+        />
+      </DesktopShareBarWrapper>
       <StyledTag color={colors.yellow}>Pride in London Themes</StyledTag>
       <PrideInLockdownSection />
       <ActsOfAllyshipSection />
