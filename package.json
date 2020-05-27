@@ -83,7 +83,7 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-helmet": "^5.0.15",
     "@types/storybook__addon-info": "^5.2.1",
-    "@types/styled-components": "^4.4.2",
+    "@types/styled-components": "^5.0.1",
     "@types/styled-system": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
