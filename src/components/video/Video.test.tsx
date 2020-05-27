@@ -1,6 +1,6 @@
 import React from 'react'
 import { axe } from 'jest-axe'
-import { render, fireEvent, queryByTitle } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import { act } from 'react-dom/test-utils'
 import Video from './Video'
 
@@ -14,28 +14,26 @@ const props = {
 }
 
 it('should render a cover image and button', () => {
-  const { queryAllByRole, container } = render(<Video {...props} />)
+  const { queryAllByRole, queryByTitle } = render(<Video {...props} />)
   expect(queryAllByRole('button')).toHaveLength(2)
-  queryByTitle(container, 'Pride in London presents: You! Me! Us! We!')
+  expect(queryByTitle('Pride in London presents: You! Me! Us! We!')).toBeFalsy()
 })
 
 it.each`
-  clicked                                                    | index
-  ${'Play Pride in London presents: You! Me! Us! We! video'} | ${0}
-  ${'Play Pride in London presents: You! Me! Us! We! video'} | ${1}
+  index
+  ${0}
+  ${1}
 `(
-  'should remove the cover image and button when $clicked is clicked',
-  ({ clicked }) => {
-    const { queryAllByRole, getAllByTitle, container } = render(
-      <Video {...props} />
-    )
-    const elements = getAllByTitle(clicked)
+  'should remove the cover image and button when button $index is clicked',
+  ({ index }) => {
+    const { queryAllByRole, queryByTitle } = render(<Video {...props} />)
+    const elements = queryAllByRole('button')
     act(() => {
-      elements.forEach(element => fireEvent.click(element))
+      fireEvent.click(elements[index])
     })
     expect(queryAllByRole('button')).toHaveLength(0)
     expect(
-      queryByTitle(container, 'Pride in London presents: You! Me! Us! We!')
+      queryByTitle('Pride in London presents: You! Me! Us! We!')
     ).toBeTruthy()
   }
 )
@@ -47,12 +45,9 @@ it('should have no accessibility violations', async () => {
 })
 
 it('should have no accessibility violations once clicked', async () => {
-  const { getAllByTitle, container } = render(<Video {...props} />)
-  const elements = getAllByTitle(
-    'Play Pride in London presents: You! Me! Us! We! video'
-  )
+  const { queryAllByRole, container } = render(<Video {...props} />)
   act(() => {
-    elements.forEach(element => fireEvent.click(element))
+    fireEvent.click(queryAllByRole('button')[0])
   })
   const results = await axe(container)
   expect(results).toHaveNoViolations()
