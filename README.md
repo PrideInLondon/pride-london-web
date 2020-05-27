@@ -5,6 +5,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/prideinlondon/pride-london-web/badge)](https://www.codefactor.io/repository/github/prideinlondon/pride-london-web)
 [![DeepScan grade](https://deepscan.io/api/teams/3576/projects/5314/branches/40859/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3576&pid=5314&bid=40859)  
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/context:javascript) [![Total alerts](https://img.shields.io/lgtm/alerts/g/PrideInLondon/pride-london-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/PrideInLondon/pride-london-web/alerts/)  
+[![GuardRails badge](https://badges.guardrails.io/PrideInLondon/pride-london-web.svg?token=173b35feebf45089a66e3fcef88839ba84ff5cd833a95846aca4cf50b84ddf8a&provider=github)](https://dashboard.guardrails.io/gh/PrideInLondon/19039)  
 [![codecov](https://codecov.io/gh/PrideInLondon/pride-london-web/branch/master/graph/badge.svg)](https://codecov.io/gh/PrideInLondon/pride-london-web)  
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=PrideInLondon_pride-london-web&metric=alert_status)](https://sonarcloud.io/dashboard?id=PrideInLondon_pride-london-web)
 
