@@ -1,5 +1,6 @@
 import React from 'react'
 import { P } from '../../components/typography'
+import { Typeform } from '../../components/typeform'
 import { Heading, Grid, Item } from './ActsOfKindnessSection.styles'
 import CTABox from './CTABox'
 
@@ -27,11 +28,15 @@ const ActsOfKindnessSection = () => (
       <Item title="Send flowers to your bestie" />
       <Item title="Start a Pride book club to cheer up some friends" />
     </Grid>
-    <CTABox
-      title="Commit to kindness"
-      cta={{ text: 'I pledge to...', to: '/' }} // TODO: get link
-      marginTop="xl"
-    />
+    <Typeform id="RLnK9L">
+      <CTABox
+        title="Commit to kindness"
+        cta={{
+          text: 'I pledge to...',
+        }}
+        marginTop="xl"
+      />
+    </Typeform>
   </>
 )
 
