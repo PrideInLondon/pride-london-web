@@ -1,0 +1,1 @@
+export { Typeform } from './Typeform'
