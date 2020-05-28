@@ -1,17 +1,8 @@
 import React from 'react'
-import { Box, BoxProps } from '../../components/box'
+import { Box } from '../../components/box'
 import { H3 } from '../../components/typography'
 import { Button } from '../../components/button'
-import { ButtonSignatureProps } from '../../components/button/Button.types'
-
-interface CTABoxButtonProps {
-  text: string
-}
-
-interface CTABoxProps extends BoxProps {
-  title: string
-  cta: CTABoxButtonProps & ButtonSignatureProps
-}
+import { CTABoxProps } from './CTABox.types'
 
 const CTABox: React.FC<CTABoxProps> = ({
   title,

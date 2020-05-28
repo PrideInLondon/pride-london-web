@@ -5,6 +5,7 @@ import { H4, P } from '../../components/typography'
 import { Button } from '../../components/button'
 import { sm } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
+import { CTAProps } from './CTABox.types'
 
 const Heading = styled(H4).attrs({
   as: 'h3',
@@ -23,17 +24,14 @@ const ButtonWrapper = styled.div`
 interface ActsOfAllyshipBoxProps {
   number: number
   heading: string
-  cta: {
-    text: string
-    to: string
-  }
+  cta: CTAProps
 }
 
 const ActsOfAllyshipBox: React.FC<ActsOfAllyshipBoxProps> = ({
   number,
   heading,
   children,
-  cta: { text, to },
+  cta: { text, ...ctaProps },
 }) => (
   <Box display="flex" flexDirection="column">
     <Heading>
@@ -42,7 +40,7 @@ const ActsOfAllyshipBox: React.FC<ActsOfAllyshipBoxProps> = ({
     </Heading>
     <P>{children}</P>
     <ButtonWrapper>
-      <Button to={to}>{text}</Button>
+      <Button {...ctaProps}>{text}</Button>
     </ButtonWrapper>
   </Box>
 )
