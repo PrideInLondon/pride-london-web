@@ -1,4 +1,5 @@
 import React from 'react'
+import { navigate } from '@reach/router'
 import { P } from '../../components/typography'
 import { Heading, Content, BoxesWrapper } from './ActsOfAllyshipSection.styles'
 import ActsOfAllyshipBox from './ActsOfAllyshipBox'
@@ -48,7 +49,10 @@ const ActsOfAllyshipSection = () => (
       <ActsOfAllyshipBox
         number={3}
         heading="Who is your support system?"
-        cta={{ text: 'Share your story', to: '/' }} // TODO: get link
+        cta={{
+          text: 'Share your story',
+          onClick: () => navigate('#share-your-story'),
+        }}
       >
         Who has always been there to support you? Tell us about them, and your
         story could be featured on our site!

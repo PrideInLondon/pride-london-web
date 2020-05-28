@@ -7,7 +7,7 @@ import CTABox from './CTABox'
 
 const ShareYourStorySection = () => (
   <>
-    <Heading>Share your story</Heading>
+    <Heading id="share-your-story">Share your story</Heading>
     <P variant="lg">
       This year, we want to document and celebrate those everyday acts of
       solidarity that embody the spirit of Pride – the times when you've
