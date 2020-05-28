@@ -8,15 +8,23 @@ import {
   StylediFrame,
   StyledButtonContainer,
 } from './Video.styles'
-import { VideoProps } from './Video.types'
+import { VideoHost, VideoProps } from './Video.types'
 
-const Video = ({
+const HOSTS = {
+  vimeo: 'player.vimeo.com/video',
+  youtube: 'youtube.com/embed',
+}
+
+export const generateVideoUrl = (host: VideoHost, id: string) =>
+  `https://${HOSTS[host]}/${id}?autoplay=1`
+
+export const Video = ({
+  host,
   videoId,
   coverImage: { image, alt },
   caption,
 }: VideoProps) => {
   const [clicked, setClicked] = useState(false)
-
   return (
     <StyledFigure>
       {clicked ? (
@@ -24,7 +32,7 @@ const Video = ({
           <StylediFrame
             allowFullScreen
             frameBorder="0"
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+            src={generateVideoUrl(host, videoId)}
             title={caption}
           />
         </VideoContainer>
@@ -49,5 +57,3 @@ const Video = ({
     </StyledFigure>
   )
 }
-
-export default Video
