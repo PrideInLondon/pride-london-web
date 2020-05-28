@@ -1,5 +1,6 @@
 import React from 'react'
 import { P } from '../../components/typography'
+import { CTALink } from '../../components/ctaLink'
 import { Heading } from './SupportingTheCommunitySection.styles'
 import CTABox from './CTABox'
 
@@ -7,20 +8,30 @@ const SupportingTheCommunitySection = () => (
   <>
     <Heading>Supporting the Community</Heading>
     <P variant="lg">
-      {/* TODO: replace with real content */}
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      We're determined to continue to provide a platform to unite, support and
+      celebrate every part of the LGBT+ community.
     </P>
     <P>
-      {/* TODO: replace with real content */}
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      With that being said, we're excited to launch our new Unity Fund. The
+      Unity Fund will distribute one off grants to UK grassroots organisations
+      that advocate and provide support for LGBT+ people.
+    </P>
+    <P>
+      Any donation, big or small, will support Pride in London and raise vital
+      funds for the Unity Fund, helping to address the needs of LGBT+ people in
+      times of crisis and beyond.
+    </P>
+    <P width="100%">
+      More information on the Unity Fund can be found{' '}
+      {
+        <CTALink to="/support-us/unity-fund" arrow={false}>
+          here
+        </CTALink>
+      }
+      .
     </P>
     <CTABox
-      title="Support the community fund"
+      title="Support our community"
       cta={{ text: 'Donate now', to: 'https://donate.prideinlondon.org/' }}
       marginTop="lg"
     />
