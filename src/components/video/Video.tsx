@@ -23,10 +23,11 @@ export const Video = ({
   videoId,
   coverImage: { image, alt },
   caption,
+  ...props
 }: VideoProps) => {
   const [clicked, setClicked] = useState(false)
   return (
-    <StyledFigure>
+    <StyledFigure {...props}>
       {clicked ? (
         <VideoContainer>
           <StylediFrame

@@ -1,16 +1,20 @@
 import styled from 'styled-components'
+import { compose, layout, space } from 'styled-system'
 import Image from 'gatsby-image'
 import { colors } from '../../theme/colors'
+import { fontSizes } from '../../theme/fonts'
+
+export const StyledFigure = styled.figure`
+  margin: 0 0 2em 0;
+  position: relative;
+
+  ${compose(layout, space)}
+`
 
 export const VideoContainer = styled.div`
   position: relative;
   padding-bottom: 56.25%;
   margin-bottom: 2em;
-`
-export const StyledVideoImage = styled(Image)`
-  cursor: pointer;
-  display: block;
-  width: 100%;
 `
 
 export const StylediFrame = styled.iframe`
@@ -19,20 +23,10 @@ export const StylediFrame = styled.iframe`
   width: 100%;
 `
 
-export const StyledFigure = styled.figure`
-  margin: 0 0 2em 0;
-  position: relative;
-`
-export const StyledFigCaption = styled.figcaption`
-  text-align: right;
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.2;
-  letter-spacing: normal;
-  color: ${colors.indigo};
+export const StyledVideoImage = styled(Image)`
+  cursor: pointer;
+  display: block;
+  width: 100%;
 `
 
 export const StyledButtonContainer = styled.div`
@@ -40,4 +34,11 @@ export const StyledButtonContainer = styled.div`
   position: absolute;
   bottom: 0;
   left: 24px;
+`
+
+export const StyledFigCaption = styled.figcaption`
+  font-size: ${fontSizes.body_sm};
+  font-weight: bold;
+  text-align: right;
+  color: ${colors.indigo};
 `
