@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { compose, layout, space } from 'styled-system'
+import { compose, layout, space, SpaceProps } from 'styled-system'
 import Image from 'gatsby-image'
 import { colors } from '../../theme/colors'
 import { fontSizes } from '../../theme/fonts'
@@ -36,9 +36,11 @@ export const StyledButtonContainer = styled.div`
   left: 24px;
 `
 
-export const StyledFigCaption = styled.figcaption`
+export const StyledFigCaption = styled.figcaption<SpaceProps>`
   font-size: ${fontSizes.body_sm};
   font-weight: bold;
   text-align: right;
   color: ${colors.indigo};
+
+  ${space}
 `

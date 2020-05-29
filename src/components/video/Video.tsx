@@ -54,7 +54,7 @@ export const Video = ({
           </StyledButtonContainer>
         </>
       )}
-      <StyledFigCaption>{caption}</StyledFigCaption>
+      <StyledFigCaption padding="sm">{caption}</StyledFigCaption>
     </StyledFigure>
   )
 }
