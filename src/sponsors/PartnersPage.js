@@ -126,7 +126,7 @@ const PartnersPage = ({ data }) => {
                 </SponsorsSubSection>
               )}
 
-              {sponsors[constants.sponsorLevels.silver] && (
+              {sponsors[constants.sponsorLevels.gold] && (
                 <SponsorsSubSection
                   title="Gold sponsors"
                   icon={<SponsorStar color={theme.colors.gold} />}
