@@ -112,7 +112,7 @@ const PartnersPage = ({ data }) => {
       <Container>
         <Row>
           <Column>
-            <ListTitle>Thank you to our 2019 partners</ListTitle>
+            <ListTitle>Thank you to our 2020 partners</ListTitle>
             <p>
               A huge thank you to our main partners for their continued support.
             </p>
@@ -126,7 +126,7 @@ const PartnersPage = ({ data }) => {
                 </SponsorsSubSection>
               )}
 
-              {sponsors[constants.sponsorLevels.silver] && (
+              {sponsors[constants.sponsorLevels.gold] && (
                 <SponsorsSubSection
                   title="Gold sponsors"
                   icon={<SponsorStar color={theme.colors.gold} />}
