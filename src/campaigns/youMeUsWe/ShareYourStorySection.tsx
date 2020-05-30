@@ -2,11 +2,11 @@ import React from 'react'
 import { P } from '../../components/typography'
 import { Typeform } from '../../components/typeform'
 import { Heading } from './ShareYourStorySection.styles'
-import { MobileShareBar } from './YouMeUsWePage.styles'
+import { SectionWrapper, MobileShareBar } from './YouMeUsWePage.styles'
 import CTABox from './CTABox'
 
 const ShareYourStorySection = () => (
-  <>
+  <SectionWrapper>
     <Heading id="share-your-story">Share your story</Heading>
     <P variant="lg">
       This year, we want to document and celebrate those everyday acts of
@@ -33,7 +33,7 @@ const ShareYourStorySection = () => (
       variant="horizontal"
       content={{ title: '', body: '', url: '' }} // TODO: get real content/>
     />
-  </>
+  </SectionWrapper>
 )
 
 export default ShareYourStorySection

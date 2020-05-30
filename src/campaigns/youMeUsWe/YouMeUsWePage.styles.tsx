@@ -58,13 +58,12 @@ export const MobileShareBar = styled(ShareBar)`
 
 export const Wrapper = styled.div`
   position: relative;
+  text-align: justify;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: justify;
   flex-direction: column;
   width: 100%;
-  padding: ${lg}px;
 
   h2,
   h3 {
@@ -75,6 +74,16 @@ export const Wrapper = styled.div`
   p {
     max-width: 620px;
   }
+`
+
+export const SectionWrapper = styled.section`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: ${lg}px;
 `
 
 export const PlaceholderDiv = styled(({ name, ...props }) => (

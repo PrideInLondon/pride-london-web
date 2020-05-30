@@ -3,9 +3,10 @@ import { navigate } from '@reach/router'
 import { P } from '../../components/typography'
 import { Heading, Content, BoxesWrapper } from './ActsOfAllyshipSection.styles'
 import ActsOfAllyshipBox from './ActsOfAllyshipBox'
+import { SectionWrapper } from './YouMeUsWePage.styles'
 
 const ActsOfAllyshipSection = () => (
-  <>
+  <SectionWrapper>
     <Heading />
     <Content>
       <P variant="lg">
@@ -58,7 +59,7 @@ const ActsOfAllyshipSection = () => (
         story could be featured on our site!
       </ActsOfAllyshipBox>
     </BoxesWrapper>
-  </>
+  </SectionWrapper>
 )
 
 export default ActsOfAllyshipSection

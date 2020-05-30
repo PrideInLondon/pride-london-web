@@ -4,7 +4,7 @@ import { P } from '../../components/typography'
 import { Video } from '../../components/video'
 import { getImageForBreakpoint } from '../../utils/style-utils'
 import { Heading } from './PrideInLockdownSection.styles'
-import { MobileShareBar } from './YouMeUsWePage.styles'
+import { SectionWrapper, MobileShareBar } from './YouMeUsWePage.styles'
 
 export const query = graphql`
   query PrideInLockdownSectionQuery {
@@ -26,7 +26,7 @@ export const query = graphql`
 `
 
 const PrideInLockdownSection = () => (
-  <>
+  <SectionWrapper>
     <Heading as="h2">Pride in Lockdown</Heading>
     <MobileShareBar
       variant="horizontal"
@@ -66,7 +66,7 @@ const PrideInLockdownSection = () => (
         />
       )}
     </StaticQuery>
-  </>
+  </SectionWrapper>
 )
 
 export default PrideInLockdownSection

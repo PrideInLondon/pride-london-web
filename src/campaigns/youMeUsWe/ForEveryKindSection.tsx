@@ -1,9 +1,10 @@
 import React from 'react'
 import { P } from '../../components/typography'
 import { Heading, Content } from './ForEveryKindSection.styles'
+import { SectionWrapper } from './YouMeUsWePage.styles'
 
 const ForEveryKindSection = () => (
-  <>
+  <SectionWrapper>
     <Heading>For Every Kind</Heading>
     <P textAlign="center">Narrated by Emma Frankland</P>
     <Content>
@@ -39,7 +40,7 @@ const ForEveryKindSection = () => (
       <br />
       You. Me. Us. We.
     </Content>
-  </>
+  </SectionWrapper>
 )
 
 export default ForEveryKindSection

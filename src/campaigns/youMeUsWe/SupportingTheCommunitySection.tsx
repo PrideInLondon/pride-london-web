@@ -3,9 +3,10 @@ import { P } from '../../components/typography'
 import { CTALink } from '../../components/ctaLink'
 import { Heading } from './SupportingTheCommunitySection.styles'
 import CTABox from './CTABox'
+import { SectionWrapper } from './YouMeUsWePage.styles'
 
 const SupportingTheCommunitySection = () => (
-  <>
+  <SectionWrapper>
     <Heading>Supporting the Community</Heading>
     <P variant="lg">
       We're determined to continue to provide a platform to unite, support and
@@ -35,7 +36,7 @@ const SupportingTheCommunitySection = () => (
       cta={{ text: 'Donate now', to: 'https://donate.prideinlondon.org/' }}
       marginTop="lg"
     />
-  </>
+  </SectionWrapper>
 )
 
 export default SupportingTheCommunitySection

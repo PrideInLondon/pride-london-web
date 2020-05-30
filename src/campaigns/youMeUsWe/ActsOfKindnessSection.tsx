@@ -3,9 +3,10 @@ import { P } from '../../components/typography'
 import { Typeform } from '../../components/typeform'
 import { Heading, Grid, Item } from './ActsOfKindnessSection.styles'
 import CTABox from './CTABox'
+import { SectionWrapper } from './YouMeUsWePage.styles'
 
 const ActsOfKindnessSection = () => (
-  <>
+  <SectionWrapper>
     <Heading>Acts of Kindness</Heading>
     <P variant="lg">
       Kindness makes the world go round, and during times like these it takes
@@ -37,7 +38,7 @@ const ActsOfKindnessSection = () => (
         marginTop="xl"
       />
     </Typeform>
-  </>
+  </SectionWrapper>
 )
 
 export default ActsOfKindnessSection
