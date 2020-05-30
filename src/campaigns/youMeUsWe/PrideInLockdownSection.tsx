@@ -1,7 +1,29 @@
 import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
 import { P } from '../../components/typography'
+import { Video } from '../../components/video'
+import { getImageForBreakpoint } from '../../utils/style-utils'
 import { Heading } from './PrideInLockdownSection.styles'
-import { MobileShareBar, PlaceholderDiv } from './YouMeUsWePage.styles' // TODO: replace with real
+import { MobileShareBar } from './YouMeUsWePage.styles'
+
+export const query = graphql`
+  query PrideInLockdownSectionQuery {
+    file(relativePath: { regex: "/campaigns/youMeUsWe/assets/video/" }) {
+      name
+      childImageSharp {
+        mobile: fixed(width: 327, height: 184) {
+          ...GatsbyImageSharpFixed
+        }
+        tablet: fixed(width: 780, height: 450) {
+          ...GatsbyImageSharpFixed
+        }
+        desktop: fixed(width: 1050, height: 591) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 
 const PrideInLockdownSection = () => (
   <>
@@ -29,14 +51,21 @@ const PrideInLockdownSection = () => (
       members of our community, and scroll down to find out how you can make an
       act of allyship.
     </P>
-    <PlaceholderDiv
-      name="Video"
-      style={{
-        height: 600,
-        maxWidth: 1050,
-        marginTop: 80,
-      }}
-    />
+    <StaticQuery query={query}>
+      {({ file: { childImageSharp } }) => (
+        <Video
+          host="youtube"
+          videoId="TIExvoJXwKE" // TODO: get video id
+          coverImage={{
+            image: getImageForBreakpoint(childImageSharp),
+            alt: '', // TODO: alt text
+          }}
+          caption="Lorem ipsum blah blah blah" // TODO: get caption
+          marginTop="xl"
+          width={1000}
+        />
+      )}
+    </StaticQuery>
   </>
 )
 
