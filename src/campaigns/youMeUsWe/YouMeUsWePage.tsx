@@ -1,5 +1,6 @@
 import React from 'react'
 import { colors } from '../../theme/colors'
+import YouMeUsWePageHelmet from './YouMeUsWePageHelmet'
 import {
   BannerBackgroundImage,
   BannerMark,
@@ -20,9 +21,11 @@ import rallying from './assets/rallying/image.jpg'
 import different from './assets/different/image.jpg'
 import sunshine from './assets/sunshine/image.jpg'
 import ymuw from './assets/ymuw.jpg'
+import { YouMeUsWePageProps } from './YouMeUseWePage.types'
 
-const YouMeUsWePage = () => (
+const YouMeUsWePage = (props: YouMeUsWePageProps) => (
   <>
+    <YouMeUsWePageHelmet {...props} />
     <BannerBackgroundImage>
       <BannerMark />
     </BannerBackgroundImage>
