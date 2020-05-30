@@ -5,6 +5,30 @@ import { Tag } from '../../components/tag'
 import { lg, xl, xxl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { fonts } from '../../theme/fonts'
+import bannerBackground from './assets/banner/background.jpg'
+import Mark from './assets/banner/Mark'
+
+export const BannerBackgroundImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(${bannerBackground});
+  height: 560px;
+
+  ${mediaQueries.md} {
+    height: 800px;
+  }
+`
+
+export const BannerMark = styled(Mark)`
+  width: 240px;
+  height: 251px;
+
+  ${mediaQueries.md} {
+    width: 400px;
+    height: 418px;
+  }
+`
 
 export const DesktopShareBarWrapper = styled.div`
   display: none;

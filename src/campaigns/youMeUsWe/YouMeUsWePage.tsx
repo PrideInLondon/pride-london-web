@@ -1,6 +1,8 @@
 import React from 'react'
 import { colors } from '../../theme/colors'
 import {
+  BannerBackgroundImage,
+  BannerMark,
   DesktopShareBarWrapper,
   DesktopShareBar,
   Wrapper,
@@ -17,7 +19,9 @@ import ShareYourStorySection from './ShareYourStorySection'
 
 const YouMeUsWePage = () => (
   <>
-    <PlaceholderDiv name="Banner" style={{ height: 800 }} />
+    <BannerBackgroundImage>
+      <BannerMark />
+    </BannerBackgroundImage>
     <Wrapper>
       <DesktopShareBarWrapper>
         <DesktopShareBar
