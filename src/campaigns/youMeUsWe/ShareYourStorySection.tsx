@@ -29,10 +29,7 @@ const ShareYourStorySection = () => (
         marginBottom={{ md: '0', default: 'xl' }}
       />
     </Typeform>
-    <MobileShareBar
-      variant="horizontal"
-      content={{ title: '', body: '', url: '' }} // TODO: get real content/>
-    />
+    <MobileShareBar variant="horizontal" />
   </SectionWrapper>
 )
 

@@ -7,6 +7,7 @@ import { mediaQueries } from '../../theme/mediaQueries'
 import { fonts } from '../../theme/fonts'
 import bannerBackground from './assets/banner/background.jpg'
 import Mark from './assets/banner/Mark'
+import { content } from './share'
 
 export const BannerBackgroundImage = styled.div`
   display: flex;
@@ -44,13 +45,13 @@ export const DesktopShareBarWrapper = styled.div`
   }
 `
 
-export const DesktopShareBar = styled(ShareBar)`
+export const DesktopShareBar = styled(ShareBar).attrs({ content })`
   position: sticky;
   top: 90px;
   margin-bottom: 120px;
 `
 
-export const MobileShareBar = styled(ShareBar)`
+export const MobileShareBar = styled(ShareBar).attrs({ content })`
   display: block;
 
   ${mediaQueries.md} {

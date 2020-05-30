@@ -28,10 +28,7 @@ const YouMeUsWePage = () => (
     </BannerBackgroundImage>
     <Wrapper>
       <DesktopShareBarWrapper>
-        <DesktopShareBar
-          variant="vertical"
-          content={{ title: '', body: '', url: '' }} // TODO: get real content
-        />
+        <DesktopShareBar variant="vertical" />
       </DesktopShareBarWrapper>
       <StyledTag color={colors.yellow}>Pride in London Themes</StyledTag>
       <PrideInLockdownSection />
