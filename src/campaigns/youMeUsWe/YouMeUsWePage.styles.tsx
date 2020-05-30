@@ -37,6 +37,7 @@ export const DesktopShareBarWrapper = styled.div`
   top: 150px;
   left: 90px;
   height: 100%;
+  z-index: 1;
 
   ${mediaQueries.md} {
     display: block;
