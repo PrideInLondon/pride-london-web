@@ -7,7 +7,7 @@ import {
   DesktopShareBar,
   Wrapper,
   StyledTag,
-  PlaceholderDiv,
+  FeaturedImage,
 } from './YouMeUsWePage.styles'
 import Mark from './Mark'
 import PrideInLockdownSection from './PrideInLockdownSection'
@@ -16,6 +16,10 @@ import ForEveryKindSection from './ForEveryKindSection'
 import SupportingTheCommunitySection from './SupportingTheCommunitySection'
 import ActsOfKindnessSection from './ActsOfKindnessSection'
 import ShareYourStorySection from './ShareYourStorySection'
+import rallying from './assets/rallying/image.jpg'
+import different from './assets/different/image.jpg'
+import sunshine from './assets/sunshine/image.jpg'
+import ymuw from './assets/ymuw.jpg'
 
 const YouMeUsWePage = () => (
   <>
@@ -33,15 +37,15 @@ const YouMeUsWePage = () => (
       <PrideInLockdownSection />
       <ActsOfAllyshipSection />
       <Mark />
-      <PlaceholderDiv name="Image" style={{ height: 1000 }} />
+      <FeaturedImage src={rallying} />
       <ForEveryKindSection />
       <Mark />
       <SupportingTheCommunitySection />
-      <PlaceholderDiv name="Image" style={{ height: 1000, marginTop: 40 }} />
+      <FeaturedImage src={different} marginTop="xl" />
       <ActsOfKindnessSection />
-      <PlaceholderDiv name="Image" style={{ height: 1000, marginTop: 40 }} />
+      <FeaturedImage src={sunshine} marginTop="xl" />
       <ShareYourStorySection />
-      <PlaceholderDiv name="Image" style={{ height: 1000, marginTop: 40 }} />
+      <FeaturedImage src={ymuw} marginY="xl" />
     </Wrapper>
   </>
 )

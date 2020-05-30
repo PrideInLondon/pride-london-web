@@ -1,5 +1,5 @@
-import React from 'react'
 import styled from 'styled-components'
+import { space, SpaceProps } from 'styled-system'
 import { ShareBar } from '../../components/shareBar'
 import { Tag } from '../../components/tag'
 import { lg, xl, xxl } from '../../theme/space'
@@ -13,6 +13,7 @@ export const BannerBackgroundImage = styled.div`
   justify-content: center;
   align-items: center;
   background-image: url(${bannerBackground});
+  width: 100%;
   height: 560px;
 
   ${mediaQueries.md} {
@@ -86,20 +87,17 @@ export const SectionWrapper = styled.section`
   padding: ${lg}px;
 `
 
-export const PlaceholderDiv = styled(({ name, ...props }) => (
-  <div {...props}>{name} placeholder</div>
-))`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: black 2px solid;
-  width: 100%;
-`
-
 export const StyledTag = styled(Tag)`
   margin-top: ${xl}px;
 
   ${mediaQueries.md} {
     margin-top: ${xxl}px;
   }
+`
+
+export const FeaturedImage = styled.img<SpaceProps>`
+  height: auto;
+  width: 100%;
+
+  ${space}
 `

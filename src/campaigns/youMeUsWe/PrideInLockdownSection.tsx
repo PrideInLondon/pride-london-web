@@ -8,7 +8,7 @@ import { SectionWrapper, MobileShareBar } from './YouMeUsWePage.styles'
 
 export const query = graphql`
   query PrideInLockdownSectionQuery {
-    file(relativePath: { regex: "/campaigns/youMeUsWe/assets/video/" }) {
+    file(relativePath: { regex: "/campaigns/youMeUsWe/assets/ymuw/" }) {
       name
       childImageSharp {
         mobile: fixed(width: 327, height: 184) {
