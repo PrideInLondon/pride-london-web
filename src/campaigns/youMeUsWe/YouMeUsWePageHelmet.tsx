@@ -28,23 +28,23 @@ const YouMeUsWePageHelmet = ({
 
         // Schema meta tags
         {
-          itemprop: 'name',
+          itemProp: 'name',
           content: title,
         },
         {
-          itemprop: 'description',
+          itemProp: 'description',
           content: description,
         },
         {
-          itemprop: 'url',
+          itemProp: 'url',
           content: metaUrl,
         },
         {
-          itemprop: 'thumbnailUrl',
+          itemProp: 'thumbnailUrl',
           content: metaImg,
         },
         {
-          itemprop: 'image',
+          itemProp: 'image',
           content: metaImg,
         },
 
@@ -86,12 +86,6 @@ const YouMeUsWePageHelmet = ({
         {
           name: 'twitter:url',
           content: metaUrl,
-        },
-      ]}
-      link={[
-        {
-          rel: 'image_src',
-          content: metaImg,
         },
       ]}
     />
