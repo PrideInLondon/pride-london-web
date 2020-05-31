@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { compose, layout, space, SpaceProps } from 'styled-system'
-import Image from 'gatsby-image'
 import { colors } from '../../theme/colors'
 import { fontSizes } from '../../theme/fonts'
 
 export const StyledFigure = styled.figure`
   margin: 0 0 2em 0;
   position: relative;
+  width: 100%;
 
   ${compose(layout, space)}
 `
@@ -14,7 +14,6 @@ export const StyledFigure = styled.figure`
 export const VideoContainer = styled.div`
   position: relative;
   padding-bottom: 56.25%;
-  margin-bottom: 2em;
 `
 
 export const StylediFrame = styled.iframe`
@@ -23,9 +22,11 @@ export const StylediFrame = styled.iframe`
   width: 100%;
 `
 
-export const StyledVideoImage = styled(Image)`
+export const VideoImageWrapper = styled.div`
   cursor: pointer;
-  display: block;
+`
+
+export const StyledVideoImage = styled.img`
   width: 100%;
 `
 

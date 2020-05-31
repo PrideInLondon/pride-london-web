@@ -21,7 +21,7 @@ describe('Video', () => {
     host: 'youtube',
     videoId: 'TIExvoJXwKE',
     coverImage: {
-      image: { width: 650, height: 400, src: 'image', srcSet: 'imageSrcSet' },
+      src: 'image',
       alt: 'The Pride in London Logo',
     },
     caption: 'Pride in London presents: You! Me! Us! We!',

@@ -3,6 +3,7 @@ import { PlayButton } from '../playButton'
 import {
   StyledFigure,
   VideoContainer,
+  VideoImageWrapper,
   StyledVideoImage,
   StyledFigCaption,
   StylediFrame,
@@ -21,7 +22,7 @@ export const generateVideoUrl = (host: VideoHost, id: string) =>
 export const Video = ({
   host,
   videoId,
-  coverImage: { image, alt },
+  coverImage: { src, alt },
   caption,
   ...props
 }: VideoProps) => {
@@ -39,17 +40,17 @@ export const Video = ({
         </VideoContainer>
       ) : (
         <>
-          <div
+          <VideoImageWrapper
             role="button"
             title={`Play ${caption} video`}
-            onClick={() => setClicked(!clicked)}
+            onClick={() => setClicked(true)}
           >
-            <StyledVideoImage fixed={image} alt={alt} />
-          </div>
+            <StyledVideoImage {...{ src, alt }} />
+          </VideoImageWrapper>
           <StyledButtonContainer>
             <PlayButton
               title={`Play ${caption} video`}
-              onClick={() => setClicked(!clicked)}
+              onClick={() => setClicked(true)}
             ></PlayButton>
           </StyledButtonContainer>
         </>
