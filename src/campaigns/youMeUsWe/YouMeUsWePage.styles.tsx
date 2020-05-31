@@ -14,6 +14,7 @@ export const BannerBackgroundImage = styled.div`
   justify-content: center;
   align-items: center;
   background-image: url(${bannerBackground});
+  background-size: cover;
   width: 100%;
   height: 560px;
 
