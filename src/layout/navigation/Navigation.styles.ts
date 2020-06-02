@@ -135,11 +135,10 @@ export const Burger = styled.button<{
   `
 )
 
-export const DonateButton = styled(Button)`
+export const SupportButton = styled(Button)`
   ${mediaQueries.nav} {
     && {
       min-width: auto;
-      width: 138px;
       margin: 0 0 0 25px;
     }
   }
