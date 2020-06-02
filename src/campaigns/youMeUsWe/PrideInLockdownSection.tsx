@@ -35,7 +35,7 @@ const PrideInLockdownSection = () => (
         src: ymuw,
         alt: 'You! Me! Us! We! repeated in rainbow text',
       }}
-      caption="Lorem ipsum blah blah blah" // TODO: get caption
+      caption="Postponed, but still united: You! Me! Us! We!"
       marginTop="xl"
       maxWidth={1050}
     />
