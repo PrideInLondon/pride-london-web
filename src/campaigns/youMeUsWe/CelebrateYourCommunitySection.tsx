@@ -7,19 +7,18 @@ import CTABox from './CTABox'
 
 const CelebrateYourCommunitySection = () => (
   <SectionWrapper>
-    <Heading id="share-your-story">Share your story</Heading>
+    <Heading id="celebrate-your-community">Celebrate your community</Heading>
     <P variant="lg">
       This year, we want to document and celebrate those everyday acts of
       solidarity that embody the spirit of Pride – the times when you've
-      witnessed people standing up for the LGBT+ community by supporting you or
-      those around you, whether they're a member of the community themselves or
-      not.
+      witnessed someone in the LGBT+ community supporting you or those around
+      you.
     </P>
     <P>
-      It could be someone taking a stand against bigotry and bullying, offering
-      meaningful support during a difficult time, or helping you to feel
-      accepted and loved when you needed it most. Whatever your experience of
-      allyship, we want to hear about it!
+      This year, we want to document and celebrate those everyday acts of
+      solidarity that embody the spirit of Pride – the times when you've
+      witnessed someone in the LGBT+ community supporting you or those around
+      you.
     </P>
     <Typeform id="IGB4QL">
       <CTABox

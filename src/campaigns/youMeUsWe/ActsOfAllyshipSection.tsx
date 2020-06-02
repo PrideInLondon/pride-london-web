@@ -61,7 +61,7 @@ const ActsOfAllyshipSection = () => (
         heading="Celebrate your community"
         cta={{
           text: 'Share your story',
-          onClick: () => navigate('#share-your-story'),
+          onClick: () => navigate('#celebrate-your-community'),
         }}
       >
         Who has been there to support you? Tell us about a time someone in the
