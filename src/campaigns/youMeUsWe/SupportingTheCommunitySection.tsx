@@ -33,7 +33,10 @@ const SupportingTheCommunitySection = () => (
     </P>
     <CTABox
       title="Support our community"
-      cta={{ text: 'Donate now', to: 'https://donate.prideinlondon.org/' }}
+      cta={{
+        text: 'Donate now',
+        to: 'https://donate.prideinlondon.org/?campaign=ymuw',
+      }}
       marginTop="lg"
     />
   </SectionWrapper>
