@@ -114,7 +114,7 @@ const Navigation: React.FC<NavigationProps> = ({
                   item={{
                     id: 'nav-volunteer',
                     title: 'Volunteer',
-                    url: 'https://volunteer.prideinlondon.org',
+                    url: '/volunteer',
                   }}
                 />
                 <NavItem
