@@ -25,10 +25,10 @@ const BeThereForYourCommunitySection = () => (
       <Item title="Call out all forms of racism, Islamophobia, biphobia, homophobia and transphobia" />
       <Item title="Ask for pronouns each time you meet someone new" />
       <Item title="Follow, listen to and amplify queer BAME and trans voices online" />
-      <Item title="Actively engage with marginalised queer voices through film and media" />
+      <Item title="Actively engage with queer voices through books, film and media" />
       <Item title="Educate friends and family about marginalised LGBT+ communities" />
       <Item title="Participate in all international LGBT+ days, not just those including you" />
-      <Item title="Read books and thought pieces by marginalised queer authors" />
+      <Item title="Write to your MP about LGBT+ rights in the UK" />
       <Item title="Show up and support queer performers hosting virtual shows and events" />
       <Item title="Support LGBT+ owned businesses and organisations" />
     </Grid>
