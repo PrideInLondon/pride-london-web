@@ -1,7 +1,7 @@
 import React from 'react'
 import { P } from '../../components/typography'
 import { Typeform } from '../../components/typeform'
-import { Heading, Grid, Item } from './ActsOfKindnessSection.styles'
+import { Heading, Grid, Item } from './BeThereForYourCommunitySection.styles'
 import CTABox from './CTABox'
 import { SectionWrapper } from './YouMeUsWePage.styles'
 
