@@ -27,7 +27,8 @@ const ActsOfAllyshipSection = () => (
           As LGBT+ people, especially those from marginalised communities,
           continue to come under attack from many sides, this allyship is as
           important now as it has ever been. Show your support for the rest of
-          the community today and make an act of allyship.
+          the community today and make an act of allyship. Below are the three
+          ways to make an act of allyship.
         </P>
       </div>
     </Content>
@@ -35,28 +36,37 @@ const ActsOfAllyshipSection = () => (
       <ActsOfAllyshipBox
         number={1}
         heading="Donate to your community"
-        cta={{ text: 'Donate now', to: 'https://donate.prideinlondon.org/' }}
+        cta={{
+          text: 'Donate now',
+          onClick: () => navigate('#donate-to-your-community'),
+        }}
       >
-        Any donation, big or small, helps support the LGBT+ community in these
-        uncertain times, and beyond.
+        Any donation, big or small, will contribute to the Unity Fund, helping
+        to address the needs of LGBT+ people, and also support Pride in London’s
+        vital work.
       </ActsOfAllyshipBox>
       <ActsOfAllyshipBox
         number={2}
-        heading="Moments that mean the most"
-        cta={{ text: 'See our ideas', to: '/' }} // TODO: get link
+        heading="Be there for your community"
+        cta={{
+          text: 'Pledge your allyship',
+          onClick: () => navigate('#be-there-for-your-community'),
+        }}
       >
-        Acts of kindness make the world go round. What will be yours?{' '}
+        Small but meaningful actions can show you're there as a supportive ally
+        for all LGBT+ people. Check out our suggestions and make your pledge.
       </ActsOfAllyshipBox>
       <ActsOfAllyshipBox
         number={3}
-        heading="Who is your support system?"
+        heading="Celebrate your community"
         cta={{
           text: 'Share your story',
           onClick: () => navigate('#share-your-story'),
         }}
       >
-        Who has always been there to support you? Tell us about them, and your
-        story could be featured on our site!
+        Who has been there to support you? Tell us about a time someone in the
+        community was really there for you, we'd love to share your story and
+        celebrate them!
       </ActsOfAllyshipBox>
     </BoxesWrapper>
   </SectionWrapper>
