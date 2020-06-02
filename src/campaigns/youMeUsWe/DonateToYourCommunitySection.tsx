@@ -24,7 +24,7 @@ const DonateToYourCommunitySection = () => (
       to our community.
     </P>
     <P width="100%">
-      More information on the Unity Fund and others ways to support it can be
+      More information on the Unity Fund and other ways to support it can be
       found{' '}
       {
         <CTALink to="/unity-fund" arrow={false}>
