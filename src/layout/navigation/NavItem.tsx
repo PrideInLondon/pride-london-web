@@ -6,7 +6,7 @@ import React, {
   Dispatch,
   RefObject,
 } from 'react'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import theme from '../../theme/theme'
 import { checkBreakpoint } from '../../utils/style-utils'
 import ChevronDownIcon from '../../components/icons/chevronDownIcon'
