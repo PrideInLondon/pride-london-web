@@ -7,7 +7,9 @@ import { SectionWrapper } from './YouMeUsWePage.styles'
 
 const BeThereForYourCommunitySection = () => (
   <SectionWrapper>
-    <Heading>Be there for your community</Heading>
+    <Heading id="be-there-for-your-community">
+      Be there for your community
+    </Heading>
     <P variant="lg">
       Sometimes it only takes small but meaningful actions to show that you're
       there for your fellow community members. During times like these it takes
