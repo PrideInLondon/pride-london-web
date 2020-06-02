@@ -29,8 +29,8 @@ const PrideInLockdownSection = () => (
       act of allyship.
     </P>
     <Video
-      host="youtube"
-      videoId="TIExvoJXwKE" // TODO: get video id
+      host="vimeo"
+      videoId="425109516"
       coverImage={{
         src: ymuw,
         alt: 'You! Me! Us! We! repeated in rainbow text',
