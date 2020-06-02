@@ -6,9 +6,11 @@ import React, {
   Dispatch,
   RefObject,
 } from 'react'
+import Link from 'gatsby-link'
 import theme from '../../theme/theme'
 import { checkBreakpoint } from '../../utils/style-utils'
 import ChevronDownIcon from '../../components/icons/chevronDownIcon'
+import { handleUrl } from '../../utils/location-utils'
 import SubMenu from './SubMenu'
 import { MenuLink, SubMenuToggle, MenuItem } from './NavItem.styles'
 import { NavItemProps } from './NavItem.types'
@@ -107,8 +109,8 @@ const NavItem: React.FC<NavItemProps> = ({
         </Fragment>
       ) : (
         item?.url && (
-          <MenuLink
-            to={item.url}
+          <MenuLink<'a' | typeof Link>
+            {...handleUrl(item.url)}
             itemProp="url"
             onClick={() =>
               !checkBreakpoint(theme.navBreakpoint) &&
