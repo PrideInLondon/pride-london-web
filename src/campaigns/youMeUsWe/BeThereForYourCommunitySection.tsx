@@ -5,33 +5,34 @@ import { Heading, Grid, Item } from './BeThereForYourCommunitySection.styles'
 import CTABox from './CTABox'
 import { SectionWrapper } from './YouMeUsWePage.styles'
 
-const ActsOfKindnessSection = () => (
+const BeThereForYourCommunitySection = () => (
   <SectionWrapper>
-    <Heading>Acts of Kindness</Heading>
+    <Heading>Be there for your community</Heading>
     <P variant="lg">
-      Kindness makes the world go round, and during times like these it takes
-      all of us - that includes you, me, us and we - to step up and show it,
-      because right now these moments mean the most.
+      Sometimes it only takes small but meaningful actions to show that you're
+      there for your fellow community members. During times like these it takes
+      all of us - that includes you, me, us and we - to step up and show it.
     </P>
     <P>
-      Here are a few of the ways you can perform a random act of kindness to
-      your community. Once you’ve decided on yours, hit the button below to make
-      your commitment to kindness.
+      We want to hear what action(s) you pledge to take to demonstrate your
+      allyship. Select from our suggestions below, or even better, come up with
+      your own! Once you've decided on yours, hit the button below our
+      suggestions to make your pledge.
     </P>
     <Grid>
-      <Item title="Organise a Pride quiz for your friends" />
-      <Item title="Volunteer for an LGBT+ charity" />
-      <Item title="Send a text to someone you haven’t spoken to in a while" />
-      <Item title="Do a key worker's shopping" />
-      <Item title="Facetime a friend who may be struggling" />
-      <Item title="Send a postcard to a family member" />
-      <Item title="Bake cookies for your neighbours" />
-      <Item title="Send flowers to your bestie" />
-      <Item title="Start a Pride book club to cheer up some friends" />
+      <Item title="Call out all forms of racism, Islamophobia, biphobia, homophobia and transphobia when you see them" />
+      <Item title="Ask for pronouns each time you meet someone new" />
+      <Item title="Follow, listen to and amplify queer BAME and trans voices online" />
+      <Item title="Actively engage with marginalised queer voices through film and media" />
+      <Item title="Educate friends and family about marginalised LGBT+ communities" />
+      <Item title="Participate in all international LGBT+ days, not just those including you" />
+      <Item title="Read books and thought pieces by marginalised queer authors" />
+      <Item title="Show up and support queer performers hosting virtual shows and events" />
+      <Item title="Support LGBT+ owned businesses and organisations" />
     </Grid>
     <Typeform id="RLnK9L">
       <CTABox
-        title="Commit to kindness"
+        title="How will you demonstrate allyship?"
         cta={{
           text: 'I pledge to...',
         }}
@@ -41,4 +42,4 @@ const ActsOfKindnessSection = () => (
   </SectionWrapper>
 )
 
-export default ActsOfKindnessSection
+export default BeThereForYourCommunitySection

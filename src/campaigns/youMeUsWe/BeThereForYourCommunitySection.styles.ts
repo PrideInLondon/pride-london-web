@@ -19,4 +19,12 @@ export const Grid = styled(GridList)`
 export const Item = styled(GridItem)`
   text-align: left;
   font-size: 2.4rem;
+
+  ${mediaQueries.md} {
+    font-size: 1.9rem;
+  }
+
+  ${mediaQueries.xl} {
+    font-size: 2.4rem;
+  }
 `
