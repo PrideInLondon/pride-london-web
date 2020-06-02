@@ -62,7 +62,6 @@ export const MobileShareBar = styled(ShareBar).attrs({ content })`
 
 export const Wrapper = styled.div`
   position: relative;
-  text-align: justify;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,6 +80,7 @@ export const Wrapper = styled.div`
 
   p {
     max-width: 620px;
+    text-align: left;
   }
 `
 
