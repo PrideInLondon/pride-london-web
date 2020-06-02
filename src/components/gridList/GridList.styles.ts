@@ -46,11 +46,6 @@ export const StyledGridItem = styled.li`
     width: 33.3333%;
     float: left;
     height: ${HEIGHT}px;
-
-    &:first-child {
-      width: 66.6666%;
-      height: ${HEIGHT * 2}px;
-    }
   }
 `
 

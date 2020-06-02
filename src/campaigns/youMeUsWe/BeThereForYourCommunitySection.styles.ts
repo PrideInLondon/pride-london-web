@@ -21,10 +21,10 @@ export const Item = styled(GridItem)`
   font-size: 2.4rem;
 
   ${mediaQueries.md} {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 
   ${mediaQueries.xl} {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
 `
