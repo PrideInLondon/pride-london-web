@@ -74,6 +74,10 @@ const Navigation: React.FC<NavigationProps> = ({
                             title: "Pride's Got Talent",
                             url: '/events/prides-got-talent/',
                           },
+                          {
+                            title: 'Unity Fund',
+                            url: '/unity-fund',
+                          },
                         ],
                       },
                       {
