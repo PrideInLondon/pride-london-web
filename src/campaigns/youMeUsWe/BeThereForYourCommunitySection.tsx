@@ -20,7 +20,7 @@ const BeThereForYourCommunitySection = () => (
       suggestions to make your pledge.
     </P>
     <Grid>
-      <Item title="Call out all forms of racism, Islamophobia, biphobia, homophobia and transphobia when you see them" />
+      <Item title="Call out all forms of racism, Islamophobia, biphobia, homophobia and transphobia" />
       <Item title="Ask for pronouns each time you meet someone new" />
       <Item title="Follow, listen to and amplify queer BAME and trans voices online" />
       <Item title="Actively engage with marginalised queer voices through film and media" />
