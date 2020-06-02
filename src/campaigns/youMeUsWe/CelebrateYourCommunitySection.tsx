@@ -1,11 +1,11 @@
 import React from 'react'
 import { P } from '../../components/typography'
 import { Typeform } from '../../components/typeform'
-import { Heading } from './ShareYourStorySection.styles'
+import { Heading } from './CelebrateYourCommunitySection.styles'
 import { SectionWrapper, MobileShareBar } from './YouMeUsWePage.styles'
 import CTABox from './CTABox'
 
-const ShareYourStorySection = () => (
+const CelebrateYourCommunitySection = () => (
   <SectionWrapper>
     <Heading id="share-your-story">Share your story</Heading>
     <P variant="lg">
@@ -33,4 +33,4 @@ const ShareYourStorySection = () => (
   </SectionWrapper>
 )
 
-export default ShareYourStorySection
+export default CelebrateYourCommunitySection
