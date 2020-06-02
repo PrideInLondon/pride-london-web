@@ -33,7 +33,7 @@ const ActsOfAllyshipBox: React.FC<ActsOfAllyshipBoxProps> = ({
   children,
   cta: { text, ...ctaProps },
 }) => (
-  <Box display="flex" flexDirection="column">
+  <Box display={{ default: 'block', lg: 'flex' }} flexDirection="column">
     <Heading>
       0{number}.<br />
       {heading}
