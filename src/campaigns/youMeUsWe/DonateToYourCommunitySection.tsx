@@ -7,7 +7,7 @@ import { SectionWrapper } from './YouMeUsWePage.styles'
 
 const DonateToYourCommunitySection = () => (
   <SectionWrapper>
-    <Heading>Supporting the Community</Heading>
+    <Heading id="donate-to-your-community">Donate to your community</Heading>
     <P variant="lg">
       We're determined to continue to provide a platform to unite, support and
       celebrate every part of the LGBT+ community.
@@ -18,14 +18,16 @@ const DonateToYourCommunitySection = () => (
       that advocate and provide support for LGBT+ people.
     </P>
     <P>
-      Any donation, big or small, will support Pride in London and raise vital
-      funds for the Unity Fund, helping to address the needs of LGBT+ people in
-      times of crisis and beyond.
+      Donations will contribute to the Unity Fund, helping to address the needs
+      of LGBT+ people, and also support Pride in London’s vital work. So, if
+      you're able to donate, any amount big or small will make a real difference
+      to our community.
     </P>
     <P width="100%">
-      More information on the Unity Fund can be found{' '}
+      More information on the Unity Fund and others ways to support it can be
+      found{' '}
       {
-        <CTALink to="/support-us/unity-fund" arrow={false}>
+        <CTALink to="/unity-fund" arrow={false}>
           here
         </CTALink>
       }
