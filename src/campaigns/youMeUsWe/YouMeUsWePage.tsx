@@ -14,7 +14,7 @@ import Mark from './Mark'
 import PrideInLockdownSection from './PrideInLockdownSection'
 import ActsOfAllyshipSection from './ActsOfAllyshipSection'
 import ForEveryKindSection from './ForEveryKindSection'
-import SupportingTheCommunitySection from './SupportingTheCommunitySection'
+import DonateToYourCommunitySection from './DonateToYourCommunitySection'
 import ActsOfKindnessSection from './ActsOfKindnessSection'
 import ShareYourStorySection from './ShareYourStorySection'
 import rallying from './assets/rallying.jpg'
@@ -40,7 +40,7 @@ const YouMeUsWePage = (props: YouMeUsWePageProps) => (
       <FeaturedImage src={rallying} />
       <ForEveryKindSection />
       <Mark />
-      <SupportingTheCommunitySection />
+      <DonateToYourCommunitySection />
       <FeaturedImage src={different} marginTop="xl" />
       <ActsOfKindnessSection />
       <FeaturedImage src={sunshine} marginTop="xl" />

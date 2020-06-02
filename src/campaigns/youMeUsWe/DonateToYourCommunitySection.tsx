@@ -1,11 +1,11 @@
 import React from 'react'
 import { P } from '../../components/typography'
 import { CTALink } from '../../components/ctaLink'
-import { Heading } from './SupportingTheCommunitySection.styles'
+import { Heading } from './DonateToYourCommunitySection.styles'
 import CTABox from './CTABox'
 import { SectionWrapper } from './YouMeUsWePage.styles'
 
-const SupportingTheCommunitySection = () => (
+const DonateToYourCommunitySection = () => (
   <SectionWrapper>
     <Heading>Supporting the Community</Heading>
     <P variant="lg">
@@ -42,4 +42,4 @@ const SupportingTheCommunitySection = () => (
   </SectionWrapper>
 )
 
-export default SupportingTheCommunitySection
+export default DonateToYourCommunitySection
