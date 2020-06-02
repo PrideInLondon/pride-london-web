@@ -36,6 +36,7 @@ export const Video = ({
             frameBorder="0"
             src={generateVideoUrl(host, videoId)}
             title={caption}
+            allow="autoplay"
           />
         </VideoContainer>
       ) : (
