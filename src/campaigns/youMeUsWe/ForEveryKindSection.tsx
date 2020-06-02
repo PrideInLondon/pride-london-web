@@ -6,7 +6,7 @@ import { SectionWrapper } from './YouMeUsWePage.styles'
 const ForEveryKindSection = () => (
   <SectionWrapper>
     <Heading>For Every Kind</Heading>
-    <P textAlign="center">Narrated by Emma Frankland</P>
+    <P textAlign="center">A celebration of all LGBT+ identities</P>
     <Content>
       For the L’s, the G’s, the B’s and the T’s.
       <br />
