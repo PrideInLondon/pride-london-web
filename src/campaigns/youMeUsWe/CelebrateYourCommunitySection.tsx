@@ -15,10 +15,11 @@ const CelebrateYourCommunitySection = () => (
       you.
     </P>
     <P>
-      This year, we want to document and celebrate those everyday acts of
-      solidarity that embody the spirit of Pride – the times when you've
-      witnessed someone in the LGBT+ community supporting you or those around
-      you.
+      It could be someone taking a stand against bigotry and bullying, offering
+      meaningful support during a difficult time, or helping you to feel
+      accepted and loved when you needed it most. Whatever your experience of
+      allyship, we want to hear about it! Hit the button below to tell us your
+      story, and it could even be featured on our site or social channels!
     </P>
     <Typeform id="IGB4QL">
       <CTABox
