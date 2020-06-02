@@ -75,6 +75,10 @@ export const Wrapper = styled.div`
     font-family: ${fonts.cactus};
   }
 
+  h2 {
+    text-align: center;
+  }
+
   p {
     max-width: 620px;
   }
