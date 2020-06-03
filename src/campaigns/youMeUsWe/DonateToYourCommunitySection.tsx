@@ -37,7 +37,8 @@ const DonateToYourCommunitySection = () => (
       title="Support our community"
       cta={{
         text: 'Donate now',
-        to: 'https://donate.prideinlondon.org/?campaign=ymuw',
+        to:
+          'https://donate.prideinlondon.org/?campaign=unity&source=ymuw&medium=button',
       }}
       marginTop="lg"
     />
