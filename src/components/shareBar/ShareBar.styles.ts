@@ -4,7 +4,7 @@ import { colors } from '../../theme/colors'
 import { fonts } from '../../theme/fonts'
 import { sm } from '../../theme/space'
 
-export const Wrapper = styled.div`
+export const Flex = styled.div`
   font-size: 2em;
   display: flex;
   line-height: 1em;

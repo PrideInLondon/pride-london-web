@@ -80,15 +80,6 @@ const Navigation: React.FC<NavigationProps> = ({
                           },
                         ],
                       },
-                      {
-                        heading: 'Campaigns',
-                        links: [
-                          {
-                            title: 'You! Me! Us! We!',
-                            url: '/about-us/campaigns/you-me-us-we',
-                          },
-                        ],
-                      },
                     ],
                   }}
                 />

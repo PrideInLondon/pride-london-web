@@ -3,51 +3,60 @@ import { PlayButton } from '../playButton'
 import {
   StyledFigure,
   VideoContainer,
+  VideoImageWrapper,
   StyledVideoImage,
   StyledFigCaption,
   StylediFrame,
   StyledButtonContainer,
 } from './Video.styles'
-import { VideoProps } from './Video.types'
+import { VideoHost, VideoProps } from './Video.types'
 
-const Video = ({
+const HOSTS = {
+  vimeo: 'player.vimeo.com/video',
+  youtube: 'youtube.com/embed',
+}
+
+export const generateVideoUrl = (host: VideoHost, id: string) =>
+  `https://${HOSTS[host]}/${id}?autoplay=1`
+
+export const Video = ({
+  host,
   videoId,
-  coverImage: { image, alt },
+  coverImage: { src, alt },
   caption,
+  ...props
 }: VideoProps) => {
   const [clicked, setClicked] = useState(false)
-
   return (
-    <StyledFigure>
+    <StyledFigure {...props}>
       {clicked ? (
         <VideoContainer>
           <StylediFrame
             allowFullScreen
             frameBorder="0"
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+            src={generateVideoUrl(host, videoId)}
             title={caption}
+            allow="autoplay"
           />
         </VideoContainer>
       ) : (
         <>
-          <div
+          <VideoImageWrapper
             role="button"
             title={`Play ${caption} video`}
-            onClick={() => setClicked(!clicked)}
+            onClick={() => setClicked(true)}
           >
-            <StyledVideoImage fixed={image} alt={alt} />
-          </div>
+            <StyledVideoImage {...{ src, alt }} />
+          </VideoImageWrapper>
           <StyledButtonContainer>
             <PlayButton
               title={`Play ${caption} video`}
-              onClick={() => setClicked(!clicked)}
+              onClick={() => setClicked(true)}
             ></PlayButton>
           </StyledButtonContainer>
         </>
       )}
-      <StyledFigCaption>{caption}</StyledFigCaption>
+      <StyledFigCaption padding="sm">{caption}</StyledFigCaption>
     </StyledFigure>
   )
 }
-
-export default Video

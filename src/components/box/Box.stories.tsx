@@ -1,7 +1,7 @@
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
-import { H3 } from '../typography/Typography'
+import { H3 } from '../typography'
 import { Button } from '../button/Button'
 import { Box } from './Box'
 
