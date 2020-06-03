@@ -9,17 +9,17 @@ export interface ShareContent {
   /**
    * Required for Email/LinkedIn
    */
-  title?: string
+  title: string
 
   /**
    * Required for Email/LinkedIn/Twitter
    */
-  body?: string
+  body: string
 
   /**
    * Required for Facebook/LinkedIn
    */
-  url?: string
+  url: string
 }
 
 const generateQueryParams = (params: any) =>

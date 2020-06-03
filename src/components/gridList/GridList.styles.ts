@@ -1,21 +1,17 @@
 import styled from 'styled-components'
-import { colors } from '../../../theme/colors'
-import { space } from '../../../theme/space'
-import { mediaQueries } from '../../../theme/mediaQueries'
-import { fonts } from '../../../theme/fonts'
+import { colors } from '../../theme/colors'
+import { space } from '../../theme/space'
+import { mediaQueries } from '../../theme/mediaQueries'
+import { fonts } from '../../theme/fonts'
 
 const HEIGHT = 280
+
 export const Title = styled.div`
   color: ${colors.indigo};
   font-family: ${fonts.cactus};
-  font-size: 2.4375rem;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.2;
-
-  ${mediaQueries.md} {
-    font-size: 3.5625rem;
-  }
 `
 export const Count = styled.div`
   &:before {
@@ -37,21 +33,19 @@ export const Count = styled.div`
 `
 
 export const StyledGridItem = styled.li`
+  font-size: 2.4375rem;
   padding: ${space.md};
   width: 100%;
 
   ${mediaQueries.md} {
+    font-size: 3.5625rem;
     width: 50%;
   }
+
   ${mediaQueries.lg} {
     width: 33.3333%;
     float: left;
     height: ${HEIGHT}px;
-
-    &:first-child {
-      width: 66.6666%;
-      height: ${HEIGHT * 2}px;
-    }
   }
 `
 
