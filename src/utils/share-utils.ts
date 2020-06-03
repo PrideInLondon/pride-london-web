@@ -39,7 +39,6 @@ export const generateShareUrl = (
     case 'messenger':
       return `https://www.facebook.com/sharer/sharer.php?${generateQueryParams({
         u: url,
-        app_id: process.env.GATSBY_FACEBOOK_APP_ID,
       })}`
     case 'linked-in':
       return `https://www.linkedin.com/shareArticle?${generateQueryParams({
