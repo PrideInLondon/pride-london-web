@@ -24,14 +24,14 @@ const DonateToYourCommunitySection = () => (
       to our community.
     </P>
     <P width="100%">
-      More information on the Unity Fund and other ways to support it can be
-      found{' '}
+      For more information on the Unity Fund and other ways to contribute to it,
+      check out our{' '}
       {
-        <CTALink to="/unity-fund" arrow={false}>
-          here
+        <CTALink to="/support-us" arrow={false}>
+          Support Pride
         </CTALink>
-      }
-      .
+      }{' '}
+      page.
     </P>
     <CTABox
       title="Support our community"
