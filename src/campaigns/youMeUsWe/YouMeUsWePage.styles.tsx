@@ -47,7 +47,6 @@ export const DesktopShareBarWrapper = styled.div`
 `
 
 export const DesktopShareBar = styled(ShareBar).attrs({ content })`
-  position: sticky;
   top: 90px;
   margin-bottom: 120px;
 `
