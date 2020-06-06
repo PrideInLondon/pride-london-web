@@ -13,10 +13,12 @@ const YouMeUsWePageHelmet = ({
   location: { pathname },
 }: YouMeUsWePageProps) => {
   const title = generateTitle('You! Me! Us! We!')
-  const metaImg = `https://${siteUrl}${ymuwMetaImg}?w=1000&h=562`
+  const metaImg = `${siteUrl}${ymuwMetaImg}?w=1000&h=562`
   const metaUrl = `${siteUrl}/${pathname}`
   const description =
     'Celebrating allyship and standing up for one another #YouMeUsWe is a rallying cry for Pride 2020'
+
+  console.log(metaImg)
   return (
     <Helmet
       title={title}
