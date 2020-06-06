@@ -17,8 +17,6 @@ const YouMeUsWePageHelmet = ({
   const metaUrl = `${siteUrl}/${pathname}`
   const description =
     'Celebrating allyship and standing up for one another #YouMeUsWe is a rallying cry for Pride 2020'
-
-  console.log(metaImg)
   return (
     <Helmet
       title={title}
