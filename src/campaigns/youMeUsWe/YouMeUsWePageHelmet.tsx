@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { generateTitle } from '../../components/helmet/Helmet'
-import ymuw from './assets/ymuw.jpg'
+import ymuwMetaImg from './assets/ymuw-meta.jpg'
 import { YouMeUsWePageProps } from './YouMeUseWePage.types'
 
 const YouMeUsWePageHelmet = ({
@@ -13,8 +13,8 @@ const YouMeUsWePageHelmet = ({
   location: { pathname },
 }: YouMeUsWePageProps) => {
   const title = generateTitle('You! Me! Us! We!')
-  const metaImg = `https://${siteUrl}${ymuw}?w=1000&h=562`
-  const metaUrl = `${siteUrl}/${pathname}`
+  const metaImg = `${siteUrl}${ymuwMetaImg}?w=1000&h=562`
+  const metaUrl = `${siteUrl}${pathname}`
   const description =
     'Celebrating allyship and standing up for one another #YouMeUsWe is a rallying cry for Pride 2020'
   return (
