@@ -15,7 +15,7 @@ const ParadeApplications = () => (
       <StyledHeader>Join our #YouMeUsWe campaign!</StyledHeader>
       <StyledDescription>
         This Pride month we're calling on all LGBT+ people to make an act of
-        allyship
+        allyship.
       </StyledDescription>
       <StyledButton
         to="https://prideinlondon.org/about-us/campaigns/you-me-us-we/"

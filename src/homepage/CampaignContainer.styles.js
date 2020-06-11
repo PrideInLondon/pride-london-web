@@ -3,7 +3,7 @@ import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { Button } from '../components/button'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
-import CampaignContainerBg from '../campaigns/youMeUsWe/assets/ymuw-meta.jpg'
+import CampaignContainerBg from '../campaigns/youMeUsWe/assets/ymuw.jpg'
 
 export const Container = styled.div`
   display: flex;
@@ -80,7 +80,6 @@ export const StyledDescription = styled.p`
 
 export const StyledButton = styled(Button)`
   width: 90%;
-  margin-bottom: 30px;
   font-size: 15px;
 
   ${mediaQueries.md} {
