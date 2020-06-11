@@ -7,6 +7,7 @@ import { mediaQueries } from '../theme/mediaQueries'
 import { Banner } from '../components/banner'
 import bannerBackground from './bannerBackground.jpg'
 import VolunteerBoxInfo from './VolunteerBoxInfo'
+import CampaignContainer from './CampaignContainer'
 import LatestNewsContainer from './LatestNewsContainer'
 import Announcements from './Announcements'
 import Donate from './Donate'
@@ -38,6 +39,7 @@ const HomePage = ({
       videoId="348603446"
       fixed={childImageSharp}
     />
+    <CampaignContainer />
     <Divider />
     <Donate />
     <VolunteerBoxInfo />
