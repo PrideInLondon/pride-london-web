@@ -1,13 +1,7 @@
 import React, { useEffect, useRef } from 'react'
+import Helmet from 'react-helmet'
 import { Banner } from '../components/banner'
 import { colors } from '../theme/colors'
-
-// const embed = `<script
-// src=""
-// data-sharing="lp-embed"
-// data-page-domain="email.prideinlondon.org"
-// data-page-id="52OV-3PP/sign-up"
-// ></script>`
 
 const Subscribe = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -35,6 +29,9 @@ const Subscribe = () => {
 
   return (
     <>
+      <Helmet>
+        <style>{`footer {display: none; }`}</style>
+      </Helmet>
       <Banner titleText="Subscribe" color={colors.bondiBlue} />
       <div ref={ref}></div>
     </>
