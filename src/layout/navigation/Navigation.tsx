@@ -11,7 +11,7 @@ import {
   Logo,
   Menu,
   Burger,
-  DonateButton,
+  SupportButton,
 } from './Navigation.styles'
 
 import { NavigationProps } from './Navigation.types'
@@ -74,6 +74,10 @@ const Navigation: React.FC<NavigationProps> = ({
                             title: "Pride's Got Talent",
                             url: '/events/prides-got-talent/',
                           },
+                          {
+                            title: 'Unity Fund',
+                            url: '/unity-fund',
+                          },
                         ],
                       },
                       {
@@ -93,76 +97,10 @@ const Navigation: React.FC<NavigationProps> = ({
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-parade-day',
-                    title: 'Parade day',
+                    title: 'Parade',
                     desc:
                       'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
-                    url: '/',
-                    submenu: [
-                      {
-                        heading: 'Parade',
-                        links: [
-                          {
-                            title: '2021 Parade',
-                            url: '/parade',
-                          },
-                          {
-                            title: 'Take part in the Parade',
-                            url: '/parade/take-part',
-                          },
-                          {
-                            title: 'Parade groups',
-                            url: '/parade/groups',
-                          },
-                          {
-                            title: 'Map',
-                            url: '/parade/map',
-                          },
-                          {
-                            title: 'Accessibility',
-                            url: '/parade/accessibility',
-                          },
-                          {
-                            title: 'Residents and businesses info',
-                            url: '/parade/residents-and-businesses-info',
-                          },
-                        ],
-                      },
-                      {
-                        heading: 'Line up',
-                        links: [
-                          {
-                            title: 'Cabaret Stage',
-                            url: '/line-up/cabaret-stage',
-                          },
-                          {
-                            title: 'Family Area',
-                            url: '/line-up/family-area',
-                          },
-                          {
-                            title: 'Trafalgar Square Stage',
-                            url: '/line-up/trafalgar-square-stage',
-                          },
-                          {
-                            title: "Women's Area",
-                            url: '/line-up/womens-area',
-                          },
-                          { title: 'World Area', url: '/line-up/world-area' },
-                        ],
-                      },
-                      {
-                        heading: 'Stalls',
-                        links: [
-                          {
-                            title: 'Last year’s stalls',
-                            url: '/parade/stalls',
-                          },
-                          {
-                            title: 'Hire a stall',
-                            url: '/parade/stalls/hire-a-stall',
-                          },
-                        ],
-                      },
-                    ],
+                    url: '/parade',
                   }}
                 />
                 <NavItem
@@ -178,56 +116,9 @@ const Navigation: React.FC<NavigationProps> = ({
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
-                    id: 'nav-support-us',
-                    title: 'Support us',
-                    desc:
-                      'If you’re passionate about the LGBT+ community please consider supporting Pride by donating, sponsoring or volunteering.',
-                    url: '/',
-                    submenu: [
-                      {
-                        heading: 'As an individual',
-                        links: [
-                          {
-                            title: 'Volunteer',
-                            url: 'https://volunteer.prideinlondon.org',
-                          },
-                          {
-                            title: 'Make a donation',
-                            url: '/support-us/donate',
-                          },
-                          {
-                            title: 'Buy merchandise',
-                            url: '/support-us/merchandise',
-                          },
-                          {
-                            title: 'Work for Pride',
-                            url: '/support-us/jobs',
-                          },
-                        ],
-                      },
-                      {
-                        heading: 'As a business',
-                        links: [
-                          {
-                            title: 'Partner with us',
-                            url: '/support-us/partners',
-                          },
-                          {
-                            title: 'Pride in the City',
-                            url: '/support-us/pride-in-the-city',
-                          },
-                        ],
-                      },
-                    ],
-                  }}
-                />
-                <NavItem
-                  backgroundColor={backgroundColor}
-                  setNavOpen={setOpen}
-                  item={{
-                    id: 'nav-visitor-info',
-                    title: 'Explore London',
-                    url: '/explore-london',
+                    id: 'nav-volunteer',
+                    title: 'Volunteer',
+                    url: 'https://volunteer.prideinlondon.org',
                   }}
                 />
                 <NavItem
@@ -240,9 +131,7 @@ const Navigation: React.FC<NavigationProps> = ({
                   }}
                 />
                 <NavItem backgroundColor={backgroundColor}>
-                  <DonateButton to="https://donate.prideinlondon.org/">
-                    Donate
-                  </DonateButton>
+                  <SupportButton to="/support-us">Support Pride</SupportButton>
                 </NavItem>
               </Menu>
             </nav>

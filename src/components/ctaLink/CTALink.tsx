@@ -21,16 +21,25 @@ const StyledLink = styled.a<{ color?: string }>`
 
   ${color}
 `
+
 StyledLink.defaultProps = {
   color: colors.black,
 }
 
-export const CTALink: React.FC<CTALinkProps> = ({ to, children, ...props }) => (
+const Arrow = () => <>&nbsp;&rsaquo;</>
+
+export const CTALink: React.FC<CTALinkProps> = ({
+  to,
+  arrow = true,
+  children,
+  ...props
+}) => (
   <StyledLink<'a' | 'span' | typeof Link>
     {...(to ? handleUrl(to) : { as: 'span' })}
     className="cta-link"
     {...props}
   >
-    {children}&nbsp;&rsaquo;
+    {children}
+    {arrow && <Arrow />}
   </StyledLink>
 )
