@@ -31,7 +31,7 @@ export const Icon = styled(
     ${({ direction }) => calculateRotationDegrees(direction)}deg
   );
 
-  ${compose(space, layout)};
+  ${compose(space, layout)}
 `
 
 Icon.defaultProps = {
