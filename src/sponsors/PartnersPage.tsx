@@ -13,6 +13,7 @@ import { PageIntro } from '../components/pageIntro'
 import bannerBackground from './bannerBackground.jpg'
 import SponsorsSubSection from './SponsorsSubSection'
 import { renderSponsors } from './helpers'
+import { AllContentfulSponsor } from './PartnersPage.types'
 
 const ppLink =
   'https://assets.ctfassets.net/0ho16wyr4i9n/2qiM6XcxpwmT2YY9g2hka/361aba69bffe4592f898f15faf61beff/Pride_in_London_2020_Partnerships.pdf'
@@ -39,8 +40,17 @@ const SecondarySponsorsContainer = styled.div`
   `};
 `
 
-const selectSponsors = data =>
-  data.allContentfulSponsor.edges
+interface Sponsor {
+  name: string
+  url: string
+  logo: string
+  level: string
+}
+
+const groupSponsorsByLevel = (
+  allContentfulSponsor: AllContentfulSponsor
+): { [key: string]: Sponsor[] } =>
+  allContentfulSponsor.edges
     .map(({ node }) => ({
       name: node.sponsorName,
       url: node.sponsorUrl,
@@ -48,15 +58,22 @@ const selectSponsors = data =>
       level: node.sponsorLevel,
     }))
     .reduce(
-      (sponsors, sponsor) => ({
+      (
+        sponsors: { [key: string]: Sponsor[] },
+        sponsor: Sponsor
+      ): { [key: string]: Sponsor[] } => ({
         ...sponsors,
         [sponsor.level]: [sponsor, ...(sponsors[sponsor.level] || [])],
       }),
       {}
     )
 
-const PartnersPage = ({ data }) => {
-  const sponsors = selectSponsors(data)
+const PartnersPage = ({
+  data: { allContentfulSponsor },
+}: {
+  data: { allContentfulSponsor: AllContentfulSponsor }
+}) => {
+  const sponsors = groupSponsorsByLevel(allContentfulSponsor)
   return (
     <Fragment>
       <Banner
