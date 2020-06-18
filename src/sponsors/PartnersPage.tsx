@@ -3,7 +3,6 @@ import { Banner } from '../components/banner'
 import constants from '../constants'
 import theme from '../theme/theme'
 import { Container, Row, Column } from '../components/grid'
-import Intercom from '../components/intercom'
 import SponsorHeadline from '../components/icons/sponsorHeadline'
 import SponsorStar from '../components/icons/sponsorStar'
 import { PageIntro } from '../components/pageIntro'
@@ -162,7 +161,6 @@ const PartnersPage = ({
             </SecondarySponsorsContainer>
           </Column>
         </Row>
-        <Intercom />
       </Container>
     </>
   )
