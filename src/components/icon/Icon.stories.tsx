@@ -4,7 +4,7 @@ import { select } from '@storybook/addon-knobs'
 import { colors } from '../../theme/colors'
 import { Icon } from './Icon'
 import { COMPONENTS } from './Icon.utils'
-import { DIRECTIONS } from './Icon.types'
+import { ROTATIONS } from './Icon.types'
 
 const names: string[] = Object.keys(COMPONENTS)
 
@@ -34,12 +34,12 @@ storiesOf('Icon', module)
       </div>
     )
   })
-  .add('direction', () => (
+  .add('rotate', () => (
     <div style={{ fontSize: '2em' }}>
       <Icon
         name={select('Name', names, names[0])}
         variant="indigo"
-        direction={select('Direction', DIRECTIONS, DIRECTIONS[0])}
+        rotate={select('Rotate', ROTATIONS, ROTATIONS[0])}
       />
     </div>
   ))

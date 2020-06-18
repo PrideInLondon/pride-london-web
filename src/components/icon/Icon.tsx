@@ -11,30 +11,29 @@ import {
 
 const DEFAULT_SIZE = '1em'
 
-export const Icon = styled(
-  ({ name, variant, direction, ...props }: IconProps) => {
-    const Component = calculateComponent(name)
-    const spaceLayoutProps = useSpaceLayoutProps(props)
-    return (
-      <Component
-        focusable={false}
-        aria-hidden
-        role="img"
-        colors={calculateColors(variant)}
-        {...spaceLayoutProps[1]}
-      />
-    )
-  }
-)`
+export const Icon = styled(({ name, variant, rotate, ...props }: IconProps) => {
+  const Component = calculateComponent(name)
+  const spaceLayoutProps = useSpaceLayoutProps(props)
+  return (
+    <Component
+      focusable={false}
+      aria-hidden
+      role="img"
+      colors={calculateColors(variant)}
+      {...spaceLayoutProps[1]}
+    />
+  )
+})`
   line-height: inherit;
   transform: rotate(
-    ${({ direction }) => calculateRotationDegrees(direction)}deg
+    ${({ rotate }) => calculateRotationDegrees(rotate || 'none')}deg
   );
 
   ${compose(space, layout)}
 `
 
 Icon.defaultProps = {
+  rotate: 'none',
   width: DEFAULT_SIZE,
   height: DEFAULT_SIZE,
   verticalAlign: 'middle',
