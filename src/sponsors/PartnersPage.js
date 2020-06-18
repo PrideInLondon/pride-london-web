@@ -117,62 +117,57 @@ const PartnersPage = ({ data }) => {
               A huge thank you to our main partners for their continued support.
             </p>
             <MainSponsorsContainer>
-              {sponsors[constants.sponsorLevels.headline] && (
-                <SponsorsSubSection
-                  title="Headline sponsors"
-                  icon={<SponsorHeadline />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.headline])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.gold] && (
-                <SponsorsSubSection
-                  title="Gold sponsors"
-                  icon={<SponsorStar color={theme.colors.gold} />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.gold])}
-                </SponsorsSubSection>
+              {[
+                {
+                  level: constants.sponsorLevels.headline,
+                  title: 'Headline sponsors',
+                  icon: <SponsorHeadline />,
+                },
+                {
+                  level: constants.sponsorLevels.gold,
+                  title: 'Gold sponsors',
+                  icon: <SponsorStar color={theme.colors.gold} />,
+                },
+              ].map(
+                ({ level, title, ...props }) =>
+                  sponsors[level] && (
+                    <SponsorsSubSection key={title} {...{ title }} {...props}>
+                      {renderSponsors(sponsors[level])}
+                    </SponsorsSubSection>
+                  )
               )}
             </MainSponsorsContainer>
-
             <SecondarySponsorsContainer>
-              {sponsors[constants.sponsorLevels.silver] && (
-                <SponsorsSubSection
-                  title="Silver sponsors"
-                  icon={<SponsorStar color={theme.colors.silver} />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.silver])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.bronze] && (
-                <SponsorsSubSection
-                  title="Bronze sponsors"
-                  icon={<SponsorStar color={theme.colors.bronze} />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.bronze])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.partners] && (
-                <SponsorsSubSection title="Partners">
-                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.supporters] && (
-                <SponsorsSubSection title="Supporters">
-                  {renderSponsors(sponsors[constants.sponsorLevels.supporters])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.digitalPartners] && (
-                <SponsorsSubSection title="Digital Partners">
-                  {renderSponsors(
-                    sponsors[constants.sponsorLevels.digitalPartners]
-                  )}
-                </SponsorsSubSection>
+              {[
+                {
+                  level: constants.sponsorLevels.silver,
+                  title: 'Silver sponsors',
+                  icon: <SponsorStar color={theme.colors.silver} />,
+                },
+                {
+                  level: constants.sponsorLevels.bronze,
+                  title: 'Bronze sponsors',
+                  icon: <SponsorStar color={theme.colors.bronze} />,
+                },
+                {
+                  level: constants.sponsorLevels.partners,
+                  title: 'Partners',
+                },
+                {
+                  level: constants.sponsorLevels.supporters,
+                  title: 'Supporters',
+                },
+                {
+                  level: constants.sponsorLevels.digitalPartners,
+                  title: 'Digital Partners',
+                },
+              ].map(
+                ({ level, title, ...props }) =>
+                  sponsors[level] && (
+                    <SponsorsSubSection key={title} {...{ title }} {...props}>
+                      {renderSponsors(sponsors[level])}
+                    </SponsorsSubSection>
+                  )
               )}
             </SecondarySponsorsContainer>
           </Column>
