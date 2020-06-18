@@ -167,14 +167,6 @@ const PartnersPage = ({ data }) => {
                 </SponsorsSubSection>
               )}
 
-              {sponsors[constants.sponsorLevels.mediaPartners] && (
-                <SponsorsSubSection title="Media Partners">
-                  {renderSponsors(
-                    sponsors[constants.sponsorLevels.mediaPartners]
-                  )}
-                </SponsorsSubSection>
-              )}
-
               {sponsors[constants.sponsorLevels.digitalPartners] && (
                 <SponsorsSubSection title="Digital Partners">
                   {renderSponsors(
