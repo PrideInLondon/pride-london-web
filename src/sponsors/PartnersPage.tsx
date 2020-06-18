@@ -1,10 +1,8 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import { Banner } from '../components/banner'
 import constants from '../constants'
 import theme from '../theme/theme'
-import { media } from '../theme/media'
 import { Container, Row, Column } from '../components/grid'
 import Intercom from '../components/intercom'
 import SponsorHeadline from '../components/icons/sponsorHeadline'
@@ -13,32 +11,15 @@ import { PageIntro } from '../components/pageIntro'
 import bannerBackground from './bannerBackground.jpg'
 import SponsorsSubSection from './SponsorsSubSection'
 import { renderSponsors } from './helpers'
+import {
+  ListTitle,
+  MainSponsorsContainer,
+  SecondarySponsorsContainer,
+} from './PartnersPage.styles'
 import { AllContentfulSponsor } from './PartnersPage.types'
 
 const ppLink =
   'https://assets.ctfassets.net/0ho16wyr4i9n/2qiM6XcxpwmT2YY9g2hka/361aba69bffe4592f898f15faf61beff/Pride_in_London_2020_Partnerships.pdf'
-
-const ListTitle = styled.h2`
-  margin-top: 0;
-  margin-bottom: 10px;
-  ${media.tablet`
-    margin-bottom: 15px;
-  `};
-`
-
-const MainSponsorsContainer = styled.div`
-  margin-top: 30px;
-
-  ${media.tablet`
-    margin-top: 40px;
-    max-width: 646px;
-  `};
-`
-const SecondarySponsorsContainer = styled.div`
-  ${media.tablet`
-    max-width: 860px;
-  `};
-`
 
 interface Sponsor {
   name: string
