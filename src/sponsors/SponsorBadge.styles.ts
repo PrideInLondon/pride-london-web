@@ -2,11 +2,14 @@ import styled, { css } from 'styled-components'
 import { media } from '../theme/media'
 import constants from '../constants'
 
-export const isLargeBadge = level =>
+export const isLargeBadge = (level: string) =>
   level === constants.sponsorLevels.headline ||
   level === constants.sponsorLevels.gold
 
-export const Badge = styled.a`
+export const Badge = styled.a<{
+  level: string
+  preventLevelSize: boolean
+}>`
   border: none;
   display: inline-flex;
   align-items: center;
@@ -36,7 +39,10 @@ export const Badge = styled.a`
         `};
 `
 
-export const BadgeImage = styled.img`
+export const BadgeImage = styled.img<{
+  level: string
+  preventLevelSize: boolean
+}>`
   ${({ level, preventLevelSize }) =>
     isLargeBadge(level) && !preventLevelSize
       ? css`
