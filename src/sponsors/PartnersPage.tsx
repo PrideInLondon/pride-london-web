@@ -1,46 +1,28 @@
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React from 'react'
 import { Banner } from '../components/banner'
 import constants from '../constants'
 import theme from '../theme/theme'
-import { media } from '../theme/media'
 import { Container, Row, Column } from '../components/grid'
-import Intercom from '../components/intercom'
 import SponsorHeadline from '../components/icons/sponsorHeadline'
 import SponsorStar from '../components/icons/sponsorStar'
 import { PageIntro } from '../components/pageIntro'
 import bannerBackground from './bannerBackground.jpg'
 import SponsorsSubSection from './SponsorsSubSection'
 import { renderSponsors } from './helpers'
+import {
+  ListTitle,
+  MainSponsorsContainer,
+  SecondarySponsorsContainer,
+} from './PartnersPage.styles'
+import { AllContentfulSponsor, Sponsor } from './PartnersPage.types'
 
-const ppLink =
+const PARTNERSHIP_PACKAGES_LINK =
   'https://assets.ctfassets.net/0ho16wyr4i9n/2qiM6XcxpwmT2YY9g2hka/361aba69bffe4592f898f15faf61beff/Pride_in_London_2020_Partnerships.pdf'
 
-const ListTitle = styled.h2`
-  margin-top: 0;
-  margin-bottom: 10px;
-  ${media.tablet`
-    margin-bottom: 15px;
-  `};
-`
-
-const MainSponsorsContainer = styled.div`
-  margin-top: 30px;
-
-  ${media.tablet`
-    margin-top: 40px;
-    max-width: 646px;
-  `};
-`
-const SecondarySponsorsContainer = styled.div`
-  ${media.tablet`
-    max-width: 860px;
-  `};
-`
-
-const selectSponsors = data =>
-  data.allContentfulSponsor.edges
+const groupSponsorsByLevel = (
+  allContentfulSponsor: AllContentfulSponsor
+): { [key: string]: Sponsor[] } =>
+  allContentfulSponsor.edges
     .map(({ node }) => ({
       name: node.sponsorName,
       url: node.sponsorUrl,
@@ -48,17 +30,24 @@ const selectSponsors = data =>
       level: node.sponsorLevel,
     }))
     .reduce(
-      (sponsors, sponsor) => ({
+      (
+        sponsors: { [key: string]: Sponsor[] },
+        sponsor: Sponsor
+      ): { [key: string]: Sponsor[] } => ({
         ...sponsors,
         [sponsor.level]: [sponsor, ...(sponsors[sponsor.level] || [])],
       }),
       {}
     )
 
-const PartnersPage = ({ data }) => {
-  const sponsors = selectSponsors(data)
+const PartnersPage = ({
+  data: { allContentfulSponsor },
+}: {
+  data: { allContentfulSponsor: AllContentfulSponsor }
+}) => {
+  const sponsors = groupSponsorsByLevel(allContentfulSponsor)
   return (
-    <Fragment>
+    <>
       <Banner
         titleText="Partner with us"
         subtitleText="Find out how your company can help us to keep Pride free for everyone"
@@ -106,7 +95,7 @@ const PartnersPage = ({ data }) => {
         </p>
         <p>
           For more information download information on the{' '}
-          <a href={ppLink}>2020 Partnership Packages.</a>
+          <a href={PARTNERSHIP_PACKAGES_LINK}>2020 Partnership Packages.</a>
         </p>
       </PageIntro>
       <Container>
@@ -117,82 +106,64 @@ const PartnersPage = ({ data }) => {
               A huge thank you to our main partners for their continued support.
             </p>
             <MainSponsorsContainer>
-              {sponsors[constants.sponsorLevels.headline] && (
-                <SponsorsSubSection
-                  title="Headline sponsors"
-                  icon={<SponsorHeadline />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.headline])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.gold] && (
-                <SponsorsSubSection
-                  title="Gold sponsors"
-                  icon={<SponsorStar color={theme.colors.gold} />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.gold])}
-                </SponsorsSubSection>
+              {[
+                {
+                  level: constants.sponsorLevels.headline,
+                  title: 'Headline sponsors',
+                  icon: <SponsorHeadline />,
+                },
+                {
+                  level: constants.sponsorLevels.gold,
+                  title: 'Gold sponsors',
+                  icon: <SponsorStar color={theme.colors.gold} />,
+                },
+              ].map(
+                ({ level, title, ...props }) =>
+                  sponsors[level] && (
+                    <SponsorsSubSection key={title} {...{ title }} {...props}>
+                      {renderSponsors(sponsors[level])}
+                    </SponsorsSubSection>
+                  )
               )}
             </MainSponsorsContainer>
-
             <SecondarySponsorsContainer>
-              {sponsors[constants.sponsorLevels.silver] && (
-                <SponsorsSubSection
-                  title="Silver sponsors"
-                  icon={<SponsorStar color={theme.colors.silver} />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.silver])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.bronze] && (
-                <SponsorsSubSection
-                  title="Bronze sponsors"
-                  icon={<SponsorStar color={theme.colors.bronze} />}
-                >
-                  {renderSponsors(sponsors[constants.sponsorLevels.bronze])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.partners] && (
-                <SponsorsSubSection title="Partners">
-                  {renderSponsors(sponsors[constants.sponsorLevels.partners])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.supporters] && (
-                <SponsorsSubSection title="Supporters">
-                  {renderSponsors(sponsors[constants.sponsorLevels.supporters])}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.mediaPartners] && (
-                <SponsorsSubSection title="Media Partners">
-                  {renderSponsors(
-                    sponsors[constants.sponsorLevels.mediaPartners]
-                  )}
-                </SponsorsSubSection>
-              )}
-
-              {sponsors[constants.sponsorLevels.digitalPartners] && (
-                <SponsorsSubSection title="Digital Partners">
-                  {renderSponsors(
-                    sponsors[constants.sponsorLevels.digitalPartners]
-                  )}
-                </SponsorsSubSection>
+              {[
+                {
+                  level: constants.sponsorLevels.silver,
+                  title: 'Silver sponsors',
+                  icon: <SponsorStar color={theme.colors.silver} />,
+                },
+                {
+                  level: constants.sponsorLevels.bronze,
+                  title: 'Bronze sponsors',
+                  icon: <SponsorStar color={theme.colors.bronze} />,
+                },
+                {
+                  level: constants.sponsorLevels.partners,
+                  title: 'Partners',
+                },
+                {
+                  level: constants.sponsorLevels.supporters,
+                  title: 'Supporters',
+                },
+                {
+                  level: constants.sponsorLevels.digitalPartners,
+                  title: 'Digital Partners',
+                },
+              ].map(
+                ({ level, title, ...props }) =>
+                  sponsors[level] && (
+                    <SponsorsSubSection key={title} {...{ title }} {...props}>
+                      {renderSponsors(sponsors[level])}
+                    </SponsorsSubSection>
+                  )
               )}
             </SecondarySponsorsContainer>
           </Column>
         </Row>
-        <Intercom />
       </Container>
-    </Fragment>
+    </>
   )
-}
-
-PartnersPage.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export default PartnersPage
