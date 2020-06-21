@@ -1,5 +1,5 @@
 import { IconName, InternalIconProps } from '../Icon.types'
-import Calendar from './Calendar'
+import Date from './Date'
 import Email from './Email'
 import Facebook from './Facebook'
 import Laptop from './Laptop'
@@ -10,7 +10,7 @@ import OnDemand from './OnDemand'
 import Play from './Play'
 import Twitter from './Twitter'
 
-const CALENDAR = 'calendar',
+const DATE = 'date',
   EMAIL = 'email',
   FACEBOOK = 'facebook',
   LAPTOP = 'laptop',
@@ -22,7 +22,7 @@ const CALENDAR = 'calendar',
   TWITTER = 'twitter'
 
 export const NAMES = [
-  CALENDAR,
+  DATE,
   EMAIL,
   FACEBOOK,
   LAPTOP,
@@ -37,7 +37,7 @@ export const NAMES = [
 export const COMPONENTS: {
   [key in IconName]: React.FC<InternalIconProps>
 } = {
-  [CALENDAR]: Calendar,
+  [DATE]: Date,
   [EMAIL]: Email,
   [FACEBOOK]: Facebook,
   [LAPTOP]: Laptop,

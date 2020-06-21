@@ -47,7 +47,7 @@ const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
           </>
         ) : (
           <>
-            <Icon {...generateIconProps('calendar')} />
+            <Icon {...generateIconProps('date')} />
             {generateDisplayDate({
               dates,
             })}

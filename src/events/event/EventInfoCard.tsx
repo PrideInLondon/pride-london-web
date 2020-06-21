@@ -96,7 +96,7 @@ const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) =>
     <LiveItem {...{ endDate }} />
   ) : (
     <Item
-      icon={<Icon name="calendar" variant="white" width="2em" height="2em" />}
+      icon={<Icon name="date" variant="white" width="2em" height="2em" />}
       title={formatDayRange({ startDate, endDate })}
       detail={formatTimeRange({ startDate, endDate })}
     />
