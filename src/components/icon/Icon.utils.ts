@@ -1,31 +1,28 @@
+import requireAll from 'require-all'
 import { colors } from '../../theme/colors'
 import { InternalIconProps, ROTATIONS } from './Icon.types'
 
-import {
-  Calendar,
-  Email,
-  Facebook,
-  Laptop,
-  LinkedIn,
-  Live,
-  Messenger,
-  OnDemand,
-  Twitter,
-  Play,
-} from './icons'
+export const calculateIconName = (module: string) =>
+  module
+    .replace('.tsx', '')
+    .split(/(?=[A-Z])/)
+    .join('-')
+    .toLowerCase()
 
-export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
-  calendar: Calendar,
-  email: Email,
-  facebook: Facebook,
-  laptop: Laptop,
-  'linked-in': LinkedIn,
-  live: Live,
-  messenger: Messenger,
-  'on-demand': OnDemand,
-  twitter: Twitter,
-  play: Play,
-}
+const allComponents = requireAll({
+  dirname: __dirname + '/icons',
+  filter: /.+\.tsx$/,
+})
+
+export const COMPONENTS: {
+  [key: string]: React.FC<InternalIconProps>
+} = Object.keys(allComponents).reduce(
+  (acc, module) => ({
+    ...acc,
+    [calculateIconName(module)]: allComponents[module].default,
+  }),
+  {}
+)
 
 export const calculateComponent = (name: string) => COMPONENTS[name]
 

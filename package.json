@@ -49,6 +49,7 @@
     "react-onclickoutside": "^6.9.0",
     "react-slick": "^0.25.2",
     "react-typeform-embed": "^0.2.1",
+    "require-all": "^3.0.0",
     "shortid": "^2.2.15",
     "slick-carousel": "^1.8.1",
     "slugify": "^1.3.6",
