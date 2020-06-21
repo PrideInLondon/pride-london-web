@@ -1,25 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import Email from './icons/Email'
-import {
-  calculateRotationDegrees,
-  calculateIconName,
-  calculateComponent,
-} from './Icon.utils'
-
-describe('calculateIconName', () => {
-  it.each`
-    module          | expected
-    ${'Foo.tsx'}    | ${'foo'}
-    ${'BarBaz.tsx'} | ${'bar-baz'}
-  `(
-    'should calculate icon name from component $module',
-    ({ module, expected }) => {
-      const actual = calculateIconName(module)
-      expect(actual).toEqual(expected)
-    }
-  )
-})
+import { calculateComponent, calculateRotationDegrees } from './Icon.utils'
 
 describe('calculateComponent', () => {
   it('should render calculate icon component to render', () => {

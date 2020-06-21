@@ -1,10 +1,13 @@
 import { SVGProps } from 'react'
 import { LayoutProps, SpaceProps } from 'styled-system'
+import { NAMES } from './icons'
+import { ROTATIONS } from './Icon.utils'
 
-export const ROTATIONS = ['none', 'right', 'flip', 'left'] as const
+export type IconName = typeof NAMES[number]
+export type IconRotation = typeof ROTATIONS[number]
 
 export interface IconProps extends LayoutProps, SpaceProps {
-  name: string
+  name: IconName
   variant: 'indigo' | 'white'
   /**
    * right: 90 degrees clockwise (to the right)
