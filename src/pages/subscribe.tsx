@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import Helmet from 'react-helmet'
 import { Banner } from '../components/banner'
 import { colors } from '../theme/colors'
+import { Wrapper } from '../components/wrapper/Wrapper'
 
 const Subscribe = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -28,13 +29,13 @@ const Subscribe = () => {
   })
 
   return (
-    <>
+    <Wrapper pb="xxl">
       <Helmet>
         <style>{`footer {display: none; }`}</style>
       </Helmet>
       <Banner titleText="Subscribe" color={colors.bondiBlue} />
       <div ref={ref}></div>
-    </>
+    </Wrapper>
   )
 }
 
