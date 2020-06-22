@@ -3,6 +3,7 @@ import Accessibility from './Accessibility'
 import Arrow from './Arrow'
 import Calendar from './Calendar'
 import Chat from './Chat'
+import Chevron from './Chevron'
 import Date from './Date'
 import Email from './Email'
 import Facebook from './Facebook'
@@ -18,6 +19,7 @@ const ACCESSIBILITY = 'accessibility',
   ARROW = 'arrow',
   CALENDAR = 'calendar',
   CHAT = 'chat',
+  CHEVRON = 'chevron',
   DATE = 'date',
   EMAIL = 'email',
   FACEBOOK = 'facebook',
@@ -34,6 +36,7 @@ export const NAMES = [
   ARROW,
   CALENDAR,
   CHAT,
+  CHEVRON,
   DATE,
   EMAIL,
   FACEBOOK,
@@ -53,6 +56,7 @@ export const COMPONENTS: {
   [ARROW]: Arrow,
   [CALENDAR]: Calendar,
   [CHAT]: Chat,
+  [CHEVRON]: Chevron,
   [DATE]: Date,
   [EMAIL]: Email,
   [FACEBOOK]: Facebook,
