@@ -21,6 +21,7 @@ import OnDemand from './OnDemand'
 import Parade from './Parade'
 import Phone from './Phone'
 import Play from './Play'
+import Pricing from './Pricing'
 import Twitter from './Twitter'
 
 const ACCESSIBILITY = 'accessibility',
@@ -45,6 +46,7 @@ const ACCESSIBILITY = 'accessibility',
   PARADE = 'parade',
   PHONE = 'phone',
   PLAY = 'play',
+  PRICING = 'pricing',
   TWITTER = 'twitter'
 
 export const NAMES = [
@@ -70,6 +72,7 @@ export const NAMES = [
   PARADE,
   PHONE,
   PLAY,
+  PRICING,
   TWITTER,
 ] as const
 
@@ -98,5 +101,6 @@ export const COMPONENTS: {
   [PARADE]: Parade,
   [PHONE]: Phone,
   [PLAY]: Play,
+  [PRICING]: Pricing,
   [TWITTER]: Twitter,
 }
