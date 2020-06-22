@@ -19,9 +19,12 @@ export interface IconProps extends LayoutProps, SpaceProps {
   rotate?: typeof ROTATIONS[number]
 }
 
+export type IconColors = {
+  primary: string
+  secondary: string
+  tertiary: string
+}
+
 export interface InternalIconProps extends SVGProps<SVGSVGElement> {
-  colors: {
-    primary: string
-    secondary: string
-  }
+  colors: IconColors
 }

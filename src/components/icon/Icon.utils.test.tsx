@@ -9,6 +9,7 @@ describe('calculateComponent', () => {
       colors: {
         primary: '#000',
         secondary: '#FFF',
+        tertiary: '#000',
       },
     }
     const Icon = calculateComponent('email')
