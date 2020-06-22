@@ -5,6 +5,7 @@ import Calendar from './Calendar'
 import Chat from './Chat'
 import Chevron from './Chevron'
 import Date from './Date'
+import Download from './Download'
 import Email from './Email'
 import Facebook from './Facebook'
 import Laptop from './Laptop'
@@ -21,6 +22,7 @@ const ACCESSIBILITY = 'accessibility',
   CHAT = 'chat',
   CHEVRON = 'chevron',
   DATE = 'date',
+  DOWNLOAD = 'download',
   EMAIL = 'email',
   FACEBOOK = 'facebook',
   LAPTOP = 'laptop',
@@ -38,6 +40,7 @@ export const NAMES = [
   CHAT,
   CHEVRON,
   DATE,
+  DOWNLOAD,
   EMAIL,
   FACEBOOK,
   LAPTOP,
@@ -58,6 +61,7 @@ export const COMPONENTS: {
   [CHAT]: Chat,
   [CHEVRON]: Chevron,
   [DATE]: Date,
+  [DOWNLOAD]: Download,
   [EMAIL]: Email,
   [FACEBOOK]: Facebook,
   [LAPTOP]: Laptop,
