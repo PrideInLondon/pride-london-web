@@ -27,6 +27,7 @@ import Saved from './Saved'
 import Search from './Search'
 import Settings from './Settings'
 import Snapchat from './Snapchat'
+import Support from './Support'
 import Twitter from './Twitter'
 
 const ACCESSIBILITY = 'accessibility',
@@ -57,6 +58,7 @@ const ACCESSIBILITY = 'accessibility',
   SEARCH = 'search',
   SETTINGS = 'settings',
   SNAPCHAT = 'snapchat',
+  SUPPORT = 'support',
   TWITTER = 'twitter'
 
 export const NAMES = [
@@ -88,6 +90,7 @@ export const NAMES = [
   SEARCH,
   SETTINGS,
   SNAPCHAT,
+  SUPPORT,
   TWITTER,
 ] as const
 
@@ -122,5 +125,6 @@ export const COMPONENTS: {
   [SEARCH]: Search,
   [SETTINGS]: Settings,
   [SNAPCHAT]: Snapchat,
+  [SUPPORT]: Support,
   [TWITTER]: Twitter,
 }
