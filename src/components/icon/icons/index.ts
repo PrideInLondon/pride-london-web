@@ -19,6 +19,7 @@ import Menu from './Menu'
 import Messenger from './Messenger'
 import OnDemand from './OnDemand'
 import Parade from './Parade'
+import Phone from './Phone'
 import Play from './Play'
 import Twitter from './Twitter'
 
@@ -42,6 +43,7 @@ const ACCESSIBILITY = 'accessibility',
   MESSENGER = 'messenger',
   ON_DEMAND = 'on-demand',
   PARADE = 'parade',
+  PHONE = 'phone',
   PLAY = 'play',
   TWITTER = 'twitter'
 
@@ -66,6 +68,7 @@ export const NAMES = [
   MESSENGER,
   ON_DEMAND,
   PARADE,
+  PHONE,
   PLAY,
   TWITTER,
 ] as const
@@ -93,6 +96,7 @@ export const COMPONENTS: {
   [MESSENGER]: Messenger,
   [ON_DEMAND]: OnDemand,
   [PARADE]: Parade,
+  [PHONE]: Phone,
   [PLAY]: Play,
   [TWITTER]: Twitter,
 }
