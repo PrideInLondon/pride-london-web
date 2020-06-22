@@ -9,6 +9,7 @@ import Download from './Download'
 import Email from './Email'
 import Facebook from './Facebook'
 import GenderNeutral from './GenderNeutral'
+import Home from './Home'
 import Laptop from './Laptop'
 import LinkedIn from './LinkedIn'
 import Live from './Live'
@@ -27,6 +28,7 @@ const ACCESSIBILITY = 'accessibility',
   EMAIL = 'email',
   FACEBOOK = 'facebook',
   GENDER_NEUTRAL = 'gender-neutral',
+  HOME = 'home',
   LAPTOP = 'laptop',
   LINKED_IN = 'linked-in',
   LIVE = 'live',
@@ -46,6 +48,7 @@ export const NAMES = [
   EMAIL,
   FACEBOOK,
   GENDER_NEUTRAL,
+  HOME,
   LAPTOP,
   LINKED_IN,
   LIVE,
@@ -68,6 +71,7 @@ export const COMPONENTS: {
   [EMAIL]: Email,
   [FACEBOOK]: Facebook,
   [GENDER_NEUTRAL]: GenderNeutral,
+  [HOME]: Home,
   [LAPTOP]: Laptop,
   [LINKED_IN]: LinkedIn,
   [LIVE]: Live,
