@@ -2,6 +2,7 @@ import { IconName, InternalIconProps } from '../Icon.types'
 import Accessibility from './Accessibility'
 import Arrow from './Arrow'
 import Calendar from './Calendar'
+import Chat from './Chat'
 import Date from './Date'
 import Email from './Email'
 import Facebook from './Facebook'
@@ -16,6 +17,7 @@ import Twitter from './Twitter'
 const ACCESSIBILITY = 'accessibility',
   ARROW = 'arrow',
   CALENDAR = 'calendar',
+  CHAT = 'chat',
   DATE = 'date',
   EMAIL = 'email',
   FACEBOOK = 'facebook',
@@ -31,6 +33,7 @@ export const NAMES = [
   ACCESSIBILITY,
   ARROW,
   CALENDAR,
+  CHAT,
   DATE,
   EMAIL,
   FACEBOOK,
@@ -49,6 +52,7 @@ export const COMPONENTS: {
   [ACCESSIBILITY]: Accessibility,
   [ARROW]: Arrow,
   [CALENDAR]: Calendar,
+  [CHAT]: Chat,
   [DATE]: Date,
   [EMAIL]: Email,
   [FACEBOOK]: Facebook,
