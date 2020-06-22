@@ -25,6 +25,7 @@ import Pricing from './Pricing'
 import Profile from './Profile'
 import Saved from './Saved'
 import Search from './Search'
+import Settings from './Settings'
 import Twitter from './Twitter'
 
 const ACCESSIBILITY = 'accessibility',
@@ -53,6 +54,7 @@ const ACCESSIBILITY = 'accessibility',
   PROFILE = 'profile',
   SAVED = 'saved',
   SEARCH = 'search',
+  SETTINGS = 'settings',
   TWITTER = 'twitter'
 
 export const NAMES = [
@@ -82,6 +84,7 @@ export const NAMES = [
   PROFILE,
   SAVED,
   SEARCH,
+  SETTINGS,
   TWITTER,
 ] as const
 
@@ -114,5 +117,6 @@ export const COMPONENTS: {
   [PROFILE]: Profile,
   [SAVED]: Saved,
   [SEARCH]: Search,
+  [SETTINGS]: Settings,
   [TWITTER]: Twitter,
 }
