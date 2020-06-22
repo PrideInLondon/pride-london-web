@@ -14,6 +14,7 @@ import Instagram from './Instagram'
 import Laptop from './Laptop'
 import LinkedIn from './LinkedIn'
 import Live from './Live'
+import Location from './Location'
 import Messenger from './Messenger'
 import OnDemand from './OnDemand'
 import Play from './Play'
@@ -34,6 +35,7 @@ const ACCESSIBILITY = 'accessibility',
   LAPTOP = 'laptop',
   LINKED_IN = 'linked-in',
   LIVE = 'live',
+  LOCATION = 'location',
   MESSENGER = 'messenger',
   ON_DEMAND = 'on-demand',
   PLAY = 'play',
@@ -55,6 +57,7 @@ export const NAMES = [
   LAPTOP,
   LINKED_IN,
   LIVE,
+  LOCATION,
   MESSENGER,
   ON_DEMAND,
   PLAY,
@@ -79,6 +82,7 @@ export const COMPONENTS: {
   [LAPTOP]: Laptop,
   [LINKED_IN]: LinkedIn,
   [LIVE]: Live,
+  [LOCATION]: Location,
   [MESSENGER]: Messenger,
   [ON_DEMAND]: OnDemand,
   [PLAY]: Play,
