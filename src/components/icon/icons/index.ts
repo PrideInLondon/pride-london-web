@@ -30,6 +30,7 @@ import Snapchat from './Snapchat'
 import Support from './Support'
 import Twitter from './Twitter'
 import Website from './Website'
+import YouTube from './YouTube'
 
 const ACCESSIBILITY = 'accessibility',
   ARROW = 'arrow',
@@ -61,7 +62,8 @@ const ACCESSIBILITY = 'accessibility',
   SNAPCHAT = 'snapchat',
   SUPPORT = 'support',
   TWITTER = 'twitter',
-  WEBSITE = 'website'
+  WEBSITE = 'website',
+  YOU_TUBE = 'you-tube'
 
 export const NAMES = [
   ACCESSIBILITY,
@@ -95,6 +97,7 @@ export const NAMES = [
   SUPPORT,
   TWITTER,
   WEBSITE,
+  YOU_TUBE,
 ] as const
 
 export const COMPONENTS: {
@@ -131,4 +134,5 @@ export const COMPONENTS: {
   [SUPPORT]: Support,
   [TWITTER]: Twitter,
   [WEBSITE]: Website,
+  [YOU_TUBE]: YouTube,
 }
