@@ -8,6 +8,7 @@ import Date from './Date'
 import Download from './Download'
 import Email from './Email'
 import Facebook from './Facebook'
+import GenderNeutral from './GenderNeutral'
 import Laptop from './Laptop'
 import LinkedIn from './LinkedIn'
 import Live from './Live'
@@ -25,6 +26,7 @@ const ACCESSIBILITY = 'accessibility',
   DOWNLOAD = 'download',
   EMAIL = 'email',
   FACEBOOK = 'facebook',
+  GENDER_NEUTRAL = 'gender-neutral',
   LAPTOP = 'laptop',
   LINKED_IN = 'linked-in',
   LIVE = 'live',
@@ -43,6 +45,7 @@ export const NAMES = [
   DOWNLOAD,
   EMAIL,
   FACEBOOK,
+  GENDER_NEUTRAL,
   LAPTOP,
   LINKED_IN,
   LIVE,
@@ -64,6 +67,7 @@ export const COMPONENTS: {
   [DOWNLOAD]: Download,
   [EMAIL]: Email,
   [FACEBOOK]: Facebook,
+  [GENDER_NEUTRAL]: GenderNeutral,
   [LAPTOP]: Laptop,
   [LINKED_IN]: LinkedIn,
   [LIVE]: Live,
