@@ -1,5 +1,6 @@
 import { IconName, InternalIconProps } from '../Icon.types'
 import Accessibility from './Accessibility'
+import Arrow from './Arrow'
 import Date from './Date'
 import Email from './Email'
 import Facebook from './Facebook'
@@ -12,6 +13,7 @@ import Play from './Play'
 import Twitter from './Twitter'
 
 const ACCESSIBILITY = 'accessibility',
+  ARROW = 'arrow',
   DATE = 'date',
   EMAIL = 'email',
   FACEBOOK = 'facebook',
@@ -25,6 +27,7 @@ const ACCESSIBILITY = 'accessibility',
 
 export const NAMES = [
   ACCESSIBILITY,
+  ARROW,
   DATE,
   EMAIL,
   FACEBOOK,
@@ -41,6 +44,7 @@ export const COMPONENTS: {
   [key in IconName]: React.FC<InternalIconProps>
 } = {
   [ACCESSIBILITY]: Accessibility,
+  [ARROW]: Arrow,
   [DATE]: Date,
   [EMAIL]: Email,
   [FACEBOOK]: Facebook,
