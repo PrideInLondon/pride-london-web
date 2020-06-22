@@ -1,5 +1,4 @@
 import React from 'react'
-import { Divider } from '../divider'
 import { Icon } from '../icon'
 import { IconName } from '../icon/Icon.types'
 import { capitaliseFirst } from '../../utils/string-utils'
@@ -11,6 +10,7 @@ import {
   Social,
   HashtagWrapper,
   Hashtag,
+  StyledDivider,
 } from './Footer.styles'
 import { FooterProps } from './Footer.types'
 
@@ -94,9 +94,9 @@ export const Footer = ({
           snapchat,
         }}
       />
-      <Divider />
+      <StyledDivider />
       <MiddleSection />
-      <Divider />
+      <StyledDivider />
       <LowerSection />
     </Content>
   </Wrapper>

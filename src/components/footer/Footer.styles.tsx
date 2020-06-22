@@ -1,7 +1,10 @@
+import React from 'react'
 import styled from 'styled-components'
 import { space } from 'styled-system'
 import { colors } from '../../theme/colors'
-import { md } from '../../theme/space'
+import { md, lg, xl_mob, xl } from '../../theme/space'
+import { mediaQueries } from '../../theme/mediaQueries'
+import { Divider } from '../divider'
 import background from './background.jpg'
 
 export const Wrapper = styled.footer.attrs({ padding: 'xl' })`
@@ -21,13 +24,22 @@ export const Content = styled.div.attrs({ padding: 'xl' })`
 `
 
 export const UpperWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+
+  ${mediaQueries.md} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `
 
 export const SocialWrapper = styled.div`
   font-size: 2rem;
+  margin-bottom: ${lg}px;
+
+  ${mediaQueries.md} {
+    margin-bottom: 0;
+  }
 `
 
 export const Social = styled.a``
@@ -35,6 +47,10 @@ export const Social = styled.a``
 export const HashtagWrapper = styled.div`
   > * {
     margin: ${md}px;
+  }
+
+  > :first-child {
+    margin-left: 0;
   }
 
   > :last-child {
@@ -53,3 +69,7 @@ export const Hashtag = styled.a`
     color: ${colors.eucalyptusGreen};
   }
 `
+
+export const StyledDivider = () => (
+  <Divider marginY={{ default: `${xl_mob}px`, md: `${xl}px` }} />
+)
