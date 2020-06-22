@@ -49,7 +49,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.p`
   font-size: 1rem;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
   max-width: 275px;
   line-height: 1.18;
 
