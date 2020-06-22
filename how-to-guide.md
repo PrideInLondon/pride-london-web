@@ -107,22 +107,37 @@ const IconName = ({
 export default IconName
 ```
 
-5. re-export the new icon from the [icons index file](./src/components/icon/icons/index.ts)
-
-6. import and add the component key to the `COMPONENTS` map in [`Icon.utils.ts`](./src/components/icon/Icon.utils.ts)
+5. open up the [`icons/index.ts`](./src/components/icon/icons/index.ts) module and add the following:
+   1. import the component (place alphabetically in existing import list)
+   2. create a `const` for the new icon name
+   3. add the new icon name to the `NAMES` array (this is required to ensure strong typing)
+   4. add a new property to the `COMPONENTS` map with key being the previously created `const` and the value being the imported icon
 
 ```ts
-// Icon.utils.ts
-import { ..., IconName } from './icons'
+// icons/index.ts
 
-export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
+// step 1
+import IconName from './IconName'
+
+// step 2
+const ICON_NAME = 'icon-name' // note that this should be kebab-case
+
+// step 3
+export const NAMES = [
   ...
-  // note the kebab-case for multi-word icon names
-  'icon-name': IconName,
+  ICON_NAME, // note that this should be added alphabetically
+  ...
+] as const
+
+// step 4
+export const COMPONENTS = {
+  ...
+  [ICON_NAME]: IconName, // note that this should be added alphabetically
+  ...
 }
 ```
 
-7. now the component will be ready for use via the `Icon` component (this will automatically be added to Storybook and may be selected from the `Name` dropdown)
+6. now the component will be ready for use via the `Icon` component (this will automatically be added to Storybook and may be selected from the `Name` dropdown)
 
 ```tsx
 import { Icon } from './src/components/icon'
