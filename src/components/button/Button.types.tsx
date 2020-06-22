@@ -19,10 +19,14 @@ export interface ButtonAsAnchorProps
   to?: string
 }
 
+export type ButtonSignatureProps =
+  | ButtonProps
+  | Omit<ButtonAsAnchorProps, 'href'>
+
 export interface ButtonSignature
   extends Pick<
     FunctionComponent,
     'propTypes' | 'contextTypes' | 'defaultProps' | 'displayName'
   > {
-  (props: ButtonProps | Omit<ButtonAsAnchorProps, 'href'>): ReactElement
+  (props: ButtonSignatureProps): ReactElement
 }

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { colors } from '../../theme/colors'
 import { fonts } from '../../theme/fonts'
 import { mediaQueries } from '../../theme/mediaQueries'
-import CalendarIcon from '../../components/icons/calendarIcon'
 
 export const CardDate = styled.span`
   display: flex;
@@ -57,7 +56,17 @@ export const Location = styled.p`
   }
 `
 
-export const PaddedCalendarIcon = styled(CalendarIcon)`
-  margin-right: 8.5px;
-  height: 1rem;
+export const WhenText = styled.p`
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  color: ${({ color }) => color};
+
+  ${mediaQueries.md} {
+    font-size: 0.875rem;
+  }
+
+  svg {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
 `

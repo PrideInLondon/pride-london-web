@@ -1,9 +1,10 @@
-export function checkBreakpoint(breakpoint: number): boolean {
-  if (typeof window !== `undefined`) {
-    return window.matchMedia(`(min-width: ${breakpoint}px)`).matches
-  }
-  return false
-}
+import { FixedObject } from 'gatsby-image'
+import { sm, md } from '../theme/breakpoints'
+
+export const checkBreakpoint = (breakpoint: number): boolean =>
+  typeof window !== `undefined`
+    ? window.matchMedia(`(min-width: ${breakpoint}px)`).matches
+    : false
 
 export const noScroll = {
   on() {
@@ -16,3 +17,13 @@ export const noScroll = {
     document.querySelector('html')!.classList.toggle('no-scroll')
   },
 }
+
+export const getImageForBreakpoint = ({
+  mobile,
+  tablet,
+  desktop,
+}: {
+  mobile: FixedObject
+  tablet: FixedObject
+  desktop: FixedObject
+}) => (!checkBreakpoint(sm) ? mobile : !checkBreakpoint(md) ? tablet : desktop)

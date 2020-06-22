@@ -75,6 +75,12 @@ import Poppins800WOFF2 from '../fonts/poppins/poppins-v5-latin-800.woff2'
 import Poppins800TTF from '../fonts/poppins/poppins-v5-latin-800.ttf'
 import Poppins800SVG from '../fonts/poppins/poppins-v5-latin-800.svg'
 
+/**
+ * Cactus
+ */
+import CactusBold from '../fonts/cactus/Cactus-Bold.otf'
+import CactusBoldItalic from '../fonts/cactus/Cactus-BoldItalic.otf'
+
 export const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 16px;
@@ -96,7 +102,23 @@ export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  
+  /* Cactus Bold */
+  @font-face {
+    font-family: 'Cactus';
+    font-style: normal;
+    font-weight: 700;
+    src: url('${CactusBold}') format("opentype")
+  }
 
+  /* Cactus Bold Italic */
+  @font-face {
+    font-family: 'Cactus';
+    font-style: italic;
+    font-weight: 700;
+    src: url('${CactusBoldItalic}') format("opentype"); 
+  }
+  
   /* roboto-300 - latin */
   @font-face {
     font-family: 'Roboto';

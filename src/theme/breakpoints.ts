@@ -15,6 +15,7 @@ export interface Breakpoints {
 export const breakpoints: string[] & Breakpoints = Object.assign(
   [`${sm}px`, `${md}px`, `${lg}px`, `${xl}px`],
   {
+    default: '0px',
     sm: `${sm}px`,
     md: `${md}px`,
     lg: `${lg}px`,

@@ -63,6 +63,7 @@ const query = graphql`
           venueDetails
           audience
           accessibilityOptions
+          onDemand: ondemand
           location2
           locationName
           addressLine1

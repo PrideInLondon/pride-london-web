@@ -58,7 +58,7 @@ const CommunityPartnerCard = ({ partner }) => {
         <ReactMarkdown source={description} />
         <CardItem>
           <IconWrapper>
-            <MapPinIcon dark />
+            <MapPinIcon variant="blue" />
           </IconWrapper>
           <div>
             <CardItemTitle
@@ -74,7 +74,7 @@ const CommunityPartnerCard = ({ partner }) => {
         </CardItem>
         <CardItem>
           <IconWrapper>
-            <AccessibilityIcon dark />
+            <AccessibilityIcon variant="blue" />
           </IconWrapper>
           <div>
             <CardItemTitle>Accessibility</CardItemTitle>
@@ -95,7 +95,7 @@ const CommunityPartnerCard = ({ partner }) => {
         {genderNeutralToilets && (
           <CardItem>
             <IconWrapper>
-              <GenderIcon dark />
+              <GenderIcon variant="blue" />
             </IconWrapper>
             <div>
               <CardItemTitle>Gender Neutral Toilets</CardItemTitle>

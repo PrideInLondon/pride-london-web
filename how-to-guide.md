@@ -4,6 +4,7 @@ This is a guide for performing common development actions within the Pride in Lo
 
 - [Add a redirect](#add-a-redirect)
 - [Add a new font](#add-a-new-font)
+- [Add a new icon](#add-a-new-icon)
 
 ## Add a redirect
 
@@ -37,4 +38,94 @@ import { fonts } from 'src/theme/fonts'
 const Component = styled.div`
   font-family: ${fonts.element};
 `
+```
+
+## Add a new icon
+
+There is a generic `Icon` component available to act as a syntactic sugar component for any icon within the project. For more information on how to use the component, please see Storybook (`yarn storybook`).
+
+In order to add a new icon and make it available for usage via the component, the following steps may be taken:
+
+1. download the `.svg` file from [Zeplin](https://zeplin.io) and place in the [`src/components/icon/icons`](./src/components/icon/icons) directory
+2. convert the `.svg` file into a `.tsx` file
+
+```xml
+<!-- starting .svg file -->
+<svg>
+  <path fill="#2D2F7F" fill-rule="evenodd" />
+  <path fill="#FFFFFF" />
+</svg>
+```
+
+```tsx
+// converted .tsx file
+import React from 'react'
+
+const IconName = props => (
+  // previous .svg content, note the camel-casing of fill-rule -> fillRule and passing of props
+  <svg {...props}>
+    <path fill="#2D2F7F" fillRule="evenodd" />
+    <path fill="#FFFFFF" />
+  </svg>
+)
+
+export default IconName
+```
+
+3. set the props to be of type [`InternalIconProps`](./src/components/icon/Icon.types.ts)
+
+```tsx
+import React from 'react'
+import { InternalIconProps } from '../Icon.types'
+
+const IconName = (props: InternalIconProps) => (
+  <svg {...props}>
+    <path fill="#2D2F7F" fillRule="evenodd" />
+    <path fill="#FFFFFF" />
+  </svg>
+)
+
+export default IconName
+```
+
+4. destructure the props to gain access to the `colors` property and assign the appropriate sub-properties to the `fill` path props
+
+```tsx
+import React from 'react'
+import { InternalIconProps } from '../Icon.types'
+
+const IconName = ({
+  colors: { primary, secondary },
+  ...props
+}: InternalIconProps) => (
+  <svg {...props}>
+    <path fill={primary} fillRule="evenodd" />
+    <path fill={secondary} />
+  </svg>
+)
+
+export default IconName
+```
+
+5. re-export the new icon from the [icons index file](./src/components/icon/icons/index.ts)
+
+6. import and add the component key to the `COMPONENTS` map in [`Icon.utils.ts`](./src/components/icon/Icon.utils.ts)
+
+```ts
+// Icon.utils.ts
+import { ..., IconName } from './icons'
+
+export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
+  ...
+  // note the kebab-case for multi-word icon names
+  'icon-name': IconName,
+}
+```
+
+7. now the component will be ready for use via the `Icon` component (this will automatically be added to Storybook and may be selected from the `Name` dropdown)
+
+```tsx
+import { Icon } from './src/components/icon'
+
+const Component = () => <Icon name="icon-name" variant="indigo" />
 ```
