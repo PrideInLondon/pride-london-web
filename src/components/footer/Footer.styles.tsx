@@ -50,8 +50,6 @@ export const SocialWrapper = styled.div`
   }
 `
 
-export const Social = styled.a``
-
 export const HashtagWrapper = styled.div`
   > * {
     margin-right: ${md}px;

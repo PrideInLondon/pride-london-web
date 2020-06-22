@@ -7,7 +7,6 @@ import {
   Content,
   UpperWrapper,
   SocialWrapper,
-  Social,
   HashtagWrapper,
   Hashtag,
   StyledDivider,
@@ -38,7 +37,7 @@ const UpperSection = ({
           .map(capitaliseFirst)
           .join('')}`
         return (
-          <Social
+          <a
             key={social}
             href={socials[social]}
             target="_blank"
@@ -47,7 +46,7 @@ const UpperSection = ({
             aria-label={title}
           >
             <Icon name={social} variant="indigo" />
-          </Social>
+          </a>
         )
       })}
     </SocialWrapper>
