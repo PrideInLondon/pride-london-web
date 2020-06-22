@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { space } from 'styled-system'
 import { colors } from '../../theme/colors'
-import { md, lg, xl_mob, xl } from '../../theme/space'
+import { sm, md, lg, xl_mob, xl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { Divider } from '../divider'
 import background from './background.jpg'
@@ -37,6 +37,14 @@ export const SocialWrapper = styled.div`
   font-size: 2rem;
   margin-bottom: ${lg}px;
 
+  > * {
+    margin-left: ${sm}px;
+  }
+
+  > :first-child {
+    margin-left: 0;
+  }
+
   ${mediaQueries.md} {
     margin-bottom: 0;
   }
@@ -46,11 +54,7 @@ export const Social = styled.a``
 
 export const HashtagWrapper = styled.div`
   > * {
-    margin: ${md}px;
-  }
-
-  > :first-child {
-    margin-left: 0;
+    margin-right: ${md}px;
   }
 
   > :last-child {
