@@ -1,7 +1,7 @@
 import React from 'react'
 import { InternalIconProps } from '../Icon.types'
 
-const Calendar = ({
+const Date = ({
   colors: { primary, secondary },
   ...props
 }: InternalIconProps) => (
@@ -25,4 +25,4 @@ const Calendar = ({
   </svg>
 )
 
-export default Calendar
+export default Date
