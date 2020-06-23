@@ -3,10 +3,11 @@ import { Row, Column } from '../components/grid'
 import { checkBreakpoint } from '../utils/style-utils'
 import { CTALink } from '../components/ctaLink'
 import { colors } from '../theme/colors'
+import { P } from '../components/typography'
+
 import {
   StyledBanner,
   Title,
-  Subtitle,
   ResponsiveImg,
   ImgWrapper,
 } from './EventsPageBanner.styles'
@@ -49,15 +50,13 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
             <del>Coming Out</del>
             <ins>Staying In</ins>
           </Title>
-          <Subtitle>
+          <P marginBottom={'1.5rem'} color={'white'}>
             The new way to find the best queer events for the queer community
             from Pride in London.
-          </Subtitle>
-          <p>
-            <CTALink to="/events/about-coming-out" color={colors.white}>
-              Find out more
-            </CTALink>
-          </p>
+          </P>
+          <CTALink to="/events/about-coming-out" color={colors.white}>
+            Find out more
+          </CTALink>
         </div>
       </Column>
     </Row>

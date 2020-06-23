@@ -46,19 +46,6 @@ export const StyledBanner = styled.div<BackgroundColorProps>`
 export const Title = styled.h1`
   ${hideVisually()}
 `
-
-export const Subtitle = styled.p`
-  font-size: 1rem;
-  margin-bottom: 1.5em;
-  max-width: 275px;
-  line-height: 1.18;
-
-  ${mediaQueries.xl} {
-    font-size: 1.375rem;
-    max-width: none;
-  }
-`
-
 export const ImgWrapper = styled.div`
   position: relative;
   padding-top: 54.35%;
