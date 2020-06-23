@@ -3,6 +3,7 @@ import { Row, Column } from '../components/grid'
 import { checkBreakpoint } from '../utils/style-utils'
 import { CTALink } from '../components/ctaLink'
 import { colors } from '../theme/colors'
+import { space as spacing } from '../theme/space'
 import { P } from '../components/typography'
 
 import {
@@ -50,7 +51,7 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
             <del>Coming Out</del>
             <ins>Staying In</ins>
           </Title>
-          <P marginBottom={'1.5rem'} color={'white'}>
+          <P marginBottom={spacing.lg} color={colors.white}>
             The new way to find the best queer events for the queer community
             from Pride in London.
           </P>
