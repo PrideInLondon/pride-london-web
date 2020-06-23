@@ -1,5 +1,5 @@
 import { colors } from '../../theme/colors'
-import { InternalIconProps } from './Icon.types'
+import { InternalIconProps, ROTATIONS } from './Icon.types'
 
 import {
   Calendar,
@@ -46,3 +46,6 @@ const COLORS: {
 }
 
 export const calculateColors = (variant: string) => COLORS[variant]
+
+export const calculateRotationDegrees = (rotate: typeof ROTATIONS[number]) =>
+  ROTATIONS.indexOf(rotate) * 90
