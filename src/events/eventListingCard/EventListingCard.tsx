@@ -9,7 +9,7 @@ import {
 import { generateEventSlug, isVirtualEvent, isLiveNow } from '../helpers'
 import { Icon } from '../../components/icon'
 import { colors } from '../../theme/colors'
-import { IconProps } from '../../components/icon/Icon.types'
+import { IconName, IconProps } from '../../components/icon/Icon.types'
 import { generateDisplayDate, formatLocation } from './EventListingCard.utils'
 import { EventListingCardProps, WhenProps } from './EventListingCard.types'
 import {
@@ -21,7 +21,7 @@ import {
 } from './EventListingCard.styles'
 
 const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
-  const generateIconProps = (name: string): IconProps => ({
+  const generateIconProps = (name: IconName): IconProps => ({
     name,
     variant: 'indigo',
     width: 24,
@@ -47,7 +47,7 @@ const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
           </>
         ) : (
           <>
-            <Icon {...generateIconProps('calendar')} />
+            <Icon {...generateIconProps('date')} />
             {generateDisplayDate({
               dates,
             })}
