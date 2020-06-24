@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { space } from 'styled-system'
 import { colors } from '../../theme/colors'
-import { sm, md, lg, xl_mob, xl } from '../../theme/space'
+import { xs, sm, md, lg, xl_mob, xl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { Divider } from '../divider'
 import background from './background.jpg'
@@ -33,7 +33,7 @@ export const UpperWrapper = styled.div`
   }
 `
 
-export const SocialWrapper = styled.div`
+export const SocialContainer = styled.div`
   font-size: 2rem;
   margin-bottom: ${lg}px;
 
@@ -50,7 +50,11 @@ export const SocialWrapper = styled.div`
   }
 `
 
-export const HashtagWrapper = styled.div`
+export const Social = styled.a`
+  text-decoration: none;
+`
+
+export const HashtagContainer = styled.div`
   > * {
     margin-right: ${md}px;
   }
@@ -75,3 +79,48 @@ export const Hashtag = styled.a`
 export const StyledDivider = () => (
   <Divider marginY={{ default: `${xl_mob}px`, md: `${xl}px` }} />
 )
+
+export const LogoContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+export const LogoWrapper = styled.div`
+  max-width: 150px;
+  min-height: 70px;
+  padding: ${xs}px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 33.3333%; /* 1 of 3 */
+
+  ${mediaQueries.sm} {
+    padding: ${sm}px;
+  }
+
+  ${mediaQueries.md} {
+    min-height: 100px;
+    flex-basis: 16.6667%; /* 1 of 6 */
+    max-width: 16.6667%;
+  }
+
+  ${mediaQueries.lg} {
+    flex-basis: 12.5%; /* 1 of 8*/
+    max-width: 12.5%;
+  }
+`
+
+export const Logo = styled.a`
+  text-decoration: none;
+`
+
+export const LogoImage = styled.img`
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  align-self: center;
+  margin: 0 auto;
+  filter: grayscale(100%);
+  flex-shrink: 0; /* needed to stop images stretching on IE11 */
+`
