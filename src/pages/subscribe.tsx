@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import { Banner } from '../components/banner'
 import { colors } from '../theme/colors'
 import { Wrapper } from '../components/wrapper/Wrapper'
-import { P } from '../components/typography/Typography'
 
 const Subscribe = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -30,7 +29,7 @@ const Subscribe = () => {
   })
 
   return (
-    <Wrapper pb="xxl">
+    <>
       <Helmet>
         <style>{`footer {display: none; }`}</style>
       </Helmet>
@@ -39,12 +38,10 @@ const Subscribe = () => {
         subtitleText="Subscribe to hear more from Pride in London"
         color={colors.bondiBlue}
       />
-      <P width="95%" maxWidth="1242px" mx="auto" pt="lg">
-        Want to be in the know on all things queer in the capital? Enter your
-        contact details below to receive email updates from Pride in London.
-      </P>
-      <div ref={ref}></div>
-    </Wrapper>
+      <Wrapper pb="xxl" pt="lg">
+        <div ref={ref}></div>
+      </Wrapper>
+    </>
   )
 }
 
