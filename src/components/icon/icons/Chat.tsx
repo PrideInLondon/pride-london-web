@@ -1,7 +1,7 @@
 import React from 'react'
 import { InternalIconProps } from '../Icon.types'
 
-const Calendar = ({
+const Chat = ({
   colors: { primary, secondary },
   ...props
 }: InternalIconProps) => (
@@ -14,11 +14,16 @@ const Calendar = ({
     <path
       fill={primary}
       fillRule="evenodd"
-      d="M4 28h24V7h-5V4h-2v3H11V4H9v3H4v21zm2-2h20V16H6v10z"
+      d="M18 8h12v14h-4.091l-5.914 7v-7H11v-8H9.009v5S5.305 14.395 5 14H2V3h16v5zM8 12h2V8l6.007-.007V5.015L4 5v7h2l2 3v-3z"
       clipRule="evenodd"
     />
-    <path fill={secondary} d="M6 14h20V9h-3v2.5h-2V9H11v2.5H9V9H6v5z" />
+    <path
+      fill={secondary}
+      fillRule="evenodd"
+      d="M28 20h-3l-3 4v-4h-9V10h15v10zm-5-8h2v2h-2v-2zm-2 2h-6v-2h6v2z"
+      clipRule="evenodd"
+    />
   </svg>
 )
 
-export default Calendar
+export default Chat
