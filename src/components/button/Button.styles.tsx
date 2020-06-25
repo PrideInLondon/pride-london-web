@@ -65,6 +65,7 @@ export const StyledButton = styled(
         backgroundImage: `linear-gradient(to bottom, transparent 0, transparent calc(100% - 2px), ${colors.indigo} calc(100% - 2px), ${colors.indigo} calc(100% - 1px), ${colors.darkCyan} calc(100% - 1px), ${colors.darkCyan} 100%)`,
         backgroundSize: '100% 100%',
         color: colors.indigo,
+        fontFamily: fonts.body,
       },
       outline: {
         border: `2px solid currentColor`,
