@@ -58,6 +58,14 @@ export const StyledButton = styled(
           borderColor: darken(0.1, colors.indigo),
         },
       },
+      tertiary: {
+        border: 'none',
+        borderRadius: 0,
+        padding: 0,
+        backgroundImage: `linear-gradient(to bottom, transparent 0, transparent calc(100% - 2px), ${colors.indigo} calc(100% - 2px), ${colors.indigo} calc(100% - 1px), ${colors.darkCyan} calc(100% - 1px), ${colors.darkCyan} 100%)`,
+        backgroundSize: '100% 100%',
+        color: colors.indigo,
+      },
       outline: {
         border: `2px solid currentColor`,
         backgroundColor: 'transparent',

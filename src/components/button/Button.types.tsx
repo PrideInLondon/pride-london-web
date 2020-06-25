@@ -4,6 +4,7 @@ import { ResponsiveValue, SpaceProps, LayoutProps } from 'styled-system'
 export const VARIANTS = [
   'primary',
   'secondary',
+  'tertiary',
   'outline',
   'outline-white',
 ] as const
