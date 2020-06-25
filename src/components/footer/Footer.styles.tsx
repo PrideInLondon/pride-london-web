@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { space } from 'styled-system'
+import { Link } from 'gatsby'
 import { colors } from '../../theme/colors'
 import { xs, sm, md, lg, xl_mob, xl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { Divider } from '../divider'
+import { P } from '../typography'
 import background from './background.jpg'
 
 export const Wrapper = styled.footer.attrs({ padding: 'xl' })`
@@ -52,16 +54,16 @@ export const Social = styled.a`
 export const HashtagContainer = styled.div`
   margin: ${lg}px 0;
 
-  ${mediaQueries.md} {
-    margin: 0;
-  }
-
   > * {
     margin-right: ${md}px;
   }
 
   > :last-child {
     margin-right: 0;
+  }
+
+  ${mediaQueries.md} {
+    margin: 0;
   }
 `
 
@@ -126,12 +128,8 @@ export const LogoImage = styled.img`
   flex-shrink: 0; /* needed to stop images stretching on IE11 */
 `
 
-export const LinksContainer = styled.div`
+export const PartnersLinksContainer = styled.div`
   margin-top: ${lg}px;
-
-  ${mediaQueries.md} {
-    margin-top: ${xl}px;
-  }
 
   > * {
     margin-bottom: ${sm}px;
@@ -139,5 +137,44 @@ export const LinksContainer = styled.div`
 
   > :first-child {
     margin-right: ${lg}px;
+  }
+
+  ${mediaQueries.md} {
+    margin-top: ${xl}px;
+  }
+`
+
+export const LegalContainer = styled.div`
+  display: block;
+  width: 100%;
+
+  > * {
+    width: 100%;
+
+    :not(:last-child) {
+      margin-bottom: ${md}px;
+    }
+  }
+
+  ${mediaQueries.md} {
+    display: flex;
+
+    > * {
+      width: 50%;
+    }
+  }
+`
+
+export const LegalLinksContainer = styled.div``
+
+export const LegalLink = styled(props => (
+  <P variant="sm" as={Link} {...props} />
+))`
+  text-decoration: none;
+
+  :not(:last-child):after {
+    content: '|';
+    padding: 0 15px;
+    cursor: default;
   }
 `

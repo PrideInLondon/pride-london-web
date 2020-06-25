@@ -4,7 +4,7 @@ import { groupSponsorsByLevel } from '../../sponsors'
 import { Sponsor, SponsorLevel } from '../../sponsors/PartnersPage.types'
 import { Icon } from '../icon'
 import { IconName } from '../icon/Icon.types'
-import { H6 } from '../typography'
+import { H6, P } from '../typography'
 import { Button } from '../button'
 import {
   Wrapper,
@@ -19,7 +19,10 @@ import {
   LogoWrapper,
   Logo,
   LogoImage,
-  LinksContainer,
+  PartnersLinksContainer,
+  LegalContainer,
+  LegalLinksContainer,
+  LegalLink,
 } from './Footer.styles'
 import { FooterProps } from './Footer.types'
 
@@ -113,18 +116,34 @@ const MiddleSection = ({
           ))
       )}
     </LogoContainer>
-    <LinksContainer>
+    <PartnersLinksContainer>
       <Button variant="tertiary" to="/support-us/partners">
         View all
       </Button>
       <Button variant="tertiary" to="mailto:sponsor@prideinlondon.org">
         Become a partner
       </Button>
-    </LinksContainer>
+    </PartnersLinksContainer>
   </>
 )
 
-const LowerSection = () => <>lower</>
+const LowerSection = () => (
+  <LegalContainer>
+    <LegalLinksContainer>
+      {[
+        { to: '/privacy', text: 'Privacy & cookies' },
+        { to: '/media-centre', text: 'Media centre' },
+      ].map(({ to, text }) => (
+        <LegalLink {...{ to }}>{text}</LegalLink>
+      ))}
+    </LegalLinksContainer>
+    <P variant="sm">
+      London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN -
+      Registered in England and Wales as a Community Interest Company (no.
+      8321669)
+    </P>
+  </LegalContainer>
+)
 
 export const Footer = ({
   facebook,
