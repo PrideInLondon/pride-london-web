@@ -19,6 +19,7 @@ import {
   LogoWrapper,
   Logo,
   LogoImage,
+  LinksContainer,
 } from './Footer.styles'
 import { FooterProps } from './Footer.types'
 
@@ -79,12 +80,7 @@ const UpperSection = ({
         )
       })}
     </HashtagContainer>
-    <Button
-      variant="tertiary"
-      to="/subscribe"
-      title="Subscribe to Pride"
-      aria-label="Subscribe to Pride"
-    >
+    <Button variant="tertiary" to="/subscribe">
       Subscribe to Pride
     </Button>
   </UpperWrapper>
@@ -117,6 +113,14 @@ const MiddleSection = ({
           ))
       )}
     </LogoContainer>
+    <LinksContainer>
+      <Button variant="tertiary" to="/support-us/partners">
+        View all
+      </Button>
+      <Button variant="tertiary" to="mailto:sponsor@prideinlondon.org">
+        Become a partner
+      </Button>
+    </LinksContainer>
   </>
 )
 

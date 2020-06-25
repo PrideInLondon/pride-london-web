@@ -125,3 +125,19 @@ export const LogoImage = styled.img`
   filter: grayscale(100%);
   flex-shrink: 0; /* needed to stop images stretching on IE11 */
 `
+
+export const LinksContainer = styled.div`
+  margin-top: ${lg}px;
+
+  ${mediaQueries.md} {
+    margin-top: ${xl}px;
+  }
+
+  > * {
+    margin-bottom: ${sm}px;
+  }
+
+  > :first-child {
+    margin-right: ${lg}px;
+  }
+`
