@@ -146,28 +146,14 @@ const LowerSection = () => (
 )
 
 export const Footer = ({
-  facebook,
-  twitter,
-  instagram,
-  youtube,
-  linkedin,
-  snapchat,
+  socials,
   data: {
     allContentfulSponsor: { edges },
   },
 }: FooterProps) => (
   <Wrapper>
     <Content>
-      <UpperSection
-        socials={{
-          facebook,
-          twitter,
-          instagram,
-          'you-tube': youtube,
-          'linked-in': linkedin,
-          snapchat,
-        }}
-      />
+      <UpperSection {...{ socials }} />
       <StyledDivider />
       <MiddleSection sponsors={groupSponsorsByLevel(edges)} />
       <StyledDivider />

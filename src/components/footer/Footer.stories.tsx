@@ -7,8 +7,8 @@ const SOCIALS = {
   facebook: 'https://facebook.com/pg/LondonLGBTPride',
   twitter: 'https://twitter.com/PrideInLondon',
   instagram: 'http://instagram.com/prideinlondon',
-  youtube: 'https://youtube.com/user/LondonLGBTPride',
-  linkedin: 'https://linkedin.com/company/prideinlondon/',
+  'you-tube': 'https://youtube.com/user/LondonLGBTPride',
+  'linked-in': 'https://linkedin.com/company/prideinlondon/',
   snapchat: 'http://snapchat.com/add/LondonLGBTPride',
 }
 
@@ -199,5 +199,8 @@ const SPONSORS: { node: ContentfulSponsor }[] = [
 ]
 
 storiesOf(Footer.name, module).add('basic', () => (
-  <Footer {...SOCIALS} data={{ allContentfulSponsor: { edges: SPONSORS } }} />
+  <Footer
+    socials={SOCIALS}
+    data={{ allContentfulSponsor: { edges: SPONSORS } }}
+  />
 ))

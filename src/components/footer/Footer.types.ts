@@ -1,12 +1,14 @@
 import { ContentfulSponsor } from '../../sponsors/PartnersPage.types'
 
 export interface FooterProps {
-  facebook: string
-  twitter: string
-  instagram: string
-  youtube: string
-  linkedin: string
-  snapchat: string
+  socials: {
+    facebook: string
+    twitter: string
+    instagram: string
+    'you-tube': string
+    'linked-in': string
+    snapchat: string
+  }
   data: {
     allContentfulSponsor: { edges: { node: ContentfulSponsor }[] }
   }

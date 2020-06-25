@@ -25,10 +25,38 @@ const query = graphql`
   }
 `
 
-const FooterContainer = props => (
+interface FooterContainerProps {
+  facebook: string
+  twitter: string
+  instagram: string
+  youtube: string
+  linkedin: string
+  snapchat: string
+}
+
+const FooterContainer = ({
+  facebook,
+  twitter,
+  instagram,
+  youtube,
+  linkedin,
+  snapchat,
+}: FooterContainerProps) => (
   <StaticQuery
     query={query}
-    render={data => <Footer {...props} data={data} />}
+    render={data => (
+      <Footer
+        socials={{
+          facebook,
+          twitter,
+          instagram,
+          'you-tube': youtube,
+          'linked-in': linkedin,
+          snapchat,
+        }}
+        data={data}
+      />
+    )}
   />
 )
 
