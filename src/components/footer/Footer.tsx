@@ -1,10 +1,11 @@
 import React from 'react'
-import { Icon } from '../icon'
-import { IconName } from '../icon/Icon.types'
 import { capitaliseFirst } from '../../utils/string-utils'
-import { H6 } from '../typography'
 import { groupSponsorsByLevel } from '../../sponsors'
 import { Sponsor, SponsorLevel } from '../../sponsors/PartnersPage.types'
+import { Icon } from '../icon'
+import { IconName } from '../icon/Icon.types'
+import { H6 } from '../typography'
+import { Button } from '../button'
 import {
   Wrapper,
   Content,
@@ -78,6 +79,14 @@ const UpperSection = ({
         )
       })}
     </HashtagContainer>
+    <Button
+      variant="tertiary"
+      to="/subscribe"
+      title="Subscribe to Pride"
+      aria-label="Subscribe to Pride"
+    >
+      Subscribe to Pride
+    </Button>
   </UpperWrapper>
 )
 

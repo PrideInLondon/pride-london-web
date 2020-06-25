@@ -35,7 +35,6 @@ export const UpperWrapper = styled.div`
 
 export const SocialContainer = styled.div`
   font-size: 2rem;
-  margin-bottom: ${lg}px;
 
   > * {
     margin-left: ${sm}px;
@@ -44,10 +43,6 @@ export const SocialContainer = styled.div`
   > :first-child {
     margin-left: 0;
   }
-
-  ${mediaQueries.md} {
-    margin-bottom: 0;
-  }
 `
 
 export const Social = styled.a`
@@ -55,6 +50,12 @@ export const Social = styled.a`
 `
 
 export const HashtagContainer = styled.div`
+  margin: ${lg}px 0;
+
+  ${mediaQueries.md} {
+    margin: 0;
+  }
+
   > * {
     margin-right: ${md}px;
   }
