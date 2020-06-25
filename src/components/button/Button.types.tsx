@@ -1,10 +1,17 @@
 import { ReactElement, FunctionComponent } from 'react'
 import { ResponsiveValue, SpaceProps, LayoutProps } from 'styled-system'
 
+export const VARIANTS = [
+  'primary',
+  'secondary',
+  'outline',
+  'outline-white',
+] as const
+
+export type ButtonVariant = typeof VARIANTS[number]
+
 export interface ButtonBaseProps extends SpaceProps, LayoutProps {
-  variant?: ResponsiveValue<
-    'primary' | 'secondary' | 'outline' | 'outline-white'
-  >
+  variant?: ResponsiveValue<ButtonVariant>
 }
 
 export interface ButtonProps
