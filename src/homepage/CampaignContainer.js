@@ -12,17 +12,17 @@ const ParadeApplications = () => (
   <Container>
     <BackgroundImage />
     <TextContainer>
-      <StyledHeader>FRIDAY 9pm - 2am</StyledHeader>
+      <StyledHeader>Join our #YouMeUsWe campaign!</StyledHeader>
       <StyledDescription>
-        Kick off your Pride weekend with a bang and join our free live stream
-        virtual club night, hosted by the talented DIVINA DE CAMPO.
+        This Pride month we're calling on all LGBT+ people to make an act of
+        allyship.
       </StyledDescription>
       <StyledButton
-        to="https://vimeo.com/430284359/23d144590d"
-        target="_blank"
+        to="https://prideinlondon.org/about-us/campaigns/you-me-us-we/"
+        target="_self"
         id="campaign-you-me-us-we"
       >
-        Stream live here
+        Find out more
       </StyledButton>
     </TextContainer>
   </Container>

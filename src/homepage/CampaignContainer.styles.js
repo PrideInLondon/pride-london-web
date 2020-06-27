@@ -3,7 +3,7 @@ import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { Button } from '../components/button'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
-import CampaignContainerBg from '../campaigns/youMeUsWe/assets/YMUW_CanadaHouse.jpg'
+import CampaignContainerBg from '../campaigns/youMeUsWe/assets/ymuw.jpg'
 
 export const Container = styled.div`
   display: flex;
@@ -22,11 +22,12 @@ export const BackgroundImage = styled.div`
   background-image: url(${CampaignContainerBg});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   width: 100%;
-  height: 345px;
+  height: 300px;
 
   ${mediaQueries.md} {
-    height: 700px;
+    height: 615px;
   }
 `
 
