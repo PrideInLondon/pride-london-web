@@ -129,6 +129,9 @@ const MiddleSection = ({
 
 const LowerSection = () => (
   <LegalContainer>
+    <P variant="sm">
+      &copy;2020 London LGBT+ Community Pride C.I.C. All rights reserved.
+    </P>
     <LegalLinksContainer>
       {[
         { to: '/privacy', text: 'Privacy & cookies' },
@@ -137,11 +140,6 @@ const LowerSection = () => (
         <LegalLink {...{ to }}>{text}</LegalLink>
       ))}
     </LegalLinksContainer>
-    <P variant="sm">
-      London LGBT+ Community Pride CIC, PO Box 71920, London NW2 9QN -
-      Registered in England and Wales as a Community Interest Company (no.
-      8321669)
-    </P>
   </LegalContainer>
 )
 
