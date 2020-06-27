@@ -62,10 +62,16 @@ export const StyledButton = styled(
         border: 'none',
         borderRadius: 0,
         padding: 0,
-        backgroundImage: `linear-gradient(to bottom, transparent 0, transparent calc(100% - 2px), ${colors.indigo} calc(100% - 2px), ${colors.indigo} calc(100% - 1px), ${colors.darkCyan} calc(100% - 1px), ${colors.darkCyan} 100%)`,
-        backgroundSize: '100% 100%',
         color: colors.indigo,
         fontFamily: fonts.body,
+        backgroundImage: `linear-gradient(to bottom, ${colors.eucalyptusGreen} 0%, ${colors.eucalyptusGreen} calc(100% - 2px), ${colors.indigo} calc(100% - 2px), ${colors.indigo} 100%)`,
+        backgroundPosition: '0 100%',
+        backgroundRepeat: 'repeat-x',
+        backgroundSize: '4px 4px',
+        transition: 'background-size .2s',
+        '&:hover,&:focus': {
+          backgroundSize: '4px 100%',
+        },
       },
       outline: {
         border: `2px solid currentColor`,
