@@ -24,6 +24,8 @@ import {
   SponsorsCTAWrapper,
   SponsorsContainer,
   SponsorImgWrapper,
+  SubscribeWrapper,
+  SubscribeLink,
   LegalSection,
   LegalStrapline,
   LegalList,
@@ -165,6 +167,9 @@ export const Footer = ({
                 #YouMeUsWe
               </HashTag>
             </HashTags>
+            <SubscribeWrapper width={[1, 1, 0.3]}>
+              <SubscribeLink to="/subscribe">Subscribe to Pride</SubscribeLink>
+            </SubscribeWrapper>
           </SocialSection>
           <SponsorsSection width={1}>
             <SponsorsHeading>Thank you to our 2020 partners</SponsorsHeading>
