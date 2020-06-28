@@ -1,4 +1,5 @@
 import React from 'react'
+import { IntercomAPI } from 'react-intercom'
 import { capitaliseFirst } from '../../utils/string-utils'
 import { groupSponsorsByLevel } from '../../sponsors'
 import { Sponsor, SponsorLevel } from '../../sponsors/PartnersPage.types'
@@ -145,8 +146,14 @@ const LowerSection = () => (
         </LegalLink>
       ))}
       <Typeform id="DYvC2n">
-        <LegalLink component="a">Report a website bug</LegalLink>
+        <LegalLink component="button">Report a website bug</LegalLink>
       </Typeform>
+      <LegalLink
+        component="button"
+        onClick={() => IntercomAPI('showNewMessage')}
+      >
+        Contact us
+      </LegalLink>
     </LegalLinksContainer>
   </LegalContainer>
 )

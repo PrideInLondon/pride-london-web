@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { space } from 'styled-system'
+import { Divider } from '../divider'
+import { P } from '../typography'
 import { colors } from '../../theme/colors'
 import { xs, sm, md, lg, xl_mob, xl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
-import { Divider } from '../divider'
-import { P } from '../typography'
 import background from './background.jpg'
 
 export const Wrapper = styled.footer.attrs({ padding: 'xl' })`
@@ -169,8 +169,12 @@ export const LegalLinksContainer = styled.div``
 export const LegalLink = styled(({ component, ...props }) => (
   <P variant="sm" as={component} {...props} />
 ))`
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer;
+  border: none;
+  background: none;
+  color: ${colors.indigo};
+  padding: 0;
 
   :not(:last-child):after {
     content: '|';
