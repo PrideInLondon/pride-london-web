@@ -326,7 +326,7 @@ export const GlobalStyle = createGlobalStyle`
   a:not([class]) {
     text-decoration: none;
     border-bottom: 2px solid ${colors.eucalyptusGreen};
-    color: ${colors.indigo};
+    color: ${colors.black};
     transition: color 0.15s linear;
   }
 

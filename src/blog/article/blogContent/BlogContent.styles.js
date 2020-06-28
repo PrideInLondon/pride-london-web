@@ -6,4 +6,7 @@ export const blogContent = `
   margin-left: auto; 
   margin-right: auto;
   padding: 0 20px;
+  & a {
+    color: ${colors.indigo}
+  }
 `
