@@ -6,6 +6,8 @@ import { Icon } from '../icon'
 import { IconName } from '../icon/Icon.types'
 import { H6, P } from '../typography'
 import { Button } from '../button'
+import { Typeform } from '../typeform'
+import { Navigate } from '../navigate'
 import {
   Wrapper,
   Content,
@@ -103,7 +105,7 @@ const MiddleSection = ({
         level =>
           sponsors[level] &&
           (sponsors[level] as Sponsor[]).map(({ url, logo, name }) => (
-            <LogoWrapper>
+            <LogoWrapper key={name}>
               <Logo
                 href={url}
                 title={name}
@@ -134,14 +136,17 @@ const LowerSection = () => (
     </P>
     <LegalLinksContainer>
       {[
-        { to: 'https://help.prideinlondon.org', text: 'Help' },
-        { to: '/privacy', text: 'Privacy & cookies' },
-        { to: '/media-centre', text: 'Media centre' },
-        { to: '/TO_DO', text: 'Report a website bug' },
-        { to: '/TO_DO', text: 'Contact us' },
-      ].map(({ to, text }) => (
-        <LegalLink {...{ to }}>{text}</LegalLink>
+        { text: 'Help', to: 'https://help.prideinlondon.org' },
+        { text: 'Privacy & cookies', to: '/privacy' },
+        { text: 'Media centre', to: '/media-centre' },
+      ].map(({ text, to }) => (
+        <LegalLink key={text} to={to} component={Navigate}>
+          {text}
+        </LegalLink>
       ))}
+      <Typeform id="DYvC2n">
+        <LegalLink component="a">Report a website bug</LegalLink>
+      </Typeform>
     </LegalLinksContainer>
   </LegalContainer>
 )
