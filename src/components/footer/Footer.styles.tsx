@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { space } from 'styled-system'
-import { Link } from 'gatsby'
+import { Navigate } from '../../components/navigate'
 import { colors } from '../../theme/colors'
 import { xs, sm, md, lg, xl_mob, xl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
@@ -168,7 +168,7 @@ export const LegalContainer = styled.div`
 export const LegalLinksContainer = styled.div``
 
 export const LegalLink = styled(props => (
-  <P variant="sm" as={Link} {...props} />
+  <P variant="sm" as={Navigate} {...props} />
 ))`
   text-decoration: none;
 
