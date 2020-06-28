@@ -18,6 +18,7 @@ import { NavigationProps } from './Navigation.types'
 
 const Navigation: React.FC<NavigationProps> = ({
   backgroundColor,
+  navItemColor,
   logoUrl,
 }) => {
   const [isOpen, setOpen] = useState<boolean>(false)
@@ -56,7 +57,7 @@ const Navigation: React.FC<NavigationProps> = ({
               </Burger>
               <Menu id="menu" isOpen={isOpen} backgroundColor={backgroundColor}>
                 <NavItem
-                  backgroundColor={backgroundColor}
+                  backgroundColor={navItemColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-about',
@@ -93,7 +94,7 @@ const Navigation: React.FC<NavigationProps> = ({
                   }}
                 />
                 <NavItem
-                  backgroundColor={backgroundColor}
+                  backgroundColor={navItemColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-parade-day',
@@ -104,7 +105,7 @@ const Navigation: React.FC<NavigationProps> = ({
                   }}
                 />
                 <NavItem
-                  backgroundColor={backgroundColor}
+                  backgroundColor={navItemColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-events',
@@ -113,7 +114,7 @@ const Navigation: React.FC<NavigationProps> = ({
                   }}
                 />
                 <NavItem
-                  backgroundColor={backgroundColor}
+                  backgroundColor={navItemColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-volunteer',
@@ -122,7 +123,7 @@ const Navigation: React.FC<NavigationProps> = ({
                   }}
                 />
                 <NavItem
-                  backgroundColor={backgroundColor}
+                  backgroundColor={navItemColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-blog',
@@ -130,7 +131,7 @@ const Navigation: React.FC<NavigationProps> = ({
                     url: '/news-and-views',
                   }}
                 />
-                <NavItem backgroundColor={backgroundColor}>
+                <NavItem backgroundColor={navItemColor}>
                   <SupportButton to="/support-us">Support Pride</SupportButton>
                 </NavItem>
               </Menu>

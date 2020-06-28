@@ -109,7 +109,7 @@ export const Burger = styled.button<{
   ({ isOpen, backgroundColor }) => css`
     cursor: pointer;
     border: none;
-    color: ${theme.colors.lightGrey};
+    color: ${theme.colors.white};
     font-family: ${theme.fonts.title};
     font-size: 0.875rem;
     line-height: 1.125rem;

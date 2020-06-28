@@ -5,7 +5,11 @@ import Navigation from './Navigation'
 describe('<Navigation/>', () => {
   it('toggles open / close the menu button', () => {
     const wrapper = mount(
-      <Navigation backgroundColor="pink" logoUrl="/test.svg" />
+      <Navigation
+        backgroundColor="pink"
+        logoUrl="/test.svg"
+        navItemColor="blue"
+      />
     )
     const menuToggle = wrapper.find('button[aria-controls="menu"]')
     const isOpen = wrapper

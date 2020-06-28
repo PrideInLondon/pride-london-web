@@ -8,7 +8,7 @@ export const linkStyles = css`
   font-family: ${theme.fonts.title};
   font-size: 1.125rem;
   line-height: 1.5;
-  color: ${theme.colors.lightGrey};
+  color: ${theme.colors.white};
   text-decoration: none;
   align-self: stretch;
   display: flex;
