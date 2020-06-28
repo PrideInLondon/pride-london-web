@@ -14,7 +14,7 @@ export const handleSlug = (slug: string): string =>
  * Function to determine what properties to determine if Gatsby's Link or
  * regular a tag should be used, and the relevant attributes.
  */
-export function handleUrl(url: string): LinkProps {
+export const handleUrl = (url: string): LinkProps => {
   switch (true) {
     case isExternalUrl(url):
       return {
