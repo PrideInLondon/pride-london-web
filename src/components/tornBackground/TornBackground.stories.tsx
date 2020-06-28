@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select, text, number } from '@storybook/addon-knobs'
-import sampleBackground from '../../assets/logo.png'
 import { H2, P } from '../typography/Typography'
+import { ExampleBackgroundImage } from './TornBackground.styles'
 import { TornBackground } from './TornBackground'
 const variants = {
   Rip1: 1,
@@ -10,15 +10,6 @@ const variants = {
   Rip3: 3,
   Rip4: 4,
   Rip5: 5,
-}
-
-const BackgroundImageSample = {
-  src: sampleBackground,
-  srcSet: ``,
-  srcSetWebp: ``,
-  base64: ``,
-  width: 1000,
-  height: 1000,
 }
 
 const readme = `
@@ -39,10 +30,9 @@ storiesOf('Torn Background Component', module)
     'Top and Bottom tears',
     () => (
       <TornBackground
-        backgroundImage={BackgroundImageSample}
         topTear={{
           ripType: select('Top Rip Variant', variants, variants.Rip1),
-          color: text('Top color', '#000'),
+          color: text('Top color', '#fff'),
           height: number('Top height', 150),
         }}
         bottomTear={{
@@ -50,7 +40,7 @@ storiesOf('Torn Background Component', module)
           color: text('Bottom color', '#fff'),
           height: number('Bottom height', 120),
         }}
-        minHeight="400px"
+        BackgroundComponent={ExampleBackgroundImage}
       >
         <H2 color="black">Test</H2>
         <P color="black">
@@ -71,12 +61,11 @@ storiesOf('Torn Background Component', module)
     'bottom tear',
     () => (
       <TornBackground
-        backgroundImage={BackgroundImageSample}
         bottomTear={{
           ripType: select('Bottom Rip Variant', variants, variants.Rip1),
           color: text('Bottom color', '#fff'),
         }}
-        minHeight="400px"
+        BackgroundComponent={ExampleBackgroundImage}
       >
         <H2 color="black">Test</H2>
         <P color="black">
@@ -97,13 +86,12 @@ storiesOf('Torn Background Component', module)
     'Top tear',
     () => (
       <TornBackground
-        backgroundImage={BackgroundImageSample}
         topTear={{
           ripType: select('Top Rip Variant', variants, variants.Rip1),
-          color: text('Top color', '#000'),
+          color: text('Top color', '#fff'),
           height: number('Top height', 100),
         }}
-        minHeight="400px"
+        BackgroundComponent={ExampleBackgroundImage}
       >
         <H2 color="black">Test</H2>
         <P color="black">

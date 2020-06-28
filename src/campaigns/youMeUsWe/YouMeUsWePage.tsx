@@ -1,11 +1,13 @@
 import React from 'react'
 import { colors } from '../../theme/colors'
+import { TornBackground } from '../../components/tornBackground/TornBackground'
 import YouMeUsWePageHelmet from './YouMeUsWePageHelmet'
 import {
   BannerBackgroundImage,
   BannerMark,
   DesktopShareBarWrapper,
   DesktopShareBar,
+  ChildrenWrapper,
   Wrapper,
   StyledTag,
   FeaturedImage,
@@ -26,9 +28,19 @@ import { YouMeUsWePageProps } from './YouMeUseWePage.types'
 const YouMeUsWePage = (props: YouMeUsWePageProps) => (
   <>
     <YouMeUsWePageHelmet {...props} />
-    <BannerBackgroundImage>
-      <BannerMark />
-    </BannerBackgroundImage>
+    <TornBackground
+      BackgroundComponent={BannerBackgroundImage}
+      bottomTear={{
+        ripType: 4,
+        color: '#fff',
+        height: 130,
+      }}
+    >
+      <ChildrenWrapper>
+        <BannerMark />
+      </ChildrenWrapper>
+    </TornBackground>
+
     <Wrapper>
       <DesktopShareBarWrapper>
         <DesktopShareBar variant="vertical" />
@@ -37,15 +49,64 @@ const YouMeUsWePage = (props: YouMeUsWePageProps) => (
       <PrideInLockdownSection />
       <ActsOfAllyshipSection />
       <Mark />
-      <FeaturedImage src={rallying} />
+      <TornBackground
+        BackgroundComponent={() => <FeaturedImage src={rallying} />}
+        bottomTear={{
+          ripType: 2,
+          color: '#fff',
+          height: 105,
+        }}
+        topTear={{
+          ripType: 2,
+          color: '#fff',
+          height: 100,
+        }}
+      />
+
       <ForEveryKindSection />
       <Mark />
       <DonateToYourCommunitySection />
-      <FeaturedImage src={different} marginTop="xl" />
+      <TornBackground
+        BackgroundComponent={() => (
+          <FeaturedImage src={different} marginTop="xl" />
+        )}
+        bottomTear={{
+          ripType: 5,
+          color: '#fff',
+          height: 125,
+        }}
+        topTear={{
+          ripType: 1,
+          color: '#fff',
+          height: 150,
+        }}
+      />
       <BeThereForYourCommunitySection />
-      <FeaturedImage src={sunshine} marginTop="xl" />
+      <TornBackground
+        BackgroundComponent={() => (
+          <FeaturedImage src={sunshine} marginTop="xl" />
+        )}
+        bottomTear={{
+          ripType: 2,
+          color: '#fff',
+          height: 105,
+        }}
+        topTear={{
+          ripType: 4,
+          color: '#fff',
+          height: 130,
+        }}
+      />
+
       <CelebrateYourCommunitySection />
-      <FeaturedImage src={ymuw} marginY="xl" />
+      <TornBackground
+        BackgroundComponent={() => <FeaturedImage src={ymuw} marginY="xl" />}
+        topTear={{
+          ripType: 3,
+          color: '#fff',
+          height: 145,
+        }}
+      />
     </Wrapper>
   </>
 )

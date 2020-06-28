@@ -1,8 +1,6 @@
 import React from 'react'
-import { FixedObject } from 'gatsby-image'
+
 import {
-  ResponsiveImg,
-  Background,
   RelativeTornSection,
   AbsoluteTornSection,
 } from './TornBackground.styles'
@@ -15,40 +13,32 @@ interface TearObject {
   height?: number
 }
 interface TornBackgroundProps {
-  backgroundImage?: FixedObject
+  BackgroundComponent?: React.FC
   topTear?: TearObject
   bottomTear?: TearObject
-  minHeight: string
 }
 const TornBackground: React.FC<TornBackgroundProps> = ({
-  backgroundImage,
+  BackgroundComponent,
   topTear = {},
   bottomTear = {},
   children,
-  minHeight,
 }) => {
   return (
     <RelativeTornSection>
       {topTear.ripType && (
         <Tear
           variant="top"
-          ripType={bottomTear.ripType}
-          color={bottomTear.color}
-          height={bottomTear.height}
-          marginTop={-(bottomTear.height || 0)}
+          ripType={topTear.ripType}
+          color={topTear.color}
+          height={topTear.height}
+          marginTop={-(topTear.height || 0)}
           aria-hidden="true"
         />
       )}
       <AbsoluteTornSection> {children}</AbsoluteTornSection>
-      {backgroundImage && (
-        <ResponsiveImg
-          alt=""
-          objectFit="cover"
-          objectPosition="50% 50%"
-          fixed={backgroundImage}
-        />
-      )}
-      <Background height={minHeight}></Background>
+      {BackgroundComponent && <BackgroundComponent />}
+      {/* When there are no children the  bottom tear doesn't display without*/}
+      {!children && <p></p>}
       {bottomTear && (
         <Tear
           variant="bottom"

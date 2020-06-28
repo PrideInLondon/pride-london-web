@@ -1,45 +1,20 @@
 import styled from 'styled-components'
-import { variant, space } from 'styled-system'
-import Img, {
-  GatsbyImageWithIEPolyfillProps,
-} from 'gatsby-image/withIEPolyfill'
-import { FluidObject, FixedObject } from 'gatsby-image'
-
-export const Background = styled.div<{ height: string }>`
-  position: relative;
-  display: absolute;
-  width: 100%;
-  height: ${props => props.height};
-  overflow: hidden;
-`
-export const ResponsiveImg = styled(Img)<ImageProps>`
-  position: absolute !important;
-  top: 50%;
-  left: 50%;
-  height: 100% !important;
-  width: 100% !important;
-  transform: translate(-50%, -50%);
-
-  img {
-    min-height: 100%;
-    min-width: 100%;
-  }
-`
+import { variant } from 'styled-system'
+import bannerBackground from '../../campaigns/youMeUsWe/assets/banner/background.jpg'
 
 export const StyledSvg = styled.svg<{
   variant: string
 }>`
   position: absolute;
   width: 100%;
-  z-index: 9;
+  z-index: 2;
 
-  ${props => (props.variant === 'top' ? space : null)}
   height: ${props => `${props.height}px`};
 
   ${variant({
     variants: {
       top: {
-        top: 0,
+        transform: 'scaleY(-1);',
       },
       bottom: {
         bottom: 0,
@@ -47,6 +22,7 @@ export const StyledSvg = styled.svg<{
     },
   })}
 `
+
 export const RelativeTornSection = styled.section`
   position: relative;
   height: 100%;
@@ -54,9 +30,15 @@ export const RelativeTornSection = styled.section`
 export const AbsoluteTornSection = styled.section`
   position: absolute;
   z-index: 12;
+  width: 100%;
 `
 
-interface ImageProps extends GatsbyImageWithIEPolyfillProps {
-  fluid?: FluidObject
-  fixed?: FixedObject
-}
+export const ExampleBackgroundImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(${bannerBackground});
+  background-size: cover;
+  width: 100%;
+  height: 560px;
+`

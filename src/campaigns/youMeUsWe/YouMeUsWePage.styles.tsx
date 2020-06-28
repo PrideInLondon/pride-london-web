@@ -22,6 +22,17 @@ export const BannerBackgroundImage = styled.div`
     height: 800px;
   }
 `
+export const ChildrenWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 560px;
+
+  ${mediaQueries.md} {
+    height: 800px;
+  }
+`
 
 export const BannerMark = styled(Mark)`
   width: 240px;
