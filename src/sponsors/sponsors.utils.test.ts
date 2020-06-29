@@ -35,7 +35,7 @@ describe('groupSponsorsByLevel', () => {
       inputNodes: { node: ContentfulSponsor }[],
       level: SponsorLevel
     ) =>
-      inputNodes.map(({ node: { sponsorName } }) => {
+      inputNodes.forEach(({ node: { sponsorName } }) => {
         expect(actual[level]).toContainEqual(
           expect.objectContaining({ name: sponsorName, level })
         )
