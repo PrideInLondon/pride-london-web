@@ -86,7 +86,7 @@ const UpperSection = ({
         )
       })}
     </HashtagContainer>
-    <Button variant="tertiary" to="/subscribe">
+    <Button variant="tertiary" to="/subscribe" marginLeft="auto">
       Subscribe to Pride
     </Button>
   </UpperWrapper>

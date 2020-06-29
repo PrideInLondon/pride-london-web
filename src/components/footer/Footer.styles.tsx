@@ -36,13 +36,14 @@ export const UpperWrapper = styled.div`
 
   ${mediaQueries.lg} {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 `
 
 export const SocialContainer = styled.div`
   font-size: 2rem;
+  margin-right: auto;
 
   > * {
     margin-left: ${sm}px;
@@ -71,7 +72,7 @@ export const HashtagContainer = styled.div`
   }
 
   ${mediaQueries.lg} {
-    margin: 0;
+    margin-right: auto;
   }
 `
 
