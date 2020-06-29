@@ -4,7 +4,7 @@ import { space } from 'styled-system'
 import { Divider } from '../divider'
 import { P } from '../typography'
 import { colors } from '../../theme/colors'
-import { xs, sm, md, lg, xl_mob, xl } from '../../theme/space'
+import { sm, md, lg, xl_mob, xl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import background from './background.jpg'
 
@@ -88,10 +88,6 @@ export const LogoContainer = styled.div`
 `
 
 export const LogoWrapper = styled.div`
-  max-width: 150px;
-  min-height: 70px;
-  padding: ${xs}px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,8 +115,8 @@ export const Logo = styled.a`
 
 export const LogoImage = styled.img`
   object-fit: contain;
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 80%;
+  max-width: 80%;
   align-self: center;
   margin: 0 auto;
   filter: grayscale(100%);
