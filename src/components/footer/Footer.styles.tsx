@@ -168,6 +168,7 @@ export const LegalLink = styled(({ component, ...props }) => (
   <P variant="sm" as={component} {...props} />
 ))`
   text-decoration: underline;
+  font-weight: 500;
   cursor: pointer;
   border: none;
   background: none;
