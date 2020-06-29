@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from 'gatsby'
 import React from 'react'
-import { Footer } from '../components/footer'
+import { Footer as FooterBase } from '../components/footer'
 
 const query = graphql`
   query footerSponsorsQuery {
@@ -25,7 +25,7 @@ const query = graphql`
   }
 `
 
-interface FooterContainerProps {
+interface FooterProps {
   facebook: string
   twitter: string
   instagram: string
@@ -34,18 +34,18 @@ interface FooterContainerProps {
   snapchat: string
 }
 
-const FooterContainer = ({
+export const Footer = ({
   facebook,
   twitter,
   instagram,
   youtube,
   linkedin,
   snapchat,
-}: FooterContainerProps) => (
+}: FooterProps) => (
   <StaticQuery
     query={query}
     render={data => (
-      <Footer
+      <FooterBase
         socials={{
           facebook,
           twitter,
@@ -59,5 +59,3 @@ const FooterContainer = ({
     )}
   />
 )
-
-export default FooterContainer
