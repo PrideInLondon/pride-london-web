@@ -119,7 +119,6 @@ export const LogoImage = styled.img`
   max-width: 80%;
   align-self: center;
   margin: 0 auto;
-  filter: grayscale(100%);
   flex-shrink: 0; /* needed to stop images stretching on IE11 */
 `
 
