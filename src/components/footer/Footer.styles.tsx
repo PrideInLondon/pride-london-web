@@ -120,8 +120,8 @@ export const LogoWrapper = styled.div`
 `
 
 export const Logo = styled.a`
-  height: 80%;
-  width: 80%;
+  height: 75%;
+  width: 75%;
   text-decoration: none;
 `
 
