@@ -57,6 +57,8 @@ export const Social = styled.a`
 `
 
 export const HashtagContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   margin: ${lg}px 0;
 
   > * {
