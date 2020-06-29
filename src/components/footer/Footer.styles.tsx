@@ -6,7 +6,7 @@ import { P } from '../typography'
 import { colors } from '../../theme/colors'
 import { sm, md, lg, xl_mob, xl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
-import { fontSizes } from '../../theme/fonts'
+import { fontSizes, fonts } from '../../theme/fonts'
 import background from './background.jpg'
 
 export const Wrapper = styled.footer.attrs({ padding: 'xl' })`
@@ -172,6 +172,7 @@ export const LegalLinksContainer = styled.div`
 export const LegalLink = styled(({ component, ...props }) => (
   <P variant="sm" as={component} {...props} />
 ))`
+  font-family: ${fonts.body};
   text-decoration: underline;
   font-weight: 500;
   cursor: pointer;
