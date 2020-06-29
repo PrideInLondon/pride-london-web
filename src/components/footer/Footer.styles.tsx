@@ -160,7 +160,9 @@ export const LegalContainer = styled.div`
   }
 `
 
-export const LegalLinksContainer = styled.div``
+export const LegalLinksContainer = styled.div`
+  text-align: right;
+`
 
 export const LegalLink = styled(({ component, ...props }) => (
   <P variant="sm" as={component} {...props} />
