@@ -6,6 +6,7 @@ import { P } from '../typography'
 import { colors } from '../../theme/colors'
 import { sm, md, lg, xl_mob, xl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
+import { fontSizes } from '../../theme/fonts'
 import background from './background.jpg'
 
 export const Wrapper = styled.footer.attrs({ padding: 'xl' })`
@@ -68,6 +69,7 @@ export const HashtagContainer = styled.div`
 
 export const Hashtag = styled.a`
   font-weight: bold;
+  font-size: ${fontSizes.body_md};
   color: ${colors.indigo};
   text-decoration: none;
   transition: color 0.15s linear;
@@ -75,6 +77,10 @@ export const Hashtag = styled.a`
   :hover,
   :focus {
     color: ${colors.eucalyptusGreen};
+  }
+
+  ${mediaQueries.md} {
+    font-size: ${fontSizes.body_lg};
   }
 `
 
