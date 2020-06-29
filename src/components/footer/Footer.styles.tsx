@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space, SpaceProps } from 'styled-system'
-import { Divider } from '../divider'
+import { space } from 'styled-system'
 import { P } from '../typography'
 import { colors } from '../../theme/colors'
 import { sm, md, lg, xl, xxl } from '../../theme/space'
@@ -92,10 +91,6 @@ export const Hashtag = styled.a`
     font-size: ${fontSizes.body_lg};
   }
 `
-
-export const StyledDivider = (props: SpaceProps) => (
-  <Divider marginTop="xl" marginBottom="xl" {...props} />
-)
 
 export const LogoContainer = styled.div`
   display: flex;

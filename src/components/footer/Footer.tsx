@@ -7,6 +7,7 @@ import { Icon } from '../icon'
 import { IconName } from '../icon/Icon.types'
 import { H6, P } from '../typography'
 import { Button } from '../button'
+import { Divider } from '../divider'
 import { Typeform } from '../typeform'
 import { Navigate } from '../navigate'
 import {
@@ -17,7 +18,6 @@ import {
   Social,
   HashtagContainer,
   Hashtag,
-  StyledDivider,
   LogoContainer,
   LogoWrapper,
   Logo,
@@ -164,13 +164,16 @@ export const Footer = ({
     allContentfulSponsor: { edges },
   },
 }: FooterProps) => (
-  <Wrapper>
-    <Content>
-      <UpperSection {...{ socials }} />
-      <StyledDivider />
-      <MiddleSection sponsors={groupSponsorsByLevel(edges)} />
-      <StyledDivider marginBottom="lg" />
-      <LowerSection />
-    </Content>
-  </Wrapper>
+  <>
+    <Wrapper>
+      <Content>
+        <Divider mt="0" mb="xl" display={{ default: 'block', md: 'none' }} />
+        <UpperSection {...{ socials }} />
+        <Divider mt="xl" mb="xl" />
+        <MiddleSection sponsors={groupSponsorsByLevel(edges)} />
+        <Divider mt="xl" mb="lg" />
+        <LowerSection />
+      </Content>
+    </Wrapper>
+  </>
 )
