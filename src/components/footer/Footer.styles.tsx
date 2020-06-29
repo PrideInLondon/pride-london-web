@@ -4,13 +4,14 @@ import { space, SpaceProps } from 'styled-system'
 import { Divider } from '../divider'
 import { P } from '../typography'
 import { colors } from '../../theme/colors'
-import { sm, md, lg, xl } from '../../theme/space'
+import { sm, md, lg, xl, xxl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { fontSizes, fonts } from '../../theme/fonts'
 import background from './background.jpg'
 
 export const Wrapper = styled.footer.attrs({
-  padding: { default: 0, md: 'xl' },
+  paddingX: { default: 0, md: 'xxl' },
+  paddingY: { default: 0, md: 'xl' },
 })`
   display: flex;
   background-image: url(${background});
@@ -21,8 +22,8 @@ export const Wrapper = styled.footer.attrs({
 `
 
 export const Content = styled.div.attrs({
-  paddingX: { default: 'lg', md: 'xl' }, // L&R
-  paddingY: { default: 'xl_mob', md: 'xl' }, // T&B
+  paddingX: { default: 'lg', md: 'xl_mob', xl: lg + xxl },
+  paddingY: { default: 'xl_mob', md: 'xl' },
 })`
   background-color: ${colors.white};
   width: 100%;
