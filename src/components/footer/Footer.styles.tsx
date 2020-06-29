@@ -106,12 +106,7 @@ export const LogoWrapper = styled.div`
   justify-content: center;
   flex-basis: 33.3333%; /* 1 of 3 */
 
-  ${mediaQueries.sm} {
-    padding: ${sm}px;
-  }
-
   ${mediaQueries.md} {
-    min-height: 100px;
     flex-basis: 16.6667%; /* 1 of 6 */
     max-width: 16.6667%;
   }
@@ -123,13 +118,15 @@ export const LogoWrapper = styled.div`
 `
 
 export const Logo = styled.a`
+  height: 80%;
+  width: 80%;
   text-decoration: none;
 `
 
 export const LogoImage = styled.img`
   object-fit: contain;
-  max-height: 80%;
-  max-width: 80%;
+  height: 100%;
+  width: 100%;
   align-self: center;
   margin: 0 auto;
   flex-shrink: 0; /* needed to stop images stretching on IE11 */
