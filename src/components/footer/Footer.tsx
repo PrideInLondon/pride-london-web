@@ -43,7 +43,7 @@ const SOCIALS: IconName[] = [
   'snapchat',
 ]
 
-const HASHTAGS = ['pride', 'prideinlondon', 'YouMeUsWe']
+const HASHTAGS = ['pride', 'PrideInLondon', 'YouMeUsWe']
 
 const UpperSection = ({
   socials,
