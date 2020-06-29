@@ -169,7 +169,7 @@ export const Footer = ({
       <UpperSection {...{ socials }} />
       <StyledDivider />
       <MiddleSection sponsors={groupSponsorsByLevel(edges)} />
-      <StyledDivider />
+      <StyledDivider marginBottom="lg" />
       <LowerSection />
     </Content>
   </Wrapper>

@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space } from 'styled-system'
+import { space, SpaceProps } from 'styled-system'
 import { Divider } from '../divider'
 import { P } from '../typography'
 import { colors } from '../../theme/colors'
-import { sm, md, lg, xl_mob, xl } from '../../theme/space'
+import { sm, md, lg, xl } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { fontSizes, fonts } from '../../theme/fonts'
 import background from './background.jpg'
@@ -91,8 +91,8 @@ export const Hashtag = styled.a`
   }
 `
 
-export const StyledDivider = () => (
-  <Divider marginY={{ default: `${xl_mob}px`, md: `${xl}px` }} />
+export const StyledDivider = (props: SpaceProps) => (
+  <Divider marginTop="xl" marginBottom="xl" {...props} />
 )
 
 export const LogoContainer = styled.div`
