@@ -9,7 +9,9 @@ import { mediaQueries } from '../../theme/mediaQueries'
 import { fontSizes, fonts } from '../../theme/fonts'
 import background from './background.jpg'
 
-export const Wrapper = styled.footer.attrs({ padding: 'xl' })`
+export const Wrapper = styled.footer.attrs({
+  padding: { default: 0, md: 'xl' },
+})`
   display: flex;
   background-image: url(${background});
   background-size: cover;
@@ -18,7 +20,10 @@ export const Wrapper = styled.footer.attrs({ padding: 'xl' })`
   ${space}
 `
 
-export const Content = styled.div.attrs({ padding: 'xl' })`
+export const Content = styled.div.attrs({
+  paddingX: { default: 'lg', md: 'xl' }, // L&R
+  paddingY: { default: 'xl_mob', md: 'xl' }, // T&B
+})`
   background-color: ${colors.white};
   width: 100%;
 
