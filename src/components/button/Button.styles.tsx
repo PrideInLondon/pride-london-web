@@ -61,7 +61,7 @@ export const StyledButton = styled(
       tertiary: {
         border: 'none',
         borderRadius: 0,
-        padding: '0 0 2px 0',
+        padding: '0 0 4px 0',
         color: colors.indigo,
         fontFamily: fonts.body,
         backgroundImage: `linear-gradient(to bottom, ${colors.eucalyptusGreen} 0%, ${colors.eucalyptusGreen} calc(100% - 2px), ${colors.indigo} calc(100% - 2px), ${colors.indigo} 100%)`,
