@@ -28,7 +28,7 @@ export const Content = styled.div.attrs({ padding: 'xl' })`
 export const UpperWrapper = styled.div`
   display: block;
 
-  ${mediaQueries.md} {
+  ${mediaQueries.lg} {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +62,7 @@ export const HashtagContainer = styled.div`
     margin-right: 0;
   }
 
-  ${mediaQueries.md} {
+  ${mediaQueries.lg} {
     margin: 0;
   }
 `
