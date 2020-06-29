@@ -173,7 +173,11 @@ export const LegalContainer = styled.div`
 `
 
 export const LegalLinksContainer = styled.div`
-  text-align: right;
+  text-align: left;
+
+  ${mediaQueries.md} {
+    text-align: right;
+  }
 `
 
 export const LegalLink = styled(({ component, ...props }) => (
