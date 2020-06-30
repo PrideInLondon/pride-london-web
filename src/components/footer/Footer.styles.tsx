@@ -185,10 +185,9 @@ export const LegalLink = styled(({ component, ...props }) => (
   background: none;
   color: ${colors.indigo};
   padding: 0;
+  white-space: nowrap;
 
-  :not(:last-child):after {
-    content: '|';
-    padding: 0 15px;
-    cursor: default;
+  :not(:last-child) {
+    margin-right: ${lg}px;
   }
 `
