@@ -1,16 +1,7 @@
 import styled from 'styled-components'
-import tinycolor from 'tinycolor2'
 import { hideVisually } from 'polished'
 import theme from '../../theme/theme'
-
-export const getMostReadable = color =>
-  tinycolor
-    .mostReadable(color, [theme.colors.white, theme.colors.black], {
-      includeFallbackColors: true,
-      level: 'AAA',
-      size: 'small',
-    })
-    .toHexString()
+import { getMostReadable } from '../../utils/color-utils'
 
 export const Label = styled.label`
   align-items: center;
