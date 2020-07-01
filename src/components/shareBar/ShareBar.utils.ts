@@ -1,7 +1,5 @@
 import { SharePlatform } from '../../utils/share-utils'
-
-const capitaliseFirst = (word: string) =>
-  word.charAt(0).toUpperCase() + word.slice(1)
+import { capitaliseFirst } from '../../utils/string-utils'
 
 export const generatePlatformName = (name: SharePlatform) =>
   capitaliseFirst(

@@ -13,7 +13,7 @@ export const ShareText = styled.span`
   font-stretch: normal;
   line-height: 1.43;
   letter-spacing: normal;
-  color: ${theme.colors.darkGrey};
+  color: ${theme.colors.indigo};
 `
 export const SubHeader = styled.div`
   display: flex;
@@ -24,7 +24,7 @@ export const SubHeader = styled.div`
     margin-top: 30px;
   }
   & span {
-    color: ${theme.colors.darkGrey};
+    color: ${theme.colors.indigo};
     font-size: 14px;
     font-weight: 600;
     line-height: 1.43;

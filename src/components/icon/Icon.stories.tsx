@@ -3,13 +3,12 @@ import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
 import { colors } from '../../theme/colors'
 import { Icon } from './Icon'
-import { COMPONENTS } from './Icon.utils'
-
-const names: string[] = Object.keys(COMPONENTS)
+import { NAMES } from './icons'
+import { ROTATIONS } from './Icon.utils'
 
 storiesOf('Icon', module)
-  .add('variants', () => {
-    const name: string = select('Name', names, names[0])
+  .add('variant', () => {
+    const name = select('Name', NAMES, NAMES[0])
     return (
       <div style={{ display: 'flex', fontSize: '2em' }}>
         <div
@@ -33,10 +32,19 @@ storiesOf('Icon', module)
       </div>
     )
   })
+  .add('rotate', () => (
+    <div style={{ fontSize: '2em' }}>
+      <Icon
+        name={select('Name', NAMES, NAMES[0])}
+        variant="indigo"
+        rotate={select('Rotate', ROTATIONS, ROTATIONS[0])}
+      />
+    </div>
+  ))
   .add('with text', () => {
-    const name: string = select('Name', names, names[0])
+    const name = select('Name', NAMES, NAMES[0])
     return (
-      <div style={{ display: 'flex', fontSize: '2em' }}>
+      <div style={{ fontSize: '2em' }}>
         <p
           style={{
             color: colors.indigo,
