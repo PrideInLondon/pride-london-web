@@ -24,7 +24,7 @@ export const Link = styled.a`
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
-  color: ${theme.colors.black};
+  color: ${theme.colors.indigo};
   border-bottom: 2px solid transparent;
   transition: border-bottom-color 200ms ease-out;
   cursor: pointer;
