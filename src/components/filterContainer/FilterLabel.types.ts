@@ -1,5 +1,7 @@
 export const FILTER_TYPES = ['checkbox', 'radio'] as const
 
+export type FilterType = typeof FILTER_TYPES[number]
+
 export interface LabelProps {
   filterColour: string
   isSelected: boolean
@@ -7,6 +9,6 @@ export interface LabelProps {
 
 export interface FilterLabelProps extends LabelProps {
   filterName: string
-  filterType: typeof FILTER_TYPES[number]
+  filterType: FilterType
   handleSelect: (selectedFilterName: string) => void
 }
