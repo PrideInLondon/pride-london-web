@@ -164,16 +164,14 @@ export const Footer = ({
     allContentfulSponsor: { edges },
   },
 }: FooterProps) => (
-  <>
-    <Wrapper>
-      <Content>
-        <Divider mt="0" mb="xl" display={{ default: 'block', md: 'none' }} />
-        <UpperSection {...{ socials }} />
-        <Divider mt="xl" mb="xl" />
-        <MiddleSection sponsors={groupSponsorsByLevel(edges)} />
-        <Divider mt="xl" mb="lg" />
-        <LowerSection />
-      </Content>
-    </Wrapper>
-  </>
+  <Wrapper>
+    <Content>
+      <Divider mt="0" mb="xl" display={{ default: 'block', md: 'none' }} />
+      <UpperSection {...{ socials }} />
+      <Divider mt="xl" mb="xl" />
+      <MiddleSection sponsors={groupSponsorsByLevel(edges)} />
+      <Divider mt="xl" mb="lg" />
+      <LowerSection />
+    </Content>
+  </Wrapper>
 )
