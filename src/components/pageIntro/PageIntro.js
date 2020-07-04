@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { CTABox } from '../ctaBox'
 import { Row } from '../grid'
+import { space } from '../../theme/space'
 import { MainContainer, IntroContainer } from './PageIntro.styles'
 
 const PageIntro = ({ children, cta }) => {
@@ -9,7 +10,7 @@ const PageIntro = ({ children, cta }) => {
     <>
       {cta && <CTABox link={cta.link} title={cta.title} body={cta.body} />}
       <MainContainer as="section">
-        <Row mb={['30px', '60px']}>
+        <Row mb={[space.lg, space.xl]}>
           <IntroContainer
             width={[
               1, // 100% between 0px screen width and first breakpoint (375px)
