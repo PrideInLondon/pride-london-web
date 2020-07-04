@@ -12,7 +12,7 @@ interface GalleryProps {
 export const Gallery = <T,>({
   entries,
   paged: { pageSize, ShowMoreButton } = {
-    pageSize: 0,
+    pageSize: entries.length,
     ShowMoreButton: <></>,
   },
   render,
@@ -20,9 +20,7 @@ export const Gallery = <T,>({
   entries: T[]
   render: (renderProps: { entries: T[] }) => React.ReactNode
 }) => {
-  const [numberOfEntriesToShow, setNumberOfEntriesToShow] = useState(
-    pageSize || entries.length
-  )
+  const [numberOfEntriesToShow, setNumberOfEntriesToShow] = useState(pageSize)
 
   useEffect(() => {
     setNumberOfEntriesToShow(pageSize)
@@ -35,7 +33,7 @@ export const Gallery = <T,>({
           {render({ entries: entries.slice(0, numberOfEntriesToShow) })}
         </Row>
       </Container>
-      {pageSize && numberOfEntriesToShow < entries.length && (
+      {numberOfEntriesToShow < entries.length && (
         <Row>
           <Column mx="auto">
             {React.cloneElement(ShowMoreButton, {

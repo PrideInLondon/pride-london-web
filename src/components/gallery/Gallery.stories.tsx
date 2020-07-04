@@ -33,7 +33,7 @@ storiesOf(Gallery.name, module)
       entries={object('entries', ENTRIES)}
       render={({ entries }) =>
         entries.map(({ title, description, footer }) => (
-          <FlexColumn width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}>
+          <FlexColumn key={title} width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}>
             <Card to="#">
               <CardContent>
                 <CardTitle>{title}</CardTitle>
@@ -55,7 +55,7 @@ storiesOf(Gallery.name, module)
       }}
       render={({ entries }) =>
         entries.map(({ title, description, footer }) => (
-          <FlexColumn width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}>
+          <FlexColumn key={title} width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}>
             <Card to="#">
               <CardContent>
                 <CardTitle>{title}</CardTitle>
