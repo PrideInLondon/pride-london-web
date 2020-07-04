@@ -1,8 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { object } from '@storybook/addon-knobs'
+import { object, number } from '@storybook/addon-knobs'
 import { FlexColumn } from '../grid'
 import { Card, CardContent, CardTitle, CardFooter } from '../card'
+import { Button } from '../button'
 import { Gallery } from './Gallery'
 
 const ENTRIES = [
@@ -26,21 +27,44 @@ const ENTRIES = [
   },
 ]
 
-storiesOf(Gallery.name, module).add('default', () => (
-  <Gallery
-    entries={object('entries', ENTRIES)}
-    render={({ entries }) =>
-      entries.map(({ title, description, footer }) => (
-        <FlexColumn width={{ default: 1, sm: 1 / 2, lg: 1 / 3 }}>
-          <Card to="#">
-            <CardContent>
-              <CardTitle>{title}</CardTitle>
-              <p>{description}</p>
-              <CardFooter>{footer}</CardFooter>
-            </CardContent>
-          </Card>
-        </FlexColumn>
-      ))
-    }
-  />
-))
+storiesOf(Gallery.name, module)
+  .add('default', () => (
+    <Gallery
+      entries={object('entries', ENTRIES)}
+      render={({ entries }) =>
+        entries.map(({ title, description, footer }) => (
+          <FlexColumn width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}>
+            <Card to="#">
+              <CardContent>
+                <CardTitle>{title}</CardTitle>
+                <p>{description}</p>
+                <CardFooter>{footer}</CardFooter>
+              </CardContent>
+            </Card>
+          </FlexColumn>
+        ))
+      }
+    />
+  ))
+  .add('paged', () => (
+    <Gallery
+      entries={object('entries', ENTRIES.concat(ENTRIES))}
+      paged={{
+        pageSize: number('pageSize', 4, { min: 1, max: ENTRIES.length * 2 }),
+        ShowMoreButton: <Button variant="outline">Show more</Button>,
+      }}
+      render={({ entries }) =>
+        entries.map(({ title, description, footer }) => (
+          <FlexColumn width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}>
+            <Card to="#">
+              <CardContent>
+                <CardTitle>{title}</CardTitle>
+                <p>{description}</p>
+                <CardFooter>{footer}</CardFooter>
+              </CardContent>
+            </Card>
+          </FlexColumn>
+        ))
+      }
+    />
+  ))
