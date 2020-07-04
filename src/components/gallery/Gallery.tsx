@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row, Column } from '../grid'
-import { ButtonSignatureProps } from '../button/Button.types'
+import { Container, Row } from '../grid'
 
 interface GalleryProps {
-  paged?: {
-    pageSize: number
-    ShowMoreButton: React.ReactElement<ButtonSignatureProps>
-  }
+  pageSize?: number
 }
 
 export const Gallery = <T,>({
   entries,
-  paged: { pageSize, ShowMoreButton } = {
-    pageSize: entries.length,
-    ShowMoreButton: <></>,
-  },
   render,
+  pageSize = entries.length,
 }: GalleryProps & {
   entries: T[]
-  render: (renderProps: { entries: T[] }) => React.ReactNode
+  render: (renderProps: {
+    entries: T[]
+    moreEntriesToShow: boolean
+    showNextPage: () => void
+  }) => React.ReactNode
 }) => {
   const [numberOfEntriesToShow, setNumberOfEntriesToShow] = useState(pageSize)
 
@@ -30,19 +27,14 @@ export const Gallery = <T,>({
     <>
       <Container>
         <Row>
-          {render({ entries: entries.slice(0, numberOfEntriesToShow) })}
+          {render({
+            entries: entries.slice(0, numberOfEntriesToShow),
+            moreEntriesToShow: numberOfEntriesToShow < entries.length,
+            showNextPage: () =>
+              setNumberOfEntriesToShow(numberOfEntriesToShow + pageSize),
+          })}
         </Row>
       </Container>
-      {numberOfEntriesToShow < entries.length && (
-        <Row>
-          <Column mx="auto">
-            {React.cloneElement(ShowMoreButton, {
-              onClick: () =>
-                setNumberOfEntriesToShow(numberOfEntriesToShow + pageSize),
-            })}
-          </Column>
-        </Row>
-      )}
     </>
   )
 }

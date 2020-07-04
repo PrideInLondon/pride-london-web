@@ -49,22 +49,31 @@ storiesOf(Gallery.name, module)
   .add('paged', () => (
     <Gallery
       entries={object('entries', ENTRIES.concat(ENTRIES))}
-      paged={{
-        pageSize: number('pageSize', 4, { min: 1, max: ENTRIES.length * 2 }),
-        ShowMoreButton: <Button variant="outline">Show more</Button>,
-      }}
-      render={({ entries }) =>
-        entries.map(({ title, description, footer }) => (
-          <FlexColumn key={title} width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}>
-            <Card to="#">
-              <CardContent>
-                <CardTitle>{title}</CardTitle>
-                <p>{description}</p>
-                <CardFooter>{footer}</CardFooter>
-              </CardContent>
-            </Card>
-          </FlexColumn>
-        ))
-      }
+      pageSize={number('pageSize', 4, { min: 1, max: ENTRIES.length * 2 })}
+      render={({ entries, moreEntriesToShow, showNextPage }) => (
+        <>
+          {entries.map(({ title, description, footer }) => (
+            <FlexColumn
+              key={title}
+              width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}
+            >
+              <Card to="#">
+                <CardContent>
+                  <CardTitle>{title}</CardTitle>
+                  <p>{description}</p>
+                  <CardFooter>{footer}</CardFooter>
+                </CardContent>
+              </Card>
+            </FlexColumn>
+          ))}
+          {moreEntriesToShow && (
+            <div style={{ margin: '20px auto' }}>
+              <Button variant="outline" onClick={showNextPage}>
+                Show more
+              </Button>
+            </div>
+          )}
+        </>
+      )}
     />
   ))
