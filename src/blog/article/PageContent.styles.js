@@ -9,8 +9,3 @@ export const Content = styled(Column)`
   position: relative;
   padding: 30px;
 `
-export const FlexDiv = styled.div`
-  display: flex;
-  margin: 0 20px 0 90.2px;
-  float: left;
-`

@@ -4,6 +4,8 @@ import { getMostReadable } from '../../components/filterButton/FilterButton.styl
 
 export const FlexDiv = styled.div`
   display: flex;
+  margin: 0 auto 0 90.2px;
+  float: left;
 `
 export const ShareText = styled.span`
   font-family: Poppins;
