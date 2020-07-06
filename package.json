@@ -15,7 +15,7 @@
     "test:watch": "yarn jest --watch"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@contentful/rich-text-react-renderer": "^14.1.1",
     "@contentful/rich-text-types": "^14.0.0",
     "@rebass/grid": "^6.0.0",
     "@types/shortid": "^0.0.29",
