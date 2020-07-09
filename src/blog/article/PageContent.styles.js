@@ -11,6 +11,8 @@ export const Content = styled(Column)`
 `
 export const FlexDiv = styled.div`
   display: flex;
+  position: sticky;
+  top: 40px;
   margin: 0 45px 0 90.2px;
   height: 100vh;
   float: left;

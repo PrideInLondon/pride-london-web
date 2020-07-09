@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import theme from '../../theme/theme'
 import { Input } from '../../components/input'
 import Author from './Author'
-import SocialMediaList from './SocialMediaList'
-import { FlexDiv, ShareText } from './BlogHeader.styles'
 import { Summary, BlogFooterContainer } from './BlogFooter.styles'
 
 export const StyledInput = styled(Input)`
@@ -20,13 +18,7 @@ export const StyledInput = styled(Input)`
 const BlogFooter = ({ author }) => (
   <BlogFooterContainer>
     <hr />
-    <Summary>
-      {author && <Author author={author} />}
-      <FlexDiv>
-        <ShareText>Share this post</ShareText>
-        <SocialMediaList />
-      </FlexDiv>
-    </Summary>
+    <Summary>{author && <Author author={author} />}</Summary>
   </BlogFooterContainer>
 )
 
