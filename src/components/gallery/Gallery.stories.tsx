@@ -1,10 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { object, number } from '@storybook/addon-knobs'
-import { FlexColumn } from '../grid'
+import { object, number, select } from '@storybook/addon-knobs'
 import { Card, CardContent, CardTitle, CardFooter } from '../card'
 import { Button } from '../button'
-import { Gallery } from './Gallery'
+import { Gallery, GalleryEntry } from './Gallery'
+import { GALLERY_VARIANTS } from './Gallery.types'
 
 const ENTRIES = [
   {
@@ -30,10 +30,15 @@ const ENTRIES = [
 storiesOf(Gallery.name, module)
   .add('default', () => (
     <Gallery
+      variant={select('variant', GALLERY_VARIANTS, GALLERY_VARIANTS[0])}
       entries={object('entries', ENTRIES)}
       render={({ entries }) =>
         entries.map(({ title, description, footer }) => (
-          <FlexColumn key={title} width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}>
+          <GalleryEntry
+            key={title}
+            width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}
+            variant={select('variant', GALLERY_VARIANTS, GALLERY_VARIANTS[0])}
+          >
             <Card to="#">
               <CardContent>
                 <CardTitle>{title}</CardTitle>
@@ -41,21 +46,23 @@ storiesOf(Gallery.name, module)
                 <CardFooter>{footer}</CardFooter>
               </CardContent>
             </Card>
-          </FlexColumn>
+          </GalleryEntry>
         ))
       }
     />
   ))
   .add('paged', () => (
     <Gallery
+      variant={select('variant', GALLERY_VARIANTS, GALLERY_VARIANTS[0])}
       entries={object('entries', ENTRIES.concat(ENTRIES))}
       pageSize={number('pageSize', 4, { min: 1, max: ENTRIES.length * 2 })}
       render={({ entries, moreEntriesToShow, showNextPage }) => (
         <>
           {entries.map(({ title, description, footer }) => (
-            <FlexColumn
+            <GalleryEntry
               key={title}
               width={{ default: 1, md: 1 / 2, lg: 1 / 3 }}
+              variant={select('variant', GALLERY_VARIANTS, GALLERY_VARIANTS[0])}
             >
               <Card to="#">
                 <CardContent>
@@ -64,7 +71,7 @@ storiesOf(Gallery.name, module)
                   <CardFooter>{footer}</CardFooter>
                 </CardContent>
               </Card>
-            </FlexColumn>
+            </GalleryEntry>
           ))}
           {moreEntriesToShow && (
             <div style={{ margin: '20px auto' }}>

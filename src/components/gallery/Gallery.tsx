@@ -1,11 +1,23 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row } from '../grid'
+import { FlexColumn } from '../grid'
+import { StyledContainer } from './Gallery.styles'
+import { GalleryEntryProps, GalleryProps } from './Gallery.types'
 
-interface GalleryProps {
-  pageSize?: number
+export const GalleryEntry: React.FC<GalleryEntryProps> = ({
+  variant,
+  children,
+  ...props
+}) => {
+  switch (variant) {
+    case 'grid':
+      return <FlexColumn {...props}>{children}</FlexColumn>
+    case 'masonry':
+      return <div>{children}</div>
+  }
 }
 
 export const Gallery = <T,>({
+  variant,
   entries,
   render,
   pageSize = entries.length,
@@ -24,17 +36,13 @@ export const Gallery = <T,>({
   }, [pageSize])
 
   return (
-    <>
-      <Container>
-        <Row>
-          {render({
-            entries: entries.slice(0, numberOfEntriesToShow),
-            moreEntriesToShow: numberOfEntriesToShow < entries.length,
-            showNextPage: () =>
-              setNumberOfEntriesToShow(numberOfEntriesToShow + pageSize),
-          })}
-        </Row>
-      </Container>
-    </>
+    <StyledContainer {...{ variant }}>
+      {render({
+        entries: entries.slice(0, numberOfEntriesToShow),
+        moreEntriesToShow: numberOfEntriesToShow < entries.length,
+        showNextPage: () =>
+          setNumberOfEntriesToShow(numberOfEntriesToShow + pageSize),
+      })}
+    </StyledContainer>
   )
 }
