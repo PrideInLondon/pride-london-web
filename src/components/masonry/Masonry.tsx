@@ -20,7 +20,7 @@ export const calculateColumns = (
 
 export const Masonry: React.FC<MasonryProps> = ({
   children,
-  minColumnWidth,
+  breakpoints,
   ...props
 }) => {
   const ref = useRef<HTMLDivElement>(null)
@@ -32,22 +32,20 @@ export const Masonry: React.FC<MasonryProps> = ({
   )
 
   const resizeHandler = () =>
-    setNumCols(Math.ceil(ref.current!.offsetWidth / minColumnWidth))
+    setNumCols(calculateColumns(ref.current!.offsetWidth, breakpoints))
   useEffect(resizeHandler, [])
   useEventListener('resize', resizeHandler)
 
   return (
     <Wrapper ref={ref} {...props}>
-      {[...Array(numCols)].map((_, index) => {
-        return (
-          <Column
-            // eslint-disable-next-line react/no-array-index-key
-            key={index}
-          >
-            {cols[index]}
-          </Column>
-        )
-      })}
+      {[...Array(numCols)].map((_, index) => (
+        <Column
+          // eslint-disable-next-line react/no-array-index-key
+          key={index}
+        >
+          {cols[index]}
+        </Column>
+      ))}
     </Wrapper>
   )
 }

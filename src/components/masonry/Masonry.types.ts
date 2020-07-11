@@ -1,3 +1,3 @@
 export interface MasonryProps {
-  minColumnWidth: number
+  breakpoints: { [key: string]: number }
 }
