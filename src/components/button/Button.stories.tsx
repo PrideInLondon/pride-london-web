@@ -3,13 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { text, select, object } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { Button } from './Button'
-
-const variants = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Outline: 'outline',
-  'Outline White': 'outline-white',
-} as const
+import { VARIANTS } from './Button.types'
 
 storiesOf('Button', module)
   .add(
@@ -17,7 +11,7 @@ storiesOf('Button', module)
     () => (
       <Button
         onClick={action('click')}
-        variant={select('Variant', variants, variants.Primary)}
+        variant={select('Variant', VARIANTS, VARIANTS[0])}
       >
         {text('Link Text', 'This is a button')}
       </Button>

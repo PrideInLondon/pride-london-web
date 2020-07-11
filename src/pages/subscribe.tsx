@@ -31,7 +31,7 @@ const Subscribe = () => {
   return (
     <>
       <Helmet>
-        <style>{`footer {display: none; }`}</style>
+        <style>{`footer { display: none !important; }`}</style>
       </Helmet>
       <Banner
         titleText="Subscribe"
