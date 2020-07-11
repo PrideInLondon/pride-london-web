@@ -1,7 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useEventListener } from '../../hooks/useEventListener'
+import { widths } from '../../theme/breakpoints'
 import { Wrapper, Column } from './Masonry.styles'
 import { MasonryProps } from './Masonry.types'
+
+export const calculateColumns = (
+  currentWidth: number,
+  breakpoints: { [key: string]: number }
+) => {
+  const keys = Object.keys(breakpoints)
+
+  for (var i = keys.length - 1; i >= 0; i--) {
+    const key = keys[i]
+    if (currentWidth >= widths[key]) return breakpoints[key]
+  }
+
+  return breakpoints.default
+}
 
 export const Masonry: React.FC<MasonryProps> = ({
   children,
