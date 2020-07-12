@@ -10,6 +10,9 @@ import {
   zIndex,
 } from 'styled-system'
 import { colors } from '../../theme/colors'
+import { space as spacing } from '../../theme/space'
+import { usePickedProps } from '../../hooks/usePickedProps'
+import backgroundImg from './navy-background.jpg'
 
 export const Background = styled.div`
   background-color: ${colors.white};
@@ -20,17 +23,24 @@ export const Background = styled.div`
 `
 export const ModalCard = styled.div<LayoutProps>`
   z-index: 1;
-  max-width: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   ${layout}
 `
 
-export const ModalBody = styled(animated.div)<SpaceProps>`
+export const ModalBody = styled(({ children, ...props }) => {
+  const spaceProps = usePickedProps(props, space.propNames ?? [])
+  return <animated.div {...spaceProps[1]}>{children}</animated.div>
+})<SpaceProps>`
   background-color: ${colors.indigo};
+  background-image: url(${backgroundImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $white;
+  width: 100%;
+  height: 100%;
   ${space}
 `
 
@@ -46,6 +56,7 @@ export const ModalWrapper = styled(({ children, zIndex, ...props }) => (
   top: 0;
   left: 0;
   box-sizing: border-box;
+  padding: ${spacing.xxl_mob} ${spacing.lg};
   ${zIndex}
 
   *,

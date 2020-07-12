@@ -1,11 +1,11 @@
 import { Dispatch, ReactElement, ReactNode, SetStateAction } from 'react'
-import { LayoutProps, ZIndexProps } from 'styled-system'
+import { SpaceProps, LayoutProps, ZIndexProps } from 'styled-system'
 
 type RenderProp<T> = (props: {
   setIsOpen: Dispatch<SetStateAction<boolean>>
   isOpen: boolean
 }) => T
-export interface ModalProps extends LayoutProps, ZIndexProps {
+export interface ModalProps extends SpaceProps, LayoutProps, ZIndexProps {
   /**
    * Initial state of the modal, if it is open or closed.
    */
@@ -26,4 +26,6 @@ export interface ModalProps extends LayoutProps, ZIndexProps {
    * Callback to be executed whenever the modal closes.
    */
   onClose?: () => void
+  /** Determines if the modal can be dismissed by clicking the background outside the modal box */
+  dismissable?: boolean
 }
