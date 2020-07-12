@@ -1,16 +1,17 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { boolean } from '@storybook/addon-knobs'
 import { H3, P } from '../typography/Typography'
 import { Button } from '../button/Button'
 import { Wrapper } from '../wrapper/Wrapper'
 import { Modal } from './Modal'
 
-storiesOf('Modal', module).add('with image', () => {
+storiesOf('Modal', module).add('default', () => {
   return (
     <Modal
-      trigger={<button>Click to open</button>}
-      dismissable={false}
-      width="100%"
+      trigger={<Button>Click to open</Button>}
+      dismissable={boolean('Is dismissable', false)}
+      open={boolean('Open by default', false)}
     >
       {({ setIsOpen }) => (
         <Wrapper textAlign="center" maxWidth="600px" margin="0 auto">
