@@ -17,7 +17,7 @@ import backgroundImg from './navy-background.jpg'
 export const Background = styled.div`
   background-color: ${colors.white};
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.95;
   width: 100%;
   height: 100%;
 `
