@@ -1,6 +1,15 @@
 import styled from 'styled-components'
+import {
+  compose,
+  layout,
+  space,
+  position,
+  LayoutProps,
+  PositionProps,
+  SpaceProps,
+} from 'styled-system'
 import { mediaQueries } from '../../theme/mediaQueries'
-import { space } from '../../theme/space'
+import { space as spacing } from '../../theme/space'
 import { colors } from '../../theme/colors'
 import { Column } from '../grid'
 
@@ -10,16 +19,16 @@ export const CTAWrapper = styled.div`
   }
 `
 
-export const CTAPanel = styled.div`
+export const CTAPanel = styled.div<SpaceProps & LayoutProps & PositionProps>`
   background-color: ${colors.indigo};
-  padding: ${space.lg} 0;
+  padding: ${spacing.lg} 0;
   color: white;
   ${mediaQueries.lg} {
-    position: absolute;
-    width: 33.3333%;
-    right: 0;
-    top: -100px;
-    padding: ${space.xl_mob};
+    padding: ${spacing.xl_mob};
+  }
+
+  && {
+    ${compose(space, layout, position)}
   }
 `
 

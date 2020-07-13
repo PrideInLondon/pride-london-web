@@ -5,13 +5,13 @@ import { H6, P } from '../typography/Typography'
 import { CTAWrapper, CTAPanel, RelativeColumn } from './CTABox.styles'
 import { CTABoxProps } from './CTABox.types'
 
-const CTABox: React.FC<CTABoxProps> = ({ title, body, link }) => {
+const CTABox: React.FC<CTABoxProps> = ({ title, body, link, ...props }) => {
   return (
     <CTAWrapper>
       <Container>
         <Row>
           <RelativeColumn width={1}>
-            <CTAPanel>
+            <CTAPanel {...props}>
               {title && (
                 <H6 as="h2" color="white">
                   {title}

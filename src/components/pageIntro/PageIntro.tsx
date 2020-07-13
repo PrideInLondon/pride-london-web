@@ -7,7 +7,17 @@ import { PageIntroProps } from './PageIntro.types'
 const PageIntro: React.FC<PageIntroProps> = ({ children, cta }) => {
   return (
     <>
-      {cta && <CTABox link={cta.link} title={cta.title} body={cta.body} />}
+      {cta && (
+        <CTABox
+          title={cta.title}
+          body={cta.body}
+          link={cta.link}
+          position={{ lg: 'absolute' }}
+          width={{ lg: '33.3333%' }}
+          right={{ lg: '0' }}
+          top={{ lg: '-100px' }}
+        />
+      )}
       <Container as="section">
         <Row>
           <IntroContainer

@@ -1,16 +1,18 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { text } from '@storybook/addon-knobs'
 import PageIntro from './PageIntro'
 
 storiesOf('Page Intro', module).add('default', () => (
   <PageIntro
     cta={{
-      link: { to: '/relative-url', text: 'Lorem ipsum' },
-      title: 'Lorem ipsum',
-      body:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+      title: text('Title', 'Lorem Ipsum'),
+      body: text('Body', 'Lorem Ipsum'),
+      link: {
+        to: text('Link URL', '/relative-url'),
+        text: text('Link Text', 'Lorem Ipsum'),
+      },
     }}
-  >
-    {'Lorem Ipsum'}
-  </PageIntro>
+    children={text('Title', 'Lorem Ipsum')}
+  />
 ))
