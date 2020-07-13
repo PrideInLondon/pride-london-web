@@ -10,6 +10,8 @@ module.exports = {
   coverageDirectory: './coverage/',
   globals: {
     __PATH_PREFIX__: '',
+    __BASE_PATH__: ``,
   },
   modulePathIgnorePatterns: ['<rootDir>/.*/__mocks__'],
 }
+
