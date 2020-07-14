@@ -28,10 +28,12 @@ const ENTRIES = [
   },
 ]
 
+const MORE_ENTRIES = ENTRIES.concat(ENTRIES).concat(ENTRIES)
+
 storiesOf(Gallery.name, module)
   .add('default', () => (
     <Gallery
-      entries={object('entries', ENTRIES.concat(ENTRIES).concat(ENTRIES))}
+      entries={object('entries', MORE_ENTRIES)}
       render={({ entries }) => (
         <GalleryContainer
           variant={select(
@@ -41,10 +43,12 @@ storiesOf(Gallery.name, module)
           )}
           columns={{ default: 1, md: 2, lg: 3 }}
         >
-          {entries.map(({ title, description, footer }) => (
+          {entries.map(({ title, description, footer }, index) => (
             <Card key={title} to="#">
               <CardContent>
-                <CardTitle>{title}</CardTitle>
+                <CardTitle>
+                  Card #{index + 1}: {title}
+                </CardTitle>
                 <p>{description}</p>
                 <CardFooter>{footer}</CardFooter>
               </CardContent>
@@ -56,10 +60,10 @@ storiesOf(Gallery.name, module)
   ))
   .add('paged', () => (
     <Gallery
-      entries={object('entries', ENTRIES.concat(ENTRIES).concat(ENTRIES))}
-      pageSize={number('pageSize', ENTRIES.length, {
+      entries={object('entries', MORE_ENTRIES)}
+      pageSize={number('pageSize', MORE_ENTRIES.length / 3, {
         min: 1,
-        max: ENTRIES.length * 3,
+        max: MORE_ENTRIES.length,
       })}
       render={({ entries, moreEntriesToShow, showNextPage }) => (
         <>
@@ -71,10 +75,12 @@ storiesOf(Gallery.name, module)
             )}
             columns={{ default: 1, md: 2, lg: 3 }}
           >
-            {entries.map(({ title, description, footer }) => (
+            {entries.map(({ title, description, footer }, index) => (
               <Card key={title} to="#">
                 <CardContent>
-                  <CardTitle>{title}</CardTitle>
+                  <CardTitle>
+                    Card #{index + 1}: {title}
+                  </CardTitle>
                   <p>{description}</p>
                   <CardFooter>{footer}</CardFooter>
                 </CardContent>
