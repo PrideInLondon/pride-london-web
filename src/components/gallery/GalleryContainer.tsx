@@ -12,7 +12,7 @@ export const GalleryContainer: React.FC<GalleryContainerProps> = ({
     case 'grid':
       return (
         <Grid
-          columns={Object.keys(columns).reduce(
+          width={Object.keys(columns).reduce(
             (acc, column) => ({ ...acc, [column]: 1 / columns[column] }),
             {}
           )}
