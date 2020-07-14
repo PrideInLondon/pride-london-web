@@ -13,7 +13,7 @@ import { ModalProps } from './Modal.types'
 
 export const Modal = ({
   children,
-  open,
+  open = false,
   trigger,
   zIndex,
   onOpen,
@@ -22,7 +22,7 @@ export const Modal = ({
   ...props
 }: ModalProps) => {
   const [picked, rest] = usePickedProps(props, space.propNames ?? [])
-  const [isOpen, setIsOpen] = useState(open ?? false)
+  const [isOpen, setIsOpen] = useState(open)
   const ref = useRef<HTMLDivElement>(null)
   const transition = useTransition(isOpen, null, {
     from: { opacity: 0, transform: `translate3d(0, -${spacing.xl}, 0)` },
