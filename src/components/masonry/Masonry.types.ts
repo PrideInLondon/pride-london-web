@@ -1,3 +1,3 @@
 export interface MasonryProps {
-  breakpoints: { [key: string]: number }
+  columns: { [key: string]: number }
 }

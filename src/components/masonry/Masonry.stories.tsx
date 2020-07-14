@@ -17,7 +17,7 @@ const ITEMS = [
 ]
 
 storiesOf(Masonry.name, module).add('default', () => (
-  <Masonry breakpoints={{ default: 1, md: 2, lg: 3 }}>
+  <Masonry columns={{ default: 1, md: 2, lg: 3 }}>
     {ITEMS.map(({ height, color }, index) => (
       <Card key={color} to="#">
         <CardContent>

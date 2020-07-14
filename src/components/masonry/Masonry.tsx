@@ -6,21 +6,21 @@ import { MasonryProps } from './Masonry.types'
 
 export const calculateColumns = (
   currentWidth: number,
-  breakpoints: { [key: string]: number }
+  columns: { [key: string]: number }
 ) => {
-  const keys = Object.keys(breakpoints)
+  const keys = Object.keys(columns)
 
   for (var i = keys.length - 1; i >= 0; i--) {
     const key = keys[i]
-    if (currentWidth >= widths[key]) return breakpoints[key]
+    if (currentWidth >= widths[key]) return columns[key]
   }
 
-  return breakpoints.default
+  return columns.default
 }
 
 export const Masonry: React.FC<MasonryProps> = ({
   children,
-  breakpoints,
+  columns,
   ...props
 }) => {
   const ref = useRef<HTMLDivElement>(null)
@@ -32,7 +32,7 @@ export const Masonry: React.FC<MasonryProps> = ({
   )
 
   const resizeHandler = () =>
-    setNumCols(calculateColumns(ref.current!.offsetWidth, breakpoints))
+    setNumCols(calculateColumns(ref.current!.offsetWidth, columns))
   useEffect(resizeHandler, [])
   useEventListener('resize', resizeHandler)
 
