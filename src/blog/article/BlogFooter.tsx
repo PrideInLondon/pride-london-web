@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import theme from '../../theme/theme'
 import { Input } from '../../components/input'
 import Author from './Author'
 import { Summary, BlogFooterContainer } from './BlogFooter.styles'
+import { PageContentProps } from './PageContent'
 
 export const StyledInput = styled(Input)`
   label {
@@ -15,18 +15,11 @@ export const StyledInput = styled(Input)`
   }
 `
 
-const BlogFooter = ({ author }) => (
+export const BlogFooter: React.FC<Pick<PageContentProps, 'author'>> = ({
+  author,
+}) => (
   <BlogFooterContainer>
     <hr />
     <Summary>{author && <Author author={author} />}</Summary>
   </BlogFooterContainer>
 )
-
-BlogFooter.propTypes = {
-  author: PropTypes.object,
-}
-BlogFooter.defaultProps = {
-  author: null,
-}
-
-export default BlogFooter

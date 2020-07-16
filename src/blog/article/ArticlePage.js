@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import constants from '../../constants'
 import PageHeader from './PageHeader'
-import PageContent from './PageContent'
+import { PageContent } from './PageContent'
 import PageFooter from './PageFooter'
 
 const PageWrapper = styled.div`
