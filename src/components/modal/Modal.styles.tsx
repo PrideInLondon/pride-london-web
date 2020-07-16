@@ -38,15 +38,17 @@ export const ModalBody = styled(({ children, ...props }) => {
   background-image: url(${backgroundImg});
   background-size: cover;
   background-repeat: no-repeat;
-  color: $white;
+  color: ${colors.white};
   width: 100%;
   height: 100%;
   ${space}
 `
 
-export const ModalWrapper = styled(({ children, zIndex, ...props }) => (
-  <animated.div {...props}>{children}</animated.div>
-))<ZIndexProps>`
+export const ModalWrapper = styled(
+  ({ children, zIndex: zIndexStyleProp, ...props }) => (
+    <animated.div {...props}>{children}</animated.div>
+  )
+)<ZIndexProps>`
   display: flex;
   align-items: center;
   justify-content: center;
