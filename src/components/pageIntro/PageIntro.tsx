@@ -1,15 +1,25 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { CTABox } from '../ctaBox'
-import { Row } from '../grid'
-import { MainContainer, IntroContainer } from './PageIntro.styles'
+import { Row, Container } from '../grid'
+import { IntroContainer } from './PageIntro.styles'
+import { PageIntroProps } from './PageIntro.types'
 
-const PageIntro = ({ children, cta }) => {
+const PageIntro: React.FC<PageIntroProps> = ({ children, cta }) => {
   return (
     <>
-      {cta && <CTABox link={cta.link} title={cta.title} body={cta.body} />}
-      <MainContainer as="section">
-        <Row mb={['30px', '60px']}>
+      {cta && (
+        <CTABox
+          title={cta.title}
+          body={cta.body}
+          link={cta.link}
+          position={{ lg: 'absolute' }}
+          width={{ lg: '33.3333%' }}
+          right={{ lg: '0' }}
+          top={{ lg: '-100px' }}
+        />
+      )}
+      <Container as="section">
+        <Row>
           <IntroContainer
             width={[
               1, // 100% between 0px screen width and first breakpoint (375px)
@@ -21,21 +31,9 @@ const PageIntro = ({ children, cta }) => {
             {children}
           </IntroContainer>
         </Row>
-      </MainContainer>
+      </Container>
     </>
   )
-}
-
-PageIntro.propTypes = {
-  children: PropTypes.node.isRequired,
-  cta: PropTypes.shape({
-    title: PropTypes.string,
-    body: PropTypes.string,
-    link: PropTypes.shape({
-      to: PropTypes.string,
-      text: PropTypes.string,
-    }),
-  }).isRequired,
 }
 
 export default PageIntro
