@@ -4,8 +4,9 @@ import { PageIntro } from '../components/pageIntro'
 import { P, H3 } from '../components/typography'
 import { FilterContainer } from '../components/filterContainer'
 import { colors } from '../theme/colors'
+import { Category } from '../components/filterContainer/FilterContainer.types'
+import { FiftyTwoPageProps } from './FiftyTwoPage.types'
 import bannerImage from './bannerImage.svg'
-import { Category, FiftyTwoPageProps } from './FiftyTwoPage.types'
 
 const CATEGORIES: Category[] = [
   { title: 'Everything', hexColour: colors.eucalyptusGreen },
