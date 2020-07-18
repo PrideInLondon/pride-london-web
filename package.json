@@ -12,7 +12,9 @@
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "storybook": "NODE_ENV=production start-storybook -p 9001 -c .storybook",
     "test": "yarn jest --runInBand",
-    "test:watch": "yarn jest --watch"
+    "test:watch": "yarn jest --watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
@@ -60,7 +62,8 @@
     "styled-system": "^5.1.4",
     "tinycolor2": "^1.4.1",
     "use-onclickoutside": "^0.3.1",
-    "uuid-encoder": "^1.2.0"
+    "uuid-encoder": "^1.2.0",
+    "snyk": "^1.362.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
@@ -153,5 +156,6 @@
     "regenerator-runtime": "^0.13.3",
     "stylelint": "^11.0.0",
     "webpack": "^4.0.0"
-  }
+  },
+  "snyk": true
 }
