@@ -5,7 +5,7 @@ import { P, H3 } from '../components/typography'
 import { FilterContainer } from '../components/filterContainer'
 import { colors } from '../theme/colors'
 import bannerImage from './bannerImage.svg'
-import { Category } from './FiftyTwoPage.types'
+import { Category, FiftyTwoPageProps } from './FiftyTwoPage.types'
 
 const CATEGORIES: Category[] = [
   { title: 'Everything', hexColour: colors.eucalyptusGreen },
@@ -17,11 +17,15 @@ const CATEGORIES: Category[] = [
   { title: 'Other', hexColour: colors.darkPurple },
 ]
 
-export const FiftyTwoPage = () => (
+export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
+  data: {
+    contentfulCustomPageContent: { title, subtitle },
+  },
+}) => (
   <>
     <Banner
-      titleText="Fifty-Two"
-      subtitleText="Celebrating queer art and shining a spotlight on the work of LGBT+ artists."
+      titleText={title}
+      subtitleText={subtitle}
       imageSrc={bannerImage}
       imageFullWidth
     />
