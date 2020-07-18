@@ -19,7 +19,11 @@ const CATEGORIES: Category[] = [
 
 export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
   data: {
-    contentfulCustomPageContent: { title, subtitle },
+    contentfulCustomPageContent: {
+      title,
+      subtitle,
+      cta: { ctaTitle, buttonUrl, buttonText, bodyText },
+    },
   },
 }) => (
   <>
@@ -31,13 +35,12 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
     />
     <PageIntro
       cta={{
-        title: 'Lorem ipsum dolor',
+        title: ctaTitle,
         link: {
-          to: '/',
-          text: 'Lorem ipsum',
+          to: buttonUrl,
+          text: buttonText,
         },
-        body:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+        body: bodyText,
       }}
     >
       <P variant="lg">
