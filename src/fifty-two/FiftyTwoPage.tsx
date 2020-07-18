@@ -1,8 +1,21 @@
 import React from 'react'
 import { Banner } from '../components/banner'
 import { PageIntro } from '../components/pageIntro'
-import { P } from '../components/typography'
+import { P, H3 } from '../components/typography'
+import { FilterContainer } from '../components/filterContainer'
+import { colors } from '../theme/colors'
 import bannerImage from './bannerImage.svg'
+import { Category } from './FiftyTwoPage.types'
+
+const CATEGORIES: Category[] = [
+  { title: 'Everything', hexColour: colors.eucalyptusGreen },
+  { title: 'Painting', hexColour: colors.tomato },
+  { title: 'Photography', hexColour: colors.red },
+  { title: 'Mixed Media', hexColour: colors.greyBlue },
+  { title: 'Illustration', hexColour: colors.darkCyan },
+  { title: 'Sculpture', hexColour: colors.skyBlue },
+  { title: 'Other', hexColour: colors.darkPurple },
+]
 
 export const FiftyTwoPage = () => (
   <>
@@ -51,5 +64,12 @@ export const FiftyTwoPage = () => (
         visual artists!
       </P>
     </PageIntro>
+    <H3 textAlign="center">Category is...</H3>
+    <FilterContainer
+      filterType="radio"
+      categories={CATEGORIES}
+      selected={['Everything']}
+      handleFilterSelect={() => {}}
+    />
   </>
 )
