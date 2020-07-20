@@ -6,6 +6,9 @@ export const query = graphql`
     contentfulCustomPageContent(title: { eq: "FIFTY-TWO" }) {
       title
       subtitle
+      bodyText {
+        json
+      }
       cta {
         ctaTitle
         bodyText
