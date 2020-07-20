@@ -8,7 +8,6 @@ import { colors } from '../theme/colors'
 import { Category } from '../components/filterContainer/FilterContainer.types'
 import { renderMethods } from './renderMethods'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
-import bannerImage from './bannerImage.svg'
 
 const CATEGORIES: Category[] = [
   { title: 'Everything', hexColour: colors.eucalyptusGreen },
@@ -25,6 +24,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
     contentfulCustomPageContent: {
       title,
       subtitle,
+      bannerImage,
       bodyText: { json },
       cta: { ctaTitle, buttonUrl, buttonText, bodyText },
     },
@@ -34,7 +34,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
     <Banner
       titleText={title}
       subtitleText={subtitle}
-      imageSrc={bannerImage}
+      fixed={bannerImage}
       imageFullWidth
     />
     <PageIntro
