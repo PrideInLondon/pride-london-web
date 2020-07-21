@@ -62,7 +62,7 @@ export const PageContent: React.FC<PageContentProps> = ({
             content={{
               title,
               body: body,
-              url: location as string,
+              url: location,
             }}
           />
         </ShareBarWrapper>
