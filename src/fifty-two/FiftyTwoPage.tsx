@@ -6,9 +6,11 @@ import { H3 } from '../components/typography'
 import { CategoryFilter } from '../components/categoryFilter'
 import { Category } from '../components/categoryFilter/CategoryFilter.types'
 import { Gallery, GalleryContainer } from '../components/gallery'
+import { Button } from '../components/button'
 import { colors } from '../theme/colors'
 import { GalleryCard } from './GalleryCard'
 import { renderMethods } from './renderMethods'
+import { ButtonWrapper } from './FiftyTwoPage.styles'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
 
 const CATEGORIES: Category[] = [
@@ -63,38 +65,48 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
     />
     <Gallery
       entries={edges}
-      render={({ entries }) => (
-        <GalleryContainer
-          variant="masonry"
-          columns={{ default: 1, md: 2, lg: 3 }}
-          paddingX="xl"
-          paddingY="xxl"
-        >
-          {entries.map(
-            ({
-              node: {
-                artist,
-                artwork: {
-                  image: { fixed },
-                  category,
-                  ...artwork
+      pageSize={9}
+      render={({ entries, moreEntriesToShow, showNextPage }) => (
+        <>
+          <GalleryContainer
+            variant="masonry"
+            columns={{ default: 1, md: 2, lg: 3 }}
+            paddingX="xl"
+            paddingY="xxl"
+          >
+            {entries.map(
+              ({
+                node: {
+                  artist,
+                  artwork: {
+                    image: { fixed },
+                    category,
+                    ...artwork
+                  },
+                  ...rest
                 },
-                ...rest
-              },
-            }) => (
-              <GalleryCard
-                key={artist.name}
-                {...rest}
-                artist={artist}
-                artwork={{
-                  ...artwork,
-                  image: fixed,
-                  category: CATEGORIES.find(({ name }) => name === category)!,
-                }}
-              />
-            )
+              }) => (
+                <GalleryCard
+                  key={artist.name}
+                  {...rest}
+                  artist={artist}
+                  artwork={{
+                    ...artwork,
+                    image: fixed,
+                    category: CATEGORIES.find(({ name }) => name === category)!,
+                  }}
+                />
+              )
+            )}
+          </GalleryContainer>
+          {moreEntriesToShow && (
+            <ButtonWrapper>
+              <Button variant="outline-white" onClick={showNextPage}>
+                Show more artworks
+              </Button>
+            </ButtonWrapper>
           )}
-        </GalleryContainer>
+        </>
       )}
     />
   </>
