@@ -36,9 +36,6 @@ export const generateShareUrl = (
       return `mailto:?${generateQueryParams({ subject: title, body })}`
     }
     case 'facebook':
-      return `https://www.facebook.com/sharer/sharer.php?${generateQueryParams({
-        u: url,
-      })}`
     case 'messenger':
       return `https://www.facebook.com/sharer/sharer.php?${generateQueryParams({
         u: url,

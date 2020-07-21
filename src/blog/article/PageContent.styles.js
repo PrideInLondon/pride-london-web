@@ -22,7 +22,7 @@ export const ShareBarWrapper = styled.div`
 
   ${mediaQueries.lg} {
     display: block;
-    left: ${space.lg};
+    left: 60px;
   }
 
   ${mediaQueries.xl} {
