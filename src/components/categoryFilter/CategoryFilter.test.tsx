@@ -8,8 +8,8 @@ describe(CategoryFilter.name, () => {
   it('should call handler with selected filter name when label is clicked', () => {
     const filterType = 'checkbox'
     const categories = Array.from(Array(3).keys()).map(_ => ({
-      title: uuid(),
-      hexColour: uuid(),
+      name: uuid(),
+      color: uuid(),
     }))
     const handleFilterSelect = jest.fn()
 
@@ -22,13 +22,13 @@ describe(CategoryFilter.name, () => {
       />
     )
 
-    categories.forEach(({ title }, index) => {
+    categories.forEach(({ name }, index) => {
       act(() => {
         fireEvent.click(queryAllByRole(filterType)[index])
       })
 
       expect(handleFilterSelect).toHaveBeenCalledTimes(index + 1)
-      expect(handleFilterSelect).toHaveBeenLastCalledWith(title)
+      expect(handleFilterSelect).toHaveBeenLastCalledWith(name)
     })
   })
 })

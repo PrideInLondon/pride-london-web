@@ -5,15 +5,15 @@ import { colors } from '../../theme/colors'
 import { CategoryFilter } from './CategoryFilter'
 
 const CATEGORIES = [
-  { title: 'Drink', hexColour: colors.yellow },
-  { title: 'Eat', hexColour: colors.tomato },
-  { title: 'Party', hexColour: colors.indigo },
-  { title: 'Shop', hexColour: colors.eucalyptusGreen },
-  { title: 'Sleep', hexColour: colors.pink },
+  { name: 'Drink', color: colors.yellow },
+  { name: 'Eat', color: colors.tomato },
+  { name: 'Party', color: colors.indigo },
+  { name: 'Shop', color: colors.eucalyptusGreen },
+  { name: 'Sleep', color: colors.pink },
 ]
 
 const CATEGORY_OPTIONS: { [key: string]: string } = CATEGORIES.reduce(
-  (acc, { title }) => ({ ...acc, [title]: title }),
+  (acc, { name }) => ({ ...acc, [name]: name }),
   {}
 )
 
@@ -25,7 +25,7 @@ storiesOf(CategoryFilter.name, module)
       selected={options(
         'selected',
         CATEGORY_OPTIONS,
-        [CATEGORY_OPTIONS[CATEGORIES[0].title]],
+        [CATEGORY_OPTIONS[CATEGORIES[0].name]],
         {
           display: 'inline-check',
         }
@@ -37,7 +37,7 @@ storiesOf(CategoryFilter.name, module)
     <CategoryFilter
       filterType="radio"
       categories={object('categories', CATEGORIES)}
-      selected={options('selected', CATEGORY_OPTIONS, CATEGORIES[0].title, {
+      selected={options('selected', CATEGORY_OPTIONS, CATEGORIES[0].name, {
         display: 'inline-radio',
       })}
       handleFilterSelect={() => {}}

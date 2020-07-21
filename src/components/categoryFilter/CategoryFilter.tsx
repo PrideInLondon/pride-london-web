@@ -10,21 +10,21 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
   handleFilterSelect,
 }) => (
   <Wrapper>
-    {categories.map(({ title, hexColour }) => (
+    {categories.map(({ name, color }) => (
       <StyledTag
-        key={title}
-        color={hexColour}
+        key={name}
+        color={color}
         variant={
-          calculateIsSelected(filterType, title, selected)
+          calculateIsSelected(filterType, name, selected)
             ? 'primary'
             : 'outline'
         }
       >
-        {title}
+        {name}
         <Input
           type={filterType}
-          value={title}
-          onClick={() => handleFilterSelect(title)}
+          value={name}
+          onClick={() => handleFilterSelect(name)}
         />
       </StyledTag>
     ))}
