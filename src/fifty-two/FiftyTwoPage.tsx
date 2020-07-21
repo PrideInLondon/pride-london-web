@@ -5,7 +5,9 @@ import { PageIntro } from '../components/pageIntro'
 import { H3 } from '../components/typography'
 import { CategoryFilter } from '../components/categoryFilter'
 import { Category } from '../components/categoryFilter/CategoryFilter.types'
+import { Gallery, GalleryContainer } from '../components/gallery'
 import { colors } from '../theme/colors'
+import { GalleryCard } from './GalleryCard'
 import { renderMethods } from './renderMethods'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
 
@@ -21,13 +23,14 @@ const CATEGORIES: Category[] = [
 
 export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
   data: {
-    contentfulCustomPageContent: {
+    content: {
       title,
       subtitle,
       bannerImage,
       bodyText: { json },
       cta: { ctaTitle, buttonUrl, buttonText, bodyText },
     },
+    entries: { edges },
   },
 }) => (
   <>
@@ -49,12 +52,50 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
     >
       {documentToReactComponents(json, renderMethods)}
     </PageIntro>
-    <H3 textAlign="center">Category is...</H3>
+    <H3 textAlign="center" paddingBottom="lg">
+      Category is...
+    </H3>
     <CategoryFilter
       filterType="radio"
       categories={CATEGORIES}
       selected={['Everything']}
       handleFilterSelect={() => {}}
+    />
+    <Gallery
+      entries={edges}
+      render={({ entries }) => (
+        <GalleryContainer
+          variant="masonry"
+          columns={{ default: 1, md: 2, lg: 3 }}
+          paddingX="xl"
+          paddingY="xxl"
+        >
+          {entries.map(
+            ({
+              node: {
+                artist,
+                artwork: {
+                  image: { fixed },
+                  category,
+                  ...artwork
+                },
+                ...rest
+              },
+            }) => (
+              <GalleryCard
+                key={artist.name}
+                {...rest}
+                artist={artist}
+                artwork={{
+                  ...artwork,
+                  image: fixed,
+                  category: CATEGORIES.find(({ name }) => name === category)!,
+                }}
+              />
+            )
+          )}
+        </GalleryContainer>
+      )}
     />
   </>
 )

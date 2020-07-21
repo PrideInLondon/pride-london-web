@@ -3,7 +3,7 @@ import { FiftyTwoPage } from '../fifty-two/FiftyTwoPage'
 
 export const query = graphql`
   query fiftyTwoPageQuery {
-    contentfulCustomPageContent(title: { eq: "FIFTY-TWO" }) {
+    content: contentfulCustomPageContent(title: { eq: "FIFTY-TWO" }) {
       title
       subtitle
       bannerImage {
@@ -40,6 +40,27 @@ export const query = graphql`
         bodyText
         buttonUrl
         buttonText
+      }
+    }
+    entries: allContentfulFiftyTwoGalleryEntry {
+      edges {
+        node {
+          artwork {
+            image {
+              fixed(width: 405, quality: 100, cropFocus: CENTER) {
+                ...GatsbyContentfulFixed_withWebp
+              }
+            }
+            category
+            title
+            year
+            sold
+            guidePrice
+          }
+          artist {
+            name
+          }
+        }
       }
     }
   }

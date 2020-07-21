@@ -1,9 +1,25 @@
 import { Document } from '@contentful/rich-text-types'
 import { FixedObject } from 'gatsby-image'
 
+interface ContentfulGalleryEntry {
+  artist: {
+    name: string
+  }
+  artwork: {
+    title: string
+    year: string
+    sold: boolean
+    guidePrice: string
+    image: {
+      fixed: FixedObject
+    }
+    category: string
+  }
+}
+
 export interface FiftyTwoPageProps {
   data: {
-    contentfulCustomPageContent: {
+    content: {
       title: string
       subtitle: string
       bannerImage: {
@@ -20,6 +36,9 @@ export interface FiftyTwoPageProps {
         buttonUrl: string
         buttonText: string
       }
+    }
+    entries: {
+      edges: { node: ContentfulGalleryEntry }[]
     }
   }
 }
