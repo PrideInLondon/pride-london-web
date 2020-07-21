@@ -10,6 +10,13 @@ const FiftyTwoDetailPage = path.resolve(
   './src/fifty-two/FiftyTwoDetailPage.tsx'
 )
 
+function createFiftyTwoSlug(name) {
+  return `/fifty-two/${name
+    .trim()
+    .replace(/\s+/g, '-')
+    .toLowerCase()}`
+}
+
 exports.sourceNodes = ({ actions: { createTypes } }) =>
   createTypes(`
     type ContentfulEvent implements Node {
@@ -75,15 +82,26 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       throw result.errors
     }
 
-    result.data.galleryFiftyTwoEntries.edges.forEach(edge => {
+    result.data.galleryFiftyTwoEntries.edges.forEach((edge, index) => {
       createPage({
-        path: `/fifty-two/${edge.node.artist.name
-          .trim()
-          .replace(/\s+/g, '-')
-          .toLowerCase()}`,
+        path: createFiftyTwoSlug(edge.node.artist.name),
         component: FiftyTwoDetailPage,
         context: {
           id: edge.node.id,
+          prev:
+            index > 0
+              ? createFiftyTwoSlug(
+                  result.data.galleryFiftyTwoEntries.edges[index - 1].node
+                    .artist.name
+                )
+              : null,
+          next:
+            index < result.data.galleryFiftyTwoEntries.edges.length
+              ? createFiftyTwoSlug(
+                  result.data.galleryFiftyTwoEntries.edges[index + 1].node
+                    .artist.name
+                )
+              : null,
         },
       })
     })
