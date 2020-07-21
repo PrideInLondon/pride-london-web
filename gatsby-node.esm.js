@@ -1,10 +1,14 @@
 import path from 'path'
 import { generateEventSlug } from './src/events/helpers'
+// import { FiftyTwoDetailPage } from './src/fifty-two/FiftyTwoDetailPage'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
 const GenericContentPage = path.resolve(
   './src/genericContentPage/GenericContentPage.js'
+)
+const FiftyTwoDetailPage = path.resolve(
+  './src/fifty-two/FiftyTwoDetailPage.tsx'
 )
 
 exports.sourceNodes = ({ actions: { createTypes } }) =>
@@ -21,6 +25,16 @@ exports.sourceNodes = ({ actions: { createTypes } }) =>
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   await graphql(`
     {
+      galleryFiftyTwoEntries: allContentfulFiftyTwoGalleryEntry {
+        edges {
+          node {
+            id
+            artist {
+              name
+            } 
+          }
+        }
+      }
       events: allContentfulEvent(
         filter: {
           date: { dates: { elemMatch: { endDate: { gte: "${new Date().toISOString()}" } } } }
@@ -61,6 +75,19 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     if (result.errors) {
       throw result.errors
     }
+
+    result.data.galleryFiftyTwoEntries.edges.forEach(edge => {
+      createPage({
+        path: `/fifty-two/${edge.node.artist.name
+          .trim()
+          .replace(/\s+/g, '-')
+          .toLowerCase()}`,
+        component: FiftyTwoDetailPage,
+        context: {
+          id: edge.node.id,
+        },
+      })
+    })
 
     result.data.genericContentPages.edges.forEach(edge => {
       createPage({
