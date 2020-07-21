@@ -3,20 +3,20 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Banner } from '../components/banner'
 import { PageIntro } from '../components/pageIntro'
 import { H3 } from '../components/typography'
-import { FilterContainer } from '../components/filterContainer'
+import { CategoryFilter } from '../components/categoryFilter'
+import { Category } from '../components/categoryFilter/CategoryFilter.types'
 import { colors } from '../theme/colors'
-import { Category } from '../components/filterContainer/FilterContainer.types'
 import { renderMethods } from './renderMethods'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
 
 const CATEGORIES: Category[] = [
-  { title: 'Everything', hexColour: colors.eucalyptusGreen },
-  { title: 'Painting', hexColour: colors.tomato },
-  { title: 'Photography', hexColour: colors.red },
-  { title: 'Mixed Media', hexColour: colors.greyBlue },
-  { title: 'Illustration', hexColour: colors.darkCyan },
-  { title: 'Sculpture', hexColour: colors.skyBlue },
-  { title: 'Other', hexColour: colors.darkPurple },
+  { name: 'Everything', color: colors.eucalyptusGreen },
+  { name: 'Painting', color: colors.tomato },
+  { name: 'Photography', color: colors.red },
+  { name: 'Mixed Media', color: colors.greyBlue },
+  { name: 'Illustration', color: colors.darkCyan },
+  { name: 'Sculpture', color: colors.skyBlue },
+  { name: 'Other', color: colors.darkPurple },
 ]
 
 export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
@@ -50,7 +50,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
       {documentToReactComponents(json, renderMethods)}
     </PageIntro>
     <H3 textAlign="center">Category is...</H3>
-    <FilterContainer
+    <CategoryFilter
       filterType="radio"
       categories={CATEGORIES}
       selected={['Everything']}
