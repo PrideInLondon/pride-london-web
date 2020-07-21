@@ -17368,10 +17368,10 @@ react-focus-lock@^2.1.0:
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
 
-react-focus-lock@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.4.0.tgz#11235eff41f47567288d7ef574e5b006527739d5"
-  integrity sha512-mue/boxdfNhfxnQcZtEBvqwZ5XQxk0uRoAMwLGl8j6XolFV3UIlt6iGFBGqRdJsvVHhtyKC5i8fkLnBidxCTbA==
+react-focus-lock@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.4.1.tgz#e842cc93da736b5c5d331799012544295cbcee4f"
+  integrity sha512-c5ZP56KSpj9EAxzScTqQO7bQQNPltf/W1ZEBDqNDOV1XOIwvAyHX0O7db9ekiAtxyKgnqZjQlLppVg94fUeL9w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     focus-lock "^0.7.0"
@@ -17581,10 +17581,10 @@ react-sizeme@^2.5.2, react-sizeme@^2.6.7:
     shallowequal "^1.1.0"
     throttle-debounce "^2.1.0"
 
-react-slick@^0.25.2:
-  version "0.25.2"
-  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.25.2.tgz#56331b67d47d8bcfe2dceb6acab1c8fd5bd1f6bc"
-  integrity sha512-8MNH/NFX/R7zF6W/w+FS5VXNyDusF+XDW1OU0SzODEU7wqYB+ZTGAiNJ++zVNAVqCAHdyCybScaUB+FCZOmBBw==
+react-slick@^0.27.0:
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.27.0.tgz#d62607316e0aa26b3655b882430ef867eb40aa55"
+  integrity sha512-9pOrmOynYygSromtmZoPV2xObivfeae9+9qFbP52z1AKV0sjbGEJroIVA7eLe2p3ImWP1R+588dd/8Ju5MrT/g==
   dependencies:
     classnames "^2.2.5"
     enquire.js "^2.1.6"
