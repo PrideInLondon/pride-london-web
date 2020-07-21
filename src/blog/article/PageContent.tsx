@@ -38,11 +38,12 @@ export const PageContent: React.FC<PageContentProps> = ({
   category,
   author,
 }) => {
-  const availableText =
+  const availableContent =
+    article.json.content[0].content[0] &&
     article.json.content[0].content[0].nodeType === 'text'
       ? article.json.content[0].content[0].value
       : ''
-  const body = JSON.stringify(availableText)
+  const body = JSON.stringify(availableContent)
   let location = ''
   if (typeof window !== 'undefined') {
     location = window.location.href
