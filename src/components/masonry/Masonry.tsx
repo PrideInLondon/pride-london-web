@@ -37,7 +37,7 @@ export const Masonry: React.FC<MasonryProps> = ({
   useEventListener('resize', resizeHandler)
 
   return (
-    <Wrapper ref={ref} {...props}>
+    <Wrapper ref={ref} {...props} columns={numCols}>
       {[...Array(numCols)].map((_, index) => (
         <Column
           // eslint-disable-next-line react/no-array-index-key
