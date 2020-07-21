@@ -152,10 +152,7 @@ describe('FilteredPagedCardContainer', () => {
     ({ filterType }) => {
       const wrapper = mountComponent({ filterType, pageSize: 3 })
 
-      wrapper
-        .find('FilterLabel#foo')
-        .find('FilterLabelstyles__Input')
-        .simulate('click')
+      wrapper.find('FilterLabelstyles__Input#foo').simulate('click')
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(3)
@@ -190,10 +187,7 @@ describe('FilteredPagedCardContainer', () => {
 
       expect(wrapper.find('CardComponent')).toHaveLength(2)
 
-      wrapper
-        .find('FilterLabel#foo')
-        .find('FilterLabelstyles__Input')
-        .simulate('click')
+      wrapper.find('FilterLabelstyles__Input#foo').simulate('click')
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(1)
@@ -212,10 +206,7 @@ describe('FilteredPagedCardContainer', () => {
         cardContent: cardContent.slice(0, 3),
       })
 
-      wrapper
-        .find('FilterLabel#foo')
-        .find('FilterLabelstyles__Input')
-        .simulate('click')
+      wrapper.find('FilterLabelstyles__Input#foo').simulate('click')
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(2)

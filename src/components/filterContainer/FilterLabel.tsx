@@ -1,9 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import constants from '../../constants'
 import { Label, Text, Input } from './FilterLabel.styles'
+import { FilterLabelProps } from './FilterLabel.types'
 
-const FilterLabel = ({
+const FilterLabel: React.FC<FilterLabelProps> = ({
   filterName,
   filterColour,
   filterType,
@@ -11,10 +10,10 @@ const FilterLabel = ({
   handleSelect,
 }) => (
   <Label
-    backgroundColor={filterColour}
+    filterColour={filterColour}
     isSelected={isSelected}
     htmlFor={filterName}
-    tabIndex="0"
+    tabIndex={0}
   >
     <Text>{filterName}</Text>
     <Input
@@ -23,18 +22,10 @@ const FilterLabel = ({
       value={filterName}
       id={filterName}
       name="filterLabel"
-      tabIndex="-1"
+      tabIndex={-1}
       aria-label={filterName}
     />
   </Label>
 )
-
-FilterLabel.propTypes = {
-  filterName: PropTypes.string.isRequired,
-  filterColour: PropTypes.string.isRequired,
-  filterType: PropTypes.oneOf(constants.filterTypes).isRequired,
-  isSelected: PropTypes.bool.isRequired,
-  handleSelect: PropTypes.func.isRequired,
-}
 
 export default FilterLabel
