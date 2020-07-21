@@ -1,6 +1,5 @@
 import path from 'path'
 import { generateEventSlug } from './src/events/helpers'
-// import { FiftyTwoDetailPage } from './src/fifty-two/FiftyTwoDetailPage'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
