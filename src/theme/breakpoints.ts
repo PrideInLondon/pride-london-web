@@ -23,3 +23,5 @@ export const breakpoints: string[] & Breakpoints = Object.assign(
     nav: `${nav}px`,
   }
 )
+
+export const widths: { [key: string]: number } = { sm, md, lg, xl }

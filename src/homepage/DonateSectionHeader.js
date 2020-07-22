@@ -3,10 +3,10 @@ import { Header, Title, Description } from './DonateSectionHeader.styles'
 
 const DonateSectionHeader = () => (
   <Header>
-    <Title>Keep Pride free for everyone</Title>
+    <Title>Keep Pride in London going</Title>
     <Description>
-      We rely on your support to keep Pride free and accessible to all. Please
-      consider making a small donation to keep our community marching!
+      We rely on your support to keep going. Please donate to power our vital
+      work and help us address the needs of LGBT+ people through our Unity Fund.
     </Description>
   </Header>
 )
