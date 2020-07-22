@@ -19,7 +19,7 @@ export const query = graphql`
         year
         guidePrice
         sold
-        childContentfulArtCompetitionEntryDescriptionRichTextNode {
+        description {
           json
         }
       }
@@ -30,8 +30,7 @@ export const query = graphql`
         instagram
         email
         facebook
-        childContentfulTalentProfileBioRichTextNode {
-          id
+        bio {
           json
         }
       }

@@ -82,7 +82,9 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       throw result.errors
     }
 
-    result.data.galleryFiftyTwoEntries.edges.forEach((edge, index) => {
+    const entries = result.data.galleryFiftyTwoEntries.edges
+
+    entries.forEach((edge, index) => {
       createPage({
         path: createFiftyTwoSlug(edge.node.artist.name),
         component: FiftyTwoDetailPage,
@@ -90,18 +92,14 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
           id: edge.node.id,
           prev:
             index > 0
-              ? createFiftyTwoSlug(
-                  result.data.galleryFiftyTwoEntries.edges[index - 1].node
-                    .artist.name
-                )
-              : null,
+              ? createFiftyTwoSlug(entries[index - 1].node.artist.name)
+              : createFiftyTwoSlug(
+                  entries[entries.length - 1].node.artist.name
+                ),
           next:
-            index < result.data.galleryFiftyTwoEntries.edges.length
-              ? createFiftyTwoSlug(
-                  result.data.galleryFiftyTwoEntries.edges[index + 1].node
-                    .artist.name
-                )
-              : null,
+            index < entries.length - 1
+              ? createFiftyTwoSlug(entries[index + 1].node.artist.name)
+              : createFiftyTwoSlug(entries[0].node.artist.name),
         },
       })
     })
