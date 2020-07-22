@@ -2,7 +2,7 @@ import React from 'react'
 import { NewsCardHeader } from '../../components/newsCardHeader'
 import { MobileShareBar } from './PageContent.styles'
 import { Title, SubHeader, BlogHeaderContainer } from './BlogHeader.styles'
-import { PageContentProps } from './PageContent'
+import { PageContentProps } from './PageContent.types'
 
 interface BlogHeaderProps
   extends Pick<PageContentProps, 'title' | 'category' | 'datePublished'> {
