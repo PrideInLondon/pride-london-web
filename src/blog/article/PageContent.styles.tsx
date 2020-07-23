@@ -8,6 +8,8 @@ export const ShareBarWrapper = styled.div`
   position: absolute;
   top: -${space.xxl};
   left: ${space.lg};
+  margin-top: 40px;
+  margin-left: -40px;
   height: 100%;
   z-index: 1;
 
@@ -22,7 +24,7 @@ export const ShareBarWrapper = styled.div`
   }
 `
 export const DesktopShareBar = styled(ShareBar)`
-  top: 0;
+  top: 40px;
   margin-bottom: 120px;
   position: sticky;
 `
