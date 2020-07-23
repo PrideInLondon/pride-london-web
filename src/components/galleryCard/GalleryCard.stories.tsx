@@ -12,11 +12,11 @@ const CardWrapper = styled.div`
 storiesOf('GalleryCard', module).add('default', () => (
   <CardWrapper>
     <GalleryCard
-      artistName="Lorem Ipsum"
-      date="20/09/1999"
-      tagContent="Category"
-      artWorkTitle="Artwork Title"
-      priceOrSold="£12"
+      name="Lorem Ipsum"
+      year="20/09/1999"
+      category="Category"
+      title="Artwork Title"
+      guidePrice="£12"
       altText="Pride in London logo"
       image={{
         src: logo,

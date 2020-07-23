@@ -3,14 +3,15 @@ import styled from 'styled-components'
 import { Card, CardTitle, CardImage, CardContent, CardFooter } from '../card'
 import { Tag } from '../../components/tag'
 import { H5, H6, P } from '../typography'
-import { colors } from '../../theme/colors'
 import { GalleryCardProps } from './GalleryCard.types'
 
 const StyledTag = styled(Tag)`
   display: flex;
-  transform: translate(5px, -35px);
+  position: relative;
+  top: -36;
   color: indigo;
   padding: 6px;
+  width: max-content;
 `
 const StyledCardContent = styled(CardContent as any)`
   position: relative;
@@ -18,23 +19,25 @@ const StyledCardContent = styled(CardContent as any)`
   margin: 20px;
 `
 export const GalleryCard = ({
-  artWorkTitle,
-  artistName,
-  date,
-  priceOrSold,
-  image,
-  altText,
-  tagContent,
+  artist: name,
+  artwork: {
+    title,
+    year,
+    sold,
+    guidePrice,
+    category,
+    image: { fixed, altText },
+  },
 }: GalleryCardProps) => {
   return (
     <Card to="/">
-      <CardImage image={image} alt={altText} />
+      <CardImage image={fixed} alt={altText} />
       <StyledCardContent>
-        <StyledTag color={colors.tomato}>{tagContent}</StyledTag>
-        <H5 as={CardTitle}>{artWorkTitle}</H5>
-        <P>{artistName}</P>
-        <P>{date}</P>
-        <H6 as={CardFooter}>{priceOrSold}</H6>
+        <StyledTag color={category.hexColour}>{category.title}</StyledTag>
+        <H5 as={CardTitle}>{title}</H5>
+        <P>{name}</P>
+        <P>{year}</P>
+        <H6 as={CardFooter}>{sold ? 'Sold' : guidePrice}</H6>
       </StyledCardContent>
     </Card>
   )
