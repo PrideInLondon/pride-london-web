@@ -9,6 +9,7 @@ import { Gallery, GalleryContainer } from '../components/gallery'
 import { Button } from '../components/button'
 import { colors } from '../theme/colors'
 import { GalleryCard } from './GalleryCard'
+import { generateFiftyTwoEntrySlug } from './helpers'
 import { renderMethods } from './renderMethods'
 import { ButtonWrapper } from './FiftyTwoPage.styles'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
@@ -88,6 +89,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
               }) => (
                 <GalleryCard
                   key={artist.name}
+                  to={generateFiftyTwoEntrySlug(artist.name)}
                   {...rest}
                   artist={artist}
                   artwork={{

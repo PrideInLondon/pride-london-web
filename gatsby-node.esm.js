@@ -1,5 +1,6 @@
 import path from 'path'
 import { generateEventSlug } from './src/events/helpers'
+import { generateFiftyTwoEntrySlug } from './src/fifty-two/helpers'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
@@ -9,13 +10,6 @@ const GenericContentPage = path.resolve(
 const FiftyTwoDetailPage = path.resolve(
   './src/fifty-two/FiftyTwoDetailPage.tsx'
 )
-
-function createFiftyTwoSlug(name) {
-  return `/fifty-two/${name
-    .trim()
-    .replace(/\s+/g, '-')
-    .toLowerCase()}`
-}
 
 exports.sourceNodes = ({ actions: { createTypes } }) =>
   createTypes(`
@@ -83,23 +77,22 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
 
     const entries = result.data.galleryFiftyTwoEntries.edges
-
     entries.forEach((edge, index) => {
       createPage({
-        path: createFiftyTwoSlug(edge.node.artist.name),
+        path: generateFiftyTwoEntrySlug(edge.node.artist.name),
         component: FiftyTwoDetailPage,
         context: {
           id: edge.node.id,
           prev:
             index > 0
-              ? createFiftyTwoSlug(entries[index - 1].node.artist.name)
-              : createFiftyTwoSlug(
+              ? generateFiftyTwoEntrySlug(entries[index - 1].node.artist.name)
+              : generateFiftyTwoEntrySlug(
                   entries[entries.length - 1].node.artist.name
                 ),
           next:
             index < entries.length - 1
-              ? createFiftyTwoSlug(entries[index + 1].node.artist.name)
-              : createFiftyTwoSlug(entries[0].node.artist.name),
+              ? generateFiftyTwoEntrySlug(entries[index + 1].node.artist.name)
+              : generateFiftyTwoEntrySlug(entries[0].node.artist.name),
         },
       })
     })
