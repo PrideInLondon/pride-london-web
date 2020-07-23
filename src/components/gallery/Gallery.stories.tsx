@@ -65,7 +65,7 @@ storiesOf(Gallery.name, module)
         min: 1,
         max: MORE_ENTRIES.length,
       })}
-      render={({ entries, moreEntriesToShow, showNextPage }) => (
+      render={({ entries, showNextPage }) => (
         <>
           <GalleryContainer
             variant={select(
@@ -87,19 +87,21 @@ storiesOf(Gallery.name, module)
               </Card>
             ))}
           </GalleryContainer>
-          {moreEntriesToShow && (
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                marginTop: '8px',
-              }}
-            >
+          <div
+            style={{
+              textAlign: 'center',
+              marginTop: '8px',
+            }}
+          >
+            <p>
+              You're viewing {entries.length} of {MORE_ENTRIES.length} entries
+            </p>
+            {entries.length < MORE_ENTRIES.length && (
               <Button variant="outline" onClick={showNextPage}>
                 Show more
               </Button>
-            </div>
-          )}
+            )}
+          </div>
         </>
       )}
     />

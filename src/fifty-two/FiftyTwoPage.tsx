@@ -2,7 +2,7 @@ import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Banner } from '../components/banner'
 import { PageIntro } from '../components/pageIntro'
-import { H3 } from '../components/typography'
+import { H3, P } from '../components/typography'
 import { CategoryFilter } from '../components/categoryFilter'
 import { Category } from '../components/categoryFilter/CategoryFilter.types'
 import { Gallery, GalleryContainer } from '../components/gallery'
@@ -66,7 +66,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
     <Gallery
       entries={edges}
       pageSize={9}
-      render={({ entries, moreEntriesToShow, showNextPage }) => (
+      render={({ entries, showNextPage }) => (
         <>
           <GalleryContainer
             variant="masonry"
@@ -99,13 +99,20 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
               )
             )}
           </GalleryContainer>
-          {moreEntriesToShow && (
-            <ButtonWrapper>
-              <Button variant="outline-white" onClick={showNextPage}>
+          <ButtonWrapper>
+            <P variant="sm" color={colors.white}>
+              You're viewing {entries.length} of {edges.length} artworks
+            </P>
+            {entries.length < edges.length && (
+              <Button
+                variant="outline-white"
+                onClick={showNextPage}
+                marginTop="md"
+              >
                 Show more artworks
               </Button>
-            </ButtonWrapper>
-          )}
+            )}
+          </ButtonWrapper>
         </>
       )}
     />

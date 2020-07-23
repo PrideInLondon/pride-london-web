@@ -9,7 +9,6 @@ export const Gallery = <T,>({
   entries: T[]
   render: (renderProps: {
     entries: T[]
-    moreEntriesToShow: boolean
     showNextPage: () => void
   }) => React.ReactNode
 }) => {
@@ -23,7 +22,6 @@ export const Gallery = <T,>({
     <>
       {render({
         entries: entries.slice(0, numberOfEntriesToShow),
-        moreEntriesToShow: numberOfEntriesToShow < entries.length,
         showNextPage: () =>
           setNumberOfEntriesToShow(numberOfEntriesToShow + pageSize),
       })}
