@@ -16,7 +16,6 @@ describe(Gallery.name, () => {
       expect(mockRender).toHaveBeenCalledWith(
         expect.objectContaining({
           entries: ENTRIES,
-          moreEntriesToShow: false,
         })
       )
     })
@@ -34,21 +33,7 @@ describe(Gallery.name, () => {
       expect(mockRender).toHaveBeenCalledWith(
         expect.objectContaining({
           entries: ENTRIES.slice(0, PAGE_SIZE),
-          moreEntriesToShow: true,
         })
-      )
-    })
-
-    it('should return no more entries to show when last page is reached', () => {
-      const PAGE_SIZE = ENTRIES.length
-      const mockRender = jest.fn()
-
-      render(
-        <Gallery entries={ENTRIES} render={mockRender} pageSize={PAGE_SIZE} />
-      )
-
-      expect(mockRender).toHaveBeenCalledWith(
-        expect.objectContaining({ moreEntriesToShow: false })
       )
     })
 
@@ -80,7 +65,6 @@ describe(Gallery.name, () => {
       expect(mockRender).toHaveBeenLastCalledWith(
         expect.objectContaining({
           entries: ENTRIES.slice(0, PAGE_SIZE * 2),
-          moreEntriesToShow: true,
         })
       )
     })
