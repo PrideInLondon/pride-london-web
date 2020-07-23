@@ -14,6 +14,7 @@ import { H5, H6, P } from '../components/typography'
 import { Category } from '../components/categoryFilter/CategoryFilter.types'
 
 export interface GalleryEntry extends LayoutProps {
+  to: string
   artist: {
     name: string
   }
@@ -38,17 +39,12 @@ const StyledTag = styled(Tag)`
 `
 
 export const GalleryCard = ({
+  to,
   artist: { name },
   artwork: { title, year, sold, guidePrice, image, category },
   ...props
 }: GalleryEntry) => (
-  <StyledCard
-    to={`/fifty-two/${name
-      .split(' ')
-      .join('-')
-      .toLowerCase()}`}
-    {...props}
-  >
+  <StyledCard to={to} {...props}>
     <CardImage image={image} alt="" />
     <CardContent>
       <StyledTag color={category.color}>{category.name}</StyledTag>
