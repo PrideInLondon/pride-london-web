@@ -1,22 +1,26 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Container, Row, Column } from '../../components/grid'
-import constants from '../../constants'
 import FilterLabel from './FilterLabel'
 import { FilterContainerWrapper } from './FilterContainer.styles'
+import { FilterContainerProps } from './FilterContainer.types'
+import { FilterType } from './FilterLabel.types'
 
-export const calculateIsSelected = (filterType, filterName, selected) => {
+export const calculateIsSelected = (
+  filterType: FilterType,
+  filterName: string,
+  selected: string | string[]
+): boolean => {
   switch (filterType) {
     case 'checkbox':
       return selected.includes(filterName)
     case 'radio':
       return filterName === selected
     default:
-      return
+      return false
   }
 }
 
-const FilterContainer = ({
+const FilterContainer: React.FC<FilterContainerProps> = ({
   filterType,
   categories,
   selected,
@@ -24,12 +28,11 @@ const FilterContainer = ({
 }) => (
   <Container>
     <Row>
-      <Column width={1} py={[20, 20, 40]}>
+      <Column width={1} py={['20px', '20px', '40px']}>
         <FilterContainerWrapper>
           {categories.map(({ title, hexColour }) => {
             return (
               <FilterLabel
-                id={title}
                 key={title}
                 filterName={title}
                 filterColour={hexColour}
@@ -44,17 +47,5 @@ const FilterContainer = ({
     </Row>
   </Container>
 )
-
-FilterContainer.propTypes = {
-  filterType: PropTypes.oneOf(constants.filterTypes).isRequired,
-  categories: PropTypes.arrayOf(
-    PropTypes.shape({ title: PropTypes.string, hexColour: PropTypes.string })
-  ).isRequired,
-  selected: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string),
-  ]).isRequired,
-  handleFilterSelect: PropTypes.func.isRequired,
-}
 
 export default FilterContainer
