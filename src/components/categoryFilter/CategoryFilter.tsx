@@ -1,32 +1,71 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { calculateIsSelected } from '../filterContainer'
-import { Wrapper, StyledTag, Input } from './CategoryFilter.styles'
-import { CategoryFilterProps } from './CategoryFilter.types'
+import { calculateSelected } from '../filteredPagedCardContainer'
+import { Wrapper, StyledTag } from './CategoryFilter.styles'
+import {
+  CategoryFilterProps,
+  CategoryFilterVariant,
+  Category,
+} from './CategoryFilter.types'
 
-export const CategoryFilter: React.FC<CategoryFilterProps> = ({
-  filterType,
+const calculateInitialSelected = (
+  variant: CategoryFilterVariant,
+  [{ name }]: Category[]
+) => {
+  switch (variant) {
+    case 'checkbox':
+      return [name]
+    case 'radio':
+      return name
+  }
+}
+
+export const CategoryFilter = <T,>({
+  variant,
   categories,
-  selected,
-  handleFilterSelect,
-}) => (
-  <Wrapper>
-    {categories.map(({ name, color }) => (
-      <StyledTag
-        key={name}
-        color={color}
-        variant={
-          calculateIsSelected(filterType, name, selected)
-            ? 'primary'
-            : 'outline'
-        }
-      >
-        {name}
-        <Input
-          type={filterType}
-          value={name}
-          onClick={() => handleFilterSelect(name)}
-        />
-      </StyledTag>
-    ))}
-  </Wrapper>
-)
+  entries,
+  render,
+}: CategoryFilterProps & {
+  entries: T[]
+  render: (renderProps: {
+    entries: (predicate: (entry: T) => string) => T[]
+  }) => React.ReactNode
+}) => {
+  const [selected, setSelected] = useState(
+    calculateInitialSelected(variant, categories)
+  )
+
+  useEffect(() => {
+    setSelected(calculateInitialSelected(variant, categories))
+  }, [variant, categories])
+
+  return (
+    <>
+      <Wrapper>
+        {categories.map(({ name, color }) => {
+          const isSelected = calculateIsSelected(variant, name, selected)
+          return (
+            <StyledTag
+              key={name}
+              color={color}
+              variant={isSelected ? 'primary' : 'outline'}
+              role={variant}
+              aria-checked={isSelected}
+              onClick={() =>
+                setSelected(calculateSelected(variant, name, selected))
+              }
+            >
+              {name}
+            </StyledTag>
+          )
+        })}
+      </Wrapper>
+      {render({
+        entries: predicate =>
+          entries.filter(entry =>
+            calculateIsSelected(variant, predicate(entry), selected)
+          ),
+      })}
+    </>
+  )
+}

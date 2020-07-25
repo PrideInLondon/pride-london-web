@@ -1,6 +1,6 @@
-const FILTER_TYPES = ['checkbox', 'radio'] as const
+export const CATEGORY_FILTER_VARIANTS = ['checkbox', 'radio'] as const
 
-export type FilterType = typeof FILTER_TYPES[number]
+export type CategoryFilterVariant = typeof CATEGORY_FILTER_VARIANTS[number]
 
 export interface Category {
   name: string
@@ -8,8 +8,6 @@ export interface Category {
 }
 
 export interface CategoryFilterProps {
-  filterType: FilterType
+  variant: CategoryFilterVariant
   categories: Category[]
-  selected: string | string[]
-  handleFilterSelect: (selectedFilterName: string) => void
 }

@@ -1,45 +1,48 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { object, optionsKnob as options } from '@storybook/addon-knobs'
+import { select } from '@storybook/addon-knobs'
 import { colors } from '../../theme/colors'
+import { Tag } from '../tag'
+import { Card, CardTitle, CardContent } from '../card'
+import { P } from '../typography'
+import { Masonry } from '../masonry'
 import { CategoryFilter } from './CategoryFilter'
+import { Category, CATEGORY_FILTER_VARIANTS } from './CategoryFilter.types'
 
-const CATEGORIES = [
+const CATEGORIES: Category[] = [
   { name: 'Drink', color: colors.yellow },
   { name: 'Eat', color: colors.tomato },
   { name: 'Party', color: colors.indigo },
-  { name: 'Shop', color: colors.eucalyptusGreen },
-  { name: 'Sleep', color: colors.pink },
 ]
 
-const CATEGORY_OPTIONS: { [key: string]: string } = CATEGORIES.reduce(
-  (acc, { name }) => ({ ...acc, [name]: name }),
-  {}
-)
+const ENTRIES = [...Array(CATEGORIES.length * 2)].map((_, index) => ({
+  text: `Entry #${index + 1}`,
+  category: CATEGORIES[index % CATEGORIES.length],
+}))
 
-storiesOf(CategoryFilter.name, module)
-  .add('checkbox', () => (
-    <CategoryFilter
-      filterType="checkbox"
-      categories={object('categories', CATEGORIES)}
-      selected={options(
-        'selected',
-        CATEGORY_OPTIONS,
-        [CATEGORY_OPTIONS[CATEGORIES[0].name]],
-        {
-          display: 'inline-check',
-        }
-      )}
-      handleFilterSelect={() => {}}
-    />
-  ))
-  .add('radio', () => (
-    <CategoryFilter
-      filterType="radio"
-      categories={object('categories', CATEGORIES)}
-      selected={options('selected', CATEGORY_OPTIONS, CATEGORIES[0].name, {
-        display: 'inline-radio',
-      })}
-      handleFilterSelect={() => {}}
-    />
-  ))
+storiesOf(CategoryFilter.name, module).add('checkbox', () => (
+  <CategoryFilter
+    variant={select(
+      'variant',
+      CATEGORY_FILTER_VARIANTS,
+      CATEGORY_FILTER_VARIANTS[0]
+    )}
+    categories={CATEGORIES}
+    entries={ENTRIES}
+    render={({ entries }) => (
+      <Masonry columns={{ default: 1, md: 2 }}>
+        {entries(({ category: { name } }) => name).map(
+          ({ text, category: { color, name } }) => (
+            <Card to="#" style={{ margin: 16 }}>
+              <CardContent>
+                <CardTitle>{text}</CardTitle>
+                <Tag color={color}>{name}</Tag>
+                <P marginTop="md">Lorem ipsum</P>
+              </CardContent>
+            </Card>
+          )
+        )}
+      </Masonry>
+    )}
+  />
+))
