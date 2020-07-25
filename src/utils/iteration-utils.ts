@@ -29,4 +29,4 @@ export function reject(obj: IndexSignature, keys: string[]): IndexSignature {
 }
 
 export const shuffle = <T>(array: T[]): T[] =>
-  array.sort(() => Math.random() - 0.5)
+  [...array].sort(() => Math.random() - 0.5)
