@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Banner } from '../components/banner'
 import { PageIntro } from '../components/pageIntro'
@@ -9,6 +9,7 @@ import { Gallery, GalleryContainer } from '../components/gallery'
 import { Button } from '../components/button'
 import { GalleryCard } from '../components/galleryCard'
 import { colors } from '../theme/colors'
+import { shuffle } from '../utils/iteration-utils'
 import { generateFiftyTwoEntrySlug } from './helpers'
 import { renderMethods } from './renderMethods'
 import { ButtonWrapper } from './FiftyTwoPage.styles'
@@ -35,103 +36,111 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
     },
     entries: { edges },
   },
-}) => (
-  <>
-    <Banner
-      titleText={title}
-      subtitleText={subtitle}
-      fixed={bannerImage}
-      imageFullWidth
-    />
-    <PageIntro
-      cta={{
-        title: ctaTitle,
-        link: {
-          to: buttonUrl,
-          text: buttonText,
-        },
-        body: bodyText,
-      }}
-    >
-      {documentToReactComponents(json, renderMethods)}
-    </PageIntro>
-    <H3 textAlign="center" paddingBottom="lg">
-      Category is...
-    </H3>
-    <CategoryFilter
-      variant="radio"
-      categories={CATEGORIES}
-      entries={edges}
-      render={({ entries }) => {
-        const filteredEntries = entries(
-          ({
-            node: {
-              artwork: { category },
-            },
-          }) => category
-        )
-        return (
-          <>
-            <Gallery
-              entries={filteredEntries}
-              pageSize={9}
-              render={({ entries: pagedEntries, showNextPage }) => (
-                <>
-                  <GalleryContainer
-                    variant="masonry"
-                    columns={{ default: 1, md: 2, lg: 3 }}
-                    paddingX="xl"
-                    paddingY="xxl"
-                  >
-                    {pagedEntries.map(
-                      ({
-                        node: {
-                          artist,
-                          artwork: {
-                            image: { fixed },
-                            category,
-                            ...artwork
+}) => {
+  const [shuffledEntries, setShuffledEntries] = useState(shuffle(edges))
+
+  useEffect(() => {
+    setShuffledEntries(shuffle(edges))
+  }, [edges])
+
+  return (
+    <>
+      <Banner
+        titleText={title}
+        subtitleText={subtitle}
+        fixed={bannerImage}
+        imageFullWidth
+      />
+      <PageIntro
+        cta={{
+          title: ctaTitle,
+          link: {
+            to: buttonUrl,
+            text: buttonText,
+          },
+          body: bodyText,
+        }}
+      >
+        {documentToReactComponents(json, renderMethods)}
+      </PageIntro>
+      <H3 textAlign="center" paddingBottom="lg">
+        Category is...
+      </H3>
+      <CategoryFilter
+        variant="radio"
+        categories={CATEGORIES}
+        entries={shuffledEntries}
+        render={({ entries }) => {
+          const filteredEntries = entries(
+            ({
+              node: {
+                artwork: { category },
+              },
+            }) => category
+          )
+          return (
+            <>
+              <Gallery
+                entries={filteredEntries}
+                pageSize={9}
+                render={({ entries: pagedEntries, showNextPage }) => (
+                  <>
+                    <GalleryContainer
+                      variant="masonry"
+                      columns={{ default: 1, md: 2, lg: 3 }}
+                      paddingX="xl"
+                      paddingY="xxl"
+                    >
+                      {pagedEntries.map(
+                        ({
+                          node: {
+                            artist,
+                            artwork: {
+                              image: { fixed },
+                              category,
+                              ...artwork
+                            },
+                            ...rest
                           },
-                          ...rest
-                        },
-                      }) => (
-                        <GalleryCard
-                          key={artist.name}
-                          to={generateFiftyTwoEntrySlug(artist.name)}
-                          {...rest}
-                          artist={artist}
-                          artwork={{
-                            ...artwork,
-                            image: { fixed, alt: '' },
-                            category: CATEGORIES.find(
-                              ({ name }) => name === category
-                            )!,
-                          }}
-                        />
-                      )
-                    )}
-                  </GalleryContainer>
-                  <ButtonWrapper>
-                    <P variant="sm" color={colors.white}>
-                      You're viewing {pagedEntries.length} of{' '}
-                      {filteredEntries.length} artworks
-                    </P>
-                    {pagedEntries.length < filteredEntries.length && (
-                      <Button
-                        variant="outline-white"
-                        onClick={showNextPage}
-                        marginTop="md"
-                      >
-                        Show more artworks
-                      </Button>
-                    )}
-                  </ButtonWrapper>
-                </>
-              )}
-            />
-          </>
-        )
-      }}
-    />
-  </>
-)
+                        }) => (
+                          <GalleryCard
+                            key={artist.name}
+                            to={generateFiftyTwoEntrySlug(artist.name)}
+                            {...rest}
+                            artist={artist}
+                            artwork={{
+                              ...artwork,
+                              image: { fixed, alt: '' },
+                              category: CATEGORIES.find(
+                                ({ name }) => name === category
+                              )!,
+                            }}
+                          />
+                        )
+                      )}
+                    </GalleryContainer>
+                    <ButtonWrapper>
+                      <P variant="sm" color={colors.white}>
+                        You're viewing {pagedEntries.length} of{' '}
+                        {filteredEntries.length} artworks
+                      </P>
+                      {pagedEntries.length < filteredEntries.length && (
+                        <Button
+                          variant="outline-white"
+                          onClick={showNextPage}
+                          marginTop="md"
+                        >
+                          Show more artworks
+                        </Button>
+                      )}
+                    </ButtonWrapper>
+                  </>
+                )}
+              />
+            </>
+          )
+        }}
+      />
+    </>
+  )
+}
