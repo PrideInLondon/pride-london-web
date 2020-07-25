@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import { compose, layout, space } from 'styled-system'
 import { Card, CardTitle, CardImage, CardContent, CardFooter } from '../card'
 import { Tag } from '../../components/tag'
 import { H5, H6, P } from '../typography'
 import { GalleryCardProps } from './GalleryCard.types'
+
+const StyledCard = styled(Card)`
+  ${compose(layout, space)}
+`
 
 const StyledTag = styled(Tag)`
   display: flex;
@@ -19,7 +24,6 @@ const StyledCardContent = styled(CardContent as any)`
   margin: 20px;
 `
 export const GalleryCard = ({
-  to,
   artist: { name },
   artwork: {
     title,
@@ -29,8 +33,9 @@ export const GalleryCard = ({
     category,
     image: { fixed, alt },
   },
+  ...props
 }: GalleryCardProps) => (
-  <Card {...{ to }}>
+  <StyledCard {...props}>
     <CardImage image={fixed} alt={alt} />
     <StyledCardContent>
       <StyledTag color={category.hexColour}>{category.title}</StyledTag>
@@ -39,5 +44,5 @@ export const GalleryCard = ({
       <P>{year}</P>
       <H6 as={CardFooter}>{sold ? 'Sold' : guidePrice}</H6>
     </StyledCardContent>
-  </Card>
+  </StyledCard>
 )
