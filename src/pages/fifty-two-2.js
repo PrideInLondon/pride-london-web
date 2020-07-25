@@ -47,7 +47,7 @@ export const query = graphql`
         node {
           artwork {
             image {
-              fixed(width: 405, quality: 100, cropFocus: CENTER) {
+              fixed(width: 480, quality: 100, resizingBehavior: SCALE) {
                 ...GatsbyContentfulFixed_withWebp
               }
             }
