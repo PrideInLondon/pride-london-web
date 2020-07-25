@@ -1,8 +1,9 @@
 import { LayoutProps, SpaceProps } from 'styled-system'
-import FixedObject from 'gatsby-image'
+import { FixedObject } from 'gatsby-image'
 import { Category } from '../../components/filterContainer/FilterContainer.types'
 
 export interface GalleryCardProps extends LayoutProps, SpaceProps {
+  to: string
   artist: {
     name: string
   }
@@ -11,7 +12,10 @@ export interface GalleryCardProps extends LayoutProps, SpaceProps {
     year: string
     sold: boolean
     guidePrice: string
-    image: { fixed: FixedObject; altText: string }
+    image: {
+      fixed: FixedObject
+      alt: string
+    }
     category: Category
   }
 }

@@ -19,26 +19,25 @@ const StyledCardContent = styled(CardContent as any)`
   margin: 20px;
 `
 export const GalleryCard = ({
-  artist: name,
+  to,
+  artist: { name },
   artwork: {
     title,
     year,
     sold,
     guidePrice,
     category,
-    image: { fixed, altText },
+    image: { fixed, alt },
   },
-}: GalleryCardProps) => {
-  return (
-    <Card to="/">
-      <CardImage image={fixed} alt={altText} />
-      <StyledCardContent>
-        <StyledTag color={category.hexColour}>{category.title}</StyledTag>
-        <H5 as={CardTitle}>{title}</H5>
-        <P>{name}</P>
-        <P>{year}</P>
-        <H6 as={CardFooter}>{sold ? 'Sold' : guidePrice}</H6>
-      </StyledCardContent>
-    </Card>
-  )
-}
+}: GalleryCardProps) => (
+  <Card {...{ to }}>
+    <CardImage image={fixed} alt={alt} />
+    <StyledCardContent>
+      <StyledTag color={category.hexColour}>{category.title}</StyledTag>
+      <H5 as={CardTitle}>{title}</H5>
+      <P>{name}</P>
+      <P>{year}</P>
+      <H6 as={CardFooter}>{sold ? 'Sold' : guidePrice}</H6>
+    </StyledCardContent>
+  </Card>
+)
