@@ -1,28 +1,15 @@
 import React from 'react'
-import styled from 'styled-components'
-import { compose, layout, space } from 'styled-system'
-import { Card, CardTitle, CardImage, CardContent, CardFooter } from '../card'
-import { Tag } from '../../components/tag'
+import { CardTitle, CardContent, CardFooter } from '../card'
 import { H5, H6, P } from '../typography'
+import { md } from '../../theme/space'
+import {
+  StyledCard,
+  ImageWrapper,
+  StyledImage,
+  StyledTag,
+} from './GalleryCard.styles'
 import { GalleryCardProps } from './GalleryCard.types'
 
-const StyledCard = styled(Card)`
-  ${compose(layout, space)}
-`
-
-const StyledTag = styled(Tag)`
-  display: flex;
-  position: relative;
-  top: -36;
-  color: indigo;
-  padding: 6px;
-  width: max-content;
-`
-const StyledCardContent = styled(CardContent as any)`
-  position: relative;
-  width: 100%;
-  margin: 20px;
-`
 export const GalleryCard = ({
   artist: { name },
   artwork: {
@@ -36,13 +23,15 @@ export const GalleryCard = ({
   ...props
 }: GalleryCardProps) => (
   <StyledCard {...props}>
-    <CardImage image={fixed} alt={alt} />
-    <StyledCardContent>
+    <ImageWrapper height={fixed.height}>
+      <StyledImage {...{ fixed, alt }} />
+    </ImageWrapper>
+    <CardContent position="relative" paddingTop={`${md * 2}px`}>
       <StyledTag color={category.hexColour}>{category.title}</StyledTag>
       <H5 as={CardTitle}>{title}</H5>
       <P>{name}</P>
       <P>{year}</P>
       <H6 as={CardFooter}>{sold ? 'Sold' : guidePrice}</H6>
-    </StyledCardContent>
+    </CardContent>
   </StyledCard>
 )
