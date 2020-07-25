@@ -33,25 +33,31 @@ export const Modal = ({
   const firstUpdate = useRef(true)
 
   useLayoutEffect(() => {
-    isOpen && noScroll.on()
+    setTimeout(() => {
+      isOpen && noScroll.on()
+    })
     const undo = ref && ref.current && hideOthers(ref.current)
+    const cleanup = () => {
+      noScroll.off()
+      undo && undo()
+    }
 
     // Prevent onOpen or onClose callbacks executing on initial render
     if (firstUpdate.current) {
       firstUpdate.current = false
       return
     }
-
+    if (!isOpen) {
+      cleanup()
+    }
     if (isOpen && onOpen) {
       onOpen()
     }
     if (!isOpen && onClose) {
       onClose()
     }
-
     return () => {
-      noScroll.off()
-      undo && undo()
+      cleanup()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen])

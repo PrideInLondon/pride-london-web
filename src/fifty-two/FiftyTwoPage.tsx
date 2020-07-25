@@ -1,4 +1,5 @@
 import React from 'react'
+import Cookies from 'js-cookie'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Banner } from '../components/banner'
 import { PageIntro } from '../components/pageIntro'
@@ -7,6 +8,9 @@ import { CategoryFilter } from '../components/categoryFilter'
 import { Category } from '../components/categoryFilter/CategoryFilter.types'
 import { Gallery, GalleryContainer } from '../components/gallery'
 import { Button } from '../components/button'
+import { CTALink } from '../components/ctaLink'
+import { Modal } from '../components/modal/Modal'
+import { Wrapper } from '../components/wrapper/Wrapper'
 import { colors } from '../theme/colors'
 import { GalleryCard } from './GalleryCard'
 import { generateFiftyTwoEntrySlug } from './helpers'
@@ -118,5 +122,43 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
         </>
       )}
     />
+    <Modal
+      trigger={<Button>Click to open</Button>}
+      dismissable={false}
+      open={Cookies.get('fiftyTwo') === 'accept' ? false : true}
+      onClose={() => {
+        Cookies.set('fiftyTwo', 'accept', { expires: 365 })
+      }}
+    >
+      {({ setIsOpen }) => (
+        <Wrapper textAlign="center" width="100%">
+          <H3 color="white">Age verification</H3>
+          <P color="white" variant="lg">
+            The following page contains artwork depicting themes and content
+            that may not be suitable for under 18s.
+          </P>
+          <Button
+            mr="lg"
+            onClick={() => {
+              setIsOpen(false)
+            }}
+          >
+            Continue to page
+          </Button>
+          <Button variant="outline-white" to="/">
+            Redirect me
+          </Button>
+          <P variant="sm" color="white" mt="lg">
+            See Fifty-Two's{' '}
+            <CTALink
+              to="https://prideinlondon.org/fifty-two/terms/"
+              color="white"
+            >
+              terms and conditions
+            </CTALink>
+          </P>
+        </Wrapper>
+      )}
+    </Modal>
   </>
 )
