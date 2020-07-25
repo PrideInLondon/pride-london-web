@@ -58,76 +58,80 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
     <H3 textAlign="center" paddingBottom="lg">
       Category is...
     </H3>
-    <Gallery
+    <CategoryFilter
+      variant="radio"
+      categories={CATEGORIES}
       entries={edges}
-      pageSize={9}
-      render={({ entries, showNextPage }) => (
-        <>
-          <CategoryFilter
-            variant="radio"
-            categories={CATEGORIES}
-            {...{ entries }}
-            render={({ entries: filteredEntries }) => (
-              <>
-                <GalleryContainer
-                  variant="masonry"
-                  columns={{ default: 1, md: 2, lg: 3 }}
-                  paddingX="xl"
-                  paddingY="xxl"
-                >
-                  {filteredEntries(
-                    ({
-                      node: {
-                        artwork: { category },
-                      },
-                    }) => category
-                  ).map(
-                    ({
-                      node: {
-                        artist,
-                        artwork: {
-                          image: { fixed },
-                          category,
-                          ...artwork
+      render={({ entries }) => {
+        const filteredEntries = entries(
+          ({
+            node: {
+              artwork: { category },
+            },
+          }) => category
+        )
+        return (
+          <>
+            <Gallery
+              entries={filteredEntries}
+              pageSize={9}
+              render={({ entries: pagedEntries, showNextPage }) => (
+                <>
+                  <GalleryContainer
+                    variant="masonry"
+                    columns={{ default: 1, md: 2, lg: 3 }}
+                    paddingX="xl"
+                    paddingY="xxl"
+                  >
+                    {pagedEntries.map(
+                      ({
+                        node: {
+                          artist,
+                          artwork: {
+                            image: { fixed },
+                            category,
+                            ...artwork
+                          },
+                          ...rest
                         },
-                        ...rest
-                      },
-                    }) => (
-                      <GalleryCard
-                        key={artist.name}
-                        to={generateFiftyTwoEntrySlug(artist.name)}
-                        {...rest}
-                        artist={artist}
-                        artwork={{
-                          ...artwork,
-                          image: { fixed, alt: '' },
-                          category: CATEGORIES.find(
-                            ({ name }) => name === category
-                          )!,
-                        }}
-                      />
-                    )
-                  )}
-                </GalleryContainer>
-                <ButtonWrapper>
-                  <P variant="sm" color={colors.white}>
-                    You're viewing {entries.length} of {edges.length} artworks
-                  </P>
-                  {entries.length < edges.length && (
-                    <Button
-                      variant="outline-white"
-                      onClick={showNextPage}
-                      marginTop="md"
-                    >
-                      Show more artworks
-                    </Button>
-                  )}
-                </ButtonWrapper>
-              </>
-            )}
-          />
-        </>
-      )}
+                      }) => (
+                        <GalleryCard
+                          key={artist.name}
+                          to={generateFiftyTwoEntrySlug(artist.name)}
+                          {...rest}
+                          artist={artist}
+                          artwork={{
+                            ...artwork,
+                            image: { fixed, alt: '' },
+                            category: CATEGORIES.find(
+                              ({ name }) => name === category
+                            )!,
+                          }}
+                        />
+                      )
+                    )}
+                  </GalleryContainer>
+                  <ButtonWrapper>
+                    <P variant="sm" color={colors.white}>
+                      You're viewing {pagedEntries.length} of{' '}
+                      {filteredEntries.length} artworks
+                    </P>
+                    {pagedEntries.length < filteredEntries.length && (
+                      <Button
+                        variant="outline-white"
+                        onClick={showNextPage}
+                        marginTop="md"
+                      >
+                        Show more artworks
+                      </Button>
+                    )}
+                  </ButtonWrapper>
+                </>
+              )}
+            />
+          </>
+        )
+      }}
     />
   </>
 )
