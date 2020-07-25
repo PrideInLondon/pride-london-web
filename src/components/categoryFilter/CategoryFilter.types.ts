@@ -5,6 +5,7 @@ export type CategoryFilterVariant = typeof CATEGORY_FILTER_VARIANTS[number]
 export interface Category {
   name: string
   color: string
+  isSelectAll?: boolean
 }
 
 export interface CategoryFilterProps {

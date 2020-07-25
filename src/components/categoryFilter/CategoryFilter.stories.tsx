@@ -15,6 +15,11 @@ const CATEGORIES: Category[] = [
   { name: 'Party', color: colors.indigo },
 ]
 
+const ALL_CATEGORIES: Category[] = [
+  { name: 'Everything', color: colors.eucalyptusGreen, isSelectAll: true },
+  ...CATEGORIES,
+]
+
 const ENTRIES = [...Array(CATEGORIES.length * 2)].map((_, index) => ({
   text: `Entry #${index + 1}`,
   category: CATEGORIES[index % CATEGORIES.length],
@@ -27,7 +32,7 @@ storiesOf(CategoryFilter.name, module).add('checkbox', () => (
       CATEGORY_FILTER_VARIANTS,
       CATEGORY_FILTER_VARIANTS[0]
     )}
-    categories={CATEGORIES}
+    categories={ALL_CATEGORIES}
     entries={ENTRIES}
     render={({ entries }) => (
       <Masonry columns={{ default: 1, md: 2 }}>

@@ -8,15 +8,21 @@ import {
   Category,
 } from './CategoryFilter.types'
 
-const calculateInitialSelected = (
+export const calculateInitialSelected = (
   variant: CategoryFilterVariant,
-  [{ name }]: Category[]
-) => {
+  categories: Category[]
+): string | string[] => {
+  const nonSelectAllCategories = categories.filter(
+    ({ isSelectAll }) => !isSelectAll
+  )
+  const selectAllCategoryExists =
+    categories.length !== nonSelectAllCategories.length
+  const [{ name }] = nonSelectAllCategories
   switch (variant) {
     case 'checkbox':
-      return [name]
+      return selectAllCategoryExists ? [] : [name]
     case 'radio':
-      return name
+      return selectAllCategoryExists ? '' : name
   }
 }
 
@@ -31,6 +37,9 @@ export const CategoryFilter = <T,>({
     entries: (predicate: (entry: T) => string) => T[]
   }) => React.ReactNode
 }) => {
+  const [selectAll, setSelectAll] = useState(
+    !!categories.find(({ isSelectAll }) => isSelectAll)
+  )
   const [selected, setSelected] = useState(
     calculateInitialSelected(variant, categories)
   )
@@ -42,8 +51,10 @@ export const CategoryFilter = <T,>({
   return (
     <>
       <Wrapper>
-        {categories.map(({ name, color }) => {
-          const isSelected = calculateIsSelected(variant, name, selected)
+        {categories.map(({ name, color, isSelectAll }) => {
+          const isSelected = isSelectAll
+            ? selectAll
+            : calculateIsSelected(variant, name, selected)
           return (
             <StyledTag
               key={name}
@@ -51,9 +62,14 @@ export const CategoryFilter = <T,>({
               variant={isSelected ? 'primary' : 'outline'}
               role={variant}
               aria-checked={isSelected}
-              onClick={() =>
-                setSelected(calculateSelected(variant, name, selected))
-              }
+              onClick={() => {
+                setSelectAll(!!isSelectAll)
+                setSelected(
+                  isSelectAll
+                    ? calculateInitialSelected(variant, categories)
+                    : calculateSelected(variant, name, selected)
+                )
+              }}
             >
               {name}
             </StyledTag>
@@ -62,9 +78,11 @@ export const CategoryFilter = <T,>({
       </Wrapper>
       {render({
         entries: predicate =>
-          entries.filter(entry =>
-            calculateIsSelected(variant, predicate(entry), selected)
-          ),
+          selectAll
+            ? entries
+            : entries.filter(entry =>
+                calculateIsSelected(variant, predicate(entry), selected)
+              ),
       })}
     </>
   )
