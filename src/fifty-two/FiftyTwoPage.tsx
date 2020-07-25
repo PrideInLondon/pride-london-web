@@ -7,8 +7,8 @@ import { CategoryFilter } from '../components/categoryFilter'
 import { Category } from '../components/categoryFilter/CategoryFilter.types'
 import { Gallery, GalleryContainer } from '../components/gallery'
 import { Button } from '../components/button'
+import { GalleryCard } from '../components/galleryCard'
 import { colors } from '../theme/colors'
-import { GalleryCard } from './GalleryCard'
 import { generateFiftyTwoEntrySlug } from './helpers'
 import { renderMethods } from './renderMethods'
 import { ButtonWrapper } from './FiftyTwoPage.styles'
@@ -94,7 +94,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
                   artist={artist}
                   artwork={{
                     ...artwork,
-                    image: fixed,
+                    image: { fixed, alt: '' },
                     category: CATEGORIES.find(({ name }) => name === category)!,
                   }}
                 />
