@@ -1,9 +1,32 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import {
+  PageSwitcher,
+  PageLinkDetails,
+} from '../../components/pageSwitcher/PageSwitcher'
 
-export const FiftyTwoEntryPage: React.FC = props => {
-  console.log(props)
-  return <div>hello world</div>
+interface FiftyTwoEntryPageProps {
+  pageContext: {
+    prev: PageLinkDetails
+    next: PageLinkDetails
+  }
+}
+
+export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
+  pageContext: { prev, next },
+}) => {
+  return (
+    <div>
+      <PageSwitcher
+        prev={prev}
+        next={next}
+        back={{
+          title: 'Back to gallery',
+          url: '/fifty-two',
+        }}
+      />
+    </div>
+  )
 }
 
 export const query = graphql`
