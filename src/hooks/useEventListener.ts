@@ -2,11 +2,7 @@
 
 import { useRef, useEffect } from 'react'
 
-export const useEventListener = (
-  eventName: string,
-  handler: EventListener,
-  element = window
-) => {
+export const useEventListener = (eventName: string, handler: EventListener) => {
   const savedHandler = useRef<EventListener>()
 
   // Update ref.current value if handler changes.
@@ -19,22 +15,22 @@ export const useEventListener = (
 
   useEffect(
     () => {
-      // Make sure element supports addEventListener
-      // On
-      const isSupported = element && element.addEventListener
+      // Make sure window is supported (ie client-side render)
+      const isSupported =
+        typeof window !== 'undefined' && window.addEventListener
       if (!isSupported) return
 
       // Create event listener that calls handler function stored in ref
       const eventListener: EventListener = event => savedHandler.current!(event)
 
       // Add event listener
-      element.addEventListener(eventName, eventListener)
+      window.addEventListener(eventName, eventListener)
 
       // Remove event listener on cleanup
       return () => {
-        element.removeEventListener(eventName, eventListener)
+        window.removeEventListener(eventName, eventListener)
       }
     },
-    [eventName, element] // Re-run if eventName or element changes
+    [eventName] // Re-run if eventName or element changes
   )
 }
