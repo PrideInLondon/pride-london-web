@@ -12,6 +12,7 @@ export const ImageWrapper = styled.div<LayoutProps & SpaceProps>`
 
 export const StyledImage = styled(Image)`
   transition: transform 0.15s ease-out;
+  width: 100% !important;
 `
 
 export const StyledCard = styled(Card)`
