@@ -14,8 +14,8 @@ storiesOf('GalleryCard', module).add('default', () => (
     artwork={{
       year: text('year', '1940', 'artwork'),
       category: {
-        hexColour: color('category hexColor', colors.fuscia, 'category'),
-        title: text('category title', 'Painting', 'category'),
+        color: color('category name', colors.fuscia, 'category'),
+        name: text('category name', 'Painting', 'category'),
       },
       title: text(
         'title',

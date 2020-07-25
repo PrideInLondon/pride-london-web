@@ -27,7 +27,7 @@ export const GalleryCard = ({
       <StyledImage {...{ fixed, alt }} />
     </ImageWrapper>
     <CardContent position="relative" paddingTop={`${md * 2}px`}>
-      <StyledTag color={category.hexColour}>{category.title}</StyledTag>
+      <StyledTag color={category.color}>{category.name}</StyledTag>
       <H5 as={CardTitle}>{title}</H5>
       <P>{name}</P>
       <P>{year}</P>

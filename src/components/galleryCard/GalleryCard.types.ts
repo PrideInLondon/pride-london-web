@@ -1,6 +1,6 @@
 import { LayoutProps, SpaceProps } from 'styled-system'
 import { FixedObject } from 'gatsby-image'
-import { Category } from '../../components/filterContainer/FilterContainer.types'
+import { Category } from '../../components/categoryFilter/CategoryFilter.types'
 
 export interface GalleryCardProps extends LayoutProps, SpaceProps {
   to: string
