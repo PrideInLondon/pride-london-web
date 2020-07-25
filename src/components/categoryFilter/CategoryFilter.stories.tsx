@@ -38,7 +38,7 @@ storiesOf(CategoryFilter.name, module).add('checkbox', () => (
       <Masonry columns={{ default: 1, md: 2 }}>
         {entries(({ category: { name } }) => name).map(
           ({ text, category: { color, name } }) => (
-            <Card to="#" style={{ margin: 16 }}>
+            <Card key={text} to="#" style={{ margin: 16 }}>
               <CardContent>
                 <CardTitle>{text}</CardTitle>
                 <Tag color={color}>{name}</Tag>
