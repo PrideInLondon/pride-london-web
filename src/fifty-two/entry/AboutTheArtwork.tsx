@@ -21,7 +21,7 @@ export const AboutTheArtwork: React.FC<AboutTheArtworkProps> = ({
     guidePrice,
   },
 }) => {
-  const { color } = CATEGORIES.find(({ name }) => category === name)!
+  const { color } = CATEGORIES.find(({ name: n }) => category === n)!
   return (
     <>
       <H4 as="h2" marginTop={{ default: 'lg', md: '0' }}>
