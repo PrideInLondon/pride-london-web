@@ -25,7 +25,7 @@ export const AboutTheArtist: React.FC<Artist> = ({
   instagram,
 }) => (
   <Wrapper padding={`${xl_mob}px ${lg}px`} marginTop="xxl">
-    <H6>About the artist</H6>
+    <H6 as="h3">About the artist</H6>
     {documentToReactComponents(json, renderMethods)}
     <ShareBar>
       {website && <SocialLink url={website} name="website" />}

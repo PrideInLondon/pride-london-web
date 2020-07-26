@@ -24,19 +24,21 @@ export const AboutTheArtwork: React.FC<AboutTheArtworkProps> = ({
   const { color } = CATEGORIES.find(({ name }) => category === name)!
   return (
     <>
-      <H4>{title}</H4>
+      <H4 as="h2">{title}</H4>
       <Tag color={color} marginBottom={`${xl_mob}px`}>
         {category}
       </Tag>
-      <H6>Artist name</H6>
+      <H6 as="h3">Artist name</H6>
       <P marginBottom="lg">{name}</P>
-      <H6>Year</H6>
+      <H6 as="h3">Year</H6>
       <P marginBottom="lg">{year}</P>
-      <H6>Artwork information</H6>
+      <H6 as="h3">Artwork information</H6>
       <P marginBottom="lg">{info}</P>
-      <H6>Description</H6>
+      <H6 as="h3">Description</H6>
       {documentToReactComponents(json, renderMethods)}
-      <H6 marginTop="lg">{sold ? 'Sold' : guidePrice}</H6>
+      <H6 as="h3" marginTop="lg">
+        {sold ? 'Sold' : guidePrice}
+      </H6>
       <Typeform id="eir1RrnE">
         <Button marginTop={`${xl_mob}px`}>Make an enquiry</Button>
       </Typeform>

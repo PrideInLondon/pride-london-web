@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Image from 'gatsby-image/withIEPolyfill'
+import { Helmet } from '../../components/helmet'
 import { PageSwitcher } from '../../components/pageSwitcher/PageSwitcher'
 import { xxl } from '../../theme/space'
 import { md } from '../../theme/breakpoints'
 import { checkBreakpoint } from '../../utils/style-utils'
 import { AgeVerification } from '../AgeVerification'
-import { Wrapper, Column } from './FiftyTwoEntryPage.styles'
+import { Heading, Wrapper, Column } from './FiftyTwoEntryPage.styles'
 import { AboutTheArtist } from './AboutTheArtist'
 import { AboutTheArtwork } from './AboutTheArtwork'
 import { FiftyTwoEntryPageProps } from './FiftyTwoEntryPage.types'
@@ -18,6 +19,8 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
   pageContext: { prev, next },
 }) => (
   <>
+    <Helmet title={artist.name} />
+    <Heading>{artist.name}</Heading>
     <Wrapper padding="xl">
       <Column width="60%" paddingRight={`${xxl * 2}px`}>
         <Image

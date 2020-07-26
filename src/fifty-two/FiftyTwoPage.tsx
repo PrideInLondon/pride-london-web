@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { Helmet } from '../components/helmet'
 import { Banner } from '../components/banner'
 import { PageIntro } from '../components/pageIntro'
 import { H3, P } from '../components/typography'
@@ -46,6 +47,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
 
   return (
     <>
+      <Helmet title={title} description={subtitle} />
       <Banner
         titleText={title}
         subtitleText={subtitle}
@@ -64,7 +66,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
       >
         {documentToReactComponents(json, renderMethods)}
       </PageIntro>
-      <H3 textAlign="center" paddingBottom="lg">
+      <H3 as="h2" textAlign="center" paddingBottom="lg">
         Category is...
       </H3>
       <CategoryFilter
