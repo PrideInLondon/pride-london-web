@@ -1,16 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import {
-  PageSwitcher,
-  PageLinkDetails,
-} from '../../components/pageSwitcher/PageSwitcher'
-
-interface FiftyTwoEntryPageProps {
-  pageContext: {
-    prev: PageLinkDetails
-    next: PageLinkDetails
-  }
-}
+import { PageSwitcher } from '../../components/pageSwitcher/PageSwitcher'
+import { FiftyTwoEntryPageProps } from './FiftyTwoEntryPage.types'
 
 export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
   pageContext: { prev, next },
