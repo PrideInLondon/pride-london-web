@@ -16,7 +16,7 @@ import { ButtonWrapper } from './FiftyTwoPage.styles'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
 import { AgeVerification } from './AgeVerification'
 
-const CATEGORIES: Category[] = [
+export const CATEGORIES: Category[] = [
   { name: 'Everything', color: colors.eucalyptusGreen, isSelectAll: true },
   { name: 'Painting', color: colors.tomato },
   { name: 'Photography', color: colors.red },
