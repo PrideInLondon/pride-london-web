@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import {
@@ -13,10 +14,14 @@ import { colors } from '../../theme/colors'
 import { space as spacing } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 
-export const PageLink = styled(Link)<FlexboxProps>`
+export const PageLink = styled(({ children, to, className }) => (
+  <Link to={to} className={className}>
+    {children}
+  </Link>
+))<FlexboxProps>`
   text-decoration: none;
   display: flex;
-  ${flexbox};
+  ${flexbox}
 `
 export const PageList = styled.ul`
   list-style: none;

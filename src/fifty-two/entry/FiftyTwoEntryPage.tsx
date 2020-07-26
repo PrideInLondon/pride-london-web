@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { PageSwitcher } from '../../components/pageSwitcher/PageSwitcher'
 import { xxl } from '../../theme/space'
+import { AgeVerification } from '../AgeVerification'
 import { Wrapper, Column } from './FiftyTwoEntryPage.styles'
 import { AboutTheArtist } from './AboutTheArtist'
 import { AboutTheArtwork } from './AboutTheArtwork'
@@ -33,6 +34,7 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
         url: '/fifty-two-2',
       }}
     />
+    <AgeVerification />
   </>
 )
 
