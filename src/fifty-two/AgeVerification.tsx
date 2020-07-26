@@ -21,12 +21,7 @@ export const AgeVerification = () => (
           The following page contains artwork depicting themes and content that
           may not be suitable for under 18s.
         </P>
-        <Button
-          mr="lg"
-          onClick={() => {
-            setIsOpen(false)
-          }}
-        >
+        <Button mr="lg" onClick={() => setIsOpen(false)}>
           Continue to page
         </Button>
         <Button variant="outline-white" to="/">
