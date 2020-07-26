@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-export const FiftyTwoDetailPage: React.FC = props => {
+export const FiftyTwoEntryPage: React.FC = props => {
   console.log(props)
   return <div>hello world</div>
 }
@@ -38,4 +38,4 @@ export const query = graphql`
   }
 `
 
-export default FiftyTwoDetailPage
+export default FiftyTwoEntryPage

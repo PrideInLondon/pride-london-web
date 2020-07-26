@@ -7,8 +7,8 @@ const EventPage = path.resolve('./src/events/event/EventPage.js')
 const GenericContentPage = path.resolve(
   './src/genericContentPage/GenericContentPage.js'
 )
-const FiftyTwoDetailPage = path.resolve(
-  './src/fifty-two/FiftyTwoDetailPage.tsx'
+const FiftyTwoEntryPage = path.resolve(
+  './src/fifty-two/entry/FiftyTwoEntryPage.tsx'
 )
 
 exports.sourceNodes = ({ actions: { createTypes } }) =>
@@ -80,7 +80,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     entries.forEach((edge, index) => {
       createPage({
         path: generateFiftyTwoEntrySlug(edge.node.artist.name),
-        component: FiftyTwoDetailPage,
+        component: FiftyTwoEntryPage,
         context: {
           id: edge.node.id,
           prev:
