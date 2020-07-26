@@ -1,7 +1,10 @@
 import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { H4, H6, P } from '../../components/typography'
+import { Typeform } from '../../components/typeform'
+import { Button } from '../../components/button'
 import { renderMethods } from '../renderMethods'
+import { xl_mob } from '../../theme/space'
 import { AboutTheArtworkProps } from './AboutTheArtwork.types'
 
 export const AboutTheArtwork: React.FC<AboutTheArtworkProps> = ({
@@ -26,5 +29,8 @@ export const AboutTheArtwork: React.FC<AboutTheArtworkProps> = ({
     <H6>Description</H6>
     {documentToReactComponents(json, renderMethods)}
     <H6 marginTop="lg">{sold ? 'Sold' : guidePrice}</H6>
+    <Typeform id="eir1RrnE">
+      <Button marginTop={`${xl_mob}px`}>Make an enquiry</Button>
+    </Typeform>
   </>
 )
