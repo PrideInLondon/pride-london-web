@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { Helmet } from '../components/helmet'
 import { Banner } from '../components/banner'
 import { PageIntro } from '../components/pageIntro'
 import { H3, P } from '../components/typography'
@@ -14,8 +15,9 @@ import { generateFiftyTwoEntrySlug } from './helpers'
 import { renderMethods } from './renderMethods'
 import { ButtonWrapper } from './FiftyTwoPage.styles'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
+import { AgeVerification } from './AgeVerification'
 
-const CATEGORIES: Category[] = [
+export const CATEGORIES: Category[] = [
   { name: 'Everything', color: colors.eucalyptusGreen, isSelectAll: true },
   { name: 'Painting', color: colors.tomato },
   { name: 'Photography', color: colors.red },
@@ -45,6 +47,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
 
   return (
     <>
+      <Helmet title={title} description={subtitle} />
       <Banner
         titleText={title}
         subtitleText={subtitle}
@@ -63,7 +66,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
       >
         {documentToReactComponents(json, renderMethods)}
       </PageIntro>
-      <H3 textAlign="center" paddingBottom="lg">
+      <H3 as="h2" textAlign="center" paddingBottom="lg">
         Category is...
       </H3>
       <CategoryFilter
@@ -141,6 +144,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
           )
         }}
       />
+      <AgeVerification />
     </>
   )
 }

@@ -7,8 +7,8 @@ const EventPage = path.resolve('./src/events/event/EventPage.js')
 const GenericContentPage = path.resolve(
   './src/genericContentPage/GenericContentPage.js'
 )
-const FiftyTwoDetailPage = path.resolve(
-  './src/fifty-two/FiftyTwoDetailPage.tsx'
+const FiftyTwoEntryPage = path.resolve(
+  './src/fifty-two/entry/FiftyTwoEntryPage.tsx'
 )
 
 exports.sourceNodes = ({ actions: { createTypes } }) =>
@@ -32,6 +32,9 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
             artist {
               name
             } 
+            artwork {
+              title
+            }
           }
         }
       }
@@ -80,19 +83,39 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     entries.forEach((edge, index) => {
       createPage({
         path: generateFiftyTwoEntrySlug(edge.node.artist.name),
-        component: FiftyTwoDetailPage,
+        component: FiftyTwoEntryPage,
         context: {
           id: edge.node.id,
-          prev:
-            index > 0
-              ? generateFiftyTwoEntrySlug(entries[index - 1].node.artist.name)
-              : generateFiftyTwoEntrySlug(
-                  entries[entries.length - 1].node.artist.name
-                ),
-          next:
-            index < entries.length - 1
-              ? generateFiftyTwoEntrySlug(entries[index + 1].node.artist.name)
-              : generateFiftyTwoEntrySlug(entries[0].node.artist.name),
+          prev: {
+            title:
+              index > 0
+                ? entries[index - 1].node.artwork.title
+                : entries[entries.length - 1].node.artwork.title,
+            subtitle:
+              index > 0
+                ? entries[index - 1].node.artist.name
+                : entries[entries.length - 1].node.artist.name,
+            url:
+              index > 0
+                ? generateFiftyTwoEntrySlug(entries[index - 1].node.artist.name)
+                : generateFiftyTwoEntrySlug(
+                    entries[entries.length - 1].node.artist.name
+                  ),
+          },
+          next: {
+            title:
+              index < entries.length - 1
+                ? entries[index + 1].node.artwork.title
+                : entries[0].node.artwork.title,
+            subtitle:
+              index < entries.length - 1
+                ? entries[index + 1].node.artist.name
+                : entries[0].node.artist.name,
+            url:
+              index < entries.length - 1
+                ? generateFiftyTwoEntrySlug(entries[index + 1].node.artist.name)
+                : generateFiftyTwoEntrySlug(entries[0].node.artist.name),
+          },
         },
       })
     })
