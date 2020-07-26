@@ -1,8 +1,8 @@
 import { Document } from '@contentful/rich-text-types'
+import { FixedObject } from 'gatsby-image'
 import { PageLinkDetails } from '../../components/pageSwitcher/PageSwitcher'
 
 export interface Artwork {
-  id: string
   title: string
   category: string
   info: string
@@ -12,10 +12,13 @@ export interface Artwork {
   description: {
     json: Document
   }
+  image: {
+    tablet: FixedObject
+    mobile: FixedObject
+  }
 }
 
 export interface Artist {
-  id: string
   name: string
   website: string
   instagram: string

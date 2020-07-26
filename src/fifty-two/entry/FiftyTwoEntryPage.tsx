@@ -1,7 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Image from 'gatsby-image/withIEPolyfill'
 import { PageSwitcher } from '../../components/pageSwitcher/PageSwitcher'
 import { xxl } from '../../theme/space'
+import { md } from '../../theme/breakpoints'
+import { checkBreakpoint } from '../../utils/style-utils'
 import { AgeVerification } from '../AgeVerification'
 import { Wrapper, Column } from './FiftyTwoEntryPage.styles'
 import { AboutTheArtist } from './AboutTheArtist'
@@ -17,9 +20,11 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
   <>
     <Wrapper padding="xl">
       <Column width="60%" paddingRight={`${xxl * 2}px`}>
-        <div style={{ border: 'solid black 1px', height: 1032 }}>
-          Image placeholder
-        </div>
+        <Image
+          fixed={
+            checkBreakpoint(md) ? artwork.image.tablet : artwork.image.mobile
+          }
+        />
         <AboutTheArtist {...artist} />
       </Column>
       <Column width="40%">
@@ -51,6 +56,14 @@ export const query = graphql`
         sold
         description {
           json
+        }
+        image {
+          tablet: fixed(width: 740, resizingBehavior: FILL, quality: 100) {
+            ...GatsbyContentfulFixed_withWebp
+          }
+          mobile: fixed(width: 320, resizingBehavior: FILL, quality: 100) {
+            ...GatsbyContentfulFixed_withWebp
+          }
         }
       }
       artist {
