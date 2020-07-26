@@ -21,16 +21,19 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
   <>
     <Helmet title={artist.name} />
     <Heading>{artist.name}</Heading>
-    <Wrapper padding="xl">
-      <Column width="60%" paddingRight={`${xxl * 2}px`}>
+    <Wrapper padding={{ default: 'lg', md: 'xl' }}>
+      <Column
+        width={{ default: '100%', md: '60%' }}
+        paddingRight={{ default: '0', md: `${xxl}px`, lg: `${xxl * 2}px` }}
+      >
         <Image
-          fixed={
+          fluid={
             checkBreakpoint(md) ? artwork.image.tablet : artwork.image.mobile
           }
         />
         <AboutTheArtist {...artist} />
       </Column>
-      <Column width="40%">
+      <Column width={{ default: '100%', md: '40%' }}>
         <AboutTheArtwork artist={artist} artwork={artwork} />
       </Column>
     </Wrapper>
@@ -61,11 +64,11 @@ export const query = graphql`
           json
         }
         image {
-          tablet: fixed(width: 740, resizingBehavior: FILL, quality: 100) {
-            ...GatsbyContentfulFixed_withWebp
+          tablet: fluid(maxWidth: 740, quality: 100) {
+            ...GatsbyContentfulFluid_withWebp
           }
-          mobile: fixed(width: 320, resizingBehavior: FILL, quality: 100) {
-            ...GatsbyContentfulFixed_withWebp
+          mobile: fluid(maxWidth: 320, quality: 100) {
+            ...GatsbyContentfulFluid_withWebp
           }
         }
       }

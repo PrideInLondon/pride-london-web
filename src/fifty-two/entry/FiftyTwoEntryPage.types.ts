@@ -1,5 +1,5 @@
 import { Document } from '@contentful/rich-text-types'
-import { FixedObject } from 'gatsby-image'
+import { FluidObject } from 'gatsby-image'
 import { PageLinkDetails } from '../../components/pageSwitcher/PageSwitcher'
 
 export interface Artwork {
@@ -13,8 +13,8 @@ export interface Artwork {
     json: Document
   }
   image: {
-    tablet: FixedObject
-    mobile: FixedObject
+    tablet: FluidObject
+    mobile: FluidObject
   }
 }
 
