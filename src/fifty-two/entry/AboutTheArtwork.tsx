@@ -24,8 +24,10 @@ export const AboutTheArtwork: React.FC<AboutTheArtworkProps> = ({
   const { color } = CATEGORIES.find(({ name }) => category === name)!
   return (
     <>
-      <H4 as="h2">{title}</H4>
-      <Tag color={color} marginBottom={`${xl_mob}px`}>
+      <H4 as="h2" marginTop={{ default: 'lg', md: '0' }}>
+        {title}
+      </H4>
+      <Tag color={color} marginBottom={{ default: 'lg', md: `${xl_mob}px` }}>
         {category}
       </Tag>
       <H6 as="h3">Artist name</H6>

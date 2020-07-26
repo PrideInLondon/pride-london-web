@@ -7,7 +7,12 @@ import { xxl } from '../../theme/space'
 import { md } from '../../theme/breakpoints'
 import { checkBreakpoint } from '../../utils/style-utils'
 import { AgeVerification } from '../AgeVerification'
-import { Heading, Wrapper, Column } from './FiftyTwoEntryPage.styles'
+import {
+  Heading,
+  Wrapper,
+  FlexWrapper,
+  Column,
+} from './FiftyTwoEntryPage.styles'
 import { AboutTheArtist } from './AboutTheArtist'
 import { AboutTheArtwork } from './AboutTheArtwork'
 import { FiftyTwoEntryPageProps } from './FiftyTwoEntryPage.types'
@@ -17,37 +22,47 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
     contentfulFiftyTwoGalleryEntry: { artist, artwork },
   },
   pageContext: { prev, next },
-}) => (
-  <>
-    <Helmet title={artist.name} />
-    <Heading>{artist.name}</Heading>
-    <Wrapper padding={{ default: 'lg', md: 'xl' }}>
-      <Column
-        width={{ default: '100%', md: '60%' }}
-        paddingRight={{ default: '0', md: `${xxl}px`, lg: `${xxl * 2}px` }}
+}) => {
+  const leftProps = {
+    width: { default: '100%', md: '60%' },
+    paddingRight: { default: '0', md: `${xxl}px`, lg: `${xxl * 2}px` },
+  }
+  return (
+    <>
+      <Helmet title={artist.name} />
+      <Heading>{artist.name}</Heading>
+      <Wrapper
+        padding={{ default: 'lg', md: 'xl' }}
+        marginBottom={{ default: 'xl', md: 'md' }}
       >
-        <Image
-          fluid={
-            checkBreakpoint(md) ? artwork.image.tablet : artwork.image.mobile
-          }
-        />
-        <AboutTheArtist {...artist} />
-      </Column>
-      <Column width={{ default: '100%', md: '40%' }}>
-        <AboutTheArtwork artist={artist} artwork={artwork} />
-      </Column>
-    </Wrapper>
-    <PageSwitcher
-      prev={prev}
-      next={next}
-      back={{
-        title: 'Back to gallery',
-        url: '/fifty-two-2',
-      }}
-    />
-    <AgeVerification />
-  </>
-)
+        <FlexWrapper>
+          <Column {...leftProps}>
+            <Image
+              fluid={
+                checkBreakpoint(md)
+                  ? artwork.image.tablet
+                  : artwork.image.mobile
+              }
+            />
+          </Column>
+          <Column width={{ default: '100%', md: '40%' }}>
+            <AboutTheArtwork artist={artist} artwork={artwork} />
+          </Column>
+        </FlexWrapper>
+        <AboutTheArtist {...artist} {...leftProps} />
+      </Wrapper>
+      <PageSwitcher
+        prev={prev}
+        next={next}
+        back={{
+          title: 'Back to gallery',
+          url: '/fifty-two-2',
+        }}
+      />
+      <AgeVerification />
+    </>
+  )
+}
 
 export const query = graphql`
   query fiftyTwoEntry($id: String!) {

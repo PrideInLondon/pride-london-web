@@ -9,13 +9,15 @@ export const Heading = styled(H1)`
 `
 
 export const Wrapper = styled.div<SpaceProps>`
+  ${space}
+`
+
+export const FlexWrapper = styled.div`
   display: block;
 
   ${mediaQueries.md} {
     display: flex;
   }
-
-  ${compose(space)}
 `
 
 export const Column = styled.div<SpaceProps & LayoutProps>`

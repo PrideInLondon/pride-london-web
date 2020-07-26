@@ -1,9 +1,13 @@
 import styled from 'styled-components'
-import { space, SpaceProps } from 'styled-system'
+import { compose, space, layout, SpaceProps, LayoutProps } from 'styled-system'
 import { colors } from '../../theme/colors'
 import { md } from '../../theme/space'
 
-export const Wrapper = styled.div<SpaceProps>`
+export const Wrapper = styled.div<LayoutProps & SpaceProps>`
+  ${compose(layout, space)}
+`
+
+export const Content = styled.div<SpaceProps>`
   background-color: ${colors.lightGrey};
 
   ${space}
