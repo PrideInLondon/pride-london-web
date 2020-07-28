@@ -170,7 +170,7 @@ const ArticlePage = ({
         title={title}
         datePublished={datePublished}
         category={constants.articleCategories.find(
-          cat => cat.title == category
+          cat => cat.title === category
         )}
         author={author}
       />
