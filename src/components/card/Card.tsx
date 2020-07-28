@@ -7,6 +7,7 @@ import {
   layout,
   compose,
   variant,
+  position,
   SpaceProps,
   LayoutProps,
   FlexboxProps,
@@ -88,7 +89,7 @@ export const CardContent = styled.div<CardContentProps>`
   line-height: 1.3;
   padding: 20px;
 
-  ${compose(space, layout)}
+  ${compose(space, layout, position)}
 `
 
 export const CardFooter = styled.div<SpaceProps & LayoutProps & FlexboxProps>`

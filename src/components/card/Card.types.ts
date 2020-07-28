@@ -1,5 +1,10 @@
 import { FixedObject } from 'gatsby-image'
-import { SpaceProps, LayoutProps, ResponsiveValue } from 'styled-system'
+import {
+  SpaceProps,
+  LayoutProps,
+  PositionProps,
+  ResponsiveValue,
+} from 'styled-system'
 
 export interface CardProps {
   variant?: ResponsiveValue<'column' | 'row'>
@@ -16,4 +21,4 @@ export interface CardImageProps {
   alt: string
 }
 
-export type CardContentProps = SpaceProps & LayoutProps
+export type CardContentProps = SpaceProps & LayoutProps & PositionProps
