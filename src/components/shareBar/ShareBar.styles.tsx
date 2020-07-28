@@ -41,6 +41,16 @@ export const ShareText = styled.h6`
   font-weight: 800;
   vertical-align: middle;
   color: ${colors.indigo};
+
+  ${variant({
+    variants: {
+      vertical: {
+        transform: 'rotate(90deg)',
+        marginY: -10,
+        marginX: -50,
+      },
+    },
+  })}
 `
 
 export const StyledLink = styled.a`

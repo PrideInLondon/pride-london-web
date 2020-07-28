@@ -16,7 +16,7 @@ const SOCIALS: { name: SharePlatform }[] = [
 export const ShareBar = ({ variant, content, ...props }: ShareBarProps) => (
   <div {...props}>
     <Flex {...{ variant }}>
-      <ShareText>Share</ShareText>
+      <ShareText {...{ variant }}>Share</ShareText>
       {SOCIALS.map(({ name }) => (
         <StyledLink
           key={name}

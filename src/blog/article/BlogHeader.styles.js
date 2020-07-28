@@ -2,19 +2,6 @@ import styled from 'styled-components'
 import theme from '../../theme/theme'
 import { getMostReadable } from '../../components/filterButton/FilterButton.styles'
 
-export const FlexDiv = styled.div`
-  display: flex;
-`
-export const ShareText = styled.span`
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: normal;
-  color: ${theme.colors.indigo};
-`
 export const SubHeader = styled.div`
   display: flex;
   justify-content: space-between;
