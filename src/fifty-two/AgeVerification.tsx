@@ -21,12 +21,24 @@ export const AgeVerification = () => (
           The following page contains artwork depicting themes and content that
           may not be suitable for under 18s.
         </P>
-        <Button mr="lg" onClick={() => setIsOpen(false)}>
-          Continue to page
-        </Button>
-        <Button variant="outline-white" to="/">
-          Redirect me
-        </Button>
+        <Wrapper
+          display="flex"
+          flexDirection={{ default: 'column', md: 'row' }}
+          justifyContent="center"
+          alignItems="center"
+          margin="auto"
+        >
+          <Button
+            mr={{ default: '0', md: 'lg' }}
+            mb={{ default: 'md', md: '0' }}
+            onClick={() => setIsOpen(false)}
+          >
+            Continue to page
+          </Button>
+          <Button variant="outline-white" to="/">
+            Redirect me
+          </Button>
+        </Wrapper>
         <P variant="sm" color="white" mt="lg">
           See Fifty-Two's{' '}
           <CTALink to="/fifty-two/terms" color="white">
