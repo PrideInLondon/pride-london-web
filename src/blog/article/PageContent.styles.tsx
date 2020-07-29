@@ -33,6 +33,7 @@ export const DesktopShareBar = styled(ShareBar)`
 export const MobileShareBar = styled(ShareBar)`
   display: block;
   margin-top: 20px;
+  padding: 0 30px;
 
   ${mediaQueries.lg} {
     display: none;

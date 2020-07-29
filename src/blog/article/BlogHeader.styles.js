@@ -7,6 +7,7 @@ export const SubHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding: 0 30px;
   & > div {
     margin-top: 30px;
   }
@@ -44,11 +45,12 @@ export const Title = styled.h1`
   font-stretch: normal;
   line-height: 1.19;
   letter-spacing: normal;
+  padding: 0 30px;
   color: #2c2c81;
 `
 export const BlogHeaderContainer = styled.div`
   max-width: 830px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 30px auto;
   min-height: 140px;
   background-color: ${theme.colors.white};
   position: relative;
