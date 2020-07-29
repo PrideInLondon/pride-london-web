@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Helmet } from '../components/helmet'
 import { Banner } from '../components/banner'
-import { PageIntro } from '../components/pageIntro'
 import { H3, P } from '../components/typography'
 import { CategoryFilter } from '../components/categoryFilter'
 import { Category } from '../components/categoryFilter/CategoryFilter.types'
@@ -13,7 +12,7 @@ import { colors } from '../theme/colors'
 import { shuffle } from '../utils/iteration-utils'
 import { generateFiftyTwoEntrySlug } from './helpers'
 import { renderMethods } from './renderMethods'
-import { ButtonWrapper } from './FiftyTwoPage.styles'
+import { StyledPageIntro, ButtonWrapper } from './FiftyTwoPage.styles'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
 import { AgeVerification } from './AgeVerification'
 
@@ -54,7 +53,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
         fixed={bannerImage}
         imageFullWidth
       />
-      <PageIntro
+      <StyledPageIntro
         cta={{
           title: ctaTitle,
           link: {
@@ -65,7 +64,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
         }}
       >
         {documentToReactComponents(json, renderMethods)}
-      </PageIntro>
+      </StyledPageIntro>
       <H3 as="h2" textAlign="center" paddingBottom="lg">
         Category is...
       </H3>

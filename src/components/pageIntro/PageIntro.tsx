@@ -4,7 +4,7 @@ import { Row, Container } from '../grid'
 import { IntroContainer } from './PageIntro.styles'
 import { PageIntroProps } from './PageIntro.types'
 
-const PageIntro: React.FC<PageIntroProps> = ({ children, cta }) => {
+const PageIntro: React.FC<PageIntroProps> = ({ children, cta, ...props }) => {
   return (
     <>
       {cta && (
@@ -18,7 +18,7 @@ const PageIntro: React.FC<PageIntroProps> = ({ children, cta }) => {
           top={{ lg: '-100px' }}
         />
       )}
-      <Container as="section">
+      <Container as="section" {...props}>
         <Row>
           <IntroContainer
             width={[
