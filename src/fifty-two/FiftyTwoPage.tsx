@@ -93,6 +93,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
                       columns={{ default: 1, md: 2, lg: 3 }}
                       paddingX="xl"
                       paddingY="xxl"
+                      gridGap={32}
                     >
                       {pagedEntries.map(
                         ({

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { space } from 'styled-system'
+import { compose, space, grid } from 'styled-system'
 import { sm } from '../../theme/space'
 
 export const Wrapper = styled.div<{ columns: number }>`
@@ -8,7 +8,7 @@ export const Wrapper = styled.div<{ columns: number }>`
   grid-gap: ${sm}px;
   grid-template-columns: repeat(${({ columns }) => columns}, minmax(0, 1fr));
 
-  ${space}
+  ${compose(space, grid)}
 `
 
 export const Column = styled.div`
