@@ -31,7 +31,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
             id
             artist {
               name
-            } 
+            }
             artwork {
               title
             }
