@@ -17,7 +17,7 @@ export const AgeVerification = () => (
     {({ setIsOpen }) => (
       <Wrapper textAlign="center" width="100%">
         <H3 color="white">Age verification</H3>
-        <P color="white" variant="lg">
+        <P color="white" variant="md">
           The following page contains artwork depicting themes and content that
           may not be suitable for under 18s.
         </P>
