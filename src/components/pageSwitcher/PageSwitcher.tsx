@@ -32,7 +32,7 @@ export const PageSwitcher: React.FC<PageSwitcherProps> = ({
             <Icon
               name="arrow"
               variant="white"
-              rotate="flip"
+              rotate="mirror"
               width="40px"
               height="40px"
               mr="md"
