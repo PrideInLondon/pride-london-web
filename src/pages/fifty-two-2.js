@@ -47,8 +47,11 @@ export const query = graphql`
         node {
           artwork {
             image {
-              fixed(width: 480, quality: 100, resizingBehavior: SCALE) {
-                ...GatsbyContentfulFixed_withWebp
+              tablet: fluid(maxWidth: 480, quality: 100) {
+                ...GatsbyContentfulFluid_withWebp
+              }
+              mobile: fluid(maxWidth: 320, quality: 100) {
+                ...GatsbyContentfulFluid_withWebp
               }
             }
             category

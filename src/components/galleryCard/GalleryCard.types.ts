@@ -1,5 +1,5 @@
 import { LayoutProps, SpaceProps } from 'styled-system'
-import { FixedObject } from 'gatsby-image'
+import { FluidObject } from 'gatsby-image'
 import { Category } from '../../components/categoryFilter/CategoryFilter.types'
 
 export interface GalleryCardProps extends LayoutProps, SpaceProps {
@@ -13,7 +13,7 @@ export interface GalleryCardProps extends LayoutProps, SpaceProps {
     sold: boolean
     guidePrice: string
     image: {
-      fixed: FixedObject
+      fluid: FluidObject
       alt: string
     }
     category: Category

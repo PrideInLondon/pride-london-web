@@ -9,7 +9,9 @@ import { Gallery } from '../components/gallery'
 import { Button } from '../components/button'
 import { GalleryCard } from '../components/galleryCard'
 import { colors } from '../theme/colors'
+import { md } from '../theme/breakpoints'
 import { shuffle } from '../utils/iteration-utils'
+import { checkBreakpoint } from '../utils/style-utils'
 import { generateFiftyTwoEntrySlug } from './helpers'
 import { renderMethods } from './renderMethods'
 import {
@@ -103,7 +105,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
                           node: {
                             artist,
                             artwork: {
-                              image: { fixed },
+                              image: { tablet, mobile },
                               category,
                               ...artwork
                             },
@@ -117,7 +119,10 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
                             artist={artist}
                             artwork={{
                               ...artwork,
-                              image: { fixed, alt: '' },
+                              image: {
+                                fluid: checkBreakpoint(md) ? tablet : mobile,
+                                alt: '',
+                              },
                               category: CATEGORIES.find(
                                 ({ name }) => name === category
                               )!,

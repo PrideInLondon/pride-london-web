@@ -18,13 +18,13 @@ export const GalleryCard = ({
     sold,
     guidePrice,
     category,
-    image: { fixed, alt },
+    image: { fluid, alt },
   },
   ...props
 }: GalleryCardProps) => (
   <StyledCard {...props}>
-    <ImageWrapper height={fixed.height}>
-      <StyledImage {...{ fixed, alt }} />
+    <ImageWrapper>
+      <StyledImage {...{ fluid, alt }} />
     </ImageWrapper>
     <CardContent position="relative" paddingTop={`${md * 2}px`}>
       <StyledTag color={category.color}>{category.name}</StyledTag>

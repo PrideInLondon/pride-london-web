@@ -1,5 +1,5 @@
 import { Document } from '@contentful/rich-text-types'
-import { FixedObject } from 'gatsby-image'
+import { FluidObject, FixedObject } from 'gatsby-image'
 
 interface ContentfulGalleryEntry {
   artist: {
@@ -11,7 +11,8 @@ interface ContentfulGalleryEntry {
     sold: boolean
     guidePrice: string
     image: {
-      fixed: FixedObject
+      tablet: FluidObject
+      mobile: FluidObject
     }
     category: string
   }
