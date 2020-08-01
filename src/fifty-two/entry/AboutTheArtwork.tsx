@@ -35,14 +35,16 @@ export const AboutTheArtwork: React.FC<AboutTheArtworkProps> = ({
       <H6 as="h3">Year</H6>
       <P marginBottom="lg">{year}</P>
       <H6 as="h3">Artwork information</H6>
-      <P marginBottom="lg">{info}</P>
+      <P marginBottom={{ default: 'lg', md: `${xl_mob}px` }}>{info}</P>
       <H6 as="h3">Description</H6>
       {documentToReactComponents(json, renderMethods)}
-      <H6 as="h3" marginTop="lg">
+      <H6 as="h3" marginTop={{ default: 'lg', md: `${xl_mob}px` }}>
         {sold ? 'Sold' : guidePrice}
       </H6>
       <Typeform id="eir1RrnE">
-        <Button marginTop={`${xl_mob}px`}>Make an enquiry</Button>
+        <Button marginTop={{ default: 'lg', md: `${xl_mob}px` }}>
+          Make an enquiry
+        </Button>
       </Typeform>
     </>
   )
