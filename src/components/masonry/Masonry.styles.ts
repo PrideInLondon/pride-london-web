@@ -10,9 +10,3 @@ export const Wrapper = styled.div<{ columns: number }>`
 
   ${compose(space, grid)}
 `
-
-export const Column = styled.div`
-  > * {
-    margin: ${sm}px;
-  }
-`

@@ -5,14 +5,18 @@ import { Banner } from '../components/banner'
 import { H3, P } from '../components/typography'
 import { CategoryFilter } from '../components/categoryFilter'
 import { Category } from '../components/categoryFilter/CategoryFilter.types'
-import { Gallery, GalleryContainer } from '../components/gallery'
+import { Gallery } from '../components/gallery'
 import { Button } from '../components/button'
 import { GalleryCard } from '../components/galleryCard'
 import { colors } from '../theme/colors'
 import { shuffle } from '../utils/iteration-utils'
 import { generateFiftyTwoEntrySlug } from './helpers'
 import { renderMethods } from './renderMethods'
-import { StyledPageIntro, ButtonWrapper } from './FiftyTwoPage.styles'
+import {
+  StyledPageIntro,
+  StyledGalleryContainer,
+  ButtonWrapper,
+} from './FiftyTwoPage.styles'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
 import { AgeVerification } from './AgeVerification'
 
@@ -87,7 +91,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
                 pageSize={9}
                 render={({ entries: pagedEntries, showNextPage }) => (
                   <>
-                    <GalleryContainer
+                    <StyledGalleryContainer
                       variant="masonry"
                       columns={{ default: 1, md: 2, lg: 3 }}
                       paddingX="xl"
@@ -121,7 +125,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
                           />
                         )
                       )}
-                    </GalleryContainer>
+                    </StyledGalleryContainer>
                     <ButtonWrapper>
                       <P variant="sm" color={colors.white}>
                         You're viewing {pagedEntries.length} of{' '}
