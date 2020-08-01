@@ -32,6 +32,8 @@ export const CATEGORIES: Category[] = [
   { name: 'Other', color: colors.darkPurple },
 ]
 
+const PADDING_X = { default: 'lg', md: 'xl' }
+
 export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
   data: {
     content: {
@@ -75,6 +77,8 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
         Category is...
       </H3>
       <CategoryFilter
+        margin="auto"
+        paddingX={PADDING_X}
         variant="radio"
         categories={CATEGORIES}
         entries={shuffledEntries}
@@ -96,7 +100,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
                     <StyledGalleryContainer
                       variant="masonry"
                       columns={{ default: 1, md: 2, lg: 3 }}
-                      paddingX="xl"
+                      paddingX={PADDING_X}
                       paddingY="xxl"
                       gridGap={32}
                     >

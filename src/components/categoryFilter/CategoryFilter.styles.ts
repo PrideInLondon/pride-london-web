@@ -1,15 +1,17 @@
 import styled from 'styled-components'
+import { space } from 'styled-system'
 import { Tag } from '../tag'
-import { space } from '../../theme/space'
+import { md } from '../../theme/space'
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: fit-content;
 
   > *:not(:last-child) {
-    margin-right: ${space.md};
+    margin-right: ${md}px;
+    margin-bottom: ${md}px;
   }
+
+  ${space}
 `
 
 export const StyledTag = styled(Tag)`

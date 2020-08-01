@@ -31,6 +31,7 @@ export const CategoryFilter = <T,>({
   categories,
   entries,
   render,
+  ...props
 }: CategoryFilterProps & {
   entries: T[]
   render: (renderProps: {
@@ -50,7 +51,7 @@ export const CategoryFilter = <T,>({
 
   return (
     <>
-      <Wrapper>
+      <Wrapper {...props}>
         {categories.map(({ name, color, isSelectAll }) => {
           const isSelected = isSelectAll
             ? selectAll
