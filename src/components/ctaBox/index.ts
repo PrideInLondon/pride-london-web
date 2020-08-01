@@ -1,1 +1,1 @@
-export { default as CTABox } from './CTABox'
+export { CTABox } from './CTABox'
