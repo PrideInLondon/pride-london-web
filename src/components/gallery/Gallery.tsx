@@ -16,7 +16,7 @@ export const Gallery = <T,>({
 
   useEffect(() => {
     setNumberOfEntriesToShow(pageSize)
-  }, [pageSize])
+  }, [pageSize, entries])
 
   return (
     <>
