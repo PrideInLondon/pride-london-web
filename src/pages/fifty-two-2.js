@@ -3,6 +3,11 @@ import { FiftyTwoPage } from '../fifty-two/FiftyTwoPage'
 
 export const query = graphql`
   query fiftyTwoPageQuery {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     content: contentfulCustomPageContent(title: { eq: "Fifty-Two" }) {
       title
       subtitle

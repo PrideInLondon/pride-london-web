@@ -21,6 +21,7 @@ import {
 } from './FiftyTwoPage.styles'
 import { FiftyTwoPageProps } from './FiftyTwoPage.types'
 import { AgeVerification } from './AgeVerification'
+import meta from './meta.jpg'
 
 export const CATEGORIES: Category[] = [
   { name: 'Everything', color: colors.eucalyptusGreen, isSelectAll: true },
@@ -36,6 +37,9 @@ const PADDING_X = { default: 'lg', md: 'xl' }
 
 export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
   data: {
+    site: {
+      siteMetadata: { siteUrl },
+    },
     content: {
       title,
       subtitle,
@@ -45,6 +49,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
     },
     entries: { edges },
   },
+  location: { pathname },
 }) => {
   const [shuffledEntries, setShuffledEntries] = useState(shuffle(edges))
 
@@ -54,7 +59,12 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
 
   return (
     <>
-      <Helmet title={title} description={subtitle} />
+      <Helmet
+        {...{ siteUrl, pathname }}
+        title="Fifty-Two Digital Exhibition"
+        description="The FIFTY-TWO art exhibition is an enormous opportunity to shine the spotlight on LGBT+ artists and their unique take on artwork that represents 52 years since the first Pride Festival."
+        img={meta}
+      />
       <Banner
         titleText={title}
         subtitleText={subtitle}

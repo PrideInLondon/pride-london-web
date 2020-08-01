@@ -20,6 +20,11 @@ interface ContentfulGalleryEntry {
 
 export interface FiftyTwoPageProps {
   data: {
+    site: {
+      siteMetadata: {
+        siteUrl: string
+      }
+    }
     content: {
       title: string
       subtitle: string
@@ -41,5 +46,8 @@ export interface FiftyTwoPageProps {
     entries: {
       edges: { node: ContentfulGalleryEntry }[]
     }
+  }
+  location: {
+    pathname: string
   }
 }
