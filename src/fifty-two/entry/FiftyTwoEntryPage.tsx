@@ -56,7 +56,7 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
         next={next}
         back={{
           title: 'Back to gallery',
-          url: '/fifty-two-2',
+          url: '/fifty-two',
         }}
       />
       <AgeVerification />
