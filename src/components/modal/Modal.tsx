@@ -33,25 +33,31 @@ export const Modal = ({
   const firstUpdate = useRef(true)
 
   useLayoutEffect(() => {
-    isOpen && noScroll.on()
+    setTimeout(() => {
+      isOpen && noScroll.on()
+    })
     const undo = ref && ref.current && hideOthers(ref.current)
+    const cleanup = () => {
+      noScroll.off()
+      undo && undo()
+    }
 
     // Prevent onOpen or onClose callbacks executing on initial render
     if (firstUpdate.current) {
       firstUpdate.current = false
       return
     }
-
+    if (!isOpen) {
+      cleanup()
+    }
     if (isOpen && onOpen) {
       onOpen()
     }
     if (!isOpen && onClose) {
       onClose()
     }
-
     return () => {
-      noScroll.off()
-      undo && undo()
+      cleanup()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen])
@@ -61,59 +67,60 @@ export const Modal = ({
       e.keyCode === 27 && setIsOpen(false)
     }
   }
-
-  return (
-    <>
-      {trigger &&
-        React.cloneElement(
-          typeof trigger === 'function'
-            ? trigger({ isOpen, setIsOpen })
-            : trigger,
-          {
-            onClick: () => setIsOpen(true),
-          }
-        )}
-      {ReactDOM.createPortal(
-        <>
-          {transition.map(
-            ({ item, key, props: animation }) =>
-              item && (
-                <FocusLock disabled={!isOpen} returnFocus key={key} ref={ref}>
-                  <ModalWrapper
-                    zIndex={zIndex}
-                    style={{ opacity: animation.opacity }}
-                    data-testid="modal-wrapper"
-                    aria-modal="true"
-                    role="dialog"
-                  >
-                    <ModalCard
-                      onKeyDown={onKeyDown}
-                      data-testid="modal-card"
-                      tabIndex={-1}
-                      {...rest}
-                    >
-                      <ModalBody
-                        style={{ transform: animation.transform }}
-                        {...picked}
-                      >
-                        {children && typeof children === 'function'
-                          ? children({ isOpen, setIsOpen })
-                          : children}
-                      </ModalBody>
-                    </ModalCard>
-                    <Background
-                      onClick={() => dismissable && setIsOpen(false)}
-                      data-testid="modal-background"
-                    />
-                  </ModalWrapper>
-                </FocusLock>
-              )
+  if (typeof document !== 'undefined')
+    return (
+      <>
+        {trigger &&
+          React.cloneElement(
+            typeof trigger === 'function'
+              ? trigger({ isOpen, setIsOpen })
+              : trigger,
+            {
+              onClick: () => setIsOpen(true),
+            }
           )}
-        </>,
-        document.body
-      )}
-    </>
-  )
+        {ReactDOM.createPortal(
+          <>
+            {transition.map(
+              ({ item, key, props: animation }) =>
+                item && (
+                  <FocusLock disabled={!isOpen} returnFocus key={key} ref={ref}>
+                    <ModalWrapper
+                      zIndex={zIndex}
+                      style={{ opacity: animation.opacity }}
+                      data-testid="modal-wrapper"
+                      aria-modal="true"
+                      role="dialog"
+                    >
+                      <ModalCard
+                        onKeyDown={onKeyDown}
+                        data-testid="modal-card"
+                        tabIndex={-1}
+                        {...rest}
+                      >
+                        <ModalBody
+                          style={{ transform: animation.transform }}
+                          {...picked}
+                        >
+                          {children && typeof children === 'function'
+                            ? children({ isOpen, setIsOpen })
+                            : children}
+                        </ModalBody>
+                      </ModalCard>
+                      <Background
+                        onClick={() => dismissable && setIsOpen(false)}
+                        data-testid="modal-background"
+                      />
+                    </ModalWrapper>
+                  </FocusLock>
+                )
+            )}
+          </>,
+          document.body
+        )}
+      </>
+    )
+  return null
 }
 
 Modal.defaultProps = {

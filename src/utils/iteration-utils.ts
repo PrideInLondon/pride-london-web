@@ -27,3 +27,6 @@ export function reject(obj: IndexSignature, keys: string[]): IndexSignature {
 
   return pick(obj, vkeys)
 }
+
+export const shuffle = <T>(array: T[]): T[] =>
+  [...array].sort(() => Math.random() - 0.5)

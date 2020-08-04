@@ -1,10 +1,14 @@
 import path from 'path'
 import { generateEventSlug } from './src/events/helpers'
+import { generateFiftyTwoEntrySlug } from './src/fifty-two/helpers'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
 const GenericContentPage = path.resolve(
   './src/genericContentPage/GenericContentPage.js'
+)
+const FiftyTwoEntryPage = path.resolve(
+  './src/fifty-two/entry/FiftyTwoEntryPage.tsx'
 )
 
 exports.sourceNodes = ({ actions: { createTypes } }) =>
@@ -21,6 +25,19 @@ exports.sourceNodes = ({ actions: { createTypes } }) =>
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   await graphql(`
     {
+      galleryFiftyTwoEntries: allContentfulFiftyTwoGalleryEntry {
+        edges {
+          node {
+            id
+            artist {
+              name
+            }
+            artwork {
+              title
+            }
+          }
+        }
+      }
       events: allContentfulEvent(
         filter: {
           date: { dates: { elemMatch: { endDate: { gte: "${new Date().toISOString()}" } } } }
@@ -61,6 +78,47 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     if (result.errors) {
       throw result.errors
     }
+
+    const entries = result.data.galleryFiftyTwoEntries.edges
+    entries.forEach((edge, index) => {
+      createPage({
+        path: generateFiftyTwoEntrySlug(edge.node.artist.name),
+        component: FiftyTwoEntryPage,
+        context: {
+          id: edge.node.id,
+          prev: {
+            title:
+              index > 0
+                ? entries[index - 1].node.artwork.title
+                : entries[entries.length - 1].node.artwork.title,
+            subtitle:
+              index > 0
+                ? entries[index - 1].node.artist.name
+                : entries[entries.length - 1].node.artist.name,
+            url:
+              index > 0
+                ? generateFiftyTwoEntrySlug(entries[index - 1].node.artist.name)
+                : generateFiftyTwoEntrySlug(
+                    entries[entries.length - 1].node.artist.name
+                  ),
+          },
+          next: {
+            title:
+              index < entries.length - 1
+                ? entries[index + 1].node.artwork.title
+                : entries[0].node.artwork.title,
+            subtitle:
+              index < entries.length - 1
+                ? entries[index + 1].node.artist.name
+                : entries[0].node.artist.name,
+            url:
+              index < entries.length - 1
+                ? generateFiftyTwoEntrySlug(entries[index + 1].node.artist.name)
+                : generateFiftyTwoEntrySlug(entries[0].node.artist.name),
+          },
+        },
+      })
+    })
 
     result.data.genericContentPages.edges.forEach(edge => {
       createPage({

@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
-import CTABox from './CTABox'
+import { CTABox } from './CTABox'
 
 storiesOf('CTA Box', module).add('default', () => (
   <CTABox
