@@ -29,3 +29,8 @@ export const handleUrl = (url: string): LinkProps => {
       return { to: handleSlug(url), as: Link }
   }
 }
+
+export const fetchTypeformId = (to: string) => {
+  const typeform = /https:\/\/.*typeform.com\/to\/(?<id>.+)/.exec(to)
+  return typeform && typeform.groups && typeform.groups.id
+}

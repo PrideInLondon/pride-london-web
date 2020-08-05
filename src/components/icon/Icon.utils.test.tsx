@@ -21,11 +21,12 @@ describe('calculateComponent', () => {
 
 describe('calculateRotationDegrees', () => {
   it.each`
-    rotation   | expected
-    ${'none'}  | ${0}
-    ${'right'} | ${90}
-    ${'flip'}  | ${180}
-    ${'left'}  | ${270}
+    rotation    | expected
+    ${'none'}   | ${'transform: none;'}
+    ${'right'}  | ${'transform: rotate(90deg);'}
+    ${'flip'}   | ${'transform: rotate(180deg);'}
+    ${'left'}   | ${'transform: rotate(270deg);'}
+    ${'mirror'} | ${'transform: scale(-1,1);'}
   `(
     'should calculate rotate angle for rotation $rotation',
     ({ rotation, expected }) => {

@@ -23,10 +23,6 @@ export const Background = styled.div`
 `
 export const ModalCard = styled.div<LayoutProps>`
   z-index: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   ${layout}
 `
 
