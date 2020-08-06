@@ -44,7 +44,6 @@ export const PageContent: React.FC<PageContentProps> = ({
         </ShareBarWrapper>
         <BlogContent article={article} />
       </Wrapper>
-      .
       <BlogFooter author={author} />
     </>
   )
