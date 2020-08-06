@@ -4,6 +4,7 @@ import {
   isContactUrl,
   handleSlug,
   handleUrl,
+  fetchTypeformId,
 } from './location-utils'
 
 describe('isExternalUrl', () => {
@@ -50,6 +51,18 @@ describe('handleUrl', () => {
     ${'mailto:foo.com'}  | ${{ href: 'mailto:foo.com', target: '_blank', as: 'a' }}
   `('should return $expected when given url $url', ({ url, expected }) => {
     const actual = handleUrl(url)
+    expect(actual).toEqual(expected)
+  })
+})
+
+describe('fetchTypeformId', () => {
+  it.each`
+    to                                             | expected
+    ${'https://typeform.com/to/ABC'}               | ${'ABC'}
+    ${'https://prideinlondon.typeform.com/to/ABC'} | ${'ABC'}
+    ${'/events'}                                   | ${null}
+  `('should return $expected when given $to', ({ to, expected }) => {
+    const actual = fetchTypeformId(to)
     expect(actual).toEqual(expected)
   })
 })

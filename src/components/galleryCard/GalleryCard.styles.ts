@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import { compose, layout, space, LayoutProps, SpaceProps } from 'styled-system'
 import Image from 'gatsby-image/withIEPolyfill'
-import { Card } from '../card'
 import { Tag } from '../../components/tag'
+import { colors } from '../../theme/colors'
+import { Card } from '../card'
 
 export const ImageWrapper = styled.div<LayoutProps & SpaceProps>`
   overflow: hidden;
@@ -12,9 +13,12 @@ export const ImageWrapper = styled.div<LayoutProps & SpaceProps>`
 
 export const StyledImage = styled(Image)`
   transition: transform 0.15s ease-out;
+  width: 100% !important;
 `
 
 export const StyledCard = styled(Card)`
+  border: solid 1px ${colors.mediumGrey};
+
   &:hover,
   &:focus {
     ${StyledImage} {

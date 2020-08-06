@@ -25,10 +25,8 @@ export const Icon = styled(({ name, variant, rotate, ...props }: IconProps) => {
   )
 })`
   line-height: inherit;
-  transform: rotate(
-    ${({ rotate }) => calculateRotationDegrees(rotate || 'none')}deg
-  );
-
+  flex-shrink: 0;
+  ${({ rotate }) => calculateRotationDegrees(rotate || 'none')}
   ${compose(space, layout)}
 `
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useEventListener } from '../../hooks/useEventListener'
 import { widths } from '../../theme/breakpoints'
-import { Wrapper, Column } from './Masonry.styles'
+import { Wrapper } from './Masonry.styles'
 import { MasonryProps } from './Masonry.types'
 
 export const calculateColumns = (
@@ -37,14 +37,14 @@ export const Masonry: React.FC<MasonryProps> = ({
   useEventListener('resize', resizeHandler)
 
   return (
-    <Wrapper ref={ref} {...props}>
+    <Wrapper ref={ref} {...props} columns={numCols}>
       {[...Array(numCols)].map((_, index) => (
-        <Column
+        <div
           // eslint-disable-next-line react/no-array-index-key
           key={index}
         >
           {cols[index]}
-        </Column>
+        </div>
       ))}
     </Wrapper>
   )
