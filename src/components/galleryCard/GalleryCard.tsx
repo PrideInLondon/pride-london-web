@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardTitle, CardContent, CardFooter } from '../card'
 import { H5, H6, P } from '../typography'
-import { md } from '../../theme/space'
+import { sm, md, lg } from '../../theme/space'
 import {
   StyledCard,
   ImageWrapper,
@@ -28,9 +28,11 @@ export const GalleryCard = ({
     </ImageWrapper>
     <CardContent position="relative" paddingTop={`${md * 2}px`}>
       <StyledTag color={category.color}>{category.name}</StyledTag>
-      <H5 as={CardTitle}>{title}</H5>
-      <P>{name}</P>
-      <P>{year}</P>
+      <H5 letterSpacing="-0.5px" as={CardTitle}>
+        {title}
+      </H5>
+      <P marginBottom={`${sm}px`}>{name}</P>
+      <P marginBottom={`${lg}px`}>{year}</P>
       <H6 as={CardFooter}>{sold ? 'Sold' : guidePrice}</H6>
     </CardContent>
   </StyledCard>
