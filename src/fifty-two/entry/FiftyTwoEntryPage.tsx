@@ -32,7 +32,7 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
       <Helmet title={artist.name} />
       <Heading>{artist.name}</Heading>
       <Wrapper
-        padding={{ default: 'lg', md: 'xl' }}
+        padding={{ default: 'lg', md: 'xxl' }}
         marginBottom={{ default: 'xl', md: 'md' }}
       >
         <FlexWrapper>
