@@ -9,7 +9,7 @@ import {
 const OtherArticlesHeader = () => (
   <Header>
     <Title>You may also like</Title>
-    <Link>
+    <Link href="/news-and-views">
       View all articles <StyledChevronIcon />
     </Link>
   </Header>
