@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import theme from '../../theme/theme'
 import { getMostReadable } from '../../components/filterButton/FilterButton.styles'
+import { mediaQueries } from '../../theme/mediaQueries'
 
 export const SubHeader = styled.div`
   display: flex;
@@ -50,15 +51,28 @@ export const Title = styled.h1`
 `
 export const BlogHeaderContainer = styled.div`
   max-width: 830px;
-  margin: 0 auto 30px auto;
+  margin: auto auto 30px auto;
   min-height: 140px;
   background-color: ${theme.colors.white};
   position: relative;
-  padding-left: 30px;
-  padding-top: 30px;
-  padding-right: 30px;
 
   @media (min-width: 830px) {
     margin-top: -140px;
+  }
+
+  ${mediaQueries.sm} {
+    padding: 30px 20px 0 20px;
+  }
+
+  ${mediaQueries.md} {
+    padding: 30px -10px 0 -10px;
+  }
+
+  ${mediaQueries.lg} {
+    padding: 30px 120px 0 120px;
+  }
+
+  ${mediaQueries.xl} {
+    padding: 30px 20px 0 20px;
   }
 `
