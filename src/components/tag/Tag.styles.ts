@@ -8,7 +8,6 @@ import { TagProps } from './Tag.types'
 const getMostReadable = (color: string) =>
   tinycolor
     .mostReadable(color, [colors.white, colors.indigo], {
-      includeFallbackColors: true,
       level: 'AAA',
       size: 'small',
     })
