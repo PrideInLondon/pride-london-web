@@ -28,7 +28,11 @@ export const GalleryCard = ({
     </ImageWrapper>
     <CardContent position="relative" paddingTop={`${md * 2}px`}>
       <StyledTag color={category.color}>{category.name}</StyledTag>
-      <H5 letterSpacing="-0.32px" as={CardTitle}>
+      <H5
+        margin={`0 0 ${sm}px 0 !important`}
+        letterSpacing="-0.32px"
+        as={CardTitle}
+      >
         {title}
       </H5>
       <P marginBottom={`${sm}px`}>{name}</P>
