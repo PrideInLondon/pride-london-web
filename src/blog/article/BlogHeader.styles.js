@@ -1,14 +1,15 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import theme from '../../theme/theme'
 import { getMostReadable } from '../../components/filterButton/FilterButton.styles'
-import { mediaQueries } from '../../theme/mediaQueries'
+import { Wrapper } from '../../components/wrapper/Wrapper'
 
 export const SubHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 30px;
   & > div {
     margin-top: 30px;
   }
@@ -46,33 +47,23 @@ export const Title = styled.h1`
   font-stretch: normal;
   line-height: 1.19;
   letter-spacing: normal;
-  padding: 0 30px;
   color: #2c2c81;
 `
-export const BlogHeaderContainer = styled.div`
-  max-width: 830px;
-  margin: auto auto 30px auto;
-  min-height: 140px;
-  background-color: ${theme.colors.white};
-  position: relative;
 
-  @media (min-width: 830px) {
-    margin-top: -140px;
-  }
+export const BlogWrapper = ({ children, ...props }) => (
+  <Wrapper {...props}>{children}</Wrapper>
+)
 
-  ${mediaQueries.sm} {
-    padding: 30px 20px 0 20px;
-  }
+BlogWrapper.defaultProps = {
+  children: {},
+  maxWidth: '830px',
+  backgroundColor: 'white',
+  position: 'relative',
+  px: { default: 'lg', md: 'xl_mob', lg: 'xl' },
+  mx: 'auto',
+  marginBottom: 'lg',
+}
 
-  ${mediaQueries.md} {
-    padding: 30px -10px 0 -10px;
-  }
-
-  ${mediaQueries.lg} {
-    padding: 30px 120px 0 120px;
-  }
-
-  ${mediaQueries.xl} {
-    padding: 30px 20px 0 20px;
-  }
-`
+BlogWrapper.propTypes = {
+  children: PropTypes.any,
+}
