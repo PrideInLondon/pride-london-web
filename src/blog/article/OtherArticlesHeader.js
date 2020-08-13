@@ -1,10 +1,7 @@
 import React from 'react'
-import {
-  Title,
-  Header,
-  Link,
-  StyledChevronIcon,
-} from './OtherArticlesHeader.styles'
+import Link from 'gatsby-link'
+
+import { Title, Header, StyledChevronIcon } from './OtherArticlesHeader.styles'
 
 const OtherArticlesHeader = () => (
   <Header>
