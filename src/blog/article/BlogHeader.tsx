@@ -1,7 +1,7 @@
 import React from 'react'
 import { NewsCardHeader } from '../../components/newsCardHeader'
 import { MobileShareBar } from './PageContent.styles'
-import { Title, SubHeader, BlogHeaderContainer } from './BlogHeader.styles'
+import { Title, SubHeader, BlogWrapper } from './BlogHeader.styles'
 import { PageContentProps } from './PageContent.types'
 
 interface BlogHeaderProps
@@ -21,8 +21,13 @@ export const BlogHeader: React.FC<BlogHeaderProps> = ({
   if (typeof window !== 'undefined') {
     location = window.location.href
   }
+  const offset = 140
   return (
-    <BlogHeaderContainer>
+    <BlogWrapper
+      paddingTop={{ default: 'lg', md: 'xl_mob' }}
+      marginTop={{ default: 0, md: `-${offset}px` }}
+      minHeight={`${offset}px`}
+    >
       <Title>{title}</Title>
       <MobileShareBar
         variant="horizontal"
@@ -39,6 +44,6 @@ export const BlogHeader: React.FC<BlogHeaderProps> = ({
           readTime={readTime}
         />
       </SubHeader>
-    </BlogHeaderContainer>
+    </BlogWrapper>
   )
 }
