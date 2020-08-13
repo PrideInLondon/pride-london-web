@@ -1,6 +1,7 @@
 import React from 'react'
 import { Wrapper } from '../../components/wrapper/Wrapper'
 import { BlogHeader } from './BlogHeader'
+import { BlogWrapper } from './BlogHeader.styles'
 import { BlogContent } from './blogContent'
 import { BlogFooter } from './BlogFooter'
 import { ShareBarWrapper, DesktopShareBar } from './PageContent.styles'
@@ -42,9 +43,10 @@ export const PageContent: React.FC<PageContentProps> = ({
             }}
           />
         </ShareBarWrapper>
-
-        <BlogContent article={article} />
-        <BlogFooter author={author} />
+        <BlogWrapper>
+          <BlogContent article={article} />
+          <BlogFooter author={author} />
+        </BlogWrapper>
       </Wrapper>
     </>
   )
