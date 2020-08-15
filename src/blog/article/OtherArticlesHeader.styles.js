@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import theme from '../../theme/theme'
 import ChevronIcon from '../../components/icons/chevronIcon'
 
@@ -16,7 +17,7 @@ export const Header = styled.div`
   margin-bottom: 22px;
 `
 
-export const Link = styled.a`
+export const StyledLink = styled(Link)`
   font-family: Poppins;
   font-size: 16px;
   font-weight: 600;
