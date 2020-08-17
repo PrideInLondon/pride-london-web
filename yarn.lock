@@ -1864,14 +1864,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
-  version "7.9.6"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
-  integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.5.tgz#303d8bd440ecd5a491eae6117fd3367698674c5c"
   integrity sha512-otddXKhdNn7d0ptoFRHtMLa8LqDxLYwTjB4nYgM1yy5N6gU/MUf8zqyyLltCH3yAVitBzmwK4us+DD0l/MauAg==
@@ -10283,10 +10276,10 @@ gatsby-graphiql-explorer@^0.4.11:
   dependencies:
     "@babel/runtime" "^7.10.3"
 
-gatsby-image@^2.4.13:
-  version "2.4.13"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.4.13.tgz#21ea2d062952406aba3d34c0bc45752df6b8a554"
-  integrity sha512-j9FIH+EUY6oWQdcNr5Xb87VGsdT/dztqB0wKkMqboIIqPoK/Zdzvd2cUbLIYVOI9zOSsFNDoVsHqe/M0bfu4HA==
+gatsby-image@^2.4.16:
+  version "2.4.16"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.4.16.tgz#65ce1642bb6a0c8d87c74b204ed79995cd43da16"
+  integrity sha512-N5kJ3LE8re57DgR1lAZFWP2or0nCSuNXSUKvSBvVgxwcebdcFGCxN/xTJbU4ojFfFBJ/D4gKuxJrvLvDf3jcyg==
   dependencies:
     "@babel/runtime" "^7.10.3"
     object-fit-images "^3.2.4"
