@@ -74,15 +74,4 @@ describe('<Banner />', () => {
         .props().children
     ).toBe(subtitleText)
   })
-
-  it('renders an iframe if given a video id prop', () => {
-    const wrapper = mount(
-      <Banner
-        titleText={'Here is a title'}
-        subtitleText={'And here is a test subtitle!'}
-        videoId="123abc"
-      />
-    )
-    expect(wrapper.find('iframe')).toHaveLength(1)
-  })
 })

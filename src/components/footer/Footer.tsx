@@ -129,6 +129,17 @@ const MiddleSection = ({
     </PartnersLinksContainer>
   </>
 )
+declare global {
+  interface Window {
+    Metomic: any
+  }
+}
+
+const metomicManageCookies = () => {
+  if (typeof window['Metomic'] !== 'undefined') {
+    window.Metomic('ConsentManager:show')
+  }
+}
 
 const LowerSection = () => (
   <LegalContainer>
@@ -148,6 +159,9 @@ const LowerSection = () => (
       <Typeform id="DYvC2n">
         <LegalLink component="button">Report a website bug</LegalLink>
       </Typeform>
+      <LegalLink component="button" onClick={metomicManageCookies}>
+        Manage cookies
+      </LegalLink>
       <LegalLink
         component="button"
         onClick={() => IntercomAPI('showNewMessage')}
