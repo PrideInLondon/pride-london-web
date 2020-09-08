@@ -550,12 +550,7 @@ const PrivacyPage = () => (
             for their own purposes and only permit them to process your personal
             data for specified purposes and in accordance with our instructions.
           </p>
-          <h2>9. INTERNATIONAL TRANSFERS </h2>
-          <p>
-            We do not transfer your personal data outside the European Economic
-            Area (EEA).
-          </p>
-          <h2>10. DATA SECURITY</h2>
+          <h2>9. DATA SECURITY</h2>
           <p>
             We have put in place appropriate security measures to prevent your
             personal data from being accidentally lost, used or accessed in an
@@ -568,7 +563,7 @@ const PrivacyPage = () => (
             will notify you and any applicable regulator of a breach where we
             are legally required to do so.
           </p>
-          <h2>11. DATA RETENTION</h2>
+          <h2>10. DATA RETENTION</h2>
           <p>
             We will only retain your personal data for as long as necessary to
             fulfil the purposes we collected it for, including for the purposes
@@ -592,7 +587,7 @@ const PrivacyPage = () => (
             in which case we may use this information indefinitely without
             further notice to you.
           </p>
-          <h2>12. INFORMATION ABOUT OUR USE OF COOKIES</h2>
+          <h2>11. INFORMATION ABOUT OUR USE OF COOKIES</h2>
           <p>
             Our website and/or our app uses cookies to distinguish you from
             other users of our website or app. This helps us to provide you with
@@ -735,7 +730,7 @@ const PrivacyPage = () => (
             website and /or our app may become inaccessible or not function
             properly.
           </p>
-          <h2>13. YOUR LEGAL RIGHTS</h2>
+          <h2>12. YOUR LEGAL RIGHTS</h2>
           <p>
             Under certain circumstances, you have rights under data protection
             laws in relation to your personal data. In particular, you have the
@@ -805,7 +800,7 @@ const PrivacyPage = () => (
             particularly complex or you have made a number of requests. In this
             case, we will notify you and keep you updated.{' '}
           </p>
-          <h2>14. HOW TO CONTACT US</h2>
+          <h2>13. HOW TO CONTACT US</h2>
           <p>
             Please contact us and/or our Data Protection Officer by post or
             email if you have any questions about this privacy policy or the
@@ -840,12 +835,12 @@ const PrivacyPage = () => (
             </a>
           </address>
 
-          <h2>15. CHANGES TO OUR PRIVACY POLICY</h2>
+          <h2>14. CHANGES TO OUR PRIVACY POLICY</h2>
           <p>
             This version was last updated on 24 May 2018 and historic versions
             can be obtained by contacting us at the details provided above.
           </p>
-          <h2>16. HOW TO COMPLAIN</h2>
+          <h2>15. HOW TO COMPLAIN</h2>
           <p>
             We hope that our Data Protection Officer can resolve any query or
             concern you may raise about our use of your information.
