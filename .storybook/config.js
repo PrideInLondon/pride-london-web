@@ -6,7 +6,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import theme from '../src/theme/theme'
-import { GlobalStyle } from '../src/layout'
+import { GlobalStyle } from '../src/layout/GlobalStyle'
 
 const StorybookGlobalStyle = createGlobalStyle`
  #story-root {
