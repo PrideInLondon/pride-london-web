@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import constants from '../../constants'
 import PageHeader from './PageHeader'
-import PageContent from './PageContent'
+import { PageContent } from './PageContent'
 import PageFooter from './PageFooter'
 
 const PageWrapper = styled.div`
@@ -170,7 +170,7 @@ const ArticlePage = ({
         title={title}
         datePublished={datePublished}
         category={constants.articleCategories.find(
-          cat => cat.title == category
+          cat => cat.title === category
         )}
         author={author}
       />

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { variant } from 'styled-system'
+import { variant, space } from 'styled-system'
 import tinycolor from 'tinycolor2'
 import { sm } from '../../theme/space'
 import { colors } from '../../theme/colors'
@@ -8,7 +8,6 @@ import { TagProps } from './Tag.types'
 const getMostReadable = (color: string) =>
   tinycolor
     .mostReadable(color, [colors.white, colors.indigo], {
-      includeFallbackColors: true,
       level: 'AAA',
       size: 'small',
     })
@@ -33,4 +32,6 @@ export const Wrapper = styled.div<TagProps>`
         },
       },
     })}
+
+  ${space}
 `

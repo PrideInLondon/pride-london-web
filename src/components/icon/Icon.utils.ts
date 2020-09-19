@@ -1,48 +1,39 @@
 import { colors } from '../../theme/colors'
-import { InternalIconProps } from './Icon.types'
+import { IconName, IconColors, IconRotation } from './Icon.types'
+import { COMPONENTS } from './icons'
 
-import {
-  Calendar,
-  Email,
-  Facebook,
-  Laptop,
-  LinkedIn,
-  Live,
-  Messenger,
-  OnDemand,
-  Twitter,
-  Play,
-} from './icons'
-
-export const COMPONENTS: { [key: string]: React.FC<InternalIconProps> } = {
-  calendar: Calendar,
-  email: Email,
-  facebook: Facebook,
-  laptop: Laptop,
-  'linked-in': LinkedIn,
-  live: Live,
-  messenger: Messenger,
-  'on-demand': OnDemand,
-  twitter: Twitter,
-  play: Play,
-}
-
-export const calculateComponent = (name: string) => COMPONENTS[name]
+export const calculateComponent = (name: IconName) => COMPONENTS[name]
 
 const COLORS: {
-  [key: string]: {
-    primary: string
-    secondary: string
-  }
+  [key: string]: IconColors
 } = {
   indigo: {
     primary: colors.indigo,
     secondary: colors.eucalyptusGreen,
+    tertiary: colors.white,
   },
   white: {
     primary: colors.white,
     secondary: colors.eucalyptusGreen,
+    tertiary: colors.white,
   },
 }
 
 export const calculateColors = (variant: string) => COLORS[variant]
+
+export const ROTATIONS = ['none', 'right', 'flip', 'left', 'mirror'] as const
+
+export const calculateRotationDegrees = (rotate: IconRotation) => {
+  switch (rotate) {
+    case 'right':
+      return 'transform: rotate(90deg);'
+    case 'flip':
+      return 'transform: rotate(180deg);'
+    case 'left':
+      return 'transform: rotate(270deg);'
+    case 'mirror':
+      return 'transform: scale(-1,1);'
+    default:
+      return 'transform: none;'
+  }
+}

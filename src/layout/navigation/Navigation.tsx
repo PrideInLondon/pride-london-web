@@ -89,6 +89,24 @@ const Navigation: React.FC<NavigationProps> = ({
                           },
                         ],
                       },
+                      {
+                        heading: 'Exhibition',
+                        links: [
+                          {
+                            title: 'Fifty-Two',
+                            url: '/fifty-two',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'Business',
+                        links: [
+                          {
+                            title: 'Pride in the City',
+                            url: '/support-us/pride-in-the-city',
+                          },
+                        ],
+                      },
                     ],
                   }}
                 />

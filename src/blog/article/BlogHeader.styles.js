@@ -1,20 +1,10 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import theme from '../../theme/theme'
 import { getMostReadable } from '../../components/filterButton/FilterButton.styles'
+import { Wrapper } from '../../components/wrapper/Wrapper'
 
-export const FlexDiv = styled.div`
-  display: flex;
-`
-export const ShareText = styled.span`
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.43;
-  letter-spacing: normal;
-  color: ${theme.colors.darkGrey};
-`
 export const SubHeader = styled.div`
   display: flex;
   justify-content: space-between;
@@ -24,7 +14,7 @@ export const SubHeader = styled.div`
     margin-top: 30px;
   }
   & span {
-    color: ${theme.colors.darkGrey};
+    color: ${theme.colors.indigo};
     font-size: 14px;
     font-weight: 600;
     line-height: 1.43;
@@ -59,17 +49,21 @@ export const Title = styled.h1`
   letter-spacing: normal;
   color: #2c2c81;
 `
-export const BlogHeaderContainer = styled.div`
-  max-width: 830px;
-  margin: 0 auto 60px auto;
-  min-height: 140px;
-  background-color: ${theme.colors.white};
-  position: relative;
-  padding-left: 30px;
-  padding-top: 30px;
-  padding-right: 30px;
 
-  @media (min-width: 830px) {
-    margin-top: -140px;
-  }
-`
+export const BlogWrapper = ({ children, ...props }) => (
+  <Wrapper {...props}>{children}</Wrapper>
+)
+
+BlogWrapper.defaultProps = {
+  children: {},
+  maxWidth: '830px',
+  backgroundColor: 'white',
+  position: 'relative',
+  px: { default: 'lg', md: 'xl_mob', lg: 'xl' },
+  mx: 'auto',
+  marginBottom: 'lg',
+}
+
+BlogWrapper.propTypes = {
+  children: PropTypes.any,
+}

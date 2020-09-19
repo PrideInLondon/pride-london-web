@@ -1,1 +1,4 @@
-export { default as FilteredPagedCardContainer } from './FilteredPagedCardContainer'
+export {
+  default as FilteredPagedCardContainer,
+  calculateSelected,
+} from './FilteredPagedCardContainer'

@@ -20,11 +20,10 @@ export const Container = styled.div`
 
 export const BackgroundImage = styled.div`
   background-image: url(${CampaignContainerBg});
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
   width: 100%;
-
   height: 300px;
 
   ${mediaQueries.md} {

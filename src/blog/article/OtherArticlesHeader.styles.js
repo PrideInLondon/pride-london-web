@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import theme from '../../theme/theme'
 import ChevronIcon from '../../components/icons/chevronIcon'
 
@@ -16,7 +17,7 @@ export const Header = styled.div`
   margin-bottom: 22px;
 `
 
-export const Link = styled.a`
+export const StyledLink = styled(Link)`
   font-family: Poppins;
   font-size: 16px;
   font-weight: 600;
@@ -24,7 +25,7 @@ export const Link = styled.a`
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
-  color: ${theme.colors.black};
+  color: ${theme.colors.indigo};
   border-bottom: 2px solid transparent;
   transition: border-bottom-color 200ms ease-out;
   cursor: pointer;
