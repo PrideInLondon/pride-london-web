@@ -17,7 +17,8 @@ import logoWhite from '../assets/logo-white.svg'
 import LayoutHelmet from './LayoutHelmet'
 import { Navigation } from './navigation'
 import { Footer } from './Footer'
-import { GlobalStyle, SiteWrapper } from './Layout.styles'
+import { SiteWrapper } from './Layout.styles'
+import { GlobalStyle } from './GlobalStyle'
 
 const query = graphql`
   query rootQuery {
