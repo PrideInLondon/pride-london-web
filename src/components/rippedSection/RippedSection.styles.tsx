@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { layout } from 'styled-system'
 // import Img, {
 //   GatsbyImageWithIEPolyfillProps,
 // } from 'gatsby-image/withIEPolyfill'
@@ -8,6 +9,8 @@ export const StyledSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${layout}
 `
 
 // export const AbsoluteTornSection = styled.section`
