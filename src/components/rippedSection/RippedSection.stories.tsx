@@ -28,3 +28,29 @@ storiesOf(RippedSection.name, module).add('Top and Bottom variants', () => (
     <div style={{ height: 400 }} />
   </RippedSection>
 ))
+
+storiesOf(RippedSection.name, module).add('Top variant', () => (
+  <RippedSection
+    rips={{
+      top: {
+        variant: select('Top Rip Variant', variants, variants[0]),
+        color: color('Top Rip Color', colors.white),
+      },
+    }}
+  >
+    <div style={{ height: 400 }} />
+  </RippedSection>
+))
+
+storiesOf(RippedSection.name, module).add('Bottom variant', () => (
+  <RippedSection
+    rips={{
+      bottom: {
+        variant: select('Bottom Rip Variant', variants, variants[0]),
+        color: color('Bottom Rip Color', colors.white),
+      },
+    }}
+  >
+    <div style={{ height: 400 }} />
+  </RippedSection>
+))
