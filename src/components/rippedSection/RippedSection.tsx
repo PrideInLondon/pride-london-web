@@ -15,14 +15,7 @@ export const RippedSection: React.FC<RippedSectionProps> = ({
 }) => (
   <StyledSection {...props}>
     {top && <Rip transform="top" {...top} />}
-    <div
-      style={{
-        height: 400,
-        width: '100%',
-      }}
-    >
-      {children}
-    </div>
+    {children}
     {bottom && <Rip transform="bottom" {...bottom} />}
   </StyledSection>
 )

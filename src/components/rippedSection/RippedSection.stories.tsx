@@ -24,6 +24,7 @@ storiesOf(RippedSection.name, module).add('Top and Bottom variants', () => (
         color: color('Bottom Rip Color', colors.white, 'Bottom Rip'),
       },
     }}
-    height="400px"
-  />
+  >
+    <div style={{ height: 400 }} />
+  </RippedSection>
 ))
