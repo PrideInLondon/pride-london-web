@@ -2,7 +2,6 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select, color } from '@storybook/addon-knobs'
 import { colors } from '../../theme/colors'
-import { H2, P } from '../typography/Typography'
 import { RippedSection } from './RippedSection'
 import { RipVariant } from './Rip.types'
 
@@ -26,12 +25,5 @@ storiesOf(RippedSection.name, module).add('Top and Bottom variants', () => (
       },
     }}
     height="400px"
-  >
-    <H2>Pride in London</H2>
-    <P>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, reiciendis!
-      Aliquam molestias quis eum magni ullam unde impedit facere nostrum. Facere
-      animi dolore ea sunt, laboriosam tenetur enim ducimus voluptatem.
-    </P>
-  </RippedSection>
+  />
 ))
