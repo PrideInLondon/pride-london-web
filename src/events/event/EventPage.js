@@ -195,18 +195,27 @@ const EventPage = ({
               startDate,
               endDate,
               image: metaImg,
-              location: {
-                '@type': 'Place',
-                name: "Joe's Party Palace",
-                address: {
-                  '@type': 'PostalAddress',
-                  streetAddress: addressLine1,
-                  ...(addressLine2 && { addressLocality: addressLine2 }),
-                  addressRegion: city,
-                  postalCode: postcode,
-                  addressCountry: 'UK',
-                },
-              },
+              eventStatus: 'https://schema.org/EventScheduled',
+              eventAttendanceMode: isVirtualEvent(location2)
+                ? 'https://schema.org/OnlineEventAttendanceMode'
+                : 'https://schema.org/OfflineEventAttendanceMode',
+              location: isVirtualEvent(location2)
+                ? {
+                    '@type': 'VirtualLocation',
+                    url: ticketingUrl,
+                  }
+                : {
+                    '@type': 'Place',
+                    name: "Joe's Party Palace",
+                    address: {
+                      '@type': 'PostalAddress',
+                      streetAddress: addressLine1,
+                      ...(addressLine2 && { addressLocality: addressLine2 }),
+                      addressRegion: city,
+                      postalCode: postcode,
+                      addressCountry: 'UK',
+                    },
+                  },
               offers: {
                 '@type': 'Offer',
                 price: eventPriceLow,
