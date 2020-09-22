@@ -1,4 +1,11 @@
-version: 2
+version: 2.1
+
+workflows:
+  workflow:
+    jobs:
+      - build:
+          context: PRIDE_IN_LONDON_WEB
+
 jobs:
   build:
     docker:
@@ -37,10 +44,4 @@ jobs:
 
       - run:
           name: Run Chromatic for Storybook
-          command: npm chromatic -a $CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
-
-workflows:
-  version: 2
-  workflow:
-    jobs:
-      - build
+          command: yarn chromatic -a $CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
