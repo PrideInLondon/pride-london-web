@@ -1,16 +1,17 @@
 import React from 'react'
-import { configure, addDecorator, addParameters } from '@storybook/react'
+import { addDecorator, addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
+
 import theme from '../src/theme/theme'
 import { GlobalStyle } from '../src/layout/GlobalStyle'
 
 const StorybookGlobalStyle = createGlobalStyle`
  #story-root {
-   padding: 0 40px;
+   padding: 40px;
  }
 `
 
@@ -32,12 +33,6 @@ window.___navigate = pathname => {
   action('NavigateTo:')(pathname)
 }
 
-const req = require.context('../src', true, /\.stories\.tsx$/)
-
-function loadStories() {
-  req.keys().forEach(req)
-}
-
 addDecorator(withA11y)
 addDecorator(withInfo)
 addDecorator(withKnobs)
@@ -56,5 +51,3 @@ addDecorator(story => (
     </>
   </ThemeProvider>
 ))
-
-configure(loadStories, module)
