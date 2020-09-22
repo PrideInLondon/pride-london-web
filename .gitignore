@@ -15,3 +15,7 @@ public
 
 # Custom git hook directory
 .commit-msg
+
+# Storybook
+build-storybook.log
+storybook-static
