@@ -1,11 +1,14 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { text, color, boolean, files } from '@storybook/addon-knobs'
 import fridaKahlo from '../../../.storybook/assets/fridaKahlo.jpg'
 import { colors } from '../../theme/colors'
 import { GalleryCard } from './GalleryCard'
 
-storiesOf('GalleryCard', module).add('default', () => (
+export default {
+  title: 'GalleryCard',
+}
+
+export const Default = () => (
   <GalleryCard
     to="#"
     artist={{
@@ -42,4 +45,8 @@ storiesOf('GalleryCard', module).add('default', () => (
     }}
     maxWidth={280}
   />
-))
+)
+
+Default.story = {
+  name: 'default',
+}
