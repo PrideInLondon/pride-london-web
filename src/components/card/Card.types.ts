@@ -6,8 +6,12 @@ import {
   ResponsiveValue,
 } from 'styled-system'
 
+export const CARD_VARIANTS = ['column', 'row'] as const
+
+type CardVariant = typeof CARD_VARIANTS[number]
+
 export interface CardProps {
-  variant?: ResponsiveValue<'column' | 'row'>
+  variant?: ResponsiveValue<CardVariant>
 }
 
 export interface CardImageProps {
