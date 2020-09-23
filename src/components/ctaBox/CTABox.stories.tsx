@@ -1,9 +1,12 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
 import { CTABox } from './CTABox'
 
-storiesOf('CTA Box', module).add('default', () => (
+export default {
+  title: 'CTA Box',
+}
+
+export const Default = () => (
   <CTABox
     title={text('Title', 'Lorem Ipsum')}
     body={text('Body', 'Lorem Ipsum')}
@@ -12,4 +15,8 @@ storiesOf('CTA Box', module).add('default', () => (
       text: text('Link Text', 'Lorem Ipsum'),
     }}
   />
-))
+)
+
+Default.story = {
+  name: 'default',
+}
