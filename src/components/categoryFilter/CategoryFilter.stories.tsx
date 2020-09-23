@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
 import { colors } from '../../theme/colors'
 import { Tag } from '../tag'
@@ -25,7 +24,11 @@ const ENTRIES = [...Array(CATEGORIES.length * 2)].map((_, index) => ({
   category: CATEGORIES[index % CATEGORIES.length],
 }))
 
-storiesOf(CategoryFilter.name, module).add('checkbox', () => (
+export default {
+  title: 'CategoryFilter',
+}
+
+export const Default = () => (
   <CategoryFilter
     variant={select(
       'variant',
@@ -50,4 +53,8 @@ storiesOf(CategoryFilter.name, module).add('checkbox', () => (
       </Masonry>
     )}
   />
-))
+)
+
+Default.story = {
+  name: 'default',
+}
