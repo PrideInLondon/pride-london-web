@@ -1,12 +1,14 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { text, color, select, boolean } from '@storybook/addon-knobs'
 import { colors } from '../../theme/colors'
 import { FILTER_TYPES } from './FilterLabel.types'
-import FilterContainer from './FilterContainer'
 import FilterLabel from './FilterLabel'
 
-storiesOf(FilterContainer.name, module).add(FilterLabel.name, () => (
+export default {
+  title: 'FilterLabel',
+}
+
+export const Default = () => (
   <FilterLabel
     filterName={text('filterName', 'Party')}
     filterColour={color('filterColour', colors.indigo)}
@@ -14,4 +16,8 @@ storiesOf(FilterContainer.name, module).add(FilterLabel.name, () => (
     isSelected={boolean('isSelected', true)}
     handleSelect={() => {}}
   />
-))
+)
+
+Default.story = {
+  name: 'default',
+}
