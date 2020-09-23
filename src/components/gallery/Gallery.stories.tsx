@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { object, select, number } from '@storybook/addon-knobs'
 import { Card, CardContent, CardTitle, CardFooter } from '../card'
 import { Button } from '../button'
@@ -30,11 +29,51 @@ const ENTRIES = [
 
 const MORE_ENTRIES = ENTRIES.concat(ENTRIES).concat(ENTRIES)
 
-storiesOf(Gallery.name, module)
-  .add('default', () => (
-    <Gallery
-      entries={object('entries', MORE_ENTRIES)}
-      render={({ entries }) => (
+export default {
+  title: 'Gallery',
+}
+
+export const Default = () => (
+  <Gallery
+    entries={object('entries', MORE_ENTRIES)}
+    render={({ entries }) => (
+      <GalleryContainer
+        variant={select(
+          'variant',
+          GALLERY_CONTAINER_VARIANTS,
+          GALLERY_CONTAINER_VARIANTS[0]
+        )}
+        columns={{ default: 1, md: 2, lg: 3 }}
+      >
+        {entries.map(({ title, description, footer }, index) => (
+          <Card key={title} to="#">
+            <CardContent>
+              <CardTitle>
+                Card #{index + 1}: {title}
+              </CardTitle>
+              <p>{description}</p>
+              <CardFooter>{footer}</CardFooter>
+            </CardContent>
+          </Card>
+        ))}
+      </GalleryContainer>
+    )}
+  />
+)
+
+Default.story = {
+  name: 'default',
+}
+
+export const Paged = () => (
+  <Gallery
+    entries={object('entries', MORE_ENTRIES)}
+    pageSize={number('pageSize', MORE_ENTRIES.length / 3, {
+      min: 1,
+      max: MORE_ENTRIES.length,
+    })}
+    render={({ entries, showNextPage }) => (
+      <>
         <GalleryContainer
           variant={select(
             'variant',
@@ -55,54 +94,26 @@ storiesOf(Gallery.name, module)
             </Card>
           ))}
         </GalleryContainer>
-      )}
-    />
-  ))
-  .add('paged', () => (
-    <Gallery
-      entries={object('entries', MORE_ENTRIES)}
-      pageSize={number('pageSize', MORE_ENTRIES.length / 3, {
-        min: 1,
-        max: MORE_ENTRIES.length,
-      })}
-      render={({ entries, showNextPage }) => (
-        <>
-          <GalleryContainer
-            variant={select(
-              'variant',
-              GALLERY_CONTAINER_VARIANTS,
-              GALLERY_CONTAINER_VARIANTS[0]
-            )}
-            columns={{ default: 1, md: 2, lg: 3 }}
-          >
-            {entries.map(({ title, description, footer }, index) => (
-              <Card key={title} to="#">
-                <CardContent>
-                  <CardTitle>
-                    Card #{index + 1}: {title}
-                  </CardTitle>
-                  <p>{description}</p>
-                  <CardFooter>{footer}</CardFooter>
-                </CardContent>
-              </Card>
-            ))}
-          </GalleryContainer>
-          <div
-            style={{
-              textAlign: 'center',
-              marginTop: '8px',
-            }}
-          >
-            <p>
-              You're viewing {entries.length} of {MORE_ENTRIES.length} entries
-            </p>
-            {entries.length < MORE_ENTRIES.length && (
-              <Button variant="outline" onClick={showNextPage}>
-                Show more
-              </Button>
-            )}
-          </div>
-        </>
-      )}
-    />
-  ))
+        <div
+          style={{
+            textAlign: 'center',
+            marginTop: '8px',
+          }}
+        >
+          <p>
+            You're viewing {entries.length} of {MORE_ENTRIES.length} entries
+          </p>
+          {entries.length < MORE_ENTRIES.length && (
+            <Button variant="outline" onClick={showNextPage}>
+              Show more
+            </Button>
+          )}
+        </div>
+      </>
+    )}
+  />
+)
+
+Paged.story = {
+  name: 'paged',
+}
