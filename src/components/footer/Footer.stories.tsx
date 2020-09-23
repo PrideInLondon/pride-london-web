@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { ContentfulSponsor } from '../../sponsors/PartnersPage.types'
 import { Footer } from './Footer'
 
@@ -198,9 +197,17 @@ const SPONSORS: { node: ContentfulSponsor }[] = [
   },
 ]
 
-storiesOf(Footer.name, module).add('basic', () => (
+export default {
+  title: 'Footer',
+}
+
+export const Default = () => (
   <Footer
     socials={SOCIALS}
     data={{ allContentfulSponsor: { edges: SPONSORS } }}
   />
-))
+)
+
+Default.story = {
+  name: 'default',
+}
