@@ -1,11 +1,14 @@
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
-import { storiesOf } from '@storybook/react'
 import { H3 } from '../typography'
 import { Button } from '../button/Button'
 import { Box } from './Box'
 
-storiesOf('Box', module).add('default', () => (
+export default {
+  title: 'Box',
+}
+
+export const Default = () => (
   <Box
     display={{ default: 'block', md: 'flex' }}
     alignItems="center"
@@ -20,4 +23,8 @@ storiesOf('Box', module).add('default', () => (
     </H3>
     <Button ml="auto">{text('Button text', 'Donate now')}</Button>
   </Box>
-))
+)
+
+Default.story = {
+  name: 'default',
+}
