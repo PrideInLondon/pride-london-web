@@ -1,8 +1,11 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { GridList, GridItem } from './index'
 
-storiesOf('GridList', module).add('6 grid items', () => (
+export default {
+  title: 'GridList',
+}
+
+export const SixGridItems = () => (
   <GridList>
     <GridItem title="Volunteer with an LGBT charity" />
     <GridItem
@@ -15,4 +18,8 @@ storiesOf('GridList', module).add('6 grid items', () => (
     <GridItem title="Another idea" to="/somewhere" linkText="Another CTA" />
     <GridItem title="Another idea" />
   </GridList>
-))
+)
+
+SixGridItems.story = {
+  name: '6 grid items',
+}
