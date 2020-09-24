@@ -36,9 +36,7 @@ export const Default = () => {
   )
 }
 
-Default.story = {
-  name: 'default',
-}
+Default.storyName = 'default'
 
 export const WithText = () => {
   const name = select('Name', NAMES, NAMES[0])
@@ -56,6 +54,4 @@ export const WithText = () => {
   )
 }
 
-WithText.story = {
-  name: 'with text',
-}
+WithText.storyName = 'with text'

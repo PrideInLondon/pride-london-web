@@ -13,6 +13,4 @@ export const WithButton = () => (
   </Typeform>
 )
 
-WithButton.story = {
-  name: 'with Button',
-}
+WithButton.storyName = 'with Button'

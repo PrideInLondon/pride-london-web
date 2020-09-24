@@ -10,12 +10,10 @@ export const Default = () => (
   <PlayButton onClick={() => alert('Button Clicked')} />
 )
 
-Default.story = {
-  name: 'default',
-  parameters: {
-    info: {
-      text:
-        'Renders a play icon inside an indigo box, and takes an onClick handler to execute click',
-    },
+Default.storyName = 'default'
+Default.parameters = {
+  info: {
+    text:
+      'Renders a play icon inside an indigo box, and takes an onClick handler to execute click',
   },
 }

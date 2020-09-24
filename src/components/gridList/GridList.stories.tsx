@@ -20,6 +20,4 @@ export const SixGridItems = () => (
   </GridList>
 )
 
-SixGridItems.story = {
-  name: '6 grid items',
-}
+SixGridItems.storyName = '6 grid items'

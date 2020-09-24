@@ -36,9 +36,7 @@ export const Default = () => (
   </Modal>
 )
 
-Default.story = {
-  name: 'default',
-}
+Default.storyName = 'default'
 
 export const SetToOpenOnMount = () => (
   <Modal
@@ -68,6 +66,4 @@ export const SetToOpenOnMount = () => (
   </Modal>
 )
 
-SetToOpenOnMount.story = {
-  name: 'set to open on mount',
-}
+SetToOpenOnMount.storyName = 'set to open on mount'

@@ -40,6 +40,4 @@ export const WithImage = () => {
   )
 }
 
-WithImage.story = {
-  name: 'with image',
-}
+WithImage.storyName = 'with image'

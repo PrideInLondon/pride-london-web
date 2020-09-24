@@ -61,9 +61,7 @@ export const Default = () => (
   />
 )
 
-Default.story = {
-  name: 'default',
-}
+Default.storyName = 'default'
 
 export const Paged = () => (
   <Gallery
@@ -114,6 +112,4 @@ export const Paged = () => (
   />
 )
 
-Paged.story = {
-  name: 'paged',
-}
+Paged.storyName = 'paged'

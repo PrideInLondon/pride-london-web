@@ -36,9 +36,7 @@ export const Checkbox = () => (
   />
 )
 
-Checkbox.story = {
-  name: 'checkbox',
-}
+Checkbox.storyName = 'checkbox'
 
 export const Radio = () => (
   <FilterContainer
@@ -51,6 +49,4 @@ export const Radio = () => (
   />
 )
 
-Radio.story = {
-  name: 'radio',
-}
+Radio.storyName = 'radio'

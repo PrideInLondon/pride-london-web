@@ -17,13 +17,11 @@ export const Default = () => (
   </Button>
 )
 
-Default.story = {
-  name: 'default',
-  parameters: {
-    info: {
-      text:
-        'By default the Button component will render an html <button />. You can select one of the styles by passing a `variant` prop.',
-    },
+Default.storyName = 'default'
+Default.parameters = {
+  info: {
+    text:
+      'By default the Button component will render an html <button />. You can select one of the styles by passing a `variant` prop.',
   },
 }
 
@@ -31,13 +29,11 @@ export const AsGatsbyLink = () => (
   <Button to="/relative-url">{text('Link Text', 'Gatsby Link')}</Button>
 )
 
-AsGatsbyLink.story = {
-  name: 'as Gatsby <Link />',
-  parameters: {
-    info: {
-      text:
-        'If given a "to" prop which is a relative URL, it will automatically render a Gatsby <Link /> component',
-    },
+AsGatsbyLink.storyName = 'as Gatsby <Link />'
+AsGatsbyLink.parameters = {
+  info: {
+    text:
+      'If given a "to" prop which is a relative URL, it will automatically render a Gatsby <Link /> component',
   },
 }
 
@@ -45,13 +41,11 @@ export const AsExternalLink = () => (
   <Button to="https://google.com">{text('Link Text', 'External link')}</Button>
 )
 
-AsExternalLink.story = {
-  name: 'as external link',
-  parameters: {
-    info: {
-      text:
-        'If given a "to" prop which is an external URL, it will automatically render a html <a /> tag with the target attribute to open in a new tab and rel (noopener and noreferrer) security attributes.',
-    },
+AsExternalLink.storyName = 'as external link'
+AsExternalLink.parameters = {
+  info: {
+    text:
+      'If given a "to" prop which is an external URL, it will automatically render a html <a /> tag with the target attribute to open in a new tab and rel (noopener and noreferrer) security attributes.',
   },
 }
 
@@ -59,13 +53,11 @@ export const AsContactLink = () => (
   <Button to="mailto:test@test.com">{text('Link Text', 'Contact us')}</Button>
 )
 
-AsContactLink.story = {
-  name: 'as contact link',
-  parameters: {
-    info: {
-      text:
-        'If given a "to" prop which is an contact link (e.g. mailto, tel), it will automatically render a html <a /> tag with the target attribute to open in a new tab.',
-    },
+AsContactLink.storyName = 'as contact link'
+AsContactLink.parameters = {
+  info: {
+    text:
+      'If given a "to" prop which is an contact link (e.g. mailto, tel), it will automatically render a html <a /> tag with the target attribute to open in a new tab.',
   },
 }
 
@@ -83,13 +75,11 @@ export const WithWidthLayoutProps = () => (
   </Button>
 )
 
-WithWidthLayoutProps.story = {
-  name: 'with width / layout props',
-  parameters: {
-    info: {
-      text:
-        'You can pass styled-system width props (e.g. minWidth, maxWidth, width) with a valid CSS unit (e.g. % or px) to explicitly set the size of the button. You can also pass styled-system margin props (e.g. marginTop, marginBottom etc) to control the positioning of the button on the page.',
-    },
+WithWidthLayoutProps.storyName = 'with width / layout props'
+WithWidthLayoutProps.parameters = {
+  info: {
+    text:
+      'You can pass styled-system width props (e.g. minWidth, maxWidth, width) with a valid CSS unit (e.g. % or px) to explicitly set the size of the button. You can also pass styled-system margin props (e.g. marginTop, marginBottom etc) to control the positioning of the button on the page.',
   },
 }
 
@@ -114,12 +104,11 @@ export const WithResponsiveWidthLayoutProps = () => (
   </Button>
 )
 
-WithResponsiveWidthLayoutProps.story = {
-  name: 'with responsive width / layout props',
-  parameters: {
-    info: {
-      text:
-        'You can pass an object as props with keys that map to the theme breakpoints to apply responsive styles. Media queries are min-width (mobile-first)',
-    },
+WithResponsiveWidthLayoutProps.storyName =
+  'with responsive width / layout props'
+WithResponsiveWidthLayoutProps.parameters = {
+  info: {
+    text:
+      'You can pass an object as props with keys that map to the theme breakpoints to apply responsive styles. Media queries are min-width (mobile-first)',
   },
 }

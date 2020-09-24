@@ -27,6 +27,4 @@ export const Default = () => (
   </PageIntro>
 )
 
-Default.story = {
-  name: 'default',
-}
+Default.storyName = 'default'

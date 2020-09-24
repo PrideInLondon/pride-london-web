@@ -10,9 +10,7 @@ export const RelativeLink = () => (
   <Navigate to={text('to', '/')}>A relative link</Navigate>
 )
 
-RelativeLink.story = {
-  name: 'relative link',
-}
+RelativeLink.storyName = 'relative link'
 
 export const AbsoluteLink = () => (
   <Navigate to={text('to', 'https://prideinlondon.org')}>
@@ -20,9 +18,7 @@ export const AbsoluteLink = () => (
   </Navigate>
 )
 
-AbsoluteLink.story = {
-  name: 'absolute link',
-}
+AbsoluteLink.storyName = 'absolute link'
 
 export const ContactLink = () => (
   <Navigate to={text('to', 'mailto:example@prideinlondon.org')}>
@@ -30,6 +26,4 @@ export const ContactLink = () => (
   </Navigate>
 )
 
-ContactLink.story = {
-  name: 'contact link',
-}
+ContactLink.storyName = 'contact link'

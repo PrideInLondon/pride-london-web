@@ -12,6 +12,4 @@ export const Default = () => (
   </CTALink>
 )
 
-Default.story = {
-  name: 'default',
-}
+Default.storyName = 'default'

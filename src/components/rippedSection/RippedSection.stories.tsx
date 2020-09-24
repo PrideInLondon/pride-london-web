@@ -33,9 +33,7 @@ export const TopAndBottomVariants = () => (
   </RippedSection>
 )
 
-TopAndBottomVariants.story = {
-  name: 'Top and Bottom variants',
-}
+TopAndBottomVariants.storyName = 'Top and Bottom variants'
 
 export const TopVariant = () => (
   <RippedSection
@@ -50,9 +48,7 @@ export const TopVariant = () => (
   </RippedSection>
 )
 
-TopVariant.story = {
-  name: 'Top variant',
-}
+TopVariant.storyName = 'Top variant'
 
 export const BottomVariant = () => (
   <RippedSection
@@ -67,9 +63,7 @@ export const BottomVariant = () => (
   </RippedSection>
 )
 
-BottomVariant.story = {
-  name: 'Bottom variant',
-}
+BottomVariant.storyName = 'Bottom variant'
 
 export const WithBackgroundImage = () => (
   <RippedSection
@@ -97,6 +91,4 @@ export const WithBackgroundImage = () => (
   </RippedSection>
 )
 
-WithBackgroundImage.story = {
-  name: 'With background image',
-}
+WithBackgroundImage.storyName = 'With background image'

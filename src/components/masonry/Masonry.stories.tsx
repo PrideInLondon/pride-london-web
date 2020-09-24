@@ -32,6 +32,4 @@ export const Default = () => (
   </Masonry>
 )
 
-Default.story = {
-  name: 'default',
-}
+Default.storyName = 'default'
