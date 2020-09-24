@@ -1,24 +1,26 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { text } from '@storybook/addon-knobs'
+import { select, text } from '@storybook/addon-knobs'
 import { ShareBar } from './ShareBar'
+import { SHARE_BAR_VARIANTS } from './ShareBar.types'
 
-const CONTENT = 'Content'
+export default {
+  title: 'ShareBar',
+}
 
-const dynamicContent = () => ({
-  title: text('Title', 'Pride in London', CONTENT),
-  body: text(
-    'Body',
-    'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community',
-    CONTENT
-  ),
-  url: text('URL', 'http://prideinlondon.org', CONTENT),
-})
+export const Default = () => (
+  <ShareBar
+    variant={select('variant', SHARE_BAR_VARIANTS, SHARE_BAR_VARIANTS[0])}
+    content={{
+      title: text('title', 'Pride in London'),
+      body: text(
+        'body',
+        'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community'
+      ),
+      url: text('url', 'http://prideinlondon.org'),
+    }}
+  />
+)
 
-storiesOf('ShareBar', module)
-  .add('horizontal', () => (
-    <ShareBar variant="horizontal" content={dynamicContent()} />
-  ))
-  .add('vertical', () => (
-    <ShareBar variant="vertical" content={dynamicContent()} />
-  ))
+Default.story = {
+  name: 'default',
+}
