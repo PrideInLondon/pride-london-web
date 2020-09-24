@@ -1,23 +1,26 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { select, text } from '@storybook/addon-knobs'
+import { select, text, files } from '@storybook/addon-knobs'
 import logo from '../../assets/logo.png'
 import { Video } from './Video'
+import { VIDEO_HOSTS } from './Video.types'
 
-const hosts = {
-  Vimeo: 'vimeo',
-  YouTube: 'youtube',
-} as const
+export default {
+  title: 'Video',
+}
 
-storiesOf('Video', module).add('default', () => (
+export const Default = () => (
   <Video
-    host={select('Host', hosts, hosts.YouTube)}
-    videoId={text('Video Id', 'TIExvoJXwKE')}
+    host={select('host', VIDEO_HOSTS, VIDEO_HOSTS[1])}
+    videoId={text('videoId', 'TIExvoJXwKE')}
     coverImage={{
-      src: logo,
-      alt: text('Cover Image Alt Text', 'The Pride in London Logo'),
+      src: files('src', '.jpg, .png', [logo], 'coverImage')[0],
+      alt: text('alt', 'The Pride in London Logo', 'coverImage'),
     }}
-    caption={text('Caption Text', 'Pride in London presents: You! Me! Us! We!')}
+    caption={text('caption', 'Pride in London presents: You! Me! Us! We!')}
     maxWidth={650}
   />
-))
+)
+
+Default.story = {
+  name: 'default',
+}
