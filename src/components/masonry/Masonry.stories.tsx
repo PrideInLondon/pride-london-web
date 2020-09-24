@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { colors } from '../../theme/colors'
 import { Card, CardContent, CardTitle } from '../card'
 import { Masonry } from './Masonry'
@@ -16,7 +15,11 @@ const ITEMS = [
   { height: 200, color: colors.pink },
 ]
 
-storiesOf(Masonry.name, module).add('default', () => (
+export default {
+  title: 'Masonry',
+}
+
+export const Default = () => (
   <Masonry columns={{ default: 1, md: 2, lg: 3 }}>
     {ITEMS.map(({ height, color }, index) => (
       <Card key={color} to="#">
@@ -27,4 +30,8 @@ storiesOf(Masonry.name, module).add('default', () => (
       </Card>
     ))}
   </Masonry>
-))
+)
+
+Default.story = {
+  name: 'default',
+}
