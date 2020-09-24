@@ -3,7 +3,7 @@ import { text } from '@storybook/addon-knobs'
 import { CTABox } from './CTABox'
 
 export default {
-  title: 'CTA Box',
+  title: 'CTABox',
 }
 
 export const Default = () => (
