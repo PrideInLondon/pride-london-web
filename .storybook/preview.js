@@ -1,7 +1,6 @@
 import React from 'react'
-import { addDecorator, addParameters } from '@storybook/react'
+import { addDecorator } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
-import { withInfo } from '@storybook/addon-info'
 import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
@@ -34,14 +33,7 @@ window.___navigate = pathname => {
 }
 
 addDecorator(withA11y)
-addDecorator(withInfo)
 addDecorator(withKnobs)
-addParameters({
-  info: {
-    inline: true,
-    maxPropObjectKeys: 10,
-  },
-})
 addDecorator(story => (
   <ThemeProvider theme={theme}>
     <>
