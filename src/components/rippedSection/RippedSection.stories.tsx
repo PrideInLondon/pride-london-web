@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { select, color, files } from '@storybook/addon-knobs'
 import { colors } from '../../theme/colors'
 import logo from '../../assets/logo.png'
@@ -8,7 +7,11 @@ import { RipVariant } from './Rip.types'
 
 const variants: RipVariant[] = [1, 2, 3, 4, 5]
 
-storiesOf(RippedSection.name, module).add('Top and Bottom variants', () => (
+export default {
+  title: 'RippedSection',
+}
+
+export const TopAndBottomVariants = () => (
   <RippedSection
     rips={{
       top: {
@@ -28,9 +31,13 @@ storiesOf(RippedSection.name, module).add('Top and Bottom variants', () => (
   >
     <div style={{ height: 400 }} />
   </RippedSection>
-))
+)
 
-storiesOf(RippedSection.name, module).add('Top variant', () => (
+TopAndBottomVariants.story = {
+  name: 'Top and Bottom variants',
+}
+
+export const TopVariant = () => (
   <RippedSection
     rips={{
       top: {
@@ -41,9 +48,13 @@ storiesOf(RippedSection.name, module).add('Top variant', () => (
   >
     <div style={{ height: 400 }} />
   </RippedSection>
-))
+)
 
-storiesOf(RippedSection.name, module).add('Bottom variant', () => (
+TopVariant.story = {
+  name: 'Top variant',
+}
+
+export const BottomVariant = () => (
   <RippedSection
     rips={{
       bottom: {
@@ -54,9 +65,13 @@ storiesOf(RippedSection.name, module).add('Bottom variant', () => (
   >
     <div style={{ height: 400 }} />
   </RippedSection>
-))
+)
 
-storiesOf(RippedSection.name, module).add('With background image', () => (
+BottomVariant.story = {
+  name: 'Bottom variant',
+}
+
+export const WithBackgroundImage = () => (
   <RippedSection
     rips={{
       top: {
@@ -80,4 +95,8 @@ storiesOf(RippedSection.name, module).add('With background image', () => (
       alt="Example for Storybook"
     />
   </RippedSection>
-))
+)
+
+WithBackgroundImage.story = {
+  name: 'With background image',
+}
