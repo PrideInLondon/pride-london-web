@@ -10,7 +10,6 @@
     "format": "prettier --write 'src/**/*.js' && prettier-package-json --write",
     "lint": "eslint 'src/**/*.[jt]s?(x)' && remark . --frail",
     "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
-    "storybook": "NODE_ENV=production start-storybook -p 9001 -c .storybook",
     "test": "yarn jest --runInBand",
     "test:watch": "yarn jest --watch"
   },
@@ -70,10 +69,6 @@
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
     "@babel/register": "^7.8.3",
-    "@storybook/addon-a11y": "^6.0.21",
-    "@storybook/addon-actions": "^6.0.21",
-    "@storybook/addon-knobs": "^6.0.21",
-    "@storybook/react": "^6.0.21",
     "@testing-library/jest-dom": "^5.0.2",
     "@testing-library/react": "^9.4.0",
     "@testing-library/react-hooks": "^3.2.1",
