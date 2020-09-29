@@ -40,7 +40,6 @@ const Template: Story<BoxProps & StoryProps> = ({
 )
 
 export const Default = Template.bind({})
-Default.storyName = 'default'
 Default.args = {
   display: { default: 'block', md: 'flex' },
   alignItems: 'center',
