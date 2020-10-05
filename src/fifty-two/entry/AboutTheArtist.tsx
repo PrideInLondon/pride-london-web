@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby' // lgtm [js/unused-local-variable]
+import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { lg, xl_mob } from '../../theme/space'
 import { H6 } from '../../components/typography'

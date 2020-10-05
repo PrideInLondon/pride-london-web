@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { darken } from 'polished'
-import { Link } from 'gatsby'
+import Link from 'gatsby-link'
 import { mediaQueries } from '../../theme/mediaQueries'
 import theme from '../../theme/theme'
 
