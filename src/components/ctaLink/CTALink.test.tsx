@@ -1,5 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
+import { axe } from 'jest-axe'
 import { CTALink } from './CTALink'
 
 const link = {
@@ -26,5 +27,10 @@ describe('CTA Link', () => {
     )
     expect(queryByRole('link')).toBeTruthy()
     expect(queryByText(/›/)).toBeFalsy()
+  })
+  it('should have no accessibility violations', async () => {
+    const { container } = render(<CTALink to={link.url}>{link.text}</CTALink>)
+    const results = await axe(container)
+    expect(results).toHaveNoViolations()
   })
 })
