@@ -42,12 +42,12 @@ cp .env.example .env.development
 
 Replace the values on the right of the `=` signs with the following values:
 
-| key               | required | default              | other values             | description                                                     |
-| ----------------- | -------- | -------------------- | ------------------------ | --------------------------------------------------------------- |
-| `SPACE_ID`        | yes      | **see Contentful**   | -                        | The Contentful `spaceId` to target                              |
-| `ACCESS_TOKEN`    | yes      | **see Contentful**   | -                        | The Contentful `accessToken` for the given host and environment |
-| `CONTENTFUL_HOST` | no       | `cdn.contentful.com` | `preview.contentful.com` | The Contentful `host` to retrieve data from                     |
-| `CONTENTFUL_ENV`  | no       | `master`             | `development`            | The Contentful `environment` to target                          |
+| key                       | required | default              | other values             | description                                                     |
+| ------------------------- | -------- | -------------------- | ------------------------ | --------------------------------------------------------------- |
+| `CONTENTFUL_SPACE_ID`     | yes      | **see Contentful**   | -                        | The Contentful `spaceId` to target                              |
+| `CONTENTFUL_ACCESS_TOKEN` | yes      | **see Contentful**   | -                        | The Contentful `accessToken` for the given host and environment |
+| `CONTENTFUL_HOST`         | no       | `cdn.contentful.com` | `preview.contentful.com` | The Contentful `host` to retrieve data from                     |
+| `CONTENTFUL_ENV`          | no       | `master`             | `development`            | The Contentful `environment` to target                          |
 
 More information on what each of these values mean can be found [here](https://www.gatsbyjs.com/plugins/gatsby-source-contentful/#configuration-options).
 
