@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
-import NewsContainer from './NewsContainer'
+import NewsContainer, { pageSize } from './NewsContainer'
 
 jest.mock('./FeaturedArticleContainer', () => () => <div />)
 
@@ -36,6 +36,9 @@ describe(NewsContainer.name, () => {
     const researchCategoryFilter = screen.getByLabelText('Research')
     fireEvent.click(researchCategoryFilter)
     expect(screen.getAllByRole('link').length).toBe(2)
+    const allArticlesCategoryFilter = screen.getByLabelText('All Articles')
+    fireEvent.click(allArticlesCategoryFilter)
+    expect(screen.getAllByRole('link').length).toBe(pageSize)
   })
 
   it('should show more articles when show more button is clicked', () => {
