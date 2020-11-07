@@ -42,13 +42,18 @@ cp .env.example .env.development
 
 Replace the values on the right of the `=` signs with the following values:
 
-- `CONTENTFUL` section: the API details from Contentful's Pride `web` space
+| key                       | required | default              | other values             | description                                                     |
+| ------------------------- | -------- | -------------------- | ------------------------ | --------------------------------------------------------------- |
+| `CONTENTFUL_SPACE_ID`     | yes      | **see Contentful**   | -                        | The Contentful `spaceId` to target                              |
+| `CONTENTFUL_ACCESS_TOKEN` | yes      | **see Contentful**   | -                        | The Contentful `accessToken` for the given host and environment |
+| `CONTENTFUL_HOST`         | no       | `cdn.contentful.com` | `preview.contentful.com` | The Contentful `host` to retrieve data from                     |
+| `CONTENTFUL_ENV`          | no       | `master`             | `development`            | The Contentful `environment` to target                          |
 
-#### Preview draft content :mag:
+More information on what each of these values mean can be found [here](https://www.gatsbyjs.com/plugins/gatsby-source-contentful/#configuration-options).
 
-In order for Contentful draft content (i.e. unpublished content) to be available from a development setup, the `PREVIEW_CONTENT` boolean to be set to `true` in the [`.env.development`](./.env.development) file. This can simply be changed back to `false` in order to pull published content again.
+In general, the default values will suffice for development purposes. The `host` override is useful for when there is the requirement to target draft content (i.e. unpublished content). The `environment` override is useful for when there is the requirement to target the development version of the content model.
 
-If the app is not reading the content from the correct environment, try the following steps:
+If the app is not reading the content from the correct host or environment, try the following steps:
 
 - ensure all running app instances are closed between config changes
 - delete the local Contentful cache via the command `gatsby clean`
