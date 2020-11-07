@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent, screen } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import NewsContainer, { pageSize } from './NewsContainer'
 
 jest.mock('./FeaturedArticleContainer', () => () => <div />)
@@ -30,23 +30,23 @@ const testCategories = [
 
 describe(NewsContainer.name, () => {
   it('should filter articles by filter when category button is clicked', () => {
-    render(
+    const { getByLabelText, getAllByRole } = render(
       <NewsContainer articles={testArticles} categories={testCategories} />
     )
-    const researchCategoryFilter = screen.getByLabelText('Research')
+    const researchCategoryFilter = getByLabelText('Research')
     fireEvent.click(researchCategoryFilter)
-    expect(screen.getAllByRole('link').length).toBe(2)
-    const allArticlesCategoryFilter = screen.getByLabelText('All Articles')
+    expect(getAllByRole('link').length).toBe(2)
+    const allArticlesCategoryFilter = getByLabelText('All Articles')
     fireEvent.click(allArticlesCategoryFilter)
-    expect(screen.getAllByRole('link').length).toBe(pageSize)
+    expect(getAllByRole('link').length).toBe(pageSize)
   })
 
   it('should show more articles when show more button is clicked', () => {
-    render(
+    const { getByRole, getAllByRole } = render(
       <NewsContainer articles={testArticles} categories={testCategories} />
     )
-    const showMoreButton = screen.getByRole('button')
+    const showMoreButton = getByRole('button')
     fireEvent.click(showMoreButton)
-    expect(screen.getAllByRole('link').length).toBe(17)
+    expect(getAllByRole('link').length).toBe(17)
   })
 })
