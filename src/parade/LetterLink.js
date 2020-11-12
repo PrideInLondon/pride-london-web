@@ -7,7 +7,7 @@ const LetterLink = ({ letter, isDisabled, isActive }) => {
     ? { isDisabled }
     : { href: `#parade-group-${letter}`, isDisabled }
   return (
-    <StyledLetterLink isActive={isActive} {...letterAttributes}>
+    <StyledLetterLink isActive={isActive} {...letterAttributes} role="link">
       {letter.toUpperCase()}
     </StyledLetterLink>
   )
