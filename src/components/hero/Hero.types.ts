@@ -1,3 +1,5 @@
-export interface WrapperProps {
-  background: string
+export interface HeroProps {
+  background?: string
+  text?: React.ReactNode
+  color?: string
 }

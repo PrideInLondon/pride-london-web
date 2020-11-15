@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { media } from '../../theme/media'
-import { WrapperProps } from './Hero.types'
+import { HeroProps } from './Hero.types'
 
-export const Wrapper = styled.div<WrapperProps>`
+export const Wrapper = styled.div<HeroProps>`
   display: flex;
   background-image: url(${props => props.background});
   background-size: cover;
