@@ -31,7 +31,7 @@
     "gatsby-plugin-rollbar": "^1.0.0",
     "gatsby-plugin-sharp": "^2.6.21",
     "gatsby-plugin-sitemap": "^2.4.11",
-    "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-plugin-styled-components": "^3.4.0",
     "gatsby-source-contentful": "^2.3.29",
     "gatsby-source-filesystem": "^2.3.19",
     "gatsby-transformer-sharp": "^2.5.11",
