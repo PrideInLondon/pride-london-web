@@ -44,7 +44,7 @@
     "react": "^16.9.0",
     "react-dates": "16.7.0",
     "react-dom": "^16.12.0",
-    "react-focus-lock": "^2.4.1",
+    "react-focus-lock": "^2.5.0",
     "react-helmet": "^5.2.1",
     "react-intercom": "^1.0.15",
     "react-markdown": "^4.2.2",
