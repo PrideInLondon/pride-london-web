@@ -1,14 +1,13 @@
 import styled from 'styled-components'
-import { variant, layout, LayoutProps } from 'styled-system'
+import { variant } from 'styled-system'
 
-export const StyledSvg = styled.svg<
-  LayoutProps & {
-    variant: string
-  }
->`
+export const StyledSvg = styled.svg<{
+  variant: string
+}>`
   position: absolute;
   z-index: 9;
   width: 100%;
+  height: auto;
 
   ${variant({
     variants: {
@@ -21,6 +20,4 @@ export const StyledSvg = styled.svg<
       },
     },
   })}
-
-  ${layout}
 `
