@@ -17,7 +17,7 @@ module.exports = {
     legalName: 'London LGBT+ Community Pride CIC',
     title: 'Pride in London',
     description:
-      "The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community",
+      'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community',
     appleAppId: '1250496471',
     phone: '+448443445428',
     email: 'info@prideinlondon.org',
@@ -46,14 +46,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: `${process.env.SPACE_ID}`,
-        accessToken: `${
-          process.env.PREVIEW_CONTENT === 'true'
-            ? process.env.PREVIEW_ACCESS_TOKEN
-            : process.env.ACCESS_TOKEN
-        }`,
-        ...(process.env.PREVIEW_CONTENT === 'true' && {
-          host: 'preview.contentful.com',
+        spaceId: `${process.env.CONTENTFUL_SPACE_ID}`,
+        accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+        ...(process.env.CONTENTFUL_HOST && {
+          host: process.env.CONTENTFUL_HOST,
+        }),
+        ...(process.env.CONTENTFUL_ENV && {
+          environment: process.env.CONTENTFUL_ENV,
         }),
       },
     },
