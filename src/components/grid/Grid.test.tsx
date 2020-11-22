@@ -1,20 +1,15 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
 import { AnimatedFlexColumn } from './index'
 
 describe('The FlexColumn component', () => {
-  const wrapper = shallow(
+  const { getAllByText } = render(
     <AnimatedFlexColumn animation={false}>
       <p>Testing</p>
     </AnimatedFlexColumn>
   )
 
   it('render', () => {
-    expect(
-      wrapper
-        .find('p')
-        .first()
-        .text()
-    ).toBe('Testing')
+    expect(getAllByText('Testing')).toBeTruthy()
   })
 })
