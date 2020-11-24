@@ -37,15 +37,6 @@ describe('Parade Groups', () => {
     expect(getByText('B group')).toBeVisible()
   })
 
-  it('should set active letter styles', () => {
-    const { getByLabelText, getByText, getByRole } = render(
-      <ParadeGroups paradeGroups={paradeGroups} categories={categories} />
-    )
-    fireEvent.click(getByLabelText('Arts'))
-    expect(getByText('A group')).toBeVisible()
-    fireEvent.click(getByRole('link', { name: /a/i }))
-  })
-
   it('should have no accessibility violations', async () => {
     const { container } = render(
       <ParadeGroups paradeGroups={paradeGroups} categories={categories} />
