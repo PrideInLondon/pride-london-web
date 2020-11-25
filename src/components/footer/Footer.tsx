@@ -129,11 +129,6 @@ const MiddleSection = ({
     </PartnersLinksContainer>
   </>
 )
-declare global {
-  interface Window {
-    Metomic: any
-  }
-}
 
 const LowerSection = () => (
   <LegalContainer>
@@ -156,10 +151,7 @@ const LowerSection = () => (
       <LegalLink
         component="button"
         onClick={() => {
-          if (
-            typeof window !== 'undefined' &&
-            typeof window['Metomic'] !== 'undefined'
-          )
+          if (typeof window !== 'undefined' && window.Metomic)
             window.Metomic('ConsentManager:show')
         }}
       >
