@@ -1,10 +1,10 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 import NewsContainer, { pageSize } from './NewsContainer'
 
 jest.mock('./FeaturedArticleContainer', () => () => <div />)
 
-const makeTestArticles = (quantity, category) => {
+const makeTestArticles = (quantity: any, category: any) => {
   const array = []
   for (let i = 0; i < quantity; i++) {
     array.push({
@@ -30,26 +30,23 @@ const testCategories = [
 
 describe(NewsContainer.name, () => {
   it('should filter articles by filter when category button is clicked', () => {
-    const instance = mount(
+    const { getByLabelText, getAllByRole } = render(
       <NewsContainer articles={testArticles} categories={testCategories} />
     )
-
-    const researchCategoryFilterButton = instance.find('[type="radio"]').last()
-    researchCategoryFilterButton.simulate('click')
-    expect(instance.find('NewsCard').length).toBe(2)
-
-    const generalCategoryFilterButton = instance.find('[type="radio"]').first()
-    generalCategoryFilterButton.simulate('click')
-    expect(instance.find('NewsCard').length).toBe(pageSize)
+    const researchCategoryFilter = getByLabelText('Research')
+    fireEvent.click(researchCategoryFilter)
+    expect(getAllByRole('link').length).toBe(2)
+    const allArticlesCategoryFilter = getByLabelText('All Articles')
+    fireEvent.click(allArticlesCategoryFilter)
+    expect(getAllByRole('link').length).toBe(pageSize)
   })
 
   it('should show more articles when show more button is clicked', () => {
-    const instance = mount(
+    const { getByRole, getAllByRole } = render(
       <NewsContainer articles={testArticles} categories={testCategories} />
     )
-    expect(instance.find('NewsCard').length).toBe(9)
-    const showMoreButton = instance.find('button').last()
-    showMoreButton.simulate('click')
-    expect(instance.find('NewsCard').length).toBe(17)
+    const showMoreButton = getByRole('button')
+    fireEvent.click(showMoreButton)
+    expect(getAllByRole('link').length).toBe(17)
   })
 })
