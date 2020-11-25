@@ -135,12 +135,6 @@ declare global {
   }
 }
 
-const metomicManageCookies = () => {
-  if (typeof window['Metomic'] !== 'undefined') {
-    window.Metomic('ConsentManager:show')
-  }
-}
-
 const LowerSection = () => (
   <LegalContainer>
     <P variant="sm">
@@ -159,7 +153,16 @@ const LowerSection = () => (
       <Typeform id="DYvC2n">
         <LegalLink component="button">Report a website bug</LegalLink>
       </Typeform>
-      <LegalLink component="button" onClick={metomicManageCookies}>
+      <LegalLink
+        component="button"
+        onClick={() => {
+          if (
+            typeof window !== 'undefined' &&
+            typeof window['Metomic'] !== 'undefined'
+          )
+            window.Metomic('ConsentManager:show')
+        }}
+      >
         Manage cookies
       </LegalLink>
       <LegalLink
