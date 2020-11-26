@@ -17,6 +17,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^14.0.0",
+    "@metomic/react": "^0.1.2",
     "@rebass/grid": "^6.0.0",
     "@types/shortid": "^0.0.29",
     "aria-hidden": "^1.1.1",

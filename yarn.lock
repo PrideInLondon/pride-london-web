@@ -2739,6 +2739,16 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.11.tgz#96599e8a959902cec0c1d39492a489a2a8151325"
   integrity sha512-VbGXtjLOa7RK0w27o9eekGea190sXoJZgltFZzywmLNcBJn3sOynfyNUXH1rx2pyCOOfPcTBYg/Zf9Isfp3BNg==
 
+"@metomic/react@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@metomic/react/-/react-0.1.2.tgz#54d2c333c9b3db3401a16cb4c5d4c2eb2bc8f779"
+  integrity sha512-CHRoI8c4N0zhw0Fj58G/1bTG392trLFgAL/Wx7VF+fArxefkxoxStB6h/vEh4cHyTdSArU7LV2K8I6N+TAfgVA==
+  dependencies:
+    prop-types "^15.7.2"
+    react "^16.13.1"
+    react-dom "^16.13.1"
+    react-intercom "^1.0.15"
+
 "@mikaelkristiansson/domready@^1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@mikaelkristiansson/domready/-/domready-1.0.10.tgz#f6d69866c0857664e70690d7a0bfedb72143adb5"
@@ -13161,9 +13171,9 @@ jpeg-js@^0.3.4:
   integrity sha512-9IXdWudL61npZjvLuVe/ktHiA41iE8qFyLB+4VDTblEsWBzeg8WQTlktdUK4CdncUqtUgUg0bbOmTE2bKBKaBQ==
 
 jquery@^3.4.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
-  integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.0.tgz#9980b97d9e4194611c36530e7dc46a58d7340fc9"
+  integrity sha512-Xb7SVYMvygPxbFMpTFQiHh1J7HClEaThguL15N/Gg37Lri/qKyhRGZYzHRyLH8Stq3Aow0LsHO2O2ci86fCrNQ==
 
 js-cookie@^2.2.1:
   version "2.2.1"
@@ -17061,7 +17071,7 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dom@^16.12.0, react-dom@^16.8.3:
+react-dom@^16.12.0, react-dom@^16.13.1, react-dom@^16.8.3:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -17422,7 +17432,7 @@ react-with-styles@^3.1.0:
     prop-types "^15.6.2"
     react-with-direction "^1.3.0"
 
-react@^16.8.0, react@^16.8.3, react@^16.9.0:
+react@^16.13.1, react@^16.8.0, react@^16.8.3, react@^16.9.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==

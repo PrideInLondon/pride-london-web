@@ -10,4 +10,9 @@ export const VideoContainer = styled.div`
     height: 100%;
     width: 100%;
   }
+  div {
+    position: absolute;
+    padding-bottom: 56.25%;
+    width: 100% !important;
+  }
 `
