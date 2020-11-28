@@ -5,7 +5,6 @@ import theme from '../theme/theme'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
 import { Banner } from '../components/banner'
-import bannerBackground from './bannerBackground.jpg'
 import VolunteerBoxInfo from './VolunteerBoxInfo'
 import CampaignContainer from './CampaignContainer'
 import LatestNewsContainer from './LatestNewsContainer'
@@ -32,7 +31,6 @@ const HomePage = ({
       titleText="Pride in London"
       subtitleText="The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community."
       titlePosition="bottom"
-      imageSrc={bannerBackground}
       color={theme.colors.eucalyptusGreen}
       large
       allowContentUnderflow
