@@ -5,8 +5,8 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
+import { ConsentGate, MetomicProvider } from '@metomic/react'
 import { Helmet } from '../components/helmet'
-import CookieNotice from '../cookieNotice'
 import Intercom from '../components/intercom'
 import EventsContext from '../contexts/eventsContext'
 import theme from '../theme/theme'
@@ -105,26 +105,33 @@ const Layout = ({ children, location: { pathname } }) => (
             })
             .sort(sortEventsByStartTime)}
         >
-          <Fragment>
-            <Helmet title={siteMetadata.title} />
-            <LayoutHelmet pathname={pathname} {...siteMetadata} />
-            <SiteWrapper>
-              <Navigation
-                logoUrl={
-                  pathname.replace(/\/$/, '') === '/events' ? logoWhite : logo
-                }
-                backgroundColor={
-                  pathname.replace(/\/$/, '') === '/events'
-                    ? colors.mexicanPink
-                    : colors.indigo
-                }
-              />
-              <main>{children}</main>
-              <Footer {...siteMetadata} />
-              <CookieNotice />
-            </SiteWrapper>
-            <Intercom />
-          </Fragment>
+          <MetomicProvider projectId={process.env.GATSBY_METOMIC_CLIENT_ID}>
+            <Fragment>
+              <Helmet title={siteMetadata.title} />
+              <LayoutHelmet pathname={pathname} {...siteMetadata} />
+              <SiteWrapper>
+                <Navigation
+                  logoUrl={
+                    pathname.replace(/\/$/, '') === '/events' ? logoWhite : logo
+                  }
+                  backgroundColor={
+                    pathname.replace(/\/$/, '') === '/events'
+                      ? colors.mexicanPink
+                      : colors.indigo
+                  }
+                />
+                <main>{children}</main>
+                <Footer {...siteMetadata} />
+              </SiteWrapper>
+            </Fragment>
+            <ConsentGate
+              micropolicy="chat"
+              placeholder="@metomic/intercom"
+              placeholderParams={{ color: '#ea2c61', position: 'right' }}
+            >
+              <Intercom />
+            </ConsentGate>
+          </MetomicProvider>
         </EventsContext.Provider>
       )}
     />
