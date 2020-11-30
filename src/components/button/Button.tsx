@@ -22,7 +22,7 @@ export const Button: ButtonSignature = (
   if (hasToProp(props)) {
     const { as, ...anchorProps } = handleUrl(to!)
     return (
-      <StyledButton renderAs={as} {...anchorProps} {...props}>
+      <StyledButton renderAs={as} {...props} {...anchorProps}>
         {children}
       </StyledButton>
     )
