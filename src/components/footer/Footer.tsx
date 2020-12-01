@@ -150,6 +150,15 @@ const LowerSection = () => (
       </Typeform>
       <LegalLink
         component="button"
+        onClick={() => {
+          if (typeof window !== 'undefined' && window.Metomic)
+            window.Metomic('ConsentManager:show')
+        }}
+      >
+        Manage cookies
+      </LegalLink>
+      <LegalLink
+        component="button"
         onClick={() => IntercomAPI('showNewMessage')}
       >
         Contact us

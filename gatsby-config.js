@@ -34,6 +34,12 @@ module.exports = {
     snapchat: 'http://www.snapchat.com/add/LondonLGBTPride',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: process.env.GATSBY_GTM_ID,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
