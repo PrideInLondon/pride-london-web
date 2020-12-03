@@ -6,8 +6,7 @@ export interface SocialLinkProps {
   name: IconName
 }
 
-export interface Talent {
-  name: string
+interface SocialLinks {
   website: string
   instagram: string
   email: string
@@ -15,4 +14,7 @@ export interface Talent {
   twitter: string
 }
 
-export interface TalentProfileProps extends Talent, SpaceProps, LayoutProps {}
+export interface TalentProfileProps
+  extends SocialLinks,
+    SpaceProps,
+    LayoutProps {}
