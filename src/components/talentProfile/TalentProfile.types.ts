@@ -1,3 +1,4 @@
+import { Document } from '@contentful/rich-text-types'
 import { SpaceProps, LayoutProps } from 'styled-system'
 import { IconName } from '../../components/icon/Icon.types'
 
@@ -8,6 +9,9 @@ export interface SocialLinkProps {
 
 export interface TalentProfileProps extends SpaceProps, LayoutProps {
   type: string
+  bio: {
+    json: Document
+  }
   website?: string
   instagram?: string
   email?: string
