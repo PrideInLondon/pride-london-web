@@ -6,17 +6,11 @@ export interface SocialLinkProps {
   name: IconName
 }
 
-interface SocialLinks {
-  website: string
-  instagram: string
-  email: string
-  facebook: string
-  twitter: string
-}
-
-export interface TalentProfileProps
-  extends SocialLinks,
-    SpaceProps,
-    LayoutProps {
+export interface TalentProfileProps extends SpaceProps, LayoutProps {
   type: string
+  website?: string
+  instagram?: string
+  email?: string
+  facebook?: string
+  twitter?: string
 }
