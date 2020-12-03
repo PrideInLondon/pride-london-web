@@ -14,6 +14,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ url, name }) => (
 )
 
 export const TalentProfile: React.FC<TalentProfileProps> = ({
+  type,
   website,
   email,
   facebook,
@@ -23,7 +24,7 @@ export const TalentProfile: React.FC<TalentProfileProps> = ({
 }) => (
   <Wrapper {...props}>
     <Content padding={`${xl_mob}px ${lg}px`} marginTop="xxl">
-      <H6 as="h3">About the artist</H6>
+      <H6 as="h3">About the {type}</H6>
       <ShareBar>
         {website && <SocialLink url={website} name="website" />}
         {email && <SocialLink url={`mailto:${email}`} name="email" />}

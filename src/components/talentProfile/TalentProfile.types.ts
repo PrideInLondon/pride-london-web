@@ -17,4 +17,6 @@ interface SocialLinks {
 export interface TalentProfileProps
   extends SocialLinks,
     SpaceProps,
-    LayoutProps {}
+    LayoutProps {
+  type: string
+}

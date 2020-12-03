@@ -5,6 +5,7 @@ import { TalentProfile } from './'
 
 storiesOf('TalentProfile', module).add('default', () => (
   <TalentProfile
+    type={text('type', 'author')}
     website={text('website', 'https://prideinlondon.org')}
     email={text('email', 'example@prideinlondon.org')}
     facebook={text('facebook', 'https://facebook.com/PrideinLondon')}
