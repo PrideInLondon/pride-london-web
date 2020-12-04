@@ -5,6 +5,7 @@ import { IconName } from '../../components/icon/Icon.types'
 export interface SocialLinkProps {
   url: string
   name: IconName
+  talentType: string
 }
 
 export interface TalentProfileProps extends SpaceProps, LayoutProps {

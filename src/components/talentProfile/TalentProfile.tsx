@@ -8,8 +8,11 @@ import { renderMethods } from './renderMethods'
 import { Wrapper, ShareBar, StyledLink } from './TalentProfile.styles'
 import { SocialLinkProps, TalentProfileProps } from './TalentProfile.types'
 
-const SocialLink: React.FC<SocialLinkProps> = ({ url, name }) => (
-  <StyledLink<'a' | 'span' | typeof Link> {...handleUrl(url)}>
+const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentType }) => (
+  <StyledLink<'a' | 'span' | typeof Link>
+    {...handleUrl(url)}
+    aria-label={`${name} for the ${talentType}`}
+  >
     <Icon variant="indigo" name={name} />
   </StyledLink>
 )
@@ -28,11 +31,17 @@ export const TalentProfile: React.FC<TalentProfileProps> = ({
     <H6 as="h3">About the {type}</H6>
     {documentToReactComponents(json, renderMethods)}
     <ShareBar>
-      {website && <SocialLink url={website} name="website" />}
-      {email && <SocialLink url={`mailto:${email}`} name="email" />}
-      {facebook && <SocialLink url={facebook} name="facebook" />}
-      {twitter && <SocialLink url={twitter} name="twitter" />}
-      {instagram && <SocialLink url={instagram} name="instagram" />}
+      {website && <SocialLink url={website} name="website" talentType={type} />}
+      {email && (
+        <SocialLink url={`mailto:${email}`} name="email" talentType={type} />
+      )}
+      {facebook && (
+        <SocialLink url={facebook} name="facebook" talentType={type} />
+      )}
+      {twitter && <SocialLink url={twitter} name="twitter" talentType={type} />}
+      {instagram && (
+        <SocialLink url={instagram} name="instagram" talentType={type} />
+      )}
     </ShareBar>
   </Wrapper>
 )
