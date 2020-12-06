@@ -8,12 +8,12 @@ import { Category } from '../components/categoryFilter/CategoryFilter.types'
 import { Gallery } from '../components/gallery'
 import { Button } from '../components/button'
 import { GalleryCard } from '../components/galleryCard'
+import { renderMethods } from '../components/renderMethods'
 import { colors } from '../theme/colors'
 import { md } from '../theme/breakpoints'
 import { shuffle } from '../utils/iteration-utils'
 import { checkBreakpoint } from '../utils/style-utils'
 import { generateFiftyTwoEntrySlug } from './helpers'
-import { renderMethods } from './renderMethods'
 import {
   StyledPageIntro,
   StyledGalleryContainer,
