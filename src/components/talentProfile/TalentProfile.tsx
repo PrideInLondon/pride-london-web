@@ -6,7 +6,11 @@ import { Icon } from '../../components/icon'
 import { handleUrl } from '../../utils/location-utils'
 import { renderMethods } from './renderMethods'
 import { Wrapper, ShareBar, StyledLink } from './TalentProfile.styles'
-import { SocialLinkProps, TalentProfileProps } from './TalentProfile.types'
+import {
+  SocialProps,
+  SocialLinkProps,
+  TalentProfileProps,
+} from './TalentProfile.types'
 
 const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentType }) => (
   <StyledLink<'a' | 'span' | typeof Link>
@@ -26,22 +30,22 @@ export const TalentProfile: React.FC<TalentProfileProps> = ({
   twitter,
   instagram,
   ...props
-}) => (
-  <Wrapper {...props}>
-    <H6 as="h3">About the {type}</H6>
-    {documentToReactComponents(json, renderMethods)}
-    <ShareBar>
-      {website && <SocialLink url={website} name="website" talentType={type} />}
-      {email && (
-        <SocialLink url={`mailto:${email}`} name="email" talentType={type} />
-      )}
-      {facebook && (
-        <SocialLink url={facebook} name="facebook" talentType={type} />
-      )}
-      {twitter && <SocialLink url={twitter} name="twitter" talentType={type} />}
-      {instagram && (
-        <SocialLink url={instagram} name="instagram" talentType={type} />
-      )}
-    </ShareBar>
-  </Wrapper>
-)
+}) => {
+  const Social = (props: SocialProps) => (
+    <SocialLink talentType={type} {...props} />
+  )
+
+  return (
+    <Wrapper {...props}>
+      <H6 as="h3">About the {type}</H6>
+      {documentToReactComponents(json, renderMethods)}
+      <ShareBar>
+        {website && <Social url={website} name="website" />}
+        {email && <Social url={`mailto:${email}`} name="email" />}
+        {facebook && <Social url={facebook} name="facebook" />}
+        {twitter && <Social url={twitter} name="twitter" />}
+        {instagram && <Social url={instagram} name="instagram" />}
+      </ShareBar>
+    </Wrapper>
+  )
+}
