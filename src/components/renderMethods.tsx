@@ -3,8 +3,8 @@ import { NodeRenderer } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import styled from 'styled-components'
 
-import { P } from '../typography'
-import { colors } from '../../theme/colors'
+import { colors } from '../theme/colors'
+import { P } from './typography'
 
 const renderParagraph: NodeRenderer = (_node, children) => <P>{children}</P>
 
