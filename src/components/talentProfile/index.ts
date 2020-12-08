@@ -1,0 +1,1 @@
+export { TalentProfile } from './TalentProfile'
