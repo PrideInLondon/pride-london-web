@@ -102,6 +102,7 @@ const renderSponsorSection = node => {
 export const renderEmbeddedEntry = node => {
   switch (node.data.target.sys.contentType.sys.id) {
     case 'video':
+    case 'youTubeVideo':
       return renderVideo(node)
     case 'button':
       return renderButton(node)
