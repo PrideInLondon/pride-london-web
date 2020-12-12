@@ -5,5 +5,4 @@ export interface QuoteProps
     SpaceProps,
     LayoutProps {
   quote: string
-  caption: string
 }

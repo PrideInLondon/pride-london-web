@@ -6,10 +6,7 @@ import { Quote } from './Quote'
 describe('Quote', () => {
   it('should have no accessibility violations', async () => {
     const { container } = render(
-      <Quote
-        quote="I'm possessed by love, but isn't everybody?"
-        caption="Freddie Mercury"
-      />
+      <Quote quote="I'm possessed by love, but isn't everybody?" />
     )
     const results = await axe(container)
     expect(results).toHaveNoViolations()
