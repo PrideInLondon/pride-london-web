@@ -4,7 +4,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { H6 } from '../../components/typography'
 import { Icon } from '../../components/icon'
 import { handleUrl } from '../../utils/location-utils'
-import { renderMethods } from '../renderMethods'
+import { renderMethods } from '../richText/renderMethods'
 import { Wrapper, ShareBar, StyledLink } from './TalentProfile.styles'
 import {
   SocialProps,
