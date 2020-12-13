@@ -1,20 +1,13 @@
 import React from 'react'
 import { NodeRenderer } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
-import styled from 'styled-components'
-import { colors } from '../../theme/colors'
 import { P } from '../typography'
-import { Navigate } from '../navigate'
+import { Hyperlink } from './RichText.styles'
 
 const renderParagraph: NodeRenderer = (_node, children) => <P>{children}</P>
 
-const BodyLink = styled(Navigate)`
-  font-weight: 500;
-  color: ${colors.indigo};
-`
-
 const renderHyperlink: NodeRenderer = ({ data: { uri } }, children) => (
-  <BodyLink to={uri}>{children}</BodyLink>
+  <Hyperlink to={uri}>{children}</Hyperlink>
 )
 
 export const renderMethods = {
