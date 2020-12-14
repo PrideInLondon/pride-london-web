@@ -1,16 +1,7 @@
 import { FixedObject } from 'gatsby-image'
-import {
-  SpaceProps,
-  LayoutProps,
-  PositionProps,
-  ResponsiveValue,
-} from 'styled-system'
+import { SpaceProps, LayoutProps } from 'styled-system'
 
-export interface ImageContainerProps {
-  variant?: ResponsiveValue<'column' | 'row'>
-}
-
-export interface ImageElementProps {
+export interface ImageProps extends LayoutProps, SpaceProps {
   /**
    * Fixed details from Gatsby Image
    */
@@ -19,6 +10,5 @@ export interface ImageElementProps {
    * Alt description for image
    */
   alt: string
+  caption: string
 }
-
-export type ImageCaptionProps = SpaceProps & LayoutProps & PositionProps

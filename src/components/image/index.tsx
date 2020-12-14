@@ -1,1 +1,1 @@
-export { ImageContainer, ImageElement, ImageCaption } from './Image'
+export { Image } from './Image'
