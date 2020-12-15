@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { space, SpaceProps } from 'styled-system'
-import GatsbyImage from 'gatsby-image'
+import Image from 'gatsby-image'
 import { fontSizes } from '../../theme/fonts'
 import { colors } from '../../theme/colors'
 import { mediaQueries } from '../../theme/mediaQueries'
 
-export const StyledImageElement = styled(GatsbyImage)`
+export const StyledImageElement = styled(Image)`
   position: absolute;
   top: 50%;
   left: 50%;

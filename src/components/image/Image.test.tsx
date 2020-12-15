@@ -50,3 +50,19 @@ it('should render a Gatsby Image', () => {
   )
   expect(container.querySelector('.gatsby-image-wrapper')).toBeTruthy()
 })
+
+it('should render a caption', () => {
+  const { container } = render(
+    <MockImage
+      image={{
+        width: 200,
+        height: 200,
+        src: logo,
+        srcSet: logo,
+      }}
+      alt="Test Picture - PiL Logo"
+      caption="Test Caption"
+    />
+  )
+  expect(container).toHaveTextContent('Test Caption')
+})
