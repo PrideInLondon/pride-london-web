@@ -121,7 +121,6 @@
 /pfpabout     /pfpabout     301!
 /pfppledges     /pfppledges     301!
 /pfpsignedpledge     /pfpsignedpledge     301!
-/pgt/terms     /events/prides-got-talent/audition/terms-and-conditions 301!
 /pledge-for-politicians     /support-us/political-pledge     301!
 /pride-in-the-city     /support-us/pride-in-the-city     301!
 /pride-matters     /about-us/campaigns/2018     301!
@@ -210,5 +209,6 @@ https://events.prideinlondon.org/*     /events      301!
 /event/proud-coming-out-is-everyones-journey-270620-6FlCfDAqYxAtoC0lEGtkju /event/proud-coming-out-is-everyones-journey-6FlCfDAqYxAtoC0lEGtkju 301!
 /events/prides-got-talent /pgt 301!
 /events/prides-got-talent/audition /pgt/audition 301!
+/events/prides-got-talent/audition/terms-and-conditions /pgt/terms 301!
 /ymuw/apply /about-us/campaigns/you-me-us-we/casting-call 301!
 /ymuw /about-us/campaigns/you-me-us-we 301!
