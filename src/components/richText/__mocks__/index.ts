@@ -97,7 +97,7 @@ export const links: Document = {
   nodeType: 'document',
 }
 
-export const unorderedList: Document = {
+const generateList = (nodeType: 'unordered' | 'ordered'): Document => ({
   content: [
     {
       content: [
@@ -121,9 +121,13 @@ export const unorderedList: Document = {
         },
       ],
       // @ts-ignore
-      nodeType: 'unordered-list',
+      nodeType: `${nodeType}-list`,
     },
   ],
   // @ts-ignore
   nodeType: 'document',
-}
+})
+
+export const unorderedList = generateList('unordered')
+
+export const orderedList = generateList('ordered')
