@@ -96,3 +96,34 @@ export const links: Document = {
   // @ts-ignore
   nodeType: 'document',
 }
+
+export const unorderedList: Document = {
+  content: [
+    {
+      content: [
+        {
+          // @ts-ignore
+          content: [generateNode({ value: 'First item' })],
+          // @ts-ignore
+          nodeType: 'list-item',
+        },
+        {
+          // @ts-ignore
+          content: [generateNode({ value: 'Second item' })],
+          // @ts-ignore
+          nodeType: 'list-item',
+        },
+        {
+          // @ts-ignore
+          content: [generateNode({ value: 'Third item' })],
+          // @ts-ignore
+          nodeType: 'list-item',
+        },
+      ],
+      // @ts-ignore
+      nodeType: 'unordered-list',
+    },
+  ],
+  // @ts-ignore
+  nodeType: 'document',
+}
