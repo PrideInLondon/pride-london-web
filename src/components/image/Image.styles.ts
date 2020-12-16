@@ -1,11 +1,19 @@
 import styled from 'styled-components'
-import { space, SpaceProps } from 'styled-system'
+import { compose, layout, space, SpaceProps } from 'styled-system'
 import Image from 'gatsby-image'
 import { fontSizes } from '../../theme/fonts'
 import { colors } from '../../theme/colors'
 import { mediaQueries } from '../../theme/mediaQueries'
 
-export const StyledImageElement = styled(Image)`
+export const StyledFigure = styled.figure`
+  margin: 0 0 2em 0;
+  position: relative;
+  width: 100%;
+
+  ${compose(layout, space)}
+`
+
+export const StyledImage = styled(Image)`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -15,8 +23,7 @@ export const StyledImageElement = styled(Image)`
   padding: 10px;
 `
 
-export const ImageOverflow = styled.div`
-  overflow: hidden;
+export const ImageContainer = styled.div`
   position: relative;
   ${mediaQueries.md} {
     padding-top: 68%;
@@ -32,7 +39,7 @@ export const ImageWrapper = styled.div`
   right: 0;
 `
 
-export const StyledImageCaption = styled.figcaption<SpaceProps>`
+export const StyledFigureCaption = styled.figcaption<SpaceProps>`
   font-size: ${fontSizes.body_sm};
   font-weight: bold;
   text-align: right;

@@ -1,10 +1,11 @@
 import React from 'react'
 import { ImageProps } from './Image.types'
 import {
-  StyledImageElement,
-  ImageOverflow,
+  StyledImage,
+  ImageContainer,
+  StyledFigure,
   ImageWrapper,
-  StyledImageCaption,
+  StyledFigureCaption,
 } from './Image.styles'
 
 export const Image: React.FC<ImageProps> = ({
@@ -14,11 +15,13 @@ export const Image: React.FC<ImageProps> = ({
   ...props
 }) => {
   return (
-    <ImageOverflow>
-      <ImageWrapper>
-        <StyledImageElement fixed={image} alt={alt} {...props} />
-        <StyledImageCaption padding="sm">{caption}</StyledImageCaption>
-      </ImageWrapper>
-    </ImageOverflow>
+    <StyledFigure>
+      <ImageContainer>
+        <ImageWrapper>
+          <StyledImage fixed={image} alt={alt} {...props} />
+          <StyledFigureCaption padding="sm">{caption}</StyledFigureCaption>
+        </ImageWrapper>
+      </ImageContainer>
+    </StyledFigure>
   )
 }
