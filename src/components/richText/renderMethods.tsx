@@ -2,8 +2,9 @@ import React from 'react'
 import { NodeRenderer } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import { colors } from '../../theme/colors'
+import { getRandomInt } from '../../utils/number-utils'
 import { RippedSection } from '../rippedSection'
-import { Rip } from '../rippedSection/Rip.types'
+import { Rip, RipVariant } from '../rippedSection/Rip.types'
 import { Video } from '../video'
 import { VideoProps } from '../video/Video.types'
 import { P } from '../typography'
@@ -34,7 +35,10 @@ export const getImageForLocale = (
   return { src: url, alt: getStringForLocale(altText, locale) }
 }
 
-const generateRip = (): Rip => ({ variant: 1, color: colors.white })
+const generateRip = (): Rip => ({
+  variant: getRandomInt(1, 5) as RipVariant,
+  color: colors.white,
+})
 
 const renderImage: NodeRenderer = ({ data: { target } }) => {
   const props = getImageForLocale(target)
