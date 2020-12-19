@@ -5,6 +5,21 @@ import { P } from '../typography'
 import { Quote } from '../quote'
 import { Hyperlink } from './RichText.styles'
 
+export const getValueForLocale = <T extends string>(
+  val: {
+    [key: string]: T
+  },
+  locale = 'en-GB'
+): T => {
+  const localeVal = val[locale]
+  switch (typeof localeVal) {
+    case 'string':
+      return localeVal.trim() as T
+    default:
+      return localeVal
+  }
+}
+
 const renderParagraph: NodeRenderer = (_node, children) => <P>{children}</P>
 
 const renderQuote: NodeRenderer = (_node, children) => <Quote>{children}</Quote>
