@@ -5,6 +5,7 @@ import {
   TopLevelBlock,
   MARKS,
 } from '@contentful/rich-text-types'
+import logo from '../../../assets/logo.png'
 
 // nodeType properties below ignored due to issue with Contentful types
 // see https://github.com/contentful/rich-text/issues/123
@@ -143,6 +144,45 @@ export const quote: Document = {
       ],
       // @ts-ignore
       nodeType: 'blockquote',
+    },
+  ],
+  // @ts-ignore
+  nodeType: 'document',
+}
+
+const generateAnyLocale = (val: any) => ({ 'en-GB': val })
+
+export const video: Document = {
+  content: [
+    {
+      data: {
+        target: {
+          sys: {
+            type: 'Link',
+            contentType: {
+              sys: {
+                id: 'video',
+              },
+            },
+          },
+          fields: {
+            host: generateAnyLocale('youtube'),
+            videoId: generateAnyLocale('9v34wjMlT2A'),
+            caption: generateAnyLocale('Lorem ipsum dolor sit amet'),
+            image: generateAnyLocale({
+              fields: {
+                image: generateAnyLocale({
+                  fields: { file: generateAnyLocale({ url: logo }) },
+                }),
+                altText: generateAnyLocale('consectetur adipiscing elit'),
+              },
+            }),
+          },
+        },
+      },
+      content: [],
+      // @ts-ignore
+      nodeType: 'embedded-entry-block',
     },
   ],
   // @ts-ignore
