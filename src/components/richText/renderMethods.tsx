@@ -21,15 +21,12 @@ export const getStringForLocale = (
 ): string => getAnyForLocale(val, locale).trim()
 
 export const getImageForLocale = (
-  image: { [key: string]: Image },
+  { fields: { image, altText } }: Image,
   locale = DEFAULT_LOCALE
 ) => {
   const {
-    fields: { image: img, altText },
-  } = getAnyForLocale(image, locale)
-  const {
     fields: { file },
-  } = getAnyForLocale(img, locale)
+  } = getAnyForLocale(image, locale)
   const { url } = getAnyForLocale(file, locale)
   return { src: url, alt: getStringForLocale(altText, locale) }
 }
@@ -45,7 +42,7 @@ const renderVideo: NodeRenderer = ({
     host: getAnyForLocale(host),
     videoId: getStringForLocale(videoId),
     caption: getStringForLocale(caption),
-    coverImage: getImageForLocale(image),
+    coverImage: getImageForLocale(getAnyForLocale(image)),
   }
   return <Video {...props} />
 }

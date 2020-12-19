@@ -73,15 +73,13 @@ describe('getImageForLocale', () => {
 
   it('should get image for given locale', () => {
     const image = generateTestImage(NON_DEFAULT_LOCALE)
-    const input = generateTestData(null, image)
-    const actual = getImageForLocale(input, NON_DEFAULT_LOCALE)
+    const actual = getImageForLocale(image, NON_DEFAULT_LOCALE)
     expect(actual).toEqual(EXPECTED)
   })
 
   it('should use default locale when not given', () => {
     const image = generateTestImage(DEFAULT_LOCALE)
-    const input = generateTestData(image, null)
-    const actual = getImageForLocale(input)
+    const actual = getImageForLocale(image)
     expect(actual).toEqual(EXPECTED)
   })
 })
