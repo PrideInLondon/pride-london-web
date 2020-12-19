@@ -1,32 +1,87 @@
-import { getValueForLocale } from './renderMethods'
+import {
+  DEFAULT_LOCALE,
+  getAnyForLocale,
+  getStringForLocale,
+  getImageForLocale,
+} from './renderMethods'
+import { Image } from './RichText.types'
 
-describe('getValueForLocale', () => {
+const NON_DEFAULT_LOCALE = 'en-US'
+
+const generateTestData = (valueForDefault: any, valueForNonDefault: any) => ({
+  [DEFAULT_LOCALE]: valueForDefault,
+  [NON_DEFAULT_LOCALE]: valueForNonDefault,
+})
+
+describe('getAnyForLocale', () => {
   it.each`
     val
-    ${'foo'}
     ${3}
     ${{ foo: 'bar' }}
-  `('should get value for given locale', ({ val }) => {
-    const actual = getValueForLocale(
-      {
-        'en-GB': null,
-        'en-US': val,
-      },
-      'en-US'
-    )
+  `('should get any ($val) for given locale', ({ val }) => {
+    const input = generateTestData(null, val)
+    const actual = getAnyForLocale(input, NON_DEFAULT_LOCALE)
     expect(actual).toEqual(val)
   })
 
-  it('should use default locale when not provided', () => {
-    const actual = getValueForLocale({
-      'en-GB': 'foo',
-      'en-US': 'bar',
-    })
+  it('should use default locale when not given', () => {
+    const val = { foo: 'bar' }
+    const input = generateTestData(val, null)
+    const actual = getAnyForLocale(input)
+    expect(actual).toEqual(val)
+  })
+})
+
+describe('getStringForLocale', () => {
+  it.each`
+    val
+    ${'foo'}
+    ${' foo '}
+  `('should get string ($val) for given locale', ({ val }) => {
+    const input = generateTestData('', val)
+    const actual = getStringForLocale(input, NON_DEFAULT_LOCALE)
     expect(actual).toEqual('foo')
   })
 
-  it('should trim string when given string with leading/trailing whitespace', () => {
-    const actual = getValueForLocale({ 'en-GB': ' foo ' })
-    expect(actual).toEqual('foo')
+  it('should use default locale when not given', () => {
+    const val = 'foo'
+    const input = generateTestData(val, '')
+    const actual = getStringForLocale(input)
+    expect(actual).toEqual(val)
+  })
+})
+
+describe('getImageForLocale', () => {
+  const EXPECTED = { src: 'foo', alt: 'bar' }
+
+  const generateTestImage = (locale: string): Image => ({
+    fields: {
+      image: {
+        [locale]: {
+          fields: {
+            file: {
+              [locale]: {
+                url: 'foo',
+              },
+            },
+          },
+        },
+      },
+      altText: { [locale]: 'bar' },
+    },
+  })
+
+  it('should get image for given locale', () => {
+    const image = generateTestImage(NON_DEFAULT_LOCALE)
+    const input = generateTestData(null, image)
+    const actual = getImageForLocale(input, NON_DEFAULT_LOCALE)
+    expect(actual).toEqual(EXPECTED)
+  })
+
+  it('should use default locale when not given', () => {
+    const image = generateTestImage(DEFAULT_LOCALE)
+    const input = generateTestData(image, null)
+    const actual = getImageForLocale(input)
+    expect(actual).toEqual(EXPECTED)
   })
 })

@@ -4,20 +4,32 @@ import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import { P } from '../typography'
 import { Quote } from '../quote'
 import { Hyperlink } from './RichText.styles'
+import { Image } from './RichText.types'
 
-export const getValueForLocale = <T extends string>(
-  val: {
-    [key: string]: T
-  },
-  locale = 'en-GB'
-): T => {
-  const localeVal = val[locale]
-  switch (typeof localeVal) {
-    case 'string':
-      return localeVal.trim() as T
-    default:
-      return localeVal
-  }
+export const DEFAULT_LOCALE = 'en-GB'
+
+export const getAnyForLocale = <T,>(
+  val: { [key: string]: T },
+  locale = DEFAULT_LOCALE
+): T => val[locale]
+
+export const getStringForLocale = (
+  val: { [key: string]: string },
+  locale = DEFAULT_LOCALE
+): string => getAnyForLocale(val, locale).trim()
+
+export const getImageForLocale = (
+  image: { [key: string]: Image },
+  locale = DEFAULT_LOCALE
+) => {
+  const {
+    fields: { image: img, altText },
+  } = getAnyForLocale(image, locale)
+  const {
+    fields: { file },
+  } = getAnyForLocale(img, locale)
+  const { url } = getAnyForLocale(file, locale)
+  return { src: url, alt: getStringForLocale(altText, locale) }
 }
 
 const renderParagraph: NodeRenderer = (_node, children) => <P>{children}</P>
