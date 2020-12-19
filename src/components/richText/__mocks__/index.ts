@@ -152,6 +152,13 @@ export const quote: Document = {
 
 const generateAnyLocale = (val: any) => ({ 'en-GB': val })
 
+const contentfulImage = {
+  image: generateAnyLocale({
+    fields: { file: generateAnyLocale({ url: logo }) },
+  }),
+  altText: generateAnyLocale('consectetur adipiscing elit'),
+}
+
 export const video: Document = {
   content: [
     {
@@ -170,14 +177,34 @@ export const video: Document = {
             videoId: generateAnyLocale('9v34wjMlT2A'),
             caption: generateAnyLocale('Lorem ipsum dolor sit amet'),
             image: generateAnyLocale({
-              fields: {
-                image: generateAnyLocale({
-                  fields: { file: generateAnyLocale({ url: logo }) },
-                }),
-                altText: generateAnyLocale('consectetur adipiscing elit'),
-              },
+              fields: contentfulImage,
             }),
           },
+        },
+      },
+      content: [],
+      // @ts-ignore
+      nodeType: 'embedded-entry-block',
+    },
+  ],
+  // @ts-ignore
+  nodeType: 'document',
+}
+
+export const image: Document = {
+  content: [
+    {
+      data: {
+        target: {
+          sys: {
+            type: 'Link',
+            contentType: {
+              sys: {
+                id: 'image',
+              },
+            },
+          },
+          fields: contentfulImage,
         },
       },
       content: [],

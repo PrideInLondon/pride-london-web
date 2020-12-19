@@ -9,6 +9,7 @@ import {
   orderedList,
   quote,
   video,
+  image,
 } from './__mocks__'
 
 storiesOf('RichText', module)
@@ -19,3 +20,4 @@ storiesOf('RichText', module)
   .add('ordered list', () => <RichText document={orderedList} />)
   .add('quote', () => <RichText document={quote} />)
   .add('video', () => <RichText document={video} />)
+  .add('image', () => <RichText document={image} />)

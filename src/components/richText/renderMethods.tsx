@@ -1,12 +1,15 @@
 import React from 'react'
 import { NodeRenderer } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
+import { colors } from '../../theme/colors'
+import { RippedSection } from '../rippedSection'
+import { Rip } from '../rippedSection/Rip.types'
 import { Video } from '../video'
 import { VideoProps } from '../video/Video.types'
 import { P } from '../typography'
 import { Quote } from '../quote'
 import { Hyperlink } from './RichText.styles'
-import { Image } from './RichText.types'
+import { ContentfulImage } from './RichText.types'
 
 export const DEFAULT_LOCALE = 'en-GB'
 
@@ -21,7 +24,7 @@ export const getStringForLocale = (
 ): string => getAnyForLocale(val, locale).trim()
 
 export const getImageForLocale = (
-  { fields: { image, altText } }: Image,
+  { fields: { image, altText } }: ContentfulImage,
   locale = DEFAULT_LOCALE
 ) => {
   const {
@@ -29,6 +32,25 @@ export const getImageForLocale = (
   } = getAnyForLocale(image, locale)
   const { url } = getAnyForLocale(file, locale)
   return { src: url, alt: getStringForLocale(altText, locale) }
+}
+
+const generateRip = (): Rip => ({ variant: 1, color: colors.white })
+
+const renderImage: NodeRenderer = ({ data: { target } }) => {
+  const props = getImageForLocale(target)
+  // alt is included in the props but silly eslint doesn't see this here
+  /* eslint-disable jsx-a11y/alt-text */
+  return (
+    <RippedSection
+      rips={{
+        top: generateRip(),
+        bottom: generateRip(),
+      }}
+    >
+      <img {...props} width="100%" />
+    </RippedSection>
+  )
+  /* eslint-enable jsx-a11y/alt-text */
 }
 
 const renderVideo: NodeRenderer = ({
@@ -49,6 +71,8 @@ const renderVideo: NodeRenderer = ({
 
 export const renderEmbeddedEntry: NodeRenderer = node => {
   switch (node.data.target.sys.contentType.sys.id) {
+    case 'image':
+      return renderImage(node, null)
     case 'video':
       return renderVideo(node, null)
   }

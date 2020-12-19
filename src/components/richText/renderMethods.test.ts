@@ -4,7 +4,7 @@ import {
   getStringForLocale,
   getImageForLocale,
 } from './renderMethods'
-import { Image } from './RichText.types'
+import { ContentfulImage } from './RichText.types'
 
 const NON_DEFAULT_LOCALE = 'en-US'
 
@@ -54,7 +54,7 @@ describe('getStringForLocale', () => {
 describe('getImageForLocale', () => {
   const EXPECTED = { src: 'foo', alt: 'bar' }
 
-  const generateTestImage = (locale: string): Image => ({
+  const generateTestImage = (locale: string): ContentfulImage => ({
     fields: {
       image: {
         [locale]: {

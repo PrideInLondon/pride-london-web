@@ -1,7 +1,7 @@
 import { Document } from '@contentful/rich-text-types'
 import { LayoutProps, SpaceProps } from 'styled-system'
 
-export interface Image {
+export interface ContentfulImage {
   fields: {
     image: {
       [key: string]: {

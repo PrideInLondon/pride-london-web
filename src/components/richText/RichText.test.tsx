@@ -10,6 +10,7 @@ import {
   orderedList,
   quote,
   video,
+  image,
 } from './__mocks__'
 
 describe('RichText', () => {
@@ -22,6 +23,7 @@ describe('RichText', () => {
     ${orderedList}
     ${quote}
     ${video}
+    ${image}
   `('should have no accessibility violations', async ({ document }) => {
     const { container } = render(<RichText {...{ document }} />)
     const results = await axe(container)
