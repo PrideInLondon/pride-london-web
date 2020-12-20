@@ -3,6 +3,4 @@ import { SpaceProps, LayoutProps } from 'styled-system'
 export interface QuoteProps
   extends React.HTMLAttributes<HTMLQuoteElement>,
     SpaceProps,
-    LayoutProps {
-  children: string
-}
+    LayoutProps {}
