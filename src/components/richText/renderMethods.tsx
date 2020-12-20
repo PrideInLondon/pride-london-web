@@ -7,9 +7,10 @@ import { RippedSection } from '../rippedSection'
 import { Rip, RipVariant } from '../rippedSection/Rip.types'
 import { Video } from '../video'
 import { VideoProps } from '../video/Video.types'
+import { Image } from '../image'
 import { P } from '../typography'
 import { Quote } from '../quote'
-import { Hyperlink } from './RichText.styles'
+import { MultiImageWrapper, Hyperlink } from './RichText.styles'
 import { ContentfulImage } from './RichText.types'
 
 export const DEFAULT_LOCALE = 'en-GB'
@@ -57,6 +58,22 @@ const renderImage: NodeRenderer = ({ data: { target } }) => {
   /* eslint-enable jsx-a11y/alt-text */
 }
 
+const renderMultiImage: NodeRenderer = ({
+  data: {
+    target: {
+      fields: { images },
+    },
+  },
+}) => (
+  <MultiImageWrapper>
+    {getAnyForLocale<ContentfulImage[]>(images).map(
+      (props: ContentfulImage) => (
+        <Image {...getImageForLocale(props)} />
+      )
+    )}
+  </MultiImageWrapper>
+)
+
 const renderVideo: NodeRenderer = ({
   data: {
     target: {
@@ -77,6 +94,8 @@ export const renderEmbeddedEntry: NodeRenderer = node => {
   switch (node.data.target.sys.contentType.sys.id) {
     case 'image':
       return renderImage(node, null)
+    case 'multiImage':
+      return renderMultiImage(node, null)
     case 'video':
       return renderVideo(node, null)
   }

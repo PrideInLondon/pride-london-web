@@ -11,6 +11,7 @@ import {
   quote,
   video,
   image,
+  multiImage,
 } from './__mocks__'
 
 describe('RichText', () => {
@@ -24,6 +25,7 @@ describe('RichText', () => {
     ${quote}
     ${video}
     ${image}
+    ${multiImage}
   `('should have no accessibility violations', async ({ document }) => {
     const { container } = render(<RichText {...{ document }} />)
     const results = await axe(container)

@@ -215,3 +215,34 @@ export const image: Document = {
   // @ts-ignore
   nodeType: 'document',
 }
+
+export const multiImage: Document = {
+  content: [
+    {
+      data: {
+        target: {
+          sys: {
+            type: 'Link',
+            contentType: {
+              sys: {
+                id: 'multiImage',
+              },
+            },
+          },
+          fields: {
+            images: generateAnyLocale([
+              { fields: contentfulImage },
+              { fields: contentfulImage },
+              { fields: contentfulImage },
+            ]),
+          },
+        },
+      },
+      content: [],
+      // @ts-ignore
+      nodeType: 'embedded-entry-block',
+    },
+  ],
+  // @ts-ignore
+  nodeType: 'document',
+}
