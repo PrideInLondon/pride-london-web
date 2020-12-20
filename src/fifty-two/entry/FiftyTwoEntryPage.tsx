@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Image from 'gatsby-image/withIEPolyfill'
 import { Helmet } from '../../components/helmet'
 import { PageSwitcher } from '../../components/pageSwitcher/PageSwitcher'
+import { TalentProfile } from '../../components/talentProfile'
 import { xxl } from '../../theme/space'
 import { md } from '../../theme/breakpoints'
 import { checkBreakpoint } from '../../utils/style-utils'
@@ -13,7 +14,6 @@ import {
   FlexWrapper,
   Column,
 } from './FiftyTwoEntryPage.styles'
-import { AboutTheArtist } from './AboutTheArtist'
 import { AboutTheArtwork } from './AboutTheArtwork'
 import { FiftyTwoEntryPageProps } from './FiftyTwoEntryPage.types'
 
@@ -49,7 +49,11 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
             <AboutTheArtwork artist={artist} artwork={artwork} />
           </Column>
         </FlexWrapper>
-        <AboutTheArtist {...artist} {...leftProps} />
+        <FlexWrapper>
+          <Column {...leftProps}>
+            <TalentProfile type="artist" marginTop="xxl" {...artist} />
+          </Column>
+        </FlexWrapper>
       </Wrapper>
       <PageSwitcher
         prev={prev}
