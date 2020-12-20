@@ -105,6 +105,7 @@ export const renderEmbeddedEntry: NodeRenderer = (node, children) => {
     case 'video':
       return renderVideo(node, children)
   }
+  return null
 }
 
 const renderParagraph: NodeRenderer = (_node, children) => <P>{children}</P>
