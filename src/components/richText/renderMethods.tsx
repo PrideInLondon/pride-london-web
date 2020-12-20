@@ -1,5 +1,5 @@
 import React from 'react'
-import { NodeRenderer } from '@contentful/rich-text-react-renderer'
+import { NodeRenderer, Options } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import { colors } from '../../theme/colors'
 import { getRandomInt } from '../../utils/number-utils'
@@ -41,7 +41,7 @@ const generateRip = (): Rip => ({
   color: colors.white,
 })
 
-const renderImage: NodeRenderer = ({ data: { target } }) => {
+const renderImage: NodeRenderer = ({ data: { target } }, _children) => {
   const props = getImageForLocale(target)
   // alt is included in the props but silly eslint doesn't see this here
   /* eslint-disable jsx-a11y/alt-text */
@@ -58,13 +58,16 @@ const renderImage: NodeRenderer = ({ data: { target } }) => {
   /* eslint-enable jsx-a11y/alt-text */
 }
 
-const renderMultiImage: NodeRenderer = ({
-  data: {
-    target: {
-      fields: { images },
+const renderMultiImage: NodeRenderer = (
+  {
+    data: {
+      target: {
+        fields: { images },
+      },
     },
   },
-}) => (
+  _children
+) => (
   <MultiImageWrapper>
     {getAnyForLocale<ContentfulImage[]>(images).map(
       (props: ContentfulImage) => (
@@ -74,13 +77,16 @@ const renderMultiImage: NodeRenderer = ({
   </MultiImageWrapper>
 )
 
-const renderVideo: NodeRenderer = ({
-  data: {
-    target: {
-      fields: { host, videoId, caption, image },
+const renderVideo: NodeRenderer = (
+  {
+    data: {
+      target: {
+        fields: { host, videoId, caption, image },
+      },
     },
   },
-}) => {
+  _children
+) => {
   const props: VideoProps = {
     host: getAnyForLocale(host),
     videoId: getStringForLocale(videoId),
@@ -90,14 +96,14 @@ const renderVideo: NodeRenderer = ({
   return <Video {...props} />
 }
 
-export const renderEmbeddedEntry: NodeRenderer = node => {
+export const renderEmbeddedEntry: NodeRenderer = (node, children) => {
   switch (node.data.target.sys.contentType.sys.id) {
     case 'image':
-      return renderImage(node, null)
+      return renderImage(node, children)
     case 'multiImage':
-      return renderMultiImage(node, null)
+      return renderMultiImage(node, children)
     case 'video':
-      return renderVideo(node, null)
+      return renderVideo(node, children)
   }
 }
 
@@ -109,7 +115,7 @@ const renderHyperlink: NodeRenderer = ({ data: { uri } }, children) => (
   <Hyperlink to={uri}>{children}</Hyperlink>
 )
 
-export const renderMethods = {
+export const renderMethods: Options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ENTRY]: renderEmbeddedEntry,
     [BLOCKS.PARAGRAPH]: renderParagraph,
