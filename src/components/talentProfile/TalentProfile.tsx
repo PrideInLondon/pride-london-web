@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby' // lgtm [js/unused-local-variable]
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { H6 } from '../../components/typography'
 import { Icon } from '../../components/icon'
 import { handleUrl } from '../../utils/location-utils'
-import { renderMethods } from '../renderMethods'
+import { RichText } from '../richText'
 import { Wrapper, ShareBar, StyledLink } from './TalentProfile.styles'
 import {
   SocialProps,
@@ -38,7 +37,7 @@ export const TalentProfile: React.FC<TalentProfileProps> = ({
   return (
     <Wrapper {...props}>
       <H6 as="h3">About the {type}</H6>
-      {documentToReactComponents(json, renderMethods)}
+      <RichText document={json} />
       <ShareBar>
         {website && <Social url={website} name="website" />}
         {email && <Social url={`mailto:${email}`} name="email" />}
