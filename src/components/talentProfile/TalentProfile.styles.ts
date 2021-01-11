@@ -1,16 +1,13 @@
 import styled from 'styled-components'
 import { compose, space, layout, SpaceProps, LayoutProps } from 'styled-system'
 import { colors } from '../../theme/colors'
-import { md } from '../../theme/space'
+import { md, lg, xl_mob } from '../../theme/space'
 
 export const Wrapper = styled.div<LayoutProps & SpaceProps>`
-  ${compose(layout, space)}
-`
-
-export const Content = styled.div<SpaceProps>`
   background-color: ${colors.lightGrey};
+  padding: ${xl_mob}px ${lg}px;
 
-  ${space}
+  ${compose(layout, space)}
 `
 
 export const ShareBar = styled.div`
