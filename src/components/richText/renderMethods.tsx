@@ -68,7 +68,7 @@ const renderMultiImage: NodeRenderer = (
   },
   _children
 ) => (
-  <MultiImageWrapper>
+  <MultiImageWrapper marginY={{ default: 'xl', md: 'xxl' }}>
     {getAnyForLocale<ContentfulImage[]>(images).map(
       (props: ContentfulImage) => (
         <Image {...getImageForLocale(props)} />

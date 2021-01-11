@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { compose, flexbox, layout, space } from 'styled-system'
+import { compose, flexbox, layout, space, SpaceProps } from 'styled-system'
 import { colors } from '../../theme/colors'
 import { md } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
   ${compose(flexbox, layout, space)}
 `
 
-export const MultiImageWrapper = styled.div`
+export const MultiImageWrapper = styled.div<SpaceProps>`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 1fr;
@@ -33,6 +33,8 @@ export const MultiImageWrapper = styled.div`
     grid-template-columns: repeat(3, 1fr);
     column-gap: ${md}px;
   }
+
+  ${space}
 `
 
 export const Hyperlink = styled(Navigate)`
