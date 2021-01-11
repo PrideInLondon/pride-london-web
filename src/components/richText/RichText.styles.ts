@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { compose, layout, space } from 'styled-system'
+import { compose, flexbox, layout, space } from 'styled-system'
 import { colors } from '../../theme/colors'
 import { md } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  ${compose(layout, space)}
+  ${compose(flexbox, layout, space)}
 `
 
 export const MultiImageWrapper = styled.div`

@@ -1,5 +1,5 @@
 import { Document } from '@contentful/rich-text-types'
-import { LayoutProps, SpaceProps } from 'styled-system'
+import { FlexboxProps, LayoutProps, SpaceProps } from 'styled-system'
 
 export interface ContentfulImage {
   fields: {
@@ -20,6 +20,6 @@ export interface ContentfulImage {
   }
 }
 
-export interface RichTextProps extends LayoutProps, SpaceProps {
+export interface RichTextProps extends FlexboxProps, LayoutProps, SpaceProps {
   document: Document
 }
