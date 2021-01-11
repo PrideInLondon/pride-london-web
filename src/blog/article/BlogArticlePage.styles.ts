@@ -21,11 +21,6 @@ export const TitleWrapper = styled.div<FlexboxProps & LayoutProps & SpaceProps>`
 `
 
 export const Content = styled(RichText)`
-  ol,
-  ul {
-    width: 100%;
-  }
-
   > p:first-of-type {
     font-size: ${fontSizes.body_lg};
   }

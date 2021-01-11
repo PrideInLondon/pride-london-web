@@ -10,8 +10,10 @@ export const Wrapper = styled.div`
     color: ${colors.indigo};
   }
 
-  ul,
-  ol {
+  ol,
+  ul {
+    width: 100%;
+
     p {
       margin: 0;
     }
