@@ -4,7 +4,7 @@ import { StyledBlockquote } from './Quote.styles'
 
 export const Quote: React.FC<QuoteProps> = ({ children, ...props }) => {
   return (
-    <StyledBlockquote as="blockquote" {...props}>
+    <StyledBlockquote as="blockquote" textAlign="center" {...props}>
       "{children}"
     </StyledBlockquote>
   )
