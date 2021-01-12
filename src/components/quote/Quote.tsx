@@ -1,6 +1,11 @@
 import React from 'react'
+import { QuoteProps } from './Quote.types'
+import { StyledBlockquote } from './Quote.styles'
 
-// placeholder until new component can be merged in
-export const Quote: React.FC<{}> = ({ children }) => (
-  <div style={{ fontStyle: 'italic' }}>{children}</div>
-)
+export const Quote: React.FC<QuoteProps> = ({ children, ...props }) => {
+  return (
+    <StyledBlockquote as="blockquote" textAlign="center" {...props}>
+      "{children}"
+    </StyledBlockquote>
+  )
+}
