@@ -1,27 +1,22 @@
 import React from 'react'
+import { P } from '../typography'
 import { ImageProps } from './Image.types'
-import {
-  StyledImage,
-  ImageContainer,
-  StyledFigure,
-  ImageWrapper,
-  StyledFigureCaption,
-} from './Image.styles'
+import { StyledFigure } from './Image.styles'
 
 export const Image: React.FC<ImageProps> = ({
-  image,
+  src,
   alt,
   caption,
   ...props
 }) => {
   return (
-    <StyledFigure>
-      <ImageContainer>
-        <ImageWrapper>
-          <StyledImage fixed={image} alt={alt} {...props} />
-          <StyledFigureCaption padding="sm">{caption}</StyledFigureCaption>
-        </ImageWrapper>
-      </ImageContainer>
+    <StyledFigure {...props}>
+      <img src={src} alt={alt} />
+      {caption && (
+        <P variant="sm" as="figcaption" textAlign="right" fontWeight="bold">
+          {caption}
+        </P>
+      )}
     </StyledFigure>
   )
 }

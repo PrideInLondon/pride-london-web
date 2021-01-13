@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Helmet } from '../components/helmet'
 import { Banner } from '../components/banner'
 import { H3, P } from '../components/typography'
@@ -8,12 +7,12 @@ import { Category } from '../components/categoryFilter/CategoryFilter.types'
 import { Gallery } from '../components/gallery'
 import { Button } from '../components/button'
 import { GalleryCard } from '../components/galleryCard'
+import { RichText } from '../components/richText'
 import { colors } from '../theme/colors'
 import { md } from '../theme/breakpoints'
 import { shuffle } from '../utils/iteration-utils'
 import { checkBreakpoint } from '../utils/style-utils'
 import { generateFiftyTwoEntrySlug } from './helpers'
-import { renderMethods } from './renderMethods'
 import {
   StyledPageIntro,
   StyledGalleryContainer,
@@ -81,7 +80,7 @@ export const FiftyTwoPage: React.FC<FiftyTwoPageProps> = ({
           body: bodyText,
         }}
       >
-        {documentToReactComponents(json, renderMethods)}
+        <RichText document={json} />
       </StyledPageIntro>
       <H3 as="h2" textAlign="center" paddingBottom="lg">
         Category is...
