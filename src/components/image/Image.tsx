@@ -10,7 +10,7 @@ export const Image: React.FC<ImageProps> = ({
   ...props
 }) => (
   <StyledFigure {...props}>
-    <img {...{ src, alt }} />
+    <img {...{ src, alt }} width="100%" />
     {caption && (
       <P variant="sm" as="figcaption" textAlign="right" fontWeight="bold">
         {caption}
