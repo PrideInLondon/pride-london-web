@@ -157,6 +157,7 @@ const contentfulImage = {
     fields: { file: generateAnyLocale({ url: logo }) },
   }),
   altText: generateAnyLocale('consectetur adipiscing elit'),
+  caption: generateAnyLocale('caption'),
 }
 
 export const video: Document = {

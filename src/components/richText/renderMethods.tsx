@@ -26,14 +26,18 @@ export const getStringForLocale = (
 ): string => getAnyForLocale(val, locale).trim()
 
 export const getImageForLocale = (
-  { fields: { image, altText } }: ContentfulImage,
+  { fields: { image, altText, caption } }: ContentfulImage,
   locale = DEFAULT_LOCALE
 ) => {
   const {
     fields: { file },
   } = getAnyForLocale(image, locale)
   const { url } = getAnyForLocale(file, locale)
-  return { src: url, alt: getStringForLocale(altText, locale) }
+  return {
+    src: url,
+    alt: getStringForLocale(altText, locale),
+    ...(caption && { caption: getStringForLocale(caption, locale) }),
+  }
 }
 
 const generateRip = (): Rip => ({

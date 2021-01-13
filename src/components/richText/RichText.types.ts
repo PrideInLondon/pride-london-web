@@ -17,6 +17,9 @@ export interface ContentfulImage {
     altText: {
       [key: string]: string
     }
+    caption?: {
+      [key: string]: string
+    }
   }
 }
 
