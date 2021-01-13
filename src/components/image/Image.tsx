@@ -8,15 +8,13 @@ export const Image: React.FC<ImageProps> = ({
   alt,
   caption,
   ...props
-}) => {
-  return (
-    <StyledFigure {...props}>
-      <img src={src} alt={alt} />
-      {caption && (
-        <P variant="sm" as="figcaption" textAlign="right" fontWeight="bold">
-          {caption}
-        </P>
-      )}
-    </StyledFigure>
-  )
-}
+}) => (
+  <StyledFigure {...props}>
+    <img {...{ src, alt }} />
+    {caption && (
+      <P variant="sm" as="figcaption" textAlign="right" fontWeight="bold">
+        {caption}
+      </P>
+    )}
+  </StyledFigure>
+)
