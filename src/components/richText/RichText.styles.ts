@@ -19,6 +19,12 @@ export const Wrapper = styled.div`
     }
   }
 
+  blockquote {
+    > p {
+      all: unset;
+    }
+  }
+
   ${compose(flexbox, layout, space)}
 `
 

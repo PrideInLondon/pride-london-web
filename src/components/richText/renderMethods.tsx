@@ -2,6 +2,7 @@ import React from 'react'
 import { NodeRenderer, Options } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import { colors } from '../../theme/colors'
+import { lg, xxl } from '../../theme/space'
 import { getRandomInt } from '../../utils/number-utils'
 import { RippedSection } from '../rippedSection'
 import { Rip, RipVariant } from '../rippedSection/Rip.types'
@@ -114,7 +115,14 @@ export const renderEmbeddedEntry: NodeRenderer = (node, children) => {
 
 const renderParagraph: NodeRenderer = (_node, children) => <P>{children}</P>
 
-const renderQuote: NodeRenderer = (_node, children) => <Quote>{children}</Quote>
+const renderQuote: NodeRenderer = (_node, children) => (
+  <Quote
+    marginY={{ default: 'xxl', md: (lg + xxl).toString() }}
+    maxWidth={1062}
+  >
+    {children}
+  </Quote>
+)
 
 const renderHyperlink: NodeRenderer = ({ data: { uri } }, children) => (
   <Hyperlink to={uri}>{children}</Hyperlink>
