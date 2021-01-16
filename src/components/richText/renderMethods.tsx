@@ -16,6 +16,8 @@ import { ContentfulImage } from './RichText.types'
 
 export const DEFAULT_LOCALE = 'en-GB'
 
+const MAX_CONTENT_WIDTH = 1062
+
 export const getAnyForLocale = <T,>(
   val: { [key: string]: T },
   locale = DEFAULT_LOCALE
@@ -73,7 +75,10 @@ const renderMultiImage: NodeRenderer = (
   },
   _children
 ) => (
-  <MultiImageWrapper marginY={{ default: 'xl', md: 'xxl' }}>
+  <MultiImageWrapper
+    marginY={{ default: 'xl', md: 'xxl' }}
+    maxWidth={MAX_CONTENT_WIDTH}
+  >
     {getAnyForLocale<ContentfulImage[]>(images).map(
       (props: ContentfulImage) => (
         <Image {...getImageForLocale(props)} />
@@ -118,7 +123,7 @@ const renderParagraph: NodeRenderer = (_node, children) => <P>{children}</P>
 const renderQuote: NodeRenderer = (_node, children) => (
   <Quote
     marginY={{ default: 'xxl', md: (lg + xxl).toString() }}
-    maxWidth={1062}
+    maxWidth={MAX_CONTENT_WIDTH}
   >
     {children}
   </Quote>
