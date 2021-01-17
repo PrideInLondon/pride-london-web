@@ -123,7 +123,7 @@ const renderParagraph: NodeRenderer = (_node, children) => <P>{children}</P>
 
 const renderQuote: NodeRenderer = (_node, children) => (
   <Quote
-    marginY={{ default: 'xxl', md: (lg + xxl).toString() }}
+    marginY={{ default: 'xxl', md: `${lg + xxl}px` }}
     maxWidth={MAX_CONTENT_WIDTH}
   >
     {children}
