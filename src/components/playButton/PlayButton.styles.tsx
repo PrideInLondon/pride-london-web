@@ -10,6 +10,7 @@ export const ButtonWrapper = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border: none;
 
   ${mediaQueries.md} {
     padding: ${space.xl_mob};
