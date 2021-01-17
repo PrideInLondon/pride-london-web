@@ -41,15 +41,16 @@ export const Video = ({
       ) : (
         <>
           <VideoImageWrapper
+            aria-hidden="true" // duplicated button
             role="button"
             title={`Play ${caption} video`}
             onClick={() => setClicked(true)}
           >
             <StyledVideoImage {...{ src, alt }} />
           </VideoImageWrapper>
-            <PlayButton
-              title={`Play ${caption} video`}
-              onClick={() => setClicked(true)}
+          <PlayButton
+            title={`Play ${caption} video`}
+            onClick={() => setClicked(true)}
             position="absolute"
             bottom={0}
             left="lg"
