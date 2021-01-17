@@ -58,6 +58,7 @@ const renderImage: NodeRenderer = ({ data: { target } }, _children) => {
         top: generateRip(),
         bottom: generateRip(),
       }}
+      marginY={{ default: 'xxl', md: `${lg + xxl}px` }}
     >
       <img {...props} width="100%" />
     </RippedSection>
