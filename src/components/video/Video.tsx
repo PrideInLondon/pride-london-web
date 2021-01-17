@@ -57,7 +57,13 @@ export const Video = ({
           />
         </>
       )}
-      <P variant="sm" fontWeight="bold" textAlign="right" as="figcaption">
+      <P
+        variant="sm"
+        fontWeight="bold"
+        textAlign="right"
+        as="figcaption"
+        paddingLeft={{ default: '25%', md: '30%' }}
+      >
         {caption}
       </P>
     </StyledFigure>
