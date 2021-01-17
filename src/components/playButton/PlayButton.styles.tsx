@@ -1,18 +1,13 @@
 import styled from 'styled-components'
+import { compose, border, position, space } from 'styled-system'
 import { colors } from '../../theme/colors'
-import { mediaQueries } from '../../theme/mediaQueries'
-import { space } from '../../theme/space'
+import { PlayButtonProps } from './PlayButton.types'
 
-export const ButtonWrapper = styled.button`
-  padding: ${space.lg};
+export const Button = styled.button<PlayButtonProps>`
+  /* can't use styled-system here due to types issue and ColorProps properties */
   background-color: ${colors.indigo};
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
 
-  ${mediaQueries.md} {
-    padding: ${space.xl_mob};
-  }
+  cursor: pointer;
+
+  ${compose(border, position, space)}
 `
