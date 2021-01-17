@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { PlayButton } from '../playButton'
+import { P } from '../typography'
 import {
   StyledFigure,
   VideoContainer,
   VideoImageWrapper,
   StyledVideoImage,
-  StyledFigCaption,
   StylediFrame,
   StyledButtonContainer,
 } from './Video.styles'
@@ -56,7 +56,9 @@ export const Video = ({
           </StyledButtonContainer>
         </>
       )}
-      <StyledFigCaption padding="sm">{caption}</StyledFigCaption>
+      <P variant="sm" fontWeight="bold" textAlign="right" as="figcaption">
+        {caption}
+      </P>
     </StyledFigure>
   )
 }
