@@ -81,9 +81,10 @@ const renderMultiImage: NodeRenderer = (
     maxWidth={MAX_CONTENT_WIDTH}
   >
     {getAnyForLocale<ContentfulImage[]>(images).map(
-      (props: ContentfulImage) => (
-        <Image {...getImageForLocale(props)} />
-      )
+      (props: ContentfulImage) => {
+        const imageProps = getImageForLocale(props)
+        return <Image key={imageProps.src} {...imageProps} />
+      }
     )}
   </MultiImageWrapper>
 )
