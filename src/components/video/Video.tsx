@@ -7,7 +7,6 @@ import {
   VideoImageWrapper,
   StyledVideoImage,
   StylediFrame,
-  StyledButtonContainer,
 } from './Video.styles'
 import { VideoHost, VideoProps } from './Video.types'
 
@@ -48,12 +47,13 @@ export const Video = ({
           >
             <StyledVideoImage {...{ src, alt }} />
           </VideoImageWrapper>
-          <StyledButtonContainer>
             <PlayButton
               title={`Play ${caption} video`}
               onClick={() => setClicked(true)}
-            ></PlayButton>
-          </StyledButtonContainer>
+            position="absolute"
+            bottom={0}
+            left="lg"
+          />
         </>
       )}
       <P variant="sm" fontWeight="bold" textAlign="right" as="figcaption">
