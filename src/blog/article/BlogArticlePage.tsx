@@ -10,8 +10,6 @@ import { colors } from '../../theme/colors'
 import { InfoWrapper, TitleWrapper, Content } from './BlogArticlePage.styles'
 import { BlogArticlePageProps } from './BlogArticlePage.types'
 
-const PADDING_X = { default: 'lg', md: 'xxl' }
-
 const getCategoryColor = (category: string) => {
   switch (category) {
     default:
@@ -52,17 +50,15 @@ export const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
     >
       <Tag color={getCategoryColor(category)}>{category}</Tag>
     </InfoWrapper>
-    <TitleWrapper display="flex" justifyContent="center" paddingX={PADDING_X}>
+    <TitleWrapper
+      display="flex"
+      justifyContent="center"
+      paddingX={{ default: 'lg', md: 'xxl' }}
+    >
       <H2 as="h1" textAlign="center" maxWidth={842}>
         {title}
       </H2>
     </TitleWrapper>
-    <Content
-      document={json}
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      paddingX={PADDING_X}
-    />
+    <Content document={json} />
   </>
 )
