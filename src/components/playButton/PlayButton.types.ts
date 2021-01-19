@@ -1,8 +1,14 @@
 import React from 'react'
-import { BorderProps, PositionProps, SpaceProps } from 'styled-system'
+import {
+  BorderProps,
+  ColorProps,
+  PositionProps,
+  SpaceProps,
+} from 'styled-system'
 
 export interface PlayButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'>,
     BorderProps,
+    ColorProps,
     PositionProps,
     SpaceProps {}
