@@ -11,17 +11,7 @@ export const GalleryContainer: React.FC<GalleryContainerProps> = ({
 }) => {
   switch (variant) {
     case 'grid':
-      return (
-        <Grid
-          width={Object.keys(columns).reduce(
-            (acc, column) => ({ ...acc, [column]: 1 / columns[column] }),
-            {}
-          )}
-          {...props}
-        >
-          {children}
-        </Grid>
-      )
+      return <Grid {...props}>{children}</Grid>
     case 'masonry':
       return (
         <Masonry {...{ columns }} {...props}>

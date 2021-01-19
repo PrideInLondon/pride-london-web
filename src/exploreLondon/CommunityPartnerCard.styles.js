@@ -1,20 +1,22 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { compose, layout, space } from 'styled-system'
+import Image from 'gatsby-image/withIEPolyfill'
 import theme from '../theme/theme'
 import { media } from '../theme/media'
+import { colors } from '../theme/colors'
 import { NewsCategory } from '../components/newsCategory'
+import { Card } from '../components/card'
 
-export const Card = styled.div`
-  height: 100%;
-  border-radius: 4px;
-  overflow: hidden;
-  background-color: ${theme.colors.white};
+export const StyledImage = styled(Image)`
+  transition: transform 0.15s ease-out;
+  width: 100% !important;
 `
 
-export const CardImg = styled(Img)`
-  padding-top: 58.75%;
-  width: 100% !important;
-  height: auto !important;
+export const StyledCard = styled(Card)`
+  background-color: ${theme.colors.white};
+  border: solid 1px ${colors.mediumGrey};
+
+  ${compose(layout, space)}
 `
 
 export const CardTitle = styled.h3`

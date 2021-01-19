@@ -35,7 +35,7 @@ export const CategoryFilter = <T,>({
 }: CategoryFilterProps & {
   entries: T[]
   render: (renderProps: {
-    entries: (predicate: (entry: T) => string) => T[]
+    entries: (predicate: (entry: T) => string | string[]) => T[]
   }) => React.ReactNode
 }) => {
   const [selectAll, setSelectAll] = useState(
@@ -81,9 +81,9 @@ export const CategoryFilter = <T,>({
         entries: predicate =>
           selectAll
             ? entries
-            : entries.filter(entry =>
-                calculateIsSelected(variant, predicate(entry), selected)
-              ),
+            : entries.filter(entry => {
+                return calculateIsSelected(variant, predicate(entry), selected)
+              }),
       })}
     </>
   )

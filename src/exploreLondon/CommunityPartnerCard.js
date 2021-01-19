@@ -9,8 +9,8 @@ import Twitter from '../components/icons/twitter'
 import Instagram from '../components/icons/instagram'
 import Globe from '../components/icons/globe'
 import {
-  Card,
-  CardImg,
+  StyledCard,
+  StyledImage,
   CardTitle,
   CardCategories,
   CardBody,
@@ -41,8 +41,8 @@ const CommunityPartnerCard = ({ partner }) => {
     accessibilityDetails,
   } = partner
   return (
-    <Card>
-      <CardImg fixed={featuredImage.fixed} />
+    <StyledCard>
+      <StyledImage fixed={featuredImage.fixed} />
       <CardBody>
         <CardCategories>
           {categories.map(category => (
@@ -128,7 +128,7 @@ const CommunityPartnerCard = ({ partner }) => {
           )}
         </Social>
       </CardBody>
-    </Card>
+    </StyledCard>
   )
 }
 
