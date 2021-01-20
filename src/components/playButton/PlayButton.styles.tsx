@@ -1,17 +1,12 @@
+import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../../theme/colors'
-import { mediaQueries } from '../../theme/mediaQueries'
-import { space } from '../../theme/space'
+import { compose, border, color, position, space } from 'styled-system'
+import { PlayButtonProps } from './PlayButton.types'
 
-export const ButtonWrapper = styled.button`
-  padding: ${space.lg};
-  background-color: ${colors.indigo};
+// we need to map this explicitly due to types issue with styled-components
+// this can be moved back to styled.button after v5 upgrade
+export const Button = styled(props => <button {...props} />)<PlayButtonProps>`
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 
-  ${mediaQueries.md} {
-    padding: ${space.xl_mob};
-  }
+  ${compose(border, color, position, space)}
 `
