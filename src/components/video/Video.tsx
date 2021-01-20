@@ -63,6 +63,7 @@ export const Video = ({
         textAlign="right"
         as="figcaption"
         paddingLeft={{ default: '25%', md: '30%' }}
+        paddingTop="sm"
       >
         {caption}
       </P>
