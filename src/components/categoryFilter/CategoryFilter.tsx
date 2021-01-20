@@ -50,7 +50,7 @@ export const CategoryFilter = <T,>({
   }, [variant, categories])
 
   useEffect(() => {
-    // For checkbox variants, should select all when no categories selected
+    // When all checkbox options are unselected, revert to selecting all
     if (variant === 'checkbox' && !selected.length) {
       setSelectAll(true)
     }
@@ -89,9 +89,9 @@ export const CategoryFilter = <T,>({
         entries: predicate =>
           selectAll
             ? entries
-            : entries.filter(entry => {
-                return calculateIsSelected(variant, predicate(entry), selected)
-              }),
+            : entries.filter(entry =>
+                calculateIsSelected(variant, predicate(entry), selected)
+              ),
       })}
     </>
   )
