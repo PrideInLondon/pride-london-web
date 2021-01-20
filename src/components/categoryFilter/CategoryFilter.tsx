@@ -49,6 +49,13 @@ export const CategoryFilter = <T,>({
     setSelected(calculateInitialSelected(variant, categories))
   }, [variant, categories])
 
+  useEffect(() => {
+    // For checkbox variants, should select all when no categories selected
+    if (variant === 'checkbox' && !selected.length) {
+      setSelectAll(true)
+    }
+  }, [variant, selected])
+
   return (
     <>
       <Wrapper {...props}>
@@ -56,6 +63,7 @@ export const CategoryFilter = <T,>({
           const isSelected = isSelectAll
             ? selectAll
             : calculateIsSelected(variant, name, selected)
+
           return (
             <StyledTag
               key={name}

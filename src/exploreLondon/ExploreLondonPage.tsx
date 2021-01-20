@@ -94,7 +94,7 @@ const ExploreLondonPage: React.FC<ExploreLondonPageProps> = ({
                         gridGap={32}
                       >
                         {pagedEntries.map(({ node }) => (
-                          <CommunityPartnerCard partner={node} />
+                          <CommunityPartnerCard partner={node} key={node.id} />
                         ))}
                       </StyledGalleryContainer>
                       <ButtonWrapper>

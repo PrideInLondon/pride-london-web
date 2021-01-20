@@ -4,7 +4,6 @@ interface PartnerLocation {
   lon: number
   lat: number
 }
-
 interface PartnerDescription {
   description: string
 }

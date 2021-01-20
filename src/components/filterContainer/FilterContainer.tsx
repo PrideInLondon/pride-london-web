@@ -15,6 +15,7 @@ export const calculateIsSelected = (
       if (Array.isArray(filterName)) {
         return filterName.some(name => selected.includes(name))
       }
+
       return selected.includes(filterName)
     case 'radio':
       return filterName === selected
