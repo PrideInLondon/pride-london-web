@@ -105,7 +105,13 @@ const renderVideo: NodeRenderer = (
     caption: getStringForLocale(caption),
     coverImage: getImageForLocale(getAnyForLocale(image)),
   }
-  return <Video {...props} />
+  return (
+    <Video
+      marginY={{ default: 'xl', md: 'xxl' }}
+      maxWidth={MAX_CONTENT_WIDTH}
+      {...props}
+    />
+  )
 }
 
 export const renderEmbeddedEntry: NodeRenderer = (node, children) => {
