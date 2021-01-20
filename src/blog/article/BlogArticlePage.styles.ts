@@ -12,6 +12,8 @@ import { RichText } from '../../components/richText'
 import { fontSizes } from '../../theme/fonts'
 import { mediaQueries } from '../../theme/mediaQueries'
 
+export const MAX_CONTENT_WIDTH = 624
+
 export const InfoWrapper = styled.div<FlexboxProps & LayoutProps & SpaceProps>`
   ${compose(flexbox, layout, space)}
 `
@@ -29,7 +31,13 @@ export const Content = styled(RichText)`
     ol,
     p,
     ul {
-      max-width: 624px;
+      max-width: ${MAX_CONTENT_WIDTH}px;
     }
   }
+`
+
+export const AuthorWrapper = styled.div<
+  FlexboxProps & LayoutProps & SpaceProps
+>`
+  ${compose(flexbox, layout, space)}
 `
