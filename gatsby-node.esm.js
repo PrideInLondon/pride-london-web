@@ -169,3 +169,13 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     })
   }
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type ContentfulBlogArticle implements Node {
+      author: ContentfulTalentProfile
+    }
+  `
+  createTypes(typeDefs)
+}
