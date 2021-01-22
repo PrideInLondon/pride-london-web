@@ -19,11 +19,20 @@ export const CONTENT_PADDING_X = {
   md: 'xxl',
 } as const
 
-export const InfoWrapper = styled.div<FlexboxProps & LayoutProps & SpaceProps>`
+export const InfoWrapper = styled.div.attrs({
+  display: 'flex',
+  justifyContent: 'center',
+  marginTop: 'xxl',
+  marginBottom: 'lg',
+})<FlexboxProps & LayoutProps & SpaceProps>`
   ${compose(flexbox, layout, space)}
 `
 
-export const TitleWrapper = styled.div<FlexboxProps & LayoutProps & SpaceProps>`
+export const TitleWrapper = styled.div.attrs({
+  display: 'flex',
+  justifyContent: 'center',
+  paddingX: { default: 'lg', md: 'xxl' },
+})<FlexboxProps & LayoutProps & SpaceProps>`
   ${compose(flexbox, layout, space)}
 `
 
@@ -52,8 +61,12 @@ export const Content = styled(RichText).attrs({ paddingX: CONTENT_PADDING_X })`
   }
 `
 
-export const AuthorWrapper = styled.div<
-  FlexboxProps & LayoutProps & SpaceProps
->`
+export const AuthorWrapper = styled.div.attrs({
+  display: 'flex',
+  justifyContent: 'center',
+  marginTop: 'xxl',
+  marginBottom: { default: 'xl', md: 'xxl' },
+  paddingX: { default: 'lg', md: 'xxl' },
+})<FlexboxProps & LayoutProps & SpaceProps>`
   ${compose(flexbox, layout, space)}
 `

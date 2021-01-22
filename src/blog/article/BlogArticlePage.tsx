@@ -50,32 +50,17 @@ export const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
         aria-hidden="true"
       />
     </RippedSection>
-    <InfoWrapper
-      display="flex"
-      justifyContent="center"
-      marginTop="xxl"
-      marginBottom="lg"
-    >
+    <InfoWrapper>
       <Tag color={getCategoryColor(category)}>{category}</Tag>
     </InfoWrapper>
-    <TitleWrapper
-      display="flex"
-      justifyContent="center"
-      paddingX={{ default: 'lg', md: 'xxl' }}
-    >
+    <TitleWrapper>
       <H2 as="h1" textAlign="center" maxWidth={842}>
         {title}
       </H2>
     </TitleWrapper>
     <Content document={json} />
     {author && (
-      <AuthorWrapper
-        display="flex"
-        justifyContent="center"
-        marginTop="xxl"
-        marginBottom={{ default: 'xl', md: 'xxl' }}
-        paddingX={{ default: 'lg', md: 'xxl' }}
-      >
+      <AuthorWrapper>
         <TalentProfile type="author" {...author} maxWidth={MAX_CONTENT_WIDTH} />
       </AuthorWrapper>
     )}
