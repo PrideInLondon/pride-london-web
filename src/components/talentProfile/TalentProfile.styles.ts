@@ -7,10 +7,6 @@ export const Wrapper = styled.div<LayoutProps & SpaceProps>`
   background-color: ${colors.lightGrey};
   padding: ${xl_mob}px ${lg}px;
 
-  > div {
-    padding: 0;
-  }
-
   ${compose(layout, space)}
 `
 

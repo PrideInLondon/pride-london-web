@@ -9,20 +9,11 @@ import {
   SpaceProps,
 } from 'styled-system'
 import { colors } from '../../theme/colors'
-import { md, spacing } from '../../theme/space'
+import { md } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { Navigate } from '../navigate'
 
-export const CONTENT_PADDING_X = {
-  default: 'lg',
-  md: 'xxl',
-} as const
-
-export const Wrapper = styled.div.attrs<
-  FlexboxProps & LayoutProps & SpaceProps
->({
-  paddingX: CONTENT_PADDING_X,
-})`
+export const Wrapper = styled.div<FlexboxProps & LayoutProps & SpaceProps>`
   li {
     color: ${colors.indigo};
   }
@@ -39,17 +30,6 @@ export const Wrapper = styled.div.attrs<
   > blockquote {
     > p {
       all: unset;
-    }
-  }
-
-  /* RippedSection full-width image :( */
-  > section {
-    margin-left: -${spacing[CONTENT_PADDING_X.default]};
-    margin-right: -${spacing[CONTENT_PADDING_X.default]};
-
-    ${mediaQueries.md} {
-      margin-left: -${spacing[CONTENT_PADDING_X.md]};
-      margin-right: -${spacing[CONTENT_PADDING_X.md]};
     }
   }
 
