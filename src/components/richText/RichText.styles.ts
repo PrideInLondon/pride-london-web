@@ -1,26 +1,42 @@
 import styled from 'styled-components'
-import { compose, layout, space } from 'styled-system'
+import {
+  compose,
+  flexbox,
+  layout,
+  space,
+  FlexboxProps,
+  LayoutProps,
+  SpaceProps,
+} from 'styled-system'
 import { colors } from '../../theme/colors'
 import { md } from '../../theme/space'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { Navigate } from '../navigate'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<FlexboxProps & LayoutProps & SpaceProps>`
   li {
     color: ${colors.indigo};
   }
 
-  ul,
-  ol {
+  ol,
+  ul {
+    width: 100%;
+
     p {
       margin: 0;
     }
   }
 
-  ${compose(layout, space)}
+  > blockquote {
+    > p {
+      all: unset;
+    }
+  }
+
+  ${compose(flexbox, layout, space)}
 `
 
-export const MultiImageWrapper = styled.div`
+export const MultiImageWrapper = styled.div<LayoutProps & SpaceProps>`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 1fr;
@@ -31,6 +47,8 @@ export const MultiImageWrapper = styled.div`
     grid-template-columns: repeat(3, 1fr);
     column-gap: ${md}px;
   }
+
+  ${compose(layout, space)}
 `
 
 export const Hyperlink = styled(Navigate)`
