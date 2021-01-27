@@ -21,6 +21,7 @@ export interface ContentfulTalentProfile {
   facebook?: string
   twitter?: string
 }
+
 export interface TalentProfileProps
   extends ContentfulTalentProfile,
     SpaceProps,
