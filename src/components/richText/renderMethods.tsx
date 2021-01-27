@@ -2,6 +2,7 @@ import React from 'react'
 import { NodeRenderer, Options } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import { colors } from '../../theme/colors'
+import { lg, xxl } from '../../theme/space'
 import { getRandomInt } from '../../utils/number-utils'
 import { RippedSection } from '../rippedSection'
 import { Rip, RipVariant } from '../rippedSection/Rip.types'
@@ -14,6 +15,8 @@ import { MultiImageWrapper, Hyperlink } from './RichText.styles'
 import { ContentfulImage } from './RichText.types'
 
 export const DEFAULT_LOCALE = 'en-GB'
+
+const MAX_CONTENT_WIDTH = 1062
 
 export const getAnyForLocale = <T,>(
   val: { [key: string]: T },
@@ -55,6 +58,7 @@ const renderImage: NodeRenderer = ({ data: { target } }, _children) => {
         top: generateRip(),
         bottom: generateRip(),
       }}
+      marginY={{ default: 'xxl', md: `${lg + xxl}px` }}
     >
       <img {...props} width="100%" />
     </RippedSection>
@@ -72,11 +76,15 @@ const renderMultiImage: NodeRenderer = (
   },
   _children
 ) => (
-  <MultiImageWrapper>
+  <MultiImageWrapper
+    marginY={{ default: 'xl', md: 'xxl' }}
+    maxWidth={MAX_CONTENT_WIDTH}
+  >
     {getAnyForLocale<ContentfulImage[]>(images).map(
-      (props: ContentfulImage) => (
-        <Image {...getImageForLocale(props)} />
-      )
+      (props: ContentfulImage) => {
+        const imageProps = getImageForLocale(props)
+        return <Image key={imageProps.src} {...imageProps} />
+      }
     )}
   </MultiImageWrapper>
 )
@@ -97,7 +105,13 @@ const renderVideo: NodeRenderer = (
     caption: getStringForLocale(caption),
     coverImage: getImageForLocale(getAnyForLocale(image)),
   }
-  return <Video {...props} />
+  return (
+    <Video
+      marginY={{ default: 'xl', md: 'xxl' }}
+      maxWidth={MAX_CONTENT_WIDTH}
+      {...props}
+    />
+  )
 }
 
 export const renderEmbeddedEntry: NodeRenderer = (node, children) => {
@@ -114,7 +128,14 @@ export const renderEmbeddedEntry: NodeRenderer = (node, children) => {
 
 const renderParagraph: NodeRenderer = (_node, children) => <P>{children}</P>
 
-const renderQuote: NodeRenderer = (_node, children) => <Quote>{children}</Quote>
+const renderQuote: NodeRenderer = (_node, children) => (
+  <Quote
+    marginY={{ default: 'xxl', md: `${lg + xxl}px` }}
+    maxWidth={MAX_CONTENT_WIDTH}
+  >
+    {children}
+  </Quote>
+)
 
 const renderHyperlink: NodeRenderer = ({ data: { uri } }, children) => (
   <Hyperlink to={uri}>{children}</Hyperlink>
