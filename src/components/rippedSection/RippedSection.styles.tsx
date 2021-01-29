@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { layout } from 'styled-system'
+import { compose, layout, space } from 'styled-system'
 
 export const StyledSection = styled.section`
   position: relative;
@@ -7,5 +7,5 @@ export const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
 
-  ${layout}
+  ${compose(layout, space)}
 `
