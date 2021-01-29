@@ -6,15 +6,19 @@ import FilterContainer, { calculateIsSelected } from './FilterContainer'
 
 describe('calculateIsSelected', () => {
   it.each`
-    role          | selected                 | expected
-    ${'checkbox'} | ${['foo', 'bar', 'baz']} | ${true}
-    ${'checkbox'} | ${['foo', 'baz']}        | ${false}
-    ${'radio'}    | ${'bar'}                 | ${true}
-    ${'radio'}    | ${'foo'}                 | ${false}
+    role          | selected                 | expected | filterName
+    ${'checkbox'} | ${['foo', 'bar', 'baz']} | ${true}  | ${'bar'}
+    ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${'bar'}
+    ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${['bar']}
+    ${'checkbox'} | ${['foo', 'bar']}        | ${true}  | ${['baz', 'foo', 'bar']}
+    ${'radio'}    | ${'bar'}                 | ${true}  | ${'bar'}
+    ${'radio'}    | ${'foo'}                 | ${false} | ${'bar'}
+    ${'radio'}    | ${'bar'}                 | ${false} | ${['bar']}
+    ${'radio'}    | ${'foo'}                 | ${false} | ${['bar']}
   `(
     'should return $expected when given role $role and selected $selected',
-    ({ role, selected, expected }) => {
-      const isSelected = calculateIsSelected(role, 'bar', selected)
+    ({ role, filterName, selected, expected }) => {
+      const isSelected = calculateIsSelected(role, filterName, selected)
       expect(isSelected).toEqual(expected)
     }
   )

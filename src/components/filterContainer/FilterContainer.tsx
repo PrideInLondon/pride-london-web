@@ -12,13 +12,12 @@ export const calculateIsSelected = (
 ): boolean => {
   switch (filterType) {
     case 'checkbox':
-      if (Array.isArray(filterName)) {
-        return filterName.some(name => selected.includes(name))
-      }
-
-      return selected.includes(filterName)
+      return Array.isArray(filterName)
+        ? // checkbox may be a multiselect component, so check at least one could be in currently selected
+          filterName.some(name => selected.includes(name))
+        : selected.includes(filterName)
     case 'radio':
-      return filterName === selected
+      return Array.isArray(filterName) ? false : filterName === selected
     default:
       return false
   }
