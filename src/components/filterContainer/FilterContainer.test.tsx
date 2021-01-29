@@ -10,7 +10,7 @@ describe('calculateIsSelected', () => {
     ${'checkbox'} | ${['foo', 'bar', 'baz']} | ${true}  | ${'bar'}
     ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${'bar'}
     ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${['bar']}
-    ${'checkbox'} | ${['foo', 'bar']}        | ${true}  | ${['baz', 'foo', 'bar']}
+    ${'checkbox'} | ${['foo', 'bar']}        | ${true}  | ${['baz', 'foo']}
     ${'radio'}    | ${'bar'}                 | ${true}  | ${'bar'}
     ${'radio'}    | ${'foo'}                 | ${false} | ${'bar'}
     ${'radio'}    | ${'bar'}                 | ${false} | ${['bar']}
