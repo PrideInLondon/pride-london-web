@@ -188,11 +188,31 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   }
 }
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
   const typeDefs = `
     type ContentfulBlogArticle implements Node {
+      hero: ContentfulAsset!
+      category: String!
+      title: String!
+      content: contentfulBlogArticleContentRichTextNode!
       author: ContentfulTalentProfile
+    }
+
+    type contentfulBlogArticleContentRichTextNode implements Node { 
+      json: JSON!
+    }
+
+    type ContentfulTalentProfile implements Node {
+      bio: contentfulTalentProfileBioRichTextNode!
+      website: String
+      email: String
+      facebook: String
+      twitter: String
+      instagram: String
+    }
+
+    type contentfulTalentProfileBioRichTextNode implements Node { 
+      json: JSON!
     }
   `
   createTypes(typeDefs)
