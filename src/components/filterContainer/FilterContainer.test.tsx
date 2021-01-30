@@ -10,11 +10,17 @@ describe('calculateIsSelected', () => {
     ${'checkbox'} | ${['foo', 'bar', 'baz']} | ${true}  | ${'bar'}
     ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${'bar'}
     ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${['bar']}
-    ${'checkbox'} | ${['foo', 'bar']}        | ${true}  | ${['baz', 'foo']}
+    ${'checkbox'} | ${['foo', 'bar']}        | ${true}  | ${['baz', 'foo', 'bar']}
+    ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${[]}
+    ${'checkbox'} | ${['foo', 'bar']}        | ${false} | ${['']}
+    ${'checkbox'} | ${['foo', 'bar']}        | ${false} | ${''}
     ${'radio'}    | ${'bar'}                 | ${true}  | ${'bar'}
     ${'radio'}    | ${'foo'}                 | ${false} | ${'bar'}
     ${'radio'}    | ${'bar'}                 | ${false} | ${['bar']}
     ${'radio'}    | ${'foo'}                 | ${false} | ${['bar']}
+    ${'radio'}    | ${['foo', 'baz']}        | ${false} | ${[]}
+    ${'radio'}    | ${['foo', 'bar']}        | ${false} | ${['']}
+    ${'radio'}    | ${['foo', 'bar']}        | ${false} | ${''}
   `(
     'should return $expected when given role $role and selected $selected',
     ({ role, filterName, selected, expected }) => {
