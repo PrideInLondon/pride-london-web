@@ -9,15 +9,8 @@ import {
 
 const encoder = new UuidEncoder('base62')
 
-export const changeTimeZone = (
-  date: Date,
-  timeZone = 'Europe/London'
-): Date => {
-  const dateWithTimeZone = new Date(
-    date.toLocaleString('en-GB', {
-      timeZone,
-    })
-  )
+export const changeTimeZone = (date: Date): Date => {
+  const dateWithTimeZone = new Date(date)
 
   const diff = date.getTime() - dateWithTimeZone.getTime()
   return new Date(date.getTime() + diff)
