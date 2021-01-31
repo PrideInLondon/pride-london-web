@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 import { variant } from 'styled-system'
-import { colors } from '../../theme/colors'
-import { fonts } from '../../theme/fonts'
 import { sm } from '../../theme/space'
+import { H6 } from '../typography'
+import { Wrapper } from '../wrapper'
 
-export const Flex = styled.div`
-  font-size: 2em;
-  display: flex;
-  line-height: 1em;
-
+export const Flex = styled(Wrapper).attrs({
+  display: 'flex',
+  alignItems: 'center',
+  fontSize: '2em',
+  lineHeight: '1em',
+})`
   ${variant({
     variants: {
       horizontal: {
@@ -36,12 +37,7 @@ export const Flex = styled.div`
   }
 `
 
-export const ShareText = styled.h6`
-  font-family: ${fonts.title};
-  font-weight: 800;
-  vertical-align: middle;
-  color: ${colors.indigo};
-
+export const ShareText = styled(H6).attrs({ mb: 0 })`
   ${variant({
     variants: {
       vertical: {
