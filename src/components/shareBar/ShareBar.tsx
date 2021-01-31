@@ -14,20 +14,18 @@ const SOCIALS: { name: SharePlatform }[] = [
 ]
 
 export const ShareBar = ({ variant, content, ...props }: ShareBarProps) => (
-  <div {...props}>
-    <Flex {...{ variant }}>
-      <ShareText {...{ variant }}>Share</ShareText>
-      {SOCIALS.map(({ name }) => (
-        <StyledLink
-          key={name}
-          href={generateShareUrl(name, content)}
-          title={`Share via ${generatePlatformName(name)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name={name} variant="indigo" />
-        </StyledLink>
-      ))}
-    </Flex>
-  </div>
+  <Flex {...{ variant }} {...props}>
+    <ShareText {...{ variant }}>Share</ShareText>
+    {SOCIALS.map(({ name }) => (
+      <StyledLink
+        key={name}
+        href={generateShareUrl(name, content)}
+        title={`Share via ${generatePlatformName(name)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name={name} variant="indigo" />
+      </StyledLink>
+    ))}
+  </Flex>
 )
