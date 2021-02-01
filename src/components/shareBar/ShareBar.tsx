@@ -1,8 +1,13 @@
 import React from 'react'
 import { Icon } from '../icon'
 import { generateShareUrl, SharePlatform } from '../../utils/share-utils'
-import { Wrapper } from '../wrapper'
-import { Flex, ShareText, SocialsWrapper, StyledLink } from './ShareBar.styles'
+import {
+  ShareBarWrapper,
+  Flex,
+  ShareText,
+  SocialsWrapper,
+  StyledLink,
+} from './ShareBar.styles'
 import { ShareBarProps } from './ShareBar.types'
 import { generatePlatformName } from './ShareBar.utils'
 
@@ -15,7 +20,7 @@ const SOCIALS: { name: SharePlatform }[] = [
 ]
 
 export const ShareBar = ({ variant, content, ...props }: ShareBarProps) => (
-  <Wrapper display="inline-block" {...props}>
+  <ShareBarWrapper display="inline-block" {...{ variant }} {...props}>
     <Flex {...{ variant }}>
       <ShareText {...{ variant }}>Share</ShareText>
       <SocialsWrapper {...{ variant }}>
@@ -33,5 +38,5 @@ export const ShareBar = ({ variant, content, ...props }: ShareBarProps) => (
         ))}
       </SocialsWrapper>
     </Flex>
-  </Wrapper>
+  </ShareBarWrapper>
 )

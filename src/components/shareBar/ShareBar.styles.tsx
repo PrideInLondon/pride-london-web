@@ -4,6 +4,16 @@ import { sm } from '../../theme/space'
 import { H6 } from '../typography'
 import { Wrapper } from '../wrapper'
 
+export const ShareBarWrapper = styled(Wrapper)`
+  ${variant({
+    variants: {
+      vertical: {
+        maxWidth: '2em',
+      },
+    },
+  })}
+`
+
 export const Flex = styled(Wrapper).attrs({
   display: 'flex',
   alignItems: 'center',
