@@ -20,21 +20,6 @@ export const Flex = styled(Wrapper).attrs({
       },
     },
   })}
-
-  > * {
-    ${variant({
-      variants: {
-        horizontal: {
-          marginX: sm / 4,
-          marginY: 0,
-        },
-        vertical: {
-          marginX: 0,
-          marginY: sm / 4,
-        },
-      },
-    })}
-  }
 `
 
 export const ShareText = styled(H6).attrs({ mb: 0 })`
@@ -42,8 +27,24 @@ export const ShareText = styled(H6).attrs({ mb: 0 })`
     variants: {
       vertical: {
         transform: 'rotate(90deg)',
-        marginY: -10,
-        marginX: -50,
+      },
+    },
+  })}
+`
+
+export const SocialsWrapper = styled(Wrapper).attrs({
+  display: 'flex',
+})`
+  ${variant({
+    variants: {
+      horizontal: {
+        flexDirection: 'row',
+        marginLeft: 'sm',
+      },
+      vertical: {
+        flexDirection: 'column',
+        transform: 'translateY(22px)',
+        marginTop: 'sm',
       },
     },
   })}
@@ -51,5 +52,15 @@ export const ShareText = styled(H6).attrs({ mb: 0 })`
 
 export const StyledLink = styled.a`
   text-decoration: none;
-  width: 1em;
+
+  ${variant({
+    variants: {
+      horizontal: {
+        marginX: sm / 4,
+      },
+      vertical: {
+        marginY: sm / 4,
+      },
+    },
+  })}
 `
