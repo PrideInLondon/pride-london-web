@@ -36,18 +36,14 @@ export const BannerMark = styled(Mark)`
 export const DesktopShareBar = styled(ShareBar).attrs({
   content,
   variant: 'vertical',
+  left: 'lg',
+  position: 'absolute',
+  top: '165px',
 })`
   display: none;
-  position: absolute;
-  top: 165px;
-  left: ${lg}px;
 
   ${mediaQueries.md} {
-    display: block;
-  }
-
-  ${mediaQueries.lg} {
-    left: 90px;
+    display: inline-block;
   }
 `
 
