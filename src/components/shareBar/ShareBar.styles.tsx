@@ -4,11 +4,15 @@ import { sm } from '../../theme/space'
 import { H6 } from '../typography'
 import { Wrapper } from '../wrapper'
 
-export const ShareBarWrapper = styled(Wrapper)`
+export const ShareBarWrapper = styled(Wrapper).attrs({
+  display: 'inline-block',
+})`
   ${variant({
     variants: {
       vertical: {
         maxWidth: '2em',
+        paddingTop: '32px',
+        paddingBottom: '22px',
       },
     },
   })}

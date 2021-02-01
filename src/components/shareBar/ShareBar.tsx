@@ -20,7 +20,7 @@ const SOCIALS: { name: SharePlatform }[] = [
 ]
 
 export const ShareBar = ({ variant, content, ...props }: ShareBarProps) => (
-  <ShareBarWrapper display="inline-block" {...{ variant }} {...props}>
+  <ShareBarWrapper {...{ variant }} {...props}>
     <Flex {...{ variant }}>
       <ShareText {...{ variant }}>Share</ShareText>
       <SocialsWrapper {...{ variant }}>
