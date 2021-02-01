@@ -37,12 +37,16 @@ export const DesktopShareBarWrapper = styled.div`
   display: none;
   position: absolute;
   top: 150px;
-  left: 90px;
+  left: ${lg}px;
   height: 100%;
   z-index: 1;
 
   ${mediaQueries.md} {
     display: block;
+  }
+
+  ${mediaQueries.lg} {
+    left: 90px;
   }
 `
 
