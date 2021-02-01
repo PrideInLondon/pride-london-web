@@ -29,7 +29,7 @@ const YouMeUsWePage = (props: YouMeUsWePageProps) => (
       <BannerMark />
     </BannerBackgroundImage>
     <Wrapper>
-      <DesktopShareBar variant="vertical" />
+      <DesktopShareBar />
       <StyledTag color={colors.yellow}>Pride in London Themes</StyledTag>
       <PrideInLockdownSection />
       <ActsOfAllyshipSection />

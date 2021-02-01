@@ -8,7 +8,7 @@ import ymuw from './assets/ymuw.jpg'
 const PrideInLockdownSection = () => (
   <SectionWrapper>
     <Heading as="h2">Pride in Lockdown</Heading>
-    <MobileShareBar variant="horizontal" />
+    <MobileShareBar />
     <P variant="lg" marginTop={{ md: '0', default: 'xl' }}>
       Every year the capital sees over a million volunteers, artists and
       Pride-goers come together, united in their support of the LGBT+ community.
