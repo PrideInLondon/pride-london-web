@@ -16,7 +16,7 @@ storiesOf('ShareBar', module).add('default', () => (
         'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community',
         CONTENT_GROUP_ID
       ),
-      url: text('URL', 'http://prideinlondon.org', CONTENT_GROUP_ID),
+      url: text('URL', 'https://prideinlondon.org', CONTENT_GROUP_ID),
     }}
   />
 ))
