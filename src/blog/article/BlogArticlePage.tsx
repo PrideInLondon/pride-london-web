@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Image from 'gatsby-image/withIEPolyfill'
 import { RippedSection } from '../../components/rippedSection'
 import { RipVariant } from '../../components/rippedSection/Rip.types'
@@ -19,7 +20,7 @@ const getCategoryColor = (category: string) => {
   }
 }
 
-export const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
+const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
   data: {
     contentfulBlogArticle: {
       hero,
@@ -76,3 +77,38 @@ export const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
     )}
   </>
 )
+
+export const query = graphql`
+  query blogArticle($id: String!) {
+    contentfulBlogArticle(id: { eq: $id }) {
+      hero {
+        desktop: fluid(maxWidth: 1600, quality: 100) {
+          ...GatsbyContentfulFluid_withWebp
+        }
+        tablet: fluid(maxWidth: 768, quality: 100) {
+          ...GatsbyContentfulFluid_withWebp
+        }
+        mobile: fluid(maxWidth: 375, quality: 100) {
+          ...GatsbyContentfulFluid_withWebp
+        }
+      }
+      category
+      title
+      content {
+        json
+      }
+      author {
+        bio {
+          json
+        }
+        website
+        email
+        facebook
+        twitter
+        instagram
+      }
+    }
+  }
+`
+
+export default BlogArticlePage
