@@ -1,6 +1,7 @@
 import path from 'path'
 import { generateEventSlug } from './src/events/helpers'
 import { generateFiftyTwoEntrySlug } from './src/fifty-two/helpers'
+import { generateBlogArticleSlug } from './src/blog/article/helpers'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
@@ -10,6 +11,7 @@ const GenericContentPage = path.resolve(
 const FiftyTwoEntryPage = path.resolve(
   './src/fifty-two/entry/FiftyTwoEntryPage.tsx'
 )
+const BlogArticlePage = path.resolve('./src/blog/article/BlogArticlePage.tsx')
 
 exports.sourceNodes = ({ actions: { createTypes } }) =>
   createTypes(`
@@ -70,6 +72,14 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
           node {
             id
             slug
+          }
+        }
+      }
+      blogArticles: allContentfulBlogArticle {
+        edges {
+          node {
+            id
+            title
           }
         }
       }
@@ -152,6 +162,14 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
         },
       })
     })
+
+    result.data.blogArticles.edges.forEach(({ node: { id, title } }) => {
+      createPage({
+        path: generateBlogArticleSlug(title),
+        component: BlogArticlePage,
+        context: { id },
+      })
+    })
   })
 }
 
@@ -170,11 +188,31 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   }
 }
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
   const typeDefs = `
     type ContentfulBlogArticle implements Node {
+      hero: ContentfulAsset!
+      category: String!
+      title: String!
+      content: contentfulBlogArticleContentRichTextNode!
       author: ContentfulTalentProfile
+    }
+
+    type contentfulBlogArticleContentRichTextNode implements Node { 
+      json: JSON!
+    }
+
+    type ContentfulTalentProfile implements Node {
+      bio: contentfulTalentProfileBioRichTextNode!
+      website: String
+      email: String
+      facebook: String
+      twitter: String
+      instagram: String
+    }
+
+    type contentfulTalentProfileBioRichTextNode implements Node { 
+      json: JSON!
     }
   `
   createTypes(typeDefs)
