@@ -8,6 +8,7 @@ import { H2 } from '../../components/typography'
 import { ShareBar } from '../../components/shareBar'
 import { TalentProfile } from '../../components/talentProfile'
 import { getImageForBreakpoint } from '../../utils/style-utils'
+import { getFirstParagraph } from '../../utils/document-utils'
 import { getRandomInt } from '../../utils/number-utils'
 import { colors } from '../../theme/colors'
 import { MAX_CONTENT_WIDTH, Content } from './BlogArticlePage.styles'
@@ -74,7 +75,7 @@ export const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       >
         <ShareBar
           variant={{ default: 'horizontal', md: 'vertical' }}
-          content={{ title, body: '', url: href }}
+          content={{ title, body: getFirstParagraph(json), url: href }}
         />
       </Wrapper>
     </Wrapper>
