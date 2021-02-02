@@ -30,6 +30,7 @@ export const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       author,
     },
   },
+  location: { href },
 }) => (
   <>
     <RippedSection
@@ -73,11 +74,10 @@ export const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       >
         <ShareBar
           variant={{ default: 'horizontal', md: 'vertical' }}
-          content={{ title, body: '', url: '' }}
+          content={{ title, body: '', url: href }}
         />
       </Wrapper>
     </Wrapper>
-
     <Content document={json} />
     {author && (
       <Wrapper
