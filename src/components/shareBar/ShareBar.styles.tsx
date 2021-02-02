@@ -53,12 +53,14 @@ export const SocialsWrapper = styled(Wrapper).attrs({
     variants: {
       horizontal: {
         flexDirection: 'row',
+        marginTop: 0,
         marginLeft: 'sm',
       },
       vertical: {
         flexDirection: 'column',
         transform: 'translateY(22px)',
         marginTop: 'sm',
+        marginLeft: 0,
       },
     },
   })}
