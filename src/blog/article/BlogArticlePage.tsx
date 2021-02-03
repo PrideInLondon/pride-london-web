@@ -13,10 +13,18 @@ import { colors } from '../../theme/colors'
 import { MAX_CONTENT_WIDTH, Content } from './BlogArticlePage.styles'
 import { BlogArticlePageProps } from './BlogArticlePage.types'
 
-const getCategoryColor = (category: string) => {
+const getCategoryColor = (category: string): string => {
   switch (category) {
+    case 'Arts & culture':
+      return colors.tomato
+    case 'History':
+      return colors.lemonGreen
+    case 'Life':
+      return colors.skyBlue
+    case 'Stories':
+      return colors.fuscia
     default:
-      return colors.mexicanPink
+      return ''
   }
 }
 
