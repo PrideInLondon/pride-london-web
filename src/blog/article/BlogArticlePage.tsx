@@ -63,13 +63,12 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
         {title}
       </H2>
     </Wrapper>
-    <Content document={json} />
+    <Content document={json} marginBottom="xxl" />
     {author && (
       <Wrapper
         display="flex"
         justifyContent="center"
-        marginTop="xxl"
-        marginBottom={{ default: 'xl', md: 'xxl' }}
+        marginBottom="xxl"
         paddingX={{ default: 'lg', md: 'xxl' }}
       >
         <TalentProfile type="author" {...author} maxWidth={MAX_CONTENT_WIDTH} />
