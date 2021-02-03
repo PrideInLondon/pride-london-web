@@ -111,6 +111,30 @@ export const query = graphql`
         instagram
       }
     }
+
+    otherContentfulBlogArticles: allContentfulBlogArticle(
+      sort: { fields: [updatedAt], order: DESC }
+      filter: { id: { ne: $id } }
+      limit: 3
+    ) {
+      edges {
+        node {
+          hero {
+            desktop: fluid(maxWidth: 420, quality: 100) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+            tablet: fluid(maxWidth: 768, quality: 100) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+            mobile: fluid(maxWidth: 375, quality: 100) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+          }
+          category
+          title
+        }
+      }
+    }
   }
 `
 
