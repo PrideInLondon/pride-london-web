@@ -71,7 +71,11 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
         marginBottom="xxl"
         paddingX={{ default: 'lg', md: 'xxl' }}
       >
-        <TalentProfile type="author" {...author} maxWidth={MAX_CONTENT_WIDTH} />
+        <TalentProfile
+          type="author"
+          {...author}
+          maxWidth={{ md: MAX_CONTENT_WIDTH }}
+        />
       </Wrapper>
     )}
   </>
