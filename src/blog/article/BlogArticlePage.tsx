@@ -90,21 +90,19 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       <Wrapper marginBottom="xxl" paddingX={{ default: 'lg', md: 'xxl' }}>
         <H3 mb={{ default: 'lg', md: 'xl_mob' }}>You may also like</H3>
         <YouMayAlsoLikeWrapper>
-          {edges.map(
-            ({ node: { hero: otherHero, category: otherCategory, title } }) => (
-              <CategoryCard
-                key={title}
-                to={generateBlogArticleSlug(title)}
-                image={getImageForBreakpoint(otherHero)}
-                category={{
-                  color: getCategoryColor(otherCategory),
-                  name: otherCategory,
-                }}
-              >
-                <CardTitle>{title}</CardTitle>
-              </CategoryCard>
-            )
-          )}
+          {edges.map(({ node }) => (
+            <CategoryCard
+              key={title}
+              to={generateBlogArticleSlug(node.title)}
+              image={getImageForBreakpoint(node.hero)}
+              category={{
+                color: getCategoryColor(node.category),
+                name: node.category,
+              }}
+            >
+              <CardTitle>{title}</CardTitle>
+            </CategoryCard>
+          ))}
         </YouMayAlsoLikeWrapper>
       </Wrapper>
     )}
