@@ -93,6 +93,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
           {edges.map(
             ({ node: { hero: otherHero, category: otherCategory, title } }) => (
               <CategoryCard
+                key={title}
                 to={generateBlogArticleSlug(title)}
                 image={getImageForBreakpoint(otherHero)}
                 category={{
