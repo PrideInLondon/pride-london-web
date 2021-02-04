@@ -108,7 +108,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/blog/*'],
+      },
+    },
     `gatsby-plugin-remove-serviceworker`,
   ],
 }
