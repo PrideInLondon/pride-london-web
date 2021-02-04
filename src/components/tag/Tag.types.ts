@@ -1,8 +1,8 @@
-import { SpaceProps } from 'styled-system'
+import { WrapperProps } from '../wrapper/Wrapper.types'
 
 export interface TagProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    SpaceProps {
+    Omit<WrapperProps, 'color'> {
   color: string
   variant?: 'primary' | 'outline'
 }
