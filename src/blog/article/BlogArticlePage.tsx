@@ -5,12 +5,19 @@ import { RippedSection } from '../../components/rippedSection'
 import { RipVariant } from '../../components/rippedSection/Rip.types'
 import { Wrapper } from '../../components/wrapper'
 import { Tag } from '../../components/tag'
-import { H2 } from '../../components/typography'
+import { H2, H3 } from '../../components/typography'
 import { TalentProfile } from '../../components/talentProfile'
+import { CategoryCard } from '../../components/categoryCard'
 import { getImageForBreakpoint } from '../../utils/style-utils'
 import { getRandomInt } from '../../utils/number-utils'
 import { colors } from '../../theme/colors'
-import { MAX_CONTENT_WIDTH, Content } from './BlogArticlePage.styles'
+import {
+  MAX_CONTENT_WIDTH,
+  Content,
+  YouMayAlsoLikeWrapper,
+  CardTitle,
+} from './BlogArticlePage.styles'
+import { generateBlogArticleSlug } from './helpers'
 import { BlogArticlePageProps } from './BlogArticlePage.types'
 
 const getCategoryColor = (category: string) => {
@@ -29,6 +36,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       content: { json },
       author,
     },
+    otherContentfulBlogArticles: { edges },
   },
 }) => (
   <>
@@ -76,6 +84,27 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
           {...author}
           maxWidth={{ md: MAX_CONTENT_WIDTH }}
         />
+      </Wrapper>
+    )}
+    {edges && edges.length === 3 && (
+      <Wrapper marginBottom="xxl" paddingX={{ default: 'lg', md: 'xxl' }}>
+        <H3 mb={{ default: 'lg', md: 'xl_mob' }}>You may also like</H3>
+        <YouMayAlsoLikeWrapper>
+          {edges.map(
+            ({ node: { hero: otherHero, category: otherCategory, title } }) => (
+              <CategoryCard
+                to={generateBlogArticleSlug(title)}
+                image={getImageForBreakpoint(otherHero)}
+                category={{
+                  color: getCategoryColor(otherCategory),
+                  name: otherCategory,
+                }}
+              >
+                <CardTitle>{title}</CardTitle>
+              </CategoryCard>
+            )
+          )}
+        </YouMayAlsoLikeWrapper>
       </Wrapper>
     )}
   </>
