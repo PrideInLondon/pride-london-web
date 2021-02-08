@@ -3,6 +3,7 @@ import { darken } from 'polished'
 import Link from 'gatsby-link'
 import { Row, Column } from '../../components/grid'
 import { Button } from '../../components/button'
+import { Logo } from '../../components/logo'
 import burgerIcon from '../../components/icons/burgerIcon.svg'
 import closeIcon from '../../components/icons/closeIcon.svg'
 import { colors } from '../../theme/colors'
@@ -56,7 +57,7 @@ export const LogoWrapper = styled(Link)`
   border: none;
 `
 
-export const Logo = styled.img`
+export const StyledLogo = styled(Logo)`
   width: 102px;
   height: 40px;
   margin: 0;

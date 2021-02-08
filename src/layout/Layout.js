@@ -11,9 +11,7 @@ import Intercom from '../components/intercom'
 import EventsContext from '../contexts/eventsContext'
 import theme from '../theme/theme'
 import { filterPastEvents, sortEventsByStartTime } from '../events/helpers'
-import logo from '../assets/logo.svg'
 import { colors } from '../theme/colors'
-import logoWhite from '../assets/logo-white.svg'
 import LayoutHelmet from './LayoutHelmet'
 import { Navigation } from './navigation'
 import { Footer } from './Footer'
@@ -111,9 +109,6 @@ const Layout = ({ children, location: { pathname } }) => (
               <LayoutHelmet pathname={pathname} {...siteMetadata} />
               <SiteWrapper>
                 <Navigation
-                  logoUrl={
-                    pathname.replace(/\/$/, '') === '/events' ? logoWhite : logo
-                  }
                   backgroundColor={
                     pathname.replace(/\/$/, '') === '/events'
                       ? colors.mexicanPink
