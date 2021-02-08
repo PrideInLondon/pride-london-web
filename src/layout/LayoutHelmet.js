@@ -1,8 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-
-import logo from '../assets/logo.png'
 import favicon from './favicons/favicon.ico'
 import favicon16 from './favicons/favicon-16x16.png'
 import favicon32 from './favicons/favicon-32x32.png'
@@ -43,7 +41,7 @@ const LayoutHelmet = ({
   snapchat,
 }) => {
   const metaUrl = pathname === '/' ? siteUrl : siteUrl + pathname
-  const metaImgUrl = `${siteUrl}${logo}`
+  const metaImgUrl = `${siteUrl}/logo.png`
   return (
     <Helmet
       meta={[
@@ -260,7 +258,12 @@ const LayoutHelmet = ({
             name: name,
             legalName,
             url: siteUrl,
-            logo,
+            logo: {
+              '@type': 'ImageObject',
+              url: metaImgUrl,
+              height: 150,
+              width: 150,
+            },
             address: {
               '@type': 'PostalAddress',
               streetAddress,
