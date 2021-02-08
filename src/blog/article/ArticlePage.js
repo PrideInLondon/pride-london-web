@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import constants from '../../constants'
-import logo from '../../assets/logo.png'
 import PageHeader from './PageHeader'
 import { PageContent } from './PageContent'
 import PageFooter from './PageFooter'
@@ -153,7 +152,7 @@ const ArticlePage = ({
                 name,
                 logo: {
                   '@type': 'ImageObject',
-                  url: `${siteUrl}${logo}`,
+                  url: `${siteUrl}/logo.png`,
                   height: 150,
                   width: 150,
                 },
