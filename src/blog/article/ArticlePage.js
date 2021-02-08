@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import constants from '../../constants'
+import logo from '../../assets/logo.png'
 import PageHeader from './PageHeader'
 import { PageContent } from './PageContent'
 import PageFooter from './PageFooter'
@@ -34,7 +35,6 @@ const ArticlePage = ({
 }) => {
   const metaImg = `https:${headerImage.file.url}?w=1000&h=562`
   const metaUrl = `${siteUrl}/${pathname}`
-  const logoUrl = `${siteUrl}/logo-pride-153x60.png`
   const paragraphs = article.json.content.filter(node => {
     return node.nodeType === 'paragraph'
   })
@@ -153,7 +153,7 @@ const ArticlePage = ({
                 name,
                 logo: {
                   '@type': 'ImageObject',
-                  url: logoUrl,
+                  url: `${siteUrl}${logo}`,
                   height: 60,
                   width: 153,
                 },
