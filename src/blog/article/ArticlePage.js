@@ -154,8 +154,8 @@ const ArticlePage = ({
                 logo: {
                   '@type': 'ImageObject',
                   url: `${siteUrl}${logo}`,
-                  height: 60,
-                  width: 153,
+                  height: 150,
+                  width: 150,
                 },
               },
               description: firstParagraph,
