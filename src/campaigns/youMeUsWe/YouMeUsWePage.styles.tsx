@@ -39,6 +39,7 @@ export const DesktopShareBar = styled(ShareBar).attrs({
   left: 'lg',
   position: 'absolute',
   top: '165px',
+  zIndex: 1,
 })`
   display: none;
 
