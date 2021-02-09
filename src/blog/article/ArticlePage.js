@@ -153,8 +153,9 @@ const ArticlePage = ({
                 logo: {
                   '@type': 'ImageObject',
                   url: `${siteUrl}/logo.png`,
-                  height: 150,
-                  width: 150,
+                  // recommended ratio 1.91:1
+                  height: 502,
+                  width: 960,
                 },
               },
               description: firstParagraph,

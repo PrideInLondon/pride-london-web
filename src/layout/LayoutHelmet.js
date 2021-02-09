@@ -261,8 +261,9 @@ const LayoutHelmet = ({
             logo: {
               '@type': 'ImageObject',
               url: metaImgUrl,
-              height: 150,
-              width: 150,
+              // recommended ratio 1.91:1
+              height: 502,
+              width: 960,
             },
             address: {
               '@type': 'PostalAddress',
