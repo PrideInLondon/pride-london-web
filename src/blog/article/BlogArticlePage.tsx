@@ -6,9 +6,11 @@ import { RipVariant } from '../../components/rippedSection/Rip.types'
 import { Wrapper } from '../../components/wrapper'
 import { Tag } from '../../components/tag'
 import { H2, H3 } from '../../components/typography'
+import { ShareBar } from '../../components/shareBar'
 import { TalentProfile } from '../../components/talentProfile'
 import { CategoryCard } from '../../components/categoryCard'
 import { getImageForBreakpoint } from '../../utils/style-utils'
+import { getFirstParagraph } from '../../utils/document-utils'
 import { getRandomInt } from '../../utils/number-utils'
 import { colors } from '../../theme/colors'
 import {
@@ -20,10 +22,18 @@ import {
 import { generateBlogArticleSlug } from './helpers'
 import { BlogArticlePageProps } from './BlogArticlePage.types'
 
-const getCategoryColor = (category: string) => {
+const getCategoryColor = (category: string): string => {
   switch (category) {
+    case 'Arts & culture':
+      return colors.tomato
+    case 'History':
+      return colors.lemonGreen
+    case 'Life':
+      return colors.skyBlue
+    case 'Stories':
+      return colors.fuscia
     default:
-      return colors.mexicanPink
+      return ''
   }
 }
 
@@ -38,6 +48,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
     },
     otherContentfulBlogArticles: { edges },
   },
+  location: { href },
 }) => (
   <>
     <RippedSection
@@ -64,12 +75,26 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
     </Wrapper>
     <Wrapper
       display="flex"
+      flexDirection="column"
+      alignItems="center"
       justifyContent="center"
       paddingX={{ default: 'lg', md: 'xxl' }}
+      position="relative"
     >
       <H2 as="h1" textAlign="center" maxWidth={842}>
         {title}
       </H2>
+      <Wrapper
+        position={{ md: 'absolute' }}
+        marginBottom={{ default: 'xl_mob', md: '0' }}
+        top={{ md: 0 }}
+        left={{ md: 'lg' }}
+      >
+        <ShareBar
+          variant={{ default: 'horizontal', md: 'vertical' }}
+          content={{ title, body: getFirstParagraph(json), url: href }}
+        />
+      </Wrapper>
     </Wrapper>
     <Content document={json} marginBottom="xxl" />
     {author && (

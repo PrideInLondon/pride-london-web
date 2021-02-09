@@ -23,4 +23,5 @@ export interface BlogArticlePageProps {
       edges: { node: ContentfulBlogArticle }[]
     }
   }
+  location: Location
 }

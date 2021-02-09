@@ -5,7 +5,7 @@ export const colors = {
   lightGrey: '#EFEFEF',
   white: '#FFFFFF',
   yellow: '#FFD95E',
-  tomato: '#FF5B44',
+  tomato: '#FF7A67',
   pink: '#ED2C6E',
   fuscia: '#FF88F1',
   electricPurple: '#BC01FF',
