@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import { RichText } from '../../components/richText'
+import { P } from '../../components/typography'
 import { fontSizes } from '../../theme/fonts'
 import { mediaQueries } from '../../theme/mediaQueries'
-import { spacing } from '../../theme/space'
+import { spacing, lg } from '../../theme/space'
 
 export const MAX_CONTENT_WIDTH = 624
 
@@ -13,7 +14,11 @@ const CONTENT_PADDING_X = {
 
 export const Content = styled(RichText).attrs({ paddingX: CONTENT_PADDING_X })`
   > p:first-of-type {
-    font-size: ${fontSizes.body_lg};
+    font-size: ${fontSizes.body_md};
+
+    ${mediaQueries.md} {
+      font-size: ${fontSizes.body_lg};
+    }
   }
 
   /* RippedSection full-width image :( */
@@ -34,4 +39,21 @@ export const Content = styled(RichText).attrs({ paddingX: CONTENT_PADDING_X })`
       max-width: ${MAX_CONTENT_WIDTH}px;
     }
   }
+`
+
+export const YouMayAlsoLikeWrapper = styled.div`
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  row-gap: ${lg}px;
+
+  ${mediaQueries.lg} {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+  }
+`
+
+export const CardTitle = styled(P).attrs({ mb: '0' })`
+  text-decoration: underline;
 `

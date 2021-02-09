@@ -4,7 +4,6 @@ import YouMeUsWePageHelmet from './YouMeUsWePageHelmet'
 import {
   BannerBackgroundImage,
   BannerMark,
-  DesktopShareBarWrapper,
   DesktopShareBar,
   Wrapper,
   StyledTag,
@@ -30,9 +29,7 @@ const YouMeUsWePage = (props: YouMeUsWePageProps) => (
       <BannerMark />
     </BannerBackgroundImage>
     <Wrapper>
-      <DesktopShareBarWrapper>
-        <DesktopShareBar variant="vertical" />
-      </DesktopShareBarWrapper>
+      <DesktopShareBar />
       <StyledTag color={colors.yellow}>Pride in London Themes</StyledTag>
       <PrideInLockdownSection />
       <ActsOfAllyshipSection />

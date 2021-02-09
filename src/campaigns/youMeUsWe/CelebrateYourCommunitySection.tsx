@@ -29,7 +29,7 @@ const CelebrateYourCommunitySection = () => (
         marginBottom={{ md: '0', default: 'xl' }}
       />
     </Typeform>
-    <MobileShareBar variant="horizontal" />
+    <MobileShareBar />
   </SectionWrapper>
 )
 
