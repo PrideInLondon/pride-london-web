@@ -13,7 +13,11 @@ const CONTENT_PADDING_X = {
 
 export const Content = styled(RichText).attrs({ paddingX: CONTENT_PADDING_X })`
   > p:first-of-type {
-    font-size: ${fontSizes.body_lg};
+    font-size: ${fontSizes.body_md};
+
+    ${mediaQueries.md} {
+      font-size: ${fontSizes.body_lg};
+    }
   }
 
   /* RippedSection full-width image :( */
