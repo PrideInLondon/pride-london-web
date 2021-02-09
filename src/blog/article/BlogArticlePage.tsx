@@ -5,14 +5,21 @@ import { RippedSection } from '../../components/rippedSection'
 import { RipVariant } from '../../components/rippedSection/Rip.types'
 import { Wrapper } from '../../components/wrapper'
 import { Tag } from '../../components/tag'
-import { H2 } from '../../components/typography'
+import { H2, H3 } from '../../components/typography'
 import { ShareBar } from '../../components/shareBar'
 import { TalentProfile } from '../../components/talentProfile'
+import { CategoryCard } from '../../components/categoryCard'
 import { getImageForBreakpoint } from '../../utils/style-utils'
 import { getFirstParagraph } from '../../utils/document-utils'
 import { getRandomInt } from '../../utils/number-utils'
 import { colors } from '../../theme/colors'
-import { MAX_CONTENT_WIDTH, Content } from './BlogArticlePage.styles'
+import {
+  MAX_CONTENT_WIDTH,
+  Content,
+  YouMayAlsoLikeWrapper,
+  CardTitle,
+} from './BlogArticlePage.styles'
+import { generateBlogArticleSlug } from './helpers'
 import { BlogArticlePageProps } from './BlogArticlePage.types'
 
 const getCategoryColor = (category: string): string => {
@@ -39,6 +46,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       content: { json },
       author,
     },
+    otherContentfulBlogArticles: { edges },
   },
   location: { href },
 }) => (
@@ -88,16 +96,39 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
         />
       </Wrapper>
     </Wrapper>
-    <Content document={json} />
+    <Content document={json} marginBottom="xxl" />
     {author && (
       <Wrapper
         display="flex"
         justifyContent="center"
-        marginTop="xxl"
-        marginBottom={{ default: 'xl', md: 'xxl' }}
+        marginBottom="xxl"
         paddingX={{ default: 'lg', md: 'xxl' }}
       >
-        <TalentProfile type="author" {...author} maxWidth={MAX_CONTENT_WIDTH} />
+        <TalentProfile
+          type="author"
+          {...author}
+          maxWidth={{ md: MAX_CONTENT_WIDTH }}
+        />
+      </Wrapper>
+    )}
+    {edges && edges.length === 3 && (
+      <Wrapper marginBottom="xxl" paddingX={{ default: 'lg', md: 'xxl' }}>
+        <H3 mb={{ default: 'lg', md: 'xl_mob' }}>You may also like</H3>
+        <YouMayAlsoLikeWrapper>
+          {edges.map(({ node }) => (
+            <CategoryCard
+              key={node.title}
+              to={generateBlogArticleSlug(node.title)}
+              image={getImageForBreakpoint(node.hero)}
+              category={{
+                color: getCategoryColor(node.category),
+                name: node.category,
+              }}
+            >
+              <CardTitle>{node.title}</CardTitle>
+            </CategoryCard>
+          ))}
+        </YouMayAlsoLikeWrapper>
       </Wrapper>
     )}
   </>
@@ -131,6 +162,30 @@ export const query = graphql`
         facebook
         twitter
         instagram
+      }
+    }
+
+    otherContentfulBlogArticles: allContentfulBlogArticle(
+      sort: { fields: [updatedAt], order: DESC }
+      filter: { id: { ne: $id } }
+      limit: 3
+    ) {
+      edges {
+        node {
+          hero {
+            desktop: fluid(maxWidth: 420, quality: 100) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+            tablet: fluid(maxWidth: 768, quality: 100) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+            mobile: fluid(maxWidth: 375, quality: 100) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+          }
+          category
+          title
+        }
       }
     }
   }
