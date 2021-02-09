@@ -20,4 +20,5 @@ export interface BlogArticlePageProps {
   data: {
     contentfulBlogArticle: ContentfulBlogArticle
   }
+  location: Location
 }

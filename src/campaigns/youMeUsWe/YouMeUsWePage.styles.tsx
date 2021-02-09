@@ -33,25 +33,24 @@ export const BannerMark = styled(Mark)`
   }
 `
 
-export const DesktopShareBarWrapper = styled.div`
+export const DesktopShareBar = styled(ShareBar).attrs({
+  content,
+  variant: 'vertical',
+  left: 'lg',
+  position: 'absolute',
+  top: '165px',
+})`
   display: none;
-  position: absolute;
-  top: 150px;
-  left: 90px;
-  height: 100%;
-  z-index: 1;
 
   ${mediaQueries.md} {
-    display: block;
+    display: inline-block;
   }
 `
 
-export const DesktopShareBar = styled(ShareBar).attrs({ content })`
-  top: 90px;
-  margin-bottom: 120px;
-`
-
-export const MobileShareBar = styled(ShareBar).attrs({ content })`
+export const MobileShareBar = styled(ShareBar).attrs({
+  content,
+  variant: 'horizontal',
+})`
   display: block;
 
   ${mediaQueries.md} {

@@ -6,8 +6,10 @@ import { RipVariant } from '../../components/rippedSection/Rip.types'
 import { Wrapper } from '../../components/wrapper'
 import { Tag } from '../../components/tag'
 import { H2 } from '../../components/typography'
+import { ShareBar } from '../../components/shareBar'
 import { TalentProfile } from '../../components/talentProfile'
 import { getImageForBreakpoint } from '../../utils/style-utils'
+import { getFirstParagraph } from '../../utils/document-utils'
 import { getRandomInt } from '../../utils/number-utils'
 import { colors } from '../../theme/colors'
 import { MAX_CONTENT_WIDTH, Content } from './BlogArticlePage.styles'
@@ -30,6 +32,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       author,
     },
   },
+  location: { href },
 }) => (
   <>
     <RippedSection
@@ -56,12 +59,26 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
     </Wrapper>
     <Wrapper
       display="flex"
+      flexDirection="column"
+      alignItems="center"
       justifyContent="center"
       paddingX={{ default: 'lg', md: 'xxl' }}
+      position="relative"
     >
       <H2 as="h1" textAlign="center" maxWidth={842}>
         {title}
       </H2>
+      <Wrapper
+        position={{ md: 'absolute' }}
+        marginBottom={{ default: 'xl_mob', md: '0' }}
+        top={{ md: 0 }}
+        left={{ md: 'lg' }}
+      >
+        <ShareBar
+          variant={{ default: 'horizontal', md: 'vertical' }}
+          content={{ title, body: getFirstParagraph(json), url: href }}
+        />
+      </Wrapper>
     </Wrapper>
     <Content document={json} />
     {author && (
