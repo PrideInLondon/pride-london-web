@@ -117,7 +117,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
         <YouMayAlsoLikeWrapper>
           {edges.map(({ node }) => (
             <CategoryCard
-              key={title}
+              key={node.title}
               to={generateBlogArticleSlug(node.title)}
               image={getImageForBreakpoint(node.hero)}
               category={{
@@ -125,7 +125,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
                 name: node.category,
               }}
             >
-              <CardTitle>{title}</CardTitle>
+              <CardTitle>{node.title}</CardTitle>
             </CategoryCard>
           ))}
         </YouMayAlsoLikeWrapper>
