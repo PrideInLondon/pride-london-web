@@ -152,14 +152,6 @@ export const quote: Document = {
 
 const generateAnyLocale = (val: any) => ({ 'en-GB': val })
 
-const contentfulImage = {
-  image: generateAnyLocale({
-    fields: { file: generateAnyLocale({ url: logo }) },
-  }),
-  altText: generateAnyLocale('consectetur adipiscing elit'),
-  caption: generateAnyLocale('caption'),
-}
-
 export const video: Document = {
   content: [
     {
@@ -177,8 +169,8 @@ export const video: Document = {
             host: generateAnyLocale('youtube'),
             videoId: generateAnyLocale('9v34wjMlT2A'),
             caption: generateAnyLocale('Lorem ipsum dolor sit amet'),
-            image: generateAnyLocale({
-              fields: contentfulImage,
+            coverImage: generateAnyLocale({
+              fields: { file: generateAnyLocale({ url: logo }) },
             }),
           },
         },
@@ -190,6 +182,14 @@ export const video: Document = {
   ],
   // @ts-ignore
   nodeType: 'document',
+}
+
+const contentfulImage = {
+  image: generateAnyLocale({
+    fields: { file: generateAnyLocale({ url: logo }) },
+  }),
+  altText: generateAnyLocale('consectetur adipiscing elit'),
+  caption: generateAnyLocale('caption'),
 }
 
 export const image: Document = {
