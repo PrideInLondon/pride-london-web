@@ -34,7 +34,6 @@ const ArticlePage = ({
 }) => {
   const metaImg = `https:${headerImage.file.url}?w=1000&h=562`
   const metaUrl = `${siteUrl}/${pathname}`
-  const logoUrl = `${siteUrl}/logo-pride-153x60.png`
   const paragraphs = article.json.content.filter(node => {
     return node.nodeType === 'paragraph'
   })
@@ -153,9 +152,10 @@ const ArticlePage = ({
                 name,
                 logo: {
                   '@type': 'ImageObject',
-                  url: logoUrl,
-                  height: 60,
-                  width: 153,
+                  url: `${siteUrl}/logo.png`,
+                  // recommended ratio 1.91:1
+                  height: 502,
+                  width: 960,
                 },
               },
               description: firstParagraph,
