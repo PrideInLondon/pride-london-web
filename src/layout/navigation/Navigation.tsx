@@ -145,7 +145,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                 />
                 <NavItem backgroundColor={backgroundColor}>
                   <SupportButton
-                    onClick={() => setOpen(!isOpen)}
+                    onClick={() => setOpen(false)}
                     to="/support-us"
                   >
                     Support Pride
