@@ -174,7 +174,7 @@ describe('generateDisplayDate', () => {
       now: firstOfJanuary,
     })
 
-    expect(actual).toEqual('Sat, 01 Jun\u00A0\u00A0•\u00A0\u00A019:30 - 21:00')
+    expect(actual).toEqual('Sat, 01 Jun\u00A0\u00A0•\u00A0\u00A020:30 - 22:00')
   })
 
   it('should display a range of dates if end time is a different day from the start time', () => {
