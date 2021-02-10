@@ -2,11 +2,13 @@ import styled, { css } from 'styled-components'
 import { darken } from 'polished'
 import Link from 'gatsby-link'
 import { Row, Column } from '../../components/grid'
-import { mediaQueries } from '../../theme/mediaQueries'
 import { Button } from '../../components/button'
+import { Logo } from '../../components/logo'
 import burgerIcon from '../../components/icons/burgerIcon.svg'
 import closeIcon from '../../components/icons/closeIcon.svg'
-import theme from '../../theme/theme'
+import { colors } from '../../theme/colors'
+import { fonts } from '../../theme/fonts'
+import { mediaQueries } from '../../theme/mediaQueries'
 
 export const HeaderWrapper = styled.div<{ backgroundColor: string }>(
   ({ backgroundColor }) => css`
@@ -55,7 +57,7 @@ export const LogoWrapper = styled(Link)`
   border: none;
 `
 
-export const Logo = styled.img`
+export const StyledLogo = styled(Logo)`
   width: 102px;
   height: 40px;
   margin: 0;
@@ -109,8 +111,8 @@ export const Burger = styled.button<{
   ({ isOpen, backgroundColor }) => css`
     cursor: pointer;
     border: none;
-    color: ${theme.colors.lightGrey};
-    font-family: ${theme.fonts.title};
+    color: ${colors.lightGrey};
+    font-family: ${fonts.title};
     font-size: 0.875rem;
     line-height: 1.125rem;
     transition: background-color 0.15s linear;
