@@ -1,5 +1,4 @@
 import React from 'react'
-import { P } from '../components/typography'
 import { Helmet } from '../components/helmet'
 import { GreyWrapper } from '../components/grid'
 import { Banner } from '../components/banner'
@@ -8,12 +7,8 @@ import { PageIntro } from '../components/pageIntro'
 import { Category } from '../components/categoryFilter/CategoryFilter.types'
 import { CategoryFilter } from '../components/categoryFilter'
 import { Gallery } from '../components/gallery'
-import { Button } from '../components/button'
+import { PagedCardContainer } from '../components/pagedCardContainer'
 import CommunityPartnerCard from './CommunityPartnerCard'
-import {
-  ButtonWrapper,
-  StyledGalleryContainer,
-} from './ExploreLondonPage.styles'
 import { ExploreLondonPageProps } from './ExploreLondonPage.types'
 
 export const CATEGORIES: Category[] = [
@@ -24,8 +19,8 @@ export const CATEGORIES: Category[] = [
   { name: 'Shop', color: colors.eucalyptusGreen },
   { name: 'Sleep', color: colors.fuscia },
 ]
-const PADDING_X = { default: 'lg', md: 'xl' }
-const PADDING_Y = { default: 'lg', md: 'xl' }
+
+const PADDING_Y = '40px'
 
 const ExploreLondonPage: React.FC<ExploreLondonPageProps> = ({
   data: {
@@ -71,8 +66,7 @@ const ExploreLondonPage: React.FC<ExploreLondonPageProps> = ({
         <GreyWrapper as="section">
           <CategoryFilter
             margin="auto"
-            paddingX={PADDING_X}
-            pt={PADDING_Y}
+            paddingY={PADDING_Y}
             variant="checkbox"
             categories={CATEGORIES}
             entries={edges}
@@ -84,36 +78,21 @@ const ExploreLondonPage: React.FC<ExploreLondonPageProps> = ({
                 <Gallery
                   entries={filteredEntries}
                   pageSize={16}
-                  render={({ entries: pagedEntries, showNextPage }) => (
-                    <>
-                      <StyledGalleryContainer
-                        variant="grid"
-                        columns={{ default: 1, md: 2, lg: 3 }}
-                        paddingX={PADDING_X}
-                        paddingY="xxl"
-                        gridGap={32}
-                      >
-                        {pagedEntries.map(({ node }) => (
-                          <CommunityPartnerCard partner={node} key={node.id} />
-                        ))}
-                      </StyledGalleryContainer>
-                      <ButtonWrapper>
-                        <P variant="sm" color={colors.white}>
-                          You're viewing {pagedEntries.length} of{' '}
-                          {filteredEntries.length} partners
-                        </P>
-                        {pagedEntries.length < filteredEntries.length && (
-                          <Button
-                            variant="outline-white"
-                            onClick={showNextPage}
-                            marginTop="md"
-                          >
-                            Show more partners
-                          </Button>
-                        )}
-                      </ButtonWrapper>
-                    </>
-                  )}
+                  render={({ entries: pagedEntries, showNextPage }) => {
+                    return (
+                      <PagedCardContainer
+                        cardContent={pagedEntries.map(({ node: partner }) => ({
+                          id: partner.venueName,
+                          category: partner.category,
+                          partner,
+                        }))}
+                        CardComponent={CommunityPartnerCard}
+                        moreCardsToShow={edges.length > pagedEntries.length}
+                        showMoreButtonText="Show more partners"
+                        onShowMoreButtonClick={showNextPage}
+                      />
+                    )
+                  }}
                 />
               )
             }}

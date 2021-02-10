@@ -16,4 +16,5 @@ export const Wrapper = styled.div`
 
 export const StyledTag = styled(Tag)`
   cursor: pointer;
+  user-select: none;
 `

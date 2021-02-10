@@ -58,6 +58,7 @@ storiesOf(CategoryFilter.name, module)
                 {category.map(name => {
                   return (
                     <Tag
+                      key={name}
                       color={
                         ALL_CATEGORIES.find(
                           allCategory => allCategory.name === name

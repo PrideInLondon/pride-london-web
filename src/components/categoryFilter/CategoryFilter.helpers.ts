@@ -21,9 +21,11 @@ export const ENTRIES = [...Array(CATEGORIES.length * 2)].map((_, index) => ({
 
 export const ENTRIES_WITH_CATEGORY_ARRAY = [
   ...Array(CATEGORIES.length * 2),
-].map((_, index) => ({
+].map((_outerCategoryElement, index) => ({
   text: `Entry #${index + 1}`,
-  category: [...Array(index % CATEGORIES.length)].map((_, i) => {
-    return CATEGORIES[(index + i) % CATEGORIES.length].name
-  }),
+  category: [...Array(index % CATEGORIES.length)].map(
+    (_innerCategoryElement, i) => {
+      return CATEGORIES[(index + i) % CATEGORIES.length].name
+    }
+  ),
 }))
