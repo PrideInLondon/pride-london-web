@@ -13,10 +13,7 @@ storiesOf('Video', module).add('default', () => (
   <Video
     host={select('Host', hosts, hosts.YouTube)}
     videoId={text('Video Id', 'TIExvoJXwKE')}
-    coverImage={{
-      src: logo,
-      alt: text('Cover Image Alt Text', 'The Pride in London Logo'),
-    }}
+    coverImage={logo}
     caption={text('Caption Text', 'Pride in London presents: You! Me! Us! We!')}
     maxWidth={650}
   />
