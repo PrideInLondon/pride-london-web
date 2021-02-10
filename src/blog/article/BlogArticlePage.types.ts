@@ -19,5 +19,9 @@ interface ContentfulBlogArticle {
 export interface BlogArticlePageProps {
   data: {
     contentfulBlogArticle: ContentfulBlogArticle
+    otherContentfulBlogArticles: {
+      edges: { node: ContentfulBlogArticle }[]
+    }
   }
+  location: Location
 }
