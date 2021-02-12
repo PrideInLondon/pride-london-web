@@ -1,9 +1,9 @@
 import React from 'react'
-import { H1 } from '../components/typography'
+import { Banner } from '../components/banner'
 import { BlogPageProps } from './BlogPage.types'
 
 export const BlogPage: React.FC<BlogPageProps> = ({
   data: {
-    contentfulCustomPageContent: { title },
+    contentfulCustomPageContent: { title, subtitle, bannerImage },
   },
-}) => <H1>{title}</H1>
+}) => <Banner titleText={title} subtitleText={subtitle} fixed={bannerImage} />
