@@ -2,6 +2,7 @@ import React from 'react'
 import { Banner } from '../components/banner'
 import { Gallery } from '../components/gallery'
 import { Wrapper } from '../components/wrapper'
+import { P } from '../components/typography'
 import { Button } from '../components/button'
 import { BlogArticleSummaryCard } from './article/BlogArticleSummaryCard'
 import { StyledGalleryContainer } from './BlogPage.styles'
@@ -31,17 +32,24 @@ export const BlogPage: React.FC<BlogPageProps> = ({
               <BlogArticleSummaryCard {...node} />
             ))}
           </StyledGalleryContainer>
-          {pagedEntries.length < edges.length && (
-            <Wrapper
-              backgroundColor="indigo"
-              textAlign="center"
-              paddingY={{ default: 'xl', md: 'xxl' }}
-            >
-              <Button variant="outline-white" onClick={showNextPage}>
+          <Wrapper
+            backgroundColor="indigo"
+            textAlign="center"
+            paddingY={{ default: 'xl', md: 'xxl' }}
+          >
+            <P variant="sm" color="white" mb="0">
+              You're viewing {pagedEntries.length} of {edges.length} articles
+            </P>
+            {pagedEntries.length < edges.length && (
+              <Button
+                variant="outline-white"
+                marginTop="md"
+                onClick={showNextPage}
+              >
                 Show more articles
               </Button>
-            </Wrapper>
-          )}
+            )}
+          </Wrapper>
         </>
       )}
     />
