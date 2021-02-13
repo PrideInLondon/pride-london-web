@@ -3,7 +3,7 @@ import { BlogPage } from '../blog/BlogPage'
 
 export const query = graphql`
   query blogPageQuery {
-    contentfulCustomPageContent(title: { eq: "Blog" }) {
+    content: contentfulCustomPageContent(title: { eq: "Blog" }) {
       title
       subtitle
       bannerImage {
@@ -30,6 +30,16 @@ export const query = graphql`
           cropFocus: FACE
         ) {
           ...GatsbyContentfulFixed_withWebp
+        }
+      }
+    }
+
+    blogArticles: allContentfulBlogArticle(
+      sort: { fields: [updatedAt], order: DESC }
+    ) {
+      edges {
+        node {
+          ...BlogArticleSummary
         }
       }
     }

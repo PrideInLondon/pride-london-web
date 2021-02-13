@@ -4,6 +4,6 @@ import { BlogPageProps } from './BlogPage.types'
 
 export const BlogPage: React.FC<BlogPageProps> = ({
   data: {
-    contentfulCustomPageContent: { title, subtitle, bannerImage },
+    content: { title, subtitle, bannerImage },
   },
 }) => <Banner titleText={title} subtitleText={subtitle} fixed={bannerImage} />
