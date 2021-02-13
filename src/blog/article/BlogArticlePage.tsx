@@ -135,6 +135,22 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
 )
 
 export const query = graphql`
+  fragment BlogArticleSummary on ContentfulBlogArticle {
+    hero {
+      desktop: fluid(maxWidth: 420, quality: 100) {
+        ...GatsbyContentfulFluid_withWebp
+      }
+      tablet: fluid(maxWidth: 768, quality: 100) {
+        ...GatsbyContentfulFluid_withWebp
+      }
+      mobile: fluid(maxWidth: 375, quality: 100) {
+        ...GatsbyContentfulFluid_withWebp
+      }
+    }
+    category
+    title
+  }
+
   query blogArticle($id: String!) {
     contentfulBlogArticle(id: { eq: $id }) {
       hero {
@@ -172,19 +188,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          hero {
-            desktop: fluid(maxWidth: 420, quality: 100) {
-              ...GatsbyContentfulFluid_withWebp
-            }
-            tablet: fluid(maxWidth: 768, quality: 100) {
-              ...GatsbyContentfulFluid_withWebp
-            }
-            mobile: fluid(maxWidth: 375, quality: 100) {
-              ...GatsbyContentfulFluid_withWebp
-            }
-          }
-          category
-          title
+          ...BlogArticleSummary
         }
       }
     }

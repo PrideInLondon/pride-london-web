@@ -2,7 +2,7 @@ import { Document } from '@contentful/rich-text-types'
 import { FluidObject } from 'gatsby-image'
 import { ContentfulTalentProfile } from '../../components/talentProfile/TalentProfile.types'
 
-interface ContentfulBlogArticle {
+export interface ContentfulBlogArticleSummary {
   hero: {
     desktop: FluidObject
     tablet: FluidObject
@@ -10,6 +10,9 @@ interface ContentfulBlogArticle {
   }
   category: string
   title: string
+}
+
+export interface ContentfulBlogArticle extends ContentfulBlogArticleSummary {
   content: {
     json: Document
   }
@@ -20,7 +23,7 @@ export interface BlogArticlePageProps {
   data: {
     contentfulBlogArticle: ContentfulBlogArticle
     otherContentfulBlogArticles: {
-      edges: { node: ContentfulBlogArticle }[]
+      edges: { node: ContentfulBlogArticleSummary }[]
     }
   }
   location: Location
