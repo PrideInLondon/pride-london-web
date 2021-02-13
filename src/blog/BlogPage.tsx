@@ -24,8 +24,8 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           <StyledGalleryContainer
             variant="masonry"
             columns={{ default: 1, md: 2, lg: 3 }}
-            marginY={{ default: 'xl', md: 'xxl' }}
-            paddingX={{ default: 'lg', md: 'xxl' }}
+            marginY={{ default: 'xl', lg: 'xxl' }}
+            paddingX={{ default: 'lg', lg: 'xxl' }}
             gridGap={32}
           >
             {pagedEntries.map(({ node }) => (
