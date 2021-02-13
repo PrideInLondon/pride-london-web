@@ -1,7 +1,7 @@
 import React from 'react'
 import { Banner } from '../components/banner'
 import { Gallery } from '../components/gallery'
-import { Wrapper } from '../components/wrapper'
+import { RippedSection } from '../components/rippedSection'
 import { P } from '../components/typography'
 import { Button } from '../components/button'
 import { BlogArticleSummaryCard } from './article/BlogArticleSummaryCard'
@@ -32,12 +32,18 @@ export const BlogPage: React.FC<BlogPageProps> = ({
               <BlogArticleSummaryCard {...node} />
             ))}
           </StyledGalleryContainer>
-          <Wrapper
+          <RippedSection
+            rips={{ top: { color: 'white', variant: 3 } }}
             backgroundColor="indigo"
-            textAlign="center"
+            flexDirection="column"
             paddingY={{ default: 'xl', md: 'xxl' }}
           >
-            <P variant="sm" color="white" mb="0">
+            <P
+              variant="sm"
+              color="white"
+              mt={{ default: 'xl', md: 'xxl' }}
+              mb="0"
+            >
               You're viewing {pagedEntries.length} of {edges.length} articles
             </P>
             {pagedEntries.length < edges.length && (
@@ -49,7 +55,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                 Show more articles
               </Button>
             )}
-          </Wrapper>
+          </RippedSection>
         </>
       )}
     />
