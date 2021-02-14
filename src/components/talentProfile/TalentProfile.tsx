@@ -5,7 +5,7 @@ import { Icon } from '../../components/icon'
 import { handleUrl } from '../../utils/location-utils'
 import { capitaliseFirst } from '../../utils/string-utils'
 import { RichText } from '../richText'
-import { Wrapper, ShareBar, StyledLink } from './TalentProfile.styles'
+import { Wrapper, SocialBar, StyledLink } from './TalentProfile.styles'
 import {
   SocialProps,
   SocialLinkProps,
@@ -39,13 +39,13 @@ export const TalentProfile: React.FC<TalentProfileProps> = ({
       <H6 as="h3">{title}</H6>
       {bio && bio.json && <RichText document={bio.json} data-testid="bio" />}
       {(website || email || facebook || twitter || instagram) && (
-        <ShareBar data-testid="social-bar">
+        <SocialBar data-testid="social-bar">
           {website && <Social url={website} name="website" />}
           {email && <Social url={`mailto:${email}`} name="email" />}
           {facebook && <Social url={facebook} name="facebook" />}
           {twitter && <Social url={twitter} name="twitter" />}
           {instagram && <Social url={instagram} name="instagram" />}
-        </ShareBar>
+        </SocialBar>
       )}
     </Wrapper>
   )

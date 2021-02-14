@@ -10,7 +10,7 @@ export const Wrapper = styled.div<LayoutProps & SpaceProps>`
   ${compose(layout, space)}
 `
 
-export const ShareBar = styled.div`
+export const SocialBar = styled.div`
   display: flex;
   font-size: 40px;
 
