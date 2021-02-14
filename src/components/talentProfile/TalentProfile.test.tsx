@@ -6,6 +6,19 @@ import { json } from './__mocks__'
 import { TalentProfile } from './TalentProfile'
 
 describe('TalentProfile', () => {
+  it('should render without social bar when given no social links', async () => {
+    const { queryByTestId } = render(
+      <TalentProfile
+        title={uuid()}
+        talent={{
+          name: uuid(),
+          bio: { json },
+        }}
+      />
+    )
+    expect(queryByTestId('social-bar')).toBeNull()
+  })
+
   it('should have no accessibility violations', async () => {
     const { container } = render(
       <TalentProfile

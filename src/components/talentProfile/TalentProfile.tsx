@@ -46,13 +46,15 @@ export const TalentProfile: React.FC<TalentProfileProps> = ({
     <Wrapper {...props}>
       <H6 as="h3">{title}</H6>
       <RichText document={json} />
-      <ShareBar>
-        {website && <Social url={website} name="website" />}
-        {email && <Social url={`mailto:${email}`} name="email" />}
-        {facebook && <Social url={facebook} name="facebook" />}
-        {twitter && <Social url={twitter} name="twitter" />}
-        {instagram && <Social url={instagram} name="instagram" />}
-      </ShareBar>
+      {(website || email || facebook || twitter || instagram) && (
+        <ShareBar data-testid="social-bar">
+          {website && <Social url={website} name="website" />}
+          {email && <Social url={`mailto:${email}`} name="email" />}
+          {facebook && <Social url={facebook} name="facebook" />}
+          {twitter && <Social url={twitter} name="twitter" />}
+          {instagram && <Social url={instagram} name="instagram" />}
+        </ShareBar>
+      )}
     </Wrapper>
   )
 }
