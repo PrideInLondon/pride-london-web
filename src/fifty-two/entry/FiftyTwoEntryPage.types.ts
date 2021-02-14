@@ -19,7 +19,7 @@ export interface Artwork {
   }
 }
 
-interface ContentfulFiftyTwoGalleryEntry {
+export interface ContentfulFiftyTwoGalleryEntry {
   artwork: Artwork
   artist: ContentfulTalentProfile
 }
