@@ -9,7 +9,6 @@ describe('TalentProfile', () => {
   it('should have no accessibility violations', async () => {
     const { container } = render(
       <TalentProfile
-        type={uuid()}
         title={uuid()}
         name={uuid()}
         bio={{ json }}

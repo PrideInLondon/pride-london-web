@@ -26,7 +26,6 @@ const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentName }) => {
 }
 
 export const TalentProfile: React.FC<TalentProfileProps> = ({
-  type,
   title,
   name,
   bio: { json },

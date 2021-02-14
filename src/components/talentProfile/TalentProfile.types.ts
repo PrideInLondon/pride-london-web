@@ -27,6 +27,5 @@ export interface TalentProfileProps
   extends ContentfulTalentProfile,
     SpaceProps,
     LayoutProps {
-  type: string
   title: string
 }

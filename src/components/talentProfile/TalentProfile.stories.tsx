@@ -7,7 +7,6 @@ import { TalentProfile } from './'
 storiesOf('TalentProfile', module).add('default', () => (
   <div style={{ backgroundColor: 'white', padding: 20 }}>
     <TalentProfile
-      type={text('type', 'author')}
       title={text('title', 'About the artist')}
       name={text('name', 'Jane Doe')}
       bio={{ json }}
