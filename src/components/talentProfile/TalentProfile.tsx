@@ -27,15 +27,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentName }) => {
 
 export const TalentProfile: React.FC<TalentProfileProps> = ({
   title,
-  talent: {
-    name,
-    bio: { json },
-    website,
-    email,
-    facebook,
-    twitter,
-    instagram,
-  },
+  talent: { name, bio, website, email, facebook, twitter, instagram },
   ...props
 }) => {
   const Social = (props: SocialProps) => (
@@ -45,7 +37,7 @@ export const TalentProfile: React.FC<TalentProfileProps> = ({
   return (
     <Wrapper {...props}>
       <H6 as="h3">{title}</H6>
-      <RichText document={json} />
+      {bio && bio.json && <RichText document={bio.json} data-testid="bio" />}
       {(website || email || facebook || twitter || instagram) && (
         <ShareBar data-testid="social-bar">
           {website && <Social url={website} name="website" />}

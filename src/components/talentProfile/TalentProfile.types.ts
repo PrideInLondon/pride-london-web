@@ -13,7 +13,7 @@ export interface SocialLinkProps extends SocialProps {
 
 export interface ContentfulTalentProfile {
   name: string
-  bio: {
+  bio?: {
     json: Document
   }
   website?: string
