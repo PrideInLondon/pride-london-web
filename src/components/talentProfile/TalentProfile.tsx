@@ -3,6 +3,7 @@ import { Link } from 'gatsby' // lgtm [js/unused-local-variable]
 import { H6 } from '../../components/typography'
 import { Icon } from '../../components/icon'
 import { handleUrl } from '../../utils/location-utils'
+import { capitaliseFirst } from '../../utils/string-utils'
 import { RichText } from '../richText'
 import { Wrapper, ShareBar, StyledLink } from './TalentProfile.styles'
 import {
@@ -11,10 +12,10 @@ import {
   TalentProfileProps,
 } from './TalentProfile.types'
 
-const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentType }) => (
+const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentName }) => (
   <StyledLink<'a' | 'span' | typeof Link>
     {...handleUrl(url)}
-    aria-label={`${name} for the ${talentType}`}
+    aria-label={`${talentName}'s ${capitaliseFirst(name)}`}
   >
     <Icon variant="indigo" name={name} />
   </StyledLink>
@@ -22,6 +23,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentType }) => (
 
 export const TalentProfile: React.FC<TalentProfileProps> = ({
   type,
+  name,
   bio: { json },
   website,
   email,
@@ -31,7 +33,7 @@ export const TalentProfile: React.FC<TalentProfileProps> = ({
   ...props
 }) => {
   const Social = (props: SocialProps) => (
-    <SocialLink talentType={type} {...props} />
+    <SocialLink talentName={name} {...props} />
   )
 
   return (

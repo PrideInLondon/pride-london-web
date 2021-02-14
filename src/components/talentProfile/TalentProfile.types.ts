@@ -8,7 +8,7 @@ export interface SocialProps {
 }
 
 export interface SocialLinkProps extends SocialProps {
-  talentType: string
+  talentName: string
 }
 
 export interface ContentfulTalentProfile {
