@@ -8,6 +8,7 @@ storiesOf('TalentProfile', module).add('default', () => (
   <div style={{ backgroundColor: 'white', padding: 20 }}>
     <TalentProfile
       type={text('type', 'author')}
+      name={text('name', 'Jane Doe')}
       bio={{ json }}
       website={text('website', 'https://prideinlondon.org')}
       email={text('email', 'example@prideinlondon.org')}
