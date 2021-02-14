@@ -106,6 +106,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       >
         <TalentProfile
           type="author"
+          title={author.name}
           {...author}
           maxWidth={{ md: MAX_CONTENT_WIDTH }}
         />

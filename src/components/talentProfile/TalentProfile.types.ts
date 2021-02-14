@@ -28,4 +28,5 @@ export interface TalentProfileProps
     SpaceProps,
     LayoutProps {
   type: string
+  title: string
 }

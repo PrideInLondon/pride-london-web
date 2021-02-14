@@ -10,6 +10,7 @@ describe('TalentProfile', () => {
     const { container } = render(
       <TalentProfile
         type={uuid()}
+        title={uuid()}
         name={uuid()}
         bio={{ json }}
         website={uuid()}

@@ -51,7 +51,12 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
         </FlexWrapper>
         <FlexWrapper>
           <Column {...leftProps}>
-            <TalentProfile type="artist" marginTop="xxl" {...artist} />
+            <TalentProfile
+              type="artist"
+              title="About the artist"
+              marginTop="xxl"
+              {...artist}
+            />
           </Column>
         </FlexWrapper>
       </Wrapper>
