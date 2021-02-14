@@ -12,14 +12,18 @@ import {
   TalentProfileProps,
 } from './TalentProfile.types'
 
-const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentName }) => (
-  <StyledLink<'a' | 'span' | typeof Link>
-    {...handleUrl(url)}
-    aria-label={`${talentName}'s ${capitaliseFirst(name)}`}
-  >
-    <Icon variant="indigo" name={name} />
-  </StyledLink>
-)
+const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentName }) => {
+  const descriptiveText = `${talentName}'s ${capitaliseFirst(name)}`
+  return (
+    <StyledLink<'a' | 'span' | typeof Link>
+      {...handleUrl(url)}
+      title={descriptiveText}
+      aria-label={descriptiveText}
+    >
+      <Icon variant="indigo" name={name} />
+    </StyledLink>
+  )
+}
 
 export const TalentProfile: React.FC<TalentProfileProps> = ({
   type,
