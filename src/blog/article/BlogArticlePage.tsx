@@ -154,6 +154,7 @@ export const query = graphql`
         json
       }
       author {
+        name
         bio {
           json
         }
