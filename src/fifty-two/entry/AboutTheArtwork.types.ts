@@ -1,6 +1,7 @@
-import { Artist, Artwork } from './FiftyTwoEntryPage.types'
+import { ContentfulTalentProfile } from '../../components/talentProfile/TalentProfile.types'
+import { Artwork } from './FiftyTwoEntryPage.types'
 
 export interface AboutTheArtworkProps {
-  artist: Artist
+  artist: ContentfulTalentProfile
   artwork: Artwork
 }
