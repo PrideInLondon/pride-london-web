@@ -53,8 +53,8 @@ export const FiftyTwoEntryPage: React.FC<FiftyTwoEntryPageProps> = ({
           <Column {...leftProps}>
             <TalentProfile
               title="About the artist"
+              talent={artist}
               marginTop="xxl"
-              {...artist}
             />
           </Column>
         </FlexWrapper>

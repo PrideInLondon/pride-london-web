@@ -23,9 +23,7 @@ export interface ContentfulTalentProfile {
   twitter?: string
 }
 
-export interface TalentProfileProps
-  extends ContentfulTalentProfile,
-    SpaceProps,
-    LayoutProps {
+export interface TalentProfileProps extends SpaceProps, LayoutProps {
   title: string
+  talent: ContentfulTalentProfile
 }

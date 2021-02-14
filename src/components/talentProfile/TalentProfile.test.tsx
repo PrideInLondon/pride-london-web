@@ -10,13 +10,15 @@ describe('TalentProfile', () => {
     const { container } = render(
       <TalentProfile
         title={uuid()}
-        name={uuid()}
-        bio={{ json }}
-        website={uuid()}
-        email={uuid()}
-        facebook={uuid()}
-        twitter={uuid()}
-        instagram={uuid()}
+        talent={{
+          name: uuid(),
+          bio: { json },
+          website: uuid(),
+          email: uuid(),
+          facebook: uuid(),
+          twitter: uuid(),
+          instagram: uuid(),
+        }}
       />
     )
     const results = await axe(container)

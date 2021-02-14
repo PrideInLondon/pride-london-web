@@ -27,13 +27,15 @@ const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentName }) => {
 
 export const TalentProfile: React.FC<TalentProfileProps> = ({
   title,
-  name,
-  bio: { json },
-  website,
-  email,
-  facebook,
-  twitter,
-  instagram,
+  talent: {
+    name,
+    bio: { json },
+    website,
+    email,
+    facebook,
+    twitter,
+    instagram,
+  },
   ...props
 }) => {
   const Social = (props: SocialProps) => (
