@@ -8,7 +8,6 @@ import { Tag } from '../../components/tag'
 import { H2, H3 } from '../../components/typography'
 import { ShareBar } from '../../components/shareBar'
 import { TalentProfile } from '../../components/talentProfile'
-import { CategoryCard } from '../../components/categoryCard'
 import { getImageForBreakpoint } from '../../utils/style-utils'
 import { getFirstParagraph } from '../../utils/document-utils'
 import { getRandomInt } from '../../utils/number-utils'
@@ -17,25 +16,10 @@ import {
   MAX_CONTENT_WIDTH,
   Content,
   YouMayAlsoLikeWrapper,
-  CardTitle,
 } from './BlogArticlePage.styles'
-import { generateBlogArticleSlug } from './helpers'
+import { BlogArticleSummaryCard } from './BlogArticleSummaryCard'
+import { getCategoryColor } from './helpers'
 import { BlogArticlePageProps } from './BlogArticlePage.types'
-
-const getCategoryColor = (category: string): string => {
-  switch (category) {
-    case 'Arts & culture':
-      return colors.tomato
-    case 'History':
-      return colors.lemonGreen
-    case 'Life':
-      return colors.skyBlue
-    case 'Stories':
-      return colors.fuscia
-    default:
-      return ''
-  }
-}
 
 const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
   data: {
@@ -116,17 +100,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
         <H3 mb={{ default: 'lg', md: 'xl_mob' }}>You may also like</H3>
         <YouMayAlsoLikeWrapper>
           {edges.map(({ node }) => (
-            <CategoryCard
-              key={node.title}
-              to={generateBlogArticleSlug(node.title)}
-              image={getImageForBreakpoint(node.hero)}
-              category={{
-                color: getCategoryColor(node.category),
-                name: node.category,
-              }}
-            >
-              <CardTitle>{node.title}</CardTitle>
-            </CategoryCard>
+            <BlogArticleSummaryCard {...node} />
           ))}
         </YouMayAlsoLikeWrapper>
       </Wrapper>
@@ -135,6 +109,22 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
 )
 
 export const query = graphql`
+  fragment BlogArticleSummary on ContentfulBlogArticle {
+    hero {
+      desktop: fluid(maxWidth: 420, quality: 100) {
+        ...GatsbyContentfulFluid_withWebp
+      }
+      tablet: fluid(maxWidth: 768, quality: 100) {
+        ...GatsbyContentfulFluid_withWebp
+      }
+      mobile: fluid(maxWidth: 375, quality: 100) {
+        ...GatsbyContentfulFluid_withWebp
+      }
+    }
+    category
+    title
+  }
+
   query blogArticle($id: String!) {
     contentfulBlogArticle(id: { eq: $id }) {
       hero {
@@ -173,19 +163,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          hero {
-            desktop: fluid(maxWidth: 420, quality: 100) {
-              ...GatsbyContentfulFluid_withWebp
-            }
-            tablet: fluid(maxWidth: 768, quality: 100) {
-              ...GatsbyContentfulFluid_withWebp
-            }
-            mobile: fluid(maxWidth: 375, quality: 100) {
-              ...GatsbyContentfulFluid_withWebp
-            }
-          }
-          category
-          title
+          ...BlogArticleSummary
         }
       }
     }

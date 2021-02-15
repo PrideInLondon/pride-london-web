@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { RichText } from '../../components/richText'
-import { P } from '../../components/typography'
 import { fontSizes } from '../../theme/fonts'
 import { mediaQueries } from '../../theme/mediaQueries'
 import { spacing, lg } from '../../theme/space'
@@ -52,8 +51,4 @@ export const YouMayAlsoLikeWrapper = styled.div`
     grid-template-columns: repeat(3, 1fr);
     column-gap: 32px;
   }
-`
-
-export const CardTitle = styled(P).attrs({ mb: '0' })`
-  text-decoration: underline;
 `

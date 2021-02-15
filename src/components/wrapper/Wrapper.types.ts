@@ -13,4 +13,4 @@ export interface WrapperProps
     TypographyProps,
     FlexboxProps,
     PositionProps,
-    ColorProps {}
+    Omit<ColorProps, 'color'> {}
