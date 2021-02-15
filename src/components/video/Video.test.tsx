@@ -20,10 +20,7 @@ describe('Video', () => {
   const props: VideoProps = {
     host: 'youtube',
     videoId: 'TIExvoJXwKE',
-    coverImage: {
-      src: 'image',
-      alt: 'The Pride in London Logo',
-    },
+    coverImage: 'image',
     caption: 'Pride in London presents: You! Me! Us! We!',
   }
 
