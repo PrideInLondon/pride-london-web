@@ -6,8 +6,5 @@ export interface VideoProps extends LayoutProps, SpaceProps {
   host: VideoHost
   videoId: string
   caption: string
-  coverImage: {
-    src: string
-    alt: string
-  }
+  coverImage: string
 }

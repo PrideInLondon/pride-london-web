@@ -21,7 +21,7 @@ export const generateVideoUrl = (host: VideoHost, id: string) =>
 export const Video = ({
   host,
   videoId,
-  coverImage: { src, alt },
+  coverImage,
   caption,
   ...props
 }: VideoProps) => {
@@ -46,7 +46,7 @@ export const Video = ({
             title={`Play ${caption} video`}
             onClick={() => setClicked(true)}
           >
-            <StyledVideoImage {...{ src, alt }} />
+            <StyledVideoImage src={coverImage} aria-hidden="true" />
           </VideoImageWrapper>
           <PlayButton
             title={`Play ${caption} video`}

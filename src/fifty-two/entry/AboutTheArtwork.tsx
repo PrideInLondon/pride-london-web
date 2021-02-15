@@ -7,9 +7,9 @@ import { Button } from '../../components/button'
 import { renderMethods } from '../../components/richText/renderMethods'
 import { xl_mob } from '../../theme/space'
 import { CATEGORIES } from '../FiftyTwoPage'
-import { AboutTheArtworkProps } from './AboutTheArtwork.types'
+import { ContentfulFiftyTwoGalleryEntry } from './FiftyTwoEntryPage.types'
 
-export const AboutTheArtwork: React.FC<AboutTheArtworkProps> = ({
+export const AboutTheArtwork: React.FC<ContentfulFiftyTwoGalleryEntry> = ({
   artist: { name },
   artwork: {
     title,

@@ -203,7 +203,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
     }
 
     type ContentfulTalentProfile implements Node {
-      bio: contentfulTalentProfileBioRichTextNode!
+      bio: contentfulTalentProfileBioRichTextNode
       website: String
       email: String
       facebook: String
