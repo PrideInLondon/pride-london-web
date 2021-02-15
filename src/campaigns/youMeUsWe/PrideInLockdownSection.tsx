@@ -31,10 +31,7 @@ const PrideInLockdownSection = () => (
     <Video
       host="vimeo"
       videoId="425109516"
-      coverImage={{
-        src: ymuw,
-        alt: 'You! Me! Us! We! repeated in rainbow text',
-      }}
+      coverImage={ymuw}
       caption="Postponed, but still united: You! Me! Us! We!"
       marginTop="xl"
       maxWidth={1050}

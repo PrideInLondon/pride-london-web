@@ -22,8 +22,18 @@ export const StylediFrame = styled.iframe`
 
 export const VideoImageWrapper = styled.div`
   cursor: pointer;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  position: relative;
 `
 
 export const StyledVideoImage = styled.img`
   width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 `

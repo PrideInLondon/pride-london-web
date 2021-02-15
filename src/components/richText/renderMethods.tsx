@@ -93,17 +93,21 @@ const renderVideo: NodeRenderer = (
   {
     data: {
       target: {
-        fields: { host, videoId, caption, image },
+        fields: { host, videoId, caption, coverImage },
       },
     },
   },
   _children
 ) => {
+  const {
+    fields: { file },
+  } = getAnyForLocale(coverImage)
+  const { url } = getAnyForLocale<{ url: string }>(file)
   const props: VideoProps = {
     host: getAnyForLocale(host),
     videoId: getStringForLocale(videoId),
     caption: getStringForLocale(caption),
-    coverImage: getImageForLocale(getAnyForLocale(image)),
+    coverImage: url,
   }
   return (
     <Video
