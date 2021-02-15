@@ -31,7 +31,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
           mx={{ default: '0', sm: '0', md: '40px', lg: '75px' }}
         >
           <FlexColumn width={1}>
-            <LogoWrapper to="/" title="Home">
+            <LogoWrapper onClick={() => setOpen(false)} to="/" title="Home">
               <StyledLogo variant="white" aria-hidden="true" />
             </LogoWrapper>
             <nav
@@ -144,7 +144,12 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   }}
                 />
                 <NavItem backgroundColor={backgroundColor}>
-                  <SupportButton to="/support-us">Support Pride</SupportButton>
+                  <SupportButton
+                    onClick={() => setOpen(false)}
+                    to="/support-us"
+                  >
+                    Support Pride
+                  </SupportButton>
                 </NavItem>
               </Menu>
             </nav>
