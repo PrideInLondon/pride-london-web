@@ -103,30 +103,22 @@ const Layout = ({ children, location: { pathname } }) => (
             })
             .sort(sortEventsByStartTime)}
         >
-          <MetomicProvider projectId={process.env.GATSBY_METOMIC_CLIENT_ID}>
-            <Fragment>
-              <Helmet title={siteMetadata.title} />
-              <LayoutHelmet pathname={pathname} {...siteMetadata} />
-              <SiteWrapper>
-                <Navigation
-                  backgroundColor={
-                    pathname.replace(/\/$/, '') === '/events'
-                      ? colors.mexicanPink
-                      : colors.indigo
-                  }
-                />
-                <main>{children}</main>
-                <Footer {...siteMetadata} />
-              </SiteWrapper>
-            </Fragment>
-            <ConsentGate
-              micropolicy="chat"
-              placeholder="@metomic/intercom"
-              placeholderParams={{ color: '#ea2c61', position: 'right' }}
-            >
-              <Intercom />
-            </ConsentGate>
-          </MetomicProvider>
+          <Fragment>
+            <Helmet title={siteMetadata.title} />
+            <LayoutHelmet pathname={pathname} {...siteMetadata} />
+            <SiteWrapper>
+              <Navigation
+                backgroundColor={
+                  pathname.replace(/\/$/, '') === '/events'
+                    ? colors.mexicanPink
+                    : colors.indigo
+                }
+              />
+              <main>{children}</main>
+              <Footer {...siteMetadata} />
+            </SiteWrapper>
+          </Fragment>
+          <Intercom />
         </EventsContext.Provider>
       )}
     />
