@@ -6,16 +6,49 @@ import { json } from './__mocks__'
 import { TalentProfile } from './TalentProfile'
 
 describe('TalentProfile', () => {
+  it('should render without bio section when given no bio', async () => {
+    const { queryByTestId } = render(
+      <TalentProfile
+        title={uuid()}
+        talent={{
+          name: uuid(),
+          website: uuid(),
+          email: uuid(),
+          facebook: uuid(),
+          twitter: uuid(),
+          instagram: uuid(),
+        }}
+      />
+    )
+    expect(queryByTestId('bio')).toBeNull()
+  })
+
+  it('should render without social bar when given no social links', async () => {
+    const { queryByTestId } = render(
+      <TalentProfile
+        title={uuid()}
+        talent={{
+          name: uuid(),
+          bio: { json },
+        }}
+      />
+    )
+    expect(queryByTestId('social-bar')).toBeNull()
+  })
+
   it('should have no accessibility violations', async () => {
     const { container } = render(
       <TalentProfile
-        type={uuid()}
-        bio={{ json }}
-        website={uuid()}
-        email={uuid()}
-        facebook={uuid()}
-        twitter={uuid()}
-        instagram={uuid()}
+        title={uuid()}
+        talent={{
+          name: uuid(),
+          bio: { json },
+          website: uuid(),
+          email: uuid(),
+          facebook: uuid(),
+          twitter: uuid(),
+          instagram: uuid(),
+        }}
       />
     )
     const results = await axe(container)

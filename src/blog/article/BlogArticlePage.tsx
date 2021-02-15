@@ -89,9 +89,9 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
         paddingX={{ default: 'lg', md: 'xxl' }}
       >
         <TalentProfile
-          type="author"
-          {...author}
-          maxWidth={{ md: MAX_CONTENT_WIDTH }}
+          title={author.name}
+          talent={author}
+          width={{ default: '100%', md: MAX_CONTENT_WIDTH }}
         />
       </Wrapper>
     )}
@@ -144,6 +144,7 @@ export const query = graphql`
         json
       }
       author {
+        name
         bio {
           json
         }
