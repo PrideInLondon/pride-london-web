@@ -4,9 +4,14 @@ import { select, color, files } from '@storybook/addon-knobs'
 import { colors } from '../../theme/colors'
 import logo from '../../assets/logo.png'
 import { RippedSection } from './RippedSection'
-import { RipVariant } from './Rip.types'
+import { VARIANTS, RipVariant } from './Rip.types'
 
-const variants: RipVariant[] = [1, 2, 3, 4, 5]
+const initial: { [key: string]: RipVariant | undefined } = { random: undefined }
+
+const variants = VARIANTS.reduce((result, item) => {
+  result[item] = item
+  return result
+}, initial)
 
 storiesOf(RippedSection.name, module).add('Top and Bottom variants', () => (
   <RippedSection

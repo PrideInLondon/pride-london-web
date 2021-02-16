@@ -16,8 +16,8 @@ export const RippedSection: React.FC<RippedSectionProps> = ({
     justifyContent="center"
     {...props}
   >
-    {top && <Rip transform="top" {...top} />}
+    {top && top.variant && <Rip transform="top" {...top} />}
     {children}
-    {bottom && <Rip transform="bottom" {...bottom} />}
+    {bottom && bottom.variant && <Rip transform="bottom" {...bottom} />}
   </Wrapper>
 )
