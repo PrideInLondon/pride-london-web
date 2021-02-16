@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { select, color, files } from '@storybook/addon-knobs'
+import { select, files } from '@storybook/addon-knobs'
 import { colors } from '../../theme/colors'
 import logo from '../../assets/logo.png'
 import { RippedSection } from './RippedSection'
@@ -13,12 +13,14 @@ const variants = VARIANTS.reduce((result, item) => {
   return result
 }, initial)
 
+const COLORS = Object.keys(colors).sort()
+
 storiesOf(RippedSection.name, module).add('Top and Bottom variants', () => (
   <RippedSection
     rips={{
       top: {
         variant: select('Top Rip Variant', variants, variants[0], 'Top Rip'),
-        color: color('Top Rip Color', colors.white, 'Top Rip'),
+        color: select('Top Rip Color', COLORS, COLORS[0], 'Top Rip'),
       },
       bottom: {
         variant: select(
@@ -27,7 +29,7 @@ storiesOf(RippedSection.name, module).add('Top and Bottom variants', () => (
           variants[0],
           'Bottom Rip'
         ),
-        color: color('Bottom Rip Color', colors.white, 'Bottom Rip'),
+        color: select('Bottom Rip Color', COLORS, COLORS[0], 'Bottom Rip'),
       },
     }}
   >
@@ -40,7 +42,7 @@ storiesOf(RippedSection.name, module).add('Top variant', () => (
     rips={{
       top: {
         variant: select('Top Rip Variant', variants, variants[0]),
-        color: color('Top Rip Color', colors.white),
+        color: select('Top Rip Color', COLORS, COLORS[0]),
       },
     }}
   >
@@ -53,7 +55,7 @@ storiesOf(RippedSection.name, module).add('Bottom variant', () => (
     rips={{
       bottom: {
         variant: select('Bottom Rip Variant', variants, variants[0]),
-        color: color('Bottom Rip Color', colors.white),
+        color: select('Bottom Rip Color', COLORS, COLORS[0]),
       },
     }}
   >
@@ -66,7 +68,7 @@ storiesOf(RippedSection.name, module).add('With background image', () => (
     rips={{
       top: {
         variant: select('Top Rip Variant', variants, variants[0], 'Top Rip'),
-        color: color('Top Rip Color', colors.white, 'Top Rip'),
+        color: select('Top Rip Color', COLORS, COLORS[0], 'Top Rip'),
       },
       bottom: {
         variant: select(
@@ -75,7 +77,7 @@ storiesOf(RippedSection.name, module).add('With background image', () => (
           variants[0],
           'Bottom Rip'
         ),
-        color: color('Bottom Rip Color', colors.white, 'Bottom Rip'),
+        color: select('Bottom Rip Color', COLORS, COLORS[0], 'Bottom Rip'),
       },
     }}
     maxWidth={550}
