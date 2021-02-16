@@ -1,4 +1,5 @@
 import React from 'react'
+import { getRandomInt } from '../../utils/number-utils'
 import {
   RipVariant1,
   RipVariant2,
@@ -6,13 +7,20 @@ import {
   RipVariant4,
   RipVariant5,
 } from './ripVariants'
-import { RipProps } from './Rip.types'
+import { RipVariant, RipProps } from './Rip.types'
 
-const RIPS = [RipVariant1, RipVariant2, RipVariant3, RipVariant4, RipVariant5]
+export const RIPS = [
+  RipVariant1,
+  RipVariant2,
+  RipVariant3,
+  RipVariant4,
+  RipVariant5,
+]
+
+export const getVariant = (variant?: RipVariant) =>
+  RIPS[(variant || getRandomInt(1, RIPS.length - 1)) - 1]
 
 export const Rip: React.FC<RipProps> = ({ variant, transform, ...props }) => {
-  if (!variant) return null
-
-  const RipVariant = RIPS[variant - 1]
+  const RipVariant = getVariant(variant)
   return <RipVariant variant={transform} aria-hidden="true" {...props} />
 }
