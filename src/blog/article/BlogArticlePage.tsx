@@ -32,13 +32,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
   location: { href },
 }) => (
   <>
-    <RippedSection
-      rips={{
-        bottom: {
-          color: 'white',
-        },
-      }}
-    >
+    <RippedSection rips={{ bottom: { color: 'white' } }}>
       <Image
         fluid={getImageForBreakpoint(hero)}
         style={{ width: '100%' }}
