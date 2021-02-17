@@ -15,21 +15,19 @@ const variants = VARIANTS.reduce((result, item) => {
 
 const COLORS = Object.keys(colors).sort()
 
+const TOP_RIP_GROUP_ID = 'Top Rip',
+  BOTTOM_RIP_GROUP_ID = 'Bottom Rip'
+
 storiesOf(RippedSection.name, module).add('Top and Bottom variants', () => (
   <RippedSection
     rips={{
       top: {
-        variant: select('Top Rip Variant', variants, variants[0], 'Top Rip'),
-        color: select('Top Rip Color', COLORS, COLORS[0], 'Top Rip'),
+        variant: select('variant', variants, variants[0], TOP_RIP_GROUP_ID),
+        color: select('color', COLORS, COLORS[0], TOP_RIP_GROUP_ID),
       },
       bottom: {
-        variant: select(
-          'Bottom Rip Variant',
-          variants,
-          variants[0],
-          'Bottom Rip'
-        ),
-        color: select('Bottom Rip Color', COLORS, COLORS[0], 'Bottom Rip'),
+        variant: select('variant', variants, variants[0], BOTTOM_RIP_GROUP_ID),
+        color: select('color', COLORS, COLORS[0], BOTTOM_RIP_GROUP_ID),
       },
     }}
   >
@@ -41,8 +39,8 @@ storiesOf(RippedSection.name, module).add('Top variant', () => (
   <RippedSection
     rips={{
       top: {
-        variant: select('Top Rip Variant', variants, variants[0]),
-        color: select('Top Rip Color', COLORS, COLORS[0]),
+        variant: select('variant', variants, variants[0]),
+        color: select('color', COLORS, COLORS[0]),
       },
     }}
   >
@@ -54,8 +52,8 @@ storiesOf(RippedSection.name, module).add('Bottom variant', () => (
   <RippedSection
     rips={{
       bottom: {
-        variant: select('Bottom Rip Variant', variants, variants[0]),
-        color: select('Bottom Rip Color', COLORS, COLORS[0]),
+        variant: select('variant', variants, variants[0]),
+        color: select('color', COLORS, COLORS[0]),
       },
     }}
   >
@@ -67,17 +65,12 @@ storiesOf(RippedSection.name, module).add('With background image', () => (
   <RippedSection
     rips={{
       top: {
-        variant: select('Top Rip Variant', variants, variants[0], 'Top Rip'),
-        color: select('Top Rip Color', COLORS, COLORS[0], 'Top Rip'),
+        variant: select('variant', variants, variants[0], TOP_RIP_GROUP_ID),
+        color: select('color', COLORS, COLORS[0], TOP_RIP_GROUP_ID),
       },
       bottom: {
-        variant: select(
-          'Bottom Rip Variant',
-          variants,
-          variants[0],
-          'Bottom Rip'
-        ),
-        color: select('Bottom Rip Color', COLORS, COLORS[0], 'Bottom Rip'),
+        variant: select('variant', variants, variants[0], BOTTOM_RIP_GROUP_ID),
+        color: select('color', COLORS, COLORS[0], BOTTOM_RIP_GROUP_ID),
       },
     }}
     maxWidth={550}
