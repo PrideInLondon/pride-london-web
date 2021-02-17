@@ -21,6 +21,6 @@ export const getVariant = (variant?: RipVariant) =>
   RIPS[(variant || getRandomInt(1, RIPS.length - 1)) - 1]
 
 export const Rip: React.FC<RipProps> = ({ variant, transform, ...props }) => {
-  const RipVariant = getVariant(variant)
-  return <RipVariant variant={transform} aria-hidden="true" {...props} />
+  const Variant = getVariant(variant)
+  return <Variant variant={transform} aria-hidden="true" {...props} />
 }
