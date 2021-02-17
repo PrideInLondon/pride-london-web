@@ -7,21 +7,9 @@ import {
   typography,
   flexbox,
   position,
-  SpaceProps,
-  LayoutProps,
-  TypographyProps,
-  FlexboxProps,
-  PositionProps,
-  ColorProps,
 } from 'styled-system'
+import { WrapperProps } from './Wrapper.types'
 
-export const Wrapper = styled.div<
-  SpaceProps &
-    LayoutProps &
-    TypographyProps &
-    FlexboxProps &
-    PositionProps &
-    ColorProps
->`
+export const Wrapper = styled.div<WrapperProps>`
   ${compose(space, layout, typography, flexbox, position, color)}
 `

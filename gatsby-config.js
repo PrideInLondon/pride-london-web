@@ -60,6 +60,9 @@ module.exports = {
         ...(process.env.CONTENTFUL_ENV && {
           environment: process.env.CONTENTFUL_ENV,
         }),
+        // we need this to ensure full data resolution on nested custom types
+        // https://github.com/gatsbyjs/gatsby/issues/10592#issuecomment-542919638
+        forceFullSync: env === 'development',
       },
     },
     {
@@ -105,7 +108,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/blog/', '/blog/*'],
+      },
+    },
     `gatsby-plugin-remove-serviceworker`,
   ],
 }

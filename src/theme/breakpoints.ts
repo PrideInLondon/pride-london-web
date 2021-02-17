@@ -3,6 +3,7 @@ export const md = 768
 export const lg = 1024
 export const xl = 1440
 export const nav = 1360
+export const max = 1600
 
 export interface Breakpoints {
   sm: string

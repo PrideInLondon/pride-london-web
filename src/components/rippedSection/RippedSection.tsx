@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledSection } from './RippedSection.styles'
+import { Wrapper } from '../wrapper'
 import { RippedSectionProps } from './RippedSection.types'
 import { Rip } from './Rip'
 
@@ -8,9 +8,16 @@ export const RippedSection: React.FC<RippedSectionProps> = ({
   children,
   ...props
 }) => (
-  <StyledSection {...props}>
+  <Wrapper
+    as="section"
+    position="relative"
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+    {...props}
+  >
     {top && <Rip transform="top" {...top} />}
     {children}
     {bottom && <Rip transform="bottom" {...bottom} />}
-  </StyledSection>
+  </Wrapper>
 )

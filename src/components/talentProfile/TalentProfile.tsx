@@ -1,51 +1,52 @@
 import React from 'react'
 import { Link } from 'gatsby' // lgtm [js/unused-local-variable]
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { H6 } from '../../components/typography'
 import { Icon } from '../../components/icon'
 import { handleUrl } from '../../utils/location-utils'
-import { renderMethods } from '../renderMethods'
-import { Wrapper, ShareBar, StyledLink } from './TalentProfile.styles'
+import { capitaliseFirst } from '../../utils/string-utils'
+import { RichText } from '../richText'
+import { Wrapper, SocialBar, StyledLink } from './TalentProfile.styles'
 import {
   SocialProps,
   SocialLinkProps,
   TalentProfileProps,
 } from './TalentProfile.types'
 
-const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentType }) => (
-  <StyledLink<'a' | 'span' | typeof Link>
-    {...handleUrl(url)}
-    aria-label={`${name} for the ${talentType}`}
-  >
-    <Icon variant="indigo" name={name} />
-  </StyledLink>
-)
+const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentName }) => {
+  const descriptiveText = `${talentName}'s ${capitaliseFirst(name)}`
+  return (
+    <StyledLink<'a' | 'span' | typeof Link>
+      {...handleUrl(url)}
+      title={descriptiveText}
+      aria-label={descriptiveText}
+    >
+      <Icon variant="indigo" name={name} />
+    </StyledLink>
+  )
+}
 
 export const TalentProfile: React.FC<TalentProfileProps> = ({
-  type,
-  bio: { json },
-  website,
-  email,
-  facebook,
-  twitter,
-  instagram,
+  title,
+  talent: { name, bio, website, email, facebook, twitter, instagram },
   ...props
 }) => {
   const Social = (props: SocialProps) => (
-    <SocialLink talentType={type} {...props} />
+    <SocialLink talentName={name} {...props} />
   )
 
   return (
     <Wrapper {...props}>
-      <H6 as="h3">About the {type}</H6>
-      {documentToReactComponents(json, renderMethods)}
-      <ShareBar>
-        {website && <Social url={website} name="website" />}
-        {email && <Social url={`mailto:${email}`} name="email" />}
-        {facebook && <Social url={facebook} name="facebook" />}
-        {twitter && <Social url={twitter} name="twitter" />}
-        {instagram && <Social url={instagram} name="instagram" />}
-      </ShareBar>
+      <H6 as="h3">{title}</H6>
+      {bio && bio.json && <RichText document={bio.json} data-testid="bio" />}
+      {(website || email || facebook || twitter || instagram) && (
+        <SocialBar data-testid="social-bar">
+          {website && <Social url={website} name="website" />}
+          {email && <Social url={`mailto:${email}`} name="email" />}
+          {facebook && <Social url={facebook} name="facebook" />}
+          {twitter && <Social url={twitter} name="twitter" />}
+          {instagram && <Social url={instagram} name="instagram" />}
+        </SocialBar>
+      )}
     </Wrapper>
   )
 }

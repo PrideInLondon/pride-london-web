@@ -8,12 +8,12 @@ export interface SocialProps {
 }
 
 export interface SocialLinkProps extends SocialProps {
-  talentType: string
+  talentName: string
 }
 
-export interface TalentProfileProps extends SpaceProps, LayoutProps {
-  type: string
-  bio: {
+export interface ContentfulTalentProfile {
+  name: string
+  bio?: {
     json: Document
   }
   website?: string
@@ -21,4 +21,9 @@ export interface TalentProfileProps extends SpaceProps, LayoutProps {
   email?: string
   facebook?: string
   twitter?: string
+}
+
+export interface TalentProfileProps extends SpaceProps, LayoutProps {
+  title: string
+  talent: ContentfulTalentProfile
 }

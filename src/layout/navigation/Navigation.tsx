@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { noScroll } from '../../utils/style-utils'
-
 import NavItem from './NavItem'
 import {
   HeaderWrapper,
@@ -8,18 +7,14 @@ import {
   FlexRow,
   FlexColumn,
   LogoWrapper,
-  Logo,
+  StyledLogo,
   Menu,
   Burger,
   SupportButton,
 } from './Navigation.styles'
-
 import { NavigationProps } from './Navigation.types'
 
-const Navigation: React.FC<NavigationProps> = ({
-  backgroundColor,
-  logoUrl,
-}) => {
+const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
   const [isOpen, setOpen] = useState<boolean>(false)
   useEffect(() => {
     if (isOpen) {
@@ -36,8 +31,8 @@ const Navigation: React.FC<NavigationProps> = ({
           mx={{ default: '0', sm: '0', md: '40px', lg: '75px' }}
         >
           <FlexColumn width={1}>
-            <LogoWrapper to="/">
-              <Logo src={logoUrl} alt="Pride in London Logo" />
+            <LogoWrapper onClick={() => setOpen(false)} to="/" title="Home">
+              <StyledLogo variant="white" aria-hidden="true" />
             </LogoWrapper>
             <nav
               role="navigation"
@@ -72,7 +67,7 @@ const Navigation: React.FC<NavigationProps> = ({
                           { title: 'Our impact', url: '/about-us/impact' },
                           {
                             title: "Pride's Got Talent",
-                            url: '/events/prides-got-talent/',
+                            url: '/pgt',
                           },
                           {
                             title: 'Unity Fund',
@@ -149,7 +144,12 @@ const Navigation: React.FC<NavigationProps> = ({
                   }}
                 />
                 <NavItem backgroundColor={backgroundColor}>
-                  <SupportButton to="/support-us">Support Pride</SupportButton>
+                  <SupportButton
+                    onClick={() => setOpen(false)}
+                    to="/support-us"
+                  >
+                    Support Pride
+                  </SupportButton>
                 </NavItem>
               </Menu>
             </nav>

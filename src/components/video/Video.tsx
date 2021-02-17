@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { PlayButton } from '../playButton'
+import { P } from '../typography'
 import {
   StyledFigure,
   VideoContainer,
   VideoImageWrapper,
   StyledVideoImage,
-  StyledFigCaption,
   StylediFrame,
-  StyledButtonContainer,
 } from './Video.styles'
 import { VideoHost, VideoProps } from './Video.types'
 
@@ -22,7 +21,7 @@ export const generateVideoUrl = (host: VideoHost, id: string) =>
 export const Video = ({
   host,
   videoId,
-  coverImage: { src, alt },
+  coverImage,
   caption,
   ...props
 }: VideoProps) => {
@@ -42,21 +41,32 @@ export const Video = ({
       ) : (
         <>
           <VideoImageWrapper
+            aria-hidden="true" // duplicated button
             role="button"
             title={`Play ${caption} video`}
             onClick={() => setClicked(true)}
           >
-            <StyledVideoImage {...{ src, alt }} />
+            <StyledVideoImage src={coverImage} aria-hidden="true" />
           </VideoImageWrapper>
-          <StyledButtonContainer>
-            <PlayButton
-              title={`Play ${caption} video`}
-              onClick={() => setClicked(true)}
-            ></PlayButton>
-          </StyledButtonContainer>
+          <PlayButton
+            title={`Play ${caption} video`}
+            onClick={() => setClicked(true)}
+            position="absolute"
+            bottom={0}
+            left="lg"
+          />
         </>
       )}
-      <StyledFigCaption padding="sm">{caption}</StyledFigCaption>
+      <P
+        variant="sm"
+        fontWeight="bold"
+        textAlign="right"
+        as="figcaption"
+        paddingLeft={{ default: '25%', md: '30%' }}
+        paddingTop="sm"
+      >
+        {caption}
+      </P>
     </StyledFigure>
   )
 }

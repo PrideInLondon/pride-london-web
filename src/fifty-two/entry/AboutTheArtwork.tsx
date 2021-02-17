@@ -4,12 +4,12 @@ import { H4, H6, P } from '../../components/typography'
 import { Tag } from '../../components/tag'
 import { Typeform } from '../../components/typeform'
 import { Button } from '../../components/button'
-import { renderMethods } from '../../components/renderMethods'
+import { renderMethods } from '../../components/richText/renderMethods'
 import { xl_mob } from '../../theme/space'
 import { CATEGORIES } from '../FiftyTwoPage'
-import { AboutTheArtworkProps } from './AboutTheArtwork.types'
+import { ContentfulFiftyTwoGalleryEntry } from './FiftyTwoEntryPage.types'
 
-export const AboutTheArtwork: React.FC<AboutTheArtworkProps> = ({
+export const AboutTheArtwork: React.FC<ContentfulFiftyTwoGalleryEntry> = ({
   artist: { name },
   artwork: {
     title,

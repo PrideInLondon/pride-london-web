@@ -20,19 +20,22 @@ describe('Video', () => {
   const props: VideoProps = {
     host: 'youtube',
     videoId: 'TIExvoJXwKE',
-    coverImage: {
-      src: 'image',
-      alt: 'The Pride in London Logo',
-    },
+    coverImage: 'image',
     caption: 'Pride in London presents: You! Me! Us! We!',
   }
 
+  const buttonTitle = `Play ${props.caption} video`
+
   it('should render a cover image and button', () => {
-    const { queryAllByRole, queryByTitle } = render(<Video {...props} />)
-    expect(queryAllByRole('button')).toHaveLength(2)
-    expect(
-      queryByTitle('Pride in London presents: You! Me! Us! We!')
-    ).toBeFalsy()
+    const { queryAllByRole, queryAllByTitle, queryByTitle } = render(
+      <Video {...props} />
+    )
+
+    // image is shown
+    expect(queryAllByRole('button')).toHaveLength(1) // 1 button is hidden from DOM as it is duplicated
+    expect(queryAllByTitle(buttonTitle)).toHaveLength(2) // two buttons _actually_ exist
+
+    expect(queryByTitle(props.caption)).toBeFalsy() // video is hidden
   })
 
   it.each`
@@ -42,15 +45,14 @@ describe('Video', () => {
   `(
     'should remove the cover image and button when button $index is clicked',
     ({ index }) => {
-      const { queryAllByRole, queryByTitle } = render(<Video {...props} />)
-      const elements = queryAllByRole('button')
+      const { queryAllByTitle, queryByTitle } = render(<Video {...props} />)
+
       act(() => {
-        fireEvent.click(elements[index])
+        fireEvent.click(queryAllByTitle(buttonTitle)[index])
       })
-      expect(queryAllByRole('button')).toHaveLength(0)
-      expect(
-        queryByTitle('Pride in London presents: You! Me! Us! We!')
-      ).toBeTruthy()
+
+      expect(queryAllByTitle(buttonTitle)).toHaveLength(0) // image is hidden
+      expect(queryByTitle(props.caption)).toBeTruthy() // video is shown
     }
   )
 
@@ -62,9 +64,11 @@ describe('Video', () => {
 
   it('should have no accessibility violations once clicked', async () => {
     const { queryAllByRole, container } = render(<Video {...props} />)
+
     act(() => {
       fireEvent.click(queryAllByRole('button')[0])
     })
+
     const results = await axe(container)
     expect(results).toHaveNoViolations()
   })

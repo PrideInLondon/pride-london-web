@@ -1,6 +1,7 @@
 import { Document } from '@contentful/rich-text-types'
 import { FluidObject } from 'gatsby-image'
 import { PageLinkDetails } from '../../components/pageSwitcher/PageSwitcher'
+import { ContentfulTalentProfile } from '../../components/talentProfile/TalentProfile.types'
 
 export interface Artwork {
   title: string
@@ -18,21 +19,9 @@ export interface Artwork {
   }
 }
 
-export interface Artist {
-  name: string
-  website: string
-  instagram: string
-  email: string
-  facebook: string
-  twitter: string
-  bio: {
-    json: Document
-  }
-}
-
-interface ContentfulFiftyTwoGalleryEntry {
+export interface ContentfulFiftyTwoGalleryEntry {
   artwork: Artwork
-  artist: Artist
+  artist: ContentfulTalentProfile
 }
 
 export interface FiftyTwoEntryPageProps {
