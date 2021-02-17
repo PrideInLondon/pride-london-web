@@ -10,8 +10,8 @@ const HeroCopy: React.FC = ({ children }) => {
 }
 
 export const Hero: React.FC<HeroProps> = ({ text, background, color }) => {
-  const randomOption = (max: RipVariant): number =>
-    Math.floor(Math.random() * Math.floor(max))
+  const randomOption = (max: number): RipVariant =>
+    Math.floor(Math.random() * Math.floor(max)) as RipVariant
 
   return (
     <RippedSection
