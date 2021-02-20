@@ -8,7 +8,7 @@ const HeroCopy: React.FC = ({ children }) => {
   return <HeroCopyWrapper>{children}</HeroCopyWrapper>
 }
 
-export const Hero: React.FC<HeroProps> = ({ text, background, color }) => (
+export const Hero: React.FC<HeroProps> = ({ title, image, color }) => (
   <RippedSection
     rips={{
       bottom: {
@@ -17,8 +17,8 @@ export const Hero: React.FC<HeroProps> = ({ text, background, color }) => (
       },
     }}
   >
-    <Wrapper background={background}>
-      <HeroCopy>{text}</HeroCopy>
+    <Wrapper image={image}>
+      <HeroCopy>{title}</HeroCopy>
     </Wrapper>
   </RippedSection>
 )

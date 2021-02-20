@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 import { media } from '../../theme/media'
-import { HeroProps } from './Hero.types'
 
-export const Wrapper = styled.div<HeroProps>`
+export const Wrapper = styled.div<{ image: string }>`
   display: flex;
-  background-image: url(${props => props.background});
+  background-image: url(${props => props.image});
   background-size: cover;
   width: 100%;
   height: 100%;
