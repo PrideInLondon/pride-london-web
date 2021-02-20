@@ -8,7 +8,7 @@ export const HERO_COLORS = [
   'white',
 ] as const
 
-type HeroColor = typeof HERO_COLORS[number]
+export type HeroColor = typeof HERO_COLORS[number]
 
 export interface HeroProps {
   title: string
