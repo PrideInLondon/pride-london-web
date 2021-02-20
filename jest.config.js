@@ -3,7 +3,11 @@ module.exports = {
   testMatch: ['<rootDir>/src/**/*.test.[jt]s?(x)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
-    '\\.(css|jpg|png|svg)$': '<rootDir>/.jest/empty-module.js',
+    '\\.(css)$': '<rootDir>/.jest/empty-module.js',
+  },
+  transform: {
+    '\\.(jsx?|tsx?)$': 'babel-jest',
+    '\\.(jpg|png|svg)$': '<rootDir>/.jest/transformer.ts',
   },
   setupFiles: ['<rootDir>/.jest/jest.setup.js'],
   setupFilesAfterEnv: ['<rootDir>/.jest/jest.setup.ts'],
