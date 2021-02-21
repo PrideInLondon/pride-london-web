@@ -1,10 +1,12 @@
 import { SpaceProps } from 'styled-system'
 import { RipTransform } from './ripVariants/RipVariant.types'
 
-export type RipVariant = 1 | 2 | 3 | 4 | 5
+export const VARIANTS = [1, 2, 3, 4, 5] as const
+
+export type RipVariant = typeof VARIANTS[number]
 
 export interface Rip extends SpaceProps {
-  variant: RipVariant
+  variant?: RipVariant
   color: string
 }
 

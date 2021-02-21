@@ -33,7 +33,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
             ))}
           </StyledGalleryContainer>
           <RippedSection
-            rips={{ top: { color: 'white', variant: 3 } }}
+            rips={{ top: { color: 'white' } }}
             backgroundColor="indigo"
             flexDirection="column"
             paddingY={{ default: 'xl', md: 'xxl' }}
