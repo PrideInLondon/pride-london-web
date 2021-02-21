@@ -14,14 +14,7 @@ export const getColor = (color?: string): string => {
 }
 
 export const Hero: React.FC<HeroProps> = ({ title, color }) => (
-  <RippedSection
-    rips={{
-      bottom: {
-        variant: 1, // until PR #1911 is merged in
-        color: 'white',
-      },
-    }}
-  >
+  <RippedSection rips={{ bottom: { color: 'white' } }}>
     <Wrapper image={getColor(color)}>
       <HeroCopy>{title}</HeroCopy>
     </Wrapper>
