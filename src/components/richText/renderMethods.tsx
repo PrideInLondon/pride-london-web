@@ -1,11 +1,8 @@
 import React from 'react'
 import { NodeRenderer, Options } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
-import { colors } from '../../theme/colors'
 import { lg, xxl } from '../../theme/space'
-import { getRandomInt } from '../../utils/number-utils'
 import { RippedSection } from '../rippedSection'
-import { Rip, RipVariant } from '../rippedSection/Rip.types'
 import { Video } from '../video'
 import { VideoProps } from '../video/Video.types'
 import { Image } from '../image'
@@ -43,21 +40,14 @@ export const getImageForLocale = (
   }
 }
 
-const generateRip = (): Rip => ({
-  variant: getRandomInt(1, 5) as RipVariant,
-  color: colors.white,
-})
-
 const renderImage: NodeRenderer = ({ data: { target } }, _children) => {
   const props = getImageForLocale(target)
+  const rip = { color: 'white' }
   // alt is included in the props but silly eslint doesn't see this here
   /* eslint-disable jsx-a11y/alt-text */
   return (
     <RippedSection
-      rips={{
-        top: generateRip(),
-        bottom: generateRip(),
-      }}
+      rips={{ top: rip, bottom: rip }}
       marginY={{ default: 'xxl', md: `${lg + xxl}px` }}
     >
       <img {...props} width="100%" />

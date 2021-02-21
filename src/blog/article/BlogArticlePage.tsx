@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Image from 'gatsby-image/withIEPolyfill'
 import { RippedSection } from '../../components/rippedSection'
-import { RipVariant } from '../../components/rippedSection/Rip.types'
 import { Wrapper } from '../../components/wrapper'
 import { Tag } from '../../components/tag'
 import { H2, H3 } from '../../components/typography'
@@ -10,8 +9,6 @@ import { ShareBar } from '../../components/shareBar'
 import { TalentProfile } from '../../components/talentProfile'
 import { getImageForBreakpoint } from '../../utils/style-utils'
 import { getFirstParagraph } from '../../utils/document-utils'
-import { getRandomInt } from '../../utils/number-utils'
-import { colors } from '../../theme/colors'
 import {
   MAX_CONTENT_WIDTH,
   Content,
@@ -35,14 +32,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
   location: { href },
 }) => (
   <>
-    <RippedSection
-      rips={{
-        bottom: {
-          color: colors.white,
-          variant: getRandomInt(1, 5) as RipVariant,
-        },
-      }}
-    >
+    <RippedSection rips={{ bottom: { color: 'white' } }}>
       <Image
         fluid={getImageForBreakpoint(hero)}
         style={{ width: '100%' }}

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { variant } from 'styled-system'
+import { color, variant } from 'styled-system'
 
 export const StyledSvg = styled.svg<{
   variant: string
@@ -20,4 +20,10 @@ export const StyledSvg = styled.svg<{
       },
     },
   })}
+
+  ${color}
+`
+
+export const StyledPath = styled.path`
+  fill: currentcolor;
 `
