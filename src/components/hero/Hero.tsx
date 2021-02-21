@@ -1,8 +1,7 @@
 import React from 'react'
 import { RippedSection } from '../rippedSection'
-import { H2 } from '../typography'
 import { getRandomInt } from '../../utils/number-utils'
-import { Wrapper } from './Hero.styles'
+import { Wrapper, Title } from './Hero.styles'
 import { HeroColor, HeroProps, HERO_COLORS } from './Hero.types'
 
 export const getColor = (color?: HeroColor): HeroColor =>
@@ -13,9 +12,16 @@ export const Hero: React.FC<HeroProps> = ({ title, color }) => {
   return (
     <RippedSection rips={{ bottom: { color: 'white' } }}>
       <Wrapper image={require(`./assets/${background}.jpg`)}>
-        <H2 as="h1" color="white" ml="xxl" display="flex" alignItems="center">
+        <Title
+          as="h1"
+          color="white"
+          ml="xxl"
+          display="flex"
+          alignItems="center"
+          variant={background}
+        >
           {title}
-        </H2>
+        </Title>
       </Wrapper>
     </RippedSection>
   )
