@@ -6,14 +6,12 @@ describe('getVariant', () => {
     'should return correct component for color %p',
     color => {
       const actual = getColor(color)
-      expect(actual).toEqual(`${color}.jpg`)
+      expect(actual).toEqual(color)
     }
   )
 
   it('should return a random color when given no color', () => {
     const actual = getColor()
-    expect(actual).toEqual(
-      expect.stringMatching(`^(${HERO_COLORS.join('|')}).jpg$`)
-    )
+    expect(HERO_COLORS).toContain(actual)
   })
 })
