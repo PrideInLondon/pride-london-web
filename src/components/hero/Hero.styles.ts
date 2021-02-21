@@ -11,27 +11,3 @@ export const Wrapper = styled.div<{ image: string }>`
     height: 680px;
   `};
 `
-
-export const HeroCopyWrapper = styled.div`
-  margin-left: 88px;
-  margin-top: 177px;
-  ${media.desktop`
-  margin-top: 120px;
-  `};
-  display: flex;
-  align-items: center;
-  width: 327px;
-  height: 177px;
-  font-family: Poppins;
-  font-size: 76px;
-  font-weight: 800;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.2;
-  letter-spacing: -0.76px;
-  color: white;
-  ${media.desktop`
-    width: 510px;
-    height: 560px;
-  `};
-`
