@@ -21,7 +21,7 @@ export const Hero: React.FC<HeroProps> = ({ title, subtitle, color }) => {
           <H2 as="h1" color="currentcolor" mb={{ default: 'md', md: 'lg' }}>
             {title}
           </H2>
-          <P color="currentcolor">{subtitle}</P>
+          {subtitle && <P color="currentcolor">{subtitle}</P>}
         </TextWrapper>
       </Background>
     </RippedSection>
