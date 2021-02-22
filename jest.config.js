@@ -1,5 +1,3 @@
-process.env.TZ = 'BST'
-
 module.exports = {
   roots: ['<rootDir>/src'],
   testMatch: ['<rootDir>/src/**/*.test.[jt]s?(x)'],
