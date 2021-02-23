@@ -5,13 +5,13 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
-import { ConsentGate, MetomicProvider } from '@metomic/react'
 import { Helmet } from '../components/helmet'
 import Intercom from '../components/intercom'
 import EventsContext from '../contexts/eventsContext'
 import theme from '../theme/theme'
 import { filterPastEvents, sortEventsByStartTime } from '../events/helpers'
 import { colors } from '../theme/colors'
+import { useCookieConsent } from '../hooks/useCookieConsent'
 import LayoutHelmet from './LayoutHelmet'
 import { Navigation } from './navigation'
 import { Footer } from './Footer'
@@ -85,45 +85,49 @@ const query = graphql`
   }
 `
 
-const Layout = ({ children, location: { pathname } }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <StaticQuery
-      query={query}
-      render={({
-        allContentfulEvent: { edges: events },
-        site: { siteMetadata },
-      }) => (
-        <EventsContext.Provider
-          value={events
-            .filter(event => {
-              const lastOccurenceEndDate =
-                event.node.date.dates[event.node.date.dates.length - 1].endDate
-              return filterPastEvents(lastOccurenceEndDate)
-            })
-            .sort(sortEventsByStartTime)}
-        >
-          <Fragment>
-            <Helmet title={siteMetadata.title} />
-            <LayoutHelmet pathname={pathname} {...siteMetadata} />
-            <SiteWrapper>
-              <Navigation
-                backgroundColor={
-                  pathname.replace(/\/$/, '') === '/events'
-                    ? colors.mexicanPink
-                    : colors.indigo
-                }
-              />
-              <main>{children}</main>
-              <Footer {...siteMetadata} />
-            </SiteWrapper>
-          </Fragment>
-          <Intercom />
-        </EventsContext.Provider>
-      )}
-    />
-  </ThemeProvider>
-)
+const Layout = ({ children, location: { pathname } }) => {
+  useCookieConsent()
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <StaticQuery
+        query={query}
+        render={({
+          allContentfulEvent: { edges: events },
+          site: { siteMetadata },
+        }) => (
+          <EventsContext.Provider
+            value={events
+              .filter(event => {
+                const lastOccurenceEndDate =
+                  event.node.date.dates[event.node.date.dates.length - 1]
+                    .endDate
+                return filterPastEvents(lastOccurenceEndDate)
+              })
+              .sort(sortEventsByStartTime)}
+          >
+            <Fragment>
+              <Helmet title={siteMetadata.title} />
+              <LayoutHelmet pathname={pathname} {...siteMetadata} />
+              <SiteWrapper>
+                <Navigation
+                  backgroundColor={
+                    pathname.replace(/\/$/, '') === '/events'
+                      ? colors.mexicanPink
+                      : colors.indigo
+                  }
+                />
+                <main>{children}</main>
+                <Footer {...siteMetadata} />
+              </SiteWrapper>
+            </Fragment>
+            <Intercom />
+          </EventsContext.Provider>
+        )}
+      />
+    </ThemeProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
