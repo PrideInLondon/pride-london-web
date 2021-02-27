@@ -11,7 +11,6 @@ import EventsContext from '../contexts/eventsContext'
 import theme from '../theme/theme'
 import { filterPastEvents, sortEventsByStartTime } from '../events/helpers'
 import { colors } from '../theme/colors'
-import { useCookieConsent } from '../hooks/useCookieConsent'
 import LayoutHelmet from './LayoutHelmet'
 import { Navigation } from './navigation'
 import { Footer } from './Footer'
@@ -86,7 +85,6 @@ const query = graphql`
 `
 
 const Layout = ({ children, location: { pathname } }) => {
-  useCookieConsent()
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
