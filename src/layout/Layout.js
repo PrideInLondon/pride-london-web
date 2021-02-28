@@ -5,7 +5,6 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
-import { ConsentGate, MetomicProvider } from '@metomic/react'
 import { Helmet } from '../components/helmet'
 import Intercom from '../components/intercom'
 import EventsContext from '../contexts/eventsContext'
@@ -85,25 +84,26 @@ const query = graphql`
   }
 `
 
-const Layout = ({ children, location: { pathname } }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <StaticQuery
-      query={query}
-      render={({
-        allContentfulEvent: { edges: events },
-        site: { siteMetadata },
-      }) => (
-        <EventsContext.Provider
-          value={events
-            .filter(event => {
-              const lastOccurenceEndDate =
-                event.node.date.dates[event.node.date.dates.length - 1].endDate
-              return filterPastEvents(lastOccurenceEndDate)
-            })
-            .sort(sortEventsByStartTime)}
-        >
-          <MetomicProvider projectId={process.env.GATSBY_METOMIC_CLIENT_ID}>
+const Layout = ({ children, location: { pathname } }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <StaticQuery
+        query={query}
+        render={({
+          allContentfulEvent: { edges: events },
+          site: { siteMetadata },
+        }) => (
+          <EventsContext.Provider
+            value={events
+              .filter(event => {
+                const lastOccurenceEndDate =
+                  event.node.date.dates[event.node.date.dates.length - 1]
+                    .endDate
+                return filterPastEvents(lastOccurenceEndDate)
+              })
+              .sort(sortEventsByStartTime)}
+          >
             <Fragment>
               <Helmet title={siteMetadata.title} />
               <LayoutHelmet pathname={pathname} {...siteMetadata} />
@@ -119,19 +119,13 @@ const Layout = ({ children, location: { pathname } }) => (
                 <Footer {...siteMetadata} />
               </SiteWrapper>
             </Fragment>
-            <ConsentGate
-              micropolicy="chat"
-              placeholder="@metomic/intercom"
-              placeholderParams={{ color: '#ea2c61', position: 'right' }}
-            >
-              <Intercom />
-            </ConsentGate>
-          </MetomicProvider>
-        </EventsContext.Provider>
-      )}
-    />
-  </ThemeProvider>
-)
+            <Intercom />
+          </EventsContext.Provider>
+        )}
+      />
+    </ThemeProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
