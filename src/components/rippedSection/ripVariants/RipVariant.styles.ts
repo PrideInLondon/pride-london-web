@@ -5,7 +5,7 @@ export const StyledSvg = styled.svg<{
   variant: string
 }>`
   position: absolute;
-  z-index: 9;
+  z-index: 1;
   width: 100%;
   height: auto;
 
