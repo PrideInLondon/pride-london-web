@@ -15,11 +15,14 @@ import {
   YouMayAlsoLikeWrapper,
 } from './BlogArticlePage.styles'
 import { BlogArticleSummaryCard } from './BlogArticleSummaryCard'
-import { getCategoryColor } from './helpers'
+import { generateBlogArticleSlug, getCategoryColor } from './helpers'
 import { BlogArticlePageProps } from './BlogArticlePage.types'
 
 const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
   data: {
+    site: {
+      siteMetadata: { siteUrl },
+    },
     contentfulBlogArticle: {
       hero,
       category,
@@ -29,7 +32,6 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
     },
     otherContentfulBlogArticles: { edges },
   },
-  location: { href },
 }) => (
   <>
     <RippedSection rips={{ bottom: { color: 'white' } }}>
@@ -66,7 +68,11 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       >
         <ShareBar
           variant={{ default: 'horizontal', md: 'vertical' }}
-          content={{ title, body: getFirstParagraph(json), url: href }}
+          content={{
+            title,
+            body: getFirstParagraph(json),
+            url: siteUrl + generateBlogArticleSlug(title),
+          }}
         />
       </Wrapper>
     </Wrapper>
@@ -116,6 +122,12 @@ export const query = graphql`
   }
 
   query blogArticle($id: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+
     contentfulBlogArticle(id: { eq: $id }) {
       hero {
         desktop: fluid(maxWidth: 1600, quality: 100) {
