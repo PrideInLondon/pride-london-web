@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby' // lgtm [js/unused-local-variable]
+import { Wrapper } from '../../components/wrapper'
 import { H6 } from '../../components/typography'
 import { Icon } from '../../components/icon'
 import { handleUrl } from '../../utils/location-utils'
 import { capitaliseFirst } from '../../utils/string-utils'
 import { RichText } from '../richText'
-import { Wrapper, SocialBar, StyledLink } from './TalentProfile.styles'
+import { SocialBar, StyledLink } from './TalentProfile.styles'
 import {
   SocialProps,
   SocialLinkProps,
@@ -35,7 +36,7 @@ export const TalentProfile: React.FC<TalentProfileProps> = ({
   )
 
   return (
-    <Wrapper {...props}>
+    <Wrapper backgroundColor="lightGrey" padding="xl_mob" {...props}>
       <H6 as="h3">{title}</H6>
       {bio && bio.json && <RichText document={bio.json} data-testid="bio" />}
       {(website || email || facebook || twitter || instagram) && (

@@ -1,6 +1,6 @@
 import { Document } from '@contentful/rich-text-types'
-import { SpaceProps, LayoutProps } from 'styled-system'
 import { IconName } from '../../components/icon/Icon.types'
+import { WrapperProps } from '../wrapper/Wrapper.types'
 
 export interface SocialProps {
   url: string
@@ -23,7 +23,7 @@ export interface ContentfulTalentProfile {
   twitter?: string
 }
 
-export interface TalentProfileProps extends SpaceProps, LayoutProps {
+export interface TalentProfileProps extends WrapperProps {
   title: string
   talent: ContentfulTalentProfile
 }
