@@ -217,7 +217,7 @@ export const image: Document = {
   nodeType: 'document',
 }
 
-export const multiImage: Document = {
+export const generateMultiImage = (count: number): Document => ({
   content: [
     {
       data: {
@@ -231,11 +231,11 @@ export const multiImage: Document = {
             },
           },
           fields: {
-            images: generateAnyLocale([
-              { fields: contentfulImage },
-              { fields: contentfulImage },
-              { fields: contentfulImage },
-            ]),
+            images: generateAnyLocale(
+              Array.from(Array(count).keys()).map(_ => ({
+                fields: contentfulImage,
+              }))
+            ),
           },
         },
       },
@@ -246,4 +246,6 @@ export const multiImage: Document = {
   ],
   // @ts-ignore
   nodeType: 'document',
-}
+})
+
+export const multiImage: Document = generateMultiImage(3)
