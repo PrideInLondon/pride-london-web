@@ -21,6 +21,7 @@ export const CATEGORIES: Category[] = [
 ]
 
 const PADDING_Y = '40px'
+const PADDING_X = { default: 'lg', md: 'xl' }
 
 const ExploreLondonPage: React.FC<ExploreLondonPageProps> = ({
   data: {
@@ -67,6 +68,7 @@ const ExploreLondonPage: React.FC<ExploreLondonPageProps> = ({
           <CategoryFilter
             margin="auto"
             paddingY={PADDING_Y}
+            paddingX={PADDING_X}
             variant="checkbox"
             categories={CATEGORIES}
             entries={edges}
