@@ -8,9 +8,7 @@ export const Grid = styled.div<LayoutProps & SpaceProps>`
 
   > * {
     padding: ${sm}px;
-
     ${layout}
   }
-
   ${space}
 `

@@ -35,7 +35,7 @@ export const CategoryFilter = <T,>({
 }: CategoryFilterProps & {
   entries: T[]
   render: (renderProps: {
-    entries: (predicate: (entry: T) => string) => T[]
+    entries: (predicate: (entry: T) => string | string[]) => T[]
   }) => React.ReactNode
 }) => {
   const [selectAll, setSelectAll] = useState(
@@ -49,6 +49,13 @@ export const CategoryFilter = <T,>({
     setSelected(calculateInitialSelected(variant, categories))
   }, [variant, categories])
 
+  useEffect(() => {
+    // When all checkbox options are unselected, revert to selecting all
+    if (variant === 'checkbox' && !selected.length) {
+      setSelectAll(true)
+    }
+  }, [variant, selected])
+
   return (
     <>
       <Wrapper {...props}>
@@ -56,6 +63,7 @@ export const CategoryFilter = <T,>({
           const isSelected = isSelectAll
             ? selectAll
             : calculateIsSelected(variant, name, selected)
+
           return (
             <StyledTag
               key={name}

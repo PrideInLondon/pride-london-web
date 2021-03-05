@@ -7,14 +7,17 @@ import { FilterType } from './FilterLabel.types'
 
 export const calculateIsSelected = (
   filterType: FilterType,
-  filterName: string,
+  filterName: string | string[],
   selected: string | string[]
 ): boolean => {
   switch (filterType) {
     case 'checkbox':
-      return selected.includes(filterName)
+      return Array.isArray(filterName)
+        ? // checkbox may be a multiselect component, so check at least one could be in currently selected
+          filterName.some(name => selected.includes(name))
+        : selected.includes(filterName)
     case 'radio':
-      return filterName === selected
+      return Array.isArray(filterName) ? false : filterName === selected
     default:
       return false
   }

@@ -40,6 +40,7 @@ export const calculateSelected = (
       const newlySelected = isCurrentlySelected
         ? filteredSelected.filter(current => current !== filterNameSelected)
         : [...filteredSelected, filterNameSelected]
+
       return newlySelected.length === 0 ? initialSelected : newlySelected
     }
     case 'radio':

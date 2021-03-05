@@ -6,15 +6,25 @@ import FilterContainer, { calculateIsSelected } from './FilterContainer'
 
 describe('calculateIsSelected', () => {
   it.each`
-    role          | selected                 | expected
-    ${'checkbox'} | ${['foo', 'bar', 'baz']} | ${true}
-    ${'checkbox'} | ${['foo', 'baz']}        | ${false}
-    ${'radio'}    | ${'bar'}                 | ${true}
-    ${'radio'}    | ${'foo'}                 | ${false}
+    role          | selected                 | expected | filterName
+    ${'checkbox'} | ${['foo', 'bar', 'baz']} | ${true}  | ${'bar'}
+    ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${'bar'}
+    ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${['bar']}
+    ${'checkbox'} | ${['foo', 'bar']}        | ${true}  | ${['baz', 'foo', 'bar']}
+    ${'checkbox'} | ${['foo', 'baz']}        | ${false} | ${[]}
+    ${'checkbox'} | ${['foo', 'bar']}        | ${false} | ${['']}
+    ${'checkbox'} | ${['foo', 'bar']}        | ${false} | ${''}
+    ${'radio'}    | ${'bar'}                 | ${true}  | ${'bar'}
+    ${'radio'}    | ${'foo'}                 | ${false} | ${'bar'}
+    ${'radio'}    | ${'bar'}                 | ${false} | ${['bar']}
+    ${'radio'}    | ${'foo'}                 | ${false} | ${['bar']}
+    ${'radio'}    | ${['foo', 'baz']}        | ${false} | ${[]}
+    ${'radio'}    | ${['foo', 'bar']}        | ${false} | ${['']}
+    ${'radio'}    | ${['foo', 'bar']}        | ${false} | ${''}
   `(
     'should return $expected when given role $role and selected $selected',
-    ({ role, selected, expected }) => {
-      const isSelected = calculateIsSelected(role, 'bar', selected)
+    ({ role, filterName, selected, expected }) => {
+      const isSelected = calculateIsSelected(role, filterName, selected)
       expect(isSelected).toEqual(expected)
     }
   )
