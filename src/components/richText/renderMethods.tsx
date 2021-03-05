@@ -69,6 +69,11 @@ const renderMultiImage: NodeRenderer = (
   <MultiImageWrapper
     marginY={{ default: 'xl', md: 'xxl' }}
     maxWidth={MAX_CONTENT_WIDTH}
+    display="grid"
+    gridTemplateRows={{ default: 'repeat(3, 1fr)', md: '1fr' }}
+    gridRowGap="md"
+    gridTemplateColumns={{ default: '1fr', md: 'repeat(3, 1fr)' }}
+    gridColumnGap="md"
   >
     {getAnyForLocale<ContentfulImage[]>(images).map(
       (props: ContentfulImage) => {
