@@ -164,6 +164,17 @@ const LayoutHelmet = ({
           name: 'theme-color',
           content: '#343692',
         },
+        // Usercentrics privacy proxy
+        ...(process.env.NODE_ENV === 'production'
+          ? [
+              {
+                name: 'data-privacy-proxy-server',
+                content: 'https://privacy-proxy-server.usercentrics.eu',
+                'data-privacy-proxy-server':
+                  'https://privacy-proxy-server.usercentrics.eu',
+              },
+            ]
+          : []),
       ]}
       link={[
         {
@@ -282,8 +293,25 @@ const LayoutHelmet = ({
             sameAs: [facebook, twitter, instagram, youtube, linkedin, snapchat],
           }),
         },
+        // Usercentrics cookie consent management
+        ...(process.env.NODE_ENV === 'production' &&
+        process.env.GATSBY_USERCENTRICS_ID
+          ? [
+              {
+                id: 'usercentrics-cmp',
+                src: 'https://app.usercentrics.eu/browser-ui/latest/bundle.js',
+                'data-settings-id': process.env.GATSBY_USERCENTRICS_ID,
+                defer: true,
+              },
+              {
+                type: 'application/javascript',
+                src:
+                  'https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js',
+              },
+            ]
+          : []),
       ]}
-    />
+    ></Helmet>
   )
 }
 

@@ -151,8 +151,9 @@ const LowerSection = () => (
       <LegalLink
         component="button"
         onClick={() => {
-          if (typeof window !== 'undefined' && window.Metomic)
-            window.Metomic('ConsentManager:show')
+          if (typeof window !== 'undefined' && (window as any).UC_UI) {
+            ;(window as any).UC_UI.showSecondLayer()
+          }
         }}
       >
         Manage cookies
