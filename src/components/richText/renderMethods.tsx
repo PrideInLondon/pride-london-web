@@ -65,24 +65,31 @@ const renderMultiImage: NodeRenderer = (
     },
   },
   _children
-) => (
-  <MultiImageWrapper
-    marginY={{ default: 'xl', md: 'xxl' }}
-    maxWidth={MAX_CONTENT_WIDTH}
-    display="grid"
-    gridTemplateRows={{ default: 'repeat(3, 1fr)', md: '1fr' }}
-    gridRowGap="md"
-    gridTemplateColumns={{ default: '1fr', md: 'repeat(3, 1fr)' }}
-    gridColumnGap="md"
-  >
-    {getAnyForLocale<ContentfulImage[]>(images).map(
-      (props: ContentfulImage) => {
+) => {
+  const imagesForLocale = getAnyForLocale<ContentfulImage[]>(images)
+  return (
+    <MultiImageWrapper
+      marginY={{ default: 'xl', md: 'xxl' }}
+      maxWidth={MAX_CONTENT_WIDTH}
+      display="grid"
+      gridTemplateRows={{
+        default: `repeat(${imagesForLocale.length}, 1fr)`,
+        md: '1fr',
+      }}
+      gridRowGap="md"
+      gridTemplateColumns={{
+        default: '1fr',
+        md: `repeat(${imagesForLocale.length}, 1fr)`,
+      }}
+      gridColumnGap="md"
+    >
+      {imagesForLocale.map((props: ContentfulImage) => {
         const imageProps = getImageForLocale(props)
         return <Image key={imageProps.src} {...imageProps} />
-      }
-    )}
-  </MultiImageWrapper>
-)
+      })}
+    </MultiImageWrapper>
+  )
+}
 
 const renderVideo: NodeRenderer = (
   {
