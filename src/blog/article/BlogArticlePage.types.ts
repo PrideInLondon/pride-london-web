@@ -10,6 +10,7 @@ export interface ContentfulBlogArticleSummary {
   }
   category: string
   title: string
+  updatedAt: string
 }
 
 export interface ContentfulBlogArticle extends ContentfulBlogArticleSummary {
