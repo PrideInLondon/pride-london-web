@@ -7,6 +7,7 @@ import { Container, Row, Column } from '../../components/grid'
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
 import EventListingCard from '../eventListingCard/EventListingCard'
+import { ContentfulEventNode } from './EventPride.types'
 
 const ViewAll = styled.a`
   color: ${theme.colors.indigo};
@@ -58,11 +59,16 @@ const GreyWrapper = styled.div`
   background-color: ${theme.colors.lightGrey};
 `
 
-const filterNextThreeEvents = (events, eventId) =>
-  events.filter(event => event.node.id !== eventId).splice(0, 3)
+export const filterNextThreeEvents = (
+  events: ContentfulEventNode[],
+  eventId: string
+) =>
+  events
+    .filter((event: ContentfulEventNode) => event.node.id !== eventId)
+    .splice(0, 3)
 
-export const EventsYouMayLike = ({ eventId }) => {
-  const events = useContext(EventsContext)
+export const EventsYouMayLike = ({ eventId }: { eventId: string }) => {
+  const events = useContext<ContentfulEventNode[]>(EventsContext)
   const eventsYouMayLike = filterNextThreeEvents(events, eventId)
   return eventsYouMayLike.length > 0 ? (
     <GreyWrapper>
@@ -75,7 +81,7 @@ export const EventsYouMayLike = ({ eventId }) => {
           </ViewAll>
         </HeadingRow>
         <Row>
-          {eventsYouMayLike.map(event => (
+          {eventsYouMayLike.map((event: ContentfulEventNode) => (
             <FlexColumn
               width={{ default: 1, sm: 0.5, lg: 0.3333 }}
               key={event.node.id}

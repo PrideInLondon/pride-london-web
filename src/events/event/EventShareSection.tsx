@@ -10,6 +10,12 @@ import { media } from '../../theme/media'
 import theme from '../../theme/theme'
 import { formatShortTime } from '../helpers'
 
+type EventShareSection = {
+  name: string
+  location: string
+  date: string
+}
+
 const ShareList = styled.div`
   display: inline-flex;
   align-items: center;
@@ -34,7 +40,7 @@ const ShareText = styled.p`
   `}
 `
 
-const ShareLink = styled.a`
+const ShareLink = styled.a<{ desktopOnly?: boolean; mobileOnly?: boolean }>`
   width: 20px;
   height: 20px;
   margin-right: 20px;
@@ -45,7 +51,8 @@ const ShareLink = styled.a`
     margin-right: 15px;
     width: 25px;
     height: 25px;
-    display: ${props => (props.mobileOnly ? 'none' : 'inline-block')};
+    display: ${(props: { mobileOnly: boolean }) =>
+      props.mobileOnly ? 'none' : 'inline-block'};
   `}
 
   &:hover,
@@ -58,68 +65,102 @@ const ShareLink = styled.a`
   }
 `
 
-const shareText = (name, date, location) => {
+const shareText = (
+  name: EventShareSection['name'],
+  date: EventShareSection['date'],
+  location: EventShareSection['location']
+) => {
   const startDay = moment(date).format('ddd D MMM')
   const startTime = formatShortTime(date)
   return `I'm heading to ${name} on ${startDay} at ${startTime}. Join me!\n\nFind out more here:\n${location}`
 }
 
-const mailShareUrl = (name, date, location) => {
+export const mailShareUrl = (
+  name: EventShareSection['name'],
+  date: EventShareSection['date'],
+  location: EventShareSection['location']
+) => {
   const subject = encodeURIComponent(name)
   const body = encodeURIComponent(shareText(name, date, location))
   return `mailto:?subject=${subject}&body=${body}`
 }
 
-const twitterShareUrl = (name, date, location) => {
+export const twitterShareUrl = (
+  name: EventShareSection['name'],
+  date: EventShareSection['date'],
+  location: EventShareSection['location']
+) => {
   const body = encodeURIComponent(shareText(name, date, location))
   return `https://twitter.com/intent/tweet?text=${body}`
 }
 
-const facebookShareUrl = location => {
+export const facebookShareUrl = (location: EventShareSection['location']) => {
   const encodedUrl = encodeURIComponent(location)
   return `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
 }
 
-const linkedinShareUrl = (name, date, location) => {
+export const linkedinShareUrl = (
+  name: EventShareSection['name'],
+  date: EventShareSection['date'],
+  location: EventShareSection['location']
+) => {
   const encodedUrl = encodeURIComponent(location)
   const body = encodeURIComponent(shareText(name, date, location))
   const encodedName = encodeURIComponent(name)
   return `https://www.linkedin.com/shareArticle?url=${encodedUrl}&title=${encodedName}&summary=${body}&source=prideinlondon.org`
 }
 
-const EventShareSection = ({ name, location, date }) => (
-  <ShareList>
-    <ShareText>Share</ShareText>
-    <ShareLink
-      href={mailShareUrl(name, date, location)}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <EmailIcon width={25} height={25} fill={theme.colors.indigo} />
-    </ShareLink>
-    <ShareLink
-      href={twitterShareUrl(name, date, location)}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <TwitterIcon width={25} height={25} fill={theme.colors.indigo} />
-    </ShareLink>
-    <ShareLink
-      href={facebookShareUrl(location)}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <FacebookIcon width={25} height={25} fill={theme.colors.indigo} />
-    </ShareLink>
-    <ShareLink
-      href={linkedinShareUrl(name, date, location)}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <LinkedinIcon width={25} height={25} fill={theme.colors.indigo} />
-    </ShareLink>
-  </ShareList>
-)
+export const getEventShareLinks = ({
+  name,
+  location,
+  date,
+}: EventShareSection) => [
+  {
+    title: 'mail link',
+    icon: <EmailIcon width={25} height={25} fill={theme.colors.indigo} />,
+    href: mailShareUrl(name, date, location),
+  },
+  {
+    title: 'twitter link',
+    icon: <TwitterIcon width={25} height={25} fill={theme.colors.indigo} />,
+    href: twitterShareUrl(name, date, location),
+  },
+  {
+    title: 'facebook link',
+    icon: <FacebookIcon width={25} height={25} fill={theme.colors.indigo} />,
+    href: facebookShareUrl(location),
+  },
+  {
+    title: 'linkedin link',
+    icon: <LinkedinIcon width={25} height={25} fill={theme.colors.indigo} />,
+    href: linkedinShareUrl(name, date, location),
+  },
+]
+
+const EventShareSection = ({ name, location, date }: EventShareSection) => {
+  const eventShareLinks = getEventShareLinks({ name, location, date }).map(
+    ({ title, icon, href }) => {
+      return (
+        <ShareLink
+          key={href}
+          title={title}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {icon}
+        </ShareLink>
+      )
+    }
+  )
+
+  return (
+    <ShareList>
+      <ShareText>Share</ShareText>
+      {eventShareLinks}
+    </ShareList>
+  )
+}
 
 EventShareSection.propTypes = {
   name: PropTypes.string.isRequired,

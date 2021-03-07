@@ -12,6 +12,7 @@ export const mockNodes = [
         ],
       },
       eventsListPicture: {
+        title: 'eventsListPicture 1',
         file: {
           url: '123123',
         },
@@ -31,6 +32,7 @@ export const mockNodes = [
         ],
       },
       eventsListPicture: {
+        title: 'eventsListPicture 2',
         file: {
           url: '123123',
         },
@@ -51,6 +53,7 @@ export const mockNodes = [
         ],
       },
       eventsListPicture: {
+        title: 'eventsListPicture 3',
         file: {
           url: '123123',
         },
@@ -76,6 +79,7 @@ export const testEvent = {
     eventCategories: ['Talks and Debates'],
     eventPriceLow: 0,
     eventsListPicture: {
+      title: 'testEvent 1',
       fixed: {
         base64: '',
         height: 235,

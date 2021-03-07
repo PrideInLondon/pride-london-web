@@ -88,6 +88,7 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-helmet": "^5.0.15",
     "@types/storybook__addon-info": "^5.2.1",
+    "@types/string-hash": "^1.1.1",
     "@types/styled-components": "^4.4.2",
     "@types/styled-system": "^5.1.4",
     "@types/tinycolor2": "^1.4.2",
@@ -138,6 +139,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-prettier": "^1.1.2",
     "stylelint-processor-styled-components": "^1.9.0",
+    "ts-node": "^9.1.1",
     "typescript": "^3.7.5",
     "typescript-styled-plugin": "^0.15.0",
     "uuid": "^7.0.1"
