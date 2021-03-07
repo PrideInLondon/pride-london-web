@@ -1,54 +1,40 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import { render } from '@testing-library/react'
+import { CustomNodeJsGlobal } from '../../.jest/jest.setup'
 import GroupedEventsCards, { generateHeader } from './GroupedEventsCards'
 import { mockNodes, testEvent } from './__mocks__'
+import { generateEventSlug } from './helpers'
+
+declare const global: CustomNodeJsGlobal
 
 describe('GroupedEventsCards', () => {
-  describe('props', () => {
-    const wrapper = shallow(
+  beforeAll(() => {
+    delete global.window.___navigate
+    global.window.___navigate = jest.fn()
+  })
+
+  it('should navigate on click of card elements', () => {
+    const { getByAltText, getByText } = render(
       <GroupedEventsCards
-        prevEvent={mockNodes[0]}
         event={testEvent}
-        index={1}
+        index={3}
+        prevEvent={mockNodes[2]}
         toLoad={24}
       />
     )
-    it('passing event.node correctly', () => {
-      expect(
-        wrapper
-          .find('EventListingCard')
-          .first()
-          .prop('event')
-      ).toBe(testEvent.node)
-    })
-
-    it('testing animation logic', () => {
-      expect(
-        wrapper
-          .find('Wrapper')
-          .first()
-          .prop('animation')
-      ).toBe(false)
-    })
-  })
-
-  describe('animations', () => {
-    it('testing animation logic', () => {
-      const wrapper = shallow(
-        <GroupedEventsCards
-          prevEvent={mockNodes[2]}
-          event={testEvent}
-          index={27}
-          toLoad={27}
-        />
+    const elements = [
+      // image
+      getByAltText(testEvent.node.eventsListPicture.title),
+      // heading
+      getByText(testEvent.node.name),
+    ]
+    elements.forEach(element => {
+      expect(element).toBeInTheDocument()
+      // should navigate on click
+      element.click()
+      expect(global.window.___navigate.mock.calls[0][0]).toBe(
+        generateEventSlug(testEvent.node)
       )
-      expect(
-        wrapper
-          .find('Wrapper')
-          .first()
-          .prop('animation')
-      ).toBe(true)
     })
   })
 
@@ -75,7 +61,13 @@ describe('generateHeader', () => {
   const SINGLE_DATE = 'Friday 13 Mar'
   const RECURRING_DATE = 'From Friday 13 Mar'
 
-  const generateMockEvent = ({ startDate, recurring }) => ({
+  const generateMockEvent = ({
+    startDate,
+    recurring,
+  }: {
+    startDate: string
+    recurring: boolean
+  }) => ({
     node: {
       date: {
         dates: [
