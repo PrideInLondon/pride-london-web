@@ -4,13 +4,14 @@ import Image from 'gatsby-image/withIEPolyfill'
 import { RippedSection } from '../../components/rippedSection'
 import { Wrapper } from '../../components/wrapper'
 import { Tag } from '../../components/tag'
-import { H2, H3 } from '../../components/typography'
+import { H3 } from '../../components/typography'
 import { ShareBar } from '../../components/shareBar'
 import { TalentProfile } from '../../components/talentProfile'
 import { getImageForBreakpoint } from '../../utils/style-utils'
 import { getFirstParagraph } from '../../utils/document-utils'
 import {
   MAX_CONTENT_WIDTH,
+  Title,
   Content,
   YouMayAlsoLikeWrapper,
 } from './BlogArticlePage.styles'
@@ -57,9 +58,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       paddingX={{ default: 'lg', md: 'xxl' }}
       position="relative"
     >
-      <H2 as="h1" textAlign="center" maxWidth={842}>
-        {title}
-      </H2>
+      <Title>{title}</Title>
       <Wrapper
         position={{ md: 'absolute' }}
         marginBottom={{ default: 'xl_mob', md: '0' }}
