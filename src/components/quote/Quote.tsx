@@ -1,9 +1,10 @@
 import React from 'react'
+import { H3 } from '../typography'
 import { QuoteProps } from './Quote.types'
-import { StyledBlockquote } from './Quote.styles'
-
+// desktop: 3
+// mobile: 5
 export const Quote: React.FC<QuoteProps> = ({ children, ...props }) => (
-  <StyledBlockquote as="blockquote" textAlign="center" {...props}>
+  <H3 as="blockquote" textAlign="center" margin="0 !important" {...props}>
     "{children}"
-  </StyledBlockquote>
+  </H3>
 )
