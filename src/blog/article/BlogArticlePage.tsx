@@ -129,13 +129,13 @@ export const query = graphql`
 
     contentfulBlogArticle(id: { eq: $id }) {
       hero {
-        desktop: fluid(maxWidth: 1600, quality: 100) {
+        desktop: fluid(maxWidth: 1600, maxHeight: 900, quality: 100) {
           ...GatsbyContentfulFluid_withWebp
         }
-        tablet: fluid(maxWidth: 768, quality: 100) {
+        tablet: fluid(maxWidth: 768, maxHeight: 432, quality: 100) {
           ...GatsbyContentfulFluid_withWebp
         }
-        mobile: fluid(maxWidth: 375, quality: 100) {
+        mobile: fluid(maxWidth: 375, maxHeight: 210, quality: 100) {
           ...GatsbyContentfulFluid_withWebp
         }
       }
