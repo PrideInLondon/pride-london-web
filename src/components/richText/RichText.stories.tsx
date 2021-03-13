@@ -10,7 +10,7 @@ import {
   quote,
   video,
   image,
-  multiImage,
+  generateMultiImage,
 } from './__mocks__'
 
 storiesOf('RichText', module)
@@ -22,4 +22,8 @@ storiesOf('RichText', module)
   .add('quote', () => <RichText document={quote} />)
   .add('video', () => <RichText document={video} />)
   .add('image', () => <RichText document={image} />)
-  .add('multiImage', () => <RichText document={multiImage} />)
+
+storiesOf('RichText/multiImage', module)
+  .add('one', () => <RichText document={generateMultiImage(1)} />)
+  .add('two', () => <RichText document={generateMultiImage(2)} />)
+  .add('three', () => <RichText document={generateMultiImage(3)} />)

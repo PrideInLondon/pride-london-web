@@ -21,6 +21,11 @@ export interface ContentfulBlogArticle extends ContentfulBlogArticleSummary {
 
 export interface BlogArticlePageProps {
   data: {
+    site: {
+      siteMetadata: {
+        siteUrl: string
+      }
+    }
     contentfulBlogArticle: ContentfulBlogArticle
     otherContentfulBlogArticles: {
       edges: { node: ContentfulBlogArticleSummary }[]

@@ -1,4 +1,6 @@
+import React from 'react'
 import styled from 'styled-components'
+import { H2, H4 } from '../../components/typography'
 import { RichText } from '../../components/richText'
 import { fontSizes } from '../../theme/fonts'
 import { mediaQueries } from '../../theme/mediaQueries'
@@ -10,6 +12,20 @@ const CONTENT_PADDING_X = {
   default: 'lg',
   md: 'xxl',
 } as const
+
+export const Title: React.FC<{}> = ({ children }) => {
+  const props = { as: 'h1', textAlign: 'center' } as const
+  return (
+    <>
+      <H2 maxWidth={842} display={{ default: 'none', md: 'block' }} {...props}>
+        {children}
+      </H2>
+      <H4 display={{ default: 'block', md: 'none' }} mb="xl_mob" {...props}>
+        {children}
+      </H4>
+    </>
+  )
+}
 
 export const Content = styled(RichText).attrs({ paddingX: CONTENT_PADDING_X })`
   > p:first-of-type {

@@ -4,22 +4,26 @@ import Image from 'gatsby-image/withIEPolyfill'
 import { RippedSection } from '../../components/rippedSection'
 import { Wrapper } from '../../components/wrapper'
 import { Tag } from '../../components/tag'
-import { H2, H3 } from '../../components/typography'
+import { H3 } from '../../components/typography'
 import { ShareBar } from '../../components/shareBar'
 import { TalentProfile } from '../../components/talentProfile'
 import { getImageForBreakpoint } from '../../utils/style-utils'
 import { getFirstParagraph } from '../../utils/document-utils'
 import {
   MAX_CONTENT_WIDTH,
+  Title,
   Content,
   YouMayAlsoLikeWrapper,
 } from './BlogArticlePage.styles'
 import { BlogArticleSummaryCard } from './BlogArticleSummaryCard'
-import { getCategoryColor } from './helpers'
+import { generateBlogArticleSlug, getCategoryColor } from './helpers'
 import { BlogArticlePageProps } from './BlogArticlePage.types'
 
 const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
   data: {
+    site: {
+      siteMetadata: { siteUrl },
+    },
     contentfulBlogArticle: {
       hero,
       category,
@@ -29,7 +33,6 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
     },
     otherContentfulBlogArticles: { edges },
   },
-  location: { href },
 }) => (
   <>
     <RippedSection rips={{ bottom: { color: 'white' } }}>
@@ -42,8 +45,8 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
     <Wrapper
       display="flex"
       justifyContent="center"
-      marginTop="xxl"
-      marginBottom="lg"
+      marginTop={{ default: 'xl', md: 'xxl' }}
+      marginBottom={{ default: 'md', md: 'lg' }}
     >
       <Tag color={getCategoryColor(category)}>{category}</Tag>
     </Wrapper>
@@ -55,9 +58,7 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       paddingX={{ default: 'lg', md: 'xxl' }}
       position="relative"
     >
-      <H2 as="h1" textAlign="center" maxWidth={842}>
-        {title}
-      </H2>
+      <Title>{title}</Title>
       <Wrapper
         position={{ md: 'absolute' }}
         marginBottom={{ default: 'xl_mob', md: '0' }}
@@ -66,7 +67,11 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       >
         <ShareBar
           variant={{ default: 'horizontal', md: 'vertical' }}
-          content={{ title, body: getFirstParagraph(json), url: href }}
+          content={{
+            title,
+            body: getFirstParagraph(json),
+            url: siteUrl + generateBlogArticleSlug(title),
+          }}
         />
       </Wrapper>
     </Wrapper>
@@ -116,15 +121,21 @@ export const query = graphql`
   }
 
   query blogArticle($id: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+
     contentfulBlogArticle(id: { eq: $id }) {
       hero {
-        desktop: fluid(maxWidth: 1600, quality: 100) {
+        desktop: fluid(maxWidth: 1600, maxHeight: 900, quality: 100) {
           ...GatsbyContentfulFluid_withWebp
         }
-        tablet: fluid(maxWidth: 768, quality: 100) {
+        tablet: fluid(maxWidth: 768, maxHeight: 432, quality: 100) {
           ...GatsbyContentfulFluid_withWebp
         }
-        mobile: fluid(maxWidth: 375, quality: 100) {
+        mobile: fluid(maxWidth: 375, maxHeight: 210, quality: 100) {
           ...GatsbyContentfulFluid_withWebp
         }
       }
