@@ -45,8 +45,8 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
     <Wrapper
       display="flex"
       justifyContent="center"
-      marginTop="xxl"
-      marginBottom="lg"
+      marginTop={{ default: 'xl', md: 'xxl' }}
+      marginBottom={{ default: 'md', md: 'lg' }}
     >
       <Tag color={getCategoryColor(category)}>{category}</Tag>
     </Wrapper>
