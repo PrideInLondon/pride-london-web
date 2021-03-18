@@ -1,6 +1,5 @@
 import React, { useState, useLayoutEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import { ConsentGate } from '@metomic/react'
 import debounce from 'lodash.debounce'
 import { Column } from '../grid'
 import { checkBreakpoint } from '../../utils/style-utils'
@@ -94,17 +93,15 @@ const Banner = ({
           )}
           {videoId && (
             <VideoWrapper height={height} width={width} aria-hidden="true">
-              <ConsentGate micropolicy="media">
-                <iframe
-                  src={`https://player.vimeo.com/video/${videoId}?background=1`}
-                  width="640"
-                  height="360"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen"
-                  allowFullScreen
-                  title="Background video of Pride Parade"
-                ></iframe>
-              </ConsentGate>
+              <iframe
+                src={`https://player.vimeo.com/video/${videoId}?background=1`}
+                width="640"
+                height="360"
+                frameBorder="0"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+                title="Background video of Pride Parade"
+              ></iframe>
             </VideoWrapper>
           )}
         </StyledContainer>
