@@ -13,12 +13,8 @@ export const Hero: React.FC<HeroProps> = ({ title, subtitle, color }) => {
   return (
     <RippedSection rips={{ bottom: { color: 'white' } }}>
       <Background image={require(`./assets/${background}.jpg`)}>
-        <TextWrapper
-          marginLeft={{ md: 'xxl' }}
-          color="white"
-          variant={background}
-        >
-          <H2 as="h1" color="currentcolor" mb={{ default: 'md', md: 'lg' }}>
+        <TextWrapper variant={background}>
+          <H2 as="h1" color="currentcolor" mb={{ default: 'md', lg: 'lg' }}>
             {title}
           </H2>
           {subtitle && <P color="currentcolor">{subtitle}</P>}
