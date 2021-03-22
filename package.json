@@ -60,7 +60,7 @@
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.4",
     "tinycolor2": "^1.4.1",
-    "use-onclickoutside": "^0.3.1",
+    "use-onclickoutside": "^0.3.2",
     "uuid-encoder": "^1.2.0"
   },
   "devDependencies": {
