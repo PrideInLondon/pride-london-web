@@ -6,6 +6,7 @@ import { Container, Row, Column } from '../components/grid'
 import SponsorHeadline from '../components/icons/sponsorHeadline'
 import SponsorStar from '../components/icons/sponsorStar'
 import { PageIntro } from '../components/pageIntro'
+import { getCurrentYear } from '../utils'
 import bannerBackground from './bannerBackground.jpg'
 import SponsorsSubSection from './SponsorsSubSection'
 import { renderSponsors } from './helpers'
@@ -83,7 +84,7 @@ const PartnersPage = ({
       <Container>
         <Row>
           <Column>
-            <ListTitle>Thank you to our 2020 partners</ListTitle>
+            <ListTitle>Thank you to our {getCurrentYear()} partners</ListTitle>
             <p>
               A huge thank you to our main partners for their continued support.
             </p>

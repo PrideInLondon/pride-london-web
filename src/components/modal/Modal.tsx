@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 import { space } from 'styled-system'
-import { useTransition } from 'react-spring/web.cjs'
+import { useTransition } from '@react-spring/web'
 import { hideOthers } from 'aria-hidden'
 import FocusLock from 'react-focus-lock'
 import { noScroll } from '../../utils/style-utils'
@@ -24,7 +24,7 @@ export const Modal = ({
   const [picked, rest] = usePickedProps(props, space.propNames ?? [])
   const [isOpen, setIsOpen] = useState(open)
   const ref = useRef<HTMLDivElement>(null)
-  const transition = useTransition(isOpen, null, {
+  const transition = useTransition(isOpen, {
     from: { opacity: 0, transform: `translate3d(0, -${spacing.xl}, 0)` },
     enter: { opacity: 1, transform: `translate3d(0, 0, 0)` },
     leave: { opacity: 0, transform: `translate3d(0, -${spacing.xl}, 0)` },
@@ -81,13 +81,13 @@ export const Modal = ({
           )}
         {ReactDOM.createPortal(
           <>
-            {transition.map(
-              ({ item, key, props: animation }) =>
+            {transition(
+              ({ opacity, transform }, item, { key }) =>
                 item && (
                   <FocusLock disabled={!isOpen} returnFocus key={key} ref={ref}>
                     <ModalWrapper
                       zIndex={zIndex}
-                      style={{ opacity: animation.opacity }}
+                      style={{ opacity }}
                       data-testid="modal-wrapper"
                       aria-modal="true"
                       role="dialog"
@@ -98,10 +98,7 @@ export const Modal = ({
                         tabIndex={-1}
                         {...rest}
                       >
-                        <ModalBody
-                          style={{ transform: animation.transform }}
-                          {...picked}
-                        >
+                        <ModalBody style={{ transform }} {...picked}>
                           {children && typeof children === 'function'
                             ? children({ isOpen, setIsOpen })
                             : children}
