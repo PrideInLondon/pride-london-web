@@ -11,14 +11,15 @@
 
 This project is a community effort to provide the [Pride in London website](https://prideinlondon.org). The project is written in JavaScript/TypeScript and leverages the [Gatsby](https://www.gatsbyjs.org) and [React](https://reactjs.org) web frameworks.
 
-- [Developing locally](#developing-locally-headphones)
-  - [Prerequisites](#prerequisites-new)
-  - [Running the development server](#running-the-development-server-running)
-  - [Running the unit tests](#running-the-unit-tests-white_check_mark)
-  - [Building the static site](#building-the-static-site-hammer_and_wrench)
-- [Resources](#resources-notebook)
-- [Contributing](#contributing-handshake)
-- [License](#license-necktie)
+- [Pride in London website :rainbow:](#pride-in-london-website-rainbow)
+  - [Developing locally :headphones:](#developing-locally-headphones)
+    - [Prerequisites :new:](#prerequisites-new)
+    - [Running the development server :running:](#running-the-development-server-running)
+    - [Running the unit tests :white_check_mark:](#running-the-unit-tests-white_check_mark)
+    - [Building the static site :hammer_and_wrench:](#building-the-static-site-hammer_and_wrench)
+  - [Resources :notebook:](#resources-notebook)
+  - [Contributing :handshake:](#contributing-handshake)
+  - [License :necktie:](#license-necktie)
 
 ## Developing locally :headphones:
 
@@ -47,7 +48,7 @@ Replace the values on the right of the `=` signs with the following values:
 | `CONTENTFUL_SPACE_ID`     | yes      | **see Contentful**   | -                        | The Contentful `spaceId` to target                              |
 | `CONTENTFUL_ACCESS_TOKEN` | yes      | **see Contentful**   | -                        | The Contentful `accessToken` for the given host and environment |
 | `CONTENTFUL_HOST`         | no       | `cdn.contentful.com` | `preview.contentful.com` | The Contentful `host` to retrieve data from                     |
-| `CONTENTFUL_ENV`          | no       | `master`             | `development`            | The Contentful `environment` to target                          |
+| `CONTENTFUL_ENV`          | yes      | `master`             | `development`            | The Contentful `environment` to target                          |
 
 More information on what each of these values mean can be found [here](https://www.gatsbyjs.com/plugins/gatsby-source-contentful/#configuration-options).
 

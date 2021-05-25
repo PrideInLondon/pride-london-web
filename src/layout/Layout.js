@@ -75,7 +75,7 @@ const query = graphql`
               quality: 90
               cropFocus: FACE
             ) {
-              ...GatsbyContentfulFixed_withWebp
+              ...GatsbyContentfulFixed_withWebp_noBase64
             }
           }
         }
