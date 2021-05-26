@@ -83,8 +83,6 @@ module.exports = {
         env: {
           production: {
             policy: [{ userAgent: '*' }],
-            sitemap: null,
-            host: null,
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],

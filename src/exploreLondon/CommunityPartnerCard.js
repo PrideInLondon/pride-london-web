@@ -55,7 +55,7 @@ const CommunityPartnerCard = ({ partner }) => {
           ))}
         </CardCategories>
         <CardTitle>{venueName}</CardTitle>
-        <ReactMarkdown source={description} />
+        <ReactMarkdown>{description}</ReactMarkdown>
         <CardItem>
           <IconWrapper>
             <MapPinIcon variant="blue" />

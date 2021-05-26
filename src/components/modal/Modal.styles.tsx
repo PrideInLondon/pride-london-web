@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { animated } from 'react-spring/web.cjs'
+import { animated } from '@react-spring/web'
 import {
   LayoutProps,
   SpaceProps,

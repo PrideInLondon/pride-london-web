@@ -264,7 +264,7 @@ const EventPage = ({
               </Section>
             )}
             <Section>
-              <ReactMarkdown source={eventDescription} />
+              <ReactMarkdown>{eventDescription}</ReactMarkdown>
             </Section>
             {sponsorSection && (
               <SponsorsSubSection title={sponsorSection.displayName}>
