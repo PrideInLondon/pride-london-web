@@ -18,7 +18,7 @@ const ParadeApplications = () => (
         allyship.
       </StyledDescription>
       <StyledButton
-        to="https://prideinlondon.org/about-us/campaigns/you-me-us-we/"
+        to="https://prideinlondon.org/about-us"
         target="_self"
         id="campaign-you-me-us-we"
       >

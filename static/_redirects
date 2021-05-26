@@ -144,7 +144,7 @@ https://events.prideinlondon.org/*     /events      301!
 /line-up/world-area / 301!
 /parade-groups /parade/groups 301!
 /rainbow-planet /about-us/campaigns/jubilee/rainbow-planet 301!
-/you-me-us-we /about-us/campaigns/you-me-us-we 301!
+/you-me-us-we /about-us 301!
 /event/la-cage-aux-folles-140320-56vGSL0V9Rjgk2awTqSiKf /event/la-cage-aux-folles-56vGSL0V9Rjgk2awTqSiKf 301!
 /event/la-cage-aux-folles-190320-56vGSL0V9Rjgk2awTqSiKf /event/la-cage-aux-folles-56vGSL0V9Rjgk2awTqSiKf 301!
 /event/la-cage-aux-folles-210320-56vGSL0V9Rjgk2awTqSiKf /event/la-cage-aux-folles-56vGSL0V9Rjgk2awTqSiKf 301!
@@ -210,5 +210,5 @@ https://events.prideinlondon.org/*     /events      301!
 /events/prides-got-talent /pgt 301!
 /events/prides-got-talent/audition /pgt/audition 301!
 /events/prides-got-talent/audition/terms-and-conditions /pgt/terms 301!
-/ymuw/apply /about-us/campaigns/you-me-us-we/casting-call 301!
-/ymuw /about-us/campaigns/you-me-us-we 301!
+/ymuw/apply /about-us 301!
+/ymuw /about-us 301!
