@@ -31,18 +31,19 @@ const ViewsContainer = ({ views }) => {
 
   useEffect(() => {
     if (containerRef.current) {
-      containerRef.current.addEventListener('touchstart', touchStart)
-      containerRef.current.addEventListener('touchmove', preventTouch, {
+      const ref = containerRef.current
+      ref.addEventListener('touchstart', touchStart)
+      ref.addEventListener('touchmove', preventTouch, {
         passive: false,
       })
-    }
 
-    return () => {
-      if (containerRef.current) {
-        containerRef.current.removeEventListener('touchstart', touchStart)
-        containerRef.current.removeEventListener('touchmove', preventTouch, {
-          passive: false,
-        })
+      return () => {
+        if (ref) {
+          ref.removeEventListener('touchstart', touchStart)
+          ref.removeEventListener('touchmove', preventTouch, {
+            passive: false,
+          })
+        }
       }
     }
   })
