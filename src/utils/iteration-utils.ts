@@ -11,7 +11,7 @@ export interface IndexSignature {
  */
 export function pick(obj: IndexSignature, keys: string[]): IndexSignature {
   return keys
-    .map(k => (k in obj ? { [k]: obj[k] } : {}))
+    .map((k) => (k in obj ? { [k]: obj[k] } : {}))
     .reduce((res, o) => Object.assign(res, o), {})
 }
 
@@ -23,7 +23,7 @@ export function pick(obj: IndexSignature, keys: string[]): IndexSignature {
  * @returns {object} - an object without matching keys
  */
 export function reject(obj: IndexSignature, keys: string[]): IndexSignature {
-  const vkeys = Object.keys(obj).filter(k => !keys.includes(k))
+  const vkeys = Object.keys(obj).filter((k) => !keys.includes(k))
 
   return pick(obj, vkeys)
 }

@@ -9,7 +9,7 @@ export const StyledContainer = styled(Container)`
   display: flex;
   align-self: stretch;
 
-  ${props =>
+  ${(props) =>
     !props.fixed &&
     props.imageSrc &&
     !props.imageFullWidth &&
@@ -26,7 +26,7 @@ export const StyledRow = styled(Row)`
   z-index: 1;
 
   ${media.tablet`
-    padding-top: ${props => (props.medium ? 120 : 50)}px;
+    padding-top: ${(props) => (props.medium ? 120 : 50)}px;
     padding-bottom: 50px;
   `};
 
@@ -35,7 +35,7 @@ export const StyledRow = styled(Row)`
   `};
 `
 
-const flexTitleDirection = titlePosition =>
+const flexTitleDirection = (titlePosition) =>
   titlePosition === 'bottom' ? 'end' : 'start'
 
 export const StyledWrapper = styled.div`
@@ -49,14 +49,14 @@ export const StyledWrapper = styled.div`
     fixed,
     titlePosition,
   }) => css`
-  display: flex;
-  min-height: 270px;
-  overflow: hidden;
-  position: relative;
-  background-color: ${color};
-  min-height: ${(large || medium) && '400px'};
+    display: flex;
+    min-height: 270px;
+    overflow: hidden;
+    position: relative;
+    background-color: ${color};
+    min-height: ${(large || medium) && '400px'};
 
-  ${!fixed &&
+    ${!fixed &&
     imageSrc &&
     imageFullWidth &&
     css`
@@ -66,7 +66,7 @@ export const StyledWrapper = styled.div`
       background-position: center center;
     `}
 
-  ${allowContentUnderflow &&
+    ${allowContentUnderflow &&
     (large || medium) &&
     css`
       ${media.tablet`
@@ -77,34 +77,34 @@ export const StyledWrapper = styled.div`
     `}
 
     ${allowContentUnderflow &&
-      medium &&
-      css`
-        ${media.tabletMax`
+    medium &&
+    css`
+      ${media.tabletMax`
       ${StyledRow} {
         align-self: flex-${flexTitleDirection(titlePosition)};
         padding-top: 20px;
       }
     `};
-      `}
+    `}
 
   ${media.mobile`
     min-height: ${large && '400px'};
   `};
 
-  ${media.tablet`
+    ${media.tablet`
     align-items: center;
     min-height: ${large || medium ? '500px' : '400px'};
     padding: 0;
   `};
 
-  ${media.desktop`
+    ${media.desktop`
     min-height: ${large ? '650px' : medium ? '590px' : '400px'};
   `};
 
-  ${media.desktopHD`
+    ${media.desktopHD`
     min-height: ${large && '800px'};
   `};
-`}
+  `}
 `
 export const ResponsiveImg = styled(Img)`
   position: absolute !important;

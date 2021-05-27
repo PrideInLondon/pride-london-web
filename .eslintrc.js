@@ -1,9 +1,9 @@
 module.exports = {
   extends: [
-    'prettier',
     'react-app',
     'plugin:import/typescript',
     'plugin:jest/recommended',
+    'prettier',
   ],
   plugins: ['prettier', 'react', 'react-hooks', '@typescript-eslint', 'jest'],
   parser: 'babel-eslint',

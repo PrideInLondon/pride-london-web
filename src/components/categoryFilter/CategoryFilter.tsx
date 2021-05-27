@@ -78,10 +78,10 @@ export const CategoryFilter = <T,>({
         })}
       </Wrapper>
       {render({
-        entries: predicate =>
+        entries: (predicate) =>
           selectAll
             ? entries
-            : entries.filter(entry =>
+            : entries.filter((entry) =>
                 calculateIsSelected(variant, predicate(entry), selected)
               ),
       })}

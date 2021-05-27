@@ -45,10 +45,10 @@ const CommunityPartnerCard = ({ partner }) => {
       <CardImg fixed={featuredImage.fixed} />
       <CardBody>
         <CardCategories>
-          {categories.map(category => (
+          {categories.map((category) => (
             <CardCategory
               category={constants.communityPartnerCategories.find(
-                obj => obj.title === category
+                (obj) => obj.title === category
               )}
               key={category}
             />

@@ -7,7 +7,7 @@ describe('groupSponsorsByLevel', () => {
     level: SponsorLevel,
     count: number
   ): { node: ContentfulSponsor }[] =>
-    Array.from(Array(count).keys()).map(_ => ({
+    Array.from(Array(count).keys()).map((_) => ({
       node: {
         sponsorName: uuid(),
         sponsorUrl: uuid(),

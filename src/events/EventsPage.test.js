@@ -1,8 +1,8 @@
 import { eventCount, checkNumberOfEventsToShow } from './EventsPage'
 
 describe('checkNumberOfEventsToShow', () => {
-  const generateArray = number =>
-    Array.from(Array(number).keys()).map(num => ({ id: num }))
+  const generateArray = (number) =>
+    Array.from(Array(number).keys()).map((num) => ({ id: num }))
   it.each`
     count | expected
     ${0}  | ${0}

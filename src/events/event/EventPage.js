@@ -64,7 +64,7 @@ const EventPage = ({
   const sponsorSection = eventSponsorSection
     ? {
         ...eventSponsorSection,
-        sponsors: eventSponsorSection.sponsors.map(sponsor => ({
+        sponsors: eventSponsorSection.sponsors.map((sponsor) => ({
           name: sponsor.sponsorName,
           url: sponsor.sponsorUrl,
           logo: sponsor.sponsorLogo && sponsor.sponsorLogo.sizes.src,
@@ -72,7 +72,7 @@ const EventPage = ({
         })),
       }
     : null
-  const filteredDates = date.dates.filter(event =>
+  const filteredDates = date.dates.filter((event) =>
     filterPastEvents(event.endDate)
   )
   return (

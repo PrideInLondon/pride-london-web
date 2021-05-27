@@ -34,14 +34,14 @@ const ArticlePage = ({
 }) => {
   const metaImg = `https:${headerImage.file.url}?w=1000&h=562`
   const metaUrl = `${siteUrl}/${pathname}`
-  const paragraphs = article.json.content.filter(node => {
+  const paragraphs = article.json.content.filter((node) => {
     return node.nodeType === 'paragraph'
   })
   const firstParagraph = paragraphs[0].content[0].value
   const body = article.json.content
-    .map(paragraph => {
+    .map((paragraph) => {
       const paragraphContent = paragraph.content
-        .map(content => content.value)
+        .map((content) => content.value)
         .join('')
       return `${paragraphContent}\n`
     })
@@ -170,7 +170,7 @@ const ArticlePage = ({
         title={title}
         datePublished={datePublished}
         category={constants.articleCategories.find(
-          cat => cat.title === category
+          (cat) => cat.title === category
         )}
         author={author}
       />

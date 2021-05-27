@@ -6,7 +6,7 @@ export const renderSponsors = (
   sponsors: Sponsor[] = [],
   preventLevelSize = false
 ) =>
-  sponsors.map(sponsor => (
+  sponsors.map((sponsor) => (
     <SponsorBadge
       key={sponsor.name}
       {...sponsor}

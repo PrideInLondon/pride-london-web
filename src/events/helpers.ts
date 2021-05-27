@@ -36,9 +36,7 @@ export const formatPrice = (
  * @param {string} [format] Optional time format, default is HH:mm
  */
 export const formatTime = (isoDate: string, format = 'HH:mm'): string =>
-  momentTz(isoDate)
-    .tz('Europe/London')
-    .format(format)
+  momentTz(isoDate).tz('Europe/London').format(format)
 
 /**
  *
@@ -103,10 +101,10 @@ export function sortByNextOccurrence(
   b: EventNode,
   now: Date = new Date()
 ): number {
-  const aDates = a.node.date.dates.filter(date =>
+  const aDates = a.node.date.dates.filter((date) =>
     filterPastEvents(date.endDate, now)
   )
-  const bDates = b.node.date.dates.filter(date =>
+  const bDates = b.node.date.dates.filter((date) =>
     filterPastEvents(date.endDate, now)
   )
 

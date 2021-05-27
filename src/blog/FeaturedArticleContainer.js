@@ -25,10 +25,9 @@ const FeaturedArticleContainer = () => {
   return (
     <StaticQuery
       query={query}
-      render={data => {
-        const {
-          src,
-        } = data.contentfulArticleFeatured.featuredArticle.headerImage.sizes
+      render={(data) => {
+        const { src } =
+          data.contentfulArticleFeatured.featuredArticle.headerImage.sizes
 
         return (
           <>

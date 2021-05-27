@@ -1,5 +1,2 @@
 export const generateFiftyTwoEntrySlug = (name: string) =>
-  `/fifty-two/${name
-    .trim()
-    .replace(/\s+/g, '-')
-    .toLowerCase()}`
+  `/fifty-two/${name.trim().replace(/\s+/g, '-').toLowerCase()}`

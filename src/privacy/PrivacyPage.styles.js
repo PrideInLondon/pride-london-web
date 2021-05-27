@@ -23,7 +23,7 @@ export const ResponsiveTable = styled.table`
     padding: 15px;
   }
 
-  ${props =>
+  ${(props) =>
     props.responsive &&
     css`
       ${media.tabletMax`
@@ -50,16 +50,16 @@ export const ResponsiveTable = styled.table`
 
           ${props.columns.map((column, index) => {
             return css`
-                  &:nth-of-type(${index + 1}):before {
-                  content: '${column}';
-                  font-family: ${theme.fonts.title};
-                  font-weight: 600;
-                  padding: 10px;
-                  display: block;
-                  color: ${theme.colors.white};
-                  background-color: ${theme.colors.indigo};
-                  margin: -10px -10px 10px -10px;
-                }
+              &:nth-of-type(${index + 1}):before {
+                content: '${column}';
+                font-family: ${theme.fonts.title};
+                font-weight: 600;
+                padding: 10px;
+                display: block;
+                color: ${theme.colors.white};
+                background-color: ${theme.colors.indigo};
+                margin: -10px -10px 10px -10px;
+              }
             `
           })}
           }

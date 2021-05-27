@@ -39,13 +39,13 @@ const ShareLink = styled.a`
   height: 20px;
   margin-right: 20px;
   border: none;
-  display: ${props => (props.desktopOnly ? 'none' : 'inline-block')};
+  display: ${(props) => (props.desktopOnly ? 'none' : 'inline-block')};
 
   ${media.tablet`
     margin-right: 15px;
     width: 25px;
     height: 25px;
-    display: ${props => (props.mobileOnly ? 'none' : 'inline-block')};
+    display: ${(props) => (props.mobileOnly ? 'none' : 'inline-block')};
   `}
 
   &:hover,
@@ -75,7 +75,7 @@ const twitterShareUrl = (name, date, location) => {
   return `https://twitter.com/intent/tweet?text=${body}`
 }
 
-const facebookShareUrl = location => {
+const facebookShareUrl = (location) => {
   const encodedUrl = encodeURIComponent(location)
   return `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
 }

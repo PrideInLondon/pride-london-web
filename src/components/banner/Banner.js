@@ -34,7 +34,7 @@ const Banner = ({
   const [width, setWidth] = useState()
 
   useLayoutEffect(() => {
-    const setDimensions = debounce(function() {
+    const setDimensions = debounce(function () {
       setWidth(wrapper.current.offsetWidth)
       setHeight(wrapper.current.offsetHeight)
     }, 250)

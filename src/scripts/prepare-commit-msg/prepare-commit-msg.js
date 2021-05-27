@@ -30,7 +30,7 @@ const prepareCommitMessage = () => {
     chalk.cyan(`\nTagging commit as ${jiraInfo.boardId}-${jiraInfo.ticketId}\n`)
   )
 
-  getGitmojis().then(gitmojis => {
+  getGitmojis().then((gitmojis) => {
     inquirer
       .prompt([
         {
@@ -38,7 +38,7 @@ const prepareCommitMessage = () => {
           name: 'gitmoji',
           message: 'What is your commit purpose?',
           source: (answers, input = '') =>
-            new Promise(resolve =>
+            new Promise((resolve) =>
               setTimeout(
                 () =>
                   resolve(
@@ -62,14 +62,14 @@ const prepareCommitMessage = () => {
             ),
         },
       ])
-      .then(answers =>
+      .then((answers) =>
         writeGitCommitMessage({
           message: readGitCommitMessage(),
           ...jiraInfo,
           ...answers,
         })
       )
-      .catch(err => {
+      .catch((err) => {
         console.error(err)
         process.exit(1)
       })

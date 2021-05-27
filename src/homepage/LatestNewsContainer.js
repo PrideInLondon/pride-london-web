@@ -69,7 +69,7 @@ const LatestNewsContainer = () => (
                 {...{
                   ...newsArr[0].node,
                   category: constants.articleCategories.find(
-                    cat => cat.title == newsArr[0].node.category
+                    (cat) => cat.title == newsArr[0].node.category
                   ),
                 }}
               />
@@ -89,7 +89,7 @@ const LatestNewsContainer = () => (
                     {...{
                       ...singleNews,
                       category: constants.articleCategories.find(
-                        cat => cat.title == singleNews.category
+                        (cat) => cat.title == singleNews.category
                       ),
                     }}
                   />

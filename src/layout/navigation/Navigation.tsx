@@ -56,8 +56,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   item={{
                     id: 'nav-about',
                     title: 'About',
-                    desc:
-                      'Find out more about our not-for-profit organisation, run by volunteers passionate about equality and diversity.',
+                    desc: 'Find out more about our not-for-profit organisation, run by volunteers passionate about equality and diversity.',
                     url: '/',
                     submenu: [
                       {
@@ -102,8 +101,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   item={{
                     id: 'nav-parade-day',
                     title: 'Parade',
-                    desc:
-                      'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
+                    desc: 'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
                     url: '/parade',
                   }}
                 />

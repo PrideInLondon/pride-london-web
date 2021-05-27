@@ -54,12 +54,7 @@ describe('<Banner />', () => {
   it('renders the titleText from props to the component BannerTitle', () => {
     const titleText = 'Here is a test title!'
     const wrapper = shallow(<Banner titleText={titleText} />)
-    expect(
-      wrapper
-        .dive()
-        .find(BannerTitle)
-        .props().children
-    ).toBe(titleText)
+    expect(wrapper.dive().find(BannerTitle).props().children).toBe(titleText)
   })
 
   it('renders the subtitleText from props to the component BannerSubtitle', () => {
@@ -67,11 +62,8 @@ describe('<Banner />', () => {
     const wrapper = shallow(
       <Banner titleText={'Here is a title'} subtitleText={subtitleText} />
     )
-    expect(
-      wrapper
-        .dive()
-        .find(BannerSubtitle)
-        .props().children
-    ).toBe(subtitleText)
+    expect(wrapper.dive().find(BannerSubtitle).props().children).toBe(
+      subtitleText
+    )
   })
 })

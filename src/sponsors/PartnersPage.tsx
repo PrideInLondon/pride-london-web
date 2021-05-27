@@ -41,11 +41,9 @@ const PartnersPage = ({
       <PageIntro
         cta={{
           title: 'Find out more about becoming a Partner',
-          body:
-            "Whether you're a big brand or a small business, and interested in supporting Pride in London. We want to hear from you.",
+          body: "Whether you're a big brand or a small business, and interested in supporting Pride in London. We want to hear from you.",
           link: {
-            to:
-              "mailto:sponsor@prideinlondon.org?subject=I'd%20like%20to%20become%20a%20partner",
+            to: "mailto:sponsor@prideinlondon.org?subject=I'd%20like%20to%20become%20a%20partner",
             text: 'Email us',
           },
         }}
@@ -89,22 +87,24 @@ const PartnersPage = ({
               A huge thank you to our main partners for their continued support.
             </p>
             <MainSponsorsContainer>
-              {([
-                {
-                  level: constants.sponsorLevels.headline,
-                  title: 'Headline sponsors',
-                  icon: <SponsorHeadline />,
-                },
-                {
-                  level: constants.sponsorLevels.gold,
-                  title: 'Gold sponsors',
-                  icon: <SponsorStar color={theme.colors.gold} />,
-                },
-              ] as {
-                level: SponsorLevel
-                title: string
-                icon?: React.ReactNode
-              }[]).map(
+              {(
+                [
+                  {
+                    level: constants.sponsorLevels.headline,
+                    title: 'Headline sponsors',
+                    icon: <SponsorHeadline />,
+                  },
+                  {
+                    level: constants.sponsorLevels.gold,
+                    title: 'Gold sponsors',
+                    icon: <SponsorStar color={theme.colors.gold} />,
+                  },
+                ] as {
+                  level: SponsorLevel
+                  title: string
+                  icon?: React.ReactNode
+                }[]
+              ).map(
                 ({ level, title, ...props }) =>
                   sponsors[level] && (
                     <SponsorsSubSection key={title} {...{ title }} {...props}>
@@ -114,34 +114,36 @@ const PartnersPage = ({
               )}
             </MainSponsorsContainer>
             <SecondarySponsorsContainer>
-              {([
-                {
-                  level: constants.sponsorLevels.silver,
-                  title: 'Silver sponsors',
-                  icon: <SponsorStar color={theme.colors.silver} />,
-                },
-                {
-                  level: constants.sponsorLevels.bronze,
-                  title: 'Bronze sponsors',
-                  icon: <SponsorStar color={theme.colors.bronze} />,
-                },
-                {
-                  level: constants.sponsorLevels.partners,
-                  title: 'Partners',
-                },
-                {
-                  level: constants.sponsorLevels.supporters,
-                  title: 'Supporters',
-                },
-                {
-                  level: constants.sponsorLevels.digitalPartners,
-                  title: 'Digital Partners',
-                },
-              ] as {
-                level: SponsorLevel
-                title: string
-                icon?: React.ReactNode
-              }[]).map(
+              {(
+                [
+                  {
+                    level: constants.sponsorLevels.silver,
+                    title: 'Silver sponsors',
+                    icon: <SponsorStar color={theme.colors.silver} />,
+                  },
+                  {
+                    level: constants.sponsorLevels.bronze,
+                    title: 'Bronze sponsors',
+                    icon: <SponsorStar color={theme.colors.bronze} />,
+                  },
+                  {
+                    level: constants.sponsorLevels.partners,
+                    title: 'Partners',
+                  },
+                  {
+                    level: constants.sponsorLevels.supporters,
+                    title: 'Supporters',
+                  },
+                  {
+                    level: constants.sponsorLevels.digitalPartners,
+                    title: 'Digital Partners',
+                  },
+                ] as {
+                  level: SponsorLevel
+                  title: string
+                  icon?: React.ReactNode
+                }[]
+              ).map(
                 ({ level, title, ...props }) =>
                   sponsors[level] && (
                     <SponsorsSubSection key={title} {...{ title }} {...props}>

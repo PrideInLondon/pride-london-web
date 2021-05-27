@@ -17,7 +17,7 @@ const ParadeGroupsFilters = ({
       <ParadeGroupsFilterLabel>
         Filter groups by category
       </ParadeGroupsFilterLabel>
-      {categories.map(filterType => {
+      {categories.map((filterType) => {
         return (
           <FilterButton
             key={filterType.title}

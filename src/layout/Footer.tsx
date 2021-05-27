@@ -44,7 +44,7 @@ export const Footer = ({
 }: FooterProps) => (
   <StaticQuery
     query={query}
-    render={data => (
+    render={(data) => (
       <FooterBase
         socials={{
           facebook,

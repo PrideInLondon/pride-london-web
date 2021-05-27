@@ -9,7 +9,7 @@ import FeaturedArticleContainer from './FeaturedArticleContainer'
 export const pageSize = 9
 
 const NewsContainer = ({ articles, categories }) => {
-  const articlesCardContent = articles.map(article => {
+  const articlesCardContent = articles.map((article) => {
     return {
       ...article,
       category: [article.category.title],

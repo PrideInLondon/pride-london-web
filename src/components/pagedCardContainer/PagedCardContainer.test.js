@@ -46,10 +46,7 @@ describe('PagedCardContainer', () => {
       />
     )
 
-    wrapper
-      .find('ShowMoreButton')
-      .find('Button')
-      .simulate('click')
+    wrapper.find('ShowMoreButton').find('Button').simulate('click')
 
     expect(onShowMoreButtonClick).toHaveBeenCalledTimes(1)
   })

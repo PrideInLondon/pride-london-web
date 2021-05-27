@@ -24,7 +24,7 @@ export interface ShareContent {
 
 const generateQueryParams = (params: any) =>
   Object.keys(params)
-    .map(key => `${key}=${encodeURIComponent(params[key])}`)
+    .map((key) => `${key}=${encodeURIComponent(params[key])}`)
     .join('&')
 
 export const generateShareUrl = (

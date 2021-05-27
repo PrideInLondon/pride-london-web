@@ -258,8 +258,7 @@ const LayoutHelmet = ({
       }}
       script={[
         {
-          src:
-            'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.2.5/polyfill.js',
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.2.5/polyfill.js',
         },
         {
           type: 'application/ld+json',
@@ -305,8 +304,7 @@ const LayoutHelmet = ({
               },
               {
                 type: 'application/javascript',
-                src:
-                  'https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js',
+                src: 'https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js',
               },
             ]
           : []),

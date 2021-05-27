@@ -95,7 +95,7 @@ describe('calculateAvailableCategories', () => {
         { title: 'bar' },
         { title: 'baz' },
       ]
-      const cardContent = cardCategories.map(category => ({
+      const cardContent = cardCategories.map((category) => ({
         category: [category],
       }))
       const showAllCategoryTitle = 'all'
@@ -125,7 +125,7 @@ describe('FilteredPagedCardContainer', () => {
     })
   }
 
-  const categories = ['all', 'foo', 'bar'].map(cat => ({
+  const categories = ['all', 'foo', 'bar'].map((cat) => ({
     title: cat,
     hexColour: `#${cat}`,
   }))
@@ -157,10 +157,7 @@ describe('FilteredPagedCardContainer', () => {
 
       expect(wrapper.find('CardComponent')).toHaveLength(3)
 
-      wrapper
-        .find('ShowMoreButton')
-        .find('Button')
-        .simulate('click')
+      wrapper.find('ShowMoreButton').find('Button').simulate('click')
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(5)
@@ -179,10 +176,7 @@ describe('FilteredPagedCardContainer', () => {
         pageSize: 1,
       })
 
-      wrapper
-        .find('ShowMoreButton')
-        .find('Button')
-        .simulate('click')
+      wrapper.find('ShowMoreButton').find('Button').simulate('click')
       wrapper.update()
 
       expect(wrapper.find('CardComponent')).toHaveLength(2)

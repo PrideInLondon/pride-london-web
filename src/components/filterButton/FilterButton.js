@@ -17,7 +17,7 @@ const FilterButton = ({
 }) => {
   return (
     <FilterLabel
-      onClick={e => {
+      onClick={(e) => {
         e.preventDefault()
         handleClick(filterType)
       }}

@@ -77,7 +77,7 @@ const SubMenu: React.FC<SubMenuProps> = ({
           </PanelInfoWrapper>
           <PanelListWrapper isOpen={isOpen}>
             {submenu &&
-              submenu.map(submenuList => (
+              submenu.map((submenuList) => (
                 <PanelListSection
                   key={submenuList.heading || shortid.generate()}
                 >
@@ -85,7 +85,7 @@ const SubMenu: React.FC<SubMenuProps> = ({
                     <Heading>{submenuList.heading}</Heading>
                   )}
                   <PanelList>
-                    {submenuList.links.map(link => (
+                    {submenuList.links.map((link) => (
                       <li key={link.title}>
                         <PanelLink<'a' | typeof Link>
                           {...handleUrl(link.url)}

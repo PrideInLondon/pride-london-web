@@ -14,7 +14,7 @@ const isCacheAvailable = () => fs.existsSync(CACHE_PATH)
 const getGitmojis = () =>
   isCacheAvailable() ? getGitmojisFromCache() : getGitmojisFromRemote()
 
-const createGitmojisCache = gitmojis => {
+const createGitmojisCache = (gitmojis) => {
   if (!fs.existsSync(path.dirname(CACHE_PATH)))
     fs.mkdirSync(path.dirname(CACHE_PATH))
 
@@ -28,8 +28,8 @@ const getGitmojisFromCache = () =>
 
 const getGitmojisFromRemote = () =>
   fetch(GITMOJIS_URL)
-    .then(response => response.json())
+    .then((response) => response.json())
     .then(({ gitmojis }) => createGitmojisCache(gitmojis))
-    .catch(error => console.error(error))
+    .catch((error) => console.error(error))
 
 module.exports = getGitmojis

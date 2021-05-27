@@ -18,7 +18,7 @@ import {
 export const eventCount = (numberOfEventsToShow, eventsLength) =>
   `You're viewing ${numberOfEventsToShow} of ${eventsLength} events`
 
-export const checkNumberOfEventsToShow = events =>
+export const checkNumberOfEventsToShow = (events) =>
   events.length < constants.itemsToLoad - 1
     ? events.length
     : constants.itemsToLoad - 1

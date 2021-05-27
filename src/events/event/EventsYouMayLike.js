@@ -59,7 +59,7 @@ const GreyWrapper = styled.div`
 `
 
 const filterNextThreeEvents = (events, eventId) =>
-  events.filter(event => event.node.id !== eventId).splice(0, 3)
+  events.filter((event) => event.node.id !== eventId).splice(0, 3)
 
 export const EventsYouMayLike = ({ eventId }) => {
   const events = useContext(EventsContext)
@@ -75,7 +75,7 @@ export const EventsYouMayLike = ({ eventId }) => {
           </ViewAll>
         </HeadingRow>
         <Row>
-          {eventsYouMayLike.map(event => (
+          {eventsYouMayLike.map((event) => (
             <FlexColumn
               width={{ default: 1, sm: 0.5, lg: 0.3333 }}
               key={event.node.id}

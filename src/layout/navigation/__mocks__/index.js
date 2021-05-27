@@ -1,8 +1,7 @@
 export const mockData = {
   id: 'nav-learn',
   title: 'Learn',
-  desc:
-    'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
+  desc: 'Cupcake ipsum dolor sit. Amet dragée chocolate donut. Jelly-o chupa chups liquorice chocolate.',
   url: '/',
   submenu: [
     {

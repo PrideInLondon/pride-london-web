@@ -15,7 +15,7 @@ const getMostReadable = (color: string) =>
     })
     .toHexString()
 
-export const TagWrapper = styled(props => <Wrapper {...props} />)<TagProps>`
+export const TagWrapper = styled((props) => <Wrapper {...props} />)<TagProps>`
   border: 2px solid ${({ color }) => color};
   padding: ${sm}px;
   font-size: 14px;

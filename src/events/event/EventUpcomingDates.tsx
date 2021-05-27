@@ -88,7 +88,7 @@ export const EventUpcomingDates: React.FC<EventUpcomingDatesProps> = ({
   return (
     <>
       <UpcomingDatesContainer>
-        {dates.slice(0, matches ? count : dates.length).map(event => (
+        {dates.slice(0, matches ? count : dates.length).map((event) => (
           <UpcomingDateItem key={event.id}>
             <UpcomingDateContent {...(!matches && { tabIndex: 0 })}>
               <UpcomingDate>{formatUpcomingDates(event)}</UpcomingDate>
@@ -106,7 +106,7 @@ export const EventUpcomingDates: React.FC<EventUpcomingDatesProps> = ({
           } of ${dates.length} dates`}</UpcomingDatesStatus>
           <Button
             variant="outline"
-            onClick={() => setCount(prevState => (prevState += initialCount))}
+            onClick={() => setCount((prevState) => (prevState += initialCount))}
             disabled={count >= dates.length}
             mx="0 auto"
           >
