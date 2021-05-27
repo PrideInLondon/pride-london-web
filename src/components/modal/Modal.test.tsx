@@ -5,7 +5,7 @@ import {
   fireEvent,
   render,
   waitForElementToBeRemoved,
-  wait,
+  waitFor,
 } from '../../utils/testing-utils'
 
 import { Modal } from './Modal'
@@ -92,13 +92,13 @@ it('should not be dismissable if dismissable is false', async () => {
   )
 
   fireEvent.keyDown(getByTestId('modal-card'), { key: 'Escape', keyCode: 27 })
-  await wait(() => getByTestId('modal-card')).then(() => {
+  await waitFor(() => getByTestId('modal-card')).then(() => {
     expect(getByTestId('modal-card')).toBeTruthy()
   })
 
   fireEvent.click(getByTestId('modal-background'))
 
-  await wait(() => getByTestId('modal-card')).then(() => {
+  await waitFor(() => getByTestId('modal-card')).then(() => {
     expect(getByTestId('modal-card')).toBeTruthy()
   })
 })

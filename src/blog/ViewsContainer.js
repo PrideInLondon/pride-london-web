@@ -30,20 +30,19 @@ const ViewsContainer = ({ views }) => {
   const containerRef = createRef()
 
   useEffect(() => {
-    if (containerRef.current) {
-      const ref = containerRef.current
+    const ref = containerRef?.current || null
+    if (ref) {
       ref.addEventListener('touchstart', touchStart)
       ref.addEventListener('touchmove', preventTouch, {
         passive: false,
       })
-
-      return () => {
-        if (ref) {
-          ref.removeEventListener('touchstart', touchStart)
-          ref.removeEventListener('touchmove', preventTouch, {
-            passive: false,
-          })
-        }
+    }
+    return () => {
+      if (ref) {
+        ref.removeEventListener('touchstart', touchStart)
+        ref.removeEventListener('touchmove', preventTouch, {
+          passive: false,
+        })
       }
     }
   })
