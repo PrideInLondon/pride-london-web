@@ -12,4 +12,5 @@ module.exports = {
     __PATH_PREFIX__: '',
   },
   modulePathIgnorePatterns: ['<rootDir>/.*/__mocks__'],
+  testEnvironment: 'jsdom',
 }
