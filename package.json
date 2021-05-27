@@ -3,18 +3,18 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
+    "pre-commit": "lint-staged && tsc",
     "build": "gatsby build",
     "clean": "gatsby clean",
     "cov": "codecov",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js' && prettier-package-json --write",
-    "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "lint": "eslint 'src/**/*.[jt]s?(x)' && remark . --frail",
-    "pre-commit": "lint-staged && tsc",
+    "lint-fix": "eslint --fix 'src/**/*.[jt]s?(x)'",
     "prepare": "husky install",
     "storybook": "NODE_ENV=production start-storybook -p 9001 -c .storybook",
-    "test:watch": "yarn jest --watch",
-    "test": "yarn jest --runInBand"
+    "test": "yarn jest --runInBand",
+    "test:watch": "yarn jest --watch"
   },
   "resolutions": {
     "@reach/router": "^1.1.1",
@@ -153,6 +153,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-prettier": "^1.2.0",
     "stylelint-processor-styled-components": "^1.10.0",
+    "tslib": "^2.2.0",
     "typescript": "^4.3.2",
     "typescript-styled-plugin": "^0.17.0",
     "uuid": "^8.3.2"

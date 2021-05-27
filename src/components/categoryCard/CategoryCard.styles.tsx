@@ -6,14 +6,14 @@ import { colors } from '../../theme/colors'
 import { Card } from '../card'
 import { CategoryCardProps } from './CategoryCard.types'
 
-export const StyledImage = styled(Image)`
+export const StyledImage = styled(Image)<{ fluid: any }>`
   transition: transform 0.15s ease-out;
   width: 100% !important;
 `
 
-export const CardWrapper = styled(props => <Card {...props} />)<
-  CategoryCardProps
->`
+export const CardWrapper = styled((props) => (
+  <Card {...props} />
+))<CategoryCardProps>`
   border: solid 1px ${colors.mediumGrey};
 
   &:hover,

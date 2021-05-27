@@ -52,7 +52,7 @@ export const ImgWrapper = styled.div`
   margin-right: -1px;
 `
 
-export const ResponsiveImg = styled(Img)`
+export const ResponsiveImg = styled(Img)<{ fixed: any }>`
   position: absolute !important;
   top: 50%;
   left: 50%;
