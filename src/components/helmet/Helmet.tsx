@@ -27,11 +27,15 @@ export const Helmet: React.FC<HelmetProps> = ({
     <ReactHelmet
       title={pipedTitle}
       meta={[
+        // TODO: Remove
+        {
+          name: 'google-site-verification',
+          content: '-W1i8m5Ktb2Q69yiEwibm3SUfFm36AwVyfS42i1IuU0',
+        },
         {
           name: 'description',
           content: prefixedDescription,
         },
-
         // Schema meta tags
         {
           itemProp: 'name',
