@@ -34,7 +34,7 @@ const Content = styled(Column)`
   `};
 `
 
-const responsiveBannerUrl = url => {
+const responsiveBannerUrl = (url) => {
   const defaultImageWidth = 1440
 
   if (typeof window === 'undefined') {

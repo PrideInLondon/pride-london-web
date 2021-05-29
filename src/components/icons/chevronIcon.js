@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ChevronIcon = props => (
+const ChevronIcon = (props) => (
   <svg
     style={{
       display: 'inline-block',

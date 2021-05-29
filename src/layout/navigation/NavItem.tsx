@@ -89,7 +89,7 @@ const NavItem: React.FC<NavItemProps> = ({
             aria-haspopup={checkBreakpoint(theme.navBreakpoint)}
             aria-expanded={isOpen}
             aria-controls={item.id}
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault()
               dispatch({ type: 'toggle' })
             }}

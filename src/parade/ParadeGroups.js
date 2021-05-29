@@ -51,12 +51,12 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
   }, [activeLetter])
 
   const handleFilterClick = useCallback(
-    newFilter => {
+    (newFilter) => {
       setSelectedFilter(newFilter)
       setGroups(
         newFilter === constants.paradeGroupCategories[0] // TODO Reliance on magic array position
           ? paradeGroups
-          : paradeGroups.filter(paradeGroup => {
+          : paradeGroups.filter((paradeGroup) => {
               return (
                 paradeGroup.category &&
                 paradeGroup.category.includes(newFilter.api)
@@ -80,7 +80,7 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
       // Checks the parade groups to see
       // if any of them start with the letter.
       // If they do, add it to available letters.
-      groups.some(group => filterGroupByFirstLetter(group.name, letter))
+      groups.some((group) => filterGroupByFirstLetter(group.name, letter))
     ) {
       return [...acc, letter]
     }
@@ -91,7 +91,7 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
   // start with something other than a letter.
   if (
     !availableLetters.includes('#') &&
-    groups.some(group => group.name.charCodeAt(0) < 65)
+    groups.some((group) => group.name.charCodeAt(0) < 65)
   ) {
     availableLetters.unshift('#')
   }
@@ -105,7 +105,7 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
       />
       <LetterContainer>
         <ScrolledLetters>
-          {lettersArray.map(letter => (
+          {lettersArray.map((letter) => (
             <LetterLink
               key={letter}
               letter={letter}
@@ -116,12 +116,12 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
         </ScrolledLetters>
       </LetterContainer>
       <div ref={paradeGroupLettersSection}>
-        {availableLetters.map(availableLetter => {
+        {availableLetters.map((availableLetter) => {
           return (
             <Fragment key={availableLetter}>
               <LetterGroup letter={availableLetter}>
                 {groups
-                  .filter(group => {
+                  .filter((group) => {
                     if (availableLetter === '#') {
                       // get groups starting with non-letter characters
                       return group.name.charCodeAt(0) < 65

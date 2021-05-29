@@ -96,7 +96,7 @@ const Layout = ({ children, location: { pathname } }) => {
         }) => (
           <EventsContext.Provider
             value={events
-              .filter(event => {
+              .filter((event) => {
                 const lastOccurenceEndDate =
                   event.node.date.dates[event.node.date.dates.length - 1]
                     .endDate

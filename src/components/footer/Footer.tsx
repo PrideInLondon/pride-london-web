@@ -53,7 +53,7 @@ const UpperSection = ({
 }) => (
   <UpperWrapper>
     <SocialContainer>
-      {SOCIALS.map(social => {
+      {SOCIALS.map((social) => {
         const title = `Follow us on ${social
           .split('-')
           .map(capitaliseFirst)
@@ -72,7 +72,7 @@ const UpperSection = ({
       })}
     </SocialContainer>
     <HashtagContainer>
-      {HASHTAGS.map(hashtag => {
+      {HASHTAGS.map((hashtag) => {
         const title = `Tweet #${hashtag}`
         return (
           <Hashtag
@@ -104,7 +104,7 @@ const MiddleSection = ({
     <H6 mb="md">Thank you to our {getCurrentYear()} partners</H6>
     <LogoContainer>
       {SPONSOR_ORDER.map(
-        level =>
+        (level) =>
           sponsors[level] &&
           (sponsors[level] as Sponsor[]).map(({ url, logo, name }) => (
             <LogoWrapper key={name}>

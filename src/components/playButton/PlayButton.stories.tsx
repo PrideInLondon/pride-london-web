@@ -8,8 +8,7 @@ storiesOf('Play Button', module).add(
   () => <PlayButton onClick={() => alert('Button Clicked')} />,
   {
     info: {
-      text:
-        'Renders a play icon inside an indigo box, and takes an onClick handler to execute click',
+      text: 'Renders a play icon inside an indigo box, and takes an onClick handler to execute click',
     },
   }
 )

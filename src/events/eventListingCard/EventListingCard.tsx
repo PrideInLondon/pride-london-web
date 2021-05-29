@@ -28,7 +28,9 @@ const When: React.FC<WhenProps> = ({ onDemand, platform, dates }) => {
     height: 24,
   })
   const showLiveNow =
-    !onDemand && isVirtualEvent(platform) && dates.some(date => isLiveNow(date))
+    !onDemand &&
+    isVirtualEvent(platform) &&
+    dates.some((date) => isLiveNow(date))
   return (
     <CardDate>
       <WhenText color={showLiveNow ? colors.indigo : colors.darkCyan}>

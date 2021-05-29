@@ -2,7 +2,7 @@ import React from 'react'
 import { StyledSvg, StyledPath } from './RipVariant.styles'
 import { RipVariantProps } from './RipVariant.types'
 
-export const RipVariant5: React.FC<RipVariantProps> = props => (
+export const RipVariant5: React.FC<RipVariantProps> = (props) => (
   <StyledSvg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 2400 129"

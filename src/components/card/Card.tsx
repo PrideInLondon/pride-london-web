@@ -18,7 +18,7 @@ import { mediaQueries } from '../../theme/mediaQueries'
 
 import { CardProps, CardImageProps, CardContentProps } from './Card.types'
 
-const StyledCardImage = styled(Image)`
+const StyledCardImage = styled(Image)<{ fixed: any }>`
   position: absolute;
   top: 50%;
   left: 50%;

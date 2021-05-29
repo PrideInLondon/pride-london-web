@@ -7,7 +7,7 @@ import background from './bannerBackground.svg'
 import ViewsContainer from './ViewsContainer'
 import NewsContainer from './NewsContainer'
 
-const mapEntries = news => {
+const mapEntries = (news) => {
   if (!news.edges || !Array.isArray(news.edges)) return []
   return news.edges.map(({ node }) => ({ ...node }))
 }
@@ -32,10 +32,10 @@ const NewsAndViewsPage = ({ data: { articles, views } }) => (
       </Row>
     </Container>
     <NewsContainer
-      articles={mapEntries(articles).map(art => ({
+      articles={mapEntries(articles).map((art) => ({
         ...art,
         category: constants.articleCategories.find(
-          cat => cat.title == art.category
+          (cat) => cat.title == art.category
         ),
       }))}
       categories={constants.articleCategories}

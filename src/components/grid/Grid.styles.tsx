@@ -40,7 +40,7 @@ export const Column = styled.div<GridProps>`
 export const Row = styled.div<GridProps>`
   margin-left: 5px;
   margin-right: 5px;
-  
+
   ${mediaQueries.sm} {
     margin-left: 10px;
     margin-right: 10px;
@@ -55,7 +55,7 @@ export const Row = styled.div<GridProps>`
     margin-left: 75px;
     margin-right: 75px;
   }
-  
+
   && {
     ${space}
   }

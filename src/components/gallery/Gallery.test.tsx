@@ -5,7 +5,7 @@ import { act } from 'react-dom/test-utils'
 import { Gallery } from './Gallery'
 
 describe(Gallery.name, () => {
-  const ENTRIES = Array.from(Array(6).keys()).map(_ => uuid())
+  const ENTRIES = Array.from(Array(6).keys()).map((_) => uuid())
 
   describe('non-paged', () => {
     it('should call render with same entries as given via props', () => {

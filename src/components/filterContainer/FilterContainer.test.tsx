@@ -23,7 +23,7 @@ describe('calculateIsSelected', () => {
 describe(FilterContainer.name, () => {
   it('should call handler with selected filter name when label is clicked', () => {
     const filterType = 'checkbox'
-    const categories = Array.from(Array(3).keys()).map(_ => ({
+    const categories = Array.from(Array(3).keys()).map((_) => ({
       title: uuid(),
       hexColour: uuid(),
     }))

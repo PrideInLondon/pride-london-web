@@ -92,7 +92,7 @@ const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) =>
       title="On demand"
       detail={formatDayRange({ startDate, endDate })}
     />
-  ) : isVirtualEvent(platform) && dates.some(date => isLiveNow(date)) ? (
+  ) : isVirtualEvent(platform) && dates.some((date) => isLiveNow(date)) ? (
     <LiveItem {...{ endDate }} />
   ) : (
     <Item

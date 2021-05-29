@@ -78,7 +78,7 @@ export const StyledSlider = styled(Slider)`
 const Carousel = ({ carouselItems }) => (
   <CarouselContainer>
     <StyledSlider {...carouselSettings}>
-      {carouselItems['en-GB'].map(carouselItem => (
+      {carouselItems['en-GB'].map((carouselItem) => (
         <SlickContainer key={carouselItem.sys.id}>
           <ImageContainer>
             <CarouselImage src={carouselItem.fields.file['en-GB'].url} />

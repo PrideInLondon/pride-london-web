@@ -8,9 +8,7 @@ const isToday = (date: Date, today: Date): boolean =>
 
 // second param required for testing
 const isTomorrow = (date: Date, today: Date): boolean =>
-  moment(today)
-    .add(1, 'day')
-    .isSame(date, 'day')
+  moment(today).add(1, 'day').isSame(date, 'day')
 
 const generateMultiDatePrefix = ({
   start,
@@ -45,7 +43,7 @@ export const checkTimesAreSame = (dates: EventDateOccurrence[]): boolean => {
   const endHours = new Date(dates[0].endDate).getHours()
   const endMins = new Date(dates[0].endDate).getMinutes()
 
-  return dates.every(occurrence => {
+  return dates.every((occurrence) => {
     const occStartHours = new Date(occurrence.startDate).getHours()
     const occStartMins = new Date(occurrence.startDate).getMinutes()
     const occEndHours = new Date(occurrence.endDate).getHours()
@@ -69,7 +67,7 @@ export const generateDisplayDate = ({
   onDemand?: boolean
   now?: Date
 }) => {
-  const filteredDates = dates.filter(occurrence =>
+  const filteredDates = dates.filter((occurrence) =>
     filterPastEvents(occurrence.endDate, now)
   )
 

@@ -35,10 +35,10 @@ export const calculateSelected = (
         currentlySelected
       )
       const filteredSelected = currentlySelected.filter(
-        selected => selected !== showAllCategoryTitle
+        (selected) => selected !== showAllCategoryTitle
       )
       const newlySelected = isCurrentlySelected
-        ? filteredSelected.filter(current => current !== filterNameSelected)
+        ? filteredSelected.filter((current) => current !== filterNameSelected)
         : [...filteredSelected, filterNameSelected]
       return newlySelected.length === 0 ? initialSelected : newlySelected
     }
@@ -59,7 +59,7 @@ export const calculateShouldShowCard = (
     case 'checkbox': {
       return selected.includes(showAllCategoryTitle)
         ? true
-        : category.some(cat => selected.includes(cat))
+        : category.some((cat) => selected.includes(cat))
     }
     case 'radio':
       return selected === showAllCategoryTitle
@@ -75,14 +75,14 @@ export const calculateAvailableCategories = (
   showAllCategoryTitle,
   cardContent
 ) => {
-  const cardCategories = cardContent.map(content => content.category)
+  const cardCategories = cardContent.map((content) => content.category)
   const flattenedCardCategories = [].concat.apply([], cardCategories)
 
   const availableCategories = categories.filter(
-    category =>
+    (category) =>
       category.title === showAllCategoryTitle ||
       flattenedCardCategories.some(
-        cardCategory => cardCategory === category.title
+        (cardCategory) => cardCategory === category.title
       )
   )
 
@@ -130,7 +130,7 @@ const FilteredPagedCardContainer = ({
         filterType={filterType}
         categories={availableCategories}
         selected={selected}
-        handleFilterSelect={filterName => {
+        handleFilterSelect={(filterName) => {
           setSelected(
             calculateSelected(
               filterType,

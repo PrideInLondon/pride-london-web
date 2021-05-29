@@ -11,21 +11,19 @@ import Hr from './Hr'
 
 const renderParagraph = (_node, children) => <Paragraph>{children}</Paragraph>
 
-const renderHeading = heading => (_node, children) => (
+const renderHeading = (heading) => (_node, children) =>
   <Heading>{React.createElement(heading, null, children)}</Heading>
-)
 
-const renderList = listType => (_node, children) => (
+const renderList = (listType) => (_node, children) =>
   <List>{React.createElement(listType, null, children)}</List>
-)
 
-const renderCarousel = node => <Carousel {...node.data.target.fields} />
+const renderCarousel = (node) => <Carousel {...node.data.target.fields} />
 
 const renderQuote = (_node, children) => <Quote>{children}</Quote>
 
 const renderHr = () => <Hr />
 
-const renderImage = node => <Image {...node.data.target.fields} />
+const renderImage = (node) => <Image {...node.data.target.fields} />
 
 const renderAssetHyperlink = (node, children) => (
   <a href={node.data.target.fields.file['en-GB'].url}>{children}</a>
@@ -35,7 +33,7 @@ const rendeUrlHyperlink = (node, children) => (
   <a href={node.data.uri}>{children}</a>
 )
 
-const renderEmbeddedEntry = node => {
+const renderEmbeddedEntry = (node) => {
   if (node.data.target.sys.contentType.sys.id === 'carousel') {
     return renderCarousel(node)
   }

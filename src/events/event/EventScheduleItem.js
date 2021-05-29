@@ -28,7 +28,7 @@ const TableItemTime = styled(TableItem)`
   width: 60px;
 `
 
-const EventScheduleItem = props => {
+const EventScheduleItem = (props) => {
   if (!props.data.length) return null
 
   return (
@@ -38,7 +38,7 @@ const EventScheduleItem = props => {
           <tr>
             <TableHeader colSpan="2">{props.title}</TableHeader>
           </tr>
-          {props.data.map(item => (
+          {props.data.map((item) => (
             <tr key={item.id}>
               <TableItemTime>{item.startTime}</TableItemTime>
               <TableItem>{item.title}</TableItem>

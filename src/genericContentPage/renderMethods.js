@@ -7,7 +7,7 @@ import { SponsorsSubSection, renderSponsors } from '../sponsors'
 import Figure from './Figure'
 import Video from './Video'
 
-export const renderFigure = node => <Figure {...node.data.target.fields} />
+export const renderFigure = (node) => <Figure {...node.data.target.fields} />
 
 const renderStyledButton = ({ primary, to, content }) => (
   <Button
@@ -38,7 +38,7 @@ const renderTypeformButton = ({ primary, content, to }) => {
         hideHeaders
         hideFooter
         mode="drawer_left"
-        ref={tf => {
+        ref={(tf) => {
           typeformEmbed = tf
         }}
         autoClose={5}
@@ -50,7 +50,7 @@ const renderTypeformButton = ({ primary, content, to }) => {
   )
 }
 
-const renderButton = node => {
+const renderButton = (node) => {
   const {
     data: {
       target: { fields },
@@ -78,7 +78,7 @@ const renderButton = node => {
 
 const renderVideo = ({ data }) => <Video {...data.target.fields} />
 
-const renderSponsorSection = node => {
+const renderSponsorSection = (node) => {
   const {
     data: {
       target: { fields },
@@ -86,7 +86,7 @@ const renderSponsorSection = node => {
   } = node
   const title = fields.displayName['en-GB']
   let sponsors = fields.sponsors ? fields.sponsors['en-GB'] : []
-  sponsors = sponsors.map(sponsor => ({
+  sponsors = sponsors.map((sponsor) => ({
     name: sponsor.fields.sponsorName['en-GB'],
     logo: sponsor.fields.sponsorLogo['en-GB'].fields.file['en-GB'].url,
     level: sponsor.fields.sponsorLevel['en-GB'],
@@ -99,7 +99,7 @@ const renderSponsorSection = node => {
   )
 }
 
-export const renderEmbeddedEntry = node => {
+export const renderEmbeddedEntry = (node) => {
   switch (node.data.target.sys.contentType.sys.id) {
     case 'video':
       return renderVideo(node)

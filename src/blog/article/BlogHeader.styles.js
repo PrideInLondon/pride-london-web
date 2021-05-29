@@ -25,10 +25,10 @@ export const SubHeader = styled.div`
 export const NewsCategory = styled.div`
   display: inline-block;
   border: 2px solid;
-  background-color: ${props => props.backgroundColor};
-  border-color: ${props => props.backgroundColor};
+  background-color: ${(props) => props.backgroundColor};
+  border-color: ${(props) => props.backgroundColor};
   border-radius: 4px;
-  color: ${props => getMostReadable(props.textColor)};
+  color: ${(props) => getMostReadable(props.textColor)};
   cursor: pointer;
   font-family: Poppins;
   font-size: 14px;

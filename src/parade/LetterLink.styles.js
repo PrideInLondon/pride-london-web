@@ -3,14 +3,14 @@ import theme from '../theme/theme'
 import { media } from '../theme/media'
 
 export const StyledLetterLink = styled.a`
-  color: ${props => (props.isDisabled ? 'grey' : 'initial')};
-  cursor: ${props => (props.isDisabled ? 'default' : 'pointer')};
+  color: ${(props) => (props.isDisabled ? 'grey' : 'initial')};
+  cursor: ${(props) => (props.isDisabled ? 'default' : 'pointer')};
   font-size: 16px;
   margin-right: 16px;
   text-decoration: none;
   border-bottom: 2px solid transparent;
 
-  ${props =>
+  ${(props) =>
     props.isActive &&
     css`
       border-bottom: 2px solid ${theme.colors.eucalyptusGreen};
@@ -18,7 +18,7 @@ export const StyledLetterLink = styled.a`
       color: ${theme.colors.indigo};
     `}
 
-  ${props =>
+  ${(props) =>
     !props.isDisabled &&
     css`
       &:hover {

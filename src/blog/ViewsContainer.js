@@ -8,7 +8,7 @@ import { settings } from './slickSettings'
 
 let firstClientX, clientX
 
-const preventTouch = e => {
+const preventTouch = (e) => {
   const minValue = 5 // threshold
 
   clientX = e.touches[0].clientX - firstClientX
@@ -20,7 +20,7 @@ const preventTouch = e => {
   }
 }
 
-const touchStart = e => (firstClientX = e.touches[0].clientX)
+const touchStart = (e) => (firstClientX = e.touches[0].clientX)
 
 const ViewsContainer = ({ views }) => {
   // Methods here to prevent horizontal scrolling
@@ -30,17 +30,17 @@ const ViewsContainer = ({ views }) => {
   const containerRef = createRef()
 
   useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.addEventListener('touchstart', touchStart)
-      containerRef.current.addEventListener('touchmove', preventTouch, {
+    const ref = containerRef?.current || null
+    if (ref) {
+      ref.addEventListener('touchstart', touchStart)
+      ref.addEventListener('touchmove', preventTouch, {
         passive: false,
       })
     }
-
     return () => {
-      if (containerRef.current) {
-        containerRef.current.removeEventListener('touchstart', touchStart)
-        containerRef.current.removeEventListener('touchmove', preventTouch, {
+      if (ref) {
+        ref.removeEventListener('touchstart', touchStart)
+        ref.removeEventListener('touchmove', preventTouch, {
           passive: false,
         })
       }
@@ -58,7 +58,7 @@ const ViewsContainer = ({ views }) => {
               </ViewsTitle>
               <div ref={containerRef}>
                 <Slider {...settings}>
-                  {views.map(view => (
+                  {views.map((view) => (
                     <ViewsCard {...view} key={view.id} />
                   ))}
                 </Slider>

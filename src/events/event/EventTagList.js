@@ -28,7 +28,7 @@ const knownValueStyles = {
   'Plays & Theatre': hotPink,
 }
 
-const selectTagStyle = value =>
+const selectTagStyle = (value) =>
   knownValueStyles[value] || tagStyles[hash(value) % tagStyles.length]
 
 const EventTagListItem = styled.li`
@@ -52,7 +52,7 @@ const EventTagUl = styled.ul`
 
 const EventTagList = ({ values, className }) => (
   <EventTagUl className={className}>
-    {values.map(value => (
+    {values.map((value) => (
       <EventTagListItem tagStyle={selectTagStyle(value)} key={value}>
         {value}
       </EventTagListItem>

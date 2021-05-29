@@ -1,7 +1,7 @@
 import { v4 as uuid } from 'uuid'
 import { calculateInitialSelected } from './CategoryFilter'
 
-const CATEGORIES = Array.from(Array(6).keys()).map(_ => ({
+const CATEGORIES = Array.from(Array(6).keys()).map((_) => ({
   color: uuid(),
   name: uuid(),
 }))

@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import theme from '../../theme/theme'
 
 export const NewsCategoryContainer = styled.div`
-  border: 2px solid ${props => props.backgroundColor};
-  background-color: ${props => props.backgroundColor};
+  border: 2px solid ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.backgroundColor};
   border-radius: 4px;
   color: ${theme.colors.white};
   font-family: ${theme.fonts.title};

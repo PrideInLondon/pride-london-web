@@ -19,7 +19,7 @@ const DateGroupHeading = styled.h2`
   `};
 `
 
-const Wrapper = props => (
+const Wrapper = (props) => (
   <AnimatedFlexColumn
     width={{ default: 1, md: 1 / 3, lg: 1 / 4 }}
     py={[2, 2, 2, 3]}

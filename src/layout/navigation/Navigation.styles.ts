@@ -90,9 +90,9 @@ export const Menu = styled.ul<{ backgroundColor: string; isOpen: boolean }>(
     z-index: 1;
     background-color: ${backgroundColor};
     ${isOpen &&
-      css`
-        overflow: auto;
-      `}
+    css`
+      overflow: auto;
+    `}
     ${mediaQueries.nav} {
       position: static;
       display: flex;

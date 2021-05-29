@@ -21,7 +21,7 @@ const TextContainer = styled.div`
   padding: 20px;
 `
 
-const mapEntries = paradeGroups => {
+const mapEntries = (paradeGroups) => {
   if (!paradeGroups.edges || !Array.isArray(paradeGroups.edges)) return []
   return paradeGroups.edges.map(({ node }) => ({ ...node }))
 }

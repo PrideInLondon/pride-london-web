@@ -18,8 +18,7 @@ storiesOf('Button', module)
     ),
     {
       info: {
-        text:
-          'By default the Button component will render an html <button />. You can select one of the styles by passing a `variant` prop.',
+        text: 'By default the Button component will render an html <button />. You can select one of the styles by passing a `variant` prop.',
       },
     }
   )
@@ -30,8 +29,7 @@ storiesOf('Button', module)
     ),
     {
       info: {
-        text:
-          'If given a "to" prop which is a relative URL, it will automatically render a Gatsby <Link /> component',
+        text: 'If given a "to" prop which is a relative URL, it will automatically render a Gatsby <Link /> component',
       },
     }
   )
@@ -44,8 +42,7 @@ storiesOf('Button', module)
     ),
     {
       info: {
-        text:
-          'If given a "to" prop which is an external URL, it will automatically render a html <a /> tag with the target attribute to open in a new tab and rel (noopener and noreferrer) security attributes.',
+        text: 'If given a "to" prop which is an external URL, it will automatically render a html <a /> tag with the target attribute to open in a new tab and rel (noopener and noreferrer) security attributes.',
       },
     }
   )
@@ -58,8 +55,7 @@ storiesOf('Button', module)
     ),
     {
       info: {
-        text:
-          'If given a "to" prop which is an contact link (e.g. mailto, tel), it will automatically render a html <a /> tag with the target attribute to open in a new tab.',
+        text: 'If given a "to" prop which is an contact link (e.g. mailto, tel), it will automatically render a html <a /> tag with the target attribute to open in a new tab.',
       },
     }
   )
@@ -80,8 +76,7 @@ storiesOf('Button', module)
     ),
     {
       info: {
-        text:
-          'You can pass styled-system width props (e.g. minWidth, maxWidth, width) with a valid CSS unit (e.g. % or px) to explicitly set the size of the button. You can also pass styled-system margin props (e.g. marginTop, marginBottom etc) to control the positioning of the button on the page.',
+        text: 'You can pass styled-system width props (e.g. minWidth, maxWidth, width) with a valid CSS unit (e.g. % or px) to explicitly set the size of the button. You can also pass styled-system margin props (e.g. marginTop, marginBottom etc) to control the positioning of the button on the page.',
       },
     }
   )
@@ -109,8 +104,7 @@ storiesOf('Button', module)
     ),
     {
       info: {
-        text:
-          'You can pass an object as props with keys that map to the theme breakpoints to apply responsive styles. Media queries are min-width (mobile-first)',
+        text: 'You can pass an object as props with keys that map to the theme breakpoints to apply responsive styles. Media queries are min-width (mobile-first)',
       },
     }
   )

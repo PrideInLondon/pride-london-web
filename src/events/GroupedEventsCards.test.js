@@ -15,21 +15,13 @@ describe('GroupedEventsCards', () => {
       />
     )
     it('passing event.node correctly', () => {
-      expect(
-        wrapper
-          .find('EventListingCard')
-          .first()
-          .prop('event')
-      ).toBe(testEvent.node)
+      expect(wrapper.find('EventListingCard').first().prop('event')).toBe(
+        testEvent.node
+      )
     })
 
     it('testing animation logic', () => {
-      expect(
-        wrapper
-          .find('Wrapper')
-          .first()
-          .prop('animation')
-      ).toBe(false)
+      expect(wrapper.find('Wrapper').first().prop('animation')).toBe(false)
     })
   })
 
@@ -43,12 +35,7 @@ describe('GroupedEventsCards', () => {
           toLoad={27}
         />
       )
-      expect(
-        wrapper
-          .find('Wrapper')
-          .first()
-          .prop('animation')
-      ).toBe(true)
+      expect(wrapper.find('Wrapper').first().prop('animation')).toBe(true)
     })
   })
 

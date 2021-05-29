@@ -16,7 +16,7 @@ const NewsCard = ({
   renderAs,
 }) => {
   const categoryObj = Array.isArray(category)
-    ? constants.articleCategories.find(obj => obj.title === category[0])
+    ? constants.articleCategories.find((obj) => obj.title === category[0])
     : category
 
   return (

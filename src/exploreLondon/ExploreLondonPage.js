@@ -24,8 +24,7 @@ const ExploreLondonPage = ({
     <PageIntro
       cta={{
         title: 'Get your venue listed',
-        body:
-          "We'd love to hear from you if you have an LGBT+ or LGBT+ friendly venue and you want to support Pride.",
+        body: "We'd love to hear from you if you have an LGBT+ or LGBT+ friendly venue and you want to support Pride.",
         link: { to: 'mailto:info@prideinlondon.org', text: 'Get in touch' },
       }}
     >
