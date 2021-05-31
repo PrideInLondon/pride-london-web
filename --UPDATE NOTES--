@@ -3,3 +3,6 @@
 May be breaking changes
 react-spring from 8 to 9
 react-markdown 4 to 6
+
+Switch to official once released
+@wojtekmaj/enzyme-adapter-react-17
