@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 import { space } from 'styled-system'
 import { useTransition } from '@react-spring/web'
@@ -7,7 +7,7 @@ import FocusLock from 'react-focus-lock'
 import { noScroll } from '../../utils/style-utils'
 import { spacing } from '../../theme/space'
 import { usePickedProps } from '../../hooks/usePickedProps'
-
+import { useIsomorphicLayoutEffect } from '../../utils'
 import { Background, ModalBody, ModalCard, ModalWrapper } from './Modal.styles'
 import { ModalProps } from './Modal.types'
 
@@ -32,7 +32,7 @@ export const Modal = ({
 
   const firstUpdate = useRef(true)
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     setTimeout(() => {
       isOpen && noScroll.on()
     })

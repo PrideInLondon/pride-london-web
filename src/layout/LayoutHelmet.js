@@ -253,8 +253,8 @@ const LayoutHelmet = ({
       ]}
       htmlAttributes={{
         lang: 'en-GB',
-        itemscope: true,
-        itemtype: 'http://schema.org/WebPage',
+        itemScope: true,
+        itemType: 'http://schema.org/WebPage',
       }}
       script={[
         {
