@@ -1,7 +1,6 @@
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
-import { withInfo } from '@storybook/addon-info'
 import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
@@ -29,12 +28,11 @@ global.__PATH_PREFIX__ = ''
 global.__BASE_PATH__ = ''
 
 // This is to utilized to override the window.___navigate method Gatsby defines and uses to report what path a Link would be taking us to if it wasn't inside a storybook
-window.___navigate = pathname => {
+window.___navigate = (pathname) => {
   action('NavigateTo:')(pathname)
 }
 
 addDecorator(withA11y)
-addDecorator(withInfo)
 addDecorator(withKnobs)
 addParameters({
   info: {
@@ -42,7 +40,7 @@ addParameters({
     maxPropObjectKeys: 10,
   },
 })
-addDecorator(story => (
+addDecorator((story) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />

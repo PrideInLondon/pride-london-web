@@ -1,7 +1,8 @@
-import React, { useState, useLayoutEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
 import { Column } from '../grid'
+import { useIsomorphicLayoutEffect } from '../../utils'
 import { checkBreakpoint } from '../../utils/style-utils'
 import BannerTitle from './BannerTitle'
 import BannerSubtitle from './BannerSubtitle'
@@ -33,7 +34,7 @@ const Banner = ({
   const [height, setHeight] = useState()
   const [width, setWidth] = useState()
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const setDimensions = debounce(function () {
       setWidth(wrapper.current.offsetWidth)
       setHeight(wrapper.current.offsetHeight)

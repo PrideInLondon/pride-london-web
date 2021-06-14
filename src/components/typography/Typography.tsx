@@ -167,5 +167,7 @@ export const P = styled.p<BodyProps>`
 P.defaultProps = {
   variant: 'md',
   color: 'indigo',
-  lineHeight: '1.2',
+  style: {
+    lineHeight: '1.2',
+  },
 }

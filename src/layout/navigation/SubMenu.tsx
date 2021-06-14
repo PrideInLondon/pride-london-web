@@ -1,10 +1,11 @@
-import React, { useRef, useLayoutEffect, RefObject } from 'react'
+import React, { useRef, RefObject } from 'react'
 import shortid from 'shortid'
 import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import theme from '../../theme/theme'
 import { Container } from '../../components/grid'
 import { checkBreakpoint } from '../../utils/style-utils'
 import { handleUrl } from '../../utils/location-utils'
+import { useIsomorphicLayoutEffect } from '../../utils'
 import {
   Panel,
   PanelRow,
@@ -39,7 +40,7 @@ const SubMenu: React.FC<SubMenuProps> = ({
   const panelRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (!checkBreakpoint(theme.navBreakpoint)) {
       panelRef!.current!.style.height = `${
         containerRef!.current!.offsetHeight
