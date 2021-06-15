@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -130,7 +130,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     })
 
-    result.data.genericContentPages.edges.forEach(edge => {
+    result.data.genericContentPages.edges.forEach((edge) => {
       createPage({
         path: `/${edge.node.slug}/`,
         component: GenericContentPage,
@@ -140,7 +140,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     })
 
-    result.data.events.edges.forEach(edge =>
+    result.data.events.edges.forEach((edge) =>
       createPage({
         path: generateEventSlug({ ...edge.node }),
         component: EventPage,
@@ -153,7 +153,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     )
 
-    result.data.articles.edges.forEach(edge => {
+    result.data.articles.edges.forEach((edge) => {
       createPage({
         path: `/${edge.node.slug}/`,
         component: ArticlePage,
