@@ -109,6 +109,16 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
+                    id: 'nav-stalls',
+                    title: 'Stalls',
+                    desc: 'Find out how your business or group can get a stall at Pride.',
+                    url: '/parade/stalls/hire-a-stall/',
+                  }}
+                />
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
                     id: 'nav-events',
                     title: 'Events',
                     url: '/events',
