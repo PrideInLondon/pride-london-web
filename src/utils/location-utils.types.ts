@@ -1,5 +1,4 @@
 import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
-
 export interface RelativeLink {
   to: string
   as: typeof Link
@@ -31,5 +30,3 @@ export interface DefaultLink
   href: string
   as: 'a'
 }
-
-export type LinkProps = DefaultLink | ExternalLink | ContactLink | RelativeLink

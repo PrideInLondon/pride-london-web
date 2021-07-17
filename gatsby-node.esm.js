@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -130,7 +130,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     })
 
-    result.data.genericContentPages.edges.forEach(edge => {
+    result.data.genericContentPages.edges.forEach((edge) => {
       createPage({
         path: `/${edge.node.slug}/`,
         component: GenericContentPage,
@@ -140,7 +140,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     })
 
-    result.data.events.edges.forEach(edge =>
+    result.data.events.edges.forEach((edge) =>
       createPage({
         path: generateEventSlug({ ...edge.node }),
         component: EventPage,
@@ -153,7 +153,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     )
 
-    result.data.articles.edges.forEach(edge => {
+    result.data.articles.edges.forEach((edge) => {
       createPage({
         path: `/${edge.node.slug}/`,
         component: ArticlePage,
@@ -191,10 +191,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
   const typeDefs = `
     type ContentfulBlogArticle implements Node {
-      hero: ContentfulAsset!
+      hero: ContentfulAsset! @link(by: "id", from: "hero___NODE")
       category: String!
       title: String!
-      content: contentfulBlogArticleContentRichTextNode!
+      content: contentfulBlogArticleContentRichTextNode! @link(by: "id", from: "content___NODE")
       author: ContentfulTalentProfile
     }
 
@@ -203,7 +203,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
     }
 
     type ContentfulTalentProfile implements Node {
-      bio: contentfulTalentProfileBioRichTextNode
+      bio: contentfulTalentProfileBioRichTextNode @link(by: "id", from: "bio___NODE")
       website: String
       email: String
       facebook: String

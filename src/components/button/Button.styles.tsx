@@ -9,7 +9,7 @@ import { useSpaceLayoutProps } from '../../hooks/useSpaceLayoutProps'
 import { ButtonAsAnchorProps, ButtonProps } from './Button.types'
 
 type StyledButtonProps =
-  | (ButtonAsAnchorProps & { renderAs: 'a' | typeof Link })
+  | (ButtonAsAnchorProps & { renderAs: 'a' | typeof Link | string })
   | (ButtonProps & { renderAs: 'button' })
 
 export const StyledButton = styled(

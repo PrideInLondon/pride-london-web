@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { CTALink } from '../ctaLink'
 import { handleUrl } from '../../utils/location-utils'
 import {
@@ -22,7 +21,7 @@ export const GridItem: React.FC<GridItemProps> = ({
   ...props
 }) => (
   <StyledGridItem {...props}>
-    <GridItemContent<'a' | 'div' | typeof Link> {...(to && handleUrl(to))}>
+    <GridItemContent<any> {...(to && handleUrl(to))}>
       <div>
         <Title>{title}</Title>
         {to && linkText && <CTALink>{linkText}</CTALink>}

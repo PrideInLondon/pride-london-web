@@ -6,7 +6,6 @@ import React, {
   Dispatch,
   RefObject,
 } from 'react'
-import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import theme from '../../theme/theme'
 import { checkBreakpoint } from '../../utils/style-utils'
 import ChevronDownIcon from '../../components/icons/chevronDownIcon'
@@ -107,21 +106,19 @@ const NavItem: React.FC<NavItemProps> = ({
             />
           )}
         </Fragment>
-      ) : (
-        item?.url && (
-          <MenuLink<'a' | typeof Link>
-            {...handleUrl(item.url)}
-            itemProp="url"
-            onClick={() =>
-              !checkBreakpoint(theme.navBreakpoint) &&
-              setNavOpen &&
-              setNavOpen(false)
-            }
-          >
-            <span itemProp="name">{item.title}</span>
-          </MenuLink>
-        )
-      )}
+      ) : item?.url ? (
+        <MenuLink<any>
+          {...handleUrl(item.url)}
+          itemProp="url"
+          onClick={() =>
+            !checkBreakpoint(theme.navBreakpoint) &&
+            setNavOpen &&
+            setNavOpen(false)
+          }
+        >
+          <span itemProp="name">{item.title}</span>
+        </MenuLink>
+      ) : null}
     </MenuItem>
   )
 }

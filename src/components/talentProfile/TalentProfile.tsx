@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby' // lgtm [js/unused-local-variable]
 import { H6 } from '../../components/typography'
 import { Icon } from '../../components/icon'
 import { handleUrl } from '../../utils/location-utils'
@@ -15,7 +14,7 @@ import {
 const SocialLink: React.FC<SocialLinkProps> = ({ url, name, talentName }) => {
   const descriptiveText = `${talentName}'s ${capitaliseFirst(name)}`
   return (
-    <StyledLink<'a' | 'span' | typeof Link>
+    <StyledLink<any>
       {...handleUrl(url)}
       title={descriptiveText}
       aria-label={descriptiveText}

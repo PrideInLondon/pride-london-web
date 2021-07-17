@@ -1,1 +1,2 @@
-export { PrivacyPage as default } from '../privacy'
+import { PrivacyPage } from '../privacy'
+export default PrivacyPage
