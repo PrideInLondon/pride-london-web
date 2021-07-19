@@ -109,16 +109,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
-                    id: 'nav-stalls',
-                    title: 'Stalls',
-                    desc: 'Find out how your business or group can get a stall at Pride.',
-                    url: '/parade/stalls/hire-a-stall/',
-                  }}
-                />
-                <NavItem
-                  backgroundColor={backgroundColor}
-                  setNavOpen={setOpen}
-                  item={{
                     id: 'nav-events',
                     title: 'Events',
                     url: '/events',
@@ -131,6 +121,16 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     id: 'nav-volunteer',
                     title: 'Volunteer',
                     url: 'https://volunteer.prideinlondon.org',
+                  }}
+                />
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
+                    id: 'nav-accessibility',
+                    title: 'Accessibility',
+                    desc: 'Find out about accessibility at the Pride parade.',
+                    url: '/parade/accessibility',
                   }}
                 />
                 <NavItem

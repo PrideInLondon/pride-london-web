@@ -1,6 +1,5 @@
 import React, { useRef, RefObject } from 'react'
 import shortid from 'shortid'
-import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import theme from '../../theme/theme'
 import { Container } from '../../components/grid'
 import { checkBreakpoint } from '../../utils/style-utils'
@@ -88,7 +87,7 @@ const SubMenu: React.FC<SubMenuProps> = ({
                   <PanelList>
                     {submenuList.links.map((link) => (
                       <li key={link.title}>
-                        <PanelLink<'a' | typeof Link>
+                        <PanelLink<any>
                           {...handleUrl(link.url)}
                           itemProp="url"
                           onClick={() =>

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { color } from 'styled-system'
 import { colors } from '../../theme/colors'
 import { handleUrl } from '../../utils/location-utils'
@@ -34,7 +33,7 @@ export const CTALink: React.FC<CTALinkProps> = ({
   children,
   ...props
 }) => (
-  <StyledLink<'a' | 'span' | typeof Link>
+  <StyledLink<any>
     {...(to ? handleUrl(to) : { as: 'span' })}
     className="cta-link"
     {...props}

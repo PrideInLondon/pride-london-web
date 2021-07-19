@@ -1,5 +1,4 @@
 import Link from 'gatsby-link'
-import { LinkProps } from './location-utils.types'
 
 export const isExternalUrl = (url: string): boolean =>
   /^(http|https|ftp):\/\/.+/.test(url)
@@ -14,7 +13,7 @@ export const handleSlug = (slug: string): string =>
  * Function to determine what properties to determine if Gatsby's Link or
  * regular a tag should be used, and the relevant attributes.
  */
-export const handleUrl = (url: string): LinkProps => {
+export const handleUrl = (url: string) => {
   switch (true) {
     case isExternalUrl(url):
       return {

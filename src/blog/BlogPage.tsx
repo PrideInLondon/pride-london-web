@@ -29,7 +29,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
             gridGap={32}
           >
             {pagedEntries.map(({ node }) => (
-              <BlogArticleSummaryCard {...node} />
+              <BlogArticleSummaryCard key={node?.title} {...node} />
             ))}
           </StyledGalleryContainer>
           <RippedSection
