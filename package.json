@@ -18,7 +18,7 @@
     "test-watch": "yarn jest --watch"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^14.x",
+    "@contentful/rich-text-react-renderer": "^15.x",
     "@contentful/rich-text-types": "^14.x",
     "@rebass/grid": "^6.1.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.x",
