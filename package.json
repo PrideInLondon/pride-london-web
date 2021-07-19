@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.x",
-    "@contentful/rich-text-types": "^14.x",
+    "@contentful/rich-text-types": "^15.x",
     "@rebass/grid": "^6.1.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.x",
     "aria-hidden": "^1.1.3",
