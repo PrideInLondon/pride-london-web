@@ -39,7 +39,7 @@
     "gatsby-source-contentful": "^2.x",
     "gatsby-source-filesystem": "^2.x",
     "gatsby-transformer-sharp": "^2.x",
-    "js-cookie": "^2.2.1",
+    "js-cookie": "^3.0.0",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
