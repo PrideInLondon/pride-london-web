@@ -30,3 +30,11 @@ export interface DefaultLink
   href: string
   as: 'a'
 }
+
+export type LinkProps = {
+  as: string | typeof Link
+  href?: string
+  rel?: string
+  target?: string
+  to?: string
+}
