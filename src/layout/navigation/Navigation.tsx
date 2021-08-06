@@ -95,7 +95,8 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     ],
                   }}
                 />
-                <NavItem
+                {/* To be replaced once arrangements for pride 2022 are confirmed */}
+                {/* <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
@@ -104,7 +105,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     desc: 'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
                     url: '/parade',
                   }}
-                />
+                /> */}
                 <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
@@ -123,7 +124,8 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     url: 'https://volunteer.prideinlondon.org',
                   }}
                 />
-                <NavItem
+                {/* To be replaced once arrangements for pride 2022 are confirmed */}
+                {/* <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
@@ -132,7 +134,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     desc: 'Find out about accessibility at the Pride parade.',
                     url: '/parade/accessibility',
                   }}
-                />
+                /> */}
                 <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}

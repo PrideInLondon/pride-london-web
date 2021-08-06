@@ -4,26 +4,29 @@ import {
   BackgroundImage,
   TextContainer,
   StyledHeader,
-  StyledDescription,
-  StyledButton,
+  // StyledDescription,
+  // StyledButton,
 } from './CampaignContainer.styles'
 
 const ParadeApplications = () => (
   <Container>
     <BackgroundImage />
     <TextContainer>
-      <StyledHeader>Join our #YouMeUsWe campaign!</StyledHeader>
-      <StyledDescription>
+      <StyledHeader>
+        Pride in London calls for Visibility, Unity and Equality
+      </StyledHeader>
+      {/* To be replaced once arrangements for pride 2022 are confirmed */}
+      {/* <StyledDescription>
         This Pride month we're calling on all LGBT+ people to make an act of
         allyship.
-      </StyledDescription>
-      <StyledButton
+      </StyledDescription> */}
+      {/* <StyledButton
         to="https://prideinlondon.org/about-us"
         target="_self"
         id="campaign-you-me-us-we"
       >
         Find out more
-      </StyledButton>
+      </StyledButton> */}
     </TextContainer>
   </Container>
 )
