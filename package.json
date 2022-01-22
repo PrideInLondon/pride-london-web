@@ -123,7 +123,7 @@
     "jest-axe": "^4.x",
     "jest-styled-components": "^7.x",
     "lint-staged": "^11.0.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "prettier": "^2.3.0",
     "prettier-package-json": "^2.6.0",
     "prop-types": "^15.7.2",
