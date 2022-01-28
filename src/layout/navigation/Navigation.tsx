@@ -95,8 +95,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     ],
                   }}
                 />
-                {/* To be replaced once arrangements for pride 2022 are confirmed */}
-                {/* <NavItem
+                <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
@@ -105,7 +104,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     desc: 'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
                     url: '/parade',
                   }}
-                /> */}
+                />
                 <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
