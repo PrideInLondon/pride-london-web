@@ -3,7 +3,7 @@ import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { Button } from '../components/button'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
-import CampaignContainerBg from '../campaigns/visibilityUnityEquality/assets/PiL_VUE_1920x2000.jpg'
+import CampaignContainerBg from '../campaigns/visibilityUnityEquality/assets/PiL_VUE_1920x2000-min.jpg'
 
 export const Container = styled.div`
   display: flex;

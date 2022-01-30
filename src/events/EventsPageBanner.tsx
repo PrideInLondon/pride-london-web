@@ -48,9 +48,8 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
           <ComingOut />
           <Title>
             <del>Coming Out</del>
-            <ins>Staying In</ins>
           </Title>
-          <P marginBottom={'lg'} color={colors.white}>
+          <P marginBottom="lg" color={colors.white}>
             The new way to find the best queer events for the queer community
             from Pride in London.
           </P>
