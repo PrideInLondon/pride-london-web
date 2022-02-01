@@ -21,10 +21,7 @@ const ComingOutWrapper = styled.div`
 export const ComingOut: React.FC = () => {
   return (
     <ComingOutWrapper aria-hidden="true">
-      <img
-        src={headline}
-        alt="Text 'Staying In' written over the top of 'Coming Out'"
-      />
+      <img src={headline} alt="Text saying 'Coming Out'" />
     </ComingOutWrapper>
   )
 }
