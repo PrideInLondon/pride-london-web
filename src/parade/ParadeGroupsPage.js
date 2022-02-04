@@ -46,7 +46,7 @@ const ParadeGroupsPage = ({ data: { paradeGroups } }) => (
         and bisexual communities than ever before.
       </TextContainer>
       <TextContainer>
-        Applications for the 2021 parade will open closer to the date. Further
+        Applications for the 2022 parade will open closer to the date. Further
         information will be announced in due course.
       </TextContainer>
       <ParadeGroups

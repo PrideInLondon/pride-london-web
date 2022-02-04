@@ -134,7 +134,8 @@ const MiddleSection = ({
 const LowerSection = () => (
   <LegalContainer>
     <P variant="sm">
-      &copy;2021 London LGBT+ Community Pride C.I.C. All rights reserved.
+      &copy;{new Date().getFullYear()} London LGBT+ Community Pride C.I.C. All
+      rights reserved.
     </P>
     <LegalLinksContainer>
       {[
