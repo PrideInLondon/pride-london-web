@@ -18,9 +18,6 @@ import {
 } from './PartnersPage.styles'
 import { ContentfulSponsor, SponsorLevel } from './PartnersPage.types'
 
-const PARTNERSHIP_PACKAGES_LINK =
-  'https://assets.ctfassets.net/0ho16wyr4i9n/2qiM6XcxpwmT2YY9g2hka/361aba69bffe4592f898f15faf61beff/Pride_in_London_2020_Partnerships.pdf'
-
 const PartnersPage = ({
   data: {
     allContentfulSponsor: { edges },
@@ -73,10 +70,6 @@ const PartnersPage = ({
           are seeing workplaces transform for the better. Pride in London are
           proud to be working with our partners to ensure diversity is embedded
           in the core of each company we work with.
-        </p>
-        <p>
-          For more information download information on the{' '}
-          <a href={PARTNERSHIP_PACKAGES_LINK}>2020 Partnership Packages.</a>
         </p>
       </PageIntro>
       <Container>
