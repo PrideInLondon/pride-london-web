@@ -95,7 +95,7 @@ const ParadeMapPage = () => (
             ll: `51.51004, -0.14001`,
             hl: `en`,
             output: `embed`,
-            t: 'm',
+            //t: 'm',
             style: 'feature:poi|visibility:off',
           })}`}
           allowFullScreen
