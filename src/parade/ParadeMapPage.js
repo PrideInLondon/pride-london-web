@@ -1,27 +1,27 @@
 import querystring from 'querystring'
 import React from 'react'
-import appStoreBadge from '../assets/appStore.svg'
-import googlePlayBadge from '../assets/googlePlayStore.svg'
+// import appStoreBadge from '../assets/appStore.svg'
+// import googlePlayBadge from '../assets/googlePlayStore.svg'
 import { Column } from '../components/grid'
-import { Button } from '../components/button'
+// import { Button } from '../components/button'
 import {
   ParadeMapContainer,
   ParadeMapContent,
   Title,
   SubTitle,
   Map,
-  DownloadPDFLinkMobile,
-  DownloadAppLabel,
-  AppDownloadButtons,
-  AppDownloadButton,
+  // DownloadPDFLinkMobile,
+  // DownloadAppLabel,
+  // AppDownloadButtons,
+  // AppDownloadButton,
 } from './ParadeMapPage.styles'
 
-const googlePlayUrl =
-  'https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en'
-const appStoreUrl =
-  'https://itunes.apple.com/gb/app/pride-in-london/id1250496471'
-const mapPdfLink =
-  'https://assets.ctfassets.net/0ho16wyr4i9n/73s6Ny4Ota2DFEt4AjbfQm/20ac5456111dbc0d177a7c0688bef835/Pride_in_London_Parade_Map_2019.pdf'
+// const googlePlayUrl =
+//   'https://play.google.com/store/apps/details?id=org.prideinlondon.festival&hl=en'
+// const appStoreUrl =
+//   'https://itunes.apple.com/gb/app/pride-in-london/id1250496471'
+// const mapPdfLink =
+//   'https://assets.ctfassets.net/0ho16wyr4i9n/73s6Ny4Ota2DFEt4AjbfQm/20ac5456111dbc0d177a7c0688bef835/Pride_in_London_Parade_Map_2019.pdf'
 
 const ParadeMapPage = () => (
   <>
@@ -37,11 +37,9 @@ const ParadeMapPage = () => (
           <Title>Parade map</Title>
           <SubTitle>
             We've created an interactive map to help you find your way around on
-            Parade day. Use it to find the best place to watch the Parade, find
-            your way to our different stages/areas and find important amenities
-            like water refill stations and toilets.
+            Parade day.
           </SubTitle>
-          {mapPdfLink && (
+          {/* {mapPdfLink && (
             <Button
               to={mapPdfLink}
               marginBottom="30px"
@@ -49,8 +47,8 @@ const ParadeMapPage = () => (
             >
               Download map as a PDF
             </Button>
-          )}
-          <DownloadAppLabel>
+          )} */}
+          {/* <DownloadAppLabel>
             There's always poor internet connection on the day, so it's a good
             idea to download our app to carry the map with you offline.
           </DownloadAppLabel>
@@ -74,8 +72,8 @@ const ParadeMapPage = () => (
                 src={googlePlayBadge}
               />
             </AppDownloadButton>
-          </AppDownloadButtons>
-          {mapPdfLink && (
+          </AppDownloadButtons> */}
+          {/* {mapPdfLink && (
             <DownloadPDFLinkMobile
               href={mapPdfLink}
               rel="noopener noreferrer"
@@ -83,7 +81,7 @@ const ParadeMapPage = () => (
             >
               Download map as a PDF
             </DownloadPDFLinkMobile>
-          )}
+          )} */}
         </ParadeMapContent>
       </Column>
       <Column width={[1, 1, 0.5, 0.55, 0.6]} pt={[0]} px={0} pb={0}>
