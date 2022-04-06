@@ -103,23 +103,23 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     title: 'Parade',
                     desc: 'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
                     url: '/parade',
-                    // submenu: [
-                    //   {
-                    //     heading: 'Information',
-                    //     links: [
-                    //       {
-                    //         title: 'Pride in London parade information',
-                    //         url: '/parade',
-                    //       },
-                    //     ],
-                    //   },
-                    //   {
-                    //     heading: 'Map',
-                    //     links: [
-                    //       { title: 'London parade route', url: '/parade/map' },
-                    //     ],
-                    //   },
-                    // ],
+                    submenu: [
+                      {
+                        heading: 'Information',
+                        links: [
+                          {
+                            title: 'Pride in London parade information',
+                            url: '/parade',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'Map',
+                        links: [
+                          { title: 'London parade route', url: '/parade/map' },
+                        ],
+                      },
+                    ],
                   }}
                 />
                 <NavItem
