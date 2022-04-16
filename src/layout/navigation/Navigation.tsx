@@ -63,7 +63,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: 'Pride',
                         links: [
                           { title: 'Our story', url: '/about-us' },
-                          { title: 'Our impact', url: '/about-us/impact' },
                           {
                             title: "Pride's Got Talent",
                             url: '/pgt',
@@ -71,15 +70,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           {
                             title: 'Unity Fund',
                             url: '/unity-fund',
-                          },
-                        ],
-                      },
-                      {
-                        heading: 'Exhibition',
-                        links: [
-                          {
-                            title: 'Fifty-Two',
-                            url: '/fifty-two',
                           },
                         ],
                       },

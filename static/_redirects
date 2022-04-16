@@ -39,7 +39,8 @@
 /hire-a-stall     /parade/community-village/hire-a-stall     301!
 /hire-a-stall/stalls-application     /parade/community-village/stalls-application     301!
 /hire-a-stall/terms     /parade/community-village/hire-a-stall/terms     301!
-/impact-report-2018     /about-us/impact     301!
+/impact-report-2018     /about-us     301!
+/about-us/impact        /about-us     301!
 /join-the-parade     /parade     301!
 /jubilee      /about-us/campaigns/jubilee     301! 
 /news     /news-and-views     301!
@@ -134,7 +135,6 @@
 /who-we-are     /about-us     301!
 /why-we-exist     /about-us/why-we-exist     301!
 /rbl     /parade/residents-and-businesses-info    301!
-https://events.prideinlondon.org/*     /events      301!
 /s/PIL19_PARADE_GUIDANCE_WALKING_GROUPS_V1.pdf https://assets.ctfassets.net/0ho16wyr4i9n/zn4QyPTfYm5yqoLeTUIM5/2a1b61d3e95783e651b73d37170f6784/PIL19_PARADE_GUIDANCE_WALKING_GROUPS_V1.pdf 301!
 /s/PIL19_PARADE_GUIDANCE_FLOATS_GROUPS_V1.pdf https://assets.ctfassets.net/0ho16wyr4i9n/5u4nHIvImpD8wHEn5jmF54/d91184d22fa4031f10bf925621b63e03/PIL19_PARADE_GUIDANCE_FLOATS_GROUPS_V1.pdf 301!
 /prides-got-talent-finalists-compete-to-be-crowned-uks-next-biggest-lgbt /news-and-views/prides-got-talent-finalists-compete-to-be-crowned-uks-next-biggest-lgbt 301!
@@ -213,3 +213,13 @@ https://events.prideinlondon.org/*     /events      301!
 /events/prides-got-talent/audition/terms-and-conditions /pgt/terms 301!
 /ymuw/apply /about-us 301!
 /ymuw /about-us 301!
+
+/about-us/impact    /about-us 301!
+/fifty-two    /about-us 301!
+/fifty-two/terms    /about-us 301!
+/fifty-two/faqs     /about-us 301!
+/fifty-two/panellists     /about-us 301!
+/about-us/campaigns/you-me-us-we    /about-us 301!
+/about-us/campaigns/you-me-us-we/casting-call     /about-us 301!
+/fifty-two/*     /    301!
+https://events.prideinlondon.org/*     /events      301!
