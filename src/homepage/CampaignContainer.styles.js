@@ -3,9 +3,10 @@ import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { Button } from '../components/button'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
-import CampaignContainerBg from '../campaigns/visibilityUnityEquality/assets/PiL_VUE_1920x2000-min.jpg'
+import CampaignContainerBg from '../campaigns/proudAndLoud/Calum_Hailey_16-9.jpg'
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -13,21 +14,55 @@ export const Container = styled.div`
 
   ${mediaQueries.md} {
     flex-direction: row;
-    margin-left: 90px;
     margin-top: 100px;
+  }
+`
+
+export const StyledButton = styled(Button)`
+  width: 100%;
+  font-size: 15px;
+
+  ${mediaQueries.md} {
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0%;
+    max-width: calc(100% - 75%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: calc(250px - 19%);
+  }
+
+  @media screen and (min-width: 964px) {
+    position: absolute;
+    bottom: unset;
+    left: 0;
+    right: 0;
+    top: 500px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `
 
 export const BackgroundImage = styled.div`
   background-image: url(${CampaignContainerBg});
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   width: 100%;
-  height: 300px;
+  height: 200px;
 
+  ${mediaQueries.sm} {
+    height: 250px;
+  }
+  @media screen and (min-width: 425px) {
+    margin-bottom: 20px;
+  }
   ${mediaQueries.md} {
     height: 615px;
+    margin-bottom: 0;
   }
 `
 
@@ -74,16 +109,6 @@ export const StyledDescription = styled.p`
   ${mediaQueries.md} {
     color: ${colors.indigo};
     font-size: 22px;
-  }
-`
-
-export const StyledButton = styled(Button)`
-  width: 90%;
-  font-size: 15px;
-
-  ${mediaQueries.md} {
-    margin-right: 64px;
-    font-size: 18px;
   }
 `
 
