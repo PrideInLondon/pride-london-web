@@ -109,6 +109,24 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           { title: 'London parade route', url: '/parade/map' },
                         ],
                       },
+                      {
+                        heading: 'Stalls',
+                        links: [
+                          {
+                            title: 'Hire a stall',
+                            url: '/parade/stalls/hire-a-stall/terms/',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'Grandstand',
+                        links: [
+                          {
+                            title: 'Grandstand Tickets',
+                            url: 'https://www.outsavvy.com/event/8468/pride-in-london-2022-parade-grandstand',
+                          },
+                        ],
+                      },
                     ],
                   }}
                 />
