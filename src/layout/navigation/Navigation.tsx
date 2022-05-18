@@ -82,6 +82,15 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           },
                         ],
                       },
+                      {
+                        heading: 'Comms',
+                        links: [
+                          {
+                            title: 'Media Centre',
+                            url: '/media-centre/',
+                          },
+                        ],
+                      },
                     ],
                   }}
                 />
