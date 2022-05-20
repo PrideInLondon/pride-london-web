@@ -152,22 +152,21 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
-                    id: 'nav-volunteer',
-                    title: 'Volunteer',
-                    url: 'https://volunteer.prideinlondon.org',
-                  }}
-                />
-                {/* To be replaced once arrangements for pride 2022 are confirmed */}
-                {/* <NavItem
-                  backgroundColor={backgroundColor}
-                  setNavOpen={setOpen}
-                  item={{
                     id: 'nav-accessibility',
                     title: 'Accessibility',
                     desc: 'Find out about accessibility at the Pride parade.',
                     url: '/parade/accessibility',
                   }}
-                /> */}
+                />
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
+                    id: 'nav-volunteer',
+                    title: 'Volunteer',
+                    url: 'https://volunteer.prideinlondon.org',
+                  }}
+                />
                 <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
