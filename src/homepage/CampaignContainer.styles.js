@@ -3,65 +3,58 @@ import Link from 'gatsby-link' // lgtm [js/unused-local-variable]
 import { Button } from '../components/button'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
-import CampaignContainerBg from '../campaigns/proudAndLoud/Calum_Hailey_16-9.jpg'
+import CampaignContainerBg from '../campaigns/proudAndLoud/ArtistCombo_16-9_new1.jpg'
 
 export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+
   margin: 20px;
   margin-bottom: 64px;
 
-  ${mediaQueries.md} {
+  @media screen and (min-width: 1350px) {
     flex-direction: row;
     margin-top: 100px;
+  }
+`
+
+export const BackgroundImageButton = styled(Button)`
+  display: none;
+  ${mediaQueries.md} {
+    display: block;
+    position: absolute;
+    bottom: 8%;
+    left: calc(50% - 340px);
+  }
+
+  @media screen and (min-width: 820px) {
+    bottom: 5%;
   }
 `
 
 export const StyledButton = styled(Button)`
   width: 100%;
   font-size: 15px;
-
   ${mediaQueries.md} {
-    font-size: 18px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0%;
-    max-width: calc(100% - 75%);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: calc(250px - 19%);
-  }
-
-  @media screen and (min-width: 964px) {
-    position: absolute;
-    bottom: unset;
-    left: 0;
-    right: 0;
-    top: 500px;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    display: none;
   }
 `
 
 export const BackgroundImage = styled.div`
+  position: relative;
   background-image: url(${CampaignContainerBg});
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
   width: 100%;
   height: 200px;
-
   ${mediaQueries.sm} {
     height: 250px;
   }
-  @media screen and (min-width: 425px) {
-    margin-bottom: 20px;
-  }
+
   ${mediaQueries.md} {
-    height: 615px;
+    height: 450px;
     margin-bottom: 0;
   }
 `
@@ -70,31 +63,40 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: ${colors.white};
-  text-align: left;
   border-radius: 7px;
 
-  width: 100%;
-  padding: 0;
+  text-align: center;
+  position: relative;
   margin-top: 10px;
 
   ${mediaQueries.md} {
     margin: 32px;
-    margin-left: -128px;
-    width: 50%;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1350px) {
+    text-align: left;
+    position: absolute;
+    right: 20px;
+    margin: 0px;
+    width: 25%;
     padding: 58px;
   }
 `
 
 export const StyledHeader = styled.h2`
   margin: 0;
-  font-size: 2.25rem;
   font-weight: 800;
-  line-height: 1.17;
   letter-spacing: normal;
+  font-size: 0.8rem;
+  line-height: 1.21;
+  background-color: ${colors.white};
+  padding: 5px;
+  border-radius: 7px;
 
   ${mediaQueries.md} {
-    font-size: 3.5rem;
+    font-size: 2rem;
     line-height: 1.21;
   }
 `
