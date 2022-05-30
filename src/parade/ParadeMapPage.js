@@ -88,7 +88,7 @@ const ParadeMapPage = () => (
         <Map
           frameBorder="0"
           src={`https://www.google.com/maps/d/embed?${querystring.encode({
-            mid: process.env.GATSBY_PARADE_MAP_ID,
+            mid: '1c_zcSHIRaNRHVdWQ557-3n3b5JNigHP5',
             z: 15,
             ll: `51.51004, -0.14001`,
             hl: `en`,
