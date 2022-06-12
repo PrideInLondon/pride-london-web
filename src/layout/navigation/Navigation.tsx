@@ -110,6 +110,10 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: 'Pride in London parade information',
                             url: '/parade',
                           },
+                          {
+                            title: 'Residents & Businesses Info',
+                            url: '/parade/residents-and-businesses-info',
+                          },
                         ],
                       },
                       {
