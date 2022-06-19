@@ -5,6 +5,7 @@ import theme from '../theme/theme'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
 import { Banner } from '../components/banner'
+import { Button } from '../components/button'
 import VolunteerBoxInfo from './VolunteerBoxInfo'
 import CampaignContainer from './CampaignContainer'
 import LatestNewsContainer from './LatestNewsContainer'
@@ -19,6 +20,16 @@ const Divider = styled.hr`
   ${mediaQueries.md} {
     display: none;
   }
+`
+
+export const Container = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  margin-bottom: 0;
 `
 
 const HomePage = ({
@@ -38,6 +49,25 @@ const HomePage = ({
       fixed={childImageSharp}
     />
     <CampaignContainer />
+    <Divider />
+    <Container>
+      <p
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '20px',
+          fontWeight: 600,
+          color: '#2D2F7F',
+        }}
+      >
+        Looking for more information about Pride in London{' '}
+        {new Date().getFullYear()} and what to do on the day?
+      </p>
+      <Button to="/help">Find out more</Button>
+    </Container>
+
     <Divider />
     <Donate />
     <VolunteerBoxInfo />
