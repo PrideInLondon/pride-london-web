@@ -123,6 +123,29 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                       {
+                        heading: 'Stages',
+                        links: [
+                          {
+                            title: 'Trafalgar Square Stage',
+                            url: '/event/trafalgar-square-stage-2jYwE4ea09wMCXvKc05Bxk',
+                          },
+                          {
+                            title: 'Leicester Square Stage',
+                            url: '/event/leicester-square-stage-2qqkVYzLS6MebTgxWMm1t2',
+                          },
+                          {
+                            title: 'Soho Stage',
+                            url: '/event/soho-stage-dean-street-6dAu9pWL0V6g1bSudrW0KM',
+                          },
+                          {
+                            title: 'Golden Square Stage',
+                            url: '/event/golden-square-stage-4JUifwUxWnrE4kQxszjpyg',
+                          },
+
+                          { title: 'London parade route', url: '/parade/map' },
+                        ],
+                      },
+                      {
                         heading: 'Stalls',
                         links: [
                           {
