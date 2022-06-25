@@ -141,8 +141,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: 'Golden Square Stage',
                             url: '/event/golden-square-stage-4JUifwUxWnrE4kQxszjpyg',
                           },
-
-                          { title: 'London parade route', url: '/parade/map' },
                         ],
                       },
                       {
