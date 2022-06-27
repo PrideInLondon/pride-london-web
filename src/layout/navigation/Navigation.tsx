@@ -144,15 +144,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                       {
-                        heading: 'Stalls',
-                        links: [
-                          {
-                            title: 'Hire a stall',
-                            url: '/parade/stalls/hire-a-stall',
-                          },
-                        ],
-                      },
-                      {
                         heading: 'Grandstand',
                         links: [
                           {
