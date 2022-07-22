@@ -33,7 +33,7 @@
     "gatsby-plugin-remove-serviceworker": "^1.x",
     "gatsby-plugin-robots-txt": "^1.x",
     "gatsby-plugin-rollbar": "^1.x",
-    "gatsby-plugin-sharp": "^2.x",
+    "gatsby-plugin-sharp": "^3.13.0",
     "gatsby-plugin-sitemap": "^2.x",
     "gatsby-plugin-styled-components": "^3.x",
     "gatsby-source-contentful": "^2.x",
