@@ -40,7 +40,7 @@ const HomePage = ({
   <Fragment>
     <Banner
       titleText="Pride in London"
-      subtitleText="2 Jul 2022 - The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community."
+      subtitleText="1 Jul 2023 - The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community."
       titlePosition="bottom"
       color={theme.colors.eucalyptusGreen}
       large
