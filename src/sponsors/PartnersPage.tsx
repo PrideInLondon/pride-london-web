@@ -74,9 +74,7 @@ const PartnersPage = ({
       <Container>
         <Row>
           <Column>
-            <ListTitle>
-              Thank you to our {new Date().getFullYear()} partners
-            </ListTitle>
+            <ListTitle>Thank you to our 2022 partners</ListTitle>
             <p>
               A huge thank you to all of the brands that have supported us over
               the years.

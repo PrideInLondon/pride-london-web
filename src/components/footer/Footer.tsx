@@ -1,7 +1,6 @@
 import React from 'react'
 import { IntercomAPI } from 'react-intercom'
 import { capitaliseFirst } from '../../utils/string-utils'
-import { getCurrentYear } from '../../utils'
 import { groupSponsorsByLevel } from '../../sponsors'
 import { Sponsor, SponsorLevel } from '../../sponsors/PartnersPage.types'
 import { Icon } from '../icon'
@@ -101,7 +100,7 @@ const MiddleSection = ({
   sponsors: { [key in SponsorLevel]?: Sponsor[] }
 }) => (
   <>
-    <H6 mb="md">Thank you to our {getCurrentYear()} partners</H6>
+    <H6 mb="md">Thank you to our 2022 partners</H6>
     <LogoContainer>
       {SPONSOR_ORDER.map(
         (level) =>
