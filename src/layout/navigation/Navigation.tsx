@@ -152,7 +152,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         links: [
                           {
                             title: 'Grandstand Tickets',
-                            url: 'https://www.outsavvy.com/event/8468/pride-in-london-2022-parade-grandstand',
+                            url: 'https://www.outsavvy.com/event/14259/pride-in-london-2023-parade-grandstand',
                           },
                         ],
                       },
