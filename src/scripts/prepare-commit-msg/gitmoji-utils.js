@@ -3,7 +3,7 @@ const path = require('path')
 const fetch = require('node-fetch')
 
 const GITMOJIS_URL =
-  'https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json'
+  'https://raw.githubusercontent.com/carloscuesta/gitmoji/master/packages/gitmojis/src/gitmojis.json'
 
 const CACHE_DIR = path.join(__dirname, '../../../', '.commit-msg')
 
