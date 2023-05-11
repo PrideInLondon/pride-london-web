@@ -11,7 +11,6 @@ export const BackgroundVolunteer = styled.div`
   background-repeat: no-repeat;
   background-position: center center;
   height: 270px;
-  margin-top: 50px;
 
   ${media.tablet`
     background-image: url(${volunteerBg});

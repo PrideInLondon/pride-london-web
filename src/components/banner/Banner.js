@@ -116,7 +116,7 @@ Banner.propTypes = {
   medium: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageFullWidth: PropTypes.bool,
-  subtitleText: PropTypes.string,
+  subtitleText: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   titleText: PropTypes.string,
   titlePosition: PropTypes.oneOf(['top', 'bottom']),
   color: PropTypes.string,

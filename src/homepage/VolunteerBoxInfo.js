@@ -18,8 +18,8 @@ const VolunteerBoxInfo = () => (
               Pride in London is run almost entirely by volunteers. We could use
               people like you to help us organise the best event that we can.
             </p>
-            <Button to="https://volunteer.prideinlondon.org">
-              Help keep Pride going
+            <Button to="https://prideinlondon.rosterfy.com/register">
+              Register interest now
             </Button>
           </ContentVolunteer>
         </Column>

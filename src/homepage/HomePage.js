@@ -7,7 +7,7 @@ import { mediaQueries } from '../theme/mediaQueries'
 import { Banner } from '../components/banner'
 import { Button } from '../components/button'
 import VolunteerBoxInfo from './VolunteerBoxInfo'
-import CampaignContainer from './CampaignContainer'
+//import CampaignContainer from './CampaignContainer'
 import LatestNewsContainer from './LatestNewsContainer'
 import Announcements from './Announcements'
 import Donate from './Donate'
@@ -32,6 +32,12 @@ export const Container = styled.div`
   margin-bottom: 0;
 `
 
+const subtitles = [
+  '1 Jul 2023 - The UK’s biggest, most diverse Pride.',
+  <br />,
+  'A home for every part of London’s LGBT+ community.',
+]
+
 const HomePage = ({
   data: {
     file: { childImageSharp },
@@ -40,17 +46,17 @@ const HomePage = ({
   <Fragment>
     <Banner
       titleText="Pride in London"
-      subtitleText="1 Jul 2023 - The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community."
+      subtitleText={subtitles}
       titlePosition="bottom"
       color={theme.colors.eucalyptusGreen}
       large
       allowContentUnderflow
       videoId="791429324"
       fixed={childImageSharp}
-    />
-    <CampaignContainer />
-    <Divider />
-    <Container>
+    >
+      <Button to="/help">What's on</Button>
+    </Banner>
+    {/*<Container>
       <p
         style={{
           display: 'flex',
@@ -65,14 +71,16 @@ const HomePage = ({
         Looking for more information about Pride in London{' '}
         {new Date().getFullYear()} and what to do on the day?
       </p>
-      <Button to="/help">Find out more</Button>
-    </Container>
-
-    <Divider />
-    <Donate />
+      </Container>*/}
     <VolunteerBoxInfo />
+    <Divider />
+    {/*<CampaignContainer />*/}
     <Announcements />
     <LatestNewsContainer />
+    <Divider />
+    <Donate />
+    {/*<Donate />*/}
+    {/**/}
   </Fragment>
 )
 

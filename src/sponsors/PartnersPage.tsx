@@ -29,7 +29,9 @@ const PartnersPage = ({
     <>
       <Banner
         titleText="Partner with us"
-        subtitleText="Find out how your company can help us to keep Pride free for everyone"
+        subtitleText={[
+          'Find out how your company can help us to keep Pride free for everyone',
+        ]}
         color={theme.colors.yellow}
         imageSrc={bannerBackground}
         imageFullWidth

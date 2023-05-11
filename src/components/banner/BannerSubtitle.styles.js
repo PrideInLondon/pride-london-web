@@ -12,7 +12,6 @@ export const StyledBannerSubtitle = styled.h2`
   box-shadow: 7px 0 0 3px ${theme.colors.indigo},
     -7px 0 0 3px ${theme.colors.indigo};
   box-decoration-break: clone;
-  margin-bottom: 0;
 
   ${media.tablet`  
     font-size: 1.5rem;
@@ -23,14 +22,14 @@ export const StyledBannerSubtitle = styled.h2`
 `
 
 export const BannerSubtitleWrapper = styled.div`
-  max-width: 255px;
   margin-left: 10px;
+  margin-bottom: 10px;
 
   ${media.tablet`  
-    max-width: 520px;
+    max-width: 85%;
   `};
 
   ${media.desktop`  
-    max-width: 600px;
+    max-width: 66%;
   `};
 `
