@@ -123,7 +123,7 @@ const PartnersPage = ({
                   },
                   {
                     level: constants.sponsorLevels.partners,
-                    title: 'Partners',
+                    title: 'Advocates',
                   },
                   {
                     level: constants.sponsorLevels.supporters,
