@@ -100,7 +100,7 @@ const MiddleSection = ({
   sponsors: { [key in SponsorLevel]?: Sponsor[] }
 }) => (
   <>
-    <H6 mb="md">Thank you to our 2023 partners</H6>
+    <H6 mb="md">Welcome to our 2023 partners</H6>
     <LogoContainer>
       {SPONSOR_ORDER.map(
         (level) =>

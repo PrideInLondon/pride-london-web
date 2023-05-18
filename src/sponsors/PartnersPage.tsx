@@ -76,10 +76,10 @@ const PartnersPage = ({
       <Container>
         <Row>
           <Column>
-            <ListTitle>Thank you to our 2023 partners</ListTitle>
+            <ListTitle>Welcome to our 2023 partners</ListTitle>
             <p>
-              A huge thank you to all of the brands that have supported us over
-              the years.
+              A huge thank you to all of the brands that are supporting us this
+              year.
             </p>
             <MainSponsorsContainer>
               {(
