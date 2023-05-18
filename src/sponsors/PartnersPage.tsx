@@ -129,10 +129,10 @@ const PartnersPage = ({
                     level: constants.sponsorLevels.supporters,
                     title: 'Supporters',
                   },
-                  {
-                    level: constants.sponsorLevels.mediaPartners,
-                    title: 'Media Partners',
-                  },
+                  //{
+                  //  level: constants.sponsorLevels.mediaPartners,
+                  //  title: 'Media Partners',
+                  //},
                   {
                     level: constants.sponsorLevels.digitalPartners,
                     title: 'Digital Partners',
