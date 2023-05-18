@@ -163,15 +163,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
-                    id: 'nav-events',
-                    title: 'Events',
-                    url: '/events',
-                  }}
-                />
-                <NavItem
-                  backgroundColor={backgroundColor}
-                  setNavOpen={setOpen}
-                  item={{
                     id: 'nav-accessibility',
                     title: 'Accessibility',
                     desc: 'Find out about accessibility at the Pride parade.',
@@ -204,6 +195,15 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     Support Pride
                   </SupportButton>
                 </NavItem>
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
+                    id: 'nav-visitor',
+                    title: 'Visiting London',
+                    url: '/explore-london/',
+                  }}
+                />
               </Menu>
             </nav>
           </FlexColumn>
