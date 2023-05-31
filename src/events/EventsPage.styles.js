@@ -1,26 +1,23 @@
 import styled from 'styled-components'
-import { mediaQueries } from '../theme/mediaQueries'
-import { Column } from '../components/grid'
+import { color } from 'styled-system'
+import { media } from '../theme/media'
+import { Column, Container } from '../components/grid'
 import { colors } from '../theme/colors'
-import mainBackground2880 from './mainBackground2880.jpg'
-import mainBackground1600 from './mainBackground1600.jpg'
-import mainBackground1024 from './mainBackground1024.jpg'
-import mainBackground768 from './mainBackground768.jpg'
 
 export const ColumnPagination = styled(Column)`
   text-align: center;
   padding-bottom: 20px;
 
-  ${mediaQueries.md} {
+  ${media.tablet`
     padding-top: 50px;
     padding-bottom: 60px;
-  }
+  `};
 `
 
 export const EventCount = styled.p`
   font-size: 0.875rem;
   line-height: 1.214;
-  color: ${colors.white};
+  color: ${colors.indigo};
 `
 
 export const ListingCardWrapper = styled.div`
@@ -29,28 +26,46 @@ export const ListingCardWrapper = styled.div`
   flex-basis: 100%;
 `
 
-export const Background = styled.div`
-  background-color: ${colors.raisinBlack};
-  background-size: 100% auto;
-  background-image: url(${mainBackground768});
+export const PageWrapper = styled.div`
+  ${color}
+`
+export const ExplainerContainer = styled(Column)`
+  background-color: ${colors.white};
+  position: fixed;
+  padding-top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: left 0.15s linear, visibility 0s 0.15s linear;
+  visibility: hidden;
+  top: 0;
+  left: 100%;
+  z-index: 2;
 
-  ${mediaQueries.md} {
-    background-image: url(${mainBackground1024});
+  &.open {
+    transition: left 0.15s linear, visibility 0s 0s linear;
+    left: 0;
+    visibility: visible;
   }
 
-  ${mediaQueries.lg} {
-    background-image: url(${mainBackground1600});
-  }
+  ${media.tablet`
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding-top: 20px;
+    visibility: visible;
+  `};
+`
 
-  ${mediaQueries.retina2x} {
-    background-image: url(${mainBackground1024});
+export const InsetContainer = styled(Container)`
+  ${media.tablet`
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+  `};
+`
 
-    ${mediaQueries.md} {
-      background-image: url(${mainBackground1600});
-    }
-
-    ${mediaQueries.lg} {
-      background-image: url(${mainBackground2880});
-    }
-  }
+export const BackgroundContainer = styled(PageWrapper)`
+  background-color: ${colors.bondiBlue};
 `

@@ -6,6 +6,7 @@ import { Button } from '../components/button/Button'
 
 const CardWrapper = styled.div`
   padding-left: 20px;
+  background-color: ${colors.indigo};
   margin-bottom: 40px;
   ${mediaQueries.md} {
     padding-left: 30px;
@@ -19,7 +20,7 @@ const CardTitle = styled.h3`
   font-size: 2rem;
   line-height: 1.19;
   font-weight: bold;
-  color: ${colors.white};
+  color: ${colors.eucalyptusGreen};
 
   ${mediaQueries.md} {
     font-size: 2rem;
@@ -27,7 +28,7 @@ const CardTitle = styled.h3`
   }
 `
 const CardDescription = styled.p`
-  color: ${colors.white};
+  color: ${colors.eucalyptusGreen};
   padding-right: 30px;
   font-size: 1.125rem;
   line-height: 26px;
@@ -43,7 +44,7 @@ const EventListingPromotionCard: React.FC = () => (
     <Button
       to="/events/list-your-event"
       width={{ default: '100%', md: 'auto' }}
-      variant="outline-white"
+      variant="primary"
     >
       Find out more
     </Button>
