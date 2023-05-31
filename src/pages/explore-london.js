@@ -3,6 +3,21 @@ import { ExploreLondonPage } from '../exploreLondon'
 
 export const query = graphql`
   query CommunityPartnersQuery {
+    file(relativePath: { regex: "/exploreLondon/heroImage/" }) {
+      size
+      name
+      childImageSharp {
+        desktop: fixed(width: 1600, quality: 100) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+        tablet: fixed(width: 800, quality: 100) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+        mobile: fixed(width: 400, quality: 100) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
     allContentfulCommunityPartner(sort: { fields: venueName, order: ASC }) {
       edges {
         node {
