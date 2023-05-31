@@ -60,7 +60,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     url: '/',
                     submenu: [
                       {
-                        heading: 'Pride',
+                        heading: 'Pride in London',
                         links: [
                           {
                             title: 'Our story',
