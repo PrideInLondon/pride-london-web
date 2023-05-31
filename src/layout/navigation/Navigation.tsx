@@ -168,20 +168,16 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: 'Pride Festival',
                         links: [
                           {
-                            title: "This year's festival",
-                            url: '/events/festival',
-                          },
-                          {
                             title: "What's on",
                             url: '/events',
                           },
                           {
-                            title: 'Host an event',
-                            url: '/events/host-an-event',
+                            title: 'About',
+                            url: '/events/festival',
                           },
                           {
-                            title: 'Download our app',
-                            url: '/app',
+                            title: 'Join your event',
+                            url: '/events/list-your-event',
                           },
                         ],
                       },
