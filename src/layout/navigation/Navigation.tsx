@@ -10,7 +10,7 @@ import {
   StyledLogo,
   Menu,
   Burger,
-  SupportButton,
+  //SupportButton,
 } from './Navigation.styles'
 import { NavigationProps } from './Navigation.types'
 
@@ -62,23 +62,13 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                       {
                         heading: 'Pride',
                         links: [
-                          { title: 'Our story', url: '/about-us' },
                           {
-                            title: "Pride's Got Talent",
-                            url: '/pgt',
+                            title: 'Our story',
+                            url: '/about-us',
                           },
                           {
                             title: 'Unity Fund',
                             url: '/unity-fund',
-                          },
-                        ],
-                      },
-                      {
-                        heading: 'Business',
-                        links: [
-                          {
-                            title: 'Pride in the City',
-                            url: '/support-us/pride-in-the-city',
                           },
                         ],
                       },
@@ -88,6 +78,10 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           {
                             title: 'Media Centre',
                             url: '/media-centre/',
+                          },
+                          {
+                            title: 'News & Views',
+                            url: '/news-and-views',
                           },
                         ],
                       },
@@ -99,17 +93,34 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-parade-day',
-                    title: 'Parade',
+                    title: 'Parade Day',
                     desc: 'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
-                    url: '/parade',
+                    url: '/',
                     submenu: [
                       {
-                        heading: 'Information',
+                        heading: 'Parade',
                         links: [
                           {
-                            title: 'Pride in London parade information',
+                            title: "This year's parade",
                             url: '/parade',
                           },
+                          {
+                            title: 'Map',
+                            url: '/parade/map',
+                          },
+                          {
+                            title: 'Grandstand Tickets',
+                            url: 'https://www.outsavvy.com/event/14259/pride-in-london-2023-parade-grandstand',
+                          },
+                          {
+                            title: 'Accessibility',
+                            url: '/parade/accessibility',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'More',
+                        links: [
                           {
                             title: 'Residents & Businesses Info',
                             url: '/parade/residents-and-businesses-info',
@@ -120,13 +131,124 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           },
                         ],
                       },
+                    ],
+                  }}
+                />
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
+                    id: 'nav-events',
+                    title: 'Events',
+                    desc: 'Discover and attend the Pride and LGBT+ events happening all across London.',
+                    url: '/',
+                    submenu: [
                       {
-                        heading: 'Map',
+                        heading: 'Pride Festival',
                         links: [
-                          { title: 'London parade route', url: '/parade/map' },
+                          {
+                            title: "This year's festival",
+                            url: '/events/festival',
+                          },
+                          {
+                            title: "What's on",
+                            url: '/events',
+                          },
+                          {
+                            title: 'Host an event',
+                            url: '/events/host-an-event',
+                          },
+                          {
+                            title: 'Download our app',
+                            url: '/app',
+                          },
                         ],
                       },
                       {
+                        heading: "Pride's Got Talent",
+                        links: [
+                          {
+                            title: "About Pride's Got Talent",
+                            url: '/pgt/',
+                          },
+                          {
+                            title: 'Audition',
+                            url: '/pgt/audition',
+                          },
+                        ],
+                      },
+                    ],
+                  }}
+                />
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
+                    id: 'nav-support-us',
+                    title: 'Support us',
+                    desc: 'If you’re passionate about the LGBT+ community please consider supporting Pride by donating, sponsoring or volunteering.',
+                    url: '/',
+                    submenu: [
+                      {
+                        heading: 'As an individual',
+                        links: [
+                          {
+                            title: 'Volunteer',
+                            url: '/support-us/volunteer',
+                          },
+                          {
+                            title: 'Make a donation',
+                            url: '/support-us/donate',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'As a business',
+                        links: [
+                          {
+                            title: 'Partner with us',
+                            url: '/support-us/partners',
+                          },
+                          {
+                            title: 'Pride in the City',
+                            url: '/support-us/pride-in-the-city',
+                          },
+                        ],
+                      },
+                    ],
+                  }}
+                />
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
+                    id: 'nav-visitor',
+                    title: 'Visitor Info',
+                    url: '/explore-london/',
+                  }}
+                />
+              </Menu>
+            </nav>
+          </FlexColumn>
+        </FlexRow>
+      </Header>
+    </HeaderWrapper>
+  )
+}
+
+/*
+
+ {
+                            title: 'Buy merchandise',
+                            url: '/support-us/merchandise',
+                          },
+                          {
+                            title: 'Work for Pride',
+                            url: '/support-us/jobs',
+                          },
+
+
+ {
                         heading: 'Stages',
                         links: [
                           {
@@ -147,56 +269,8 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           },
                         ],
                       },
-                      {
-                        heading: 'Grandstand',
-                        links: [
-                          {
-                            title: 'Grandstand Tickets',
-                            url: 'https://www.outsavvy.com/event/14259/pride-in-london-2023-parade-grandstand',
-                          },
-                        ],
-                      },
-                    ],
-                  }}
-                />
-                <NavItem
-                  backgroundColor={backgroundColor}
-                  setNavOpen={setOpen}
-                  item={{
-                    id: 'nav-accessibility',
-                    title: 'Accessibility',
-                    desc: 'Find out about accessibility at the Pride parade.',
-                    url: '/parade/accessibility',
-                  }}
-                />
-                <NavItem
-                  backgroundColor={backgroundColor}
-                  setNavOpen={setOpen}
-                  item={{
-                    id: 'nav-volunteer',
-                    title: 'Volunteer',
-                    url: 'https://volunteer.prideinlondon.org',
-                  }}
-                />
-                <NavItem
-                  backgroundColor={backgroundColor}
-                  setNavOpen={setOpen}
-                  item={{
-                    id: 'nav-blog',
-                    title: 'News & views',
-                    url: '/news-and-views',
-                  }}
-                />
-                <NavItem
-                  backgroundColor={backgroundColor}
-                  setNavOpen={setOpen}
-                  item={{
-                    id: 'nav-visitor',
-                    title: 'Visiting London',
-                    url: '/explore-london/',
-                  }}
-                />
-                <NavItem backgroundColor={backgroundColor}>
+
+<NavItem backgroundColor={backgroundColor}>
                   <SupportButton
                     onClick={() => setOpen(false)}
                     to="/support-us"
@@ -204,13 +278,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     Support Pride
                   </SupportButton>
                 </NavItem>
-              </Menu>
-            </nav>
-          </FlexColumn>
-        </FlexRow>
-      </Header>
-    </HeaderWrapper>
-  )
-}
+*/
 
 export default Navigation
