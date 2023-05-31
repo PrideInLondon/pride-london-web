@@ -7,7 +7,6 @@ import { Column } from '../../components/grid'
 export const PageWrapper = styled.div`
   position: relative;
   margin: 0 auto;
-  max-width: ${theme.breakpoints[3]};
   background-color: white;
 `
 
