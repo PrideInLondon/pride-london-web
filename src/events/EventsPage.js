@@ -46,7 +46,15 @@ const EventsPage = ({
         title="Pride Festival"
         subtitle="A month of curated events for LGBT+ communities"
         backgroundColor={colors.electricPurple}
-      />
+      >
+        <Button
+          to="/events/festival"
+          style={{ marginTop: '25px' }}
+          variant="secondary"
+        >
+          About
+        </Button>
+      </EventsPageBanner>
 
       <Container paddingTop={{ default: 0, md: '60px' }}>
         <Row>

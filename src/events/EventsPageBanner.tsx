@@ -14,6 +14,7 @@ import { EventsPageBannerProps } from './EventsPageBanner.types'
 export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
   title,
   subtitle,
+  children,
   backgroundColor,
   image,
 }) => (
@@ -54,6 +55,7 @@ export const EventsPageBanner: React.FC<EventsPageBannerProps> = ({
           <Title backgroundColor={backgroundColor}>{title}</Title>
           <Subtitle>{subtitle}</Subtitle>
         </div>
+        {children}
       </Column>
     </Row>
   </StyledBanner>
