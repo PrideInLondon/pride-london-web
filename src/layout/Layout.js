@@ -108,13 +108,7 @@ const Layout = ({ children, location: { pathname } }) => {
               <Helmet title={siteMetadata.title} />
               <LayoutHelmet pathname={pathname} {...siteMetadata} />
               <SiteWrapper>
-                <Navigation
-                  backgroundColor={
-                    pathname.replace(/\/$/, '') === '/events'
-                      ? colors.mexicanPink
-                      : colors.indigo
-                  }
-                />
+                <Navigation backgroundColor={colors.indigo} />
                 <main>{children}</main>
                 <Footer {...siteMetadata} />
               </SiteWrapper>
