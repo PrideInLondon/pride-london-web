@@ -16,6 +16,12 @@ export const handleSlug = (slug: string): string =>
  */
 export const handleUrl = (url: string): LinkProps => {
   switch (true) {
+    case !url:
+      return {
+        // eslint-disable-next-line no-script-url
+        href: 'javascript:void(0);',
+        as: 'a',
+      }
     case isExternalUrl(url):
       return {
         href: url,
