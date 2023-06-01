@@ -197,7 +197,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             url: '/events/festival',
                           },
                           {
-                            title: 'Join your event',
+                            title: 'List your event',
                             url: '/events/list-your-event',
                           },
                         ],
