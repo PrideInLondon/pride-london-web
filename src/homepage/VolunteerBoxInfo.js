@@ -13,14 +13,12 @@ const VolunteerBoxInfo = () => (
       <Row>
         <Column>
           <ContentVolunteer>
-            <h2>Volunteer</h2>
+            <h2>It's our Pride - Make it Happen</h2>
             <p>
-              Pride in London is run almost entirely by volunteers. We could use
-              people like you to help us organise the best event that we can.
+              Pride in London requires over 1000 on the day volunteers to run
+              our event. Could you help us organise the best event that we can?
             </p>
-            <Button to="https://prideinlondon.rosterfy.com/register">
-              Register interest now
-            </Button>
+            <Button to="/support-us/volunteer">Volunteer</Button>
           </ContentVolunteer>
         </Column>
       </Row>
