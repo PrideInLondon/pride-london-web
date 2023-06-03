@@ -151,12 +151,16 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             url: '/event/leicester-square-stage-2qqkVYzLS6MebTgxWMm1t2',
                           },
                           {
-                            title: 'Dean St Stage',
-                            url: '/event/dean-street-stage-6dAu9pWL0V6g1bSudrW0KM',
-                          },
-                          {
                             title: 'Golden Square Stage',
                             url: '/event/golden-square-stage-4JUifwUxWnrE4kQxszjpyg',
+                          },
+                          {
+                            title: 'Soho Square Stage',
+                            url: '/event/mzz-kimberley-presents-soho-square-stage-6yHMrxVhK4u4ZLvEIvsHlK',
+                          },
+                          {
+                            title: 'Dean St Stage',
+                            url: '/event/dean-street-stage-6dAu9pWL0V6g1bSudrW0KM',
                           },
                         ],
                       },
