@@ -10,7 +10,9 @@ import VolunteerBoxInfo from './VolunteerBoxInfo'
 //import CampaignContainer from './CampaignContainer'
 import LatestNewsContainer from './LatestNewsContainer'
 import Announcements from './Announcements'
+import SocialWall from './SocialWall'
 import Donate from './Donate'
+import { Social } from '../exploreLondon/CommunityPartnerCard.styles'
 
 const Divider = styled.hr`
   margin: 64px 20px 20px 20px;
@@ -32,8 +34,13 @@ export const Container = styled.div`
   margin-bottom: 0;
 `
 
+export const BoldText = styled.span`
+  // color: red;
+  font-size: 50px;
+`
+
 const subtitles = [
-  '1 Jul 2023 - The UK’s biggest, most diverse Pride.',
+  <BoldText>1 Jul 2023 </BoldText>,'The UK’s biggest, most diverse Pride.',
   <br />,
   'A home for every part of London’s LGBT+ community.',
 ]
@@ -77,6 +84,8 @@ const HomePage = ({
     {/*<CampaignContainer />*/}
     <Announcements />
     <LatestNewsContainer />
+    {/* <Divider />
+    <SocialWall /> */}
     <Divider />
     <Donate />
     {/*<Donate />*/}
