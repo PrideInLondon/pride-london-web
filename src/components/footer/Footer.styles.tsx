@@ -120,6 +120,11 @@ export const Logo = styled.a`
   text-decoration: none;
 `
 
+export const PoweredLogo = styled.a`
+  height: 50px;
+  text-decoration: none;
+`
+
 export const LogoImage = styled.img`
   object-fit: contain;
   height: 100%;

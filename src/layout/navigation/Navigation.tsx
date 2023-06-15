@@ -73,12 +73,25 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                       {
-                        heading: 'Campaign',
+                        heading: 'Comms',
                         links: [
                           {
-                            title: 'TBA (2023)',
-                            url: '',
+                            title: 'Media Centre',
+                            url: '/media-centre/',
                           },
+                          {
+                            title: 'News & Views',
+                            url: '/news-and-views',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'Past Campaigns',
+                        links: [
+                          // {
+                          //   title: 'TBA (2023)',
+                          //   url: '',
+                          // },
                           {
                             title: 'All Our Pride (2022)',
                             url: '/about-us/campaigns/archive/2022',
@@ -93,28 +106,16 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           },
                         ],
                       },
-                      {
-                        heading: 'Comms',
-                        links: [
-                          {
-                            title: 'Media Centre',
-                            url: '/media-centre/',
-                          },
-                          {
-                            title: 'News & Views',
-                            url: '/news-and-views',
-                          },
-                        ],
-                      },
                     ],
                   }}
                 />
+
                 <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-parade-day',
-                    title: 'Parade Day',
+                    title: 'Parade',
                     desc: 'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
                     url: '/',
                     submenu: [
@@ -129,6 +130,10 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: 'Map',
                             url: '/parade/map',
                           },
+                          // {
+                          //   title: 'Groups',
+                          //   url: '/parade/groups',
+                          // },
                           {
                             title: 'Grandstand Tickets',
                             url: 'https://www.outsavvy.com/event/14259/pride-in-london-2023-parade-grandstand',
@@ -165,7 +170,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                       {
-                        heading: 'More',
+                        heading: 'Business and Partners',
                         links: [
                           {
                             title: 'Residents & Businesses Info',
@@ -193,16 +198,12 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: 'Pride Festival',
                         links: [
                           {
-                            title: "What's on",
+                            title: "Community Events",
                             url: '/events',
                           },
                           {
                             title: 'About',
                             url: '/events/festival',
-                          },
-                          {
-                            title: 'List your event',
-                            url: '/events/list-your-event',
                           },
                         ],
                       },
@@ -210,16 +211,35 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: "Pride's Got Talent",
                         links: [
                           {
-                            title: "About Pride's Got Talent",
+                            title: "The line up",
                             url: '/pgt/',
-                          },
-                          {
-                            title: 'Audition',
-                            url: '/pgt/audition',
                           },
                         ],
                       },
+                      {
+                        heading: "Business and Partners",
+                        links: [
+                          {
+                            title: 'List your event',
+                            url: '/events/list-your-event',
+                          },
+                          {
+                            title: 'Talent Audition',
+                            url: '/pgt/audition',
+                          },
+
+                        ],
+                      },
                     ],
+                  }}
+                />
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
+                    id: 'nav-visitor',
+                    title: 'Explore London',
+                    url: '/explore-london/',
                   }}
                 />
                 <NavItem
@@ -258,15 +278,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                     ],
-                  }}
-                />
-                <NavItem
-                  backgroundColor={backgroundColor}
-                  setNavOpen={setOpen}
-                  item={{
-                    id: 'nav-visitor',
-                    title: 'Visitor Info',
-                    url: '/explore-london/',
                   }}
                 />
               </Menu>
