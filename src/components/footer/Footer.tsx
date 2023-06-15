@@ -122,14 +122,19 @@ const MiddleSection = ({
     </LogoContainer>
     <Divider />
     <H6 mb="md">Powered by</H6>
-    <LogoWrapper key={"UPS"}>
+    <LogoWrapper key={'UPS'}>
       <PoweredLogo
-        href={"https://www.ups.com/gb/en/Home.page"}
-        title={"UPS"}
-        aria-label={"UPS"}
+        href={'https://www.ups.com/gb/en/Home.page'}
+        title={'UPS'}
+        aria-label={'UPS'}
         {...defaultLinkProps}
       >
-        <LogoImage src={"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/United_Parcel_Service_logo_2014.svg/1200px-United_Parcel_Service_logo_2014.svg.png"} alt={`ups logo`} />
+        <LogoImage
+          src={
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/United_Parcel_Service_logo_2014.svg/1200px-United_Parcel_Service_logo_2014.svg.png'
+          }
+          alt={`ups logo`}
+        />
       </PoweredLogo>
     </LogoWrapper>
     <PartnersLinksContainer>
@@ -166,7 +171,7 @@ const LowerSection = () => (
         component="button"
         onClick={() => {
           if (typeof window !== 'undefined' && (window as any).UC_UI) {
-            ; (window as any).UC_UI.showSecondLayer()
+            ;(window as any).UC_UI.showSecondLayer()
           }
         }}
       >

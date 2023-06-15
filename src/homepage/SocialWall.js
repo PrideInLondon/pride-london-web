@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Column } from '../components/grid'
 import SocialWallSectionHeader from './SocialWallSectionHeader'
 import SocialSection from './SocialSection'
-import { DonateWrapper, BgDonateWrapper } from './Donate.styles'
+import { BgDonateWrapper } from './Donate.styles'
 
 const Donate = () => (
   <BgDonateWrapper>
@@ -10,8 +10,8 @@ const Donate = () => (
       <Row>
         <Column width={1}>
           {/* <DonateWrapper> */}
-            <SocialWallSectionHeader />
-            <SocialSection />
+          <SocialWallSectionHeader />
+          <SocialSection />
           {/* </DonateWrapper> */}
         </Column>
       </Row>

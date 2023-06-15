@@ -6,13 +6,13 @@ import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
 import { Banner } from '../components/banner'
 import { Button } from '../components/button'
+// import { Social } from '../exploreLondon/CommunityPartnerCard.styles'
 import VolunteerBoxInfo from './VolunteerBoxInfo'
 //import CampaignContainer from './CampaignContainer'
 import LatestNewsContainer from './LatestNewsContainer'
 import Announcements from './Announcements'
-import SocialWall from './SocialWall'
+// import SocialWall from './SocialWall'
 import Donate from './Donate'
-import { Social } from '../exploreLondon/CommunityPartnerCard.styles'
 
 const Divider = styled.hr`
   margin: 64px 20px 20px 20px;
@@ -40,7 +40,8 @@ export const BoldText = styled.span`
 `
 
 const subtitles = [
-  <BoldText>1 Jul 2023 </BoldText>,'The UK’s biggest, most diverse Pride.',
+  <BoldText>1 Jul 2023 </BoldText>,
+  'The UK’s biggest, most diverse Pride.',
   <br />,
   'A home for every part of London’s LGBT+ community.',
 ]
