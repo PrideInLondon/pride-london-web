@@ -198,7 +198,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: 'Pride Festival',
                         links: [
                           {
-                            title: "Community Events",
+                            title: 'Community Events',
                             url: '/events',
                           },
                           {
@@ -211,13 +211,13 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: "Pride's Got Talent",
                         links: [
                           {
-                            title: "The line up",
+                            title: 'The line up',
                             url: '/pgt/',
                           },
                         ],
                       },
                       {
-                        heading: "Business and Partners",
+                        heading: 'Business and Partners',
                         links: [
                           {
                             title: 'List your event',
@@ -227,7 +227,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: 'Talent Audition',
                             url: '/pgt/audition',
                           },
-
                         ],
                       },
                     ],
