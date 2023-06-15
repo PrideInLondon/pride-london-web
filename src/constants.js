@@ -38,6 +38,7 @@ const constants = {
     mediaPartners: 'Media Partners',
     digitalPartners: 'Digital Partners',
     unlisted: 'Unlisted',
+    powered: 'Powered'
   },
   itemsToLoad: 24,
   dateFormat: 'DD/MM/YYYY',

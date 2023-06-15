@@ -16,6 +16,7 @@ import {
   SecondarySponsorsContainer,
 } from './PartnersPage.styles'
 import { ContentfulSponsor, SponsorLevel } from './PartnersPage.types'
+import SponsorBadge from './SponsorBadge'
 
 const PartnersPage = ({
   data: {
@@ -150,6 +151,15 @@ const PartnersPage = ({
                     </SponsorsSubSection>
                   )
               )}
+
+              <SponsorsSubSection key={'Powered By'} title="Powered By">
+                <SponsorBadge
+                  logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/United_Parcel_Service_logo_2014.svg/1200px-United_Parcel_Service_logo_2014.svg.png"
+                  name="UPS"
+                  url="https://www.ups.com/gb/en/Home.page"
+                  level="Unlisted"
+                />
+              </SponsorsSubSection>
             </SecondarySponsorsContainer>
           </Column>
         </Row>
