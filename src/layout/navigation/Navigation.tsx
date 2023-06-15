@@ -153,7 +153,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           },
                           {
                             title: 'Leicester Square Stage',
-                            url: '/event/leicester-square-stage-2qqkVYzLS6MebTgxWMm1t2',
+                            url: '/event/lgbtqia-women-and-non-binary-stage-2qqkVYzLS6MebTgxWMm1t2',
                           },
                           {
                             title: 'Golden Square Stage',
