@@ -24,8 +24,8 @@ export const StyledBannerSubtitle = styled.h2`
 export const BannerSubtitleWrapper = styled.div`
   margin-left: 10px;
   margin-bottom: 10px;
-  background-color: ${theme.colors.indigo};
-  box-shadow: -10px 0px 0px 0px ${theme.colors.indigo};
+  // background-color: ${theme.colors.indigo};
+  // box-shadow: -10px 0px 0px 0px ${theme.colors.indigo};
 
   ${media.tablet`  
     max-width: 85%;

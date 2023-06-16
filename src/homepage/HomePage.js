@@ -35,12 +35,15 @@ export const Container = styled.div`
 `
 
 export const BoldText = styled.span`
-  // color: red;
-  font-size: 50px;
+  background-color: ${theme.colors.indigo};
+  font-size: 3rem;
+  padding: 0 10px;
+  box-shadow: 7px 0 0 3px #2d2f7f, -7px 0 0 3px #2d2f7f;
 `
 
 const subtitles = [
   <BoldText>1 Jul 2023 </BoldText>,
+  <br />,
   'The UK’s biggest, most diverse Pride.',
   <br />,
   'A home for every part of London’s LGBT+ community.',
