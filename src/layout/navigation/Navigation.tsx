@@ -143,7 +143,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             url: '/parade/accessibility',
                           },
                           {
-                            title: "Sustainability",
+                            title: 'Sustainability',
                             url: '/sustainability',
                           },
                         ],
