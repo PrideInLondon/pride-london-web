@@ -43,9 +43,9 @@ export const BoldText = styled.span`
 
 const subtitles = [
   <BoldText>1 Jul 2023 </BoldText>,
-  <br key={1}/>,
+  <br key={1} />,
   'The UK’s biggest, most diverse Pride.',
-  <br key={2}/>,
+  <br key={2} />,
   'A home for every part of London’s LGBT+ community.',
 ]
 
