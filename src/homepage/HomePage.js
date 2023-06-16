@@ -38,7 +38,7 @@ export const BoldText = styled.span`
   background-color: ${theme.colors.indigo};
   font-size: 3rem;
   padding: 0 10px;
-  box-shadow: 7px 0 0 3px #2D2F7F, -7px 0 0 3px #2D2F7F
+  box-shadow: 7px 0 0 3px #2d2f7f, -7px 0 0 3px #2d2f7f;
 `
 
 const subtitles = [
