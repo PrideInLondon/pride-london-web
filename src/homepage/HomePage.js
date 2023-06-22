@@ -10,6 +10,7 @@ import { Button } from '../components/button'
 import VolunteerBoxInfo from './VolunteerBoxInfo'
 //import CampaignContainer from './CampaignContainer'
 import LatestNewsContainer from './LatestNewsContainer'
+import AnnouncementsList from './AnnouncementList'
 import Announcements from './Announcements'
 // import SocialWall from './SocialWall'
 import Donate from './Donate'
@@ -83,10 +84,12 @@ const HomePage = ({
         {new Date().getFullYear()} and what to do on the day?
       </p>
       </Container>*/}
+    <AnnouncementsList />
+    <Divider />
     <VolunteerBoxInfo />
     <Divider />
     {/*<CampaignContainer />*/}
-    <Announcements />
+    {/* <Announcements /> */}
     <LatestNewsContainer />
     {/* <Divider />
     <SocialWall /> */}
