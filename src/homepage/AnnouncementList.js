@@ -4,10 +4,7 @@ import styled from 'styled-components'
 import { Container, Row, Column } from '../components/grid'
 import AnnouncementListCard from './AnnouncementListCard'
 import AnnouncementListHeader from './AnnouncementListHeader'
-import {
-  AnnouncementsSliderWrapper,
-  AnnouncementsContent,
-} from './Announcements.styles'
+import { AnnouncementsContent } from './Announcements.styles'
 
 export const query = graphql`
   query announcementsQuery {
