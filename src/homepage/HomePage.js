@@ -11,7 +11,7 @@ import VolunteerBoxInfo from './VolunteerBoxInfo'
 //import CampaignContainer from './CampaignContainer'
 import LatestNewsContainer from './LatestNewsContainer'
 import AnnouncementsList from './AnnouncementList'
-import Announcements from './Announcements'
+// import Announcements from './Announcements'
 // import SocialWall from './SocialWall'
 import Donate from './Donate'
 

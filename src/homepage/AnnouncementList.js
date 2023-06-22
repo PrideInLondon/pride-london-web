@@ -1,11 +1,9 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Slider from 'react-slick'
 import styled from 'styled-components'
-import { FlexColumn, Container, Row, Column } from '../components/grid'
+import { Container, Row, Column } from '../components/grid'
 import AnnouncementListCard from './AnnouncementListCard'
 import AnnouncementListHeader from './AnnouncementListHeader'
-import { settings } from './announcementsSlickSettings'
 import {
   AnnouncementsSliderWrapper,
   AnnouncementsContent,
@@ -75,7 +73,8 @@ const AnnouncementsListContainer = () => (
                       title={title}
                       url={url}
                       // desc={desc ? desc.desc : ''}
-                      key={idx}
+                      key={id}
+                      idx={idx}
                       callToActionText={
                         callToActionText ? callToActionText : 'Find out more!'
                       }

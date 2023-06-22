@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { handleUrl } from '../utils/location-utils'
+import { Button } from '../components/button'
 import {
   CardWrapper,
   CardImage,
@@ -9,10 +9,8 @@ import {
   // CardDesc,
   ButtonWrapper,
 } from './AnnouncementListCard.styles'
-import styled from 'styled-components'
-import { Button } from '../components/button'
 
-const AnnouncementCard = ({ title, url, callToActionText, image, key }) => {
+const AnnouncementCard = ({ title, url, callToActionText, image }) => {
   return (
     <>
       <CardWrapper>
@@ -34,7 +32,8 @@ AnnouncementCard.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
   url: PropTypes.string.isRequired,
-  // desc: PropTypes.string.isRequired,
+  callToActionText: PropTypes.string.isRequired,
+  key: PropTypes.string.isRequired,
 }
 
 export default AnnouncementCard

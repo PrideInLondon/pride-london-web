@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { media } from '../theme/media'
 import theme from '../theme/theme'
-import { mediaQueries } from '../theme/mediaQueries'
 
 export const CardImage = styled(Img)`
   border-radius: 4px;
@@ -94,8 +93,7 @@ export const CardWrapper = styled.div`
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
-  
-  // For tablet and above
+
   ${media.tablet`
     margin-bottom: 50px;
     overflow: hidden;
@@ -108,8 +106,7 @@ export const CardTextWrapper = styled.div`
   left: 40px;
   width: 80%;
   top: 250px;
-  
-  // For tablet and above
+
   ${media.tablet`
     position: absolute;
     left: 60px;
