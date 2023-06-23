@@ -8,7 +8,7 @@ describe('checkNumberOfEventsToShow', () => {
     ${0}  | ${0}
     ${8}  | ${8}
     ${23} | ${23}
-    ${24} | ${23}
+    ${24} | ${24}
   `('should return $expected when given $count', ({ count, expected }) => {
     const events = generateArray(count)
     const actual = checkNumberOfEventsToShow(events)
