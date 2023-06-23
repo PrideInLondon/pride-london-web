@@ -19,10 +19,6 @@ describe('GroupedEventsCards', () => {
         testEvent.node
       )
     })
-
-    it('testing animation logic', () => {
-      expect(wrapper.find('Wrapper').first().prop('animation')).toBe(false)
-    })
   })
 
   describe('animations', () => {

@@ -40,7 +40,7 @@ const constants = {
     unlisted: 'Unlisted',
     powered: 'Powered',
   },
-  itemsToLoad: 24,
+  itemsToLoad: 100,
   dateFormat: 'DD/MM/YYYY',
   articleCategories: [
     {
@@ -70,6 +70,23 @@ const constants = {
     {
       title: 'Views',
       hexColour: colors.lemonGreen,
+    },
+  ],
+  dateFilterCategories: [
+    {
+      title: 'Today',
+      api: 'TODAY',
+      hexColour: colors.yellow,
+    },
+    {
+      title: 'Tomorrow',
+      api: 'TOMORROW',
+      hexColour: colors.tomato,
+    },
+    {
+      title: 'Next 7 days',
+      api: 'NEXT_7_DAYS',
+      hexColour: colors.pink,
     },
   ],
   paradeGroupCategories: [
@@ -118,6 +135,19 @@ const constants = {
       api: 'OTHER',
       hexColour: colors.skyBlue,
     },
+  ],
+  hexColours: [
+    colors.yellow,
+    colors.tomato,
+    colors.pink,
+    colors.greyBlue,
+    colors.amber,
+    colors.darkPurple,
+    colors.eucalyptusGreen,
+    colors.fuscia,
+    colors.skyBlue,
+    colors.silver,
+    colors.bronze,
   ],
   filterTypes: ['checkbox', 'radio'],
   communityPartnerCategories: [
