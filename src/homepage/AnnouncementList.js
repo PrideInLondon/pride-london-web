@@ -8,7 +8,7 @@ import { AnnouncementsContent } from './Announcements.styles'
 
 export const query = graphql`
   query announcementsQuery {
-    allContentfulAnnouncement(sort: {order: ASC, fields: order}) {
+    allContentfulAnnouncement(sort: { order: ASC, fields: order }) {
       edges {
         node {
           id
