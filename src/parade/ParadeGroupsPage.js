@@ -38,16 +38,17 @@ const ParadeGroupsPage = ({ data: { paradeGroups } }) => (
     <Container>
       <TextContainer>
         The parade celebrates our colourful community, brightening up the
-        streets of London with people from every walk of life. In 2019, we
-        welcomed around 30,000 individuals to march together for love, protest
-        and activism. Formed from over 600 groups - more than half of which
+        streets of London with people from every walk of life. In 2023, we
+        expect around 35,000 individuals to march together for love, protest and
+        activism. Formed from over 600 groups - more than half of which
         represented charities or not-for-profit organisations - we’re proud that
         last year’s Pride was our most diverse yet, uniting more trans*, BAME
         and bisexual communities than ever before.
       </TextContainer>
       <TextContainer>
-        Applications for the 2023 parade will open closer to the date. Further
-        information will be announced in due course.
+        If any information is incorrectly updated, please fill up{' '}
+        <a href="https://forms.gle/aFcKeJMQrXbNKNxA6">this form</a> and we will
+        update the information as soon as possible.
       </TextContainer>
       <ParadeGroups
         paradeGroups={mapEntries(paradeGroups)}
