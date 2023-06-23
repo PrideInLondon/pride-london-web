@@ -124,7 +124,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         links: [
                           {
                             title: "This year's parade",
-                            url: '/parade',
+                            url: '/parade2023',
                           },
                           {
                             title: 'Map',
