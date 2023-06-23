@@ -12,7 +12,7 @@ import {
 } from './Announcements.styles'
 
 export const query = graphql`
-  query announcementsQuery {
+  query announcementsListQuery {
     allContentfulAnnouncement(limit: 6) {
       edges {
         node {
