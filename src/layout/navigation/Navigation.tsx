@@ -202,7 +202,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: 'Pride Festival',
                         links: [
                           {
-                            title: 'Community Events',
+                            title: 'Events',
                             url: '/events',
                           },
                           {
