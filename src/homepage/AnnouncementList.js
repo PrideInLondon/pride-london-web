@@ -14,8 +14,8 @@ export const query = graphql`
           id
           title
           url
-          callToActionText
           order
+          callToActionText
           image {
             title
             fixed(
