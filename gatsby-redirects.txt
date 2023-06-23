@@ -1,4 +1,8 @@
 # Redirects
+# Lines starting with # are discarded
+# Format is <Source> <Destination> (<Code>(<!>))
+# Including the ! will force a redirect even if there is a valid route
+# () Indicates Optional
 /accessibility     /parade/accessibility     301!
 /accommodation     /explore-london     301!
 /as-a-group     /parade/take-part/groups     301!
