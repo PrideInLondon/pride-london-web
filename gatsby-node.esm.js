@@ -1,4 +1,5 @@
 import path from 'path'
+import fs from 'fs'
 import { generateEventSlug } from './src/events/helpers'
 import { generateBlogArticleSlug } from './src/blog/article/helpers'
 
@@ -20,7 +21,10 @@ exports.sourceNodes = ({ actions: { createTypes } }) =>
     }
   `)
 
-exports.createPages = async ({ graphql, actions: { createPage } }) => {
+exports.createPages = async ({
+  graphql,
+  actions: { createPage, createRedirect },
+}) => {
   await graphql(`
     {
       events: allContentfulEvent(
@@ -113,6 +117,43 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       })
     })
   })
+
+  const redirects = fs.readFileSync('./gatsby-redirects.txt').toString()
+
+  for (const line of redirects.split('\n')) {
+    if (line.startsWith('#')) {
+      // Allow comments in the file
+      continue
+    }
+    if (line.trim().length > 0) {
+      // Parse line
+      /*
+        Format is <Source> <Destination> (<Code>(<!>))
+        Including the ! will force a redirect even if there is a valid route
+        () Indicates Optional
+      */
+      const [rdrFrom, rdrTo, rdrOptions] = line.trim().split(/\s+/)
+      var statusCode = 301 // Mirror Netlify behaviour
+      var forced = false
+      if (rdrOptions) {
+        if (rdrOptions.endsWith('!')) {
+          forced = true
+        }
+        statusCode = rdrOptions.substring(0, 3)
+        console.log(
+          `Redirect from ${rdrFrom} to ${rdrTo} with ${rdrOptions} (code: ${statusCode} forced: ${forced})`
+        )
+      }
+      createRedirect({
+        fromPath: rdrFrom,
+        toPath: rdrTo,
+        statusCode: statusCode,
+        force: forced,
+      })
+    }
+  }
+
+  console.log('Zed-hack: Imported Netlfify Redirects into Gatsby Format')
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
