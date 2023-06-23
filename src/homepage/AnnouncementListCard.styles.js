@@ -9,10 +9,12 @@ export const CardImage = styled(Img)`
   padding-top: 100%;
   height: auto !important;
 
-  img {
-    width: 100% !important;
-    height: auto !important;
-  }
+  ${media.tablet`
+    img {
+      // width: 100% !important;
+      height: 450px !important;
+    }
+  `};
 `
 
 export const CardAnnouncement = styled.a`

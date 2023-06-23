@@ -8,18 +8,19 @@ import { AnnouncementsContent } from './Announcements.styles'
 
 export const query = graphql`
   query announcementsQuery {
-    allContentfulAnnouncement(limit: 6) {
+    allContentfulAnnouncement(sort: {order: ASC, fields: order}) {
       edges {
         node {
           id
           title
           url
           callToActionText
+          order
           image {
             title
             fixed(
-              width: 600
-              height: 600
+              width: 1260
+              height: 450
               resizingBehavior: FILL
               quality: 90
             ) {
