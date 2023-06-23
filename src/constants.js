@@ -40,7 +40,7 @@ const constants = {
     unlisted: 'Unlisted',
     powered: 'Powered',
   },
-  itemsToLoad: 24,
+  itemsToLoad: 100,
   dateFormat: 'DD/MM/YYYY',
   articleCategories: [
     {
