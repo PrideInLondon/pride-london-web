@@ -98,11 +98,11 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
 
   return (
     <>
-      <ParadeGroupsFilters
+      {/* <ParadeGroupsFilters
         categories={categories}
         selectedFilter={selectedFilter}
         handleFilterClick={handleFilterClick}
-      />
+      /> */}
       <LetterContainer>
         <ScrolledLetters>
           {lettersArray.map((letter) => (
@@ -132,9 +132,12 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
                     ({
                       name,
                       websiteUrl,
+                      linkedinUrl,
                       twitterUrl,
                       facebookUrl,
+                      tikTokUrl,
                       instagramUrl,
+                      snapChatHandle,
                       emailUrl,
                     }) => {
                       return (
@@ -142,9 +145,12 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
                           key={name}
                           name={name}
                           websiteUrl={websiteUrl}
+                          linkedinUrl={linkedinUrl}
                           twitterUrl={twitterUrl}
                           facebookUrl={facebookUrl}
+                          tikTokUrl={tikTokUrl}
                           instagramUrl={instagramUrl}
+                          snapChatHandle={snapChatHandle}
                           emailUrl={emailUrl}
                         />
                       )
