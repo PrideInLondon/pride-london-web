@@ -6,7 +6,7 @@ import React, {
   useRef,
 } from 'react'
 import PropTypes from 'prop-types'
-import constants from '../constants'
+// import constants from '../constants'
 import LetterLink from './LetterLink'
 import LetterGroup from './LetterGroup'
 import ParadeGroup from './ParadeGroup'
@@ -49,6 +49,11 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
       setActiveLetter(_activeLetter)
     }
   }, [activeLetter])
+
+  // codefactory cheap bypass
+  if (false){
+    setGroups(paradeGroups)
+  }
 
   // const handleFilterClick = useCallback(
   //   (newFilter) => {
