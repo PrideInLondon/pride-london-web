@@ -51,7 +51,7 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
   }, [activeLetter])
 
   // codefactory cheap bypass
-  if (false){
+  if (false) {
     setGroups(paradeGroups)
   }
 
