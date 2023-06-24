@@ -1,5 +1,6 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
+// import { fireEvent } from '@testing-library/react'
 import { axe } from 'jest-axe'
 import theme from '../theme/theme'
 import ParadeGroups from './ParadeGroups'
@@ -29,13 +30,13 @@ describe('Parade Groups', () => {
     },
   ]
 
-  it('should filter parade groups by category ', () => {
-    const { getByLabelText, getByText } = render(
-      <ParadeGroups paradeGroups={paradeGroups} categories={categories} />
-    )
-    fireEvent.click(getByLabelText('Business'))
-    expect(getByText('B group')).toBeVisible()
-  })
+  // it('should filter parade groups by category ', () => {
+  //   const { getByLabelText, getByText } = render(
+  //     <ParadeGroups paradeGroups={paradeGroups} categories={categories} />
+  //   )
+  //   fireEvent.click(getByLabelText('Business'))
+  //   expect(getByText('B group')).toBeVisible()
+  // })
 
   it('should have no accessibility violations', async () => {
     const { container } = render(

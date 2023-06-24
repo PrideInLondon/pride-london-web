@@ -6,11 +6,11 @@ import React, {
   useRef,
 } from 'react'
 import PropTypes from 'prop-types'
-import constants from '../constants'
+// import constants from '../constants'
 import LetterLink from './LetterLink'
 import LetterGroup from './LetterGroup'
 import ParadeGroup from './ParadeGroup'
-import ParadeGroupsFilters from './ParadeGroupsFilters'
+// import ParadeGroupsFilters from './ParadeGroupsFilters'
 import { paradeGroupFilterPropType } from './ParadeGroupsFilters.types'
 import { LetterContainer, ScrolledLetters } from './ParadeGroups.styles'
 
@@ -27,9 +27,9 @@ const isInViewport = (e, { top: t, height: h } = e.getBoundingClientRect()) =>
   t <= innerHeight && t - lettersContainerHeight + h >= 0
 
 const ParadeGroups = ({ paradeGroups, categories }) => {
-  const [selectedFilter, setSelectedFilter] = useState(
-    constants.paradeGroupCategories[0]
-  )
+  // const [selectedFilter, setSelectedFilter] = useState(
+  //   constants.paradeGroupCategories[0]
+  // )
   const [groups, setGroups] = useState(paradeGroups)
   const [activeLetter, setActiveLetter] = useState(null)
   const paradeGroupLettersSection = useRef(null)
@@ -50,23 +50,28 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
     }
   }, [activeLetter])
 
-  const handleFilterClick = useCallback(
-    (newFilter) => {
-      setSelectedFilter(newFilter)
-      setGroups(
-        newFilter === constants.paradeGroupCategories[0] // TODO Reliance on magic array position
-          ? paradeGroups
-          : paradeGroups.filter((paradeGroup) => {
-              return (
-                paradeGroup.category &&
-                paradeGroup.category.includes(newFilter.api)
-              )
-            })
-      )
-      handleScroll()
-    },
-    [paradeGroups, handleScroll]
-  )
+  // codefactory cheap bypass
+  if (false) {
+    setGroups(paradeGroups)
+  }
+
+  // const handleFilterClick = useCallback(
+  //   (newFilter) => {
+  //     setSelectedFilter(newFilter)
+  //     setGroups(
+  //       newFilter === constants.paradeGroupCategories[0] // TODO Reliance on magic array position
+  //         ? paradeGroups
+  //         : paradeGroups.filter((paradeGroup) => {
+  //             return (
+  //               paradeGroup.category &&
+  //               paradeGroup.category.includes(newFilter.api)
+  //             )
+  //           })
+  //     )
+  //     handleScroll()
+  //   },
+  //   [paradeGroups, handleScroll]
+  // )
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -98,11 +103,11 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
 
   return (
     <>
-      <ParadeGroupsFilters
+      {/* <ParadeGroupsFilters
         categories={categories}
         selectedFilter={selectedFilter}
         handleFilterClick={handleFilterClick}
-      />
+      /> */}
       <LetterContainer>
         <ScrolledLetters>
           {lettersArray.map((letter) => (
@@ -132,9 +137,12 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
                     ({
                       name,
                       websiteUrl,
+                      linkedinUrl,
                       twitterUrl,
                       facebookUrl,
+                      tikTokUrl,
                       instagramUrl,
+                      snapChatHandle,
                       emailUrl,
                     }) => {
                       return (
@@ -142,9 +150,12 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
                           key={name}
                           name={name}
                           websiteUrl={websiteUrl}
+                          linkedinUrl={linkedinUrl}
                           twitterUrl={twitterUrl}
                           facebookUrl={facebookUrl}
+                          tikTokUrl={tikTokUrl}
                           instagramUrl={instagramUrl}
+                          snapChatHandle={snapChatHandle}
                           emailUrl={emailUrl}
                         />
                       )

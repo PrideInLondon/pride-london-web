@@ -224,7 +224,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: 'Business and Partners',
                         links: [
                           {
-                            title: 'List your event',
+                            title: 'List your events',
                             url: '/events/list-your-event',
                           },
                           {

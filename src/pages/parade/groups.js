@@ -2,21 +2,24 @@ import { graphql } from 'gatsby'
 import { ParadeGroupsPage } from '../../parade'
 
 export const query = graphql`
-  query paradeGroups($eq: String = "2023") {
-    paradeGroups: allContentfulParadeGroup2019(
-      sort: { fields: [name], order: ASC }
-      filter: { yearsMarched: { eq: $eq } }
+  query paradeGroups {
+    paradeGroups: allContentfulParadeGroup2023(
+      filter: { yearsMarched: { eq: "2023" } }
+      sort: { fields: name, order: ASC }
     ) {
       edges {
         node {
           name
-          category
+          description {
+            description
+          }
           websiteUrl
+          linkedinUrl
           twitterUrl
           facebookUrl
+          tikTokUrl
           instagramUrl
-          emailUrl
-          yearsMarched
+          snapChatHandle
         }
       }
     }
