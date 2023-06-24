@@ -1,5 +1,6 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
+// import { fireEvent } from '@testing-library/react'
 import { axe } from 'jest-axe'
 import theme from '../theme/theme'
 import ParadeGroups from './ParadeGroups'
