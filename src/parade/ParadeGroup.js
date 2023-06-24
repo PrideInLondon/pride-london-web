@@ -40,11 +40,11 @@ const ParadeGroup = ({
             <Linkedin width={24} height={24} fill={theme.colors.indigo} />
           </a>
         )}
-        {/* {emailUrl && (
+        {emailUrl && (
           <a href={emailUrl} target="_blank" rel="noopener noreferrer">
             <MailIcon width={30} height={24} fill={theme.colors.indigo} />
           </a>
-        )} */}
+        )}
         {facebookUrl && (
           <a href={facebookUrl} target="_blank" rel="noopener noreferrer">
             <Facebook width={24} height={24} fill={theme.colors.indigo} />

@@ -10,7 +10,7 @@ import constants from '../constants'
 import LetterLink from './LetterLink'
 import LetterGroup from './LetterGroup'
 import ParadeGroup from './ParadeGroup'
-import ParadeGroupsFilters from './ParadeGroupsFilters'
+// import ParadeGroupsFilters from './ParadeGroupsFilters'
 import { paradeGroupFilterPropType } from './ParadeGroupsFilters.types'
 import { LetterContainer, ScrolledLetters } from './ParadeGroups.styles'
 
@@ -27,9 +27,9 @@ const isInViewport = (e, { top: t, height: h } = e.getBoundingClientRect()) =>
   t <= innerHeight && t - lettersContainerHeight + h >= 0
 
 const ParadeGroups = ({ paradeGroups, categories }) => {
-  const [selectedFilter, setSelectedFilter] = useState(
-    constants.paradeGroupCategories[0]
-  )
+  // const [selectedFilter, setSelectedFilter] = useState(
+  //   constants.paradeGroupCategories[0]
+  // )
   const [groups, setGroups] = useState(paradeGroups)
   const [activeLetter, setActiveLetter] = useState(null)
   const paradeGroupLettersSection = useRef(null)
@@ -50,23 +50,23 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
     }
   }, [activeLetter])
 
-  const handleFilterClick = useCallback(
-    (newFilter) => {
-      setSelectedFilter(newFilter)
-      setGroups(
-        newFilter === constants.paradeGroupCategories[0] // TODO Reliance on magic array position
-          ? paradeGroups
-          : paradeGroups.filter((paradeGroup) => {
-              return (
-                paradeGroup.category &&
-                paradeGroup.category.includes(newFilter.api)
-              )
-            })
-      )
-      handleScroll()
-    },
-    [paradeGroups, handleScroll]
-  )
+  // const handleFilterClick = useCallback(
+  //   (newFilter) => {
+  //     setSelectedFilter(newFilter)
+  //     setGroups(
+  //       newFilter === constants.paradeGroupCategories[0] // TODO Reliance on magic array position
+  //         ? paradeGroups
+  //         : paradeGroups.filter((paradeGroup) => {
+  //             return (
+  //               paradeGroup.category &&
+  //               paradeGroup.category.includes(newFilter.api)
+  //             )
+  //           })
+  //     )
+  //     handleScroll()
+  //   },
+  //   [paradeGroups, handleScroll]
+  // )
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)

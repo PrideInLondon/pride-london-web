@@ -19,11 +19,13 @@ const Snapchat = ({ width, height, fill }) => (
 Snapchat.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
+  fill: PropTypes.string,
 }
 
 Snapchat.defaultProps = {
   width: 30,
   height: 29,
+  fill: '#2CDA9D',
 }
 
 export default Snapchat
