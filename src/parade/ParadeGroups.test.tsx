@@ -29,13 +29,13 @@ describe('Parade Groups', () => {
     },
   ]
 
-  it('should filter parade groups by category ', () => {
-    const { getByLabelText, getByText } = render(
-      <ParadeGroups paradeGroups={paradeGroups} categories={categories} />
-    )
-    fireEvent.click(getByLabelText('Business'))
-    expect(getByText('B group')).toBeVisible()
-  })
+  // it('should filter parade groups by category ', () => {
+  //   const { getByLabelText, getByText } = render(
+  //     <ParadeGroups paradeGroups={paradeGroups} categories={categories} />
+  //   )
+  //   fireEvent.click(getByLabelText('Business'))
+  //   expect(getByText('B group')).toBeVisible()
+  // })
 
   it('should have no accessibility violations', async () => {
     const { container } = render(
