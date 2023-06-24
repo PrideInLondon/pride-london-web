@@ -129,12 +129,12 @@ exports.createPages = async ({
       // Parse line
       /*
         Format is <Source> <Destination> (<Code>(<!>))
-        Including the ! will force a redirect even if there is a valid route
+        NON-FUNCTIONAL: Including the ! should force a redirect even if there is a valid route
         () Indicates Optional
       */
       const [rdrFrom, rdrTo, rdrOptions] = line.trim().split(/\s+/)
       var statusCode = 301 // Mirror Netlify behaviour
-      var forced = false
+      var forced = false // Currently non-functional
       if (rdrOptions) {
         if (rdrOptions.endsWith('!')) {
           forced = true
@@ -148,7 +148,7 @@ exports.createPages = async ({
         fromPath: rdrFrom,
         toPath: rdrTo,
         statusCode: statusCode,
-        force: forced,
+        force: forced, // Currently ignored by gatsby-plugin-gatsby-cloud
       })
     }
   }
