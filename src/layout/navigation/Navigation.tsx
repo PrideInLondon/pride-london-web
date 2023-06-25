@@ -77,7 +77,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         links: [
                           {
                             title: 'Never March Alone',
-                            url: '/nevermarchalone',
+                            url: '/campaign',
                           },
                         ],
                       },
