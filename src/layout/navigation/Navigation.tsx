@@ -73,7 +73,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                       {
-                        heading: 'Campaigns',
+                        heading: 'Campaign 2023',
                         links: [
                           {
                             title: 'Never March Alone',
