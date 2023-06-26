@@ -144,6 +144,7 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
                       instagramUrl,
                       snapChatHandle,
                       emailUrl,
+                      description,
                     }) => {
                       return (
                         <ParadeGroup
@@ -157,6 +158,7 @@ const ParadeGroups = ({ paradeGroups, categories }) => {
                           instagramUrl={instagramUrl}
                           snapChatHandle={snapChatHandle}
                           emailUrl={emailUrl}
+                          description={description}
                         />
                       )
                     }

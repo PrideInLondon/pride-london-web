@@ -15,13 +15,19 @@ export const RowContainer = styled.div`
   `}
 `
 
-export const TitleContainer = styled.h3`
-  color: ${theme.colors.black};
+export const CompanyContainer = styled.div`
   align-items: center;
   display: flex;
   flex-grow: 1;
-  padding-right: 2px;
-  margin: 0;
+`
+
+export const CompanyInfoContainer = styled.div`
+  display: block;
+`
+
+export const TitleContainer = styled.h3`
+  color: ${theme.colors.indigo};
+  margin-top: 0;
 `
 
 export const IconContainer = styled.div`
@@ -36,4 +42,11 @@ export const IconContainer = styled.div`
     margin: 0 10px;
     border: 0;
   }
+`
+
+export const CompanyDescription = styled.div`
+  color: ${theme.colors.darkGrey};
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 80%;
 `
