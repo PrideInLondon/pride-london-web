@@ -11,12 +11,16 @@ import Tiktok from '../components/icons/tiktok'
 import theme from '../theme/theme'
 import {
   RowContainer,
+  CompanyContainer,
+  CompanyInfoContainer,
   TitleContainer,
   IconContainer,
+  CompanyDescription,
 } from './ParadeGroup.styles'
 
 const ParadeGroup = ({
   name,
+  description,
   websiteUrl,
   linkedinUrl,
   twitterUrl,
@@ -28,7 +32,15 @@ const ParadeGroup = ({
 }) => {
   return (
     <RowContainer>
-      <TitleContainer>{name}</TitleContainer>
+      <CompanyContainer>
+        <CompanyInfoContainer>
+          <TitleContainer>{name}</TitleContainer>
+          <CompanyDescription>
+            {description ? description.description : 'No company description'}
+          </CompanyDescription>
+        </CompanyInfoContainer>
+      </CompanyContainer>
+
       <IconContainer>
         {websiteUrl && (
           <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
