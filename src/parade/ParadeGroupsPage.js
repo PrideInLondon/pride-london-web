@@ -30,7 +30,7 @@ const ParadeGroupsPage = ({ data: { paradeGroups } }) => (
   <>
     <Banner
       titleText="Parade groups"
-      subtitleText="Find out more about Groups who are marching in this years parade"
+      subtitleText="Find out more about the groups who are marching in this years parade"
       altText="Parade groups"
       imageSrc={bannerBackground}
       imageFullWidth
