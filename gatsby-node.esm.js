@@ -2,6 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import { generateEventSlug } from './src/events/helpers'
 import { generateBlogArticleSlug } from './src/blog/article/helpers'
+import { config } from 'dotenv'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
@@ -156,7 +157,7 @@ exports.createPages = async ({
   console.log('Zed-hack: Imported Netlfify Redirects into Gatsby Format')
 }
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
   if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
@@ -175,13 +176,33 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       rules: [
         {
           test: /(apple-touch-icon|favicon|mstile).*\.pnfakeg$/,
-          use: [loaders.file({
-            name: 'static/favicons/[name]-[hash].png',
-          })],
+          use: [
+            loaders.file({
+              name: 'static/favicons/[name]-[hash].png',
+            }),
+          ],
         },
       ],
     },
   })
+
+  const config = getConfig()
+
+  config.module.rules = [
+    ...config.module.rules.filter(
+      (rule) => String(rule.test) !== String(/\.(eot|otf|ttf|woff(2)?)(\?.*)?$/)
+    ),
+    {
+      test: /\.(eot|otf|ttf|woff(2)?)(\?.*)?$/,
+      use: [
+        loaders.file({
+          name: 'static/fonts/[name]-[hash].[ext]',
+        }),
+      ],
+    },
+  ]
+
+  actions.replaceWebpackConfig(config)
 }
 
 exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
