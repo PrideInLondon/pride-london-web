@@ -169,21 +169,19 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       },
     })
   }
-  /* This didn't work but would be cleaner than the webpack loader override in LayoutHelmet.js
+  /* This didn't work but would be cleaner than the webpack loader override in LayoutHelmet.js */
   actions.setWebpackConfig({
     module: {
       rules: [
         {
-          test: /(apple-touch-icon|favicon|mstile).*\.png$/,
-          loader: 'file-loader',
-          options: {
-            outputPath: 'static/favicons',
-          },
+          test: /(apple-touch-icon|favicon|mstile).*\.pnfakeg$/,
+          use: [loaders.file({
+            name: 'static/favicons/[name]-[hash].png',
+          })],
         },
       ],
     },
   })
-  */
 }
 
 exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
