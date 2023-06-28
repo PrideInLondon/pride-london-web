@@ -89,6 +89,9 @@ const ParadeGroup = ({
 
 ParadeGroup.propTypes = {
   name: PropTypes.string.isRequired,
+  description: PropTypes.shape({
+    description: PropTypes.string,
+  }),
   websiteUrl: PropTypes.string,
   twitterUrl: PropTypes.string,
   facebookUrl: PropTypes.string,
@@ -101,6 +104,7 @@ ParadeGroup.propTypes = {
 
 ParadeGroup.defaultProps = {
   name: '',
+  description: '',
   websiteUrl: null,
   twitterUrl: null,
   facebookUrl: null,
