@@ -44,6 +44,9 @@ const query = graphql`
 
     allContentfulEvent(
       sort: { fields: [date___dates___startDate], order: ASC }
+      filter: {
+        date: { dates: { elemMatch: { endDate: { gte: "2023-06-28" } } } }
+      }
     ) {
       edges {
         node {
