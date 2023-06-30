@@ -4,7 +4,7 @@ import { ParadeGroupsPage } from '../../parade'
 export const query = graphql`
   query paradeGroups {
     paradeGroups: allContentfulParadeGroup2023(
-      filter: { yearsMarched: { eq: "2023" } }
+      filter: { yearsMarched: { eq: "2024" } }
       sort: { fields: name, order: ASC }
     ) {
       edges {
