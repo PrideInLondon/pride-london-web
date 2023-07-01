@@ -2,7 +2,6 @@ import React from 'react'
 import { Helmet } from '../components/helmet'
 import { Banner } from '../components/banner'
 import { colors } from '../theme/colors'
-import { marginBottom } from 'styled-system'
 
 const Live = () => {
   return (
