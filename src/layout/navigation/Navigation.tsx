@@ -135,14 +135,14 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: "This year's parade",
                             url: '/parade',
                           },
+                          //{
+                          //  title: 'Map',
+                          //  url: '/parade/map',
+                          //},
                           {
-                            title: 'Map',
-                            url: '/parade/map',
+                            title: 'Groups',
+                            url: '/parade/groups',
                           },
-                          // {
-                          //   title: 'Groups',
-                          //   url: '/parade/groups',
-                          // },
                           {
                             title: 'Grandstand Tickets',
                             url: 'https://www.outsavvy.com/event/14259/pride-in-london-2023-parade-grandstand',
