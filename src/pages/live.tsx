@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { Helmet } from '../components/helmet'
 import { Banner } from '../components/banner'
 import { colors } from '../theme/colors'
@@ -41,3 +41,4 @@ const Live = () => {
 }
 
 export default Live
+*/

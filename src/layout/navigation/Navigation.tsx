@@ -292,11 +292,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     ],
                   }}
                 />
-                <NavItem backgroundColor={backgroundColor}>
-                  <SupportButton onClick={() => setOpen(false)} to="/live">
-                    Watch Live
-                  </SupportButton>
-                </NavItem>
               </Menu>
             </nav>
           </FlexColumn>
@@ -346,6 +341,12 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     to="/support-us"
                   >
                     Support Pride
+                  </SupportButton>
+                </NavItem>
+
+                <NavItem backgroundColor={backgroundColor}>
+                  <SupportButton onClick={() => setOpen(false)} to="/live">
+                    Watch Live
                   </SupportButton>
                 </NavItem>
 */

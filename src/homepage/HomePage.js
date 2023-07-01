@@ -43,7 +43,9 @@ export const BoldText = styled.span`
 `
 
 const subtitles = [
-  'Welcome to the UK’s biggest, most diverse Pride.',
+  <BoldText>1 Jul 2023</BoldText>,
+  <br key={1} />,
+  'The UK’s biggest, most diverse Pride.',
   <br key={2} />,
   'A home for every part of London’s LGBT+ community.',
 ]
@@ -61,13 +63,10 @@ const HomePage = ({
       color={theme.colors.eucalyptusGreen}
       large
       allowContentUnderflow
-      videoId="841452011"
+      videoId="791429324"
       fixed={childImageSharp}
     >
       <Button to="/parade">What's happening</Button>
-      <Button to="/live" style={{ marginLeft: '10px' }} variant="secondary">
-        Watch Parade
-      </Button>
     </Banner>
     {/*<Container>
       <p
