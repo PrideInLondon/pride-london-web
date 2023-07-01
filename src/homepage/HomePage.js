@@ -43,9 +43,7 @@ export const BoldText = styled.span`
 `
 
 const subtitles = [
-  <BoldText>1 Jul 2023 </BoldText>,
-  <br key={1} />,
-  'The UK’s biggest, most diverse Pride.',
+  'Welcome to the UK’s biggest, most diverse Pride.',
   <br key={2} />,
   'A home for every part of London’s LGBT+ community.',
 ]
@@ -63,10 +61,12 @@ const HomePage = ({
       color={theme.colors.eucalyptusGreen}
       large
       allowContentUnderflow
-      videoId="791429324"
+      videoId="841452011"
       fixed={childImageSharp}
     >
+      
       <Button to="/parade">What's happening</Button>
+      <Button to="https://vimeo.com/event/3538641/" style={{marginLeft: '10px'}} variant="secondary">Watch Parade</Button>
     </Banner>
     {/*<Container>
       <p
