@@ -295,7 +295,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                 <NavItem backgroundColor={backgroundColor}>
                   <SupportButton
                     onClick={() => setOpen(false)}
-                    to="https://vimeo.com/event/3538641/embed"
+                    to="/live"
                   >
                     Watch Live
                   </SupportButton>
