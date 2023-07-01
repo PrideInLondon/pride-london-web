@@ -10,7 +10,7 @@ import {
   StyledLogo,
   Menu,
   Burger,
-  //SupportButton,
+  SupportButton,
 } from './Navigation.styles'
 import { NavigationProps } from './Navigation.types'
 
@@ -292,6 +292,14 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     ],
                   }}
                 />
+                <NavItem backgroundColor={backgroundColor}>
+                  <SupportButton
+                    onClick={() => setOpen(false)}
+                    to="https://vimeo.com/event/3538641/embed"
+                  >
+                    Watch Live
+                  </SupportButton>
+                </NavItem>
               </Menu>
             </nav>
           </FlexColumn>
