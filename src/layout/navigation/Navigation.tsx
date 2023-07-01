@@ -293,10 +293,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   }}
                 />
                 <NavItem backgroundColor={backgroundColor}>
-                  <SupportButton
-                    onClick={() => setOpen(false)}
-                    to="/live"
-                  >
+                  <SupportButton onClick={() => setOpen(false)} to="/live">
                     Watch Live
                   </SupportButton>
                 </NavItem>
