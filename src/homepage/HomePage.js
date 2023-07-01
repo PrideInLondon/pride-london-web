@@ -64,9 +64,14 @@ const HomePage = ({
       videoId="841452011"
       fixed={childImageSharp}
     >
-      
       <Button to="/parade">What's happening</Button>
-      <Button to="https://vimeo.com/event/3538641/embed" style={{marginLeft: '10px'}} variant="secondary">Watch Parade</Button>
+      <Button
+        to="https://vimeo.com/event/3538641/embed"
+        style={{ marginLeft: '10px' }}
+        variant="secondary"
+      >
+        Watch Parade
+      </Button>
     </Banner>
     {/*<Container>
       <p
