@@ -10,7 +10,7 @@ import {
   StyledLogo,
   Menu,
   Burger,
-  SupportButton,
+  //SupportButton,
 } from './Navigation.styles'
 import { NavigationProps } from './Navigation.types'
 
