@@ -45,11 +45,9 @@ export const BoldText = styled.span`
 const subtitles = [
   // <BoldText>1 Jul 2023 </BoldText>,
   // <br key={1} />,
-  '2023 marks the biggest pride ever in history.',
+  'Thank you for joining us for the 2023 pride parade.',
   <br key={2} />,
-  'We would like to express our heartfelt gratitude to everyone who has supported us.',
-  // <br key={2} />,
-  // 'A home for every part of London’s LGBT+ community.',
+  'A home for every part of London’s LGBT+ community.',
 ]
 
 const HomePage = ({
@@ -68,7 +66,7 @@ const HomePage = ({
       videoId="841511573"
       fixed={childImageSharp}
     >
-      <Button to="/parade">What's happening</Button>
+      {/* <Button to="/parade">What's happening</Button> */}
     </Banner>
     {/*<Container>
       <p
