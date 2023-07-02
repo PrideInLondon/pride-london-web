@@ -2,6 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import { generateEventSlug } from './src/events/helpers'
 import { generateBlogArticleSlug } from './src/blog/article/helpers'
+import { config } from 'dotenv'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
@@ -129,12 +130,12 @@ exports.createPages = async ({
       // Parse line
       /*
         Format is <Source> <Destination> (<Code>(<!>))
-        Including the ! will force a redirect even if there is a valid route
+        NON-FUNCTIONAL: Including the ! should force a redirect even if there is a valid route
         () Indicates Optional
       */
       const [rdrFrom, rdrTo, rdrOptions] = line.trim().split(/\s+/)
       var statusCode = 301 // Mirror Netlify behaviour
-      var forced = false
+      var forced = false // Currently non-functional
       if (rdrOptions) {
         if (rdrOptions.endsWith('!')) {
           forced = true
@@ -148,7 +149,7 @@ exports.createPages = async ({
         fromPath: rdrFrom,
         toPath: rdrTo,
         statusCode: statusCode,
-        force: forced,
+        force: forced, // Currently ignored by gatsby-plugin-gatsby-cloud
       })
     }
   }
@@ -156,7 +157,7 @@ exports.createPages = async ({
   console.log('Zed-hack: Imported Netlfify Redirects into Gatsby Format')
 }
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
   if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
@@ -169,6 +170,39 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       },
     })
   }
+  /* This didn't work but would be cleaner than the webpack loader override in LayoutHelmet.js */
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /(apple-touch-icon|favicon|mstile).*\.pnfakeg$/,
+          use: [
+            loaders.file({
+              name: 'static/favicons/[name]-[hash].png',
+            }),
+          ],
+        },
+      ],
+    },
+  })
+
+  const config = getConfig()
+
+  config.module.rules = [
+    ...config.module.rules.filter(
+      (rule) => String(rule.test) !== String(/\.(eot|otf|ttf|woff(2)?)(\?.*)?$/)
+    ),
+    {
+      test: /\.(eot|otf|ttf|woff(2)?)(\?.*)?$/,
+      use: [
+        loaders.file({
+          name: 'static/fonts/[name]-[hash].[ext]',
+        }),
+      ],
+    },
+  ]
+
+  actions.replaceWebpackConfig(config)
 }
 
 exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
