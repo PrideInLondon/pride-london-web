@@ -43,11 +43,13 @@ export const BoldText = styled.span`
 `
 
 const subtitles = [
-  <BoldText>1 Jul 2023 </BoldText>,
-  <br key={1} />,
-  'The UK’s biggest, most diverse Pride.',
+  // <BoldText>1 Jul 2023 </BoldText>,
+  // <br key={1} />,
+  '2023 marks the biggest pride ever in history.',
   <br key={2} />,
-  'A home for every part of London’s LGBT+ community.',
+  'We would like to express our heartfelt gratitude to everyone who has supported us.',
+  // <br key={2} />,
+  // 'A home for every part of London’s LGBT+ community.',
 ]
 
 const HomePage = ({
