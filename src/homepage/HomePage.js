@@ -66,7 +66,7 @@ const HomePage = ({
       videoId="791429324"
       fixed={childImageSharp}
     >
-      <Button to="/parade">What's happening</Button>
+      {/* <Button to="/parade">What's happening</Button> */}
     </Banner>
     {/*<Container>
       <p
