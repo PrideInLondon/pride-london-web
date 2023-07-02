@@ -1,8 +1,9 @@
 # Redirects
 # Lines starting with # are discarded
 # Format is <Source> <Destination> (<Code>(<!>))
-# Including the ! will force a redirect even if there is a valid route
+# Including the ! should force a redirect even if there is a valid route
 # () Indicates Optional
+# NOTE: Forcing redirects is currently unsupported. You must make sure the redirect is for invalid routes only
 /accessibility     /parade/accessibility     301!
 /accommodation     /explore-london     301!
 /as-a-group     /parade/take-part/groups     301!
@@ -41,4 +42,3 @@
 /about-us/campaigns/you-me-us-we/casting-call     /about-us/campaigns/archive/2020 301!
 /fifty-two/*     /    301!
 https://events.prideinlondon.org/*     /events      301!
-/expenses https://docs.google.com/forms/d/e/1FAIpQLSdsw3FtORl805vzx5Gt0hLuPYBtUO7U8N7JnbUvzAiIa77Daw/viewform 301!
