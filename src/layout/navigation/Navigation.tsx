@@ -129,23 +129,19 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     url: '/',
                     submenu: [
                       {
-                        heading: 'Parade',
+                        heading: 'Pride in London 2024',
                         links: [
                           {
-                            title: "This year's parade",
+                            title: 'Parade',
                             url: '/parade',
                           },
-                          //{
-                          //  title: 'Map',
-                          //  url: '/parade/map',
-                          //},
                           {
-                            title: 'Groups',
+                            title: 'Parade Groups',
                             url: '/parade/groups',
                           },
                           {
-                            title: 'Grandstand Tickets',
-                            url: 'https://www.outsavvy.com/event/14259/pride-in-london-2023-parade-grandstand',
+                            title: 'Pride 2024',
+                            url: '/pride',
                           },
                           {
                             title: 'Accessibility',
@@ -158,27 +154,11 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                       {
-                        heading: 'Stages',
+                        heading: 'Pride in London 2024',
                         links: [
                           {
-                            title: 'Trafalgar Square Stage',
-                            url: '/event/trafalgar-square-stage-2jYwE4ea09wMCXvKc05Bxk',
-                          },
-                          {
-                            title: 'Leicester Square Stage',
-                            url: '/event/lgbtqia-women-and-non-binary-stage-2qqkVYzLS6MebTgxWMm1t2',
-                          },
-                          {
-                            title: 'Golden Square Stage',
-                            url: '/event/golden-square-stage-4JUifwUxWnrE4kQxszjpyg',
-                          },
-                          {
-                            title: 'Soho Square Stage',
-                            url: '/event/mzz-kimberley-presents-soho-square-stage-6yHMrxVhK4u4ZLvEIvsHlK',
-                          },
-                          {
-                            title: 'Dean St Stage',
-                            url: '/event/dean-street-stage-6dAu9pWL0V6g1bSudrW0KM',
+                            title: 'Key information',
+                            url: '/pride',
                           },
                         ],
                       },
