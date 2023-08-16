@@ -66,19 +66,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: 'Our story',
                             url: '/about-us',
                           },
-                          {
-                            title: 'Unity Fund',
-                            url: '/unity-fund',
-                          },
-                        ],
-                      },
-                      {
-                        heading: 'Campaign 2023',
-                        links: [
-                          {
-                            title: 'Never March Alone',
-                            url: '/campaign',
-                          },
                         ],
                       },
                       {
@@ -123,6 +110,41 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
+                    id: 'nav-unity',
+                    title: 'Unity Fund',
+                    desc: 'The Unity Fund is designed to build stronger communities by supporting LGBT+ grassroots organisations in London whose work enhances the lives of LGBT+ people.',
+                    url: '/',
+                    submenu: [
+                      {
+                        heading: 'About',
+                        links: [
+                          {
+                            title: 'Unity Fund',
+                            url: '/unity-fund',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'Application',
+                        links: [
+                          {
+                            title: 'Apply',
+                            url: '/unity-fund/apply',
+                          },
+                          {
+                            title: 'FAQs',
+                            url: '/unity-fund/faqs',
+                          },
+                        ],
+                      },
+                    ],
+                  }}
+                />
+
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
                     id: 'nav-parade-day',
                     title: 'Parade',
                     desc: 'Plan your Parade day where charities, businesses and community groups come together to march for equality.',
@@ -154,11 +176,11 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                       {
-                        heading: 'Pride in London 2024',
+                        heading: 'Campaign 2023',
                         links: [
                           {
-                            title: 'Key information',
-                            url: '/pride',
+                            title: 'Never March Alone',
+                            url: '/campaign',
                           },
                         ],
                       },
