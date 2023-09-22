@@ -66,6 +66,31 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: 'Our story',
                             url: '/about-us',
                           },
+                          {
+                            title: 'Sustainability',
+                            url: '/sustainability',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'Parade',
+                        links: [
+                          {
+                            title: 'Parade',
+                            url: '/parade',
+                          },
+                          {
+                            title: 'Parade Groups',
+                            url: '/parade/groups',
+                          },
+                          {
+                            title: 'Pride 2024',
+                            url: '/pride',
+                          },
+                          {
+                            title: 'Accessibility',
+                            url: '/parade/accessibility',
+                          },
                         ],
                       },
                       {
@@ -81,6 +106,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           },
                         ],
                       },
+
                       // {
                       //   heading: 'Past Campaigns',
                       //   links: [
@@ -141,7 +167,8 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   }}
                 />
 
-                <NavItem
+                {/* Parade */}
+                {/* <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
@@ -199,7 +226,40 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                       },
                     ],
                   }}
+                /> */}
+
+                {/* Pride in the City */}
+                <NavItem
+                  backgroundColor={backgroundColor}
+                  setNavOpen={setOpen}
+                  item={{
+                    id: 'nav-pride-in-the-city',
+                    title: 'Pride in the City',
+                    desc: 'Pride in the City is a business-focussed initiative of Pride in London, empowering emloyers in creating an inclusive workplace.',
+                    url: '/',
+                    submenu: [
+                      {
+                        heading: 'Pride in the City 2024',
+                        links: [
+                          {
+                            title: 'About',
+                            url: '/pride-in-the-city-2024',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'Archive',
+                        links: [
+                          {
+                            title: 'Pride in the City 2021',
+                            url: 'pitc/pride-in-the-city-2021',
+                          },
+                        ],
+                      },
+                    ],
+                  }}
                 />
+
                 <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
