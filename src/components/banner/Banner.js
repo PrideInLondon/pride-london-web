@@ -73,7 +73,9 @@ const Banner = ({
           <StyledRow medium={medium}>
             <Column width={1} pb={[30, 30, 2]}>
               {date && <BannerDate>{date}</BannerDate>}
-              <BannerTitle>{titleText}</BannerTitle>
+              {titleText.trim().toUpperCase() !== 'EMPTY' && (
+                <BannerTitle>{titleText}</BannerTitle>
+              )}
               {subtitleText && <BannerSubtitle>{subtitleText}</BannerSubtitle>}
               {children}
             </Column>
