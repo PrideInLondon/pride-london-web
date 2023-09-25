@@ -247,15 +247,15 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           },
                         ],
                       },
-                      {
-                        heading: 'Archive',
-                        links: [
-                          {
-                            title: 'Pride in the City 2021',
-                            url: 'pitc/pride-in-the-city-2021',
-                          },
-                        ],
-                      },
+                      // {
+                      //   heading: 'Archive',
+                      //   links: [
+                      //     {
+                      //       title: 'Pride in the City 2021',
+                      //       url: 'pitc/pride-in-the-city-2021',
+                      //     },
+                      //   ],
+                      // },
                     ],
                   }}
                 />
@@ -345,10 +345,10 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: 'Partner with us',
                             url: '/support-us/partners',
                           },
-                          {
-                            title: 'Pride in the City',
-                            url: '/support-us/pride-in-the-city',
-                          },
+                          // {
+                          //   title: 'Pride in the City',
+                          //   url: '/support-us/pride-in-the-city',
+                          // },
                         ],
                       },
                     ],
