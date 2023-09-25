@@ -242,7 +242,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: 'Pride in the City 2024',
                         links: [
                           {
-                            title: 'About',
+                            title: 'Join Today',
                             url: '/pride-in-the-city-2024',
                           },
                         ],
