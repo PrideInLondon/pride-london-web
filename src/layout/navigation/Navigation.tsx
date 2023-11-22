@@ -89,7 +89,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           // },
                           {
                             title: 'Parade Entry 2024',
-                            url: '/entry2024',
+                            url: '/parade/entry2024',
                           },
                           {
                             title: 'Accessibility',
