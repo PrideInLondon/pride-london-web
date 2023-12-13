@@ -24,7 +24,7 @@
     "@wojtekmaj/enzyme-adapter-react-17": "0.x",
     "aria-hidden": "1.x",
     "dotenv": "10.x",
-    "gatsby": "2.x",
+    "gatsby": "4.x",
     "gatsby-image": "2.x",
     "gatsby-link": "2.x",
     "gatsby-plugin-google-tagmanager": "2.x",
