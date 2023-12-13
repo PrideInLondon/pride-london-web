@@ -9,7 +9,7 @@ export const VARIANTS = [
   'outline-white',
 ] as const
 
-export type ButtonVariant = typeof VARIANTS[number]
+export type ButtonVariant = (typeof VARIANTS)[number]
 
 export interface ButtonBaseProps extends SpaceProps, LayoutProps {
   variant?: ResponsiveValue<ButtonVariant>

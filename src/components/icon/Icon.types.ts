@@ -3,8 +3,8 @@ import { LayoutProps, SpaceProps } from 'styled-system'
 import { NAMES } from './icons'
 import { ROTATIONS } from './Icon.utils'
 
-export type IconName = typeof NAMES[number]
-export type IconRotation = typeof ROTATIONS[number]
+export type IconName = (typeof NAMES)[number]
+export type IconRotation = (typeof ROTATIONS)[number]
 
 export interface IconProps extends LayoutProps, SpaceProps {
   name: IconName
@@ -16,7 +16,7 @@ export interface IconProps extends LayoutProps, SpaceProps {
    *
    * left: 90 degrees counter-clockwise (to the left)
    */
-  rotate?: typeof ROTATIONS[number]
+  rotate?: (typeof ROTATIONS)[number]
 }
 
 export type IconColors = {

@@ -10,7 +10,7 @@ export const SPONSOR_LEVELS = [
   'Unlisted',
 ] as const
 
-export type SponsorLevel = typeof SPONSOR_LEVELS[number]
+export type SponsorLevel = (typeof SPONSOR_LEVELS)[number]
 
 export type ContentfulSponsor = {
   sponsorName: string
