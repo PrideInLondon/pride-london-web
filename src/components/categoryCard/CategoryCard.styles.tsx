@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { compose, layout, space } from 'styled-system'
-import Image from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { colors } from '../../theme/colors'
 import { Card } from '../card'
 import { CategoryCardProps } from './CategoryCard.types'
 
-export const StyledImage = styled(Image)<{ fluid: any }>`
+export const StyledImage = styled(GatsbyImage)<{ fluid: any }>`
   transition: transform 0.15s ease-out;
   width: 100% !important;
 `

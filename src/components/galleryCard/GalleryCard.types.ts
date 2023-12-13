@@ -1,5 +1,5 @@
 import { LayoutProps, SpaceProps } from 'styled-system'
-import { FluidObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Category } from '../../components/categoryFilter/CategoryFilter.types'
 
 export interface GalleryCardProps extends LayoutProps, SpaceProps {
@@ -13,7 +13,7 @@ export interface GalleryCardProps extends LayoutProps, SpaceProps {
     sold: boolean
     guidePrice: string
     image: {
-      fluid: FluidObject
+      fluid: GatsbyImage
       alt: string
     }
     category: Category

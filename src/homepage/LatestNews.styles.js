@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 import { CardTitle } from '../components/newsCard'
@@ -36,7 +36,7 @@ export const ImgWrapper = styled.div`
     border-radius: 4px;
   `}
 `
-export const LatestNewsImg = styled(Img)`
+export const LatestNewsImg = styled(GatsbyImage)`
   position: absolute;
   top: 50%;
   left: 50%;

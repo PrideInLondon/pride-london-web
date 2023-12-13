@@ -1,4 +1,4 @@
-import { FixedObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { ContentfulBlogArticleSummary } from './article/BlogArticlePage.types'
 
 export interface BlogPageProps {
@@ -7,9 +7,9 @@ export interface BlogPageProps {
       title: string
       subtitle: string
       bannerImage: {
-        desktop: FixedObject
-        tablet: FixedObject
-        mobile: FixedObject
+        desktop: GatsbyImage
+        tablet: GatsbyImage
+        mobile: GatsbyImage
       }
     }
     blogArticles: {

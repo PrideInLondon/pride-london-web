@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Image from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { RippedSection } from '../../components/rippedSection'
 import { Wrapper } from '../../components/wrapper'
 import { Tag } from '../../components/tag'
@@ -33,11 +33,10 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
 }) => (
   <>
     <RippedSection rips={{ bottom: { color: 'white' } }}>
-      <Image
-        fluid={getImageForBreakpoint(hero)}
+      <GatsbyImage
+        image={getImageForBreakpoint(hero)}
         style={{ width: '100%' }}
-        aria-hidden="true"
-      />
+        aria-hidden="true" />
     </RippedSection>
     <Wrapper
       display="flex"
@@ -131,12 +130,12 @@ export const query = graphql`
       category
       title
       content {
-        json
+        raw
       }
       author {
         name
         bio {
-          json
+          raw
         }
         website
         email

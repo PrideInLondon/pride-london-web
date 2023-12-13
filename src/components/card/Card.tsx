@@ -12,13 +12,13 @@ import {
   LayoutProps,
   FlexboxProps,
 } from 'styled-system'
-import Image from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { colors } from '../../theme/colors'
 import { mediaQueries } from '../../theme/mediaQueries'
 
 import { CardProps, CardImageProps, CardContentProps } from './Card.types'
 
-const StyledCardImage = styled(Image)<{ fixed: any }>`
+const StyledCardImage = styled(GatsbyImage)<{ fixed: any }>`
   position: absolute;
   top: 50%;
   left: 50%;

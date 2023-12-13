@@ -1,4 +1,4 @@
-import { FixedObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import {
   SpaceProps,
   LayoutProps,
@@ -14,7 +14,7 @@ export interface CardImageProps {
   /**
    * Fixed details from Gatsby Image
    */
-  image: FixedObject
+  image: GatsbyImage
   /**
    * Alt description for image
    */

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { BackgroundColorProps, color } from 'styled-system'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
 import left from './bannerLeft.svg'
@@ -101,7 +101,7 @@ export const ImgWrapper = styled.div`
   padding-top: 54.35%;
 `
 
-export const ResponsiveImg = styled(Img)<{ fixed: any }>`
+export const ResponsiveImg = styled(GatsbyImage)<{ fixed: any }>`
   position: absolute !important;
   top: 50%;
   left: 50%;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import theme from '../theme/theme'
 import { media } from '../theme/media'
 import { NewsCategory } from '../components/newsCategory'
@@ -11,7 +11,7 @@ export const Card = styled.div`
   background-color: ${theme.colors.white};
 `
 
-export const CardImg = styled(Img)`
+export const CardImg = styled(GatsbyImage)`
   padding-top: 58.75%;
   width: 100% !important;
   height: auto !important;

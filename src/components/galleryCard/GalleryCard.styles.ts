@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { compose, layout, space, LayoutProps, SpaceProps } from 'styled-system'
-import Image from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Tag } from '../../components/tag'
 import { colors } from '../../theme/colors'
 import { Card } from '../card'
@@ -11,7 +11,7 @@ export const ImageWrapper = styled.div<LayoutProps & SpaceProps>`
   ${compose(layout, space)}
 `
 
-export const StyledImage = styled(Image)`
+export const StyledImage = styled(GatsbyImage)`
   transition: transform 0.15s ease-out;
   width: 100% !important;
 `

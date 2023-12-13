@@ -170,7 +170,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
       category: String!
       title: String!
       content: contentfulBlogArticleContentRichTextNode! @link(by: "id", from: "content___NODE")
-      author: ContentfulTalentProfile
+      author: ContentfulTalentProfile @link(by: "id", from: "author___NODE")
     }
 
     type contentfulBlogArticleContentRichTextNode implements Node { 

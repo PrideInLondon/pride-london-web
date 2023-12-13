@@ -1,4 +1,4 @@
-import { FixedObject, FluidObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { sm, md } from '../theme/breakpoints'
 
 export const checkBreakpoint = (breakpoint: number): boolean =>
@@ -18,7 +18,7 @@ export const noScroll = {
   },
 }
 
-export const getImageForBreakpoint = <T extends FluidObject | FixedObject>({
+export const getImageForBreakpoint = <T extends FluidObject | GatsbyImage>({
   mobile,
   tablet,
   desktop,

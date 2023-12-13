@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { media } from '../../theme/media'
 import theme from '../../theme/theme'
 import { Column } from '../../components/grid'
@@ -77,7 +77,7 @@ export const AccessibilityHeading = styled.h2`
   `};
 `
 
-export const HeroImage = styled(Img)`
+export const HeroImage = styled(GatsbyImage)`
   position: absolute;
   top: 50%;
   left: 50%;

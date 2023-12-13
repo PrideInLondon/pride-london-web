@@ -1,12 +1,12 @@
 import { Document } from '@contentful/rich-text-types'
-import { FluidObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { ContentfulTalentProfile } from '../../components/talentProfile/TalentProfile.types'
 
 export interface ContentfulBlogArticleSummary {
   hero: {
-    desktop: FluidObject
-    tablet: FluidObject
-    mobile: FluidObject
+    desktop: GatsbyImage
+    tablet: GatsbyImage
+    mobile: GatsbyImage
   }
   category: string
   title: string

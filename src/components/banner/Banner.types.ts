@@ -1,7 +1,7 @@
-import { FixedObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export interface BannerImage {
-  desktop: FixedObject
-  tablet: FixedObject
-  mobile: FixedObject
+  desktop: GatsbyImage
+  tablet: GatsbyImage
+  mobile: GatsbyImage
 }

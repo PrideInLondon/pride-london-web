@@ -120,7 +120,7 @@ export const query = graphql`
       }
       bannerColor
       content {
-        json
+        raw
       }
     }
   }

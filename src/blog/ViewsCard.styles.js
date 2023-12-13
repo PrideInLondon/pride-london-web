@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 
@@ -41,7 +41,7 @@ export const ArticleAuthor = styled.p`
   `};
 `
 
-export const ViewsThumbnail = styled(Img)`
+export const ViewsThumbnail = styled(GatsbyImage)`
   border-radius: 4px;
   max-width: 100%;
   padding-top: 100%;

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { media } from '../../theme/media'
 import { Row, Container } from '../grid'
 
@@ -106,7 +106,7 @@ export const StyledWrapper = styled.div`
   `};
   `}
 `
-export const ResponsiveImg = styled(Img)`
+export const ResponsiveImg = styled(GatsbyImage)`
   position: absolute !important;
   top: 50%;
   left: 50%;

@@ -104,12 +104,13 @@ module.exports = {
         path: `${__dirname}/src`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: ['/blog/', '/blog/*'],
+        excludes: ['/blog/', '/blog/*'],
       },
     },
     `gatsby-plugin-remove-serviceworker`,

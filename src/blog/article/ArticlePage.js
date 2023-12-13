@@ -205,7 +205,7 @@ export const query = graphql`
       title
       slug
       article {
-        json
+        raw
       }
       headerImage {
         file {

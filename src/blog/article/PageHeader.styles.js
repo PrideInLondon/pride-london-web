@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { media } from '../../theme/media'
 
 export const Background = styled.div`
@@ -14,7 +14,7 @@ export const Background = styled.div`
   `};
 `
 
-export const BackgroundImage = styled(Img)`
+export const BackgroundImage = styled(GatsbyImage)`
   position: absolute;
   top: 50%;
   left: 50%;

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import { media } from '../theme/media'
 import theme from '../theme/theme'
 
-export const CardImage = styled(Img)`
+export const CardImage = styled(GatsbyImage)`
   border-radius: 4px;
   max-width: 100%;
   padding-top: 100%;
