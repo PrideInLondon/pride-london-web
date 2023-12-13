@@ -113,17 +113,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-remove-serviceworker`,
-    {
-      resolve: `gatsby-plugin-gatsby-cloud`,
-      options: {
-        allPageHeaders: [
-          'X-Frame-Options: SAMEORIGIN',
-          'X-XSS-Protection: 1; mode=block',
-          'X-Content-Type-Options: nosniff',
-          'Strict-Transport-Security: max-age=31536000; includeSubdomains',
-          'Referrer-Policy: strict-origin',
-        ],
-      },
-    },
   ],
 }

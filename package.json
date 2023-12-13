@@ -27,7 +27,6 @@
     "gatsby": "^2.x",
     "gatsby-image": "^2.x",
     "gatsby-link": "^2.x",
-    "gatsby-plugin-gatsby-cloud": "^1.0.2",
     "gatsby-plugin-google-tagmanager": "~2.x",
     "gatsby-plugin-layout": "^1.x",
     "gatsby-plugin-react-helmet": "^3.x",

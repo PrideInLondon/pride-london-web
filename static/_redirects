@@ -1,9 +1,9 @@
 # Redirects
 # Lines starting with # are discarded
 # Format is <Source> <Destination> (<Code>(<!>))
-# Including the ! should force a redirect even if there is a valid route
+# Including the ! will force a redirect even if there is a valid route
 # () Indicates Optional
-# NOTE: Forcing redirects is currently unsupported. You must make sure the redirect is for invalid routes only
+# https://docs.netlify.com/routing/redirects/redirect-options/
 /accessibility     /parade/accessibility     301!
 /accommodation     /explore-london     301!
 /as-a-group     /parade/take-part/groups     301!
