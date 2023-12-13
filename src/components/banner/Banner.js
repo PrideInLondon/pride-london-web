@@ -85,7 +85,7 @@ const Banner = ({
               aria-hidden="true"
               objectFit="cover"
               objectPosition="50% 50%"
-              fixed={
+              image={
                 !checkBreakpoint(400)
                   ? fixed.mobile
                   : !checkBreakpoint(800)

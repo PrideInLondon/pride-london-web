@@ -16,9 +16,7 @@ export type ContentfulSponsor = {
   sponsorName: string
   sponsorUrl: string
   sponsorLogo: {
-    sizes: {
-      src: string
-    }
+    gatsbyImageData: any
   }
   sponsorLevel: SponsorLevel
 }
@@ -26,6 +24,8 @@ export type ContentfulSponsor = {
 export interface Sponsor {
   name: string
   url: string
-  logo: string
+  logo: {
+    gaysbyImageData?: any
+  }
   level: SponsorLevel
 }

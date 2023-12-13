@@ -13,6 +13,7 @@ import EventsYouMayLike from './EventsYouMayLike'
 import EventInfoCard from './EventInfoCard'
 import EventDirectionsSection from './EventDirectionsSection'
 import EventShareSection from './EventShareSection'
+import { getImage } from "gatsby-plugin-image"
 import { EventUpcomingDates } from './EventUpcomingDates'
 import {
   AccessibilityHeading,
@@ -67,7 +68,7 @@ const EventPage = ({
         sponsors: eventSponsorSection.sponsors.map((sponsor) => ({
           name: sponsor.sponsorName,
           url: sponsor.sponsorUrl,
-          logo: sponsor.sponsorLogo && sponsor.sponsorLogo.sizes.src,
+          logo: getImage(sponsor.sponsorLogo),
           level: sponsor.sponsorLevel,
         })),
       }
@@ -371,9 +372,7 @@ export const query = graphql`
           sponsorName
           sponsorUrl
           sponsorLogo {
-            sizes(maxHeight: 168, quality: 90) {
-              src
-            }
+            gatsbyImageData(layout: CONSTRAINED, height: 168, quality: 90)
           }
         }
       }

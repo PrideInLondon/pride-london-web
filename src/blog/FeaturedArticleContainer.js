@@ -12,9 +12,7 @@ export const query = graphql`
         datePublished
         title
         headerImage {
-          sizes(maxWidth: 1920, quality: 90) {
-            src
-          }
+          gatsbyImageData(width: 1920, quality: 90)
         }
       }
     }

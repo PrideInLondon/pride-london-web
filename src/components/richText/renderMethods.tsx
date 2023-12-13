@@ -138,6 +138,7 @@ const renderHyperlink: NodeRenderer = ({ data: { uri } }, children) => (
 export const renderMethods: Options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ENTRY]: renderEmbeddedEntry,
+  
     [BLOCKS.PARAGRAPH]: renderParagraph,
     [BLOCKS.QUOTE]: renderQuote,
     [INLINES.HYPERLINK]: renderHyperlink,

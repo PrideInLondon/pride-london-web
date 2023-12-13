@@ -13,12 +13,8 @@ export const query = graphql`query eventsPageQuery {
         transformOptions: {cropFocus: CENTER}
         layout: FIXED
       )
-      tablet: fixed(width: 768, height: 417, quality: 100, cropFocus: CENTER) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
-      mobile: fixed(width: 480, height: 260, quality: 100, cropFocus: CENTER) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
+      tablet: gatsbyImageData(width: 768, height: 417, quality: 100, transformOptions: {cropFocus: CENTER}, layout: FIXED)
+      mobile: gatsbyImageData(width: 480, height: 260, quality: 100, transformOptions: {cropFocus: CENTER}, layout: FIXED)
     }
   }
 }`

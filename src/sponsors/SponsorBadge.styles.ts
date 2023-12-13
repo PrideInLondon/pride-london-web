@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { media } from '../theme/media'
 import constants from '../constants'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const isLargeBadge = (level: string) =>
   level === constants.sponsorLevels.headline ||
@@ -39,7 +40,7 @@ export const Badge = styled.a<{
         `};
 `
 
-export const BadgeImage = styled.img<{
+export const BadgeImage = styled.GatsbyImage<{
   level: string
   preventLevelSize: boolean
 }>`

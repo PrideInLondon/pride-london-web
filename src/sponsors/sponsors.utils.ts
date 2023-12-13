@@ -1,4 +1,6 @@
 import { ContentfulSponsor, Sponsor, SponsorLevel } from './PartnersPage.types'
+import { getSrcSet } from "gatsby-plugin-image"
+
 
 export const groupSponsorsByLevel = (
   edges: { node: ContentfulSponsor }[]
@@ -8,7 +10,7 @@ export const groupSponsorsByLevel = (
       ({ node: { sponsorName, sponsorUrl, sponsorLogo, sponsorLevel } }) => ({
         name: sponsorName,
         url: sponsorUrl,
-        logo: sponsorLogo && sponsorLogo.sizes.src,
+        logo: sponsorLogo,
         level: sponsorLevel,
       })
     )

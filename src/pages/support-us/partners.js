@@ -12,9 +12,7 @@ export const query = graphql`
           sponsorName
           sponsorUrl
           sponsorLogo {
-            sizes(maxHeight: 168, quality: 90) {
-              src
-            }
+            gatsbyImageData(layout: CONSTRAINED, height: 168, quality: 90)
           }
           sponsorLevel
         }

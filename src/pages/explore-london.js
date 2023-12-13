@@ -7,12 +7,8 @@ export const query = graphql`query CommunityPartnersQuery {
     name
     childImageSharp {
       desktop: gatsbyImageData(width: 1600, quality: 100, layout: FIXED)
-      tablet: fixed(width: 800, quality: 100) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
-      mobile: fixed(width: 400, quality: 100) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
+      tablet: gatsbyImageData(width: 800, quality: 100, layout: FIXED)
+      mobile: gatsbyImageData(width: 400, quality: 100, layout: FIXED)
     }
   }
   allContentfulCommunityPartner(sort: {fields: venueName, order: ASC}) {
