@@ -47,3 +47,7 @@ export const BlogHeader: React.FC<BlogHeaderProps> = ({
     </BlogWrapper>
   )
 }
+
+BlogHeader.defaultProps = {
+  readTime: undefined,
+}
