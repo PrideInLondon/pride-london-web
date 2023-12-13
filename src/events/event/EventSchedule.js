@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import EventScheduleItem from './EventScheduleItem'
 
-const splitIntoArray = schedule =>
+const splitIntoArray = (schedule) =>
   schedule.reduce(
     (acc, item) => {
       if (item.startTime < '12:00') {
@@ -30,7 +30,7 @@ const splitIntoArray = schedule =>
     }
   )
 
-const EventSchedule = props => {
+const EventSchedule = (props) => {
   if (!props.schedule) return null
 
   const { morning, afternoon, evening } = splitIntoArray(props.schedule)
