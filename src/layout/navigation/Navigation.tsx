@@ -238,10 +238,19 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-pride-in-the-city',
-                    title: 'Pride in the City',
+                    title: 'Pride Parade',
                     desc: 'Pride in the City is a business-focussed initiative of Pride in London, empowering emloyers in creating an inclusive workplace.',
                     url: '/',
                     submenu: [
+                      {
+                        heading: 'Parade 2024',
+                        links: [
+                          {
+                            title: 'Hire a stall',
+                            url: '/parade/stalls/hire-a-stall/',
+                          },
+                        ],
+                      },
                       {
                         heading: 'Pride in the City 2024',
                         links: [
