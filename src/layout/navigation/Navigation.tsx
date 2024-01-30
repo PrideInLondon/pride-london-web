@@ -73,31 +73,6 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                       {
-                        heading: 'Parade',
-                        links: [
-                          // {
-                          //   title: 'Parade',
-                          //   url: '/parade',
-                          // },
-                          // {
-                          //   title: 'Parade Groups',
-                          //   url: '/parade/groups',
-                          // },
-                          // {
-                          //   title: 'Pride 2024',
-                          //   url: '/pride',
-                          // },
-                          {
-                            title: 'Parade Entry 2024',
-                            url: '/parade/entry2024',
-                          },
-                          {
-                            title: 'Accessibility',
-                            url: '/parade/accessibility',
-                          },
-                        ],
-                      },
-                      {
                         heading: 'Comms',
                         links: [
                           {
@@ -244,6 +219,31 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     submenu: [
                       {
                         heading: 'Parade 2024',
+                        links: [
+                          // {
+                          //   title: 'Parade',
+                          //   url: '/parade',
+                          // },
+                          // {
+                          //   title: 'Parade Groups',
+                          //   url: '/parade/groups',
+                          // },
+                          // {
+                          //   title: 'Pride 2024',
+                          //   url: '/pride',
+                          // },
+                          {
+                            title: 'Parade Entry 2024',
+                            url: '/parade/entry2024',
+                          },
+                          {
+                            title: 'Accessibility',
+                            url: '/parade/accessibility',
+                          },
+                        ],
+                      },
+                      {
+                        heading: 'Business Enquiries',
                         links: [
                           {
                             title: 'Hire a stall',
