@@ -12,14 +12,14 @@ import { StyledFigure, StyledFigure2 } from './Figure.styles'
 const isFirstCharQuestionMark = (str) => str !== '' && str.charAt(0) === '?'
 
 const Figure = ({ file, title, description }) => {
-  if (isFirstCharQuestionMark(description['en-GB'])) {
-    const modifier = description['en-GB']
-    return (
-      <StyledFigure2>
-        <img src={`${file['en-GB'].url}`} alt={title && title['en-GB']} />
-      </StyledFigure2>
-    )
-  }
+  // if (isFirstCharQuestionMark(description['en-GB'])) {
+  //   const modifier = description['en-GB']
+  //   return (
+  //     <StyledFigure2>
+  //       <img src={`${file['en-GB'].url}`} alt={title && title['en-GB']} />
+  //     </StyledFigure2>
+  //   )
+  // }
   return (
     <StyledFigure>
       <img src={`${file['en-GB'].url}`} alt={title && title['en-GB']} />
