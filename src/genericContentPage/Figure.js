@@ -12,6 +12,10 @@ import { StyledFigure, StyledFigure2 } from './Figure.styles'
 const isFirstCharQuestionMark = (str) => str !== '' && str.charAt(0) === '?'
 
 const Figure = ({ file, title, description }) => {
+  if (isFirstCharQuestionMark(description['en-GB'])) {
+    console.log('first question mark')
+    console.log(description)
+  }
   // if (isFirstCharQuestionMark(description['en-GB'])) {
   //   const modifier = description['en-GB']
   //   return (
