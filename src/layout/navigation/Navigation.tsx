@@ -332,6 +332,10 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: 'Join Today',
                             url: '/pride-in-the-city-2024',
                           },
+                          {
+                            title: 'Members',
+                            url: '/pitc/current-members',
+                          },
                         ],
                       },
                     ],
