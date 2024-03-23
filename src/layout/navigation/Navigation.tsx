@@ -213,12 +213,12 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-parade',
-                    title: 'Pride Parade',
+                    title: 'Pride 2024',
                     desc: 'Our annual parade in London, celebrating diversity and inclusivity.',
                     url: '/',
                     submenu: [
                       {
-                        heading: 'Parade 2024',
+                        heading: 'Parade',
                         links: [
                           // {
                           //   title: 'Parade',
@@ -240,6 +240,11 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             title: 'Parade Entry 2024',
                             url: '/parade/entry2024',
                           },
+                        ],
+                      },
+                      {
+                        heading: 'General Information',
+                        links: [
                           {
                             title: 'Volunteer Application',
                             url: '/parade/volunteer-application-2024',
@@ -256,6 +261,10 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           {
                             title: 'Hire a stall',
                             url: '/parade/stalls/hire-a-stall/',
+                          },
+                          {
+                            title: 'Residents & Businesses Info',
+                            url: '/parade/residents-and-businesses-info',
                           },
                         ],
                       },
