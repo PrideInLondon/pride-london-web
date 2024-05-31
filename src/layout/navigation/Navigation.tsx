@@ -250,7 +250,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           //   url: '/pride',
                           // },
                           {
-                            title: 'Visiting',
+                            title: 'Route and Info',
                             url: '/pride/2024',
                           },
                           {
@@ -263,27 +263,27 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         heading: 'Stages',
                         links: [
                           {
-                            title: 'Trafalgar Square Stage',
+                            title: 'Trafalgar Square',
                             url: '/pride/trafalgar',
                           },
                           {
-                            title: 'Leicester Square Stage',
+                            title: 'Leicester Square',
                             url: '/pride/leicester',
                           },
                           {
-                            title: 'Golden Square Stage',
-                            url: '/pride/goldensquare',
-                          },
-                          {
-                            title: 'Soho Square Stage',
-                            url: '/pride/sohosquare',
-                          },
-                          {
-                            title: 'Dean Street Stage',
+                            title: 'Dean Street',
                             url: '/pride/deanstreet',
                           },
                           {
-                            title: 'Family Area',
+                            title: 'Soho Square',
+                            url: '/pride/sohosquare',
+                          },
+                          {
+                            title: 'Golden Square',
+                            url: '/pride/goldensquare',
+                          },
+                          {
+                            title: 'Victoria Embankment Gardens',
                             url: '/pride/family-area',
                           },
                         ],
