@@ -121,7 +121,7 @@ const MiddleSection = ({
       )}
     </LogoContainer>
     <Divider />
-    <H6 mb="md">Powered by</H6>
+    {/* <H6 mb="md">Powered by</H6>
     <LogoWrapper key={'UPS'}>
       <PoweredLogo
         href={'https://www.ups.com/gb/en/Home.page'}
@@ -136,7 +136,7 @@ const MiddleSection = ({
           alt={`ups logo`}
         />
       </PoweredLogo>
-    </LogoWrapper>
+    </LogoWrapper> */}
     <PartnersLinksContainer>
       <Button variant="tertiary" to="/support-us/partners">
         View all

@@ -85,6 +85,23 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           },
                         ],
                       },
+                      {
+                        heading: 'Unity Fund',
+                        links: [
+                          {
+                            title: 'Unity Fund',
+                            url: '/unity-fund',
+                          },
+                          // {
+                          //   title: 'Apply',
+                          //   url: '/unity-fund/apply',
+                          // },
+                          {
+                            title: 'FAQs',
+                            url: '/unity-fund/faqs',
+                          },
+                        ],
+                      },
 
                       // {
                       //   heading: 'Past Campaigns',
@@ -111,7 +128,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   }}
                 />
 
-                <NavItem
+                {/* <NavItem
                   backgroundColor={backgroundColor}
                   setNavOpen={setOpen}
                   item={{
@@ -144,7 +161,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                       },
                     ],
                   }}
-                />
+                /> */}
 
                 {/* Parade */}
                 {/* <NavItem
@@ -234,11 +251,40 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           // },
                           {
                             title: 'Overview',
-                            url: '/pride',
+                            url: '/pride/2024',
+                          },
+                          // {
+                          //   title: 'Parade Entry 2024',
+                          //   url: '/parade/entry2024',
+                          // },
+                        ],
+                      },
+                      {
+                        heading: 'Stages',
+                        links: [
+                          {
+                            title: 'Trafalgar Square Stage',
+                            url: '/pride/trafalgar',
                           },
                           {
-                            title: 'Parade Entry 2024',
-                            url: '/parade/entry2024',
+                            title: 'Leicester Square Stage',
+                            url: '/pride/leicester',
+                          },
+                          {
+                            title: 'Golden Square Stage',
+                            url: '/pride/goldensquare',
+                          },
+                          {
+                            title: 'Soho Square Stage',
+                            url: '/pride/sohosquare',
+                          },
+                          {
+                            title: 'Dean Street Stage',
+                            url: '/pride/deanstreet',
+                          },
+                          {
+                            title: 'Family Area',
+                            url: '/pride/family-area',
                           },
                         ],
                       },
