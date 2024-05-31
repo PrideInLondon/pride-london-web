@@ -77,7 +77,7 @@ const PartnersPage = ({
       <Container>
         <Row>
           <Column>
-            <ListTitle>Welcome to our 2023 partners</ListTitle>
+            <ListTitle>Welcome to our 2024 partners</ListTitle>
             <p>
               A huge thank you to all of the brands that are supporting us this
               year.
@@ -152,14 +152,14 @@ const PartnersPage = ({
                   )
               )}
 
-              <SponsorsSubSection key={'Powered By'} title="Powered By">
+              {/* <SponsorsSubSection key={'Powered By'} title="Powered By">
                 <SponsorBadge
                   logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/United_Parcel_Service_logo_2014.svg/1200px-United_Parcel_Service_logo_2014.svg.png"
                   name="UPS"
                   url="https://www.ups.com/gb/en/Home.page"
                   level="Unlisted"
                 />
-              </SponsorsSubSection>
+              </SponsorsSubSection> */}
             </SecondarySponsorsContainer>
           </Column>
         </Row>
