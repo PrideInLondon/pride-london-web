@@ -41,4 +41,5 @@
 /about-us/campaigns/you-me-us-we    /about-us/campaigns/archive/2020 301!
 /about-us/campaigns/you-me-us-we/casting-call     /about-us/campaigns/archive/2020 301!
 /fifty-two/*     /    301!
+/parade/map     /pride/2024   301!
 https://events.prideinlondon.org/*     /events      301!
