@@ -52,7 +52,7 @@ const PartnersPage = ({
           not exist. Since the current community group took over the running of
           Pride in 2012, the office of the Mayor of London and our headline
           partners have remained committed to keeping Pride on the road. They
-          have proved to be great allies of the LGBT+ community and we are
+          have proved to be great allies of the LGBTQ+ community and we are
           eternally grateful for their support. In 2018, Sadiq Khan, Mayor of
           London extended Pride in London’s contract, committing to support our
           work for a further 5 years.
@@ -61,13 +61,13 @@ const PartnersPage = ({
           For many years LGBTQ+ people have faced hiding their true selves from
           their colleagues. Only since 2000 have people been able to openly
           serve in the military. Today, while prejudice is still rife in many
-          places, many companies and organisations have embraced their LGBT+
+          places, many companies and organisations have embraced their LGBTQ+
           members of staff. Studies show, that employers who recognise and
           support diversity are on average more productive and more profitable.
         </p>
         <p>
           Over the years we have seen more and more companies openly support and
-          embrace their LGBT+ colleagues, as well as provide a safe, loving and
+          embrace their LGBTQ+ colleagues, as well as provide a safe, loving and
           supportive workplace. Being part of Pride is one of the many ways we
           are seeing workplaces transform for the better. Pride in London are
           proud to be working with our partners to ensure diversity is embedded
