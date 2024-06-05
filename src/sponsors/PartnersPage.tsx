@@ -152,6 +152,13 @@ const PartnersPage = ({
                   )
               )}
 
+              <div style={{ 'margin-bottom': '50px' }}>
+                A copy of our partnership ethical policy can be downloaded{' '}
+                <a href="https://drive.google.com/file/d/1D0oSevWmfXXEnabG7HcShNbQXh_sypXE/view?usp=sharing">
+                  here
+                </a>
+              </div>
+
               {/* <SponsorsSubSection key={'Powered By'} title="Powered By">
                 <SponsorBadge
                   logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/United_Parcel_Service_logo_2014.svg/1200px-United_Parcel_Service_logo_2014.svg.png"
