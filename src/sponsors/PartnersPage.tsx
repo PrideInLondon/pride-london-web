@@ -58,7 +58,7 @@ const PartnersPage = ({
           work for a further 5 years.
         </p>
         <p>
-          For many years LGBT+ people have faced hiding their true selves from
+          For many years LGBTQ+ people have faced hiding their true selves from
           their colleagues. Only since 2000 have people been able to openly
           serve in the military. Today, while prejudice is still rife in many
           places, many companies and organisations have embraced their LGBT+
@@ -152,7 +152,7 @@ const PartnersPage = ({
                   )
               )}
 
-              <div style={{ 'margin-bottom': '50px' }}>
+              <div style={{ 'margin-bottom': '60px' }}>
                 A copy of our partnership ethical policy can be downloaded{' '}
                 <a href="https://drive.google.com/file/d/1D0oSevWmfXXEnabG7HcShNbQXh_sypXE/view?usp=sharing">
                   here
