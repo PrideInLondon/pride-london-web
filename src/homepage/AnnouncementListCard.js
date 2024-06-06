@@ -20,7 +20,9 @@ const AnnouncementCard = ({ title, url, callToActionText, image }) => {
           <br />
           {/* <CardDesc>{desc}</CardDesc> */}
           <ButtonWrapper>
-            <Button to={url}>{callToActionText}</Button>
+            <Button variant={'mobile'} to={url}>
+              {callToActionText}
+            </Button>
           </ButtonWrapper>
         </CardTextWrapper>
       </CardWrapper>

@@ -51,6 +51,7 @@
     "react-helmet": "6.x",
     "react-intercom": "1.x",
     "react-markdown": "6.x",
+    "react-multi-carousel": "^2.8.5",
     "react-onclickoutside": "6.x",
     "react-slick": "0.x",
     "react-spring": "9.x",
