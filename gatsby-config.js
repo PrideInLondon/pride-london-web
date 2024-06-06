@@ -14,10 +14,10 @@ module.exports = {
   siteMetadata: {
     siteUrl,
     name: 'Pride in London',
-    legalName: 'London LGBT+ Community Pride CIC',
+    legalName: 'London LGBTQ+ Community Pride CIC',
     title: 'Pride in London',
     description:
-      'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community',
+      'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBTQ+ community',
     appleAppId: '1250496471',
     phone: '+448443445428',
     email: 'info@prideinlondon.org',

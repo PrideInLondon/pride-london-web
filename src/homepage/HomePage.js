@@ -47,7 +47,7 @@ const subtitles = [
   // <br key={1} />,
   'Thank you for joining us for the 2023 pride parade.',
   <br key={2} />,
-  'A home for every part of London’s LGBT+ community.',
+  'A home for every part of London’s LGBTQ+ community.',
 ]
 
 const HomePage = ({

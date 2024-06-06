@@ -116,5 +116,5 @@ export const Helmet: React.FC<HelmetProps> = ({
 
 Helmet.defaultProps = {
   description:
-    'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community',
+    'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBTQ+ community',
 }

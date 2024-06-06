@@ -16,7 +16,7 @@ const NewsAndViewsPage = ({ data: { articles, views } }) => (
   <>
     <Banner
       titleText="News and views"
-      subtitleText="Read about what we’re talking about in the London LGBT+ community"
+      subtitleText="Read about what we’re talking about in the London LGBTQ+ community"
       altText="News and views"
       imageSrc={background}
       imageFullWidth

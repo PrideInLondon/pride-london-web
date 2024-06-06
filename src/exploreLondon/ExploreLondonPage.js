@@ -26,14 +26,14 @@ const ExploreLondonPage = ({
     <PageIntro
       cta={{
         title: 'Get your venue listed',
-        body: "We'd love to hear from you if you have an LGBT+ or LGBT+ friendly venue and you want to support Pride.",
+        body: "We'd love to hear from you if you have an LGBTQ+ or LGBTQ+ friendly venue and you want to support Pride.",
         link: { to: 'mailto:info@prideinlondon.org', text: 'Get in touch' },
       }}
     >
       <p>
         London is one of the most exciting cities in the world. Whether you live
         in London or you're visiting from further afield, check out the
-        following amazing venues who support Pride and the LGBT+ community.
+        following amazing venues who support Pride and the LGBTQ+ community.
       </p>
     </PageIntro>
     {partners && (

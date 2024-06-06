@@ -134,7 +134,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   item={{
                     id: 'nav-unity',
                     title: 'Unity Fund',
-                    desc: 'The Unity Fund is designed to build stronger communities by supporting LGBT+ grassroots organisations in London whose work enhances the lives of LGBT+ people.',
+                    desc: 'The Unity Fund is designed to build stronger communities by supporting LGBTQ+ grassroots organisations in London whose work enhances the lives of LGBTQ+ people.',
                     url: '/',
                     submenu: [
                       {
@@ -260,6 +260,27 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                         ],
                       },
                       {
+                        heading: 'Pride Festival',
+                        links: [
+                          // {
+                          //   title: 'Parade',
+                          //   url: '/parade',
+                          // },
+                          // {
+                          //   title: 'Parade Groups',
+                          //   url: '/parade/groups',
+                          // },
+                          // {
+                          //   title: 'Pride 2024',
+                          //   url: '/pride',
+                          // },
+                          {
+                            title: 'Events in london',
+                            url: '/events',
+                          },
+                        ],
+                      },
+                      {
                         heading: 'Stages',
                         links: [
                           {
@@ -333,7 +354,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   item={{
                     id: 'nav-events',
                     title: 'Events',
-                    desc: 'Discover and attend the Pride and LGBT+ events happening all across London.',
+                    desc: 'Discover and attend the Pride and LGBTQ+ events happening all across London.',
                     url: '/',
                     submenu: [
                       {
@@ -417,7 +438,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   item={{
                     id: 'nav-support-us',
                     title: 'Support us',
-                    desc: 'If you’re passionate about the LGBT+ community please consider supporting Pride by donating, sponsoring or volunteering.',
+                    desc: 'If you’re passionate about the LGBTQ+ community please consider supporting Pride by donating, sponsoring or volunteering.',
                     url: '/',
                     submenu: [
                       {
