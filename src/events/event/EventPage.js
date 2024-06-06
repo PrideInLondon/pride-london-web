@@ -294,9 +294,9 @@ const EventPage = ({
           </Column>
         </Row>
       </Container>
-      {!isVirtualEvent(location2) && (
+      {/* {!isVirtualEvent(location2) && (
         <EventDirectionsSection data={contentfulEvent} />
-      )}
+      )} */}
       <EventsYouMayLike eventId={id} />
     </PageWrapper>
   )
