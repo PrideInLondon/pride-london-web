@@ -9,22 +9,37 @@ export const CarouselItemWrapper = styled.div`
   margin: 10px;
   overflow: hidden;
   transition: transform 0.3s;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
 `
+// export const CarouselItemWrapper = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin: 10px;
+//   overflow: hidden;
+//   transition: transform 0.3s;
+
+//   &:hover {
+//     transform: translateY(-5px);
+//   }
+// `
 export const CardWrapper = styled.div`
   border: 2px solid #e3dfde;
   border-radius: 8px;
   max-width: 383px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 `
 
 export const CardImage = styled.img`
   width: 380px;
   height: 270px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 export const CardTextWrapper = styled.div`
