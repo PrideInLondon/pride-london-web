@@ -36,6 +36,26 @@ export const Column = styled.div<GridProps>`
   }
   ${compose(position, flexbox, layout)}
 `
+export const Column2 = styled.div<GridProps>`
+  padding: 10px 5px;
+
+  @media (max-width: 550px) {
+    height: 90vw;
+  }
+
+  ${mediaQueries.sm} {
+    padding: 10px;
+  }
+
+  ${mediaQueries.lg} {
+    padding: 10px 15px;
+  }
+
+  && {
+    ${space}
+  }
+  ${compose(position, flexbox, layout)}
+`
 // eslint-disable-next-line no-unexpected-multiline
 export const Row = styled.div<GridProps>`
   margin-left: 5px;
