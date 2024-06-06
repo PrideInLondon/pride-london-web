@@ -111,7 +111,7 @@ const AnnouncementCarousel = ({ announcements }) => {
         {announcements.map((announcement) => (
           <AnnouncementCarouselCard
             key={announcement.node.url} // Ensure a unique key for each item
-            description={announcement.node.title}
+            description={announcement.node.desc}
             headline={announcement.node.title}
             image={announcement.node.image}
             url={announcement.node.url}
