@@ -36,6 +36,7 @@ AnnouncementCarouselCard.propTypes = {
   image: PropTypes.string.isRequired,
   headline: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 }
 
 export default AnnouncementCarouselCard
