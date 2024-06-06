@@ -22,18 +22,24 @@ import AnnouncementCarouselCard from './AnnouncementCarouselCard'
 import './AnnouncementCarousel.css'
 
 const AnnouncementCarousel = ({ announcements }) => {
-  const [isMobile, setIsMobile] = useState(
-    window.innerWidth <= 890 && window.innerWidth > 550
-  )
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 890 && window.innerWidth > 550)
     }
 
+    // Initial check
+    handleResize()
+
+    // Add event listener
     window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [window.innerWidth])
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <AnnouncementCarouselWrapper>
