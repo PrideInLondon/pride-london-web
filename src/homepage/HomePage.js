@@ -13,6 +13,7 @@ import LatestNewsContainer from './LatestNewsContainer'
 import AnnouncementsList from './AnnouncementList'
 // import Announcements1 from './Announcements'
 // import SocialWall from './SocialWall'
+import HighlightBanner from './HighlightBanner'
 import Donate from './Donate'
 
 const Divider = styled.hr`
@@ -84,8 +85,10 @@ const HomePage = ({
         {new Date().getFullYear()} and what to do on the day?
       </p>
       </Container>*/}
+    <HighlightBanner />
     <AnnouncementsList />
-    <Divider />
+    {/* <Divider /> */}
+    <div style={{ marginBottom: '80px' }} />
     <VolunteerBoxInfo />
     <Divider />
     {/*<CampaignContainer />*/}

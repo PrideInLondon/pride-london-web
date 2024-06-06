@@ -73,6 +73,16 @@ export const StyledButton = styled(
           backgroundSize: '4px 100%',
         },
       },
+      mobile: {
+        border: `2px solid ${colors.eucalyptusGreen}`,
+        backgroundColor: colors.eucalyptusGreen,
+        color: colors.indigo,
+        '&:hover,&:focus': {
+          backgroundColor: lighten(0.1, colors.eucalyptusGreen),
+          borderColor: lighten(0.1, colors.eucalyptusGreen),
+        },
+        padding: `5px`,
+      },
       outline: {
         border: `2px solid currentColor`,
         backgroundColor: 'transparent',

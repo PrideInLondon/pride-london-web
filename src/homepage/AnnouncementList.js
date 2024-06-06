@@ -5,6 +5,7 @@ import { Container, Row, Column } from '../components/grid'
 import AnnouncementListCard from './AnnouncementListCard'
 import AnnouncementListHeader from './AnnouncementListHeader'
 import { AnnouncementsContent } from './Announcements.styles'
+import AnnouncementCarousel from './AnnouncementCarousel'
 
 export const query = graphql`
   query announcementsQuery {
@@ -19,8 +20,8 @@ export const query = graphql`
           image {
             title
             fixed(
-              width: 1260
-              height: 450
+              width: 380
+              height: 270
               resizingBehavior: FILL
               quality: 90
             ) {
@@ -61,7 +62,8 @@ const AnnouncementsListContainer = () => (
             <Row>
               <Column width={1}>
                 <AnnouncementListHeader />
-                {announcements.map(
+                <AnnouncementCarousel announcements={announcements} />
+                {/* {announcements.map(
                   (
                     { node: { id, title, url, callToActionText, image } },
                     idx
@@ -78,7 +80,7 @@ const AnnouncementsListContainer = () => (
                       }
                     />
                   )
-                )}
+                )} */}
               </Column>
             </Row>
           </Container>

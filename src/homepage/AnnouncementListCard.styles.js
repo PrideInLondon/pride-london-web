@@ -96,8 +96,10 @@ export const CardWrapper = styled.div`
   overflow: hidden;
   position: relative;
 
+}
+
   ${media.tablet`
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     overflow: hidden;
     position: relative;
     box-shadow: 10px 10px 20px -3px #c5c5c5;
@@ -115,9 +117,23 @@ export const CardTextWrapper = styled.div`
     top: 280px;
     width: 60vw;
   `};
+
+  ${media.mobile`
+    position: absolute;
+    left: 30px;
+    top: 280px;
+    width: 60vw;
+  `};
 `
 
 export const ButtonWrapper = styled.div`
   margin-left: -10px;
   margin-top: 10px;
+
+  ${media.tablet`
+  `};
+
+  ${media.mobile`
+    margin-top: 6px;
+  `};
 `
