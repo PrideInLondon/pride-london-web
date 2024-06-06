@@ -46,7 +46,7 @@ export const BoldText = styled.span`
 const subtitles = [
   // <BoldText>1 Jul 2023 </BoldText>,
   // <br key={1} />,
-  'Thank you for joining us for the 2023 pride parade.',
+  'Embracing Every Shade: Celebrating Diversity Together',
   <br key={2} />,
   'A home for every part of London’s LGBTQ+ community.',
 ]
@@ -58,7 +58,7 @@ const HomePage = ({
 }) => (
   <Fragment>
     <Banner
-      titleText="Pride in London"
+      titleText="Pride in London - 29 June 2024"
       subtitleText={subtitles}
       titlePosition="bottom"
       color={theme.colors.eucalyptusGreen}
