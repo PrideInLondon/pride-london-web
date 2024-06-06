@@ -118,12 +118,21 @@ export const CardTextWrapper = styled.div`
     width: 60vw;
   `};
 
-  ${media.mobile`
+  @media (max-width: 550px) {
     position: absolute;
     left: 30px;
-    top: 280px;
-    width: 60vw;
-  `};
+    top: 54vw;
+    width: 90vw;
+    padding-left: 20px;
+    padding-right: 25px;
+    margin-left: -10px;
+  }
+  @media (max-width: 767px) {
+    top: 50vw;
+  }
+  @media (max-width: 550px) {
+    top: 54vw;
+  }
 `
 
 export const ButtonWrapper = styled.div`
