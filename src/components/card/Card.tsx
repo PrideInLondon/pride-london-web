@@ -103,6 +103,7 @@ export const Card = styled(Link)<CardProps>`
   display: flex;
   overflow: hidden;
   text-decoration: none;
+  border: 2px solid ${colors.electricPurple};
 
   &:hover,
   &:focus {

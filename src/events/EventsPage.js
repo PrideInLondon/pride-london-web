@@ -99,12 +99,12 @@ const EventsPage = ({
     <BackgroundContainer>
       <Helmet
         title="Pride Festival"
-        description="A month of curated LGBT+ events"
+        description="A month of curated LGBTQ+ events"
       />
       <EventsPageBanner
         image={childImageSharp}
         title="Pride Festival"
-        subtitle="A month of curated events for LGBT+ communities. Events are sorted according to date."
+        subtitle="A month of curated events for LGBTQ+ communities. Events are sorted according to date."
         backgroundColor={colors.electricPurple}
       >
         <Button
@@ -178,7 +178,7 @@ const EventsPage = ({
 /*
 <Banner
         titleText="Pride Festival"
-        subtitleText="A month of curated events for LGBT+ communities"
+        subtitleText="A month of curated events for LGBTQ+ communities"
         fixed={childImageSharp}
         color={colors.bondiBlue}
       
