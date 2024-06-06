@@ -1,21 +1,2 @@
 .carousel-item {
-  /* max-width: 400px;
-  min-width: 400px;
-  @media (min-width: 550px) and (max-width: 890px) {
-  } */
-}
-@media (min-width: 550px) and (max-width: 890px) {
-  /* .carousel-item {
-    max-width: 400px;
-    min-width: 400px;
-  } */
-}
-
-.carousel-item-test2 {
-  margin: 5px;
-  /* padding-right: 50px; */
-  width: 400px;
-  background-color: red;
-  margin: 3px;
-  border: 3px solid black;
 }

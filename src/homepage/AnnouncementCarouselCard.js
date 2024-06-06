@@ -16,6 +16,19 @@ const AnnouncementCarouselCard = ({ image, headline, description, url }) => {
     <CarouselItemWrapper>
       <CardWrapper>
         <LinkCardWrapper href={url}>
+          <CardImage src={`http:${image.fixed.src}`} alt={headline} />
+          <CardTextWrapper>
+            {/* <CardTitle>{headline}</CardTitle> */}
+            <CardDesc>{description}</CardDesc>
+          </CardTextWrapper>
+        </LinkCardWrapper>
+      </CardWrapper>
+    </CarouselItemWrapper>
+  )
+  return (
+    <CarouselItemWrapper>
+      <CardWrapper>
+        <LinkCardWrapper href={url}>
           {/* <CardImage src={image} alt={headline} /> */}
           <CardImage src={`http:${image.fixed.src}`} alt={headline} />
           <CardTextWrapper>

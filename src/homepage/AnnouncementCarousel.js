@@ -57,7 +57,7 @@ const AnnouncementCarousel = ({ announcements }) => {
         draggable
         focusOnSelect={false}
         infinite={false}
-        itemClass={'carousel-item'}
+        itemClass={''}
         keyBoardControl
         minimumTouchDrag={80}
         partialVisible={isMobile}
@@ -109,7 +109,6 @@ const AnnouncementCarousel = ({ announcements }) => {
         swipeable
       >
         {announcements.map((announcement) => (
-          // <div className="carousel-item-test2">card test</div>
           <AnnouncementCarouselCard
             key={announcement.node.url} // Ensure a unique key for each item
             description={announcement.node.title}
