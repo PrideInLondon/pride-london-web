@@ -275,7 +275,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           //   url: '/pride',
                           // },
                           {
-                            title: 'About',
+                            title: 'About Festival',
                             url: '/events/festival',
                           },
                           {
