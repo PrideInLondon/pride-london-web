@@ -30,3 +30,8 @@ export const GridItem: React.FC<GridItemProps> = ({
     </GridItemContent>
   </StyledGridItem>
 )
+
+GridItem.defaultProps = {
+  to: '/error',
+  linkText: 'missing link(!)',
+}
