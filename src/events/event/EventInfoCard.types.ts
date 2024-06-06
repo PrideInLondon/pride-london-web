@@ -8,6 +8,8 @@ export interface ItemProps {
   title?: string
   icon: any
   detail?: string | any
+  url?: string | any
+
 }
 
 export interface WhenProps {

@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import moment from 'moment'
+import querystring from 'querystring'
 import {
   AccessibilityIcon,
   GenderIcon,
@@ -47,12 +48,13 @@ const LiveItem = ({ endDate }: LiveItemProps) => (
   </Row>
 )
 
-const Item = ({ title, icon, detail }: ItemProps) => (
+const Item = ({ title, icon, detail, url }: ItemProps) => (
   <Row>
     <IconWrapper>{icon}</IconWrapper>
     <div>
       {title && <Title>{title}</Title>}
       {detail && <Detail>{detail}</Detail>}
+      {url && <Link href={url}>Google Maps</Link>}
     </div>
   </Row>
 )
@@ -85,8 +87,8 @@ export const formatTimeRange = ({
   return `${formatShortTime(startDate)} to ${formatShortTime(endDate)}`
 }
 
-const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) =>
-  onDemand ? (
+const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) => {
+  return onDemand ? (
     <Item
       icon={<Icon name="on-demand" variant="white" width="2em" height="2em" />}
       title="On demand"
@@ -101,6 +103,7 @@ const When = ({ onDemand, platform, dates, startDate, endDate }: WhenProps) =>
       detail={formatTimeRange({ startDate, endDate })}
     />
   )
+}
 
 export const formatAddress = (
   addressLine1: string,
@@ -130,6 +133,11 @@ export const Location = ({
       icon={<MapPinIcon variant="white" />}
       title={locationName}
       detail={formatAddress(addressLine1, addressLine2, city, postcode)}
+      url={`https://www.google.com/maps/search/?api=1&${querystring.encode({
+        query: [locationName, addressLine1, addressLine2, city, postcode]
+          .filter(Boolean)
+          .join(', '),
+      })}`}
     />
   )
 
