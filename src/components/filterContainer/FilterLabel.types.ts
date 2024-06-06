@@ -1,6 +1,6 @@
 export const FILTER_TYPES = ['checkbox', 'radio'] as const
 
-export type FilterType = typeof FILTER_TYPES[number]
+export type FilterType = (typeof FILTER_TYPES)[number]
 
 export interface LabelProps {
   filterColour: string

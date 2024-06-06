@@ -1,8 +1,6 @@
 import path from 'path'
-import fs from 'fs'
 import { generateEventSlug } from './src/events/helpers'
 import { generateBlogArticleSlug } from './src/blog/article/helpers'
-import { config } from 'dotenv'
 
 const ArticlePage = path.resolve('./src/blog/article/ArticlePage.js')
 const EventPage = path.resolve('./src/events/event/EventPage.js')
@@ -22,10 +20,7 @@ exports.sourceNodes = ({ actions: { createTypes } }) =>
     }
   `)
 
-exports.createPages = async ({
-  graphql,
-  actions: { createPage, createRedirect },
-}) => {
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
   await graphql(`
     {
       events: allContentfulEvent(
@@ -118,43 +113,6 @@ exports.createPages = async ({
       })
     })
   })
-
-  const redirects = fs.readFileSync('./gatsby-redirects.txt').toString()
-
-  for (const line of redirects.split('\n')) {
-    if (line.startsWith('#')) {
-      // Allow comments in the file
-      continue
-    }
-    if (line.trim().length > 0) {
-      // Parse line
-      /*
-        Format is <Source> <Destination> (<Code>(<!>))
-        NON-FUNCTIONAL: Including the ! should force a redirect even if there is a valid route
-        () Indicates Optional
-      */
-      const [rdrFrom, rdrTo, rdrOptions] = line.trim().split(/\s+/)
-      var statusCode = 301 // Mirror Netlify behaviour
-      var forced = false // Currently non-functional
-      if (rdrOptions) {
-        if (rdrOptions.endsWith('!')) {
-          forced = true
-        }
-        statusCode = rdrOptions.substring(0, 3)
-        console.log(
-          `Redirect from ${rdrFrom} to ${rdrTo} with ${rdrOptions} (code: ${statusCode} forced: ${forced})`
-        )
-      }
-      createRedirect({
-        fromPath: rdrFrom,
-        toPath: rdrTo,
-        statusCode: statusCode,
-        force: forced, // Currently ignored by gatsby-plugin-gatsby-cloud
-      })
-    }
-  }
-
-  console.log('Zed-hack: Imported Netlfify Redirects into Gatsby Format')
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
