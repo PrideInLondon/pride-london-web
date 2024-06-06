@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Container, Row, Column } from '../components/grid'
+import { Container, Row, Column, Column2 } from '../components/grid'
 import AnnouncementListCard from './AnnouncementListCard'
 import AnnouncementListHeader from './AnnouncementListHeader'
 import { HighlightBannerContent } from './HighlightBanner.styles'
@@ -62,7 +62,7 @@ const HighlightBanner = () => (
         <BgAnnouncement>
           <Container>
             <Row>
-              <Column width={1}>
+              <Column2 width={1}>
                 {/* <AnnouncementListHeader /> */}
                 {highlights.map(
                   (
@@ -93,7 +93,7 @@ const HighlightBanner = () => (
                     )
                   }
                 )}
-              </Column>
+              </Column2>
             </Row>
           </Container>
         </BgAnnouncement>
