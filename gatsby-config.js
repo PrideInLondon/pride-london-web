@@ -40,6 +40,12 @@ module.exports = {
         id: process.env.GATSBY_GTM_ID,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: process.env.GATSBY_GTM_ID2,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
