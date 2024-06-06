@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {
   CarouselItemWrapper,
   CardWrapper,
+  CardNoOverflow,
   LinkCardWrapper,
   CardImage,
   CardTitle,
@@ -16,24 +17,14 @@ const AnnouncementCarouselCard = ({ image, headline, description, url }) => {
     <CarouselItemWrapper>
       <CardWrapper>
         <LinkCardWrapper href={url}>
-          <CardImage src={`http:${image.fixed.src}`} alt={headline} />
+          <CardNoOverflow>
+            <CardImage
+              src={`http:${image.fixed.src}`}
+              alt={description ? description.desc : ''}
+            />
+          </CardNoOverflow>
           <CardTextWrapper>
-            {/* <CardTitle>{headline}</CardTitle> */}
-            <CardDesc>{description}</CardDesc>
-          </CardTextWrapper>
-        </LinkCardWrapper>
-      </CardWrapper>
-    </CarouselItemWrapper>
-  )
-  return (
-    <CarouselItemWrapper>
-      <CardWrapper>
-        <LinkCardWrapper href={url}>
-          {/* <CardImage src={image} alt={headline} /> */}
-          <CardImage src={`http:${image.fixed.src}`} alt={headline} />
-          <CardTextWrapper>
-            {/* <CardTitle>{headline}</CardTitle> */}
-            <CardDesc>{description}</CardDesc>
+            <CardDesc>{description ? description.desc : ''}</CardDesc>
           </CardTextWrapper>
         </LinkCardWrapper>
       </CardWrapper>

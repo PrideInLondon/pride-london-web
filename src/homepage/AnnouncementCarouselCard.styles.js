@@ -41,9 +41,15 @@ export const CardImage = styled.img`
     transform: scale(1.1);
   }
 `
+export const CardNoOverflow = styled.div`
+  overflow: hidden;
+  height: 270px;
+`
 
 export const CardTextWrapper = styled.div`
-  padding: 4px;
+  padding-top: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
   text-align: center;
   height: 80px;
 `
@@ -52,6 +58,7 @@ export const CardTitle = styled.h2`
   font-size: 1.5rem;
   margin: 0;
   color: #333;
+  z-index: 50;
 `
 
 export const CardDesc = styled.p`
