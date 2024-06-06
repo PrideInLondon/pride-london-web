@@ -13,7 +13,7 @@ storiesOf('ShareBar', module).add('default', () => (
       title: text('Title', 'Pride in London', CONTENT_GROUP_ID),
       body: text(
         'Body',
-        'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBT+ community',
+        'The UK’s biggest, most diverse Pride. A home for every part of London’s LGBTQ+ community',
         CONTENT_GROUP_ID
       ),
       url: text('URL', 'https://prideinlondon.org', CONTENT_GROUP_ID),

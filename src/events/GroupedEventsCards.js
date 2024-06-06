@@ -54,6 +54,7 @@ const GroupedEventsCards = ({ event, index, prevEvent, toLoad }) => {
           <EventListingPromotionCard />
         </Wrapper>
       )}
+
       <Wrapper
         key={event.node.id}
         animation={
