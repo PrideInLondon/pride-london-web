@@ -67,5 +67,5 @@ export const InsetContainer = styled(Container)`
 `
 
 export const BackgroundContainer = styled(PageWrapper)`
-  background-color: ${colors.bondiBlue};
+  background-color: ${colors.white};
 `
