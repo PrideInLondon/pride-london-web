@@ -82,6 +82,13 @@ export const StyledButton = styled(
           borderColor: lighten(0.1, colors.eucalyptusGreen),
         },
         padding: `5px`,
+        margin: '0px',
+        fontSize: '2rem',
+        '@media (max-width: 767px)': {
+          padding: '3px',
+          margin: '0px',
+          fontSize: '1rem',
+        },
       },
       outline: {
         border: `2px solid currentColor`,
