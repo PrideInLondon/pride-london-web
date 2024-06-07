@@ -75,6 +75,7 @@ const EventPage = ({
   const filteredDates = date.dates.filter((event) =>
     filterPastEvents(event.endDate)
   )
+
   return (
     <PageWrapper>
       <Helmet
@@ -278,6 +279,9 @@ const EventPage = ({
                   <ReactMarkdown
                     source={accessibilityDetails.accessibilityDetails}
                   />
+                  <ReactMarkdown>
+                    {accessibilityDetails.accessibilityDetails}
+                  </ReactMarkdown>
                 </Section>
               </>
             )}
