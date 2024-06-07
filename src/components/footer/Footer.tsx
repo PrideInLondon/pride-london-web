@@ -157,7 +157,7 @@ const LowerSection = () => (
     <LegalLinksContainer>
       {[
         { text: 'Help', to: 'https://help.prideinlondon.org' },
-        { text: 'Privacy & cookies', to: '/privacy' },
+        { text: 'Privacy & cookies', to: '/privacy-and-cookie-policy' },
         { text: 'Media centre', to: '/media-centre' },
       ].map(({ text, to }) => (
         <LegalLink key={text} to={to} component={Navigate}>
