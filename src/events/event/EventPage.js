@@ -80,10 +80,6 @@ const EventPage = ({
     filterPastEvents(event.endDate)
   )
 
-  console.log('debug')
-  console.log(contentfulEvent)
-  console.log(contentfulEvent.audience.join(', '))
-
   return (
     <PageWrapper>
       <Helmet
@@ -130,11 +126,11 @@ const EventPage = ({
             : [
                 {
                   property: 'og:latitude',
-                  content: location.lat,
+                  content: location ? location.lat : 0,
                 },
                 {
                   property: 'og:longitude',
-                  content: location.lon,
+                  content: location ? location.lon : 0,
                 },
                 {
                   property: 'og:street-address',
