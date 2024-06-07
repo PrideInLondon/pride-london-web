@@ -19,6 +19,7 @@ import {
   EventInfoCardWrapper,
   HeroImage,
   HeroImageAndTitle,
+  LineUpHeading,
   PageWrapper,
   RelativeColumn,
   Section,
@@ -30,6 +31,7 @@ import {
 const EventPage = ({
   data: {
     contentfulEvent: {
+      audience,
       id,
       individualEventPicture,
       eventDescription: { eventDescription },
@@ -40,6 +42,8 @@ const EventPage = ({
       ticketingUrl,
       cta,
       accessibilityDetails,
+      accessibilityInformation,
+      lineUp,
       location2,
       location,
       locationName,
@@ -75,6 +79,10 @@ const EventPage = ({
   const filteredDates = date.dates.filter((event) =>
     filterPastEvents(event.endDate)
   )
+
+  console.log('debug')
+  console.log(contentfulEvent)
+  console.log(contentfulEvent.audience.join(', '))
 
   return (
     <PageWrapper>
@@ -267,6 +275,18 @@ const EventPage = ({
             <Section>
               <ReactMarkdown>{eventDescription}</ReactMarkdown>
             </Section>
+            {lineUp && lineUp.lineUp.length !== 0 && (
+              <Section>
+                <LineUpHeading>Line Up</LineUpHeading>
+                <ReactMarkdown>{lineUp.lineUp}</ReactMarkdown>
+              </Section>
+            )}
+            {audience.length !== 0 && (
+              <Section>
+                <LineUpHeading>Target Audience Groups</LineUpHeading>
+                <ReactMarkdown>{audience.join(', ')}</ReactMarkdown>
+              </Section>
+            )}
             {sponsorSection && (
               <SponsorsSubSection title={sponsorSection.displayName}>
                 {renderSponsors(sponsorSection.sponsors, true)}
@@ -365,6 +385,12 @@ export const query = graphql`
       }
       accessibilityDetails {
         accessibilityDetails
+      }
+      accessibilityInformation
+      accessibilityOptions
+      audience
+      lineUp {
+        lineUp
       }
       ...eventDirectionsFragment
       ...eventInfoCardQuery

@@ -157,65 +157,67 @@ const EventInfoCard = ({
     venueDetails,
     ticketingUrl,
     cta,
-    accessibilityOptions,
+    accessibilityInformation,
     date: { dates },
   },
   pageContext: { startDate, endDate },
-}: EventInfoCardProps) => (
-  <Wrapper>
-    <When {...{ onDemand, platform, dates, startDate, endDate }} />
-    <Item
-      icon={<TicketIcon />}
-      title={formatPrice(eventPriceLow, eventPriceHigh)}
-    />
-    <Location
-      {...{
-        platform,
-        locationName,
-        addressLine1,
-        addressLine2,
-        city,
-        postcode,
-      }}
-    />
-    {accessibilityOptions && accessibilityOptions.length > 0 && (
+}: EventInfoCardProps) => {
+  return (
+    <Wrapper>
+      <When {...{ onDemand, platform, dates, startDate, endDate }} />
       <Item
-        icon={<AccessibilityIcon variant="white" />}
-        title="Accessibility"
-        detail={`${accessibilityOptions.join(', ')}.`}
+        icon={<TicketIcon />}
+        title={formatPrice(eventPriceLow, eventPriceHigh)}
       />
-    )}
-    {venueDetails && venueDetails.includes('Gender neutral toilets') && (
-      <Item
-        icon={<GenderIcon variant="white" />}
-        detail="Gender neutral toilets"
+      <Location
+        {...{
+          platform,
+          locationName,
+          addressLine1,
+          addressLine2,
+          city,
+          postcode,
+        }}
       />
-    )}
-    {(email || phone || ticketingUrl) && <Hr />}
-    {email && (
-      <Item
-        icon={<MailIcon role="presentation" />}
-        detail={
-          <Link href={`mailto:${email}`} aria-label="email the venue">
-            {email}
-          </Link>
-        }
-      />
-    )}
-    {phone && (
-      <Item
-        icon={<PhoneIcon />}
-        detail={
-          <Link href={`tel:${phone}`} aria-label="call the venue">
-            {phone}
-          </Link>
-        }
-      />
-    )}
-    {(phone || email) && ticketingUrl && <VSpace />}
-    {ticketingUrl && <Button to={ticketingUrl}>{cta}</Button>}
-  </Wrapper>
-)
+      {accessibilityInformation && accessibilityInformation.length > 0 && (
+        <Item
+          icon={<AccessibilityIcon variant="white" />}
+          title="Accessibility"
+          detail={`${accessibilityInformation.join(', ')}.`}
+        />
+      )}
+      {venueDetails && venueDetails.includes('Gender neutral toilets') && (
+        <Item
+          icon={<GenderIcon variant="white" />}
+          detail="Gender neutral toilets"
+        />
+      )}
+      {(email || phone || ticketingUrl) && <Hr />}
+      {email && (
+        <Item
+          icon={<MailIcon role="presentation" />}
+          detail={
+            <Link href={`mailto:${email}`} aria-label="email the venue">
+              {email}
+            </Link>
+          }
+        />
+      )}
+      {phone && (
+        <Item
+          icon={<PhoneIcon />}
+          detail={
+            <Link href={`tel:${phone}`} aria-label="call the venue">
+              {phone}
+            </Link>
+          }
+        />
+      )}
+      {(phone || email) && ticketingUrl && <VSpace />}
+      {ticketingUrl && <Button to={ticketingUrl}>{cta}</Button>}
+    </Wrapper>
+  )
+}
 
 export default EventInfoCard
 
@@ -234,7 +236,7 @@ export const query = graphql`
     phone
     ticketingUrl
     cta
-    accessibilityOptions
+    accessibilityInformation
     venueDetails
     date {
       dates {

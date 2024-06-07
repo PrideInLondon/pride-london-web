@@ -76,6 +76,17 @@ export const AccessibilityHeading = styled.h2`
     margin: 1.875rem 0;
   `};
 `
+export const LineUpHeading = styled.h2`
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  margin: 1.875rem 0 0.9375rem 0;
+  ${media.tablet`
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+    margin: 1.875rem 0;
+  `};
+`
 
 export const HeroImage = styled(Img)`
   position: absolute;
