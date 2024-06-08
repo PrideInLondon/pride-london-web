@@ -2,8 +2,8 @@ import { ContentfulSponsor, Sponsor, SponsorLevel } from './PartnersPage.types'
 
 export const groupSponsorsByLevel = (
   edges: { node: ContentfulSponsor }[]
-): { [key in SponsorLevel]?: Sponsor[] } =>
-  edges
+): { [key in SponsorLevel]?: Sponsor[] } => {
+  const groupedSponsors = edges
     .map(
       ({ node: { sponsorName, sponsorUrl, sponsorLogo, sponsorLevel } }) => ({
         name: sponsorName,
@@ -22,3 +22,15 @@ export const groupSponsorsByLevel = (
       }),
       {}
     )
+
+  // Sort sponsors by name within each level
+  for (const level in groupedSponsors) {
+    if (groupedSponsors.hasOwnProperty(level)) {
+      groupedSponsors[level] = groupedSponsors[level]!.sort((a, b) =>
+        a.name.localeCompare(b.name)
+      )
+    }
+  }
+
+  return groupedSponsors
+}
