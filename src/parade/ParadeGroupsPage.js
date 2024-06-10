@@ -29,7 +29,7 @@ const mapEntries = (paradeGroups) => {
 const ParadeGroupsPage = ({ data: { paradeGroups } }) => (
   <>
     <Banner
-      titleText="Parade groups"
+      titleText="Parade groups - 2024"
       subtitleText="Find out more about the groups who are marching in this years parade"
       altText="Parade groups"
       imageSrc={bannerBackground}
@@ -38,12 +38,13 @@ const ParadeGroupsPage = ({ data: { paradeGroups } }) => (
     <Container>
       <TextContainer>
         The parade celebrates our colourful community, brightening up the
-        streets of London with people from every walk of life. In 2023, we
+        streets of London with people from every walk of life. In 2024, we
         expect around 35,000 individuals to march together for love, protest and
-        activism. Formed from over 600 groups - more than half of which
+        activism. Formed from over 500 groups - more than half of which
         represented charities or not-for-profit organisations - we’re proud that
         last year’s Pride was our most diverse yet, uniting more trans*, BAME
-        and bisexual communities than ever before.
+        and bisexual communities than ever before. This list will be published
+        after the parade.
       </TextContainer>
       <TextContainer>
         If any information is incorrectly updated, please fill up{' '}
