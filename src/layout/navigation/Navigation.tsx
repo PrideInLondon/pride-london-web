@@ -249,10 +249,10 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                           //   title: 'Pride 2024',
                           //   url: '/pride',
                           // },
-                          {
-                            title: 'Parade Site (New!)',
-                            url: 'https://pride.prideinlondon.org',
-                          },
+                          // {
+                          //   title: 'Parade Site (New!)',
+                          //   url: 'https://pride.prideinlondon.org',
+                          // },
                           {
                             title: 'Route and Info',
                             url: '/pride/2024',
