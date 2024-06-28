@@ -15,6 +15,7 @@ import AnnouncementsList from './AnnouncementList'
 // import SocialWall from './SocialWall'
 import HighlightBanner from './HighlightBanner'
 import Donate from './Donate'
+import LiveStreamEmbed from './Livestream'
 
 const Divider = styled.hr`
   margin: 64px 20px 20px 20px;
@@ -69,6 +70,7 @@ const HomePage = ({
     >
       {/* <Button to="/parade">What's happening</Button> */}
     </Banner>
+    <LiveStreamEmbed />
     {/*<Container>
       <p
         style={{
