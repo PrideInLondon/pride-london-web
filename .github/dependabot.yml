@@ -1,0 +1,100 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  target-branch: master
+  reviewers:
+  - SonyaMoisset
+  assignees:
+  - SonyaMoisset
+  labels:
+  - Dependencies
+  - Security
+  allow:
+  - dependency-type: production
+  ignore:
+  - dependency-name: react-spring
+    versions:
+    - 9.0.0
+    - 9.1.0
+  - dependency-name: gatsby-image
+    versions:
+    - 2.11.0
+    - 3.0.0
+    - 3.1.0
+    - 3.2.0
+  - dependency-name: slugify
+    versions:
+    - 1.4.7
+    - 1.5.0
+  - dependency-name: use-onclickoutside
+    versions:
+    - 0.3.2
+  - dependency-name: gatsby
+    versions:
+    - 2.31.1
+    - 2.32.11
+    - 2.32.3
+    - 2.32.4
+    - 2.32.8
+    - 2.32.9
+  - dependency-name: gatsby-transformer-sharp
+    versions:
+    - 2.12.0
+    - 2.12.1
+  - dependency-name: react-slick
+    versions:
+    - 0.28.1
+  - dependency-name: gatsby-plugin-sharp
+    versions:
+    - 2.13.4
+    - 2.14.1
+    - 2.14.3
+  - dependency-name: gatsby-source-filesystem
+    versions:
+    - 2.11.0
+    - 2.11.1
+  - dependency-name: querystring
+    versions:
+    - 0.2.1
+  - dependency-name: polished
+    versions:
+    - 4.1.0
+    - 4.1.1
+  - dependency-name: gatsby-plugin-styled-components
+    versions:
+    - 3.10.0
+  - dependency-name: gatsby-link
+    versions:
+    - 2.11.0
+  - dependency-name: gatsby-plugin-react-helmet
+    versions:
+    - 3.10.0
+  - dependency-name: moment-timezone
+    versions:
+    - 0.5.33
+  - dependency-name: gatsby-plugin-layout
+    versions:
+    - 1.10.0
+  - dependency-name: gatsby-plugin-sitemap
+    versions:
+    - 2.12.0
+  - dependency-name: aria-hidden
+    versions:
+    - 1.1.2
+  - dependency-name: gatsby-plugin-google-tagmanager
+    versions:
+    - 2.11.0
+  - dependency-name: gatsby-source-contentful
+    versions:
+    - 4.5.3
+  - dependency-name: react-onclickoutside
+    versions:
+    - 6.10.0
+  commit-message:
+    prefix: fix
+    prefix-development: chore
+    include: scope
