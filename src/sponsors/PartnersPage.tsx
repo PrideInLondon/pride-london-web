@@ -77,7 +77,7 @@ const PartnersPage = ({
       <Container>
         <Row>
           <Column>
-            <ListTitle>Welcome to our 2024 partners</ListTitle>
+            <ListTitle>Welcome to our 2025 partners</ListTitle>
             <p>
               A huge thank you to all of the brands that are supporting us this
               year.
