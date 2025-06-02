@@ -185,7 +185,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                             url: '/parade/groups',
                           },
                           {
-                            title: 'Pride 2024',
+                            title: 'Pride 2025',
                             url: '/pride',
                           },
                           {
@@ -230,7 +230,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                   setNavOpen={setOpen}
                   item={{
                     id: 'nav-parade',
-                    title: 'Pride 2024',
+                    title: 'Pride 2025',
                     desc: 'Our annual parade in London, celebrating diversity and inclusivity.',
                     url: '/',
                     submenu: [
@@ -414,7 +414,7 @@ const Navigation: React.FC<NavigationProps> = ({ backgroundColor }) => {
                     url: '/',
                     submenu: [
                       {
-                        heading: 'Pride in the City 2024',
+                        heading: 'Pride in the City 2025',
                         links: [
                           {
                             title: 'Join Today',
