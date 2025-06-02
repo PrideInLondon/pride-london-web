@@ -59,7 +59,7 @@ const HomePage = ({
 }) => (
   <Fragment>
     <Banner
-      titleText="Pride in London - 29 June 2024"
+      titleText="Pride in London - 5 July 2025"
       subtitleText={subtitles}
       titlePosition="bottom"
       color={theme.colors.eucalyptusGreen}
@@ -88,7 +88,7 @@ const HomePage = ({
       </p>
       </Container>*/}
     <HighlightBanner />
-    <AnnouncementsList />
+    {/*<AnnouncementsList />*/}
     {/* <Divider /> */}
     <div style={{ marginBottom: '80px' }} />
     <VolunteerBoxInfo />
