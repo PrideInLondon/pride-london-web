@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { NewsMetrics } from '../newsMetrics'
-//import { NewsCategory } from '../newsCategory'
+import { NewsCategory } from '../newsCategory'
 import { NewsCardHeaderContainer } from './NewsCardHeader.styles'
 
 export const NewsCardHeader = ({
@@ -11,11 +11,11 @@ export const NewsCardHeader = ({
   className,
 }) => (
   <NewsCardHeaderContainer className={className}>
-   
+    <NewsCategory category={category} />
     <NewsMetrics datePublished={datePublished} readTime={readTime} />
   </NewsCardHeaderContainer>
 )
-///* <NewsCategory category={category} /> */
+
 NewsCardHeader.propTypes = {
   category: PropTypes.object.isRequired,
   datePublished: PropTypes.string.isRequired,
