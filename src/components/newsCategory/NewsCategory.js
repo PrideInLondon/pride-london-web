@@ -6,7 +6,7 @@ import { NewsCategoryContainer, StarWrapper } from './NewsCategory.styles'
 export const NewsCategory = ({ category, className }) => {
   return (
     <NewsCategoryContainer
-      backgroundColor={category.hexColour}
+     // backgroundColor={category.hexColour}
       className={className}
     >
       {category.title === 'Featured' && (
@@ -20,7 +20,7 @@ export const NewsCategory = ({ category, className }) => {
 }
 NewsCategory.propTypes = {
   category: PropTypes.shape({
-    hexColour: PropTypes.string,
+   // hexColour: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,
   className: PropTypes.string,
