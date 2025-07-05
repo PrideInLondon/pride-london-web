@@ -5,7 +5,7 @@ import theme from '../theme/theme'
 import { colors } from '../theme/colors'
 import { mediaQueries } from '../theme/mediaQueries'
 import { Banner } from '../components/banner'
-// import { Button } from '../components/button'
+import { Button } from '../components/button'
 // import { Social } from '../exploreLondon/CommunityPartnerCard.styles'
 import VolunteerBoxInfo from './VolunteerBoxInfo'
 //import CampaignContainer from './CampaignContainer'
@@ -65,10 +65,10 @@ const HomePage = ({
       color={theme.colors.eucalyptusGreen}
       large
       allowContentUnderflow
-      videoId="841511573"
+      videoId="fkXw_OFyBmo"
       fixed={childImageSharp}
     >
-      {/* <Button to="/parade">What's happening</Button> */}
+      <Button to="https://www.youtube.com/watch?v=f_XDwCxle0A">Watch live</Button>
     </Banner>
     <LiveStreamEmbed />
     {/*<Container>
