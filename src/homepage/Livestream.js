@@ -54,6 +54,11 @@ const LiveStreamEmbed = () => (
             </VideoWrapper>
           </Column>
         </Row>
+        <Row>
+          <Column width={1}>
+            Livestream provided by broadcast partner <a href="https://www.emglive.com/home" target="_blank">EMG Gravity Media</a> and captioning partner <a href="https://www.redbeemedia.com/" target="_blank">Red Bee Media</a>
+          </Column>
+        </Row>
       </Container>
     </BgAnnouncement>
   </AnnouncementsContent>
