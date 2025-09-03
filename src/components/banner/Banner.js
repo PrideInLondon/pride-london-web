@@ -97,7 +97,7 @@ const Banner = ({
           {videoId && (
             <VideoWrapper height={height} width={width} aria-hidden="true">
               <iframe
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&disablekb=1&loop=1&playsinline=1&rel=0&mute=1`}
+                src={`https://player.vimeo.com/video/${videoId}?background=1`}
                 width="640"
                 height="360"
                 frameBorder="0"

@@ -136,7 +136,6 @@ export const VideoWrapper = styled.div`
     height: 100%;
     top: 50%;
     left: 50%;
-    pointer-events: none;
     transform: translate(-50%, -50%);
   }
 `
