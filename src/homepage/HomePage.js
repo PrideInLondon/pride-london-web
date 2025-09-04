@@ -105,10 +105,10 @@ const HomePage = ({
           <p>
             For press queries, please contact{' '}
             <a
-              href="mailto:projectpaddington@drdpartnership.com"
+              href="mailto:PrideinLondon@drdpartnership.com"
               aria-label="email the press contact"
             >
-              projectpaddington@drdpartnership.com
+              PrideinLondon@drdpartnership.com
             </a>
             .
           </p>
