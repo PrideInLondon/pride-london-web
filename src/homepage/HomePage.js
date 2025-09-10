@@ -116,6 +116,27 @@ const HomePage = ({
       </Row>
     </Container>
 
+    <Container>
+      <Row>
+        <Row>
+          <StatementHeader>Email Delivery Issues</StatementHeader>
+          <div></div>
+          <p>
+            Emails sent to Pride in London since the end of August 2025 may not
+            have been delivered properly. If you are awaiting a response from us
+            please resend and forward to{' '}
+            <a
+              href="mailto:info@prideinlondon.org"
+              aria-label="email the info contact"
+            >
+              info@prideinlondon.org
+            </a>
+            .
+          </p>
+        </Row>
+      </Row>
+    </Container>
+
     {/*<HighlightBanner />*}
     {/*<AnnouncementsList />*/}
     {/* <Divider /> */}
