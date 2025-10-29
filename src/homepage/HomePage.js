@@ -84,70 +84,17 @@ const HomePage = ({
       {/* <Button to="/parade">What's happening</Button> */}
     </Banner>
     {/*<LiveStreamEmbed />*/}
-    <Container>
-      <Row>
-        <Row>
-          <StatementHeader>
-            Statement from the Board of Directors regarding recent allegations
-            relating to Mr Christopher Joell-Deshields
-          </StatementHeader>
-          <p>
-            “The Board of Directors is aware of a number of allegations and is
-            taking action to investigate these claims.”
-          </p>
-          <p>
-            “We are not in a position to comment further while these
-            investigations are taking place, save to say that we take such
-            allegations extremely seriously, and remain committed to upholding a
-            safe, open and inclusive organisation that is compliant with its
-            legal and governance obligations.”
-          </p>
-          <p>
-            For press queries, please contact{' '}
-            <a
-              href="mailto:PrideinLondon@drdpartnership.com"
-              aria-label="email the press contact"
-            >
-              PrideinLondon@drdpartnership.com
-            </a>
-            .
-          </p>
-        </Row>
-      </Row>
-    </Container>
-
-    <Container>
-      <Row>
-        <Row>
-          <StatementHeader>Email Delivery Issues</StatementHeader>
-          <div></div>
-          <p>
-            Emails sent to Pride in London since the end of August 2025 may not
-            have been delivered properly. If you are awaiting a response from us
-            please resend and forward to{' '}
-            <a
-              href="mailto:info@prideinlondon.org"
-              aria-label="email the info contact"
-            >
-              info@prideinlondon.org
-            </a>
-            .
-          </p>
-        </Row>
-      </Row>
-    </Container>
 
     {/*<HighlightBanner />*}
     {/*<AnnouncementsList />*/}
     {/* <Divider /> */}
     {/*<div style={{ marginBottom: '80px' }} />*/}
-
+    <VolunteerBoxInfo />
     <Divider />
     {/*<CampaignContainer />*/}
     {/*<Announcements />*/}
     <LatestNewsContainer />
     <Divider />
-    <VolunteerBoxInfo />
     {/* <Divider />
     <SocialWall /> */}
     <Divider />
