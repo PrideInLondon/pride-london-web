@@ -60,7 +60,7 @@ export const BoldText = styled.span`
 const subtitles = [
   <BoldText>4 July 2026</BoldText>,
   <br key={1} />,
-  'Embracing Every Shade: Celebrating Diversity Together',
+  'Embracing Everyone: Celebrating Diversity Together',
   <br key={2} />,
   'A home for every part of London’s LGBTQ+ community.',
 ]
