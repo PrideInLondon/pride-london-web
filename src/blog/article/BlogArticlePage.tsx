@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Image from 'gatsby-image/withIEPolyfill'
+import ReactHelmet from 'react-helmet'
+import { Helmet } from '../../components/helmet'
 import { RippedSection } from '../../components/rippedSection'
 import { Wrapper } from '../../components/wrapper'
 import { Tag } from '../../components/tag'
@@ -26,77 +28,124 @@ const BlogArticlePage: React.FC<BlogArticlePageProps> = ({
       title,
       content: { json },
       author,
+      updatedAt,
     },
     otherContentfulBlogArticles: { edges },
   },
   location: { href },
-}) => (
-  <>
-    <RippedSection rips={{ bottom: { color: 'white' } }}>
-      <Image
-        fluid={getImageForBreakpoint(hero)}
-        style={{ width: '100%' }}
-        aria-hidden="true"
+}) => {
+  const orgName = 'Pride in London'
+  const firstParagraph = getFirstParagraph(json)
+  const image = `https:${hero.tablet.src}`
+  return (
+    <>
+      <Helmet
+        title={title}
+        siteUrl={href}
+        description={firstParagraph}
+        img={image}
       />
-    </RippedSection>
-    <Wrapper
-      display="flex"
-      justifyContent="center"
-      marginTop="xxl"
-      marginBottom="lg"
-    >
-      <Tag color={getCategoryColor(category)}>{category}</Tag>
-    </Wrapper>
-    <Wrapper
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      paddingX={{ default: 'lg', md: 'xxl' }}
-      position="relative"
-    >
-      <H2 as="h1" textAlign="center" maxWidth={842}>
-        {title}
-      </H2>
-      <Wrapper
-        position={{ md: 'absolute' }}
-        marginBottom={{ default: 'xl_mob', md: '0' }}
-        top={{ md: 0 }}
-        left={{ md: 'lg' }}
-      >
-        <ShareBar
-          variant={{ default: 'horizontal', md: 'vertical' }}
-          content={{ title, body: getFirstParagraph(json), url: href }}
+      <ReactHelmet
+        script={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': href,
+            },
+            headline: title,
+            image: {
+              '@type': 'ImageObject',
+              url: hero,
+            },
+            dateModified: updatedAt,
+            author: author
+              ? {
+                  '@type': 'Person',
+                  name: author.name,
+                }
+              : { '@type': 'Organization', orgName },
+            publisher: {
+              '@type': 'Organization',
+              orgName,
+              logo: {
+                '@type': 'ImageObject',
+                url: `${href}/logo.png`,
+                // recommended ratio 1.91:1
+                height: 502,
+                width: 960,
+              },
+            },
+          },
+        ]}
+      />
+      <RippedSection rips={{ bottom: { color: 'white' } }}>
+        <Image
+          fluid={getImageForBreakpoint(hero)}
+          style={{ width: '100%' }}
+          aria-hidden="true"
         />
-      </Wrapper>
-    </Wrapper>
-    <Content document={json} marginBottom="xxl" />
-    {author && (
+      </RippedSection>
       <Wrapper
         display="flex"
         justifyContent="center"
-        marginBottom="xxl"
-        paddingX={{ default: 'lg', md: 'xxl' }}
+        marginTop="xxl"
+        marginBottom="lg"
       >
-        <TalentProfile
-          title={author.name}
-          talent={author}
-          width={{ default: '100%', md: MAX_CONTENT_WIDTH }}
-        />
+        <Tag color={getCategoryColor(category)}>{category}</Tag>
       </Wrapper>
-    )}
-    {edges && edges.length === 3 && (
-      <Wrapper marginBottom="xxl" paddingX={{ default: 'lg', md: 'xxl' }}>
-        <H3 mb={{ default: 'lg', md: 'xl_mob' }}>You may also like</H3>
-        <YouMayAlsoLikeWrapper>
-          {edges.map(({ node }) => (
-            <BlogArticleSummaryCard {...node} />
-          ))}
-        </YouMayAlsoLikeWrapper>
+      <Wrapper
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        paddingX={{ default: 'lg', md: 'xxl' }}
+        position="relative"
+      >
+        <H2 as="h1" textAlign="center" maxWidth={842}>
+          {title}
+        </H2>
+        <Wrapper
+          position={{ md: 'absolute' }}
+          marginBottom={{ default: 'xl_mob', md: '0' }}
+          top={{ md: 0 }}
+          left={{ md: 'lg' }}
+        >
+          <ShareBar
+            variant={{ default: 'horizontal', md: 'vertical' }}
+            content={{ title, body: getFirstParagraph(json), url: href }}
+          />
+        </Wrapper>
       </Wrapper>
-    )}
-  </>
-)
+      <Content document={json} marginBottom="xxl" />
+      {author && (
+        <Wrapper
+          display="flex"
+          justifyContent="center"
+          marginBottom="xxl"
+          paddingX={{ default: 'lg', md: 'xxl' }}
+        >
+          <TalentProfile
+            title={author.name}
+            talent={author}
+            width={{ default: '100%', md: MAX_CONTENT_WIDTH }}
+          />
+        </Wrapper>
+      )}
+      {edges && edges.length === 3 && (
+        <Wrapper marginBottom="xxl" paddingX={{ default: 'lg', md: 'xxl' }}>
+          <H3 mb={{ default: 'lg', md: 'xl_mob' }}>You may also like</H3>
+          <YouMayAlsoLikeWrapper>
+            {edges.map(({ node }) => (
+              <BlogArticleSummaryCard {...node} />
+            ))}
+          </YouMayAlsoLikeWrapper>
+        </Wrapper>
+      )}
+    </>
+  )
+}
 
 export const query = graphql`
   fragment BlogArticleSummary on ContentfulBlogArticle {
@@ -117,6 +166,7 @@ export const query = graphql`
 
   query blogArticle($id: String!) {
     contentfulBlogArticle(id: { eq: $id }) {
+      updatedAt
       hero {
         desktop: fluid(maxWidth: 1600, quality: 100) {
           ...GatsbyContentfulFluid_withWebp
